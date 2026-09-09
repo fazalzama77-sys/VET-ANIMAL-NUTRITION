@@ -117,9 +117,12 @@ const searchEngine = {
                             title: qa.question,
                             subtitle: `${unitId.toUpperCase()} · ${qa.type ? qa.type.toUpperCase() : 'Q&A'} (${qa.marks || 5}M)`,
                             description: searchEngine.stripHtml(qa.answer || '').substring(0, 260),
+                            badge: 'Q&A',
+                            icon: 'fa-pen-to-square',
                             color: 'var(--ivri-sage)',
                             url: `#/qa/${unitId}`
                         });
+                    });
                 }
             });
         }
