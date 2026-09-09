@@ -1,0 +1,437 @@
+<title>Unit 2 Rapid Revision Sheet</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --paper:#fdfdfb; --ground:#e8edf3; --rule:#c9d4de; --rule-soft:#e2e9f0;
+  --ink:#1b2a34; --ink-2:#4a6070; --ink-3:#7e8f9c;
+  --blue:#1565c0; --teal:#00796b; --amber:#a05300; --coral:#c8390f; --sage:#2b6e2f; --plum:#5d3f9e;
+  --blue-w:#e8f1fb; --teal-w:#e2f2f0; --amber-w:#fbf0e0; --coral-w:#fbe8e2; --sage-w:#e6f2e6; --plum-w:#eee9fa;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#141b21; --ground:#0c1116; --rule:#2c3a45; --rule-soft:#232e37;
+    --ink:#e3ebf1; --ink-2:#a3b6c4; --ink-3:#7b8d9b;
+    --blue:#6fb2f5; --teal:#4fc9b8; --amber:#e6a44e; --coral:#ff8a63; --sage:#7fce83; --plum:#b39bf0;
+    --blue-w:#16283c; --teal-w:#0f2f2b; --amber-w:#33240e; --coral-w:#3a1f16; --sage-w:#162c18; --plum-w:#251d3d;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141b21; --ground:#0c1116; --rule:#2c3a45; --rule-soft:#232e37;
+  --ink:#e3ebf1; --ink-2:#a3b6c4; --ink-3:#7b8d9b;
+  --blue:#6fb2f5; --teal:#4fc9b8; --amber:#e6a44e; --coral:#ff8a63; --sage:#7fce83; --plum:#b39bf0;
+  --blue-w:#16283c; --teal-w:#0f2f2b; --amber-w:#33240e; --coral-w:#3a1f16; --sage-w:#162c18; --plum-w:#251d3d;
+}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);
+  font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:13px;line-height:1.4;-webkit-font-smoothing:antialiased;padding:18px 12px 40px}
+.wrap{max-width:200mm;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+
+/* ── masthead ─────────────────────────────── */
+.mast{background:var(--paper);border:1px solid var(--rule);border-top:4px solid var(--blue);padding:14px 16px}
+.mast h1{margin:0;font-size:20px;font-weight:800;letter-spacing:-.02em}
+.mast p{margin:5px 0 0;font-size:11.5px;color:var(--ink-2);max-width:62ch}
+.mast .meta{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}
+
+/* ── sheet ────────────────────────────────── */
+.sheet{background:var(--paper);border:1px solid var(--rule);
+  width:100%;padding:9mm 8mm;display:flex;flex-direction:column;gap:5px}
+.shead{display:flex;align-items:baseline;gap:9px;border-bottom:2px solid var(--ink);padding-bottom:4px;margin-bottom:3px}
+.shead .num{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:19px;font-weight:700;color:var(--blue);line-height:1}
+.shead h2{margin:0;font-size:14.5px;font-weight:800;letter-spacing:-.015em;flex:1}
+.shead .wt{font-family:"JetBrains Mono",monospace;font-size:9.5px;color:var(--ink-3);letter-spacing:.04em;white-space:nowrap}
+
+/* ── grid + blocks ────────────────────────── */
+.g{display:grid;grid-template-columns:repeat(12,1fr);gap:5px;align-content:start}
+.b{border:1px solid var(--rule-soft);border-top:2.5px solid var(--blue);padding:5px 7px 6px;
+   background:var(--paper);min-width:0;overflow-wrap:break-word}
+.b.t{border-top-color:var(--teal)} .b.a{border-top-color:var(--amber)}
+.b.c{border-top-color:var(--coral)} .b.s{border-top-color:var(--sage)} .b.p{border-top-color:var(--plum)}
+.b>h3{margin:0 0 4px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--blue)}
+.b.t>h3{color:var(--teal)} .b.a>h3{color:var(--amber)}
+.b.c>h3{color:var(--coral)} .b.s>h3{color:var(--sage)} .b.p>h3{color:var(--plum)}
+.c1{grid-column:span 1}.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:span 4}
+.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}
+.c9{grid-column:span 9}.c12{grid-column:span 12}
+
+/* ── text atoms ───────────────────────────── */
+p{margin:0 0 3px} p:last-child{margin-bottom:0}
+ul{margin:0;padding-left:12px} li{margin-bottom:1.5px}
+b,strong{font-weight:700}
+em{font-style:italic;color:var(--ink-2)}
+.sm{font-size:10.5px;line-height:1.35}
+.xs{font-size:9.5px;line-height:1.3;color:var(--ink-2)}
+.m{font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.k{color:var(--blue);font-weight:700}
+.num-hl{font-family:"JetBrains Mono",monospace;font-weight:700;color:var(--amber);font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.05em;padding:1.5px 5px;background:var(--blue-w);color:var(--blue);border-radius:2px}
+.tag.t{background:var(--teal-w);color:var(--teal)} .tag.a{background:var(--amber-w);color:var(--amber)}
+.tag.c{background:var(--coral-w);color:var(--coral)} .tag.s{background:var(--sage-w);color:var(--sage)}
+.tag.p{background:var(--plum-w);color:var(--plum)}
+
+/* ── formula strip ────────────────────────── */
+.fx{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:600;background:var(--amber-w);
+  color:var(--ink);padding:3px 6px;margin:3px 0;border-left:3px solid var(--amber);
+  font-variant-numeric:tabular-nums;overflow-x:auto;white-space:nowrap}
+.fx.b2{background:var(--blue-w);border-left-color:var(--blue)}
+.fx.t2{background:var(--teal-w);border-left-color:var(--teal)}
+
+/* ── tables ───────────────────────────────── */
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:9.5px;line-height:1.25}
+th{background:var(--blue-w);color:var(--blue);font-weight:700;font-size:8.5px;
+   text-transform:uppercase;letter-spacing:.05em;text-align:left;padding:2.5px 4px;border:1px solid var(--rule-soft)}
+.b.c th{background:var(--coral-w);color:var(--coral)} .b.a th{background:var(--amber-w);color:var(--amber)}
+.b.t th{background:var(--teal-w);color:var(--teal)} .b.s th{background:var(--sage-w);color:var(--sage)}
+.b.p th{background:var(--plum-w);color:var(--plum)}
+td{padding:2.5px 4px;border:1px solid var(--rule-soft);vertical-align:top}
+td.mn{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,transparent)}
+
+/* ── flow diagram ─────────────────────────── */
+.flow{display:flex;align-items:stretch;gap:0;font-size:9px;line-height:1.2;margin:3px 0}
+.node{flex:1;border:1px solid var(--rule);padding:3px 4px;text-align:center;min-width:0}
+.node .t1{font-weight:700;font-size:9.5px;display:block}
+.node .t2{color:var(--ink-3);font-size:8.5px;font-family:"JetBrains Mono",monospace}
+.arw{display:flex;flex-direction:column;justify-content:center;padding:0 3px;color:var(--coral);
+  font-size:8px;font-weight:700;text-align:center;font-family:"JetBrains Mono",monospace}
+.arw span{display:block;white-space:nowrap}
+
+/* ── mnemonic + alert ─────────────────────── */
+.mnem{background:var(--plum-w);border-left:3px solid var(--plum);padding:3px 6px;margin:3px 0;font-size:10px}
+.mnem b{color:var(--plum);font-family:"JetBrains Mono",monospace;letter-spacing:.02em}
+.alert{background:var(--coral-w);border-left:3px solid var(--coral);padding:3px 6px;margin:3px 0;font-size:10px}
+.clin{background:var(--sage-w);border-left:3px solid var(--sage);padding:3px 6px;margin:3px 0;font-size:10px}
+
+/* ── rapid-fire two column list ───────────── */
+.rf{column-count:2;column-gap:14px;font-size:9.5px;line-height:1.35}
+.rf.three{column-count:3}
+.rf div{break-inside:avoid;margin-bottom:2px;padding-left:9px;text-indent:-9px}
+.rf .q{font-weight:700}
+.rf .ans{color:var(--coral);font-weight:700}
+
+.foot{font-size:9px;color:var(--ink-3);text-align:center;padding-top:4px;
+  border-top:1px solid var(--rule-soft);margin-top:auto;font-family:"JetBrains Mono",monospace;letter-spacing:.04em}
+
+/* ── print ────────────────────────────────── */
+@media print{
+  @page{size:A4;margin:8mm}
+  body{background:#fff;padding:0;font-size:8.4pt}
+  .wrap{max-width:none;gap:0}
+  .mast{display:none}
+  .sheet{border:none;padding:0;page-break-after:always;break-after:page;min-height:0}
+  .sheet:last-child{page-break-after:auto}
+  .b{break-inside:avoid}
+  table{font-size:7.4pt} .xs{font-size:7.2pt} .sm{font-size:7.8pt}
+  .tag{font-size:6.8pt} .fx{font-size:7.6pt}
+  .rf{font-size:7.4pt}
+}
+@media (max-width:760px){
+  .g{grid-template-columns:repeat(6,1fr)}
+  .c4,.c5,.c6,.c7,.c8,.c9,.c12{grid-column:span 6}
+  .c3{grid-column:span 3} .rf,.rf.three{column-count:1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<div class="mast">
+  <h1>Unit 2 — Rapid Revision Sheet</h1>
+  <p>Applied Ruminant Nutrition-I · VCI MSVE 2016 · Theory Paper I. Four A4 sheets covering scientific feeding, feeding experiments, digestion &amp; metabolism trials, digestibility, feeding standards and balanced rations.</p>
+  <div class="meta">
+    <span class="tag">B.V.Sc &amp; A.H. II Year</span>
+    <span class="tag t">Paper I · 100 Marks</span>
+    <span class="tag a">9 Syllabus Topics</span>
+    <span class="tag p">Print → A4 · 4 pages</span>
+  </div>
+</div>
+
+<!-- ═══════════════ SHEET 1 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">01</span><h2>Scientific Feeding · Feeding Experiments · Experimental Design</h2><span class="wt">WHY AND HOW WE TEST A FEED</span></div>
+  <div class="g">
+
+    <div class="b c5">
+      <h3>Importance of scientific feeding</h3>
+      <p class="xs"><b>Definition:</b> feeding animals on the basis of their <b>measured nutrient requirements</b> and the <b>known nutritive value</b> of available feeds, rather than by custom or convenience.</p>
+      <p class="xs"><b>Write these 8 justifications:</b> ① <b>Feed is 60–70% of the total cost</b> of livestock production — the only input where efficiency directly decides profit. ② Ensures the genetic potential of improved breeds is actually expressed. ③ Prevents both <b>under-nutrition</b> (delayed puberty, anoestrus, low yield, low immunity, high neonatal mortality) and <b>over-nutrition</b> (fatty liver, dystocia, ketosis, acidosis, laminitis). ④ Avoids <b>deficiency and toxicity</b> disorders. ⑤ Permits use of <b>cheap, locally available and unconventional</b> feeds without loss of production. ⑥ Improves <b>feed conversion efficiency</b> and reduces nutrient excretion (N, P, methane) into the environment. ⑦ Guarantees <b>product quality</b> — milk fat, SNF, meat quality, shell strength. ⑧ Makes livestock enterprises <b>predictable and bankable</b>.</p>
+      <div class="clin"><b>Indian context line worth adding:</b> our animals live largely on <b>crop residues (paddy and wheat straw)</b> with a national deficit of ~11% green fodder, ~23% dry fodder and ~29% concentrate. Scientific feeding here means <b>strategic supplementation</b> — urea-treated straw, mineral mixture, bypass nutrients — not imported feeding models.</div>
+    </div>
+
+    <div class="b t c7">
+      <h3>Feeding experiments — six types, and what each one can prove</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Experiment</th><th>What is measured</th><th>Answers the question</th></tr></thead>
+        <tbody>
+          <tr><td><b>Digestion trial</b></td><td>Nutrients eaten vs nutrients in faeces</td><td>How much of the feed is <b>digestible</b> → DCP, TDN</td></tr>
+          <tr><td><b>Balance / Metabolism trial</b></td><td>Intake vs faeces <b>+ urine</b> (± milk, gases)</td><td>How much is actually <b>retained</b> in the body → N, Ca, P, energy balance</td></tr>
+          <tr><td><b>Growth (feeding) trial</b></td><td>Body weight gain, feed intake, <b>FCR</b></td><td>Does the feed <b>perform</b> in a live animal?</td></tr>
+          <tr><td><b>Production trial</b></td><td>Milk yield &amp; composition, egg number &amp; mass, wool, work output</td><td>Effect on the <b>saleable product</b></td></tr>
+          <tr><td><b>Comparative slaughter</b></td><td>Carcass composition of a baseline group vs the fed group</td><td>Energy &amp; protein <b>actually deposited</b> — indirect NE determination without a calorimeter (<i>destructive</i>)</td></tr>
+          <tr><td><b>Palatability / cafeteria trial</b></td><td>Free-choice intake when several feeds are offered</td><td><b>Voluntary intake</b> and acceptability</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Also name:</b> <b>in-vitro</b> (Tilley &amp; Terry two-stage), <b>in-sacco</b> (nylon bag), <b>gas production</b> (Menke) and <b>mobile bag</b> techniques as laboratory substitutes for whole-animal trials — cheap, fast, repeatable, but they cannot measure intake or animal response.</p>
+    </div>
+
+    <div class="b p c6">
+      <h3>Experimental designs &amp; the rules that make a trial valid</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Design</th><th>When it is used</th></tr></thead>
+        <tbody>
+          <tr><td><b>CRD</b> (Completely Randomised)</td><td>Uniform animals; simplest; unequal group sizes allowed</td></tr>
+          <tr><td><b>RBD</b> (Randomised Block)</td><td>Animals blocked by <b>weight, age, parity or yield</b>, then randomised within block — the commonest livestock design</td></tr>
+          <tr><td><b>Latin Square</b></td><td>Each animal receives <b>every treatment in a different order</b>; controls both animal and period effects; needs treatments = periods = animals</td></tr>
+          <tr><td><b>Switch-over / Reversal / Change-over</b></td><td>Lactating cows — <b>each animal is its own control</b>; excellent when animals are few and costly</td></tr>
+          <tr><td><b>Split-plot / Factorial</b></td><td>Two or more factors tested together (e.g. energy level × protein source) with interaction</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Non-negotiable rules:</b> ① <b>Replication</b> — never one animal per treatment. ② <b>Randomisation</b> — removes bias. ③ <b>Local control</b> — uniform housing, management and climate. ④ A genuine <b>control group</b>. ⑤ Uniform age, sex, weight, breed and physiological status. ⑥ Adequate <b>pre-experimental (adaptation) period</b>. ⑦ Accurate <b>individual</b> feeding and recording. ⑧ Statistical analysis before any conclusion is claimed.</p>
+      <div class="alert"><b>Latin square caution:</b> because the same animal receives successive treatments, a <b>carry-over (residual) effect</b> can confound results — always insert an adequate wash-out/adaptation between periods.</div>
+    </div>
+
+    <div class="b a c6">
+      <h3>Voluntary intake — the factor that decides everything</h3>
+      <p class="xs">Nutrient supply = <b>digestibility × voluntary intake</b>. A highly digestible feed the animal will not eat is nutritionally useless — say this whenever intake is asked.</p>
+      <p class="xs"><b>Regulation of intake:</b> <b>Physical / distension control</b> dominates on roughage diets — rumen fill and rate of passage; correlates negatively with <b>NDF</b>. <b>Chemo-metabolic control</b> dominates on concentrate diets — VFA (especially propionate) receptors, blood glucose, hepatic oxidation, leptin. <b>Thermostatic control</b> — heat increment reduces intake in hot weather (Indian summer, buffalo).</p>
+      <div class="tw"><table>
+        <thead><tr><th>Factor</th><th>Effect on intake</th></tr></thead>
+        <tbody>
+          <tr><td>NDF / lignification of the roughage</td><td>↑ NDF ⇒ ↓ intake (rumen fill)</td></tr>
+          <tr><td>Chaffing, grinding, pelleting</td><td>↑ intake (faster passage)</td></tr>
+          <tr><td>Moisture &gt; 70% / poor silage</td><td>↓ intake</td></tr>
+          <tr><td>Dietary CP below ~7–8%</td><td>↓ microbial activity ⇒ ↓ intake sharply</td></tr>
+          <tr><td>Heat stress, illness, pain, poor water</td><td>↓ intake</td></tr>
+          <tr><td>Palatability, frequency of feeding, TMR</td><td>↑ intake</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>DM intake thumb rules (% of body weight):</b> adult cattle <span class="num-hl">2.5–3.0</span> · buffalo <span class="num-hl">2.5</span> · high-yielding crossbred cow <span class="num-hl">3.0–3.5</span> · sheep &amp; goat <span class="num-hl">3–4</span> · growing calf <span class="num-hl">2.5–3.0</span>.</p>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 1 / 4 · SCIENTIFIC FEEDING &amp; EXPERIMENTS · ANIMAL NUTRITION UNIT 2 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 2 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">02</span><h2>Digestion &amp; Metabolism Trials · Norms · Measurement of Digestibility</h2><span class="wt">THE MOST-ASKED LONG ANSWER IN UNIT 2</span></div>
+  <div class="g">
+
+    <div class="b c7">
+      <h3>Conducting a digestion trial — the protocol, in exam order</h3>
+      <div class="flow">
+        <div class="node"><span class="t1">SELECT ANIMALS</span><span class="t2">min 3–5, male, uniform</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">PRELIMINARY PERIOD</span><span class="t2">7–14 days</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">COLLECTION PERIOD</span><span class="t2">5–10 days</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">ANALYSIS</span><span class="t2">proximate on feed, residue &amp; faeces</span></div>
+      </div>
+      <p class="xs"><b>1. Animals:</b> minimum <b>3–5</b> healthy adults of the same species, breed, age, sex and body weight, dewormed and free from disease. <b>Males (or castrates) are preferred</b> — in females urine contaminates the faeces and separation is difficult.</p>
+      <p class="xs"><b>2. Housing:</b> individual <b>metabolism stalls / digestion crates</b> with separate arrangements for faeces and urine; or <b>faecal collection harness bags</b> for grazing/large animals.</p>
+      <p class="xs"><b>3. Preliminary (adaptation) period — <span class="num-hl">7–14 days</span>:</b> purpose is to (i) accustom the animal to the ration, stall and handling, (ii) allow the <b>rumen microbial population to adapt</b> to the new feed, and (iii) <b>clear the digestive tract completely of the previous feed</b>. Longer for roughage diets and for ruminants than for pigs and poultry.</p>
+      <p class="xs"><b>4. Collection period — <span class="num-hl">5–10 days</span> (usually 7):</b> at a fixed hour daily —
+        <b>weigh the feed offered and the residue left</b>; collect <b>total faeces of 24 h</b>, weigh, mix thoroughly and take a representative <b>aliquot of 1/10th (10%)</b>; do the same for urine.</p>
+      <p class="xs"><b>5. Preservation:</b> faeces — add <b>toluene or a few drops of formalin/conc. H₂SO₄</b> to stop fermentation and N loss; store in a cool place; dry at <b>60–70 °C</b> (low temperature, to avoid losing volatile N). Urine — collect in a bottle containing <b>20–25 mL of conc. H₂SO₄ or HCl</b> to hold <b>pH below 3</b>, preventing loss of ammonia and bacterial breakdown of urea.</p>
+      <p class="xs"><b>6. Analysis &amp; calculation:</b> run proximate analysis on the composite feed, residue and faeces samples, then compute the digestibility coefficient of each nutrient, and from these DCP and TDN.</p>
+      <div class="fx">Digestibility coefficient (%) = [(Nutrient in feed − Nutrient in faeces) ÷ Nutrient in feed] × 100</div>
+      <div class="fx">DCP % = CP % × DC of CP ÷ 100    ·    TDN % = %DCP + %DCF + %DNFE + (%DEE × 2.25)</div>
+      <div class="alert"><b>Why the value is called "apparent" digestibility:</b> faeces contain not only undigested feed but also <b>metabolic faecal matter</b> — shed gut epithelium, digestive enzymes, bile, and dead microbes. Subtracting these gives <b>true digestibility</b>, which is always <b>higher</b> than apparent digestibility. The difference is largest for <b>protein</b> and at <b>low levels of intake</b>.</p></div>
+    </div>
+
+    <div class="b t c5">
+      <h3>Digestion trial vs Metabolism (balance) trial</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Point</th><th>Digestion trial</th><th>Metabolism / balance trial</th></tr></thead>
+        <tbody>
+          <tr><td>Collected</td><td>Feed + <b>faeces</b> only</td><td>Feed + faeces <b>+ urine</b> (± milk, ± gases)</td></tr>
+          <tr><td>Measures</td><td>Digestibility, DCP, TDN, DE</td><td><b>Retention</b> of a nutrient — N, Ca, P, energy balance</td></tr>
+          <tr><td>Tells you</td><td>How much was <b>absorbed</b></td><td>How much was <b>utilised &amp; stored</b></td></tr>
+          <tr><td>Level</td><td>DE level</td><td>ME and NE level</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fx t2">N balance = N intake − (Faecal N + Urinary N + Milk N)</div>
+      <p class="xs"><b>Positive balance</b> = growth, pregnancy, recovery, wool/milk synthesis. <b>Negative balance</b> = starvation, fever, protein deficiency, early-lactation high yielder. <b>Zero (equilibrium)</b> = maintenance.</p>
+      <p class="xs"><b>Sources of error in any trial:</b> incomplete faecal collection; contamination with urine, hair, bedding or soil; loss of volatile N during drying; unrepresentative sampling and aliquoting; feed residue not accounted; too short a preliminary period; individual animal variation; and a change in intake during the collection period.</p>
+      <div class="clin"><b>Practical tip that scores:</b> always <b>record and analyse the residue (orts)</b> separately — animals selectively refuse the stemmy, high-fibre fraction, so residue composition is not the same as the composition of the offered feed.</div>
+    </div>
+
+    <div class="b a c12">
+      <h3>Measurement of digestibility — direct, indirect &amp; laboratory methods</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Method</th><th>Principle</th><th>Merits</th><th>Demerits</th></tr></thead>
+        <tbody>
+          <tr><td><b>Direct (total collection)</b></td><td>Weigh everything eaten and every gram of faeces voided</td><td><b>Most accurate</b>; reference method</td><td>Laborious, needs crates, impossible on pasture or in large herds; animals stressed by confinement</td></tr>
+          <tr><td><b>Indirect — indicator / marker</b></td><td>An <b>indigestible marker</b> is used as an internal reference; only <b>grab samples</b> of feed and faeces are needed, not total collection</td><td>No total collection; usable on <b>grazing animals</b>; less labour</td><td>Marker must be truly indigestible, unabsorbed, uniformly mixed and completely recovered — rarely 100% true</td></tr>
+          <tr><td><b>Difference method</b></td><td>Digestibility of a basal ration is measured, then the test ingredient replaces a known part of it; digestibility of the ingredient is obtained by difference</td><td>Only way to value a single ingredient (e.g. an oil cake)</td><td><b>Associative effects</b> between ingredients distort the answer</td></tr>
+          <tr><td><b>In vitro — Tilley &amp; Terry (1963)</b></td><td>Two stages: <b>48 h with strained rumen liquor</b> + buffer under CO₂, then <b>48 h with acid pepsin</b></td><td>Fast, cheap, many samples, good correlation with in-vivo</td><td>Needs a fistulated donor animal; no intake data</td></tr>
+          <tr><td><b>In sacco — nylon bag</b></td><td>Weighed sample in a porous nylon bag suspended in the rumen of a <b>fistulated animal</b> and removed at intervals (0–72 h)</td><td>Gives the <b>rate and extent of degradation</b> — the basis of RDP/RUP values</td><td>Fistulated animals needed; particle loss through pores; no post-ruminal digestion</td></tr>
+          <tr><td><b>Gas production (Menke)</b></td><td>Volume of fermentation gas produced in vitro over time</td><td>Kinetics of fermentation; screens for methane</td><td>Indirect; gas ≠ nutrient supply</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fx">Digestibility % = 100 − 100 × [ (% Indicator in feed ÷ % Indicator in faeces) × (% Nutrient in faeces ÷ % Nutrient in feed) ]</div>
+      <p class="xs"><b>Indicators — learn both lists.</b> <b>Internal (natural to the feed):</b> <b>lignin</b>, <b>acid insoluble ash (AIA / silica)</b>, indigestible ADF or NDF, plant <b>chromogen</b>, n-alkanes of plant cuticle wax. <b>External (fed deliberately):</b> <b>chromic oxide (Cr₂O₃)</b> — the classic, given as ~<b>10 g twice daily</b> in gelatin capsules or a paper packet; <b>titanium dioxide (TiO₂)</b>; polyethylene glycol (PEG, for liquid phase); rare-earth elements (Yb, Dy); barium sulphate.</p>
+      <div class="mnem"><b>Properties of an ideal indicator (5):</b> totally <b>indigestible &amp; unabsorbable</b> · <b>no pharmacological effect</b> on the animal or the microbes · mixes <b>uniformly</b> and passes at the same rate as the digesta · <b>quantitatively recoverable</b> in faeces · easily and accurately <b>estimated in the laboratory</b>.</div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 2 / 4 · DIGESTION TRIALS &amp; DIGESTIBILITY · ANIMAL NUTRITION UNIT 2 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 3 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">03</span><h2>Factors Affecting Digestibility · Feeding Standards</h2><span class="wt">GUARANTEED 10-MARK QUESTIONS</span></div>
+  <div class="g">
+
+    <div class="b c c6">
+      <h3>Factors affecting digestibility of a feed</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Factor</th><th>Effect &amp; the reason</th></tr></thead>
+        <tbody>
+          <tr><td><b>1. Composition of the feed</b> — <i>the single most important factor</i></td><td>↑ <b>Crude fibre and especially LIGNIN</b> ⇒ ↓ digestibility. Lignin is indigestible and physically shields cellulose &amp; hemicellulose from microbial enzymes. Every 1% rise in lignin drops DM digestibility appreciably</td></tr>
+          <tr><td><b>2. Stage of maturity of the fodder</b></td><td>As the plant matures, cell wall (NDF, ADF, lignin) rises and cell contents fall ⇒ both digestibility <b>and</b> intake fall. Hence "cut at 50% flowering"</td></tr>
+          <tr><td><b>3. Species &amp; type of animal</b></td><td><b>Ruminants &gt; horse &gt; pig &gt; poultry</b> for fibrous feeds. Ruminants digest crude fibre 2–3× better than pigs; poultry practically not at all</td></tr>
+          <tr><td><b>4. Level of feeding</b></td><td>Feeding above maintenance <b>speeds the rate of passage</b> ⇒ less time for microbial and enzymatic attack ⇒ digestibility falls by <b>~2–4% per multiple of maintenance</b>. This is why high yielders on heavy intake digest less efficiently</td></tr>
+          <tr><td><b>5. Ratio of nutrients / protein level</b></td><td>Dietary CP <b>below 7–8%</b> starves the rumen microbes of N ⇒ fibre digestion collapses. Adding urea or a protein supplement to straw <b>raises the digestibility of the straw itself</b></td></tr>
+          <tr><td><b>6. Associative effect of feeds</b></td><td>Excess readily fermentable starch lowers rumen pH and <b>inhibits cellulolytic bacteria</b> ⇒ negative associative effect on roughage digestion</td></tr>
+          <tr><td><b>7. Feed preparation &amp; processing</b></td><td>Chaffing, soaking, alkali/urea treatment, steaming ⇒ ↑ digestibility. <b>Very fine grinding of roughage ↓ digestibility</b> (rapid passage) though it raises intake</td></tr>
+          <tr><td><b>8. Fat level</b></td><td>Free oil above <b>3–4% of DM</b> coats fibre and poisons cellulolytic bacteria ⇒ fibre digestibility falls</td></tr>
+          <tr><td><b>9. Anti-nutritional factors</b></td><td>Tannins bind protein &amp; enzymes; saponins, oxalates and mycotoxins depress digestion</td></tr>
+          <tr><td><b>10. Mineral &amp; vitamin adequacy</b></td><td>S, P, Co and trace minerals are needed for microbial growth; deficiency ⇒ ↓ digestion</td></tr>
+          <tr><td><b>11. Frequency of feeding &amp; water supply</b></td><td>Frequent small meals stabilise rumen pH ⇒ better fibre digestion; water restriction depresses intake &amp; digestibility</td></tr>
+          <tr><td><b>12. Work, age, health &amp; individuality</b></td><td>Heavy work and parasitism reduce digestibility; very young and very old animals digest less; individual variation of 2–5% always exists</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="b p c6">
+      <h3>Feeding standards — history in one table</h3>
+      <p class="xs"><b>Definition:</b> a <b>feeding standard</b> is a statement of the quantities of nutrients required daily by an animal of a given species, body weight and level of production, to maintain it in the desired state.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Standard</th><th>Worker / Year</th><th>Basis — the identifying phrase</th></tr></thead>
+        <tbody>
+          <tr><td><b>Hay Equivalents</b></td><td>Thaer, <span class="mn">1810</span></td><td><b>First-ever feeding standard.</b> All feeds expressed in terms of the value of meadow hay</td></tr>
+          <tr><td><b>Total nutrients</b></td><td>Grouven, <span class="mn">1859</span></td><td>Based on the <b>total (not digestible)</b> nutrients of the proximate analysis — its fatal flaw</td></tr>
+          <tr><td><b>Digestible nutrients</b></td><td>Wolff, <span class="mn">1864</span></td><td>First to use <b>digestible</b> nutrients; single value per animal, no production allowance</td></tr>
+          <tr><td><b>Wolff–Lehmann</b></td><td>Lehmann, <span class="mn">1897</span></td><td>Wolff's tables <b>revised for level of production</b> (e.g. per litre of milk)</td></tr>
+          <tr><td><b>Starch Equivalent</b></td><td>Kellner, <span class="mn">1905</span></td><td>Net energy for <b>fat deposition</b>; 1 kg starch = 248 g fat</td></tr>
+          <tr><td><b>Therm / Net Energy</b></td><td>Armsby, <span class="mn">1915</span></td><td>Net energy in <b>therms</b>, from respiration calorimetry</td></tr>
+          <tr><td><b>Haecker &amp; Savage</b></td><td><span class="mn">1914–20</span></td><td>Specific standards for <b>dairy cattle</b> — DCP + TDN per litre of milk of stated fat %</td></tr>
+          <tr><td><b>Morrison</b></td><td><span class="mn">1936</span> (<i>Feeds &amp; Feeding</i>)</td><td>DCP &amp; TDN given as a <b>range</b> with a built-in <b>margin of safety</b></td></tr>
+          <tr><td><b>NRC</b></td><td>USA, revised periodically</td><td><b>Minimum requirement</b> values; species-wise; <b>no margin of safety</b></td></tr>
+          <tr><td><b>ARC / AFRC</b></td><td>UK</td><td><b>Factorial</b> approach in <b>ME and Metabolisable Protein (MP)</b> — scientifically the most rigorous</td></tr>
+          <tr><td><b>Kearl</b></td><td><span class="mn">1982</span></td><td>Requirements specifically for <b>ruminants in developing countries</b></td></tr>
+          <tr><td><b>ICAR</b></td><td>India, <span class="mn">1985 / 1998 / 2013</span></td><td>For <b>Indian breeds</b> under tropical, roughage-based feeding — the standard we actually use</td></tr>
+        </tbody>
+      </table></div>
+      <div class="mnem"><b>Sequence mnemonic:</b> <b>T</b>haer → <b>G</b>rouven → <b>W</b>olff → <b>L</b>ehmann → <b>K</b>ellner → <b>A</b>rmsby → <b>H</b>aecker → <b>M</b>orrison → <b>N</b>RC → <b>A</b>RC → <b>K</b>earl → <b>I</b>CAR. "<i>Total → Digestible → Energy → Factorial → Local.</i>"</div>
+    </div>
+
+    <div class="b s c12">
+      <h3>Comparative evaluation — merits &amp; demerits of the major standards</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Standard</th><th>Merits</th><th>Demerits</th></tr></thead>
+        <tbody>
+          <tr><td><b>Morrison</b></td><td>Simple <b>DCP + TDN</b> units familiar to Indian teaching; gives a <b>range</b> (minimum–maximum) with a <b>margin of safety</b>; covers many species and classes in one book</td><td><b>Empirical</b>, derived from practical American feeding experience rather than from measured requirements; TDN overvalues roughages; not adjusted for tropical breeds or climate</td></tr>
+          <tr><td><b>NRC (USA)</b></td><td>Based on <b>experimentally determined requirements</b>; frequently revised on new research; expressed in modern units (ME, NE<sub>L</sub>, MP, individual amino acids and minerals); species-specific committees</td><td>Gives <b>minimum requirements with no safety margin</b> — must be adjusted for stress; based on <b>temperate breeds, feeds and management</b>; assumes high-quality feeds not available in India</td></tr>
+          <tr><td><b>ARC / AFRC (UK)</b></td><td><b>Factorial</b> — separately computes maintenance, growth, pregnancy and lactation and sums them; uses <b>ME and Metabolisable Protein (RDP/RUP)</b>, so it is biologically the most sound; accounts for efficiency of utilisation (k<sub>m</sub>, k<sub>l</sub>, k<sub>f</sub>)</td><td><b>Mathematically complex</b> and not field-friendly; requires feed degradability data most Indian laboratories cannot generate</td></tr>
+          <tr><td><b>Kearl</b></td><td>Explicitly derived for <b>tropical, developing-country ruminants</b> on crop residues; practical units</td><td>Data base limited; not breed-specific</td></tr>
+          <tr><td><b>ICAR (India)</b></td><td>Developed on <b>Indian cattle, buffalo, sheep and goat</b> using Indian feeds; accounts for our roughage-based diets and climate; <b>the standard to quote for Indian conditions</b></td><td>Fewer categories than NRC; needs updating for high-producing crossbreds and modern buffalo genetics</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>The concluding sentence to write:</b> "No single standard is universally applicable — <b>a feeding standard is a guide, not a law</b>. It must always be adjusted for breed, climate, housing, stress, feed quality and individual response, and confirmed by monitoring body condition score, production and health."</p>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 3 / 4 · DIGESTIBILITY FACTORS &amp; FEEDING STANDARDS · ANIMAL NUTRITION UNIT 2 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 4 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">04</span><h2>Balanced Ration · Characteristics · Rapid-Fire Drill</h2><span class="wt">CLOSING SHEET</span></div>
+  <div class="g">
+
+    <div class="b c6">
+      <h3>Balanced ration — definition &amp; characteristics</h3>
+      <p class="xs"><b>Definition (write exactly):</b> A <b>balanced ration</b> is one which supplies <b>all the essential nutrients — energy, protein, minerals, vitamins and water — in the required amount and correct proportion</b>, in a palatable and digestible form, to a given animal <b>for a period of 24 hours</b>, so as to enable it to perform the desired function of maintenance and production efficiently and economically.</p>
+      <p class="xs"><b>Characteristics — the 12-point answer:</b></p>
+      <p class="xs">① <b>Palatable</b> and acceptable — otherwise intake fails. ② Adequate <b>bulk</b> to satisfy the animal and keep the rumen functioning (never all-concentrate). ③ Slightly <b>laxative</b>, never constipating (include wheat bran, green fodder, molasses). ④ Made of a <b>variety of ingredients</b> — improves amino-acid balance and palatability. ⑤ <b>Economical</b> and built from <b>locally available</b> feeds. ⑥ <b>Free from moulds, mycotoxins, adulterants and anti-nutritional factors.</b> ⑦ Supplies nutrients in the <b>correct proportion — appropriate nutritive ratio</b> for the animal's stage. ⑧ Suited to the <b>species and physiological state</b> (growth, pregnancy, lactation, work). ⑨ Contains adequate <b>green fodder</b> for carotene and B-complex precursors. ⑩ At least <b>one-third of the protein from a leguminous or animal source</b> in young animals. ⑪ Includes <b>mineral mixture ~2% and common salt ~1%</b> of the concentrate. ⑫ <b>Changed gradually</b> — never abruptly — over 7–14 days, to protect the rumen microflora.</p>
+      <div class="clin"><b>Standard Indian concentrate mixture (write this if asked to formulate):</b> Maize/grain <b>30–35%</b> · Groundnut or mustard cake <b>25–30%</b> · Wheat bran / rice polish <b>25–30%</b> · Deoiled cake or pulse chuni <b>10%</b> · Mineral mixture <b>2%</b> · Common salt <b>1%</b>. Target: <b>CP 18–20%, TDN 70%</b> (BIS Type I cattle feed).</div>
+    </div>
+
+    <div class="b a c6">
+      <h3>Balanced ration vs Maintenance ration vs Production ration</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Point</th><th>Maintenance ration</th><th>Production ration</th></tr></thead>
+        <tbody>
+          <tr><td>Purpose</td><td>Keeps the animal alive, healthy and at constant weight</td><td>Supplied <b>over and above</b> maintenance for milk, meat, wool, egg, work or pregnancy</td></tr>
+          <tr><td>Body weight</td><td><b>No gain, no loss</b></td><td>Supports a defined output</td></tr>
+          <tr><td>N balance</td><td><b>Zero (equilibrium)</b></td><td><b>Positive</b></td></tr>
+          <tr><td>Composition</td><td>Mainly roughage; wide NR (1:8 or more)</td><td>Concentrate-supported; narrow NR (1:4 to 1:6)</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Practical Indian thumb rules (state these confidently):</b></p>
+      <p class="xs">• <b>Maintenance:</b> ~<span class="num-hl">1.5 kg</span> concentrate mixture for an adult cow and ~<span class="num-hl">2 kg</span> for a buffalo, plus roughage <i>ad libitum</i>.<br>
+      • <b>Milk production:</b> <span class="num-hl">1 kg</span> concentrate per <span class="num-hl">2.5 L</span> of cow milk (4% fat) and per <span class="num-hl">2 L</span> of buffalo milk (7% fat).<br>
+      • <b>Pregnancy allowance:</b> extra <span class="num-hl">1–1.75 kg</span> concentrate in the <b>last 2–3 months</b>.<br>
+      • <b>Green fodder:</b> <span class="num-hl">20–30 kg</span>/day for an adult cow; dry roughage <span class="num-hl">4–6 kg</span>.<br>
+      • <b>Roughage : concentrate ratio</b> — maintenance <span class="num-hl">80:20</span>, average production <span class="num-hl">60:40</span>, high yielder <span class="num-hl">50:50</span> (never below 40% roughage).</p>
+      <div class="alert"><b>Never write a ration without checking three things:</b> total <b>DM intake</b> is within the animal's capacity (2.5–3% BW), the <b>nutritive ratio</b> suits the physiological stage, and <b>minerals and salt</b> have been added. Examiners deduct marks for a ration that is nutritionally correct but physically impossible to eat.</div>
+    </div>
+
+    <div class="b c12">
+      <h3>Last-10-minutes drill — Unit 2</h3>
+      <div class="rf three">
+        <div><span class="q">Feed share of production cost</span> — <span class="ans">60–70%</span></div>
+        <div><span class="q">Preliminary period of digestion trial</span> — <span class="ans">7–14 days</span></div>
+        <div><span class="q">Collection period</span> — <span class="ans">5–10 days (usually 7)</span></div>
+        <div><span class="q">Minimum animals per trial</span> — <span class="ans">3–5</span></div>
+        <div><span class="q">Sex preferred in a digestion trial</span> — <span class="ans">Male / castrate</span></div>
+        <div><span class="q">Faecal aliquot taken</span> — <span class="ans">1/10th (10%)</span></div>
+        <div><span class="q">Faeces preservative</span> — <span class="ans">Toluene / formalin</span></div>
+        <div><span class="q">Urine preservative &amp; pH</span> — <span class="ans">Conc. H₂SO₄, pH &lt; 3</span></div>
+        <div><span class="q">Faeces drying temperature</span> — <span class="ans">60–70 °C</span></div>
+        <div><span class="q">Why "apparent" digestibility</span> — <span class="ans">Metabolic faecal matter not deducted</span></div>
+        <div><span class="q">True digestibility is</span> — <span class="ans">Always higher than apparent</span></div>
+        <div><span class="q">Classic external indicator</span> — <span class="ans">Chromic oxide, 10 g twice daily</span></div>
+        <div><span class="q">Internal indicators</span> — <span class="ans">Lignin, AIA, chromogen, iADF</span></div>
+        <div><span class="q">In-vitro two-stage method</span> — <span class="ans">Tilley &amp; Terry, 1963 (48 h + 48 h)</span></div>
+        <div><span class="q">Technique giving RDP/RUP</span> — <span class="ans">In-sacco nylon bag</span></div>
+        <div><span class="q">Most important factor in digestibility</span> — <span class="ans">Lignin / crude fibre content</span></div>
+        <div><span class="q">Effect of ↑ feeding level</span> — <span class="ans">↓ digestibility (faster passage)</span></div>
+        <div><span class="q">Minimum dietary CP for rumen function</span> — <span class="ans">7–8%</span></div>
+        <div><span class="q">Fat level that depresses fibre digestion</span> — <span class="ans">Above 3–4% of DM</span></div>
+        <div><span class="q">First feeding standard ever</span> — <span class="ans">Thaer's Hay Equivalents, 1810</span></div>
+        <div><span class="q">Standard based on total nutrients</span> — <span class="ans">Grouven, 1859</span></div>
+        <div><span class="q">First digestible-nutrient standard</span> — <span class="ans">Wolff, 1864</span></div>
+        <div><span class="q">Standard with a margin of safety</span> — <span class="ans">Morrison</span></div>
+        <div><span class="q">Standard with NO safety margin</span> — <span class="ans">NRC</span></div>
+        <div><span class="q">Factorial ME + MP standard</span> — <span class="ans">ARC / AFRC (UK)</span></div>
+        <div><span class="q">Standard for developing countries</span> — <span class="ans">Kearl, 1982</span></div>
+        <div><span class="q">Indian standard</span> — <span class="ans">ICAR (2013)</span></div>
+        <div><span class="q">Design where animal is its own control</span> — <span class="ans">Switch-over / reversal</span></div>
+        <div><span class="q">Design controlling animal + period</span> — <span class="ans">Latin square</span></div>
+        <div><span class="q">DM intake of adult cattle</span> — <span class="ans">2.5–3% of body weight</span></div>
+        <div><span class="q">DM intake of sheep &amp; goat</span> — <span class="ans">3–4% of body weight</span></div>
+        <div><span class="q">Mineral mixture &amp; salt in concentrate</span> — <span class="ans">2% and 1%</span></div>
+        <div><span class="q">Concentrate per litre of cow milk</span> — <span class="ans">1 kg per 2.5 L (4% fat)</span></div>
+        <div><span class="q">Concentrate per litre of buffalo milk</span> — <span class="ans">1 kg per 2 L (7% fat)</span></div>
+        <div><span class="q">Maintenance concentrate, cow</span> — <span class="ans">~1.5 kg + roughage ad lib</span></div>
+        <div><span class="q">Roughage:concentrate for high yielder</span> — <span class="ans">50:50 (never &lt;40% roughage)</span></div>
+        <div><span class="q">Time to change a ration</span> — <span class="ans">Gradually over 7–14 days</span></div>
+        <div><span class="q">N balance at maintenance</span> — <span class="ans">Zero / equilibrium</span></div>
+        <div><span class="q">NE method needing no calorimeter</span> — <span class="ans">Comparative slaughter</span></div>
+        <div><span class="q">Ideal indicator property</span> — <span class="ans">Indigestible, inert, uniformly mixed, fully recoverable, easily assayed</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 4 / 4 · BALANCED RATION &amp; DRILL · ANIMAL NUTRITION UNIT 2 · VCI MSVE 2016 · PREPARED FOR B.V.Sc &amp; A.H. II YEAR</div>
+</section>
+
+</div>

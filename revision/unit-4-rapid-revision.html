@@ -1,0 +1,475 @@
+<title>Unit 4 Rapid Revision Sheet</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --paper:#fdfdfb; --ground:#e8edf3; --rule:#c9d4de; --rule-soft:#e2e9f0;
+  --ink:#1b2a34; --ink-2:#4a6070; --ink-3:#7e8f9c;
+  --blue:#1565c0; --teal:#00796b; --amber:#a05300; --coral:#c8390f; --sage:#2b6e2f; --plum:#5d3f9e;
+  --blue-w:#e8f1fb; --teal-w:#e2f2f0; --amber-w:#fbf0e0; --coral-w:#fbe8e2; --sage-w:#e6f2e6; --plum-w:#eee9fa;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#141b21; --ground:#0c1116; --rule:#2c3a45; --rule-soft:#232e37;
+    --ink:#e3ebf1; --ink-2:#a3b6c4; --ink-3:#7b8d9b;
+    --blue:#6fb2f5; --teal:#4fc9b8; --amber:#e6a44e; --coral:#ff8a63; --sage:#7fce83; --plum:#b39bf0;
+    --blue-w:#16283c; --teal-w:#0f2f2b; --amber-w:#33240e; --coral-w:#3a1f16; --sage-w:#162c18; --plum-w:#251d3d;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141b21; --ground:#0c1116; --rule:#2c3a45; --rule-soft:#232e37;
+  --ink:#e3ebf1; --ink-2:#a3b6c4; --ink-3:#7b8d9b;
+  --blue:#6fb2f5; --teal:#4fc9b8; --amber:#e6a44e; --coral:#ff8a63; --sage:#7fce83; --plum:#b39bf0;
+  --blue-w:#16283c; --teal-w:#0f2f2b; --amber-w:#33240e; --coral-w:#3a1f16; --sage-w:#162c18; --plum-w:#251d3d;
+}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);
+  font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:13px;line-height:1.4;-webkit-font-smoothing:antialiased;padding:18px 12px 40px}
+.wrap{max-width:200mm;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+
+/* ── masthead ─────────────────────────────── */
+.mast{background:var(--paper);border:1px solid var(--rule);border-top:4px solid var(--blue);padding:14px 16px}
+.mast h1{margin:0;font-size:20px;font-weight:800;letter-spacing:-.02em}
+.mast p{margin:5px 0 0;font-size:11.5px;color:var(--ink-2);max-width:62ch}
+.mast .meta{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}
+
+/* ── sheet ────────────────────────────────── */
+.sheet{background:var(--paper);border:1px solid var(--rule);
+  width:100%;padding:9mm 8mm;display:flex;flex-direction:column;gap:5px}
+.shead{display:flex;align-items:baseline;gap:9px;border-bottom:2px solid var(--ink);padding-bottom:4px;margin-bottom:3px}
+.shead .num{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:19px;font-weight:700;color:var(--blue);line-height:1}
+.shead h2{margin:0;font-size:14.5px;font-weight:800;letter-spacing:-.015em;flex:1}
+.shead .wt{font-family:"JetBrains Mono",monospace;font-size:9.5px;color:var(--ink-3);letter-spacing:.04em;white-space:nowrap}
+
+/* ── grid + blocks ────────────────────────── */
+.g{display:grid;grid-template-columns:repeat(12,1fr);gap:5px;align-content:start}
+.b{border:1px solid var(--rule-soft);border-top:2.5px solid var(--blue);padding:5px 7px 6px;
+   background:var(--paper);min-width:0;overflow-wrap:break-word}
+.b.t{border-top-color:var(--teal)} .b.a{border-top-color:var(--amber)}
+.b.c{border-top-color:var(--coral)} .b.s{border-top-color:var(--sage)} .b.p{border-top-color:var(--plum)}
+.b>h3{margin:0 0 4px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--blue)}
+.b.t>h3{color:var(--teal)} .b.a>h3{color:var(--amber)}
+.b.c>h3{color:var(--coral)} .b.s>h3{color:var(--sage)} .b.p>h3{color:var(--plum)}
+.c1{grid-column:span 1}.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:span 4}
+.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}
+.c9{grid-column:span 9}.c12{grid-column:span 12}
+
+/* ── text atoms ───────────────────────────── */
+p{margin:0 0 3px} p:last-child{margin-bottom:0}
+ul{margin:0;padding-left:12px} li{margin-bottom:1.5px}
+b,strong{font-weight:700}
+em{font-style:italic;color:var(--ink-2)}
+.sm{font-size:10.5px;line-height:1.35}
+.xs{font-size:9.5px;line-height:1.3;color:var(--ink-2)}
+.m{font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.k{color:var(--blue);font-weight:700}
+.num-hl{font-family:"JetBrains Mono",monospace;font-weight:700;color:var(--amber);font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.05em;padding:1.5px 5px;background:var(--blue-w);color:var(--blue);border-radius:2px}
+.tag.t{background:var(--teal-w);color:var(--teal)} .tag.a{background:var(--amber-w);color:var(--amber)}
+.tag.c{background:var(--coral-w);color:var(--coral)} .tag.s{background:var(--sage-w);color:var(--sage)}
+.tag.p{background:var(--plum-w);color:var(--plum)}
+
+/* ── formula strip ────────────────────────── */
+.fx{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:600;background:var(--amber-w);
+  color:var(--ink);padding:3px 6px;margin:3px 0;border-left:3px solid var(--amber);
+  font-variant-numeric:tabular-nums;overflow-x:auto;white-space:nowrap}
+.fx.b2{background:var(--blue-w);border-left-color:var(--blue)}
+.fx.t2{background:var(--teal-w);border-left-color:var(--teal)}
+
+/* ── tables ───────────────────────────────── */
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:9.5px;line-height:1.25}
+th{background:var(--blue-w);color:var(--blue);font-weight:700;font-size:8.5px;
+   text-transform:uppercase;letter-spacing:.05em;text-align:left;padding:2.5px 4px;border:1px solid var(--rule-soft)}
+.b.c th{background:var(--coral-w);color:var(--coral)} .b.a th{background:var(--amber-w);color:var(--amber)}
+.b.t th{background:var(--teal-w);color:var(--teal)} .b.s th{background:var(--sage-w);color:var(--sage)}
+.b.p th{background:var(--plum-w);color:var(--plum)}
+td{padding:2.5px 4px;border:1px solid var(--rule-soft);vertical-align:top}
+td.mn{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,transparent)}
+
+/* ── flow diagram ─────────────────────────── */
+.flow{display:flex;align-items:stretch;gap:0;font-size:9px;line-height:1.2;margin:3px 0}
+.node{flex:1;border:1px solid var(--rule);padding:3px 4px;text-align:center;min-width:0}
+.node .t1{font-weight:700;font-size:9.5px;display:block}
+.node .t2{color:var(--ink-3);font-size:8.5px;font-family:"JetBrains Mono",monospace}
+.arw{display:flex;flex-direction:column;justify-content:center;padding:0 3px;color:var(--coral);
+  font-size:8px;font-weight:700;text-align:center;font-family:"JetBrains Mono",monospace}
+.arw span{display:block;white-space:nowrap}
+
+/* ── mnemonic + alert ─────────────────────── */
+.mnem{background:var(--plum-w);border-left:3px solid var(--plum);padding:3px 6px;margin:3px 0;font-size:10px}
+.mnem b{color:var(--plum);font-family:"JetBrains Mono",monospace;letter-spacing:.02em}
+.alert{background:var(--coral-w);border-left:3px solid var(--coral);padding:3px 6px;margin:3px 0;font-size:10px}
+.clin{background:var(--sage-w);border-left:3px solid var(--sage);padding:3px 6px;margin:3px 0;font-size:10px}
+
+/* ── rapid-fire two column list ───────────── */
+.rf{column-count:2;column-gap:14px;font-size:9.5px;line-height:1.35}
+.rf.three{column-count:3}
+.rf div{break-inside:avoid;margin-bottom:2px;padding-left:9px;text-indent:-9px}
+.rf .q{font-weight:700}
+.rf .ans{color:var(--coral);font-weight:700}
+
+.foot{font-size:9px;color:var(--ink-3);text-align:center;padding-top:4px;
+  border-top:1px solid var(--rule-soft);margin-top:auto;font-family:"JetBrains Mono",monospace;letter-spacing:.04em}
+
+/* ── print ────────────────────────────────── */
+@media print{
+  @page{size:A4;margin:8mm}
+  body{background:#fff;padding:0;font-size:8.4pt}
+  .wrap{max-width:none;gap:0}
+  .mast{display:none}
+  .sheet{border:none;padding:0;page-break-after:always;break-after:page;min-height:0}
+  .sheet:last-child{page-break-after:auto}
+  .b{break-inside:avoid}
+  table{font-size:7.4pt} .xs{font-size:7.2pt} .sm{font-size:7.8pt}
+  .tag{font-size:6.8pt} .fx{font-size:7.6pt}
+  .rf{font-size:7.4pt}
+}
+@media (max-width:760px){
+  .g{grid-template-columns:repeat(6,1fr)}
+  .c4,.c5,.c6,.c7,.c8,.c9,.c12{grid-column:span 6}
+  .c3{grid-column:span 3} .rf,.rf.three{column-count:1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<div class="mast">
+  <h1>Unit 4 — Rapid Revision Sheet</h1>
+  <p>Applied Non-Ruminant Nutrition · VCI MSVE 2016 · Theory Paper II. Five A4 sheets covering swine, equine, poultry, ducks, quail, turkey, rabbits, laboratory animals, dogs, cats and captive wild animals.</p>
+  <div class="meta">
+    <span class="tag">B.V.Sc &amp; A.H. II Year</span>
+    <span class="tag t">Paper II · 100 Marks</span>
+    <span class="tag a">17 Syllabus Topics</span>
+    <span class="tag p">Print → A4 · 5 pages</span>
+  </div>
+</div>
+
+<!-- ═══════════════ SHEET 1 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">01</span><h2>Non-Ruminant Principles · Determining Requirements · BIS &amp; ICAR Standards</h2><span class="wt">THE FRAMEWORK</span></div>
+  <div class="g">
+
+    <div class="b c6">
+      <h3>How non-ruminants differ — the governing contrast</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Point</th><th>Ruminant</th><th>Non-ruminant</th></tr></thead>
+        <tbody>
+          <tr><td>Fibre digestion</td><td>Excellent — microbial cellulase</td><td><b>Poor to nil</b> (horse &amp; rabbit are partial exceptions — hind-gut fermenters)</td></tr>
+          <tr><td>Protein quality</td><td>Levelled by microbial protein; <b>degradability</b> matters</td><td><b>Amino-acid balance is critical</b> — lysine, methionine, threonine, tryptophan</td></tr>
+          <tr><td>NPN / urea</td><td>Usable</td><td><b>Toxic — never feed</b></td></tr>
+          <tr><td>B vitamins &amp; Vit K</td><td>Synthesised in the rumen (needs Co)</td><td><b>Must be supplied in the diet</b></td></tr>
+          <tr><td>Energy expressed as</td><td>TDN / ME / NE<sub>L</sub></td><td><b>ME (kcal/kg)</b> for poultry &amp; pigs; DE for horses</td></tr>
+          <tr><td>Phytate phosphorus</td><td>Released by rumen phytase</td><td><b>Unavailable</b> ⇒ add <b>phytase</b> or inorganic P</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>The ideal protein concept</b> — the modern basis of pig and poultry formulation: express every essential amino acid as a <b>percentage of lysine</b> (lysine = 100), so the diet contains amino acids in exactly the proportion the animal deposits, with no excess to be deaminated. Typical ideal pattern for the pig: <b>Lys 100 : Met+Cys 60 : Thr 65 : Trp 18</b>. Formulate on <b>digestible (ileal) amino acids</b>, not total.</p>
+    </div>
+
+    <div class="b t c6">
+      <h3>Methods of determining nutrient requirements</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Method</th><th>Principle &amp; comment</th></tr></thead>
+        <tbody>
+          <tr><td><b>Factorial</b></td><td>Requirement is built up by <b>adding the separate needs</b> for maintenance, growth, reproduction and production, each divided by its efficiency of utilisation. Logical and flexible; depends on accurate efficiency values</td></tr>
+          <tr><td><b>Dose–response / graded levels</b></td><td>Groups are fed <b>graded levels</b> of the nutrient; performance is plotted and the <b>break-point (plateau)</b> read off. The commonest method for amino acids, vitamins and minerals in poultry</td></tr>
+          <tr><td><b>Nitrogen (or mineral) balance</b></td><td>The intake giving <b>zero balance</b> is the maintenance requirement; the level giving maximum retention is the production requirement</td></tr>
+          <tr><td><b>Comparative &amp; serial slaughter</b></td><td>Body composition of slaughtered groups reveals <b>actual nutrient deposition</b>. Accurate but destructive and costly</td></tr>
+          <tr><td><b>Tissue saturation / enzyme &amp; blood assay</b></td><td>The intake at which the tissue level or the dependent enzyme activity plateaus (e.g. plasma vitamin, glutathione peroxidase for Se)</td></tr>
+          <tr><td><b>Radioisotope dilution</b></td><td>Labelled nutrient traces turnover, pool size and true absorption</td></tr>
+        </tbody>
+      </table></div>
+      <div class="alert"><b>The distinction to state clearly:</b> a <b>requirement</b> is the minimum that prevents deficiency and supports the defined performance; a <b>recommended allowance</b> is the requirement <b>plus a margin of safety</b> for stress, variation in feed composition, bioavailability and processing losses. NRC publishes requirements; BIS and commercial standards publish allowances.</div>
+    </div>
+
+    <div class="b a c12">
+      <h3>Indian standards — BIS &amp; ICAR specifications you can quote</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Feed</th><th>Class</th><th>CP (min)</th><th>Energy</th><th>Other limits</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="2"><b>Compounded cattle feed</b><br><span class="xs">BIS IS:2052</span></td><td>Type I</td><td class="mn">22%</td><td class="mn">TDN 70%</td><td rowspan="2">Crude fibre max <b>12%</b> · Acid insoluble ash max <b>4%</b> · Salt max <b>2%</b> · Moisture max <b>11%</b></td></tr>
+          <tr><td>Type II</td><td class="mn">20%</td><td class="mn">TDN 65%</td></tr>
+          <tr><td rowspan="2"><b>Broiler feed</b><br><span class="xs">BIS IS:1374</span></td><td>Starter (0–3 wk)</td><td class="mn">23%</td><td class="mn">ME 2800–3000 kcal/kg</td><td rowspan="2">Ca <b>1.0%</b> · Available P <b>0.45%</b> · Lysine 1.1–1.2% · Methionine 0.45–0.50%</td></tr>
+          <tr><td>Finisher (4–6 wk)</td><td class="mn">20%</td><td class="mn">ME 3000–3200 kcal/kg</td></tr>
+          <tr><td rowspan="3"><b>Layer feed</b><br><span class="xs">BIS IS:1374</span></td><td>Chick mash (0–8 wk)</td><td class="mn">20%</td><td class="mn">ME ~2600</td><td>Ca 1.0%</td></tr>
+          <tr><td>Grower mash (9–20 wk)</td><td class="mn">16%</td><td class="mn">ME ~2500</td><td>Ca 1.0%</td></tr>
+          <tr><td>Layer mash (&gt;20 wk)</td><td class="mn">18%</td><td class="mn">ME 2600–2700</td><td><b>Ca 3.5–4.0%</b> · Available P 0.35%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Calorie : protein ratio</b> (kcal ME per kg ÷ % CP) — broiler starter ≈ <span class="num-hl">130–140</span>, broiler finisher ≈ <span class="num-hl">150–160</span>, layer ≈ <span class="num-hl">150–170</span>. <b>Birds eat to satisfy their energy requirement</b>: if the ratio widens (energy too high relative to protein) the bird stops eating before it has taken in enough protein and becomes fat with poor growth or small eggs; if it narrows, expensive protein is burnt as energy. <b>Always change protein and energy together.</b></p>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 1 / 5 · NON-RUMINANT PRINCIPLES &amp; STANDARDS · ANIMAL NUTRITION UNIT 4 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 2 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">02</span><h2>Swine Nutrition · Equine Nutrition</h2><span class="wt">TWO CONTRASTING MONOGASTRICS</span></div>
+  <div class="g">
+
+    <div class="b c6">
+      <h3>Swine — the efficient omnivore</h3>
+      <p class="xs"><b>Digestive peculiarities:</b> simple stomach, omnivorous, <b>highly efficient converter</b> (FCR 2.5–3.5), but almost no ability to use fibre (keep CF below 6–8% in young pigs). <b>Lysine is the first limiting amino acid</b> in cereal-based diets. Prolific and fast-growing ⇒ nutrition dominates profitability.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Class</th><th>CP</th><th>ME kcal/kg</th><th>Feeding note</th></tr></thead>
+        <tbody>
+          <tr><td><b>Creep (piglet, 1–3 wk→wean)</b></td><td class="mn">20–22%</td><td class="mn">3300</td><td>Offer <b>from 7–10 days</b>; highly palatable, milk-based; teaches the piglet to eat dry feed</td></tr>
+          <tr><td><b>Starter (wean–20 kg)</b></td><td class="mn">18–20%</td><td class="mn">3200</td><td>Weaning at <b>4–8 weeks</b>; post-weaning check &amp; scours are the main risks</td></tr>
+          <tr><td><b>Grower (20–50 kg)</b></td><td class="mn">16–18%</td><td class="mn">3100</td><td><i>Ad libitum</i>; lean tissue growth phase</td></tr>
+          <tr><td><b>Finisher (50–90 kg)</b></td><td class="mn">14–16%</td><td class="mn">3100</td><td>Slight restriction to <b>prevent excess back-fat</b>; withdraw additives before slaughter</td></tr>
+          <tr><td><b>Pregnant sow</b></td><td class="mn">14%</td><td class="mn">3000</td><td><b>Restricted — about 2 kg/day.</b> Over-feeding causes dystocia, crushed piglets, low milk and poor rebreeding</td></tr>
+          <tr><td><b>Lactating sow</b></td><td class="mn">16–18%</td><td class="mn">3200</td><td><i>Ad libitum</i> — roughly <b>2 kg + 0.25 kg per suckling piglet</b>; the highest-demand class on the farm</td></tr>
+          <tr><td><b>Breeding boar</b></td><td class="mn">14–16%</td><td class="mn">3000</td><td><b>2–2.5 kg/day</b>; keep in breeding condition, never fat</td></tr>
+        </tbody>
+      </table></div>
+      <div class="clin"><b>Piglet must-knows:</b> ① <b>Iron-dextran 150–200 mg IM on day 3</b> — sow's milk is iron-poor and confined piglets have no soil contact ⇒ otherwise <b>piglet anaemia</b>. ② Colostrum within 12 h. ③ Creep feed early. ④ Clean water always. <b>Flushing</b> the gilt/sow (extra feed 10–14 days before mating) raises ovulation rate.</div>
+      <p class="xs"><b>Deficiency signs unique to pigs:</b> <b>parakeratosis</b> (Zn, aggravated by high dietary Ca), <b>goose-stepping</b> (pantothenic acid), <b>mulberry heart &amp; hepatosis dietetica</b> (Vitamin E/Se), <b>salt poisoning</b> (water deprivation with normal salt intake), and <b>gossypol toxicity</b> from cottonseed cake.</p>
+    </div>
+
+    <div class="b t c6">
+      <h3>Equine — the hind-gut fermenter</h3>
+      <p class="xs"><b>Digestive peculiarities — the six that explain every feeding rule:</b> ① <b>Small stomach</b> (8–15 L, only ~10% of GIT capacity) ⇒ small frequent meals. ② <b>No gall bladder</b> ⇒ continuous bile flow, poor tolerance of large fat loads. ③ Enormous <b>caecum and colon</b> (~60% of GIT) housing the microbial population ⇒ fibre is fermented <b>after</b> the small intestine, so microbial protein and B vitamins are synthesised <b>too far down to be well used</b>. ④ Therefore <b>dietary protein quality matters</b> (lysine is first limiting) unlike in a ruminant. ⑤ Cannot vomit. ⑥ Grazing animal designed to eat for 16 h a day.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Class</th><th>CP</th><th>Feeding note</th></tr></thead>
+        <tbody>
+          <tr><td><b>Foal / creep</b></td><td class="mn">16–18%</td><td>Creep from 1–2 months; needs high-quality protein &amp; lysine, Ca and P for skeletal growth</td></tr>
+          <tr><td><b>Weanling / Yearling</b></td><td class="mn">14–16%</td><td>Steady growth — over-feeding energy causes <b>developmental orthopaedic disease</b></td></tr>
+          <tr><td><b>Broodmare</b></td><td class="mn">12–14%</td><td>Extra in the <b>last 3 months</b> of gestation and heavily in <b>early lactation</b> (mare milk peaks at 2 months)</td></tr>
+          <tr><td><b>Stallion</b></td><td class="mn">12–14%</td><td>Maintenance +25% in the breeding season; keep fit, not fat</td></tr>
+          <tr><td><b>Working / race horse</b></td><td class="mn">10–12%</td><td>Energy-dense with fat and grain; <b>electrolytes (Na, K, Cl) after sweating</b>; protein need rises only slightly</td></tr>
+        </tbody>
+      </table></div>
+      <div class="alert"><b>The five golden rules of horse feeding:</b> ① <b>Feed little and often</b> (3–4 meals). ② <b>Roughage first and always — a minimum of 1% of body weight as long-stem forage</b>, ideally 1.5–2%. ③ <b>Make every change gradually</b> over 7–14 days. ④ <b>Water before feeding</b>, and never work a horse immediately after a full feed. ⑤ Feed <b>by weight, not by volume</b>, and keep to a fixed routine. Total DM intake <b>1.5–3% of body weight</b>.</div>
+      <p class="xs"><b>Nutritional disorders of the horse:</b> <b>Colic</b> (sudden change, mouldy feed, sand, inadequate water) · <b>Laminitis</b> (grain overload, lush pasture — hind-gut acidosis) · <b>Azoturia / "Monday morning disease" / tying-up</b> (full grain ration continued during a rest day, then sudden work) · <b>"Big head" (osteodystrophia fibrosa)</b> from <b>high-oxalate</b> tropical grasses binding calcium · <b>Monensin poisoning</b> — an ionophore intended for cattle is <b>fatal</b> to horses.</p>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 2 / 5 · SWINE &amp; EQUINE · ANIMAL NUTRITION UNIT 4 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 3 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">03</span><h2>Poultry Nutrition — Broilers, Layers, Ducks, Quails &amp; Turkeys</h2><span class="wt">THE LARGEST TOPIC IN UNIT 4</span></div>
+  <div class="g">
+
+    <div class="b c6">
+      <h3>Broiler feeding</h3>
+      <p class="xs"><b>Peculiarities of the fowl:</b> no teeth (the <b>gizzard</b> grinds), very rapid passage (~4 h), <b>no urinary separation</b> — urine and faeces void together as uric acid, so a true urinary N balance is impossible; <b>ME is used, not TDN</b>; requires <b>glycine/serine</b> in addition to the ten essentials; needs <b>Vitamin D₃</b> (D₂ is only ~1/10 as potent); synthesises its own Vitamin C.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Phase</th><th>Age</th><th>CP</th><th>ME kcal/kg</th></tr></thead>
+        <tbody>
+          <tr><td><b>Pre-starter</b></td><td>0–7 d</td><td class="mn">23–24%</td><td class="mn">2900–3000</td></tr>
+          <tr><td><b>Starter</b></td><td>0–3 wk</td><td class="mn">23%</td><td class="mn">2800–3000</td></tr>
+          <tr><td><b>Finisher</b></td><td>4–6 wk</td><td class="mn">20%</td><td class="mn">3000–3200</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Performance benchmarks:</b> market weight <b>1.8–2.2 kg at 5–6 weeks</b>; <b>FCR 1.5–1.7</b>; mortality &lt;5%. Feed is offered <i>ad libitum</i> as <b>crumbles then pellets</b>.</p>
+      <p class="xs"><b>Key nutritional points:</b> methionine is the <b>first limiting amino acid</b> in maize–soya diets, lysine second; energy is raised through the phases with added fat/oil; <b>coccidiostat</b> is included and must be <b>withdrawn before slaughter</b>; Ca 1.0% and available P 0.45%; phytase is routinely added to release phytate P.</p>
+      <div class="alert"><b>Ascites (waterbelly)</b> and <b>Sudden Death Syndrome</b> occur because modern broilers grow faster than their cardiopulmonary capacity — controlled by moderating early energy intake and lighting. <b>Skeletal problems (tibial dyschondroplasia, rickets)</b> follow Ca:P imbalance or Vitamin D₃ deficiency.</div>
+    </div>
+
+    <div class="b a c6">
+      <h3>Layer feeding</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Phase</th><th>Age</th><th>CP</th><th>ME</th><th>Ca</th></tr></thead>
+        <tbody>
+          <tr><td><b>Chick mash</b></td><td>0–8 wk</td><td class="mn">20%</td><td class="mn">2600</td><td class="mn">1.0%</td></tr>
+          <tr><td><b>Grower mash</b></td><td>9–20 wk</td><td class="mn">16%</td><td class="mn">2500</td><td class="mn">1.0%</td></tr>
+          <tr><td><b>Layer mash</b></td><td>&gt;20 wk</td><td class="mn">18%</td><td class="mn">2600–2700</td><td class="mn"><b>3.5–4.0%</b></td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Intake &amp; output:</b> a layer eats <b>110–120 g/day</b> and lays an egg whose shell contains about <b>2 g of calcium</b> — roughly <b>10% of her entire body calcium every single day</b>. That figure alone explains the whole calcium strategy.</p>
+      <p class="xs"><b>Calcium strategy — the marks-fetching detail:</b> supply part of the calcium as <b>coarse particulate limestone or oyster shell</b> rather than all as fine powder. Coarse particles are retained in the gizzard and dissolve slowly, releasing calcium <b>during the night</b> when shell calcification actually occurs. Feed the calcium-rich portion in the <b>afternoon/evening</b>. Also ensure Vitamin D₃, phosphorus and manganese.</p>
+      <p class="xs"><b>Grower restriction:</b> pullets are restricted in the growing phase to prevent over-fat birds, delay sexual maturity to the target age and achieve uniform body weight at housing — uniformity, not weight, predicts peak production.</p>
+      <div class="clin"><b>Layer disorders to name:</b> <b>Cage layer fatigue</b> (Ca/P/D₃ — osteoporosis and paralysis in caged birds), <b>thin/soft shells</b> (Ca, D₃, heat stress), <b>fatty liver haemorrhagic syndrome</b> (excess energy, choline/methionine deficiency), <b>prolapse</b> (over-fat, early maturity). In heat stress add <b>sodium bicarbonate</b> and raise nutrient density because intake falls.</div>
+    </div>
+
+    <div class="b p c6">
+      <h3>Ducks, quails &amp; turkeys</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Bird</th><th>Starter CP</th><th>Distinctive requirement</th></tr></thead>
+        <tbody>
+          <tr><td><b>Duck</b></td><td class="mn">20–22%</td><td>Markedly <b>higher niacin (~55 mg/kg)</b> — deficiency causes <b>bowed legs and leg weakness</b>. Prefers <b>wet mash</b> and needs water to swallow. Better able to use fibrous and unconventional feeds; excellent scavenger in paddy fields</td></tr>
+          <tr><td><b>Japanese quail</b></td><td class="mn">27%</td><td><b>The highest protein requirement of any domestic bird</b>; very small particle size; matures at 6 weeks and lays at 6–7 weeks</td></tr>
+          <tr><td><b>Turkey</b></td><td class="mn">28%</td><td>Very high protein and lysine early; prone to <b>starve-out</b> (poults must be taught to eat and drink); needs high niacin and riboflavin</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Unconventional feed ingredients for poultry &amp; swine</b> — name and limit them: de-oiled rice bran, maize gluten, sunflower and safflower cake, <b>sal seed meal</b> (tannins), <b>mahua cake</b> (saponins), <b>salseed / karanj cake</b> (bitter principles), <b>silkworm pupae meal</b> (high protein, rancidity risk), <b>azolla</b>, spirulina, single-cell protein, <b>slaughterhouse and poultry by-product meal</b>, dried bakery waste, molasses, tapioca/cassava (HCN — must be sun-dried), and fruit/vegetable processing waste. The three limits that must always be respected: <b>fibre content, anti-nutritional factors, and consistency of supply.</b></p>
+    </div>
+
+    <div class="b s c6">
+      <h3>Poultry deficiency disorders — the pathognomonic list</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Sign</th><th>Deficiency</th></tr></thead>
+        <tbody>
+          <tr><td><b>Perosis / slipped tendon</b></td><td>Manganese (also choline, biotin, folic acid, niacin)</td></tr>
+          <tr><td><b>Curled-toe paralysis</b></td><td>Riboflavin (B₂)</td></tr>
+          <tr><td><b>Encephalomalacia — "crazy chick"</b></td><td>Vitamin E</td></tr>
+          <tr><td><b>Exudative diathesis</b></td><td>Vitamin E + Selenium</td></tr>
+          <tr><td><b>Fatty Liver &amp; Kidney Syndrome</b></td><td>Biotin</td></tr>
+          <tr><td><b>Rickets / soft beak &amp; bones</b></td><td>Vitamin D₃, Ca or P</td></tr>
+          <tr><td><b>Cage layer fatigue</b></td><td>Ca, P, Vitamin D₃</td></tr>
+          <tr><td><b>Nutritional roup, xerophthalmia</b></td><td>Vitamin A</td></tr>
+          <tr><td><b>"Spectacle eye", dermatitis of feet</b></td><td>Pantothenic acid (B₅)</td></tr>
+          <tr><td><b>Bowed legs in ducklings</b></td><td>Niacin</td></tr>
+          <tr><td><b>Haemorrhage, poor clotting</b></td><td>Vitamin K</td></tr>
+          <tr><td><b>Poor feathering, megaloblastic anaemia</b></td><td>Folic acid</td></tr>
+        </tbody>
+      </table></div>
+      <div class="mnem"><b>Never confuse these three:</b> <b>Curled toe = B₂</b> · <b>Perosis = Mn</b> · <b>Crazy chick (encephalomalacia) = Vitamin E</b>.</div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 3 / 5 · POULTRY NUTRITION · ANIMAL NUTRITION UNIT 4 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 4 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">04</span><h2>Rabbit · Laboratory Animals · Dog · Cat · Captive Wild Animals</h2><span class="wt">SPECIES PECULIARITIES</span></div>
+  <div class="g">
+
+    <div class="b t c6">
+      <h3>Rabbit &amp; laboratory animals</h3>
+      <p class="xs"><b>RABBIT — hind-gut fermenter with a unique trick.</b> Diet: <b>CP 16–18%</b>, <b>crude fibre 12–16%</b> (a <b>minimum of 12% is essential</b> — low fibre causes enteritis and mucoid enteropathy), ME ~2500 kcal/kg, Ca 0.5–1.0%. Fed as pellets plus green fodder.</p>
+      <div class="clin"><b>Caecotrophy (coprophagy) — always asked.</b> The rabbit produces <b>two kinds of faeces</b>: hard, dry pellets voided during the day, and soft, mucus-coated <b>caecotrophs (night faeces)</b> which it takes directly from the anus and swallows whole. These caecotrophs are rich in <b>microbial protein and B vitamins</b> synthesised in the caecum, and re-ingesting them recovers nutrients that would otherwise be lost past the site of absorption. Preventing caecotrophy (e.g. by a collar) causes growth failure — proof that it is nutritionally essential, not a vice.</div>
+      <div class="tw"><table>
+        <thead><tr><th>Lab animal</th><th>CP</th><th>Distinctive requirement</th></tr></thead>
+        <tbody>
+          <tr><td><b>Rat</b></td><td class="mn">20–24%</td><td>Omnivore; practises coprophagy for B vitamins; the classic model for PER and BV assays</td></tr>
+          <tr><td><b>Mouse</b></td><td class="mn">18–20%</td><td>High metabolic rate ⇒ high energy density; needs frequent access to feed &amp; water</td></tr>
+          <tr><td><b>Guinea pig</b></td><td class="mn">18–20%</td><td><b>Requires dietary Vitamin C (10–30 mg/day) — cannot synthesise it</b> ⇒ scurvy; also needs <b>high fibre (~15%)</b> and, being a strict herbivore, is very sensitive to antibiotic-induced enterotoxaemia</td></tr>
+          <tr><td><b>Hamster / gerbil</b></td><td class="mn">16–20%</td><td>Prone to obesity; hoards feed</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>General laboratory-animal principles:</b> diets must be <b>chemically defined, batch-consistent, sterilisable (autoclaving destroys vitamins ⇒ over-fortify), and free from contaminants</b>, because the animal's nutrition is an experimental variable. Provide <i>ad libitum</i> clean water and a fixed photoperiod.</p>
+    </div>
+
+    <div class="b c c6">
+      <h3>Dog &amp; cat</h3>
+      <p class="xs"><b>DOG — an omnivorous carnivore.</b> Adult maintenance <b>CP 18–22%</b>, fat 8–15%; puppy/lactating bitch <b>CP 25–30%</b>. Energy: <b>ME ≈ 130 kcal × W<sup>0.75</sup></b> per day for an adult; puppies and lactating bitches need 2–4×. <b>Dogs have no dietary carbohydrate requirement</b> (glucose can be made from protein and glycerol) but tolerate starch well. Requires <b>arginine</b>; some breeds need <b>taurine</b> (deficiency ⇒ dilated cardiomyopathy). Feed adults once or twice daily; large breeds need <b>controlled growth and correct Ca:P</b> — over-supplementing calcium causes developmental orthopaedic disease.</p>
+      <div class="alert"><b>THE CAT — obligate carnivore. The seven peculiarities (the single most-asked question in Unit 4):</b><br>
+      ① <b>High protein requirement</b> — adult <b>26–30%+</b>, kitten <b>30–35%</b>; hepatic transaminase and urea-cycle enzymes are permanently high and <b>cannot be down-regulated</b>, so protein is catabolised for energy even during fasting.<br>
+      ② <b>Taurine is dietary-essential</b> — cats have low cysteine sulphinic acid decarboxylase and conjugate bile acids only with taurine. Deficiency ⇒ <b>feline central retinal degeneration (blindness)</b>, <b>dilated cardiomyopathy</b>, and reproductive failure.<br>
+      ③ <b>Arginine is critically essential</b> — a <b>single arginine-free meal</b> can cause hyperammonaemia, tremors and death, because the cat cannot synthesise ornithine.<br>
+      ④ <b>Cannot convert β-carotene to Vitamin A</b> (no intestinal dioxygenase) ⇒ needs <b>preformed retinol</b> from animal tissue.<br>
+      ⑤ <b>Cannot convert tryptophan to niacin</b> ⇒ requires about <b>4× the dog's dietary niacin</b>.<br>
+      ⑥ <b>Arachidonic acid is essential</b> — the cat lacks Δ6-desaturase and cannot make it from linoleic acid.<br>
+      ⑦ <b>No sweet taste receptor</b> and limited glucokinase ⇒ indifferent to sugars and poorly adapted to high-carbohydrate diets.</div>
+      <p class="xs"><b>Feline clinical links:</b> <b>hepatic lipidosis</b> in an obese cat that stops eating; <b>feline lower urinary tract disease / struvite urolithiasis</b> — controlled by urinary acidification, restricted magnesium and, above all, <b>increased water intake (wet food)</b>. Cats are nibblers — offer several small meals.</p>
+    </div>
+
+    <div class="b p c12">
+      <h3>Feeding wild &amp; captive zoo animals</h3>
+      <p class="xs"><b>The four governing problems in captivity:</b> ① the natural diet is unknown or unobtainable, so we feed an approximation; ② <b>activity is greatly reduced</b> ⇒ obesity is the commonest nutritional disorder in a zoo; ③ animals are exposed to unnatural feeds and to visitor feeding; ④ deficiencies appear slowly and are often diagnosed only at post-mortem.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Group</th><th>Feeding practice &amp; the classic pitfall</th></tr></thead>
+        <tbody>
+          <tr><td><b>Large carnivores</b> (tiger, lion, leopard)</td><td><b>8–10 kg meat/day</b> for a tiger, <b>with bone</b> — muscle meat alone is severely <b>Ca-deficient (Ca:P about 1:20)</b> and causes <b>nutritional secondary hyperparathyroidism / rickets</b>. Give <b>one fasting day per week</b> to mimic natural feeding and prevent obesity and gut problems. Supplement Vitamin A, taurine and calcium</td></tr>
+          <tr><td><b>Fish-eating species</b> (otter, penguin, seal, piscivorous birds)</td><td>Raw fish contains <b>thiaminase</b> ⇒ thiamine deficiency; supplement <b>thiamine and Vitamin E</b> (fish oil oxidation causes steatitis / yellow fat disease)</td></tr>
+          <tr><td><b>Herbivores</b> (elephant, deer, antelope, rhino)</td><td>Elephant: <b>150–200 kg green fodder + 10–20 kg concentrate</b> daily. Provide browse and long fibre for gut health and to prevent stereotypy; mineral licks</td></tr>
+          <tr><td><b>Primates</b></td><td><b>Require dietary Vitamin C</b> like the guinea pig; provide fruit, vegetables and a balanced primate pellet; avoid feeding only fruit (low protein, high sugar ⇒ obesity and diabetes)</td></tr>
+          <tr><td><b>Reptiles</b></td><td><b>Metabolic bone disease</b> is the classic captive disorder — from low Ca, inverted Ca:P and, crucially, <b>absent UV-B light</b> which reptiles need to synthesise Vitamin D₃. Provide UV-B, calcium dusting and gut-loaded insects</td></tr>
+          <tr><td><b>Psittacine &amp; other birds</b></td><td>An all-seed diet is deficient in <b>Ca, Vitamin A, lysine and methionine</b> ⇒ feather picking, hypovitaminosis A, poor bone. Feed formulated pellets plus greens</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>General zoo principles to write:</b> mimic the <b>natural diet, feeding frequency and feeding behaviour</b>; use <b>environmental/feeding enrichment</b> (scatter feeding, whole carcass, puzzle feeders) because feeding behaviour is a welfare need, not just nutrition; maintain <b>strict hygiene and feed quality</b>; monitor <b>body weight and condition</b> routinely; adjust for season, breeding and hand-rearing; and keep species-wise diet charts with periodic veterinary review.</p>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 4 / 5 · RABBIT, LAB ANIMALS, PET &amp; ZOO NUTRITION · ANIMAL NUTRITION UNIT 4 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 5 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">05</span><h2>Comparative Master Table · Rapid-Fire Drill</h2><span class="wt">CLOSING SHEET</span></div>
+  <div class="g">
+
+    <div class="b c12">
+      <h3>The one table that answers most Unit 4 questions</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Species</th><th>Digestive type</th><th>Typical CP</th><th>Energy / intake note</th><th>The one thing that is unique</th></tr></thead>
+        <tbody>
+          <tr><td><b>Pig</b></td><td>Simple monogastric omnivore</td><td class="mn">14–22%</td><td>ME 3000–3300 kcal/kg; FCR 2.5–3.5</td><td><b>Lysine</b> first limiting; iron injection on day 3; parakeratosis from Zn/Ca imbalance</td></tr>
+          <tr><td><b>Horse</b></td><td>Hind-gut fermenter (caecum &amp; colon)</td><td class="mn">10–18%</td><td>DM 1.5–3% BW; roughage minimum <b>1% BW</b></td><td>Small stomach, no gall bladder, cannot vomit; <b>monensin is fatal</b></td></tr>
+          <tr><td><b>Broiler</b></td><td>Avian, gizzard, rapid passage</td><td class="mn">20–23%</td><td>ME 2800–3200; FCR 1.5–1.7</td><td><b>Methionine</b> first limiting; needs <b>Vitamin D₃</b>, not D₂</td></tr>
+          <tr><td><b>Layer</b></td><td>Avian</td><td class="mn">18%</td><td>110–120 g feed/day</td><td><b>Ca 3.5–4%</b>, coarse particulate limestone fed in the evening</td></tr>
+          <tr><td><b>Duck</b></td><td>Avian, waterfowl</td><td class="mn">20–22%</td><td>Wet mash; good scavenger</td><td><b>High niacin (~55 mg/kg)</b></td></tr>
+          <tr><td><b>Quail</b></td><td>Avian</td><td class="mn">27%</td><td>Tiny particle size</td><td><b>Highest CP requirement</b> of domestic birds</td></tr>
+          <tr><td><b>Turkey</b></td><td>Avian</td><td class="mn">28%</td><td>Poults prone to starve-out</td><td>Very high early protein &amp; lysine</td></tr>
+          <tr><td><b>Rabbit</b></td><td>Hind-gut fermenter</td><td class="mn">16–18%</td><td>Needs <b>CF 12–16%</b></td><td><b>Caecotrophy</b> — eats its soft night faeces</td></tr>
+          <tr><td><b>Guinea pig</b></td><td>Hind-gut fermenter</td><td class="mn">18–20%</td><td>High fibre</td><td><b>Dietary Vitamin C essential</b></td></tr>
+          <tr><td><b>Rat / Mouse</b></td><td>Omnivore</td><td class="mn">18–24%</td><td>Coprophagy supplies B vitamins</td><td>Reference species for PER &amp; BV assays</td></tr>
+          <tr><td><b>Dog</b></td><td>Omnivorous carnivore</td><td class="mn">18–22% adult</td><td>ME ≈ 130 × W<sup>0.75</sup> kcal/day</td><td>No dietary CHO requirement; arginine essential</td></tr>
+          <tr><td><b>Cat</b></td><td><b>Obligate carnivore</b></td><td class="mn">26–35%</td><td>Nibbler — several small meals</td><td><b>Taurine, arachidonic acid, preformed Vitamin A, high niacin, high protein</b></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="b c12">
+      <h3>Last-10-minutes drill — Unit 4</h3>
+      <div class="rf three">
+        <div><span class="q">First limiting AA in pigs</span> — <span class="ans">Lysine</span></div>
+        <div><span class="q">First limiting AA in poultry</span> — <span class="ans">Methionine</span></div>
+        <div><span class="q">Ideal protein reference AA</span> — <span class="ans">Lysine = 100</span></div>
+        <div><span class="q">Piglet iron dose</span> — <span class="ans">150–200 mg iron-dextran IM, day 3</span></div>
+        <div><span class="q">Creep feed start, piglet</span> — <span class="ans">7–10 days</span></div>
+        <div><span class="q">Pig weaning age</span> — <span class="ans">4–8 weeks</span></div>
+        <div><span class="q">Pregnant sow feeding</span> — <span class="ans">Restricted, ~2 kg/day, CP 14%</span></div>
+        <div><span class="q">Lactating sow feeding</span> — <span class="ans">2 kg + 0.25 kg per piglet</span></div>
+        <div><span class="q">Pig FCR</span> — <span class="ans">2.5–3.5</span></div>
+        <div><span class="q">Parakeratosis in pigs</span> — <span class="ans">Zn deficiency (excess Ca)</span></div>
+        <div><span class="q">Goose-stepping</span> — <span class="ans">Pantothenic acid</span></div>
+        <div><span class="q">Mulberry heart</span> — <span class="ans">Vitamin E / Se</span></div>
+        <div><span class="q">Horse stomach capacity</span> — <span class="ans">8–15 L (~10% of GIT)</span></div>
+        <div><span class="q">Organ horses lack</span> — <span class="ans">Gall bladder</span></div>
+        <div><span class="q">Minimum roughage for horse</span> — <span class="ans">1% of body weight</span></div>
+        <div><span class="q">Monday morning disease</span> — <span class="ans">Azoturia / tying-up</span></div>
+        <div><span class="q">Big head in horses</span> — <span class="ans">Oxalate ⇒ osteodystrophia fibrosa</span></div>
+        <div><span class="q">Ionophore fatal to horses</span> — <span class="ans">Monensin</span></div>
+        <div><span class="q">Broiler starter CP &amp; ME</span> — <span class="ans">23%, 2800–3000 kcal/kg</span></div>
+        <div><span class="q">Broiler finisher CP</span> — <span class="ans">20%</span></div>
+        <div><span class="q">Broiler FCR &amp; market weight</span> — <span class="ans">1.5–1.7; 1.8–2.2 kg at 5–6 wk</span></div>
+        <div><span class="q">Layer mash CP &amp; Ca</span> — <span class="ans">18% CP, 3.5–4% Ca</span></div>
+        <div><span class="q">Layer daily feed intake</span> — <span class="ans">110–120 g</span></div>
+        <div><span class="q">Calcium in one egg shell</span> — <span class="ans">~2 g</span></div>
+        <div><span class="q">Why coarse limestone</span> — <span class="ans">Slow night release for shell calcification</span></div>
+        <div><span class="q">Calorie:protein, broiler starter</span> — <span class="ans">~130–140</span></div>
+        <div><span class="q">Cattle feed BIS Type I</span> — <span class="ans">CP 22%, TDN 70%</span></div>
+        <div><span class="q">Cattle feed BIS Type II</span> — <span class="ans">CP 20%, TDN 65%</span></div>
+        <div><span class="q">Max AIA in cattle feed</span> — <span class="ans">4%</span></div>
+        <div><span class="q">Duck distinctive vitamin</span> — <span class="ans">Niacin ~55 mg/kg</span></div>
+        <div><span class="q">Highest CP among birds</span> — <span class="ans">Quail 27% / turkey 28%</span></div>
+        <div><span class="q">Rabbit minimum crude fibre</span> — <span class="ans">12%</span></div>
+        <div><span class="q">Caecotrophy</span> — <span class="ans">Rabbit eating soft night faeces</span></div>
+        <div><span class="q">Guinea pig special need</span> — <span class="ans">Dietary Vitamin C</span></div>
+        <div><span class="q">Dog maintenance energy</span> — <span class="ans">~130 kcal × W<sup>0.75</sup></span></div>
+        <div><span class="q">Nutrient dogs don't need in diet</span> — <span class="ans">Carbohydrate</span></div>
+        <div><span class="q">Cat taurine deficiency</span> — <span class="ans">Retinal degeneration + DCM</span></div>
+        <div><span class="q">One arginine-free meal in cat</span> — <span class="ans">Hyperammonaemia, possibly fatal</span></div>
+        <div><span class="q">Vitamin cats need preformed</span> — <span class="ans">Vitamin A (no carotene conversion)</span></div>
+        <div><span class="q">Cat &amp; tryptophan</span> — <span class="ans">Cannot make niacin ⇒ needs 4× the dog's</span></div>
+        <div><span class="q">Fatty acid essential for cats</span> — <span class="ans">Arachidonic acid</span></div>
+        <div><span class="q">Adult cat dietary CP</span> — <span class="ans">26–30%+</span></div>
+        <div><span class="q">Obese anorectic cat disease</span> — <span class="ans">Hepatic lipidosis</span></div>
+        <div><span class="q">Tiger daily meat &amp; fasting</span> — <span class="ans">8–10 kg with bone; 1 fast day/week</span></div>
+        <div><span class="q">All-muscle-meat diet causes</span> — <span class="ans">Nutritional secondary hyperparathyroidism</span></div>
+        <div><span class="q">Raw fish diet risk</span> — <span class="ans">Thiaminase ⇒ thiamine deficiency</span></div>
+        <div><span class="q">Reptile captive disorder</span> — <span class="ans">Metabolic bone disease (no UV-B/D₃)</span></div>
+        <div><span class="q">Primates special need</span> — <span class="ans">Dietary Vitamin C</span></div>
+        <div><span class="q">Elephant green fodder/day</span> — <span class="ans">150–200 kg</span></div>
+        <div><span class="q">Commonest zoo nutritional disorder</span> — <span class="ans">Obesity</span></div>
+        <div><span class="q">Enzyme freeing phytate P</span> — <span class="ans">Phytase</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 5 / 5 · COMPARATIVE TABLE &amp; DRILL · ANIMAL NUTRITION UNIT 4 · VCI MSVE 2016 · PREPARED FOR B.V.Sc &amp; A.H. II YEAR</div>
+</section>
+
+</div>

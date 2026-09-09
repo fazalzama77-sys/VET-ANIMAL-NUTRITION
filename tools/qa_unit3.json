@@ -1,0 +1,600 @@
+[
+  {
+    "id": "u3-qa-d01",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Metabolic Body Weight (W^0.75) and explain Kleiber's Law.",
+    "topicId": "u3-t01",
+    "answer": "<p><b>Metabolic Body Weight (W^0.75):</b> The mathematical expression of animal body mass (in kilograms) raised to the 0.75 power, representing the active physiological metabolizing mass of an animal.</p><p><b>Kleiber's Law (Max Kleiber, 1932):</b> Established that basal metabolic rate (BMR / fasting heat production) across all homeothermic animal species from mice to elephants does not scale directly with linear body weight, but is strictly proportional to body surface area and metabolic body size: <code>BMR (kcal/day) = 70 × W^0.75 (kg)</code>. Ruminant maintenance energy standards are universally calibrated per kg W<sup>0.75</sup>.</p>",
+    "keyPoints": [
+      "W^0.75 is body weight in kg raised to 0.75 power.",
+      "Kleiber's Law: BMR = 70 × W^0.75 kcal/day across mammalian species.",
+      "Universal reference base for calculating maintenance energy requirements."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "LUVAS 2021"
+    ]
+  },
+  {
+    "id": "u3-qa-d02",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Challenge Feeding (Lead Feeding) in dairy cattle.",
+    "topicId": "u3-t14",
+    "answer": "<p><b>Challenge Feeding (Lead Feeding):</b> The progressive feeding management practice of 'challenging' a high-potential dairy cow with increasing concentrate allowances starting <b>2 to 3 weeks before calving (steaming up)</b> and continuing into early lactation to support maximum peak milk production.</p><p>Concentrates are increased by <b>0.5 kg every 2–3 days</b> post-calving until the cow reaches her physiological peak milk yield (at 4–6 weeks postpartum) and no longer responds with additional milk output, thereby minimizing extreme postpartum negative energy balance and body tissue mobilization.</p>",
+    "keyPoints": [
+      "Begins 2–3 weeks pre-calving and continues into early lactation.",
+      "Increasing concentrate by ~0.5 kg every few days to match genetic potential.",
+      "Aims to maximize peak milk yield and mitigate negative energy balance."
+    ],
+    "table": null,
+    "pyq": [
+      "TANUVAS 2023",
+      "RAJUVAS 2022",
+      "IVRI Annual 2021"
+    ]
+  },
+  {
+    "id": "u3-qa-d03",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Bypass Protein (RUP) and state its target dietary inclusion in high-yielding cows.",
+    "topicId": "u3-t15",
+    "answer": "<p><b>Bypass Protein (Rumen Undegradable Protein - RUP):</b> The fraction of dietary intact true protein that resists microbial proteolytic deamination and fermentation in the rumen-reticulum, passing intact to the abomasum and small intestine where it is digested by gastric pepsin and pancreatic trypsin into absorbable amino acids.</p><p><b>Target Dietary Level:</b> In high-yielding dairy cows producing &gt;15–20 kg milk/day, bypass protein should constitute <b>35% to 40% of the total dietary Crude Protein</b> (with 60–65% as Rumen Degradable Protein - RDP).</p>",
+    "keyPoints": [
+      "Dietary true protein escaping ruminal degradation to be digested in lower gut.",
+      "Protects high-quality essential amino acids from microbial degradation to ammonia.",
+      "Target level: 35–40% of total dietary crude protein in high yielders."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "DUVASU 2022",
+      "GADVASU 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-d04",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Bypass Fat (Protected Fat) and name two commercially available forms.",
+    "topicId": "u3-t15",
+    "answer": "<p><b>Bypass Fat (Rumen-Protected Fat):</b> Specially processed lipid supplements engineered to remain chemically inert and insoluble in the neutral ruminal environment (pH 6.2–6.8)—thus causing no toxic coating of feed particles or depression of microbial cellulolysis—while being fully dissociated, digested, and absorbed in the acidic abomasum (pH 2.0) and duodenum.</p><p><b>Two Commercial Forms:</b></p><ol><li><b>Calcium Soaps of Long-Chain Fatty Acids:</b> (e.g., Calcium salts of palm fatty acid distillates / Megalac). Insoluble at rumen pH &gt;6.0, dissociates into Ca<sup>2+</sup> and free fatty acids at abomasal pH &lt;3.5.</li><li><b>Hydrogenated / Prilled Saturated Triglycerides:</b> (High melting point &gt;55°C fats; e.g., tripalmitin / bypass prills).</li></ol>",
+    "keyPoints": [
+      "Lipids inert at rumen pH (6.5) but digested in acidic abomasum (pH < 3.5).",
+      "Prevents ruminal cellulolytic depression while boosting energy density.",
+      "Examples: Calcium soaps of fatty acids (Megalac) and prilled saturated fats."
+    ],
+    "table": null,
+    "pyq": [
+      "RAJUVAS 2023",
+      "TANUVAS 2021",
+      "LUVAS 2022"
+    ]
+  },
+  {
+    "id": "u3-qa-d05",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Non-Protein Nitrogen (NPN) and calculate the Crude Protein equivalent of pure urea.",
+    "topicId": "u3-t16",
+    "answer": "<p><b>Non-Protein Nitrogen (NPN):</b> All nitrogen-containing chemical compounds present in animal feeds that are not composed of polypeptide amino acid chains (true proteins), such as urea, biuret, ammonium salts, amides, and nitrates.</p><p><b>Crude Protein (CP) Equivalent of Urea:</b></p><ul><li>Chemical formula of fertilizer urea: <code>CO(NH2)2</code> (Molecular weight = 60 g/mol).</li><li>Nitrogen content: Contains 2 nitrogen atoms (28 g N / 60 g = <b>46.6% Nitrogen</b>).</li><li>Applying the standard protein multiplier (6.25): <code>CP Equivalent = 46.6 × 6.25 = 291.6% (Standard commercial rating = 287% CP)</code>.</li><li>Thus, <b>1.0 kg of feed-grade urea provides the equivalent of 2.87 kg of Crude Protein</b> when fully converted into microbial crude protein in the rumen.</li></ul>",
+    "keyPoints": [
+      "Nitrogenous compounds that are not true proteins (urea, ammonium salts).",
+      "Fertilizer urea contains ~46% Nitrogen.",
+      "Calculation: 46% N × 6.25 = 287% CP equivalent (1 g urea = 2.87 g CP)."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "WBUAFS 2021",
+      "KVAFSU 2023"
+    ]
+  },
+  {
+    "id": "u3-qa-d06",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Colostrum and explain 'Gut Closure' in neonatal calves.",
+    "topicId": "u3-t08",
+    "answer": "<p><b>Colostrum:</b> The thick, yellow, viscous mammary secretion produced by the cow immediately following parturition during the first 3 to 4 days, richly packed with maternal immunoglobulins (IgG1, IgG2, IgM, IgA), lactoferrin, trypsin inhibitors, fat-soluble vitamins (A, D, E), and growth factors (IGF-1).</p><p><b>Gut Closure:</b> The physiological and histological maturation of the neonatal calf's intestinal enterocytes wherein macromolecular pinocytosis ceases. At birth, enterocytes non-selectively engulf intact maternal immunoglobulins. Permeability drops rapidly: maximum during the first <b>2–4 hours (50% absorption)</b>, declining to &lt;10% by 12 hours, and closing completely by <b>24 hours of age</b>.</p>",
+    "keyPoints": [
+      "First mammary secretion rich in maternal immunoglobulins (IgG) and nutrients.",
+      "Calf is born agammaglobulinemic (syndesmochorial placenta prevents in utero transfer).",
+      "Gut closure: Cessation of enterocyte pinocytosis completed by 24 hours of life."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2021",
+      "DUVASU 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-d07",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Calf Starter and state its standard nutritional specifications.",
+    "topicId": "u3-t08",
+    "answer": "<p><b>Calf Starter:</b> A highly palatable, nutrient-dense, dry concentrate feed mixture formulated specifically for young suckling calves, introduced from <b>7 to 10 days of age</b> to accelerate the transition from pre-ruminant to functional ruminant physiology by stimulating anatomical and metabolic rumen development.</p><p><b>Standard Nutritional Specifications (ICAR / NRC):</b></p><ul><li><b>Crude Protein (CP):</b> 22% to 24%.</li><li><b>Total Digestible Nutrients (TDN):</b> 75% to 80% (ME ≈ 3.0 Mcal/kg).</li><li><b>Crude Fibre:</b> &lt; 6–7% (coarsely ground, cracked, or rolled grains).</li><li><b>Minerals &amp; Vitamins:</b> 1.0% Ca, 0.7% P, Fortified with Vitamin A (10,000 IU/kg), Vitamin D3, and Vitamin E.</li></ul>",
+    "keyPoints": [
+      "High-energy, high-protein dry mash introduced at 1–2 weeks of life.",
+      "Fermentation of starter starches produces Butyrate and Propionate, stimulating rumen papillae growth.",
+      "Standard specs: 22–24% CP, 75–80% TDN, low crude fibre (<7%)."
+    ],
+    "table": null,
+    "pyq": [
+      "MAFSU 2022",
+      "LUVAS 2021",
+      "TANUVAS 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-d08",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Steaming Up in dairy cattle and state its recommended duration.",
+    "topicId": "u3-t10",
+    "answer": "<p><b>Steaming Up:</b> The practice of feeding extra quantities of balanced concentrate mixture to pregnant dairy cows and heifers during the last <b>6 to 8 weeks before expected parturition</b> (close-up dry period) over and above their normal maintenance and fetal growth requirements.</p><p><b>Primary Objectives:</b> (1) Replenish maternal body reserves depleted during previous lactation (aiming for Body Condition Score 3.25–3.5 at calving); (2) Support rapid fetal growth occurring in the final trimester; (3) Develop mammary secretory parenchyma; (4) Adapt the ruminal microbial population and papillae to concentrate diets to prevent postpartum acidosis.</p>",
+    "keyPoints": [
+      "Supplemental concentrate feeding during final 6–8 weeks of gestation.",
+      "Restores maternal tissue reserves to BCS 3.25–3.5.",
+      "Supports 70% of fetal growth and prepares ruminal papillae for lactation."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "RAJUVAS 2021",
+      "NDVSU 2023"
+    ]
+  },
+  {
+    "id": "u3-qa-d09",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Dietary Cation-Anion Difference (DCAD) and state its mathematical formula.",
+    "topicId": "u3-t17",
+    "answer": "<p><b>Dietary Cation-Anion Difference (DCAD):</b> The net electrochemical balance of major fixed dietary monovalent and divalent cations and anions present in feed, which dictates systemic acid-base status and calcium mobilization.</p><p><b>Standard Mathematical Formula:</b><br><code>DCAD (mEq / kg of Diet Dry Matter) = (Na+ + K+) - (Cl- + S2-)</code><br><i>Calculated using milliequivalents: mEq = [mg of mineral / Atomic weight] × Valence.</i></p><p>Feeding a <b>negative DCAD diet (-50 to -100 mEq/kg DM)</b> via anionic salts (ammonium chloride, magnesium sulfate) to close-up dry cows induces mild compensated metabolic acidosis, sensitizing bone and kidney PTH receptors and preventing <b>Milk Fever</b>.</p>",
+    "keyPoints": [
+      "Formula: (Na+ + K+) - (Cl- + S2-) in mEq/kg DM.",
+      "Negative DCAD (-50 to -100 mEq) induces mild metabolic acidosis.",
+      "Sensitizes Parathyroid Hormone (PTH) receptors to prevent Parturient Hypocalcemia."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021"
+    ]
+  },
+  {
+    "id": "u3-qa-d10",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Flushing in ewes and does and state its physiological benefits.",
+    "topicId": "u3-t12",
+    "answer": "<p><b>Flushing:</b> The nutritional management practice of increasing the plane of nutrition (supplementing <b>250 to 350 g of high-energy concentrate mixture</b> or providing lush green pasture daily) to breeding ewes and does starting <b>2 to 3 weeks prior to breeding and continuing 2–3 weeks into the mating season</b>.</p><p><b>Physiological Benefits:</b> (1) Stimulates secretion of pituitary gonadotropins (FSH and LH); (2) Increases follicular recruitment and ovulation rate; (3) Elevates twinning and lambing percentages by 10–20%; (4) Reduces early embryonic mortality.</p>",
+    "keyPoints": [
+      "High energy/protein supplementation (250–350 g/day) 2–3 weeks pre- and post-mating.",
+      "Elevates systemic insulin and IGF-1, stimulating pituitary gonadotropin release.",
+      "Increases ovulation rate, twinning percentage, and embryo survival."
+    ],
+    "table": null,
+    "pyq": [
+      "DUVASU 2023",
+      "LUVAS 2020",
+      "RAJUVAS 2021"
+    ]
+  },
+  {
+    "id": "u3-qa-d11",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Pregnancy Toxaemia (Twin Lamb Disease) in sheep and state its nutritional cause.",
+    "topicId": "u3-t12",
+    "answer": "<p><b>Pregnancy Toxaemia (Twin Lamb Disease / Ketonemia of Ewes):</b> A fatal metabolic disorder occurring in pregnant ewes and does during the <b>final 4 to 6 weeks of gestation</b>, characterized by severe hypoglycemia, hyperketonemia, hepatic lipidosis, and terminal encephalopathy.</p><p><b>Nutritional Cause:</b> Multiple fetuses (twins or triplets) demand massive glucose supplies (up to 40% of maternal glucose pool) while expanding uterine volume physically compresses the rumen, reducing dry matter intake capacity by 20–30%. When ewes are undernourished, extensive maternal adipose lipolysis floods the liver with NEFA, overwhelming the TCA cycle and causing massive ketone body accumulation.</p>",
+    "keyPoints": [
+      "Metabolic disease of late pregnant twin-bearing ewes and does.",
+      "Caused by severe glucose deficit and intense maternal adipose lipolysis.",
+      "Characterized by hypoglycemia, hyperketonemia, fatty liver, and neurological signs."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "TANUVAS 2023",
+      "KVAFSU 2021"
+    ]
+  },
+  {
+    "id": "u3-qa-d12",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Urea Toxicity in cattle and state the immediate field emergency antidote.",
+    "topicId": "u3-t16",
+    "answer": "<p><b>Urea Toxicity (Ammonia Poisoning):</b> An acute, lethal intoxication resulting from accidental ingestion of excessive urea or improper unadapted feeding, where bacterial urease hydrolyzes urea faster than rumen microbes can synthesize amino acids, causing massive ammonia accumulation, ruminal pH surge (&gt;8.0), and hyperammonemia.</p><p><b>Immediate Field Antidote:</b><br>Oral drench of <b>2 to 4 litres of 5% Acetic Acid (ordinary commercial Vinegar)</b> diluted with <b>20 to 30 litres of cold water</b>. The acetic acid neutralizes alkaline rumen pH, converting toxic lipophilic NH<sub>3</sub> into unabsorbable ammonium ions (NH<sub>4</sub><sup>+</sup>), while cold water chills the rumen, arresting urease enzyme activity.</p>",
+    "keyPoints": [
+      "Acute hyperammonemia caused by rapid ruminal ureolysis exceeding assimilation.",
+      "Rumen pH surges >8.0, causing massive systemic ammonia absorption.",
+      "Immediate antidote: Oral drench of 2–4 L of 5% vinegar (acetic acid) + cold water."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2021",
+      "RAJUVAS 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-s01",
+    "type": "short",
+    "marks": 5,
+    "question": "Detail the first-month nutritional management and rearing protocol for neonatal calves.",
+    "topicId": "u3-t08",
+    "answer": "<p>Neonatal calves are anatomical and physiological non-ruminants (pre-ruminants) born with an undeveloped rumen (abomasum forms ~60% of stomach volume). Management during the first month determines lifetime growth and productivity:</p><ul><li><b>1. The Colostrum Golden Hour Protocol:</b><br>- <i>Quantity:</i> Feed maternal colostrum at <b>10% of body weight</b> (3.0–3.5 litres for a 35 kg calf) within the first 24 hours.<br>- <i>Timing:</i> The first meal (2.0 litres) must be administered within <b>30 minutes to 2 hours of birth</b> to maximize pinocytotic absorption of IgG before gut closure occurs (&lt;24 hours).<br>- <i>Continuation:</i> Continue feeding colostrum/transition milk for the first 3–4 days.</li><li><b>2. Liquid Milk Feeding (Days 4–30):</b><br>- Whole milk or high-quality milk replacer (22% CP, 18–20% fat) fed at <b>10% of body weight daily</b>, divided into two equal feedings warmed to body temperature (38–39°C).<br>- Feed using a nipple pail or bottle to stimulate the <b>reticular (esophageal) groove reflex</b>, ensuring liquid bypasses the undeveloped rumen and flows directly into the abomasum for acid-pepsin digestion.</li><li><b>3. Introduction of Calf Starter &amp; Water (From Day 7–10):</b><br>- Offer fresh calf starter (22–24% CP, 75% TDN) ad libitum in small handfuls daily.<br>- <i>Physiological Role:</i> Microbial fermentation of concentrate starches generates <b>Butyrate and Propionate</b>, which act as chemical mitogens directly stimulating the elongation and vascularization of ruminal mucosal papillae.<br>- Clean, fresh drinking water must be provided ad libitum from day 7.</li><li><b>4. Forage Introduction:</b><br>- Introduce small quantities of fine, sun-cured leguminous hay (berseem/lucerne) from 2–3 weeks of age to stimulate ruminal muscular tone and volume.</li></ul>",
+    "keyPoints": [
+      "Colostrum: 10% body weight, first meal within 2 hours of life.",
+      "Reticular groove reflex closure stimulated by warm milk nipple feeding.",
+      "Calf starter introduced at 7–10 days: Butyrate stimulates ruminal papillae growth.",
+      "Free access to clean drinking water mandatory from 1 week of age."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021",
+      "RAJUVAS 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-s02",
+    "type": "short",
+    "marks": 5,
+    "question": "Describe the manufacture, biological mechanism, and productive benefits of Bypass Nutrients (Bypass Protein and Bypass Fat).",
+    "topicId": "u3-t15",
+    "answer": "<p>In high-yielding dairy animals (&gt;15 kg milk/day), the genetic drive for milk production outstrips the nutrient delivery capacity of normal ruminal fermentation. Bypass technologies protect premium nutrients from ruminal degradation.</p><ul><li><b>1. Bypass Protein (Formaldehyde-Treated Protein):</b><br>- <i>Manufacturing:</i> Commercial oilseed cakes (mustard, soybean, groundnut cake) are treated with <b>commercial formalin (37% formaldehyde) at 1.0 to 1.2 g formaldehyde per 100 g crude protein</b> in an airtight mixer, followed by curing for 48 hours.<br>- <i>Mechanism:</i> Formaldehyde forms reversible methylene cross-linkages with free terminal amino groups of protein chains at neutral rumen pH (6.5–6.8), preventing microbial protease attachment. Upon entering the acidic abomasum (pH 2.0–2.5), the methylene bonds hydrolyze completely, releasing intact protein for host enzymatic digestion.<br>- <i>Benefits:</i> Enhances milk yield by 10–15%, improves milk protein content, and saves 20–25% expensive dietary cake protein.</li><li><b>2. Bypass Fat (Calcium Soaps of Fatty Acids):</b><br>- <i>Manufacturing:</i> Long-chain fatty acids (palm oil distillates) are reacted with calcium oxide/hydroxide under steam and pressure to synthesize insoluble Calcium Soaps (e.g., Megalac).<br>- <i>Mechanism:</i> Calcium soaps remain insoluble and inert at ruminal pH &gt;6.0, completely avoiding toxic biohydrogenation or adhesion to fibre particles. In the abomasum (pH &lt;3.0), they dissociate into free fatty acids and Ca<sup>2+</sup>, which are digested in the duodenum with &gt;85% efficiency.<br>- <i>Benefits:</i> Densifies dietary energy without lowering fibre cellulolysis, alleviates postpartum negative energy balance, improves conception rates, and elevates milk fat percentage by 0.3–0.5 units.</li></ul>",
+    "keyPoints": [
+      "Formaldehyde treatment: 1.0–1.2 g formalin / 100 g CP forms pH-dependent methylene bonds.",
+      "Bypass fat: Calcium soaps insoluble at rumen pH 6.5, dissociates in abomasum at pH 2.5.",
+      "Prevents cellulolytic inhibition while supplying concentrated net energy.",
+      "Productive benefits: +10-15% milk yield, higher milk fat test, improved fertility."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "LUVAS 2023",
+      "DUVASU 2021",
+      "MAFSU 2021"
+    ]
+  },
+  {
+    "id": "u3-qa-s03",
+    "type": "short",
+    "marks": 5,
+    "question": "Enumerate the golden rules, safe threshold limits, and precautions for feeding Urea to ruminants.",
+    "topicId": "u3-t16",
+    "answer": "<p>Urea is a cost-effective non-protein nitrogen (NPN) supplement, but its safe utilization demands strict adherence to physiological principles:</p><ol><li><b>Threshold Dietary Limits:</b><br>- Urea should not exceed <b>1% of the total ration Dry Matter</b>.<br>- Urea should not exceed <b>3% of the concentrate mixture</b>.<br>- Urea should not supply more than <b>one-third (33%) of the total dietary nitrogen</b>.</li><li><b>Gradual Adaptation:</b><br>Microbes require <b>2 to 3 weeks of gradual step-up feeding</b> to induce the microbial enzyme systems necessary for efficient ammonia assimilation.</li><li><b>Mandatory Carbohydrate Synchrony:</b><br>Urea must always be fed alongside a source of readily available, fermentable non-structural carbohydrates (e.g., molasses, crushed maize, sorghum). Starch releases ATP and carbon skeletons (α-ketoglutarate) at a rate that matches ammonia release.</li><li><b>Strict Mineral Balancing (Sulfur &amp; Phosphorus):</b><br>Microbes require sulfur to synthesize methionine and cysteine. Maintain a dietary <b>Nitrogen-to-Sulfur (N:S) ratio of 10:1</b> (supplement with ammonium sulfate or sodium sulfate).</li><li><b>Absolute Prohibitions:</b><br>- <i>Never feed to pre-ruminant young calves (&lt;3–4 months):</i> Their rumen is non-functional, leading to direct fatal absorption.<br>- <i>Never dissolve in drinking water:</i> Ingestion rate is too fast, causing acute toxicity.<br>- <i>Never mix with raw soybeans:</i> Raw soy contains active plant <i>urease</i> enzyme which rapidly hydrolyzes urea in the feed trough before ingestion.<br>- <i>Never feed to starved or fasted animals:</i> Fasting accelerates ammonia absorption across ruminal walls.</li></ol>",
+    "keyPoints": [
+      "Dietary limits: Max 1% of total DM, 3% of concentrate, 1/3rd of total dietary N.",
+      "2–3 weeks gradual adaptation period.",
+      "Requires readily fermentable carbohydrates (molasses/grain) and N:S ratio of 10:1.",
+      "Prohibitions: Never feed to calves, never dissolve in water, never combine with raw soy."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2021",
+      "RAJUVAS 2022",
+      "TANUVAS 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-s04",
+    "type": "diff",
+    "marks": 5,
+    "question": "Differentiate between Subacute Ruminal Acidosis (SARA) and Acute Ruminal Lactic Acidosis in dairy cattle.",
+    "topicId": "u3-t17",
+    "answer": "<p>Ruminal acidosis is a nutritional disease of ruminants caused by the overconsumption of rapidly fermentable starchy concentrates. It manifests in two distinct clinicopathological entities depending on severity and acid type:</p>",
+    "keyPoints": [
+      "SARA: Intermittent pH 5.2–5.6 driven by VFA accumulation; chronic insidious herd problem.",
+      "Acute Acidosis: Severe pH < 5.0 driven by D/L-lactic acid; medical emergency with high mortality.",
+      "Pathology of SARA: Laminitis, milk fat depression, liver abscesses.",
+      "Prevention: Adequate physically effective NDF (peNDF) and buffer supplementation."
+    ],
+    "table": {
+      "title": "Clinical Comparison: Subacute Ruminal Acidosis (SARA) vs Acute Lactic Acidosis",
+      "headers": [
+        "Clinical Feature",
+        "Subacute Ruminal Acidosis (SARA)",
+        "Acute Ruminal Lactic Acidosis"
+      ],
+      "rows": [
+        [
+          "Ruminal pH Threshold",
+          "Intermittent drops between 5.2 and 5.6 for >3–5 hours/day",
+          "Catastrophic drop below 5.0 (often 4.0–4.5)"
+        ],
+        [
+          "Dominant Acid Accumulated",
+          "Excess Volatile Fatty Acids (Propionate & Butyrate)",
+          "D-lactic and L-lactic acid (up to 50–100 mM)"
+        ],
+        [
+          "Microbial Population",
+          "Viable microflora with elevated Streptococcus bovis",
+          "Complete collapse of cellulolytics & ciliate protozoa; overgrowth of Lactobacillus"
+        ],
+        [
+          "Clinical Presentation",
+          "Subtle, insidious herd problem: fluctuating DMI, loose bubbly manure, milk fat depression (<3.0%)",
+          "Acute individual emergency: severe anorexia, dehydration, ruminal stasis, staggering ataxia, recumbency"
+        ],
+        [
+          "Secondary Sequelae",
+          "Subclinical laminitis (sole ulcers), rumenitis, caudal vena cava syndrome, liver abscesses",
+          "Severe systemic metabolic acidosis, ruminal mucosal sloughing, renal failure, fatal shock"
+        ],
+        [
+          "Mortality Rate",
+          "Low direct mortality; high herd economic culling",
+          "Very high (>50–70% without aggressive clinical intervention)"
+        ],
+        [
+          "Primary Prevention",
+          "Maintain physically effective NDF (peNDF > 21%), buffer diets with 1.0% NaHCO3 + 0.5% MgO",
+          "Strict limit on grain access; gradual concentrate step-up; avoid accidental bin break-ins"
+        ]
+      ]
+    },
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2022",
+      "GADVASU 2020",
+      "LUVAS 2021"
+    ]
+  },
+  {
+    "id": "u3-qa-s05",
+    "type": "short",
+    "marks": 5,
+    "question": "Explain the pathogenesis and dietary prevention of Parturient Hypocalcemia (Milk Fever) in dairy cows. Detail the role of pre-partum DCAD feeding.",
+    "topicId": "u3-t17",
+    "answer": "<p><b>Pathogenesis:</b><br>With the sudden onset of lactation at calving, a high-yielding dairy cow secretes <b>20 to 30 grams of calcium into colostrum</b> in a single day—roughly 8 to 10 times the total circulating calcium pool present in her blood plasma (plasma pool ≈ 3 g Ca). Serum total calcium plummets from normal (9–11 mg/dL) to below <b>5.0 mg/dL</b>:</p><ul><li>Loss of extracellular Ca<sup>2+</sup> halts acetylcholine release at neuromuscular junctions, causing loss of smooth and skeletal muscle tone.</li><li>Presents in 3 stages: Stage 1 (tremors, restlessness); Stage 2 (sternal recumbency, 'S'-shaped neck curvature, subnormal temperature); Stage 3 (lateral recumbency, flaccid coma, and death from circulatory failure).</li><li><i>Homeostatic Failure:</i> Pre-partum diets rich in potassium (green legume fodders, berseem) induce mild metabolic alkalosis. Alkaline blood alters the physical conformation of the Parathyroid Hormone (PTH) receptor on osteoclasts and renal tubule cells, rendering tissues refractory to PTH. Bone calcium resorption and 1,25-(OH)<sub>2</sub>D<sub>3</sub> synthesis fail at the critical hour of calving.</li></ul><p><b>Dietary Prevention via Negative DCAD Strategy:</b></p><ul><li>Feed a <b>Negative DCAD diet (-50 to -100 mEq / kg DM)</b> during the close-up dry period (last 3 weeks of gestation) using anionic salts (Ammonium Chloride, Ammonium Sulfate, Magnesium Sulfate).</li><li>Anionic diets induce a mild, compensated <b>hyperchloremic metabolic acidosis</b> (monitored by urine pH: target 6.0–6.5 in crossbred cows).</li><li>Systemic acidosis restores the binding affinity of PTH to its receptors, priming osteoclasts for active bone calcium resorption and stimulating renal 1-α-hydroxylase days before calving. When lactation begins, calcium mobilization proceeds instantly.</li></ul>",
+    "keyPoints": [
+      "Pathogenesis: Colostral calcium drain depleting total blood calcium pool (<5.0 mg/dL).",
+      "Metabolic alkalosis from high K diets desensitizes tissues to Parathyroid Hormone.",
+      "Flaccid tetany and recumbency due to neuromuscular transmission failure.",
+      "Negative DCAD (-50 to -100 mEq) induces metabolic acidosis, sensitizing PTH receptors."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "DUVASU 2022",
+      "RAJUVAS 2021",
+      "KVAFSU 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-s06",
+    "type": "short",
+    "marks": 5,
+    "question": "Describe the nutritional management of dairy cows during the Transition Period.",
+    "topicId": "u3-t10",
+    "answer": "<p>The <b>Transition Period</b> is defined as the critical 6-week window extending from <b>3 weeks before calving to 3 weeks after calving</b>. It represents the most vulnerable phase in a dairy cow's life, during which &gt;80% of all metabolic and infectious disorders occur.</p><p><b>Key Physiological Challenges:</b></p><ul><li><b>Dry Matter Intake (DMI) Depression:</b> DMI naturally drops by 30% in the final 7–10 days before calving due to hormonal shifts (surging estrogen) and fetal physical compression.</li><li><b>Negative Energy Balance (NEB):</b> Postpartum energy requirements for milk jump 300%, while feed intake lags, forcing massive adipose tissue mobilization (NEFA surge).</li></ul><p><b>Phase-Specific Nutritional Strategies:</b></p><ul><li><b>1. Close-Up Dry Period (3 Weeks Pre-Partum):</b><br>- <i>Energy Density:</i> Increase concentrate feeding moderately (steaming up with 2.5–3.5 kg concentrate/day) to elongate ruminal papillae and adapt microbes to starch.<br>- <i>DCAD Management:</i> Formulate a negative DCAD ration (-50 to -100 mEq/kg) to prime calcium homeostatic mechanisms.<br>- <i>Nutrient Density:</i> 14–15% Crude Protein, with adequate bypass protein (RUP); fortify with Vitamin E (1000–1200 IU/day) and Selenium (0.3 ppm) to enhance immune function.</li><li><b>2. Fresh Cow Period (0 to 3 Weeks Post-Partum):</b><br>- <i>Combat NEB:</i> Supplement glucogenic precursors (oral Propylene Glycol 250–300 mL/day or Calcium Propionate) to stimulate hepatic gluconeogenesis and prevent Ketosis.<br>- <i>Bypass Nutrients:</i> Introduce Bypass Fat (300–400 g/day) and Bypass Protein to increase energy density without upsetting rumen cellulolysis.<br>- <i>Physical Fibre &amp; Buffers:</i> Maintain adequate physically effective NDF (peNDF) using clean, chopped hay, and add 1.0% Sodium Bicarbonate to prevent ruminal acidosis.</li></ul>",
+    "keyPoints": [
+      "Critical 6-week window (3 weeks pre- to 3 weeks post-calving).",
+      "DMI dips 30% while energy demands triple, driving Negative Energy Balance.",
+      "Pre-partum: Steaming up, negative DCAD, Vitamin E/Se immune support.",
+      "Post-partum: Propylene glycol, bypass fat, dietary buffers, and high-quality forages."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "GADVASU 2023",
+      "TANUVAS 2021",
+      "WBUAFS 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-s07",
+    "type": "short",
+    "marks": 5,
+    "question": "Outline the nutrient requirements and feeding management of Breeding Bulls and Working Draft Bullocks.",
+    "topicId": "u3-t11",
+    "answer": "<p><b>1. Nutritional Management of Breeding Bulls:</b></p><ul><li><b>Energy Management:</b> Bulls require balanced energy to maintain active libido and vigor without becoming obese. Obesity causes scrotal fat accumulation, insulating the testes and impairing thermoregulation, which causes testicular degeneration and poor sperm motility. Maintain BCS at <b>3.0 to 3.25</b>.</li><li><b>Protein:</b> Concentrate mixture with <b>14–16% Crude Protein</b> fed at 2.5–3.5 kg daily depending on body weight (500–700 kg) and service frequency.</li><li><b>Micronutrients for Spermatogenesis:</b><br>- <i>Vitamin A:</i> Essential for germinal epithelial maintenance (deficiency causes azoospermia, testicular atrophy, and high proportion of abnormal spermatozoa). Provide 40,000–50,000 IU/day.<br>- <i>Vitamin E &amp; Selenium:</i> Protects sperm membrane PUFA from oxidative damage; maintains motility.<br>- <i>Zinc:</i> Crucial cofactor for DNA/RNA polymerases and steroidogenesis; deficiency depresses libido and semen volume.</li></ul><p><b>2. Nutritional Management of Working Draft Bullocks:</b></p><ul><li><b>Energy for Draft Work:</b> Work energy is required strictly in addition to maintenance. Energy expenditure scales directly with work intensity:<br>- <i>Light Work (4 hours ploughing/carting):</i> Maintenance + <b>20–30% extra TDN</b>.<br>- <i>Medium Work (6 hours continuous work):</i> Maintenance + <b>40–50% extra TDN</b>.<br>- <i>Heavy Work (8 hours heavy operations):</i> Maintenance + <b>70–80% extra TDN</b>.</li><li><b>Protein &amp; Water:</b> Work does not substantially increase muscular protein catabolism; hence protein requirements increase only marginally to replace sweat losses. Provide ad libitum clean water and <b>1.5% common salt (NaCl)</b> in the concentrate to replenish heavy electrolyte losses incurred through sweating.</li></ul>",
+    "keyPoints": [
+      "Breeding bulls: Avoid obesity (scrotal fat disrupts spermatogenesis); provide Vit A, E, and Zinc.",
+      "Working bullocks: Energy scales with work load (Light: +30%, Medium: +50%, Heavy: +80% TDN).",
+      "Muscular work consumes carbohydrates/fats, not protein.",
+      "Mandatory electrolyte (salt) and abundant water supplementation for working animals."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2021",
+      "RAJUVAS 2023",
+      "NDVSU 2022",
+      "DUVASU 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-s08",
+    "type": "short",
+    "marks": 5,
+    "question": "Describe strategies for Drought and Scarcity Feeding of ruminants. Detail Complete Feed Blocks (CFB) and UMMB.",
+    "topicId": "u3-t10",
+    "answer": "<p>During severe natural calamities (droughts, floods), conventional green fodders and grains vanish. Livestock survival depends on innovative technologies to convert poor-quality agro-wastes into maintenance rations:</p><ul><li><b>1. Survival Feeding Principles:</b><br>Shift breeding herds from production standards to <b>maintenance survival rations</b> (providing ~70–80% of normal maintenance energy to preserve life without fatal cachexia).</li><li><b>2. Urea-Molasses-Mineral Blocks (UMMB):</b><br>- <i>Composition:</i> Molasses (35–45%), Urea (8–10%), Mineral Mixture (6–10%), Salt (5%), Binder / Gelling agent (Calcium Oxide / Quick lime or Bentonite 8–10%), Bran/Deoiled rice bran (15–20%).<br>- <i>Principle:</i> Hard, solidified lick block. Animals lick it slowly throughout the day. Provides a continuous, slow trickle of fermentable nitrogen (urea), soluble energy (molasses), and essential minerals into the rumen, maximizing the cellulolytic digestion of dry straws fed as basal roughage.</li><li><b>3. Complete Feed Blocks (CFB):</b><br>- <i>Manufacturing:</i> Poor-quality crop residues (wheat straw, bagasse, paddy straw, cotton stalks - 60–70%) are chopped and blended with a concentrate mixture (30–40% containing molasses, urea, bran, minerals). The mixture is compressed under high hydraulic pressure (3000–5000 psi) into dense, compact rectangular blocks (5–10 kg).<br>- <i>Advantages:</i> Densifies bulky roughages (reduces volume by 60–70%, slashing transport and disaster relief haulage costs), prevents selective ingredient sorting, and ensures balanced nutrient intake per bite.</li><li><b>4. Exploitation of Unconventional Feeds:</b><br>Judicious feeding of sugarcane bagasse, babul (<i>Acacia nilotica</i>) pods, Prosopis juliflora pods (up to 20–30%), oak tree leaves, and ensiled poultry excreta.</li></ul>",
+    "keyPoints": [
+      "Survival feeding: Focuses on sustaining life at 70–80% maintenance requirements.",
+      "UMMB: Solidified lick block providing steady trickle of NPN, molasses, and minerals.",
+      "Complete Feed Blocks (CFB): 60:40 roughage-to-concentrate hydraulically densified blocks.",
+      "Slashes relief transport costs and prevents feed ingredient sorting."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2021",
+      "GADVASU 2022",
+      "LUVAS 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-l01",
+    "type": "long",
+    "marks": 12,
+    "question": "Comprehensive Nutritional Management and Ration Balancing for High-Yielding Dairy Cows throughout the Lactation Cycle: Elaborate across the four phases of lactation, challenge feeding, and prevention of metabolic crashes.",
+    "topicId": "u3-t04",
+    "answer": "<p>High-producing dairy cows undergo profound physiological and metabolic transformations during a standard 305-day lactation cycle. Dividing the cycle into four distinct management phases allows targeted nutritional interventions that maximize peak milk yield, sustain persistency, and safeguard metabolic health.</p><h3>Phase 1: Early Lactation (Calving to Day 70 postpartum / Peak Yield)</h3><ul><li><b>Physiological State:</b> Milk yield increases rapidly, reaching peak production at 4 to 6 weeks postpartum. In contrast, voluntary <b>Dry Matter Intake (DMI) lags behind</b>, peaking only at 8 to 10 weeks postpartum. This creates severe physiological <b>Negative Energy Balance (NEB)</b>. The cow mobilizes body fat reserves (up to 0.5–1.0 kg body fat/day) to bridge the energy deficit.</li><li><b>Nutritional Strategies:</b><br>- <i>Challenge Feeding:</i> Post-calving, increase concentrate by 0.5 kg every 2–3 days until peak milk yield is attained.<br>- <i>Energy Densification:</i> Incorporate <b>Bypass Fat (300–400 g/day)</b> to increase energy density without adding starchy grains.<br>- <i>Protein Quality:</i> Ration Crude Protein must be <b>17–19%</b>, with <b>35–40% Bypass Protein (RUP)</b> to supply essential limiting amino acids (Methionine and Lysine) directly to the small intestine.<br>- <i>Fibre &amp; Buffering:</i> Maintain minimum 19–21% physically effective NDF (peNDF) with a roughage:concentrate ratio of not less than 45:55. Supplement with <b>1.0% Sodium Bicarbonate and 0.5% Magnesium Oxide</b> to buffer the rumen and maintain milk fat test (&gt;3.5%).</li></ul><h3>Phase 2: Mid-Lactation (Day 70 to Day 140 postpartum / Peak DMI)</h3><ul><li><b>Physiological State:</b> Cow reaches maximum voluntary Dry Matter Intake (3.5–3.8% of body weight). Milk yield slowly declines by 8–10% per month (persistency phase). The cow transitions from negative energy balance to energy equilibrium.</li><li><b>Nutritional Strategies:</b> Feed to maintain peak milk persistency; adjust concentrate-to-roughage ratio to 50:50; maximize consumption of high-quality succulent green forages.</li></ul><h3>Phase 3: Late Lactation (Day 140 to Day 305 postpartum / Body Reserve Replenishment)</h3><ul><li><b>Physiological State:</b> Milk production continues to decline; the cow enters positive energy balance and is pregnant (fetal growth accelerating).</li><li><b>Nutritional Strategies:</b> This is the most efficient biological phase to <b>restore depleted maternal body tissue reserves</b> (converting feed energy to body fat is ~75% efficient during lactation vs only ~60% during the dry period). Aim for a Body Condition Score (BCS) of <b>3.25 to 3.5 (on a 5-point scale)</b> at dry-off. Increase roughage proportion to 60–70% of DM.</li></ul><h3>Phase 4: Dry &amp; Transition Period (60 Days prior to calving)</h3><ul><li><b>A. Far-Off Dry Period (Day 60 to Day 21 pre-partum):</b> Maintain body condition on high-roughage, moderate-protein (12% CP) diets. Avoid overfeeding concentrates which causes 'Fat Cow Syndrome' and dystocia.</li><li><b>B. Close-Up / Transition Period (Last 3 Weeks pre-partum):</b><br>- Feed a <b>Negative DCAD diet (-50 to -100 mEq/kg)</b> to prevent Milk Fever.<br>- Implement 'steaming up' (introduce 2.5–3.5 kg lactation concentrate) to elongate ruminal papillae and adapt microflora.<br>- Fortify with antioxidant vitamins (Vitamin E 1000 IU/day, Selenium 0.3 ppm) to bolster neutrophil competence and prevent retained placenta/mastitis.</li></ul>",
+    "keyPoints": [
+      "Exhaustive breakdown of all 4 lactation phases.",
+      "Phase 1: Negative Energy Balance, challenge feeding, bypass fat/protein, rumen buffers.",
+      "Phase 2: Maximizing peak DMI and maintaining persistency.",
+      "Phase 3: Restoring body condition reserves to BCS 3.25–3.5 before drying off.",
+      "Phase 4: Far-off maintenance vs close-up negative DCAD and steaming up."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021",
+      "RAJUVAS 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-l02",
+    "type": "long",
+    "marks": 12,
+    "question": "Biochemistry, Microbial Physiology, and Toxicity of Non-Protein Nitrogen (NPN): Discuss microbial ureolysis, assimilation pathways, synchrony with carbohydrates, and the pathophysiology, diagnosis, and emergency treatment of Urea Poisoning.",
+    "topicId": "u3-t16",
+    "answer": "<p>Non-Protein Nitrogen (NPN) feeding exploits the unique symbiotic ability of rumen microflora to convert simple, non-amino acid nitrogenous compounds into high-quality microbial protein. However, the narrow margin of safety between nutritional efficacy and fatal toxicity demands deep biochemical comprehension.</p><h3>1. Biochemistry of Microbial Nitrogen Assimilation</h3><ul><li><b>A. Microbial Ureolysis:</b><br>Ingested urea dissolves instantly in ruminal liquor and is rapidly hydrolyzed by the bacterial nickel-metalloenzyme <b>Urease</b> (predominantly synthesized by <i>Ureaplasma</i> and epimural bacteria):<br><code>CO(NH2)2 + H2O --(Bacterial Urease)--> 2 NH3 + CO2</code>.<br>This reaction occurs <b>4 to 5 times faster</b> than the rate at which bacteria can assimilate the resulting ammonia.</li><li><b>B. Cellular Incorporation of Ammonia into Amino Acids:</b><br>Rumen bacteria take up un-ionized NH<sub>3</sub> across their cell membranes and fix it into amino acids via two primary enzymatic pathways:<br>- <b>Glutamate Dehydrogenase (GDH) Pathway:</b> Operates under high ruminal NH<sub>3</sub> concentrations (&gt;5 mM):<br><code>α-Ketoglutarate + NH3 + NADPH + H+ <==> L-Glutamate + NADP+ + H2O</code>.<br>- <b>GS-GOGAT Pathway (Glutamine Synthetase - Glutamate Synthase):</b> High-affinity ATP-dependent system operating under low NH<sub>3</sub> conditions (&lt;1 mM):<br><code>Glutamate + NH3 + ATP --(GS)--> Glutamine + ADP + Pi</code>;<br><code>Glutamine + α-Ketoglutarate + NADPH --(GOGAT)--> 2 Glutamate + NADP+</code>.<br>- <i>Transamination:</i> From glutamate, amino groups are transferred via aminotransferases to other keto-acids to synthesize the entire spectrum of essential and non-essential amino acids.</li><li><b>C. The Crucial Principle of Energy-Ammonia Synchrony:</b><br>Microbial protein synthesis requires simultaneous availability of: (1) Ammonia (NH<sub>3</sub>), (2) Carbon skeletons (keto-acids like α-ketoglutarate, pyruvate), and (3) Chemical energy (ATP). Starch from grains or sugars from molasses ferment at rates that synchronize with ammonia generation. If rapid fermentation starch is missing, ammonia accumulates unassimilated.</li></ul><h3>2. Pathophysiology of Urea Toxicity (Hyperammonemia)</h3><p>Toxicity occurs when ruminal ammonia production exceeds microbial assimilation capacity:</p><ul><li><b>Ruminal Alkalosis:</b> Ammonia accumulation consumes hydrogen ions, driving ruminal pH upward from normal 6.5 to <b>&gt;8.0</b>.</li><li><b>Ammonia Absorption:</b> At pH 6.5, nitrogen exists largely as ionized ammonium ions (NH<sub>4</sub><sup>+</sup>), which cannot easily cross the ruminal lipid bilayer. But at pH &gt;7.5–8.0, the equilibrium shifts completely to <b>free, un-ionized, lipid-soluble Ammonia (NH3)</b>, which diffuses passively and massively across the ruminal wall into mesenteric venous blood.</li><li><b>Hepatic Exhaustion:</b> The portal blood ammonia overwhelms the liver's capacity to synthesize urea via the ornithine cycle. Systemic peripheral blood ammonia surges from normal (&lt;0.5 mg/dL) to toxic levels <b>&gt;1.5–2.0 mg/dL</b>.</li><li><b>Neurotoxicity:</b> Hyperammonemia enters the central nervous system, inhibiting glutamate uptake by astrocytes and depleting α-ketoglutarate, halting the Krebs cycle. Severe lactic acidosis, cardiac arrhythmias, muscle tetany, convulsions, and respiratory arrest ensue within 30 to 60 minutes.</li></ul><h3>3. Clinical Signs, Diagnosis, and Emergency Treatment</h3><ul><li><b>Clinical Signs:</b> Severe abdominal pain, teeth grinding, frothy salivation, bloat, muscle tremors, hyperesthesia, ataxia, sternal recumbency, violent extensor spasms, tetanic convulsions, and death within 1–2 hours.</li><li><b>Diagnosis:</b> History of access to urea; blood ammonia &gt;1.5 mg/dL; rumen fluid pH &gt;8.0 with strong pungent ammonia odor.</li><li><b>Emergency Field Treatment Protocol:</b><br>- Drench immediately with <b>2 to 4 litres of 5% Acetic Acid (ordinary commercial Vinegar)</b> diluted in <b>20 to 30 litres of ice-cold water</b>.<br>- <i>Mechanism:</i> Acetic acid instantly drops ruminal pH below 7.0, converting toxic un-ionized NH<sub>3</sub> into non-absorbable NH<sub>4</sub><sup>+</sup> (ammonium acetate); cold water cools the rumen, physically slowing urease enzymatic kinetics.<br>- Administer intravenous fluids (Normal Saline + Calcium Borogluconate) to manage dehydration and tetany.</li></ul>",
+    "keyPoints": [
+      "Microbial urease kinetics (4–5x faster than assimilation).",
+      "Biochemical assimilation pathways: GDH vs GS-GOGAT pathways detailed.",
+      "Energy-nitrogen synchrony: Starch ATP and carbon skeletons mandatory.",
+      "Pathophysiology: Ruminal pH > 8.0 shifts NH4+ to lipid-soluble NH3; hepatic overflow leads to hyperammonemia.",
+      "Emergency therapy: 2–4 L vinegar (5% acetic acid) + cold water drench."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2022",
+      "GADVASU 2021",
+      "RAJUVAS 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-l03",
+    "type": "long",
+    "marks": 12,
+    "question": "Comprehensive Review of Major Metabolic and Nutritional Disorders in Dairy Cattle: Detailed treatise on Bovine Ketosis, Milk Fever, Ruminal Acidosis, Grass Tetany, and Frothy Bloat.",
+    "topicId": "u3-t17",
+    "answer": "<p>Metabolic diseases in high-yielding dairy cows are production diseases resulting from physiological mismatches between nutrient intake and the biochemical demands of heavy lactation.</p><h3>Comparative Systemic Review Matrix</h3>",
+    "keyPoints": [
+      "Comprehensive review of all 5 major bovine metabolic disorders.",
+      "Ketosis: Hypoglycemia and hyperketonemia from oxaloacetate depletion during NEB.",
+      "Milk fever: Flaccid paralysis from sudden colostral calcium drainage; negative DCAD prevention.",
+      "Ruminal acidosis: S. bovis and lactic acid accumulation from grain overload.",
+      "Grass tetany: Hypomagnesemia inducing painful tetanic convulsions.",
+      "Frothy bloat: Persistent stable foam trapping fermentation gases; poloxalene treatment."
+    ],
+    "table": {
+      "title": "Comprehensive Diagnostic & Nutritional Matrix of Bovine Metabolic Disorders",
+      "headers": [
+        "Disorder",
+        "Primary Nutritional Etiology",
+        "Biochemical Pathogenesis",
+        "Pathognomonic Clinical Signs",
+        "Therapeutic & Nutritional Interventions"
+      ],
+      "rows": [
+        [
+          "Bovine Ketosis (Acetonemia)",
+          "Severe Negative Energy Balance in early lactation; underfeeding starchy energy",
+          "Intense adipose lipolysis (NEFA surge); depletion of oxaloacetate stalls Krebs cycle; massive liver synthesis of Acetoacetate & β-hydroxybutyrate",
+          "Sweet chloroform-like acetone breath, refusal of concentrates, rapid weight loss, nervous pacing / licking",
+          "IV 50% Dextrose (500 mL); oral Propylene glycol (300 mL/day); Glucocorticoids; supplement bypass fat pre-partum"
+        ],
+        [
+          "Parturient Hypocalcemia (Milk Fever)",
+          "Colostral calcium drainage; pre-partum high-potassium alkalotic diets",
+          "Failure of acute skeletal calcium mobilization due to PTH receptor desensitization; blood calcium plunges <5.0 mg/dL",
+          "Stage 1: excitability; Stage 2: sternal recumbency, 'S'-shaped neck kink, cold ears; Stage 3: flaccid coma",
+          "Slow IV Calcium Borogluconate (25% 450 mL); feed negative DCAD diets (-50 to -100 mEq) with anionic salts in close-up dry period"
+        ],
+        [
+          "Ruminal Lactic Acidosis (Grain Overload)",
+          "Sudden gorging on rapidly fermentable starchy grains (maize, wheat)",
+          "Amylolytic Streptococcus bovis & Lactobacillus overgrowth; D/L-lactic acid accumulates; rumen pH drops <5.0; systemic dehydration & shock",
+          "Severe anorexia, complete rumen stasis, splashy watery diarrhea, profound weakness, recumbency",
+          "Rumen evacuation/lavage; oral antacids (Magnesium hydroxide 500 g); IV Sodium Bicarbonate; buffer diets with 1.0% NaHCO3"
+        ],
+        [
+          "Hypomagnesemic Tetany (Grass Tetany)",
+          "Grazing lush spring pasture high in Potassium & Nitrogen and low in Magnesium (<0.2% DM)",
+          "Potassium competitively blocks active magnesium transport in the rumen wall; cerebrospinal fluid Mg plunges <1.0 mg/dL",
+          "Violent hyperexcitability, staggering gait, muscle twitching, painful tetanic convulsions, death within hours",
+          "Immediate slow IV/SC infusion of Calcium-Magnesium Borogluconate; daily dietary supplementation of 50–60 g Magnesium Oxide (MgO)"
+        ],
+        [
+          "Frothy Bloat (Pasture / Feedlot Bloat)",
+          "Grazing lush immature legumes (alfalfa, clover) or finely ground high-starch feedlot rations",
+          "Rapid release of soluble leaf proteins (Fraction 1 18S ribulose protein) creates a stable, viscous protein foam that traps gas, preventing eructation",
+          "Dramatic distension of left paralumbar fossa, severe dyspnea, mouth breathing, cyanosis, asphyxiation",
+          "Emergency stomach tube or trocharization; oral administration of non-ionic antifoaming surfactants (Poloxalene, vegetable/peanut oil 250–500 mL)"
+        ]
+      ]
+    },
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2022",
+      "GADVASU 2021",
+      "DUVASU 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-l04",
+    "type": "long",
+    "marks": 12,
+    "question": "Calf Rearing from Birth to Heiferhood: Physiological transformation of the stomach, milk replacer specifications, weaning strategies, and nutrient requirements to achieve target Age at First Calving (AFC).",
+    "topicId": "u3-t08",
+    "answer": "<p>Rearing female dairy calves into productive heifers is the cornerstone of sustainable dairy production. Under Indian conditions, the overarching objective is to achieve puberty by 15–18 months and a target <b>Age at First Calving (AFC) of 24 to 28 months</b> (vs the traditional 36–42 months) through scientific feeding.</p><h3>1. Anatomical and Physiological Transformation of the Stomach</h3><ul><li><b>At Birth (The Pre-Ruminant Phase):</b> The calf is anatomically a monogastric animal. The <b>Abomasum comprises ~60%</b> of total stomach capacity, while the Rumen-Reticulum represents only ~30% and is completely non-functional (devoid of microflora, papillae, or muscular tone).</li><li><b>The Reticular (Esophageal) Groove Reflex:</b> Neural sensory branches of the vagus nerve (stimulated by the act of sucking milk at body temperature) trigger muscular contraction of the esophageal groove lips, forming a bypass tube directing milk directly from the esophagus into the abomasum.</li><li><b>Stimulation of Ruminal Papillae:</b> Ruminal development is not stimulated by milk or roughage bulk, but specifically by the <b>chemical end-products of microbial fermentation of concentrate starches</b>. Fermentation of grains in calf starter produces <b>Butyrate (most potent)</b> and <b>Propionate</b>, which serve as energetic substrates stimulating mitosis, mucosal vascularization, and elongation of ruminal papillae. By <b>8 to 12 weeks of age</b>, the Rumen-Reticulum expands to represent <b>&gt;70%</b> of stomach volume.</li></ul><h3>2. Liquid Feeding and Milk Replacer Specifications</h3><ul><li><b>Colostrum Phase:</b> 10% body weight within 2 hours of life; continued for 3–4 days.</li><li><b>Commercial Milk Replacer:</b> Utilized to reduce the cost of rearing when marketable whole milk is expensive. Must simulate cow's milk composition:<br>- <i>Crude Protein:</i> <b>22% to 24%</b> (derived from highly digestible milk proteins: dried skim milk, dried whey; avoid raw soy proteins which cause allergic enteritis).<br>- <i>Fat:</i> <b>18% to 20%</b> (homogenized edible animal lard or vegetable oils).<br>- <i>Crude Fibre:</i> &lt; 0.5% (strictly minimal).<br>- <i>Reconstitution:</i> 1 part milk replacer powder mixed into 7–8 parts warm water (yielding 12–13% solids, fed at 38–39°C).</li></ul><h3>3. Weaning Strategies: Conventional vs Early Weaning</h3><ul><li><b>Conventional Weaning (12–16 Weeks):</b> Calves fed whole milk for 3–4 months. Results in good growth but is cost-prohibitive.</li><li><b>Early Weaning Protocol (6 to 8 Weeks):</b><br>- Introduce Calf Starter (22% CP, 75% TDN) and clean drinking water at 7–10 days.<br>- Provide small amounts of good legume hay (berseem) from 2 weeks.<br>- <i>Weaning Criterion:</i> The calf is safely weaned off liquid milk only when it consistently consumes <b>at least 0.8 to 1.0 kg of dry calf starter per day for three consecutive days</b>.</li></ul><h3>4. Feeding the Growing Heifer to Achieve Target AFC</h3><ul><li><b>Post-Weaning (3 to 6 Months):</b> Feed 1.5–2.0 kg calf grower mixture (18% CP, 70% TDN) plus ad libitum green fodder and dry straw. Target average daily gain (ADG): <b>500–600 g/day</b>.</li><li><b>Pre-Pubertal Heifer (6 to 15 Months):</b><br>- <i>Avoid Over-Conditioning:</i> Feeding excessive concentrate energy during the allometric mammary growth phase (3 to 9 months) leads to <b>fat deposition in the mammary gland parenchyma</b>, permanently destroying future lifetime milk yield.<br>- Feed high-quality green forages (berseem, oats, sorghum) balanced with 1.5–2.0 kg concentrate (14% CP, 65% TDN) to maintain lean skeletal growth (target ADG: <b>600–700 g/day for crossbreds</b>).</li><li><b>Breeding Milestone:</b> Inseminate heifers when they reach <b>60% of their adult mature body weight</b> (275–300 kg for crossbreds, 350 kg for buffaloes), which should be attained by <b>15 to 18 months of age</b>, guaranteeing calving at 24 to 27 months.</li></ul>",
+    "keyPoints": [
+      "Stomach proportions: Abomasum 60% at birth; Rumen expands to 70% by 8–12 weeks.",
+      "Reticular groove reflex bypasses undeveloped rumen.",
+      "Butyrate from starter starch drives ruminal papillae development.",
+      "Early weaning rule: When consuming 0.8–1.0 kg starter/day (6–8 weeks).",
+      "Avoid over-fattening during 3–9 months to prevent mammary parenchymal damage.",
+      "Breeding target: 60% mature body weight at 15–18 months ensuring AFC of 24–27 months."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021",
+      "LUVAS 2020"
+    ]
+  },
+  {
+    "id": "u3-qa-l05",
+    "type": "long",
+    "marks": 12,
+    "question": "Comparative Nutritional Management of Small Ruminants: Contrast the digestive physiology of Sheep (Grazer) versus Goat (Browser). Detail nutrient requirements for maintenance, flushing, pregnancy, lactation, and wool production.",
+    "topicId": "u3-t12",
+    "answer": "<p>Small ruminants (sheep and goats) represent indispensable economic livestock for smallholder and landless farmers across arid, semi-arid, and mountainous regions. Although closely related, their feeding strategies and digestive physiology exhibit marked evolutionary divergences.</p><h3>1. Digestive Physiology: Sheep (Grazer) vs Goat (Browser)</h3><ul><li><b>Anatomical Adaptations:</b><br>- <i>Goat (Intermediate Browser):</i> Narrow, pointed muzzle, highly mobile prehensile upper lip and tongue; can stand bipedally on hind legs to browse shrub foliage up to 2 meters high. Extensive salivary glands produce rich <b>proline-rich salivary proteins that bind and neutralize dietary tannins</b>.<br>- <i>Sheep (Bulk Grazer):</i> Broad, flat muzzle suited for grazing close to the ground on short grass pastures. Lower capacity to tolerate secondary plant metabolites.</li><li><b>Ruminal Retention and Digestion:</b><br>- Goats have a higher ruminal liquid turnover rate and superior ability to digest fibrous, high-lignin tree leaves and shrubs compared to sheep.<br>- Sheep have a longer ruminal digesta retention time, optimizing the cellulolysis of grass cell walls.</li></ul><h3>2. Life-Stage Nutritional Requirements</h3><ul><li><b>A. Maintenance Requirements:</b><br>- Sheep and goats have a higher basal metabolic rate per unit body weight than cattle due to higher surface-to-volume ratio: <code>Maintenance Energy = 0.40–0.45 MJ ME / kg W^0.75</code>.<br>- Dry Matter Intake capacity: <b>3.0 to 4.0% of body weight</b> (and up to 5% in high-producing dairy goats).</li><li><b>B. Flushing (Pre-Mating):</b><br>- Supplement ewes/does in poor body condition with <b>250 to 350 g concentrate mixture daily</b> for 2–3 weeks before and 2–3 weeks into the breeding season.<br>- Elevates systemic insulin and IGF-1, enhancing folliculogenesis, ovulation rate, and twinning percentage (+15–20%).</li><li><b>C. Late Gestation (Final 4–6 Weeks):</b><br>- Fetal weight increases by 70% during this period. Ewes bearing twins/triplets require <b>50–60% extra energy and protein</b> over maintenance.<br>- Rumen capacity is compressed by expanding uterus; feed concentrated diets (400–500 g concentrate + good quality hay) to prevent <b>Pregnancy Toxaemia</b>.</li><li><b>D. Lactation Requirements:</b><br>- Peak milk occurs at 3–4 weeks postpartum. Ewes nursing single lambs require 1.5× maintenance; ewes nursing twin lambs require <b>2.0× maintenance energy and protein</b>.<br>- Supplement 500–700 g concentrate per day with high-quality green legume fodder.</li><li><b>E. Wool Production Requirements (Sheep Specific):</b><br>- Wool is an almost pure protein fibre consisting of <b>Keratin</b>, which has an extraordinarily high content of the sulfur-containing amino acid <b>Cystine (10–13%)</b>.<br>- Wool growth proceeds continuously and takes metabolic priority over body tissue gain.<br>- <i>Sulfur Balancing:</i> Rations must provide adequate sulfur (maintain dietary <b>N:S ratio of 10:1</b>). Dietary supplementation of <b>Bypass Methionine</b> (rumen-protected DL-methionine: 2–3 g/day) increases clean wool yield by 15–25% and improves staple tensile strength.</li></ul>",
+    "keyPoints": [
+      "Anatomical contrast: Goats are browsers with proline-rich anti-tannin saliva; sheep are grazers.",
+      "Higher maintenance requirements per kg W^0.75 and DMI capacity (3–4% BW).",
+      "Flushing protocol: 250–350 g concentrate for 2–3 weeks pre-mating.",
+      "Late gestation: Mitigating rumen compression and preventing Pregnancy Toxaemia.",
+      "Wool nutrition: Keratin rich in cystine (12%); requires N:S ratio of 10:1 and bypass methionine."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "RAJUVAS 2022",
+      "DUVASU 2021",
+      "TANUVAS 2020"
+    ]
+  }
+]

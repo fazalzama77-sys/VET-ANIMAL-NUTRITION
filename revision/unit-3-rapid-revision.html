@@ -1,0 +1,496 @@
+<title>Unit 3 Rapid Revision Sheet</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --paper:#fdfdfb; --ground:#e8edf3; --rule:#c9d4de; --rule-soft:#e2e9f0;
+  --ink:#1b2a34; --ink-2:#4a6070; --ink-3:#7e8f9c;
+  --blue:#1565c0; --teal:#00796b; --amber:#a05300; --coral:#c8390f; --sage:#2b6e2f; --plum:#5d3f9e;
+  --blue-w:#e8f1fb; --teal-w:#e2f2f0; --amber-w:#fbf0e0; --coral-w:#fbe8e2; --sage-w:#e6f2e6; --plum-w:#eee9fa;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#141b21; --ground:#0c1116; --rule:#2c3a45; --rule-soft:#232e37;
+    --ink:#e3ebf1; --ink-2:#a3b6c4; --ink-3:#7b8d9b;
+    --blue:#6fb2f5; --teal:#4fc9b8; --amber:#e6a44e; --coral:#ff8a63; --sage:#7fce83; --plum:#b39bf0;
+    --blue-w:#16283c; --teal-w:#0f2f2b; --amber-w:#33240e; --coral-w:#3a1f16; --sage-w:#162c18; --plum-w:#251d3d;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141b21; --ground:#0c1116; --rule:#2c3a45; --rule-soft:#232e37;
+  --ink:#e3ebf1; --ink-2:#a3b6c4; --ink-3:#7b8d9b;
+  --blue:#6fb2f5; --teal:#4fc9b8; --amber:#e6a44e; --coral:#ff8a63; --sage:#7fce83; --plum:#b39bf0;
+  --blue-w:#16283c; --teal-w:#0f2f2b; --amber-w:#33240e; --coral-w:#3a1f16; --sage-w:#162c18; --plum-w:#251d3d;
+}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);
+  font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:13px;line-height:1.4;-webkit-font-smoothing:antialiased;padding:18px 12px 40px}
+.wrap{max-width:200mm;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+
+/* ── masthead ─────────────────────────────── */
+.mast{background:var(--paper);border:1px solid var(--rule);border-top:4px solid var(--blue);padding:14px 16px}
+.mast h1{margin:0;font-size:20px;font-weight:800;letter-spacing:-.02em}
+.mast p{margin:5px 0 0;font-size:11.5px;color:var(--ink-2);max-width:62ch}
+.mast .meta{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}
+
+/* ── sheet ────────────────────────────────── */
+.sheet{background:var(--paper);border:1px solid var(--rule);
+  width:100%;padding:9mm 8mm;display:flex;flex-direction:column;gap:5px}
+.shead{display:flex;align-items:baseline;gap:9px;border-bottom:2px solid var(--ink);padding-bottom:4px;margin-bottom:3px}
+.shead .num{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:19px;font-weight:700;color:var(--blue);line-height:1}
+.shead h2{margin:0;font-size:14.5px;font-weight:800;letter-spacing:-.015em;flex:1}
+.shead .wt{font-family:"JetBrains Mono",monospace;font-size:9.5px;color:var(--ink-3);letter-spacing:.04em;white-space:nowrap}
+
+/* ── grid + blocks ────────────────────────── */
+.g{display:grid;grid-template-columns:repeat(12,1fr);gap:5px;align-content:start}
+.b{border:1px solid var(--rule-soft);border-top:2.5px solid var(--blue);padding:5px 7px 6px;
+   background:var(--paper);min-width:0;overflow-wrap:break-word}
+.b.t{border-top-color:var(--teal)} .b.a{border-top-color:var(--amber)}
+.b.c{border-top-color:var(--coral)} .b.s{border-top-color:var(--sage)} .b.p{border-top-color:var(--plum)}
+.b>h3{margin:0 0 4px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--blue)}
+.b.t>h3{color:var(--teal)} .b.a>h3{color:var(--amber)}
+.b.c>h3{color:var(--coral)} .b.s>h3{color:var(--sage)} .b.p>h3{color:var(--plum)}
+.c1{grid-column:span 1}.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:span 4}
+.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}
+.c9{grid-column:span 9}.c12{grid-column:span 12}
+
+/* ── text atoms ───────────────────────────── */
+p{margin:0 0 3px} p:last-child{margin-bottom:0}
+ul{margin:0;padding-left:12px} li{margin-bottom:1.5px}
+b,strong{font-weight:700}
+em{font-style:italic;color:var(--ink-2)}
+.sm{font-size:10.5px;line-height:1.35}
+.xs{font-size:9.5px;line-height:1.3;color:var(--ink-2)}
+.m{font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.k{color:var(--blue);font-weight:700}
+.num-hl{font-family:"JetBrains Mono",monospace;font-weight:700;color:var(--amber);font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.05em;padding:1.5px 5px;background:var(--blue-w);color:var(--blue);border-radius:2px}
+.tag.t{background:var(--teal-w);color:var(--teal)} .tag.a{background:var(--amber-w);color:var(--amber)}
+.tag.c{background:var(--coral-w);color:var(--coral)} .tag.s{background:var(--sage-w);color:var(--sage)}
+.tag.p{background:var(--plum-w);color:var(--plum)}
+
+/* ── formula strip ────────────────────────── */
+.fx{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:600;background:var(--amber-w);
+  color:var(--ink);padding:3px 6px;margin:3px 0;border-left:3px solid var(--amber);
+  font-variant-numeric:tabular-nums;overflow-x:auto;white-space:nowrap}
+.fx.b2{background:var(--blue-w);border-left-color:var(--blue)}
+.fx.t2{background:var(--teal-w);border-left-color:var(--teal)}
+
+/* ── tables ───────────────────────────────── */
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:9.5px;line-height:1.25}
+th{background:var(--blue-w);color:var(--blue);font-weight:700;font-size:8.5px;
+   text-transform:uppercase;letter-spacing:.05em;text-align:left;padding:2.5px 4px;border:1px solid var(--rule-soft)}
+.b.c th{background:var(--coral-w);color:var(--coral)} .b.a th{background:var(--amber-w);color:var(--amber)}
+.b.t th{background:var(--teal-w);color:var(--teal)} .b.s th{background:var(--sage-w);color:var(--sage)}
+.b.p th{background:var(--plum-w);color:var(--plum)}
+td{padding:2.5px 4px;border:1px solid var(--rule-soft);vertical-align:top}
+td.mn{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,transparent)}
+
+/* ── flow diagram ─────────────────────────── */
+.flow{display:flex;align-items:stretch;gap:0;font-size:9px;line-height:1.2;margin:3px 0}
+.node{flex:1;border:1px solid var(--rule);padding:3px 4px;text-align:center;min-width:0}
+.node .t1{font-weight:700;font-size:9.5px;display:block}
+.node .t2{color:var(--ink-3);font-size:8.5px;font-family:"JetBrains Mono",monospace}
+.arw{display:flex;flex-direction:column;justify-content:center;padding:0 3px;color:var(--coral);
+  font-size:8px;font-weight:700;text-align:center;font-family:"JetBrains Mono",monospace}
+.arw span{display:block;white-space:nowrap}
+
+/* ── mnemonic + alert ─────────────────────── */
+.mnem{background:var(--plum-w);border-left:3px solid var(--plum);padding:3px 6px;margin:3px 0;font-size:10px}
+.mnem b{color:var(--plum);font-family:"JetBrains Mono",monospace;letter-spacing:.02em}
+.alert{background:var(--coral-w);border-left:3px solid var(--coral);padding:3px 6px;margin:3px 0;font-size:10px}
+.clin{background:var(--sage-w);border-left:3px solid var(--sage);padding:3px 6px;margin:3px 0;font-size:10px}
+
+/* ── rapid-fire two column list ───────────── */
+.rf{column-count:2;column-gap:14px;font-size:9.5px;line-height:1.35}
+.rf.three{column-count:3}
+.rf div{break-inside:avoid;margin-bottom:2px;padding-left:9px;text-indent:-9px}
+.rf .q{font-weight:700}
+.rf .ans{color:var(--coral);font-weight:700}
+
+.foot{font-size:9px;color:var(--ink-3);text-align:center;padding-top:4px;
+  border-top:1px solid var(--rule-soft);margin-top:auto;font-family:"JetBrains Mono",monospace;letter-spacing:.04em}
+
+/* ── print ────────────────────────────────── */
+@media print{
+  @page{size:A4;margin:8mm}
+  body{background:#fff;padding:0;font-size:8.4pt}
+  .wrap{max-width:none;gap:0}
+  .mast{display:none}
+  .sheet{border:none;padding:0;page-break-after:always;break-after:page;min-height:0}
+  .sheet:last-child{page-break-after:auto}
+  .b{break-inside:avoid}
+  table{font-size:7.4pt} .xs{font-size:7.2pt} .sm{font-size:7.8pt}
+  .tag{font-size:6.8pt} .fx{font-size:7.6pt}
+  .rf{font-size:7.4pt}
+}
+@media (max-width:760px){
+  .g{grid-template-columns:repeat(6,1fr)}
+  .c4,.c5,.c6,.c7,.c8,.c9,.c12{grid-column:span 6}
+  .c3{grid-column:span 3} .rf,.rf.three{column-count:1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<div class="mast">
+  <h1>Unit 3 — Rapid Revision Sheet</h1>
+  <p>Applied Ruminant Nutrition-II · VCI MSVE 2016 · Theory Paper II. Five A4 sheets covering nutrient requirements, ration computation, feeding of cattle, buffalo, sheep and goat, bypass nutrients, NPN and metabolic disorders.</p>
+  <div class="meta">
+    <span class="tag">B.V.Sc &amp; A.H. II Year</span>
+    <span class="tag t">Paper II · 100 Marks</span>
+    <span class="tag a">17 Syllabus Topics</span>
+    <span class="tag p">Print → A4 · 5 pages</span>
+  </div>
+</div>
+
+<!-- ═══════════════ SHEET 1 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">01</span><h2>Nutrient Requirements — Maintenance, Growth, Reproduction, Milk, Wool, Draft</h2><span class="wt">THE FACTORIAL BACKBONE OF PAPER II</span></div>
+  <div class="g">
+
+    <div class="b c7">
+      <h3>Maintenance — the base on which everything is added</h3>
+      <p class="xs"><b>Definition:</b> the maintenance requirement is the quantity of nutrients needed by an animal to keep <b>body weight, body composition and nitrogen balance constant</b>, with <b>no production and no work</b>, in a thermoneutral environment.</p>
+      <p class="xs"><b>How it is measured — 3 methods:</b> ① <b>Fasting catabolism / basal metabolism</b> — heat produced by a fasted, resting, thermoneutral animal (fasting heat production is the true zero). ② <b>Feeding trial / regression</b> — feed graded levels and find the intake at which weight change and N balance are zero. ③ <b>Comparative slaughter</b> — carcass energy compared against a baseline group.</p>
+      <div class="fx">Metabolic Body Size = W<sup>0.75</sup>  (Kleiber's law — energy needs scale with surface area, not body weight)</div>
+      <div class="fx">Fasting Heat Production ≈ 70 kcal × W<sup>0.75</sup> per day  ·  ME for maintenance ≈ 125 kcal × W<sup>0.75</sup></div>
+      <p class="xs"><b>Why W<sup>0.75</sup> and not W:</b> heat is lost through the body surface, and surface area is proportional to W<sup>0.67–0.75</sup>. A 40 kg calf therefore needs far more energy <b>per kg body weight</b> than a 400 kg cow — the single most useful concept in this unit.</p>
+      <p class="xs"><b>Practical ICAR-type maintenance figures for cattle:</b> approximately <span class="num-hl">0.65 g DCP</span> and <span class="num-hl">7 g TDN</span> per kg body weight per day. So a <b>400 kg cow ≈ 260 g DCP + 2.8 kg TDN</b>; a 500 kg buffalo ≈ 325 g DCP + 3.5 kg TDN. <b>Field thumb rule:</b> ~1.5 kg concentrate for a cow, ~2 kg for a buffalo, plus roughage <i>ad libitum</i>.</p>
+      <p class="xs"><b>Factors that raise the maintenance requirement:</b> cold or heat stress, exercise and grazing distance (grazing adds <b>25–50%</b> over stall feeding), disease and parasitism, poor housing, high milk yield (larger visceral organs), age and breed (Bos indicus have a <b>lower</b> maintenance requirement than Bos taurus — a real advantage in India).</p>
+    </div>
+
+    <div class="b a c5">
+      <h3>Production requirements — quick reference</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Function</th><th>Requirement over &amp; above maintenance</th></tr></thead>
+        <tbody>
+          <tr><td><b>Milk — cow</b> (4% fat)</td><td>≈ <b>45 g DCP + 300 g TDN</b> per kg milk</td></tr>
+          <tr><td><b>Milk — buffalo</b> (7% fat)</td><td>≈ <b>60 g DCP + 400–450 g TDN</b> per kg milk</td></tr>
+          <tr><td><b>Growth</b></td><td>Rises with ADG; protein need is <b>highest per kg gain in the young</b> (early gain is lean tissue &amp; water; later gain is fat)</td></tr>
+          <tr><td><b>Pregnancy</b></td><td><b>60–70% of foetal growth occurs in the last 3 months</b> ⇒ allowance given only in the last trimester: extra <b>1–1.75 kg concentrate</b></td></tr>
+          <tr><td><b>Wool</b></td><td>Wool is <b>pure keratin protein</b>, rich in <b>cystine (10–14% S-amino acids)</b> ⇒ requirement is for <b>sulphur amino acids</b>, not energy. 1 kg clean wool ≈ 1 kg protein deposited</td></tr>
+          <tr><td><b>Draft / work</b></td><td>Energy only (protein need barely rises). Light work <b>+25%</b>, medium <b>+50%</b>, heavy <b>+75–100%</b> over maintenance</td></tr>
+          <tr><td><b>Meat</b></td><td>Energy-dominated in the finishing phase; protein-dominated in the growing phase</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>The factorial principle — write this equation in any "requirement" answer:</b></p>
+      <div class="fx">Total requirement = Maintenance + Growth + Pregnancy + Lactation + Work</div>
+      <p class="xs">Each component is computed separately from the net requirement of the tissue, then divided by the <b>efficiency of utilisation</b> (k<sub>m</sub> ≈ 0.72 maintenance, k<sub>l</sub> ≈ 0.62 lactation, k<sub>f</sub> ≈ 0.45 fattening) to convert net to metabolisable requirement.</p>
+    </div>
+
+    <div class="b t c6">
+      <h3>Nutrient partitioning &amp; priority — the concept examiners love</h3>
+      <p class="xs">When nutrient supply is limited, the body does <b>not</b> share it equally. The <b>homeorhetic priority order</b> is:</p>
+      <div class="flow">
+        <div class="node"><span class="t1">1. MAINTENANCE</span><span class="t2">survival first</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">2. GROWTH</span><span class="t2">skeletal</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">3. LACTATION</span><span class="t2">species survival</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">4. RESERVES</span><span class="t2">fat</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">5. REPRODUCTION</span><span class="t2">first to be sacrificed</span></div>
+      </div>
+      <p class="xs"><b>The clinical consequence:</b> reproduction is the <b>last</b> to be served and therefore the <b>first indicator of under-nutrition</b>. This is exactly why an under-fed herd shows <b>anoestrus, repeat breeding and long calving intervals</b> long before milk yield visibly drops. In early lactation the cow deliberately <b>mobilises body reserves</b> for milk even at the cost of fertility — the physiological basis of negative energy balance, ketosis and the post-partum anoestrus of Indian crossbred cows.</p>
+      <div class="clin"><b>Body Condition Score (BCS, 1–5 scale):</b> at calving <span class="num-hl">3.0–3.5</span>; at peak lactation not below <span class="num-hl">2.5</span>; at drying-off <span class="num-hl">3.0–3.5</span>. A loss of more than <b>1 BCS unit</b> in early lactation predicts ketosis and infertility. BCS is the cheapest field tool for judging whether your feeding standard is actually working.</div>
+    </div>
+
+    <div class="b p c6">
+      <h3>General principles of ration computation</h3>
+      <p class="xs"><b>Steps (write in order):</b> ① Note the animal's <b>species, body weight, age, physiological state and level of production</b>. ② Read the <b>nutrient requirement</b> (DCP, TDN/ME, Ca, P, DM) from ICAR/NRC tables. ③ Estimate <b>DM intake capacity</b> (2.5–3% BW). ④ List <b>locally available feeds</b> with their composition and cost. ⑤ Fix the <b>roughage : concentrate ratio</b>. ⑥ Compute the concentrate mixture to fill the gap. ⑦ Add <b>mineral mixture 2% and salt 1%</b>. ⑧ <b>Check</b> total DM, NR, Ca:P and cost; adjust.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Method</th><th>How it works &amp; when to use</th></tr></thead>
+        <tbody>
+          <tr><td><b>Pearson's Square</b></td><td>Balances <b>one nutrient between two feeds/groups</b>. Desired % in the centre, ingredient values at the corners; subtract diagonally and read parts. Simple, exam-friendly, but only one nutrient at a time</td></tr>
+          <tr><td><b>Trial and error</b></td><td>Ingredients are put together, totals computed, then adjusted repeatedly. Flexible, handles many nutrients; tedious</td></tr>
+          <tr><td><b>Algebraic / simultaneous equations</b></td><td>Two unknowns solved for two nutrient constraints. Precise for small mixtures</td></tr>
+          <tr><td><b>Linear programming (least-cost)</b></td><td>Computer optimisation with many ingredients and constraints. <b>The industry method</b>; gives the cheapest ration meeting every constraint — but the answer is only as good as the constraints you set (must fix maximum inclusion limits, else it produces an unfeedable ration)</td></tr>
+          <tr><td><b>Thumb rules</b></td><td>Field shortcuts (1 kg concentrate per 2.5 L milk). Fast and practical; not precise</td></tr>
+        </tbody>
+      </table></div>
+      <div class="mnem"><b>Pearson's Square worked in one line:</b> to make an <b>18% CP</b> mixture from GNC (45% CP) and maize (9% CP) — differences: 18−9 = <b>9 parts GNC</b>; 45−18 = <b>27 parts maize</b>; total 36 ⇒ GNC 25%, maize 75%.</div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 1 / 5 · NUTRIENT REQUIREMENTS &amp; RATION COMPUTATION · ANIMAL NUTRITION UNIT 3 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 2 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">02</span><h2>Feeding of Dairy Cattle &amp; Buffalo — Calf to Breeding Bull</h2><span class="wt">LIFE-CYCLE FEEDING</span></div>
+  <div class="g">
+
+    <div class="b s c12">
+      <h3>The dairy life cycle — one continuous flow</h3>
+      <div class="flow">
+        <div class="node"><span class="t1">NEONATE</span><span class="t2">colostrum 0–3 d</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">CALF</span><span class="t2">milk + starter, 0–3 mo</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">HEIFER</span><span class="t2">ADG 400–500 g</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">PREGNANT</span><span class="t2">steaming up</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">LACTATING</span><span class="t2">challenge feeding</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">DRY</span><span class="t2">60 days</span></div>
+      </div>
+    </div>
+
+    <div class="b c6">
+      <h3>Calf feeding &amp; early weaning</h3>
+      <p class="xs"><b>Colostrum — the non-negotiable numbers:</b> feed within <b>30 minutes to 2 hours</b> of birth, at <b>10% of body weight per day</b> in 2–3 feeds, for the first <b>3–5 days</b>. Reason: the calf is born <b>agammaglobulinaemic</b> (epitheliochorial placenta blocks antibody transfer), and intestinal absorption of intact <b>IgG closes by 24–36 hours</b> ("gut closure"), with efficiency already halved by 12 h.</p>
+      <p class="xs"><b>Colostrum vs normal milk:</b> <b>higher</b> in immunoglobulins (IgG), total protein, vitamins A, D and E, minerals, and it is <b>laxative</b> (helps expel meconium); <b>lower</b> in lactose. It is roughly <b>5× the protein and 10× the Vitamin A</b> of normal milk.</p>
+      <p class="xs"><b>Milk feeding:</b> whole milk at <b>1/10th of body weight</b> daily, gradually reduced. <b>Milk replacer</b> (CP 22–24%, fat 10–15%) can substitute after 3 weeks — must be milk-protein based, since the young calf cannot digest plant starch or non-milk protein.</p>
+      <p class="xs"><b>Calf starter:</b> CP <b>20–22%</b>, TDN 70–75%, palatable and highly digestible; offered from <b>2 weeks</b> of age.</p>
+      <div class="clin"><b>Early weaning — the mechanism to write:</b> the rumen develops in response to <b>VFA — especially butyrate and propionate — produced from fermenting the dry starter, not from milk</b> (milk bypasses the rumen through the oesophageal groove). Hence dry feed, not milk, grows the rumen papillae. Wean when the calf eats <b>1–1.5 kg of starter daily</b>, usually at <b>6–8 weeks</b>. <b>Advantages:</b> saves saleable milk, cheaper rearing, earlier rumen development, less scours, easier management.</div>
+      <p class="xs"><b>Calf scours prevention:</b> clean utensils, fixed feeding time, milk at body temperature (~38 °C), never over-feed, never sudden change. Provide <b>clean water from week 1</b> — water is essential for rumen fermentation and cannot be replaced by milk.</p>
+    </div>
+
+    <div class="b a c6">
+      <h3>Heifer · Pregnant · Lactating · Dry · Bull</h3>
+      <p class="xs"><b>Growing heifer:</b> aim for a steady <b>ADG of 400–500 g</b> (crossbred) so she attains <b>60–65% of adult body weight</b> at breeding and calves at <b>24–30 months</b>. <b>Do not over-feed energy</b> — excess fat is deposited in the udder as <b>fatty udder / mammary adipose infiltration</b>, permanently reducing lifetime milk yield. Under-feeding delays puberty and produces a small-framed, low-yielding cow.</p>
+      <p class="xs"><b>Pregnant animal &amp; "steaming up":</b> in the <b>last 6–8 weeks</b> give an extra <b>1–1.75 kg</b> of concentrate to (i) meet rapid foetal growth (60–70% in the last trimester), (ii) build body reserves for the coming lactation, (iii) develop the udder, and (iv) improve calf birth weight and colostrum quality. <b>Avoid over-conditioning</b> — a fat cow at calving means dystocia, fatty liver, ketosis and retained placenta.</p>
+      <p class="xs"><b>Challenge / lead feeding:</b> begin about <b>2 weeks before calving</b>, increasing concentrate by <b>~0.5 kg per day</b> up to about <b>1% of body weight</b>, and continue increasing after calving as long as the cow responds with more milk. Purpose: adapt rumen papillae and microflora to the high-grain lactation diet <b>before</b> the demand arrives, and let the cow express her full peak. <b>Every extra 1 kg at peak yield ≈ 200 kg extra milk over the lactation.</b></p>
+      <p class="xs"><b>Lactating cow:</b> peak yield at <b>6–8 weeks</b> but peak DM intake only at <b>10–12 weeks</b> — this lag creates the inevitable <b>negative energy balance</b> of early lactation. Feed high-energy-density rations, bypass fat, and 4–6 small concentrate meals rather than two large ones.</p>
+      <p class="xs"><b>Dry period — <span class="num-hl">60 days</span>:</b> allows udder tissue regeneration, replenishment of body reserves and foetal growth. A dry period shorter than 45 days cuts the next lactation by 20–25%. Feed mainly roughage; keep <b>Ca low</b> in the last 2–3 weeks to prime the milk-fever defence.</p>
+      <p class="xs"><b>Breeding bull:</b> maintenance ration plus <b>1–1.5 kg extra concentrate</b>; keep him in <b>breeding, not fattening, condition</b>. Ensure Vitamin A, Zn, Se and adequate exercise — obesity causes low libido, poor sperm motility and leg problems.</p>
+      <p class="xs"><b>Working bullock:</b> energy is the limiting nutrient. Feed the extra ration <b>after work, not before</b>; give ample water and salt; add <b>25–100% over maintenance</b> depending on work intensity.</p>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 2 / 5 · DAIRY CATTLE &amp; BUFFALO FEEDING · ANIMAL NUTRITION UNIT 3 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 3 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">03</span><h2>Sheep &amp; Goat Nutrition · Bypass Nutrients · NPN</h2><span class="wt">SMALL RUMINANTS + HIGH-YIELDER TECHNOLOGY</span></div>
+  <div class="g">
+
+    <div class="b t c6">
+      <h3>Sheep &amp; goat feeding</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Point</th><th>Sheep</th><th>Goat</th></tr></thead>
+        <tbody>
+          <tr><td>Feeding habit</td><td><b>Grazer</b> — bites close to the ground, selective for leaf</td><td><b>Browser</b> — prefers tree leaves &amp; shrubs at height; highly selective</td></tr>
+          <tr><td>DM intake</td><td class="mn">3–4% BW</td><td class="mn">3–5% BW</td></tr>
+          <tr><td>Tolerance</td><td>Very sensitive to <b>copper toxicity</b></td><td>Tolerates <b>tannins &amp; bitter browse</b> better than any other ruminant</td></tr>
+          <tr><td>Product focus</td><td>Meat + <b>wool</b> (S-amino acids)</td><td>Meat + <b>milk</b> (highest yield per kg body weight)</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Phase feeding of the ewe/doe — the four terms you must define:</b></p>
+      <p class="xs">• <b>Flushing</b> — extra <b>250–500 g</b> of concentrate (or improved grazing) beginning <b>2–3 weeks before</b> mating and continuing 2–3 weeks into the breeding season. Purpose: raise body condition and <b>ovulation rate</b> ⇒ more twins and a tighter lambing.<br>
+      • <b>Steaming up</b> — extra concentrate in the <b>last 6 weeks</b> of gestation, when 70% of foetal growth occurs; prevents <b>pregnancy toxaemia</b> and gives heavier, more viable lambs with better colostrum.<br>
+      • <b>Creep feeding</b> — a palatable <b>18–20% CP</b> creep ration offered to lambs/kids from <b>2–3 weeks</b> in an enclosure the dam cannot enter; speeds rumen development and weaning weight.<br>
+      • <b>Fattening / finishing</b> — high-energy ration (concentrate 60–70%) for the last 60–90 days before slaughter.</p>
+      <div class="clin"><b>Indian field realities:</b> pregnancy toxaemia in twin-bearing <b>Marwari and Muzaffarnagri</b> ewes on poor late-gestation grazing; <b>urolithiasis</b> in male sheep and goats on high-concentrate, high-P, low-water diets — prevent with <b>Ca:P 2:1, 1–2% ammonium chloride, up to 4% salt</b> and abundant water; and <b>copper toxicity</b> when sheep are fed cattle mineral mixture (never interchange them).</div>
+    </div>
+
+    <div class="b p c6">
+      <h3>Bypass nutrients — the high-yielder technology</h3>
+      <p class="xs"><b>The problem:</b> in a high-yielding cow, rumen fermentation destroys exactly what she needs most. Good-quality dietary protein is degraded to ammonia and rebuilt into microbial protein of <b>fixed, average quality</b>, while dietary fat is <b>biohydrogenated</b> and, above 3–4% of DM, poisons the fibre-digesting bacteria. The animal's genetic potential exceeds what rumen fermentation alone can supply.</p>
+      <p class="xs"><b>BYPASS (RUMEN-PROTECTED) PROTEIN — definition:</b> dietary protein that <b>escapes rumen degradation</b> and is digested and absorbed as amino acids in the small intestine (= RUP or UDP).</p>
+      <p class="xs"><b>How it is made:</b> <b>chemical</b> — <b>formaldehyde treatment at ~1 g HCHO per 100 g of crude protein</b> (0.8–1.2%), forming reversible methylene bridges that are stable at rumen pH 6.5 and hydrolysed in the acidic abomasum; also tannic acid. <b>Physical</b> — controlled heating, roasting, expeller/extrusion. <b>Natural</b> — feeds inherently high in RUP: fish meal, maize gluten, distillers' grains.</p>
+      <p class="xs"><b>Typical Indian practice:</b> formaldehyde-treated <b>mustard cake or groundnut cake</b> fed to crossbred cows and Murrah buffaloes. <b>Benefits:</b> milk yield up <b>10–15%</b>, higher milk protein, improved N efficiency, less urinary N loss, better body condition and earlier resumption of cyclicity.</p>
+      <p class="xs"><b>BYPASS FAT:</b> <b>calcium salts of long-chain fatty acids (Ca-LCFA)</b> or hydrogenated <b>prilled fat</b> — inert at rumen pH, dissociating in the abomasum. Fed at <b>100–150 g/day</b>. Raises the energy density of the ration <b>without depressing fibre digestion or causing acidosis</b> — the single best tool against early-lactation negative energy balance.</p>
+      <div class="alert"><b>The balance to state:</b> optimum <b>RDP : RUP is about 65 : 35</b> for high yielders. Excess bypass protein is wasteful and starves the microbes of ammonia; too little leaves the cow short of intestinal amino acids. <b>Bypass protein is useless unless the rumen is first given enough RDP and fermentable energy.</b></div>
+    </div>
+
+    <div class="b c c12">
+      <h3>Non-protein nitrogen (NPN) for ruminants — use, limits and toxicity</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Point</th><th>Detail to write</th></tr></thead>
+        <tbody>
+          <tr><td><b>What is NPN</b></td><td>Nitrogenous compounds that are not true protein: <b>urea</b>, biuret, ammonium salts, amides, amines, nitrates, and the natural NPN of green fodder and silage</td></tr>
+          <tr><td><b>Why it works only in ruminants</b></td><td>Rumen bacteria produce <b>urease</b>, splitting urea into <b>ammonia + CO₂</b>; the NH₃ is then combined with carbon skeletons and ATP from fermentable energy to form <b>microbial crude protein</b>. Non-ruminants have no ureolytic microbes ahead of the site of absorption, so urea is simply toxic to them</td></tr>
+          <tr><td><b>Protein equivalent</b></td><td>Urea has <b>45–46.6% N</b> ⇒ × 6.25 = <b>281–291% CP equivalent</b>. 1 kg urea ≈ the N of ~2.8 kg of groundnut cake</td></tr>
+          <tr><td><b>Safe limits — memorise</b></td><td>Maximum <b>1% of the concentrate mixture</b>, <b>3% of total DM</b>, and never more than <b>one-third of the total dietary N</b>. Adapt gradually over <b>2–3 weeks</b></td></tr>
+          <tr><td><b>Essential co-factors</b></td><td>A readily fermentable energy source (<b>molasses, grain starch</b>) must be present at the same time; <b>N : S ratio 10–14 : 1</b>; adequate Co, P and trace minerals</td></tr>
+          <tr><td><b>Absolute prohibitions</b></td><td><b>Never in drinking water</b> (rapid absorption); never to <b>young pre-ruminant calves</b>, non-ruminants, sick or starved animals; never mixed unevenly; never with raw soybean (its urease releases ammonia instantly)</td></tr>
+          <tr><td><b>UMMB — Urea Molasses Mineral Block</b></td><td>Typical composition: molasses <b>40–50%</b>, urea <b>10%</b>, oil cake <b>15–20%</b>, mineral mixture <b>10%</b>, salt <b>5%</b>, binder (cement/bentonite/quicklime) <b>10%</b>. A licking block that delivers N, energy and minerals <b>slowly and safely</b> to grazing animals on dry-season straw — the flagship Indian NPN technology</td></tr>
+        </tbody>
+      </table></div>
+      <div class="alert"><b>UREA (AMMONIA) TOXICITY — the full answer.</b> <b>Cause:</b> overdose, sudden introduction, uneven mixing, or feeding without fermentable energy ⇒ NH₃ released faster than the microbes can use it. <b>Mechanism:</b> rumen pH rises above <b>7.5–8.0</b>; ammonia now exists in the un-ionised (NH₃) form, which is <b>freely absorbed</b> across the rumen wall; blood ammonia exceeds the liver's urea-cycle capacity (&gt; ~1 mg/dL) and is neurotoxic. <b>Signs (onset 20 min – 4 h):</b> uneasiness, muscle tremors, salivation, bloat, grinding of teeth, incoordination, laboured breathing, violent struggling, tetany, and death. <b>Treatment:</b> drench <b>4–5 litres of 5% acetic acid (vinegar)</b> to acidify the rumen and trap ammonia as the non-absorbable NH₄⁺ ion, plus <b>large volumes of cold water</b> to dilute and slow fermentation; repeat as needed; trocarisation for bloat. <b>Lethal dose ≈ 0.3–0.5 g urea per kg body weight.</b></div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 3 / 5 · SMALL RUMINANTS, BYPASS NUTRIENTS &amp; NPN · ANIMAL NUTRITION UNIT 3 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 4 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">04</span><h2>Metabolic Disorders &amp; Nutritional Interventions</h2><span class="wt">HIGHEST-YIELD CLINICAL TOPIC IN PAPER II</span></div>
+  <div class="g">
+
+    <div class="b c c12">
+      <h3>The seven classical production diseases — one row each</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Disorder</th><th>When &amp; who</th><th>Cause / mechanism</th><th>Signs &amp; lab finding</th><th>Treatment</th><th>Nutritional prevention</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>Milk Fever</b><br>(Parturient paresis)</td>
+            <td>Within <b>72 h of calving</b>; high yielders in <b>3rd–6th lactation</b>; Jersey &amp; crossbreds</td>
+            <td>Sudden massive Ca drain into colostrum; the Ca-mobilising machinery (PTH, 1,25-(OH)₂-D₃, bone resorption) has not yet been activated</td>
+            <td>Three stages: excitement/tremor → <b>sternal recumbency with S-shaped neck kink</b> → lateral recumbency &amp; coma. <b>Serum Ca falls below 5–6 mg/dL</b> (normal 9–12); subnormal temperature, dry muzzle, no rumen motility</td>
+            <td><b>300–500 mL of 25% calcium borogluconate slowly IV</b> (monitor heart), part SC; oral Ca gels</td>
+            <td><b>Low-calcium diet in the last 2–3 weeks</b> so the Ca-mobilising system stays switched on; <b>negative DCAD of −50 to −100 mEq/kg DM</b> using anionic salts; adequate Mg; Vitamin D₃</td>
+          </tr>
+          <tr>
+            <td><b>Ketosis</b><br>(Acetonaemia)</td>
+            <td><b>3–6 weeks after calving</b> — peak yield, peak negative energy balance</td>
+            <td>Energy demand exceeds intake ⇒ massive fat mobilisation ⇒ acetyl-CoA exceeds the oxaloacetate available (oxaloacetate is drained for gluconeogenesis &amp; lactose) ⇒ ketone bodies accumulate</td>
+            <td>Drop in appetite (refuses concentrate first) and milk yield, rapid weight loss, <b>sweetish acetone smell of breath, milk and urine</b>, constipation, nervous form (licking, circling). <b>Blood glucose &lt; 40 mg/dL</b>; ketones ↑ in urine/milk (Rothera's test)</td>
+            <td><b>500 mL of 25% dextrose IV</b>; <b>propylene glycol 200–300 mL orally twice daily</b> (glucogenic); glucocorticoids; sodium propionate; cobalt &amp; B₁₂</td>
+            <td>Avoid over-fat cows at calving (BCS ≤3.5); <b>challenge/lead feeding</b>; energy-dense early-lactation ration; <b>bypass fat</b>; niacin, propylene glycol, monensin</td>
+          </tr>
+          <tr>
+            <td><b>Ruminal Acidosis</b><br>(Grain overload; <b>SARA</b> in its subacute form)</td>
+            <td>Sudden access to grain; challenge feeding; high-concentrate feedlot &amp; high-yielder diets</td>
+            <td>Rapid fermentation of starch ⇒ <b>Streptococcus bovis</b> then <b>Lactobacillus</b> proliferate ⇒ <b>lactic acid</b> accumulates ⇒ rumen pH crashes; cellulolytic bacteria and protozoa die; osmotic pull of fluid into the rumen ⇒ dehydration; systemic metabolic acidosis</td>
+            <td>Acute: rumen <b>pH &lt; 5.0</b>, rumen stasis, profuse pasty diarrhoea, dehydration, staggering, recumbency, death. <b>SARA: pH 5.2–5.6</b> intermittently — milk-fat depression, erratic intake, loose faeces with undigested grain, <b>laminitis and liver abscesses</b></td>
+            <td>Oral alkalinising agents (magnesium hydroxide/sodium bicarbonate), IV fluids with bicarbonate, thiamine, rumen lavage or <b>rumenotomy</b> in severe cases; transfaunation</td>
+            <td><b>Gradual adaptation to grain</b>; keep <b>effective fibre — minimum 18–21% ADF / ~28% NDF</b>, with adequate particle length; <b>sodium bicarbonate 0.75–1.5% of DM</b>; TMR feeding to stop slug-feeding; ionophores</td>
+          </tr>
+          <tr>
+            <td><b>Bloat</b><br>(Ruminal tympany)</td>
+            <td><b>Frothy</b> — lush legume grazing (lucerne, berseem) or finely ground grain. <b>Free-gas</b> — obstruction, oesophageal choke, vagal indigestion</td>
+            <td>Frothy: soluble leaf proteins and saponins stabilise a <b>stable foam</b>, so gas cannot be eructated. Free-gas: physical failure of eructation</td>
+            <td>Distension of the <b>left paralumbar fossa</b>, dyspnoea, mouth breathing, tongue out, death from asphyxia and cardiac compression</td>
+            <td>Anti-foaming agents — <b>poloxalene</b>, vegetable/mineral oil 250–500 mL, turpentine; stomach tube for free gas; <b>trocar and cannula</b> in emergency</td>
+            <td>Never turn hungry animals onto lush legume pasture; <b>feed dry straw before grazing</b>; keep legume below half of the pasture; wilt the fodder; poloxalene or ionophores in feed</td>
+          </tr>
+          <tr>
+            <td><b>Hypomagnesaemic tetany</b><br>(Grass tetany / Grass staggers)</td>
+            <td>Lactating cows on <b>lush young spring grass</b> heavily fertilised with N and K; milk tetany in milk-fed calves</td>
+            <td>Low Mg intake plus <b>high K and N in young grass blocking Mg absorption</b> from the rumen; no meaningful body store of Mg is available</td>
+            <td>Hyperexcitability, muscle fasciculation, staggering, <b>tetanic convulsions with opisthotonus</b>, sudden death. <b>Serum Mg &lt; 1.7 mg/dL</b></td>
+            <td><b>Magnesium sulphate solution IV/SC</b> (usually combined with calcium borogluconate)</td>
+            <td>Mg supplementation (MgO in concentrate or Mg bullets) during the risk period; feed hay before turning out; avoid heavy K fertilisation</td>
+          </tr>
+          <tr>
+            <td><b>Pregnancy Toxaemia</b><br>(Ovine ketosis / twin-lamb disease)</td>
+            <td><b>Last 4–6 weeks</b> of gestation in <b>twin- or triplet-bearing ewes and does</b></td>
+            <td>Multiple foetuses demand glucose while the enlarged uterus physically restricts rumen capacity ⇒ severe negative energy balance ⇒ ketosis and hypoglycaemia</td>
+            <td>Separation from the flock, blindness, star-gazing, teeth grinding, incoordination, recumbency, ketonuria, death within 2–7 days</td>
+            <td>IV glucose, oral propylene glycol/glycerol, corticosteroids, and <b>induction of parturition or caesarean</b> as the definitive cure</td>
+            <td><b>Steaming up</b> in the last 6 weeks; avoid both over-fat and thin ewes at mating; never starve or transport in late gestation; small frequent energy-dense meals</td>
+          </tr>
+          <tr>
+            <td><b>Post-parturient Haemoglobinuria</b></td>
+            <td>High-yielding <b>buffaloes</b>, within weeks of calving — a classic Indian condition</td>
+            <td><b>Hypophosphataemia</b>, often with heavy <b>berseem</b> feeding and cruciferous fodders; low ATP in erythrocytes ⇒ intravascular haemolysis</td>
+            <td>Sudden <b>coffee-coloured urine</b>, pallor, jaundice, weakness, drop in milk. <b>Serum P falls below 2 mg/dL</b></td>
+            <td><b>Sodium acid phosphate 60 g in 300 mL water IV</b>, repeated; blood transfusion in severe cases</td>
+            <td>Adequate dietary phosphorus and mineral mixture; limit berseem to part of the roughage; maintain Ca:P near 2:1</td>
+          </tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="b a c12">
+      <h3>The unifying principle — write this as your conclusion</h3>
+      <p class="xs">Every production disease above is the same story: <b>the modern high-yielding animal's output demand at a single moment exceeds the rate at which her homeostatic machinery can supply the nutrient</b> — calcium at calving, glucose at peak lactation, buffering capacity at grain overload, magnesium on lush pasture, phosphorus in the freshly calved buffalo. They are therefore <b>diseases of production, not of infection</b>, they cluster around <b>the transition period (3 weeks before to 3 weeks after calving)</b>, and they are all <b>prevented by feeding management rather than cured by drugs</b>. The three interventions that prevent most of them are: <b>correct dry-period feeding (BCS 3.0–3.5, low Ca, negative DCAD)</b>, <b>gradual dietary transition with challenge feeding</b>, and <b>adequate effective fibre with buffers</b>.</p>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 4 / 5 · METABOLIC DISORDERS · ANIMAL NUTRITION UNIT 3 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 5 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">05</span><h2>Scarcity Feeding · Ration Templates · Rapid-Fire Drill</h2><span class="wt">CLOSING SHEET</span></div>
+  <div class="g">
+
+    <div class="b s c6">
+      <h3>Feeding during drought, flood &amp; scarcity</h3>
+      <p class="xs"><b>Principle:</b> in scarcity the objective changes from <b>production to survival</b> — keep the breeding nucleus alive and pregnant, accept the loss of milk yield.</p>
+      <p class="xs"><b>Strategies to list:</b> ① <b>Survival ration</b> — as low as 50–60% of maintenance for short periods; feed at least <b>1% of body weight as roughage</b> to keep the rumen functional. ② <b>Urea-ammoniated straw</b> (4 kg urea + 40 L water per 100 kg straw, 21 days). ③ <b>UMMB licks</b> for grazing animals. ④ <b>Unconventional and agro-industrial by-products</b> — sugarcane bagasse and tops, tree leaves (subabul, neem, babul, pipal), cactus, seaweed, molasses, deoiled cakes, vegetable and fruit waste, poultry droppings (where permitted). ⑤ <b>Complete feed blocks / densified total mixed ration blocks</b> — easy to transport to a scarcity zone. ⑥ <b>Culling</b> unproductive stock to save feed for the productive core. ⑦ Fodder banks, hay and silage reserves made in the flush season. ⑧ Ensure <b>clean water and mineral mixture</b> — deficiency kills faster than hunger.</p>
+      <div class="alert"><b>Flood-specific:</b> feeds get wet and mouldy ⇒ <b>aflatoxin risk</b>; provide dry, elevated storage, toxin binders, and watch for nitrate poisoning from flooded, heavily manured forage.</div>
+    </div>
+
+    <div class="b c6">
+      <h3>Ready-made ration templates</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Animal</th><th>A defensible daily ration</th></tr></thead>
+        <tbody>
+          <tr><td><b>400 kg cow, 10 L milk (4% fat)</b></td><td>Green fodder <b>25 kg</b> + wheat straw <b>4 kg</b> + concentrate mixture (CP 18%, TDN 70%) <b>5.5 kg</b> (1.5 maintenance + 4 for milk) + mineral mixture <b>50 g</b> + salt <b>30 g</b></td></tr>
+          <tr><td><b>500 kg buffalo, 8 L milk (7% fat)</b></td><td>Green fodder <b>25 kg</b> + paddy straw <b>5 kg</b> + concentrate <b>6 kg</b> (2 maintenance + 4 for milk) + bypass fat <b>100 g</b> + mineral mixture <b>60 g</b> + salt <b>35 g</b></td></tr>
+          <tr><td><b>Growing calf, 100 kg</b></td><td>Green fodder <b>8–10 kg</b> + calf starter/concentrate (CP 20%) <b>1.5 kg</b> + mineral mixture <b>20 g</b> + clean water</td></tr>
+          <tr><td><b>Adult ewe / doe, 30 kg</b></td><td>Grazing 6–8 h + green fodder <b>3 kg</b> + concentrate (CP 14–16%) <b>200–300 g</b>; double the concentrate during flushing &amp; late gestation</td></tr>
+          <tr><td><b>Working bullock, 400 kg (medium work)</b></td><td>Maintenance ration + <b>50% extra energy</b>: green fodder 20 kg + straw 5 kg + concentrate <b>2.5–3 kg</b>, fed <b>after</b> the day's work, with ample water and salt</td></tr>
+        </tbody>
+      </table></div>
+      <div class="clin"><b>Always close a ration answer with the four checks:</b> total DM within 2.5–3% of body weight · nutritive ratio matched to the stage · Ca:P near 2:1 · mineral mixture and salt included.</div>
+    </div>
+
+    <div class="b c12">
+      <h3>Last-10-minutes drill — Unit 3</h3>
+      <div class="rf three">
+        <div><span class="q">Metabolic body size</span> — <span class="ans">W<sup>0.75</sup> (Kleiber)</span></div>
+        <div><span class="q">Fasting heat production</span> — <span class="ans">~70 kcal × W<sup>0.75</sup></span></div>
+        <div><span class="q">Maintenance, cattle</span> — <span class="ans">~0.65 g DCP + 7 g TDN per kg BW</span></div>
+        <div><span class="q">Per kg cow milk (4% fat)</span> — <span class="ans">45 g DCP + 300 g TDN</span></div>
+        <div><span class="q">Per kg buffalo milk (7% fat)</span> — <span class="ans">60 g DCP + 400–450 g TDN</span></div>
+        <div><span class="q">Foetal growth in last trimester</span> — <span class="ans">60–70%</span></div>
+        <div><span class="q">Wool requirement is for</span> — <span class="ans">Sulphur amino acids (cystine)</span></div>
+        <div><span class="q">Heavy work energy increase</span> — <span class="ans">+75–100% over maintenance</span></div>
+        <div><span class="q">Colostrum timing &amp; amount</span> — <span class="ans">Within 2 h, 10% of body weight/day</span></div>
+        <div><span class="q">Gut closure to IgG</span> — <span class="ans">24–36 hours</span></div>
+        <div><span class="q">Calf starter CP</span> — <span class="ans">20–22%</span></div>
+        <div><span class="q">Milk fed to calf</span> — <span class="ans">1/10th of body weight</span></div>
+        <div><span class="q">What develops the rumen</span> — <span class="ans">VFA (butyrate, propionate) from dry starter</span></div>
+        <div><span class="q">Early weaning age</span> — <span class="ans">6–8 weeks (1–1.5 kg starter/day)</span></div>
+        <div><span class="q">Heifer breeding weight</span> — <span class="ans">60–65% of adult body weight</span></div>
+        <div><span class="q">Danger of over-feeding heifers</span> — <span class="ans">Fatty udder ⇒ lifelong low yield</span></div>
+        <div><span class="q">Dry period length</span> — <span class="ans">60 days</span></div>
+        <div><span class="q">Steaming up</span> — <span class="ans">Extra 1–1.75 kg concentrate, last 6–8 weeks</span></div>
+        <div><span class="q">Challenge feeding start &amp; rate</span> — <span class="ans">2 wk pre-calving, +0.5 kg/day</span></div>
+        <div><span class="q">Peak yield vs peak intake</span> — <span class="ans">6–8 wk vs 10–12 wk (⇒ NEB)</span></div>
+        <div><span class="q">1 kg extra at peak =</span> — <span class="ans">~200 kg extra per lactation</span></div>
+        <div><span class="q">BCS at calving</span> — <span class="ans">3.0–3.5 (of 5)</span></div>
+        <div><span class="q">Flushing</span> — <span class="ans">+250–500 g, 2–3 wk before mating ⇒ ↑ ovulation</span></div>
+        <div><span class="q">Creep feed CP</span> — <span class="ans">18–20%</span></div>
+        <div><span class="q">Grazer vs browser</span> — <span class="ans">Sheep vs goat</span></div>
+        <div><span class="q">Species most sensitive to Cu</span> — <span class="ans">Sheep</span></div>
+        <div><span class="q">Formaldehyde for bypass protein</span> — <span class="ans">~1 g per 100 g CP</span></div>
+        <div><span class="q">Bypass fat form &amp; dose</span> — <span class="ans">Ca salts of LCFA, 100–150 g/day</span></div>
+        <div><span class="q">Ideal RDP : RUP</span> — <span class="ans">65 : 35</span></div>
+        <div><span class="q">Urea max in concentrate / total DM</span> — <span class="ans">1% / 3%</span></div>
+        <div><span class="q">Urea protein equivalent</span> — <span class="ans">281–291%</span></div>
+        <div><span class="q">Urea toxicity antidote</span> — <span class="ans">4–5 L of 5% acetic acid + cold water</span></div>
+        <div><span class="q">Urea lethal dose</span> — <span class="ans">0.3–0.5 g/kg body weight</span></div>
+        <div><span class="q">UMMB urea &amp; molasses %</span> — <span class="ans">10% urea, 40–50% molasses</span></div>
+        <div><span class="q">Milk fever serum Ca</span> — <span class="ans">&lt; 5–6 mg/dL</span></div>
+        <div><span class="q">Milk fever treatment</span> — <span class="ans">300–500 mL 25% Ca borogluconate IV</span></div>
+        <div><span class="q">DCAD formula &amp; target</span> — <span class="ans">(Na+K)−(Cl+S); −50 to −100 mEq/kg DM</span></div>
+        <div><span class="q">Ketosis blood glucose</span> — <span class="ans">&lt; 40 mg/dL</span></div>
+        <div><span class="q">Ketosis oral glucogenic</span> — <span class="ans">Propylene glycol 200–300 mL BID</span></div>
+        <div><span class="q">Acute acidosis rumen pH</span> — <span class="ans">&lt; 5.0 (SARA 5.2–5.6)</span></div>
+        <div><span class="q">Bacteria of grain overload</span> — <span class="ans">Strep. bovis → Lactobacillus</span></div>
+        <div><span class="q">Minimum effective fibre</span> — <span class="ans">18–21% ADF / ~28% NDF</span></div>
+        <div><span class="q">Buffer dose</span> — <span class="ans">NaHCO₃ 0.75–1.5% of DM</span></div>
+        <div><span class="q">Frothy bloat treatment</span> — <span class="ans">Poloxalene / oil; trocar in emergency</span></div>
+        <div><span class="q">Grass tetany serum Mg</span> — <span class="ans">&lt; 1.7 mg/dL</span></div>
+        <div><span class="q">Pregnancy toxaemia — who</span> — <span class="ans">Twin-bearing ewes, last 4–6 weeks</span></div>
+        <div><span class="q">Coffee-coloured urine in buffalo</span> — <span class="ans">Post-parturient haemoglobinuria (low P)</span></div>
+        <div><span class="q">Its treatment</span> — <span class="ans">Sodium acid phosphate IV</span></div>
+        <div><span class="q">Urolithiasis prevention</span> — <span class="ans">Ca:P 2:1, NH₄Cl 1–2%, salt 4%, water</span></div>
+        <div><span class="q">Least-cost formulation method</span> — <span class="ans">Linear programming</span></div>
+        <div><span class="q">One-nutrient two-feed method</span> — <span class="ans">Pearson's square</span></div>
+        <div><span class="q">Survival ration roughage minimum</span> — <span class="ans">1% of body weight</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 5 / 5 · SCARCITY FEEDING &amp; DRILL · ANIMAL NUTRITION UNIT 3 · VCI MSVE 2016 · PREPARED FOR B.V.Sc &amp; A.H. II YEAR</div>
+</section>
+
+</div>

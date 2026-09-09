@@ -1,0 +1,602 @@
+[
+  {
+    "id": "u4-qa-d01",
+    "type": "define",
+    "marks": 2,
+    "question": "Define the Ideal Protein Concept (Ideal Amino Acid Profile) in monogastric nutrition.",
+    "topicId": "u4-t03",
+    "answer": "<p><b>Ideal Protein Concept (Ideal Amino Acid Profile):</b> The exact theoretical dietary balance of digestible essential amino acids that matches the animal's physiological requirements for maintenance and protein accretion perfectly, with neither deficiency nor surplus of any single amino acid.</p><p>In swine and poultry formulations, <b>Lysine is designated as the reference standard (set at 100%)</b> because it is strictly utilized for protein synthesis, easily analyzed, and typically the first or second limiting amino acid. All other essential amino acids (Methionine, Threonine, Tryptophan) are expressed as fixed ideal percentages relative to Lysine (e.g., Met:Cys = 60–65%, Threonine = 65–70%).</p>",
+    "keyPoints": [
+      "Exact pattern of digestible amino acids matching requirements without excess or deficiency.",
+      "Lysine is the universal reference amino acid set at 100%.",
+      "Minimizes nitrogen excretion into the environment and reduces feed costs."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "LUVAS 2021"
+    ]
+  },
+  {
+    "id": "u4-qa-d02",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Feed Conversion Ratio (FCR) in broilers and state the standard commercial target.",
+    "topicId": "u4-t08",
+    "answer": "<p><b>Feed Conversion Ratio (FCR):</b> A crucial biological and economic efficiency index measuring the mass of feed consumed divided by the live body weight gained by the animal over a specified rearing period.</p><p><b>Mathematical Formula:</b><br><code>FCR = Total Feed Consumed (kg) / Total Live Body Weight Gain (kg)</code>.</p><p><b>Commercial Target:</b> Modern commercial broiler hybrids (Cobb 500, Ross 308) achieve an FCR of <b>1.45 to 1.60 at 38–42 days of age</b> (attaining 2.2–2.5 kg live weight on ~3.4–3.6 kg total feed).</p>",
+    "keyPoints": [
+      "Ratio: Feed Consumed (kg) / Body Weight Gained (kg).",
+      "Lower FCR denotes superior nutritional and biological feed efficiency.",
+      "Target in commercial broilers: 1.45–1.60 at 40 days."
+    ],
+    "table": null,
+    "pyq": [
+      "TANUVAS 2023",
+      "RAJUVAS 2022",
+      "IVRI Annual 2021"
+    ]
+  },
+  {
+    "id": "u4-qa-d03",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Obligate Carnivore with reference to feline (cat) nutrition.",
+    "topicId": "u4-t15",
+    "answer": "<p><b>Obligate (True) Carnivore:</b> A species whose evolutionary adaptation to a strict vertebrate prey diet has led to the permanent loss of specific metabolic and synthetic pathways, rendering it biologically dependent on nutrients found exclusively in animal tissues.</p><p><b>Feline Peculiarities:</b> Cats cannot synthesize: (1) <b>Taurine</b> from cysteine; (2) <b>Arachidonic acid</b> from linoleic acid; (3) <b>Vitamin A (Retinol)</b> from β-carotene; (4) <b>Niacin</b> from tryptophan. Furthermore, they maintain constitutive, non-adaptive activity of hepatic gluconeogenic and transaminase enzymes, necessitating a high-protein diet.</p>",
+    "keyPoints": [
+      "Biologically dependent on consuming animal tissues due to evolutionary metabolic deletions.",
+      "Obligate dietary requirements: Taurine, Arachidonic acid, Pre-formed Retinol, Pre-formed Niacin.",
+      "High constitutive hepatic amino acid catabolism."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "DUVASU 2022",
+      "GADVASU 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-d04",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Cecotrophy (Caecotrophy / Pseudorumination) in rabbits.",
+    "topicId": "u4-t13",
+    "answer": "<p><b>Cecotrophy (Pseudorumination / Coprophagy):</b> The physiological and behavioral phenomenon in lagomorphs (domestic rabbits) involving the production, excretion, and immediate voluntary ingestion of specialized soft, mucus-coated fecal pellets (<b>cecotropes / night feces</b>) directly from the anus without mastication.</p><p>Cecotropes are produced in the cecum under a circadian rhythm (predominantly at night or early morning) and are rich in <b>microbial crude protein (25–30% CP), B-complex vitamins, and volatile fatty acids</b>, allowing rabbits to recover nutrients synthesized by hindgut fermentation.</p>",
+    "keyPoints": [
+      "Excretion and ingestion of soft, mucus-enclosed cecotropes directly from the anus.",
+      "Occurs on a circadian rhythm (night/early morning).",
+      "Recovers microbial protein and B-vitamins synthesized by cecal microflora."
+    ],
+    "table": null,
+    "pyq": [
+      "RAJUVAS 2023",
+      "TANUVAS 2021",
+      "LUVAS 2022"
+    ]
+  },
+  {
+    "id": "u4-qa-d05",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Nutritional Piglet Anemia (Thumps) and state its standard treatment.",
+    "topicId": "u4-t04",
+    "answer": "<p><b>Nutritional Piglet Anemia (Thumps):</b> A microcytic hypochromic nutritional anemia occurring in suckling piglets confined to concrete floors without access to soil, characterized by labored jerky diaphragmatic spasms ('thumping' respiration), pallor of skin and mucous membranes, edema, and stunted growth.</p><p><b>Cause &amp; Standard Treatment:</b> Piglets are born with minimal iron stores (~50 mg) and require 7–10 mg Fe/day for rapid growth, whereas sow's milk supplies only ~1 mg Fe/day. Standard prophylaxis is an intramuscular injection of <b>100 to 200 mg Iron Dextran (or Iron Galactan) into the neck/ham musculature at 3 to 4 days of age</b>.</p>",
+    "keyPoints": [
+      "Microcytic hypochromic anemia in piglets reared on concrete.",
+      "Caused by mismatch: Piglet requires 7–10 mg Fe/day; sow milk provides only 1 mg/day.",
+      "Treatment: 100–200 mg Iron Dextran IM at 3–4 days of life."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "WBUAFS 2021",
+      "KVAFSU 2023"
+    ]
+  },
+  {
+    "id": "u4-qa-d06",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Phase Feeding in swine and poultry and state its benefits.",
+    "topicId": "u4-t04",
+    "answer": "<p><b>Phase Feeding:</b> The commercial feeding practice of dividing an animal's growth or production period into multiple distinct chronological feeding stages, formulating a succession of diets whose nutrient concentrations progressively decrease in protein/amino acids and adjust in energy to match the animal's changing physiological needs.</p><p><b>Benefits:</b> (1) Avoids underfeeding during early high-growth stages and overfeeding expensive protein during finishing stages; (2) Decreases feed cost per kg gain by 10–15%; (3) Drastically reduces environmental nitrogen and phosphorus excretion in manure.</p>",
+    "keyPoints": [
+      "Changing feed formulations over multiple growth stages to match declining amino acid requirements.",
+      "Prevents excess overfeeding of protein in older animals.",
+      "Lowers production costs and minimizes environmental nitrogen excretion."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2021",
+      "DUVASU 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-d07",
+    "type": "define",
+    "marks": 2,
+    "question": "State the Equine Minimum Dietary Fibre Requirement to prevent gastrointestinal disorders.",
+    "topicId": "u4-t06",
+    "answer": "<p><b>Equine Minimum Dietary Fibre Requirement:</b> Horses are monogastric hindgut fermenters whose large colon and cecum require constant physical fill of long-stem forages to maintain normal peristalsis and stable microbial ecology.</p><p>The absolute minimum requirement is <b>1.0% of body weight as dry forage daily</b> (e.g., minimum 5.0 kg forage DM for a 500 kg horse), with ideal maintenance diets providing <b>1.5% to 2.0% of body weight as forage</b>. The complete ration should never contain less than <b>18% to 20% Crude Fibre</b> on a dry matter basis to prevent cecal impaction, colic, wood-chewing (cribbing), and laminitis.</p>",
+    "keyPoints": [
+      "Minimum 1.0% of body weight as forage dry matter daily (ideal 1.5–2.0% BW).",
+      "Diet must contain at least 18–20% Crude Fibre on DM basis.",
+      "Critical to maintain hindgut peristalsis and prevent colic and cecal acidosis."
+    ],
+    "table": null,
+    "pyq": [
+      "MAFSU 2022",
+      "LUVAS 2021",
+      "TANUVAS 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-d08",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Calorie-to-Protein (C:P) Ratio in poultry diets across growth phases.",
+    "topicId": "u4-t08",
+    "answer": "<p><b>Calorie-to-Protein (C:P) Ratio:</b> The mathematical ratio between the Metabolizable Energy (ME) content (expressed in kilocalories per kilogram) and the Crude Protein percentage (CP %) of a poultry ration: <code>C:P Ratio = ME (kcal/kg) / CP (%)</code>.</p><p>Because birds consume feed primarily to satisfy their energy demands, the C:P ratio dictates protein intake:</p><ul><li><b>Broiler Pre-Starter (0–7 days):</b> Narrow ratio: <code>3000 / 23 = 130</code> (promotes tissue growth).</li><li><b>Broiler Starter (8–21 days):</b> Moderate ratio: <code>3100 / 22 = 141</code>.</li><li><b>Broiler Finisher (22–42 days):</b> Wide ratio: <code>3200 / 19 = 168</code> (favors fat deposition and finishing).</li></ul>",
+    "keyPoints": [
+      "Formula: Metabolizable Energy (kcal/kg) / Crude Protein (%).",
+      "Governs voluntary feed intake and carcass composition.",
+      "Shifts from narrow (130) in pre-starter to wide (168) in finisher."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "RAJUVAS 2021",
+      "NDVSU 2023"
+    ]
+  },
+  {
+    "id": "u4-qa-d09",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Perosis (Slipped Tendon) in chicks and identify the responsible nutrient deficiencies.",
+    "topicId": "u4-t17",
+    "answer": "<p><b>Perosis (Slipped Tendon / Chondrodystrophy):</b> A crippling anatomical deformity of rapidly growing young chicks, poults, and ducklings characterized by enlargement and flattening of the tibio-metatarsal joint, twisting of the distal end of the tibia, and the <b>lateral displacement (slipping) of the gastrocnemius tendon from its condyles</b>, causing total loss of leg extension.</p><p><b>Etiology:</b> Primarily caused by a deficiency of <b>Manganese (Mn &lt; 30–40 ppm)</b>, or secondary deficiencies of <b>Choline, Biotin, Folic Acid, or Nicotinic Acid</b>, which are required for mucopolysaccharide synthesis in epiphyseal growth plates.</p>",
+    "keyPoints": [
+      "Deformity where the gastrocnemius tendon slips out of its condyle groove.",
+      "Results from defective chondrogenesis in the epiphyseal growth plate.",
+      "Primary deficiency: Manganese; secondary deficiencies: Choline and Biotin."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021"
+    ]
+  },
+  {
+    "id": "u4-qa-d10",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Nutritional Encephalomalacia (Crazy Chick Disease) in poultry and state its cause.",
+    "topicId": "u4-t17",
+    "answer": "<p><b>Nutritional Encephalomalacia (Crazy Chick Disease):</b> An acute neurological disorder in young broiler chicks (usually 2 to 4 weeks of age) characterized by sudden ataxia, loss of equilibrium, head retraction (opisthotonus), violent twisting of the head and neck, bicycling leg movements, and death.</p><p><b>Cause:</b> Severe deficiency of <b>Vitamin E (α-tocopherol)</b> in the presence of dietary rancid unsaturated fats. Free radical peroxidation attacks cerebellar capillary endothelium, causing microthrombi, petechiae, ischemic necrosis, and liquefaction of the cerebellar Purkinje layers.</p>",
+    "keyPoints": [
+      "Neurological disorder marked by ataxia, opisthotonus, and tumbling ('crazy chick').",
+      "Caused by Vitamin E deficiency combined with oxidatively rancid fats.",
+      "Pathology: Ischemic liquefactive necrosis and petechiation of the cerebellum."
+    ],
+    "table": null,
+    "pyq": [
+      "DUVASU 2023",
+      "LUVAS 2020",
+      "RAJUVAS 2021"
+    ]
+  },
+  {
+    "id": "u4-qa-d11",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Creep Feed for suckling piglets and state its standard nutritional composition.",
+    "topicId": "u4-t04",
+    "answer": "<p><b>Creep Feed:</b> A highly palatable, ultra-digestible, nutrient-dense dry feed offered exclusively to young suckling piglets in a specially partitioned enclosure ('creep area') that allows small piglets free access while physically excluding the lactating sow, introduced from <b>7 to 10 days of age</b>.</p><p><b>Nutritional Composition:</b></p><ul><li><b>Crude Protein (CP):</b> 20% to 22% (incorporating dried whey, skim milk powder, and spray-dried porcine plasma).</li><li><b>Metabolizable Energy (ME):</b> 3300 to 3400 kcal/kg (utilizing oat groats, extruded maize, and edible fats).</li><li><b>Lysine:</b> 1.4% to 1.5%; Fortified with Zinc Oxide (2000–3000 ppm) and organic acidifiers.</li></ul>",
+    "keyPoints": [
+      "Specialized feed offered in an enclosure accessible only to suckling piglets.",
+      "Introduced at 7–10 days of life to ease weaning stress.",
+      "Composition: 20–22% CP, 3400 kcal ME/kg, rich in digestible milk products."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "TANUVAS 2023",
+      "KVAFSU 2021"
+    ]
+  },
+  {
+    "id": "u4-qa-d12",
+    "type": "define",
+    "marks": 2,
+    "question": "Explain Asymmetric Hindgut Fermentation in equines and state why horses cannot utilize microbial protein as efficiently as ruminants.",
+    "topicId": "u4-t06",
+    "answer": "<p><b>Asymmetric Hindgut Fermentation:</b> In equines (horses, donkeys), microbial fermentation occurs posterior to the stomach and small intestine within the massive, sacculated <b>Cecum and Colon</b> (which comprise ~65% of gastrointestinal volume).</p><p><b>Inability to Utilize Microbial Protein:</b> Ruminants digest microbial bodies in their downstream abomasum and absorb amino acids in the small intestine. In contrast, the horse's microbial fermentation occurs in the cecum and colon—<b>distal to the small intestine</b>. The equine colon lacks peptide and amino acid transport systems. Consequently, virtually all high-quality microbial protein synthesized in the equine cecum is <b>voided unabsorbed in the feces</b>. Horses therefore have an obligate requirement for pre-formed essential amino acids in their feed.</p>",
+    "keyPoints": [
+      "Hindgut fermentation occurs in cecum and colon posterior to enzymatic digestion.",
+      "Equine large colon cannot absorb intact proteins or amino acids.",
+      "Microbial protein is voided in feces; horses require dietary preformed amino acids."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2021",
+      "RAJUVAS 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-s01",
+    "type": "short",
+    "marks": 5,
+    "question": "Explain the unique metabolic and nutritional peculiarities that make the domestic cat an Obligate Carnivore.",
+    "topicId": "u4-t15",
+    "answer": "<p>The domestic cat (<i>Felis catus</i>) is an extreme obligate carnivore whose evolutionary history as a hypercarnivorous predator led to the irreversible deletion or permanent downregulation of numerous metabolic synthetic enzymes:</p><ul><li><b>1. High Protein Requirement &amp; Non-Adaptive Transaminases:</b><br>Cats require 2–3 times more dietary protein than omnivores (minimum 26–30% CP). Unlike dogs, cats cannot downregulate their hepatic amino acid catabolic enzymes (transaminases and urea cycle enzymes) when fed a low-protein diet; they continually catabolize protein for basal gluconeogenesis.</li><li><b>2. Obligate Requirement for Taurine:</b><br>Taurine (β-aminoethanesulfonic acid) is mandatory for feline bile acid conjugation (cats conjugate bile exclusively with taurine, cannot use glycine). Cats have negligible activity of the rate-limiting enzymes <i>cysteinesulfinic acid decarboxylase</i> and <i>cysteinedioxygenase</i>. Deficiency causes <b>Feline Central Retinal Degeneration (FCRD / irreversible blindness)</b> and <b>Dilated Cardiomyopathy (DCM)</b>.</li><li><b>3. Essentiality of Arachidonic Acid (20:4 n-6):</b><br>Cats possess virtually zero <b>Δ-6-desaturase</b> activity in the liver and intestinal mucosa. They cannot convert linoleic acid into arachidonic acid; thus arachidonic acid must be supplied pre-formed from animal fats.</li><li><b>4. Inability to Synthesize Vitamin A from β-Carotene:</b><br>Cats lack intestinal <b>β-carotene-15,15'-dioxygenase</b>. Plant carotenoids cannot be converted to retinol; cats require pre-formed Vitamin A (retinyl esters) found exclusively in animal tissues (liver).</li><li><b>5. Obligate Requirement for Pre-formed Niacin:</b><br>In cats, the tryptophan-to-niacin pathway is diverted: the enzyme <i>picolinate carboxylase</i> is extremely active, degrading tryptophan intermediates into acetyl-CoA. Cats cannot synthesize niacin from tryptophan and require dietary niacin.</li><li><b>6. Extreme Sensitivity to Arginine Deficiency:</b><br>A single arginine-free meal causes severe hyperammonemic encephalopathy within 2–4 hours due to failure of the urea cycle.</li></ul>",
+    "keyPoints": [
+      "High non-adaptive transaminase activity continuously catabolizing protein.",
+      "Taurine deficiency causes central retinal degeneration and dilated cardiomyopathy.",
+      "Lacks Δ-6-desaturase (requires arachidonic acid) and β-carotene dioxygenase (requires preformed Vit A).",
+      "Cannot convert tryptophan to niacin due to active picolinate carboxylase.",
+      "Extreme vulnerability to arginine deficiency."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021",
+      "RAJUVAS 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-s02",
+    "type": "short",
+    "marks": 5,
+    "question": "Describe the functional anatomy of the rabbit cecum and the circadian mechanism of Cecotrophy.",
+    "topicId": "u4-t13",
+    "answer": "<p>The domestic rabbit (<i>Oryctolagus cuniculus</i>) is a small hindgut herbivore exhibiting a unique dual-phase digestive separation mechanism:</p><ul><li><b>1. Functional Anatomy of the Cecum &amp; Fusus Coli:</b><br>- The <b>cecum</b> is enormous, containing &gt;40% of total digestive contents, acting as a dynamic anaerobic fermentation vat colonized by cellulolytic and proteolytic bacteria (predominantly <i>Bacteroides</i>).<br>- The <b>fusus coli</b> is a highly innervated, pacemaker-controlled neuromuscular section of the middle colon that regulates the separation of digesta and alternates the excretion of hard versus soft pellets.</li><li><b>2. The Colonic Separation Mechanism:</b><br>At the ileo-ceco-colic junction, anti-peristaltic contractions drive small fermentable particles (&lt;0.3 mm) and soluble fluid retrograde into the cecum for prolonged microbial fermentation. In contrast, large, indigestible fibrous particles (&gt;0.3 mm) are propelled forward by peristalsis and rapidly excreted during the day as dry, round <b>Hard Fecal Pellets</b>.</li><li><b>3. Circadian Formation and Ingestion of Cecotropes:</b><br>- In the early morning hours, the fusus coli switches motility mode: the cecal contents are evacuated into the colon, coated by protective mucopolysaccharide secretions from colonic goblet cells, and excreted as clusters of soft, glistening, dark <b>Cecotropes ('Night Feces')</b>.<br>- Sensory olfactory and perianal mechanoreceptors stimulate the rabbit to ingest cecotropes directly from the anus without mastication.<br>- The intact mucus envelope protects the internal microbial mass from gastric acid destruction in the stomach, allowing continued fermentation in the fundus for up to 6–8 hours.</li><li><b>4. Nutritional Value:</b><br>Recovers up to <b>80% of synthesized microbial crude protein</b>, all dietary B-complex vitamins, and essential minerals, satisfying 15–20% of the rabbit's daily protein requirement.</li></ul>",
+    "keyPoints": [
+      "Cecum comprises >40% gut volume; fusus coli acts as colonic pacemaker.",
+      "Mechanical separation: Large fibre excreted as hard pellets; fine fractions enter cecum.",
+      "Cecotropes coated in mucus; ingested directly from anus under circadian rhythm.",
+      "Mucus protects microbes from gastric acid, allowing recovery of protein and B-vitamins."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "LUVAS 2023",
+      "DUVASU 2021",
+      "MAFSU 2021"
+    ]
+  },
+  {
+    "id": "u4-qa-s03",
+    "type": "short",
+    "marks": 5,
+    "question": "Discuss the nutritional management of horses to prevent Colic, Cecal Acidosis, and Laminitis.",
+    "topicId": "u4-t06",
+    "answer": "<p>Gastrointestinal and metabolic disasters in horses are almost exclusively man-made, resulting from feeding high-concentrate, low-forage diets that violate equine digestive physiology:</p><ul><li><b>1. Pathophysiology of Starch Overload (Cecal Acidosis &amp; Laminitis):</b><br>- The equine stomach and small intestine have limited enzymatic capacity to digest starch (maximum 2.0 g starch / kg BW per meal).<br>- Feeding large grain meals (&gt;2.5 kg maize/oats) forces undigested starch to overflow past the ileo-cecal valve into the cecum.<br>- In the cecum, amylolytic bacteria (<i>Streptococcus bovis</i>) ferment starch into <b>D- and L-lactic acid</b>, plunging cecal pH from normal 6.7 down to &lt;5.5.<br>- Cecal acidosis kills normal Gram-negative cellulolytic bacteria, releasing massive quantities of <b>endotoxins (LPS)</b>. Acid damages the mucosal barrier; endotoxins and vasoactive amines (histamine) enter mesenteric circulation, triggering severe digital vasoconstriction, ischemia, and separation of the epidermal and dermal laminae of the hoof (<b>Acute Laminitis / Founder</b>).</li><li><b>2. Prevention Guidelines:</b><br>- <b>Rule 1 (Prioritize Forage):</b> Provide at least <b>1.5% to 2.0% of body weight as good quality forage daily</b> (e.g., 7.5–10 kg hay for a 500 kg horse). Hay should comprise minimum 60–70% of the total diet.<br>- <b>Rule 2 (Meal Fractionation):</b> Never feed more than <b>0.4–0.5 kg of concentrate per 100 kg body weight in a single meal</b> (maximum 2.0–2.5 kg grain per feeding; divide daily concentrate into 3–4 small meals).<br>- <b>Rule 3 (Gradual Transition):</b> All dietary changes must be introduced incrementally over <b>10 to 14 days</b> to permit gradual microbial adaptation.<br>- <b>Rule 4 (Hydration &amp; Salt):</b> Provide constant access to clean water and 0.5–1.0% salt; never feed cold water immediately after strenuous galloping.</li></ul>",
+    "keyPoints": [
+      "Starch overflow past small intestine leads to cecal lactic acidosis (S. bovis).",
+      "Endotoxin (LPS) release damages laminae of the foot, triggering acute Laminitis.",
+      "Golden rule: Minimum 1.5% BW as forage; maximum 0.5 kg concentrate / 100 kg BW per meal.",
+      "Dietary changes must be graduated over 10–14 days."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2022",
+      "RAJUVAS 2021",
+      "KVAFSU 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-s04",
+    "type": "short",
+    "marks": 5,
+    "question": "Detail the nutritional management of neonatal suckling piglets and weaners to prevent Post-Weaning Diarrhea.",
+    "topicId": "u4-t04",
+    "answer": "<p>Suckling and recently weaned piglets face critical nutritional vulnerabilities that require aggressive management:</p><ul><li><b>1. Neonatal Colostrum &amp; Iron Prophylaxis:</b><br>- Ensure immediate suckling of sow colostrum within 2 hours of farrowing.<br>- Administer <b>150 to 200 mg Iron Dextran IM at 3 days of age</b> to prevent nutritional hypochromic anemia ('thumps').</li><li><b>2. Creep Feeding Protocol:</b><br>- Introduce highly palatable dry creep feed (22% CP, 3400 kcal ME/kg) in a dedicated creep feeder from <b>7 to 10 days of age</b>. Formulate with extruded maize, rolled oats, dried whey (15–20%), and spray-dried porcine plasma to stimulate hydrochloric acid and protease secretion prior to weaning.</li><li><b>3. Management of Weaning Stress &amp; Post-Weaning Diarrhea (PWD):</b><br>- At weaning (3 to 4 weeks), piglets suffer transient anorexia followed by gorging, leading to undigested nutrients entering the large intestine where enterotoxigenic <i>Escherichia coli</i> (ETEC - K88/F4) proliferates, causing severe dehydration and mortality.</li><li><b>4. Nutritional Strategies to Prevent Post-Weaning Diarrhea:</b><br>- <i>Dietary Acidifiers:</i> Incorporate organic acids (Citric acid, Fumaric acid, Formic acid at 1.0–1.5%) to reduce gastric pH, compensate for immature gastric HCl secretion, and optimize pepsin activation.<br>- <i>Pharmacological Zinc Oxide:</i> Supplement <b>2000 to 3000 ppm Zinc Oxide (ZnO)</b> for the first 14 days post-weaning to stabilize intestinal mucosal tight junctions and suppress ETEC colonization.<br>- <i>Highly Digestible Protein Sources:</i> Avoid under-processed soybean meal (glycinin/β-conglycinin trigger allergic enteritis); use fish meal, dried whey, and synthetic amino acids.</li></ul>",
+    "keyPoints": [
+      "Colostrum intake and 150–200 mg Iron Dextran IM at 3 days of life.",
+      "Creep feed introduced at 7–10 days with dried whey and extruded grains.",
+      "Post-weaning lag: Undigested substrate fuels enterotoxigenic E. coli (ETEC).",
+      "Prevention: Organic acidifiers (citric/fumaric acid) and pharmacological Zinc Oxide (2000–3000 ppm)."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2021",
+      "LUVAS 2022",
+      "DUVASU 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-s05",
+    "type": "short",
+    "marks": 5,
+    "question": "Explain Calcium, Phosphorus, and Vitamin D3 dynamics in Commercial Layer Chickens during eggshell calcification.",
+    "topicId": "u4-t09",
+    "answer": "<p>A high-producing commercial layer hen (e.g., Bovans, BV300) secretes approximately <b>2.0 to 2.2 grams of pure elemental Calcium</b> into each eggshell in a single 16-hour calcification window. This represents &gt;10% of her total body calcium pool.</p><ul><li><b>1. Requirement &amp; Medullary Bone Mobilization:</b><br>- Layer diets require <b>3.8% to 4.2% Calcium</b> (compared to only 1.0% in non-laying pullets) and <b>0.40–0.45% Available Phosphorus</b>.<br>- 2 to 3 weeks prior to onset of lay (16–18 weeks), estrogen induces the development of specialized woven bone in the marrow cavities called <b>Medullary Bone</b> (in the femur, tibia). Medullary bone acts as a rapidly exchangeable, labile calcium reservoir that is mobilized during nighttime eggshell calcification when intestinal absorption drops.</li><li><b>2. The Importance of Particle Size (Coarse Limestone):</b><br>- Eggshell calcification in the shell gland (uterus) occurs predominantly at night (from 20:00 to 06:00 hrs) when the digestive tract may be empty.<br>- Nutritionists formulate diets with a mixture: <b>35% Fine Limestone powder (&lt;1 mm)</b> and <b>65% Coarse Limestone grit or Oyster Shell chips (2 to 4 mm)</b>.<br>- Large limestone particles remain retained in the gizzard, dissolving slowly throughout the night, ensuring a steady nocturnal trickle of absorbed calcium that minimizes skeletal bone demineralization.</li><li><b>3. Role of Vitamin D3:</b><br>- Vitamin D<sub>3</sub> (cholecalciferol) is essential; poultry cannot utilize D<sub>2</sub>. Active 1,25-(OH)<sub>2</sub>D<sub>3</sub> induces synthesis of Calbindin-D28k in the shell gland and intestinal enterocytes.</li><li><b>4. Cage Layer Fatigue (Osteomalacia):</b><br>- If dietary Ca is deficient or Ca:P is unbalanced, the hen continues laying by severely depleting cortical bone, leading to fragile, brittle bones, paralysis, and recumbency in cages.</li></ul>",
+    "keyPoints": [
+      "3.8–4.2% dietary Calcium required; 2 g Ca deposited per shell.",
+      "Estrogen-induced Medullary Bone serves as a nocturnal labile calcium store.",
+      "Coarse limestone (2–4 mm, 65% of Ca) provides slow nocturnal gizzard release.",
+      "Vitamin D3 mandatory; deficiency causes soft-shell eggs and Cage Layer Fatigue."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "TANUVAS 2023",
+      "RAJUVAS 2021",
+      "WBUAFS 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-s06",
+    "type": "short",
+    "marks": 5,
+    "question": "Enumerate conventional and unconventional feed ingredients in poultry and swine rations with their inclusion limits.",
+    "topicId": "u4-t10",
+    "answer": "<p>In commercial monogastric farming, feed accounts for 70–75% of total production costs. Judicious replacement of expensive conventional feeds with agro-industrial by-products is vital for profitability:</p><ul><li><b>1. Energy Sources:</b><br>- <b>Maize (Corn):</b> The gold standard conventional cereal (3350 kcal ME/kg); inclusion up to <b>50–65%</b>.<br>- <b>Broken Rice / Bajra (Pearl Millet):</b> Excellent maize substitutes; inclusion up to <b>30–40%</b> without depressing performance.<br>- <b>Deoiled Rice Bran (DORB):</b> High fibre limits inclusion: max <b>5–8% in broilers</b>, up to <b>15–20% in layers and swine growers</b>.<br>- <b>Rice Polish:</b> High energy and fat; susceptible to oxidative rancidity; inclusion up to <b>10–15%</b>.</li><li><b>2. Protein Sources:</b><br>- <b>Soybean Meal (44–48% CP):</b> Gold standard conventional vegetable protein; inclusion <b>25–35% in broilers, 15–25% in swine</b>.<br>- <b>Mustard Cake:</b> Constrained by glucosinolates and erucic acid: max <b>3–5% in broilers, up to 10% in layers/swine</b>.<br>- <b>Sunflower Meal:</b> High crude fibre (&gt;20%), low lysine: inclusion <b>5–8% in broilers, up to 12% in layers/swine</b>.<br>- <b>Distillers Dried Grains with Solubles (DDGS):</b> By-product of bioethanol distilleries (26–28% CP, rich in phosphorus); inclusion up to <b>5–8% in broilers, 10–15% in layers and pigs</b>.</li><li><b>3. Animal Protein By-Products:</b><br>- <b>Fish Meal (55–60% CP):</b> Excellent amino acid profile and available phosphorus, but limited to <b>3–5%</b> to prevent 'fishy taint' in broiler meat and eggs.</li></ul>",
+    "keyPoints": [
+      "Energy: Maize (50–65%), Broken rice/bajra (30–40%), DORB (5–15%).",
+      "Vegetable protein: Soybean meal (25–35%), Mustard cake (3–10%), DDGS (5–12%).",
+      "Animal protein: Fish meal (3–5% limit to avoid fishy taint).",
+      "Inclusion constraints driven by fibre, amino acid imbalance, and anti-nutritional factors."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2020",
+      "DUVASU 2022",
+      "KVAFSU 2021"
+    ]
+  },
+  {
+    "id": "u4-qa-s07",
+    "type": "short",
+    "marks": 5,
+    "question": "Outline the nutritional requirements and dietary toxicities of the Domestic Dog (Canine) across life stages.",
+    "topicId": "u4-t14",
+    "answer": "<p>The domestic dog (<i>Canis lupus familiaris</i>) is a flexible, adaptive omnivore capable of digesting both animal tissues and cooked plant starches due to evolutionary duplications of pancreatic amylase genes (AMY2B).</p><ul><li><b>1. Life-Stage Nutritional Requirements (AAFCO / NRC Standards):</b><br>- <b>Puppy Growth &amp; Reproduction:</b> High nutrient density required: minimum <b>22.5% Crude Protein</b>, <b>8.5% Crude Fat</b>, 1.2% Calcium, and 1.0% Phosphorus. Large-breed puppies require controlled energy and Ca:P to prevent skeletal dysplasia (osteochondritis dissecans).<br>- <b>Adult Maintenance:</b> Moderate requirements: minimum <b>18.0% Crude Protein</b>, <b>5.5% Crude Fat</b>, with balanced dietary fibre (2–4% beet pulp) to promote healthy fecal consistency.<br>- <b>Senior / Geriatric Dogs:</b> Reduced caloric density (lower fat) to counter declining metabolic rate and prevent obesity; high-quality protein (20–22%) to prevent sarcopenia; fortified with Glucosamine, Chondroitin, and Omega-3 fatty acids (EPA/DHA) for joint health.</li><li><b>2. Deadly Canine Dietary Toxicities:</b><br>- <b>Theobromine (Chocolate Toxicity):</b> Methylxanthine compound in chocolate. Dogs metabolize theobromine extremely slowly; causes tachycardia, severe cardiac arrhythmias, muscular tremors, seizures, and death.<br>- <b>Allium Species (Onions &amp; Garlic):</b> Contain <i>n-propyl disulfide</i>, an oxidant that oxidizes hemoglobin into Heinz bodies, resulting in acute hemolytic anemia and hemoglobinuria.<br>- <b>Xylitol (Artificial Sweetener):</b> Triggers rapid, massive insulin surge in dogs, causing severe life-threatening hypoglycemia and acute hepatic necrosis.<br>- <b>Grapes and Raisins:</b> Cause acute, irreversible oliguric renal failure via tartaric acid toxicity.</li></ul>",
+    "keyPoints": [
+      "Adaptive omnivore with dietary capacity for starch digestion (AMY2B gene).",
+      "Puppy diets: 22.5% CP, 8.5% fat; Adult: 18% CP; Senior: restricted energy, joint supplements.",
+      "Toxicities: Theobromine (cardiac seizures), Onions (Heinz body anemia), Xylitol (hypoglycemia), Grapes (renal failure)."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "TANUVAS 2021",
+      "RAJUVAS 2023",
+      "DUVASU 2021"
+    ]
+  },
+  {
+    "id": "u4-qa-s08",
+    "type": "short",
+    "marks": 5,
+    "question": "Describe the clinical pathology and lesions of major nutritional deficiency diseases in poultry.",
+    "topicId": "u4-t17",
+    "answer": "<p>Due to extremely rapid growth rates and high metabolic activity, commercial poultry manifest clear clinicopathological lesions when essential nutrients are deficient:</p><ul><li><b>1. Curled-Toe Paralysis (Riboflavin / Vitamin B2 Deficiency):</b><br>- <i>Pathology:</i> Myelin degeneration of the sciatic and brachial nerve trunks.<br>- <i>Signs:</i> Growing chicks (1–2 weeks) walk on their hocks with toes curled inward in a clutched fist shape; severe leg weakness and mortality.</li><li><b>2. Rickets (Vitamin D3, Calcium, or Phosphorus Deficiency):</b><br>- <i>Pathology:</i> Defective mineralization of osteoid at epiphyseal plates.<br>- <i>Signs:</i> Soft, rubbery, flexible beaks and long bones; bead-like swellings at the costochondral junctions ('rachitic rosary'); chicks sit on hocks and show stunted growth.</li><li><b>3. Perosis / Slipped Tendon (Manganese &amp; Choline Deficiency):</b><br>- <i>Pathology:</i> Failure of epiphyseal cartilage maturation; enlargement of hock joints; lateral slippage of gastrocnemius tendon from its condylar groove, completely crippling the bird.</li><li><b>4. Exudative Diathesis (Selenium &amp; Vitamin E Deficiency):</b><br>- <i>Pathology:</i> Severe capillary permeability resulting from lipid peroxidation.<br>- <i>Signs:</i> Subcutaneous accumulation of a viscous, greenish-blue gelatinous fluid over the breast, abdomen, and wings; hemoglobin staining.</li><li><b>5. Fatty Liver Haemorrhagic Syndrome (FLHS):</b><br>- <i>Pathology:</i> High-producing caged layers overfed high-energy, low-protein diets; hepatic steatosis leads to parenchymal rupture and fatal internal coelomic hemorrhage.</li></ul>",
+    "keyPoints": [
+      "Curled-toe paralysis: Riboflavin deficiency causing sciatic nerve demyelination.",
+      "Rickets: Rubber beak and rachitic rosary from Ca/P/Vit D3 deficiency.",
+      "Perosis: Slipped gastrocnemius tendon from Manganese/Choline deficiency.",
+      "Exudative diathesis: Green subcutaneous fluid from Selenium/Vit E deficiency.",
+      "FLHS: Fatal liver rupture in caged layers fed excess energy."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2022",
+      "GADVASU 2021",
+      "LUVAS 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-l01",
+    "type": "long",
+    "marks": 12,
+    "question": "Commercial Broiler Chicken Nutrition and Feeding Management: Nutrient specifications across growth phases, energy-to-protein ratios, synthetic amino acids, feed enzymes, and strategies to optimize Feed Conversion Ratio (FCR).",
+    "topicId": "u4-t08",
+    "answer": "<p>Modern commercial broiler production represents the pinnacle of precision animal nutrition. Commercial strains (Cobb, Ross, Hubbard) are genetically selected to reach <b>2.2 to 2.5 kg live body weight within 35 to 42 days</b> with an extraordinary Feed Conversion Ratio (FCR) of <b>1.45 to 1.60</b>.</p><h3>1. Phase-Wise Nutrient Specifications (BIS / Industry Standards)</h3><ul><li><b>A. Pre-Starter Phase (Day 0 to Day 7):</b><br>- <i>Metabolizable Energy (ME):</i> <b>2950 to 3000 kcal/kg</b>.<br>- <i>Crude Protein (CP):</i> <b>22.5% to 23.5%</b> (C:P ratio ≈ 130).<br>- <i>Digestible Lysine:</i> 1.25–1.30%; <i>Digestible Methionine:</i> 0.50–0.52%; <i>Ca:</i> 1.0%; <i>Available P:</i> 0.45%.<br>- <i>Physical Form:</i> Fine crumbles (1.5–2.0 mm). High protein density stimulates early gut development and satellite muscle cell proliferation.</li><li><b>B. Starter Phase (Day 8 to Day 21):</b><br>- <i>Metabolizable Energy (ME):</i> <b>3050 to 3100 kcal/kg</b>.<br>- <i>Crude Protein (CP):</i> <b>21.5% to 22.0%</b> (C:P ratio ≈ 140).<br>- <i>Digestible Lysine:</i> 1.15%; <i>Digestible Methionine:</i> 0.46%; <i>Ca:</i> 0.90%; <i>Available P:</i> 0.42%.<br>- <i>Physical Form:</i> Medium crumbles or micro-pellets (2.5 mm).</li><li><b>C. Finisher Phase (Day 22 to Day 38–42 / Market):</b><br>- <i>Metabolizable Energy (ME):</i> <b>3150 to 3250 kcal/kg</b> (densified using vegetable oil/animal fat).<br>- <i>Crude Protein (CP):</i> <b>19.0% to 19.5%</b> (C:P ratio ≈ 165–170).<br>- <i>Digestible Lysine:</i> 1.00%; <i>Digestible Methionine:</i> 0.42%; <i>Ca:</i> 0.85%; <i>Available P:</i> 0.38%.<br>- <i>Physical Form:</i> Hard pellets (3.0–3.5 mm). Maximizes rapid weight gain and lean muscle deposition.</li></ul><h3>2. The Role of Synthetic Amino Acids</h3><p>Maize-soybean diets are inherently first-limiting in <b>Methionine</b> and second-limiting in <b>Lysine</b> and <b>Threonine</b>:</p><ul><li><b>DL-Methionine (or Methionine Hydroxy Analogue - MHA):</b> Supplemented at 1.5–2.5 kg/tonne to meet requirements without oversupplying total protein.</li><li><b>L-Lysine HCl:</b> Supplemented at 1.0–2.0 kg/tonne, enabling nutritionists to reduce crude protein by 1.5–2.0 percentage units, reducing feed cost and ammonia emissions in broiler houses.</li><li><b>L-Threonine:</b> Crucial for gut mucosal mucin glycoprotein synthesis and immune function.</li></ul><h3>3. Exogenous Feed Enzymes &amp; Performance Additives</h3><ul><li><b>Microbial 6-Phytase:</b> Plant phosphorus in maize and soy is bound as insoluble <i>phytate</i> (myo-inositol hexakisphosphate), which is indigestible to poultry and chelates Ca, Zn, and amino acids. Supplementing <b>500 to 1000 FTU/kg phytase</b> liberates 0.12–0.15% available phosphorus, slashing costly dicalcium phosphate addition and reducing fecal phosphorus pollution.</li><li><b>Non-Starch Polysaccharide (NSP) Enzymes (Xylanase &amp; β-Glucanase):</b> Hydrolyzes soluble arabinoxylans and β-glucans in wheat and rye, reducing digesta viscosity, eliminating sticky droppings, and improving ME utilization.</li><li><b>Coccidiostats:</b> Ionophores (Salinomycin, Monensin, Maduramicin) or chemical coccidiostats included in feed up to withdrawal period (5 days pre-slaughter) to prevent intestinal coccidiosis.</li></ul><h3>4. Strategies to Optimize Feed Conversion Ratio (FCR)</h3><ol><li><b>Pelleting / Crumbing:</b> Feeding pelleted feed rather than dry mash improves FCR by <b>8 to 10%</b> by preventing ingredient sorting, reducing physical energy expenditure during eating, and increasing bulk density.</li><li><b>Feed Pan Management:</b> Maintain feeder height level with birds' backs to prevent feed spillage.</li><li><b>Water Quality:</b> 2.0 litres of clean, sanitized water (chlorinated at 2–3 ppm) per kg of feed consumed.</li></ol>",
+    "keyPoints": [
+      "Phase feeding: Pre-starter (23% CP, 3000 kcal), Starter (22% CP, 3100 kcal), Finisher (19% CP, 3200 kcal).",
+      "C:P ratios correctly calculated: 130 -> 140 -> 168.",
+      "Synthetic amino acids: DL-Methionine, L-Lysine, L-Threonine reduce crude protein needs.",
+      "Enzymes: Phytase (releases bound P and minerals) and NSP-enzymes (reduces viscosity).",
+      "Management: Steam pelleting improves FCR by 8–10%."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021",
+      "RAJUVAS 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-l02",
+    "type": "long",
+    "marks": 12,
+    "question": "Commercial Layer Chicken Nutrition from Day-Old Chick to Molting: Phase-wise feeding programs, eggshell formation physiology, dietary calcium management, and induced molting protocols.",
+    "topicId": "u4-t09",
+    "answer": "<p>A commercial layer hen is an extraordinary physiological production unit, producing <b>310 to 330 eggs per year</b>. Successful layer production requires strict management across rearing phases, followed by precision nutrient delivery during the laying cycle.</p><h3>1. Phase-Wise Rearing Programs (0 to 18 Weeks)</h3><ul><li><b>A. Chick Phase (0 to 8 Weeks):</b><br>- <i>Nutrient Profile:</i> 20% Crude Protein, 2800 kcal ME/kg, 1.0% Ca, 0.45% Available P.<br>- <i>Objective:</i> Build vital internal organs (heart, liver, lungs) and establish skeletal frame size. Feed fine mash or crumbles ad libitum.</li><li><b>B. Grower Phase (9 to 18 Weeks):</b><br>- <i>Nutrient Profile:</i> <b>15–16% Crude Protein, 2700 kcal ME/kg</b>, 1.0% Ca, 0.40% Available P.<br>- <i>Objective:</i> <b>Controlled Feeding to Match Target Body Weight.</b> Over-conditioned pullets suffer high mortality from prolapse and lay small eggs, while underweight pullets peak poorly. Feed intake is controlled to hit breed target body weight (1.2–1.3 kg at 18 weeks for Leghorn strains).</li><li><b>C. Pre-Lay Transition Phase (18 to 20 Weeks / 5% Production):</b><br>- Step up dietary Calcium from <b>1.0% to 2.5–3.0%</b>.<br>- <i>Physiological Objective:</i> Estrogen induces the formation of <b>Medullary Bone</b> in skeletal cavities. Priming skeletal reserves before high-intensity lay prevents <i>Cage Layer Fatigue</i>.</li></ul><h3>2. Nutrition during the Laying Cycle</h3><ul><li><b>Phase 1 Lay (21 to 45 Weeks / Peak Lay):</b><br>- <i>Nutrient Density:</i> <b>18% CP, 2750 kcal ME/kg, 3.8% to 4.2% Calcium</b>, 0.45% Available P.<br>- Formulate for maximum egg mass, persistence of peak (&gt;90% production), and continuous growth.</li><li><b>Phase 2 Lay (46 to 65 Weeks):</b><br>- <i>Nutrient Density:</i> 16.5% CP, 2700 kcal ME/kg, <b>4.2% to 4.5% Calcium</b>.<br>- Egg size increases; calcium percentage must increase to maintain eggshell thickness.</li><li><b>Phase 3 Lay (66 Weeks to Cull / 72–80 Weeks):</b><br>- 15.5% CP, 2650 kcal ME/kg, 4.5% Calcium.</li></ul><h3>3. Physiology of Eggshell Calcification and Limestone Particle Dynamics</h3><ul><li><b>Physiological Drain:</b> The shell gland (uterus) deposits <b>2.0 to 2.2 g of elemental Calcium</b> over 16 continuous hours (mostly at night). Blood total calcium pool is only ~0.2 g; the pool turns over completely every 15–20 minutes.</li><li><b>Split-Limestone Strategy:</b><br>- Provide <b>35% as Fine Limestone powder (&lt;1 mm)</b> for rapid daytime absorption.<br>- Provide <b>65% as Coarse Limestone grit or Oyster Shell chips (2 to 4 mm)</b>.<br>- Large grit particles are retained in the gizzard and dissolve slowly overnight, supplying a constant stream of intestinal calcium during nocturnal shell synthesis and sparing medullary bone demineralization.</li></ul><h3>4. Induced (Forced) Molting Nutrition</h3><p>At 68–72 weeks of age, flocks experiencing declining egg production and poor shell quality can be molted to rejuvenate the reproductive tract for a second profitable laying cycle:</p><ul><li><b>Non-Feed Withdrawal Method (Humane Molting):</b><br>- Avoid traditional complete starvation.<br>- Feed high-fibre, low-energy diets (e.g., pure wheat bran, alfalfa meal, or cotton seed hulls) containing <b>low sodium (&lt;0.05% Na) or high dietary zinc (20,000 ppm ZnO)</b>.<br>- Reduce photoperiod to natural day length (8 hours).</li><li><b>Outcome:</b> Egg production ceases within 5–7 days; birds shed old feathers and regenerate tubular shell glands. When full lighting and layer ration are restored, the flock resumes lay, peaking at &gt;80% with restored eggshell strength.</li></ul>",
+    "keyPoints": [
+      "Rearing phases: Chick (20% CP) -> Grower (15–16% CP, weight monitoring) -> Pre-lay (2.5% Ca for medullary bone).",
+      "Laying phases: Peak lay requires 3.8–4.2% Ca, stepping up to 4.5% in older hens.",
+      "Eggshell physiology: 2 g Ca deposited per shell over 16 hours; nocturnal demand.",
+      "Limestone split: 35% fine (daytime) and 65% coarse (nocturnal gizzard release).",
+      "Induced molting protocols: Non-feed withdrawal methods rejuvenating shell gland for second cycle."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021",
+      "LUVAS 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-l03",
+    "type": "long",
+    "marks": 12,
+    "question": "Comprehensive Swine Nutrition across the Production Cycle: Nutrient requirements, feeding standards (NRC/ICAR), and practical ration formulation for piglets, growers, gestating sows, lactating sows, and boars.",
+    "topicId": "u4-t04",
+    "answer": "<p>Swine are monogastric omnivores with rapid growth rates, high prolificacy, and extraordinary feed conversion capacity. Formulating diets based on the <b>Ideal Protein Concept (digestible lysine basis)</b> and managing life-stage nutritional switches is critical for profitable pork production.</p><h3>1. Suckling Piglets and Weaners (Nursery Phase)</h3><ul><li><b>Creep Feeding (10 Days to Weaning at 28 Days):</b> Highly digestible diet containing <b>20–22% CP, 1.4% Lysine, 3400 kcal ME/kg</b>, fortified with dried whey (15%), fish meal, organic acids, and Zinc Oxide (2500 ppm).</li><li><b>Weaner / Starter Phase (10 to 20 kg BW):</b> Transition diet containing <b>18–20% CP, 1.2% Lysine, 3300 kcal ME/kg</b>. Maintain high amino acid balance to support muscle hyperplasia.</li></ul><h3>2. Grower and Finisher Pigs (Pork Production)</h3><ul><li><b>Grower Phase (20 to 50 kg BW):</b><br>- <i>Nutrient Profile:</i> <b>16% to 18% CP, 0.95% Lysine, 3250 kcal ME/kg</b>, 0.65% Ca, 0.55% P.<br>- <i>Objective:</i> Maximize lean meat accretion. Rapid skeletal and muscular growth; feed ad libitum.</li><li><b>Finisher Phase (50 to 100 kg BW / Slaughter):</b><br>- <i>Nutrient Profile:</i> <b>14% to 15% CP, 0.75% Lysine, 3250 kcal ME/kg</b>, 0.55% Ca, 0.45% P.<br>- <i>Objective:</i> <b>Phase Feeding to Optimize Carcass Lean-to-Fat Ratio.</b> As pigs mature, protein accretion plateaus while fat deposition surges. Reducing protein/lysine lowers feed cost without sacrificing carcass grading. Avoid feeding unsaturated oils (maize oil, rice bran) during finishing to prevent 'soft pork' (firm pork requires saturated fats).</li></ul><h3>3. Breeding Herd Nutritional Management</h3><ul><li><b>A. Gestating Sows (Dry Pregnant Sows):</b><br>- <i>Nutrient Profile:</i> <b>12% to 14% CP, 0.60% Lysine, 3100 kcal ME/kg</b>.<br>- <b>Strict Restricted Feeding:</b> Feed strictly <b>2.0 to 2.5 kg of diet daily</b>.<br>- <i>Physiological Rationale:</i> Overfeeding sows during gestation causes maternal obesity, embryonic death, small litter sizes, farrowing dystocia, and <i>severe hypogalactia</i>. Increase feed to 3.0 kg/day only during the final 3 weeks of pregnancy when 70% of fetal growth occurs. High dietary fibre (10–12% wheat bran/beet pulp) prevents constipation.</li><li><b>B. Lactating Sows:</b><br>- <i>Nutrient Profile:</i> <b>16% to 18% CP, 0.95% Lysine, 3350 kcal ME/kg</b>, 0.85% Ca, 0.70% P.<br>- <b>Maximize Voluntary Intake (Ad Libitum Feeding):</b> A high-producing sow nursing 10–12 piglets secretes 8–10 kg of milk daily. Feed allowance rule: <b>2.0 kg for maintenance + 0.5 kg for each nursing piglet</b> (total 7.0–8.0 kg feed/day). Inadequate feed intake triggers severe maternal catabolism, prolonged weaning-to-estrus interval, and reduced subsequent litter size.</li><li><b>C. Breeding Boars:</b><br>- Feed 2.0 to 2.5 kg/day of a balanced 14% CP diet; maintain lean body condition (BCS 3.0); fortify with Zinc and Vitamin E to support active spermatogenesis.</li></ul>",
+    "keyPoints": [
+      "Creep & Nursery: 20–22% CP, 1.4% Lysine, dried whey, and zinc oxide.",
+      "Grower vs Finisher: 16–18% CP down to 14% CP in finisher to control carcass fatness.",
+      "Gestating sows: Strict limit feeding (2.0–2.5 kg/day) to prevent farrowing dystocia and obesity.",
+      "Lactating sows: Maximize ad libitum intake (2.0 kg base + 0.5 kg per piglet) to sustain milk yield.",
+      "Ideal protein concept utilized across all formulations."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2022",
+      "GADVASU 2021",
+      "WBUAFS 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-l04",
+    "type": "long",
+    "marks": 12,
+    "question": "Equine Nutrition and Digestive Physiology: Anatomy of hindgut fermentation, nutrient requirements for performance horses, energy pathways (aerobic vs anaerobic), and feeding management to prevent metabolic disorders.",
+    "topicId": "u4-t06",
+    "answer": "<p>The horse (<i>Equus caballus</i>) is an herbivorous monogastric hindgut fermenter whose digestive tract is adapted for continuous grazing of high-fibre, low-starch forages for 16–18 hours per day.</p><h3>1. Anatomy and Digestive Physiology</h3><ul><li><b>Small Stomach (8–10% of gut volume / 8–15 Litres):</b> Rapid rate of liquid transit; initiates gastric acid-pepsin proteolysis. Small capacity means horses cannot tolerate large, infrequent grain meals.</li><li><b>Small Intestine (30% of volume / 20 Meters):</b> Enzymatic digestion and absorption of simple sugars, starches, fats, and dietary true protein.</li><li><b>Hindgut - Cecum &amp; Colon (60–65% of volume / 120–140 Litres):</b> The massive cecum and large colon harbor an active anaerobic microbial ecosystem (cellulolytic bacteria, protozoa, and anaerobic fungi) that ferments structural carbohydrates (cellulose, hemicellulose) into <b>Volatile Fatty Acids (Acetate, Propionate, Butyrate)</b>. VFAs are absorbed across the colonic mucosa, providing up to <b>60–70% of the horse's maintenance energy</b>.</li></ul><h3>2. Energy Metabolism in Athletic Performance Horses</h3><ul><li><b>Aerobic Energy Pathway (Slow-Twitch Type I Muscle Fibres):</b><br>- Utilized during <i>endurance trail riding and sustained low-intensity trotting</i>.<br>- Fuel source: <b>Fatty acids (from body fat and absorbed VFAs) and aerobic oxidation of glucose</b>. Yields maximum ATP per mole of substrate without lactic acid accumulation. High-fat diets (supplementing 500–800 mL vegetable oil/day) spare muscle glycogen reserves.</li><li><b>Anaerobic Energy Pathway (Fast-Twitch Type IIb Muscle Fibres):</b><br>- Utilized during <i>sprinting, Thoroughbred racing, and polo</i>.<br>- Fuel source: <b>Rapid anaerobic glycolysis of muscle glycogen</b> into lactate. Limited by lactic acid accumulation in muscle sarcoplasm, dropping intracellular pH and causing muscular fatigue and cramping.</li></ul><h3>3. Comprehensive Feeding Management Matrix</h3>",
+    "keyPoints": [
+      "Anatomy: Small stomach (8%) vs massive hindgut cecum/colon (60–65%).",
+      "VFAs supply 60–70% of equine maintenance energy requirements.",
+      "Energy pathways: Aerobic (VFA/fat oxidation for endurance) vs Anaerobic (glycogen for sprinting).",
+      "Prevention of disorders: Colic, Laminitis, Azoturia (Monday morning sickness)."
+    ],
+    "table": {
+      "title": "Comprehensive Feeding Guidelines & Disease Prevention in Equines",
+      "headers": [
+        "Management Dimension",
+        "Physiological Recommendation",
+        "Disorder Prevented / Clinical Rationale"
+      ],
+      "rows": [
+        [
+          "Minimum Forage Intake",
+          "Provide at least 1.5% to 2.0% of body weight as good quality hay/pasture (min 7.5 kg for 500 kg horse)",
+          "Prevents Cecal Impaction & Colic; maintains continuous gut fill and normal peristalsis"
+        ],
+        [
+          "Concentrate Meal Size",
+          "Never exceed 0.4–0.5 kg of grain per 100 kg BW in a single meal (max 2.0–2.5 kg grain/feeding)",
+          "Prevents Starch Overload, Cecal Lactic Acidosis, and Acute Digital Laminitis (Founder)"
+        ],
+        [
+          "Fat Supplementation",
+          "Add 5–10% vegetable oil (soy/corn oil) to performance diets",
+          "'Glycogen Sparing Effect'; increases endurance stamina and lowers thermal heat load of digestion"
+        ],
+        [
+          "Weekend Rest Day Feeding",
+          "Cut grain concentrate allowance by 50% on non-working rest days",
+          "Prevents Azoturia (Tying-Up / Exertional Rhabdomyolysis / 'Monday Morning Disease') caused by glycogen overloading"
+        ],
+        [
+          "Water & Electrolytes",
+          "Ad libitum clean water + 50–100 g commercial electrolytes (NaCl, KCl) after heavy sweat loss",
+          "Prevents severe dehydration, hypochloremic metabolic alkalosis, and Thumps (synchronous diaphragmatic flutter)"
+        ]
+      ]
+    },
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "RAJUVAS 2021",
+      "TANUVAS 2020"
+    ]
+  },
+  {
+    "id": "u4-qa-l05",
+    "type": "long",
+    "marks": 12,
+    "question": "Comparative Canine and Feline Nutrition: Adaptive Omnivore vs Obligate Carnivore. Provide an exhaustive scientific comparison covering protein, amino acids, lipids, vitamins, carbohydrate utilization, and urinary pH management in FLUTD.",
+    "topicId": "u4-t14",
+    "answer": "<p>Although domestic dogs (<i>Canis familiaris</i>) and domestic cats (<i>Felis catus</i>) both belong to the mammalian order Carnivora, their nutritional evolutionary trajectories diverge fundamentally. The dog is an <b>adaptive, opportunistic omnivore</b>, whereas the cat is a <b>strict, obligate carnivore</b>.</p><h3>1. Comprehensive Scientific Comparison Matrix</h3>",
+    "keyPoints": [
+      "Exhaustive comparison between canine (adaptive omnivore) and feline (obligate carnivore).",
+      "Protein: Dog 18–22% CP vs Cat 26–30% CP (cat has fixed high transaminase activity).",
+      "Essential amino acids: Cat requires dietary Taurine (retinal/cardiac integrity) and Arginine.",
+      "Lipids: Cat lacks Δ-6-desaturase, requiring pre-formed arachidonic acid.",
+      "Vitamins: Cat requires pre-formed Retinol (Vitamin A) and pre-formed Niacin.",
+      "FLUTD: Dietary acidification (target urine pH 6.2–6.5) prevents magnesium ammonium phosphate uroliths."
+    ],
+    "table": {
+      "title": "Comprehensive Comparative Matrix: Canine (Dog) vs Feline (Cat) Nutrition",
+      "headers": [
+        "Nutritional Parameter",
+        "Canine (Dog) — Adaptive Omnivore",
+        "Feline (Cat) — Obligate Carnivore"
+      ],
+      "rows": [
+        [
+          "Dietary Classification",
+          "Opportunistic, adaptive omnivore with scavenging history",
+          "Strict, specialized obligate carnivore"
+        ],
+        [
+          "Minimum Crude Protein",
+          "18% CP (adult maintenance); 22.5% CP (growth)",
+          "26% CP (adult maintenance); 30% CP (growth)"
+        ],
+        [
+          "Hepatic Amino Acid Catabolism",
+          "Adaptive: transaminases downregulate on low-protein diets to conserve body nitrogen",
+          "Non-Adaptive: transaminases & urea cycle enzymes operate constitutively at high fixed rates"
+        ],
+        [
+          "Taurine Requirement",
+          "Conditionally non-essential: synthesizes taurine from cysteine and conjugates bile with glycine",
+          "Strictly Essential: cannot synthesize taurine; deficiency causes retinal blindness & dilated cardiomyopathy"
+        ],
+        [
+          "Arginine Sensitivity",
+          "Moderate requirement; tolerates short-term arginine deficit",
+          "Extreme: single arginine-free meal causes fatal hyperammonemic ammonia toxicity in hours"
+        ],
+        [
+          "Essential Fatty Acids",
+          "Synthesizes Arachidonic Acid from Linoleic acid via active Δ-6-desaturase",
+          "Lacks Δ-6-desaturase: Arachidonic Acid is an obligate dietary requirement from animal fats"
+        ],
+        [
+          "Vitamin A (Retinol)",
+          "Cleaves plant β-carotene into active retinol via intestinal mucosal dioxygenase",
+          "Lacks β-carotene-15,15'-dioxygenase: requires pre-formed Vitamin A (retinol) from animal tissue"
+        ],
+        [
+          "Niacin (Vitamin B3)",
+          "Synthesizes niacin from the amino acid tryptophan via quinolinate pathway",
+          "Extremely high picolinate carboxylase activity degrades tryptophan: requires dietary pre-formed Niacin"
+        ],
+        [
+          "Carbohydrate Utilization",
+          "High capacity: AMY2B gene duplications synthesize abundant pancreatic amylase to digest starches",
+          "Limited capacity: lacks salivary amylase, low intestinal sucrase/lactase, and lacks hepatic glucokinase (uses hexokinase)"
+        ],
+        [
+          "Urinary pH & FLUTD Management",
+          "Urine pH varies widely (6.5–7.5); uroliths often secondary to bacterial UTI",
+          "Target urine pH 6.2–6.5: alkaline urine (>7.0) precipitates Struvite (MgNH4PO4); excessive acidification (<6.0) triggers Calcium Oxalate uroliths"
+        ]
+      ]
+    },
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021",
+      "RAJUVAS 2020"
+    ]
+  }
+]

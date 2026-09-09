@@ -1,0 +1,640 @@
+<title>Unit 1 Rapid Revision Sheet</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap">
+<style>
+:root{
+  --paper:#fdfdfb; --ground:#e8edf3; --rule:#c9d4de; --rule-soft:#e2e9f0;
+  --ink:#1b2a34; --ink-2:#4a6070; --ink-3:#7e8f9c;
+  --blue:#1565c0; --teal:#00796b; --amber:#a05300; --coral:#c8390f; --sage:#2b6e2f; --plum:#5d3f9e;
+  --blue-w:#e8f1fb; --teal-w:#e2f2f0; --amber-w:#fbf0e0; --coral-w:#fbe8e2; --sage-w:#e6f2e6; --plum-w:#eee9fa;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#141b21; --ground:#0c1116; --rule:#2c3a45; --rule-soft:#232e37;
+    --ink:#e3ebf1; --ink-2:#a3b6c4; --ink-3:#7b8d9b;
+    --blue:#6fb2f5; --teal:#4fc9b8; --amber:#e6a44e; --coral:#ff8a63; --sage:#7fce83; --plum:#b39bf0;
+    --blue-w:#16283c; --teal-w:#0f2f2b; --amber-w:#33240e; --coral-w:#3a1f16; --sage-w:#162c18; --plum-w:#251d3d;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141b21; --ground:#0c1116; --rule:#2c3a45; --rule-soft:#232e37;
+  --ink:#e3ebf1; --ink-2:#a3b6c4; --ink-3:#7b8d9b;
+  --blue:#6fb2f5; --teal:#4fc9b8; --amber:#e6a44e; --coral:#ff8a63; --sage:#7fce83; --plum:#b39bf0;
+  --blue-w:#16283c; --teal-w:#0f2f2b; --amber-w:#33240e; --coral-w:#3a1f16; --sage-w:#162c18; --plum-w:#251d3d;
+}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);
+  font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:13px;line-height:1.4;-webkit-font-smoothing:antialiased;padding:18px 12px 40px}
+.wrap{max-width:200mm;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+
+/* ── masthead ─────────────────────────────── */
+.mast{background:var(--paper);border:1px solid var(--rule);border-top:4px solid var(--blue);padding:14px 16px}
+.mast h1{margin:0;font-size:20px;font-weight:800;letter-spacing:-.02em}
+.mast p{margin:5px 0 0;font-size:11.5px;color:var(--ink-2);max-width:62ch}
+.mast .meta{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}
+
+/* ── sheet ────────────────────────────────── */
+.sheet{background:var(--paper);border:1px solid var(--rule);
+  width:100%;padding:9mm 8mm;display:flex;flex-direction:column;gap:5px}
+.shead{display:flex;align-items:baseline;gap:9px;border-bottom:2px solid var(--ink);padding-bottom:4px;margin-bottom:3px}
+.shead .num{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:19px;font-weight:700;color:var(--blue);line-height:1}
+.shead h2{margin:0;font-size:14.5px;font-weight:800;letter-spacing:-.015em;flex:1}
+.shead .wt{font-family:"JetBrains Mono",monospace;font-size:9.5px;color:var(--ink-3);letter-spacing:.04em;white-space:nowrap}
+
+/* ── grid + blocks ────────────────────────── */
+.g{display:grid;grid-template-columns:repeat(12,1fr);gap:5px;align-content:start}
+.b{border:1px solid var(--rule-soft);border-top:2.5px solid var(--blue);padding:5px 7px 6px;
+   background:var(--paper);min-width:0;overflow-wrap:break-word}
+.b.t{border-top-color:var(--teal)} .b.a{border-top-color:var(--amber)}
+.b.c{border-top-color:var(--coral)} .b.s{border-top-color:var(--sage)} .b.p{border-top-color:var(--plum)}
+.b>h3{margin:0 0 4px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--blue)}
+.b.t>h3{color:var(--teal)} .b.a>h3{color:var(--amber)}
+.b.c>h3{color:var(--coral)} .b.s>h3{color:var(--sage)} .b.p>h3{color:var(--plum)}
+.c1{grid-column:span 1}.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:span 4}
+.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}
+.c9{grid-column:span 9}.c12{grid-column:span 12}
+
+/* ── text atoms ───────────────────────────── */
+p{margin:0 0 3px} p:last-child{margin-bottom:0}
+ul{margin:0;padding-left:12px} li{margin-bottom:1.5px}
+b,strong{font-weight:700}
+em{font-style:italic;color:var(--ink-2)}
+.sm{font-size:10.5px;line-height:1.35}
+.xs{font-size:9.5px;line-height:1.3;color:var(--ink-2)}
+.m{font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.k{color:var(--blue);font-weight:700}
+.num-hl{font-family:"JetBrains Mono",monospace;font-weight:700;color:var(--amber);font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:8.5px;font-weight:600;
+  letter-spacing:.05em;padding:1.5px 5px;background:var(--blue-w);color:var(--blue);border-radius:2px}
+.tag.t{background:var(--teal-w);color:var(--teal)} .tag.a{background:var(--amber-w);color:var(--amber)}
+.tag.c{background:var(--coral-w);color:var(--coral)} .tag.s{background:var(--sage-w);color:var(--sage)}
+.tag.p{background:var(--plum-w);color:var(--plum)}
+
+/* ── formula strip ────────────────────────── */
+.fx{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:600;background:var(--amber-w);
+  color:var(--ink);padding:3px 6px;margin:3px 0;border-left:3px solid var(--amber);
+  font-variant-numeric:tabular-nums;overflow-x:auto;white-space:nowrap}
+.fx.b2{background:var(--blue-w);border-left-color:var(--blue)}
+.fx.t2{background:var(--teal-w);border-left-color:var(--teal)}
+
+/* ── tables ───────────────────────────────── */
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:9.5px;line-height:1.25}
+th{background:var(--blue-w);color:var(--blue);font-weight:700;font-size:8.5px;
+   text-transform:uppercase;letter-spacing:.05em;text-align:left;padding:2.5px 4px;border:1px solid var(--rule-soft)}
+.b.c th{background:var(--coral-w);color:var(--coral)} .b.a th{background:var(--amber-w);color:var(--amber)}
+.b.t th{background:var(--teal-w);color:var(--teal)} .b.s th{background:var(--sage-w);color:var(--sage)}
+.b.p th{background:var(--plum-w);color:var(--plum)}
+td{padding:2.5px 4px;border:1px solid var(--rule-soft);vertical-align:top}
+td.mn{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,transparent)}
+
+/* ── flow diagram ─────────────────────────── */
+.flow{display:flex;align-items:stretch;gap:0;font-size:9px;line-height:1.2;margin:3px 0}
+.node{flex:1;border:1px solid var(--rule);padding:3px 4px;text-align:center;min-width:0}
+.node .t1{font-weight:700;font-size:9.5px;display:block}
+.node .t2{color:var(--ink-3);font-size:8.5px;font-family:"JetBrains Mono",monospace}
+.arw{display:flex;flex-direction:column;justify-content:center;padding:0 3px;color:var(--coral);
+  font-size:8px;font-weight:700;text-align:center;font-family:"JetBrains Mono",monospace}
+.arw span{display:block;white-space:nowrap}
+
+/* ── mnemonic + alert ─────────────────────── */
+.mnem{background:var(--plum-w);border-left:3px solid var(--plum);padding:3px 6px;margin:3px 0;font-size:10px}
+.mnem b{color:var(--plum);font-family:"JetBrains Mono",monospace;letter-spacing:.02em}
+.alert{background:var(--coral-w);border-left:3px solid var(--coral);padding:3px 6px;margin:3px 0;font-size:10px}
+.clin{background:var(--sage-w);border-left:3px solid var(--sage);padding:3px 6px;margin:3px 0;font-size:10px}
+
+/* ── rapid-fire two column list ───────────── */
+.rf{column-count:2;column-gap:14px;font-size:9.5px;line-height:1.35}
+.rf.three{column-count:3}
+.rf div{break-inside:avoid;margin-bottom:2px;padding-left:9px;text-indent:-9px}
+.rf .q{font-weight:700}
+.rf .ans{color:var(--coral);font-weight:700}
+
+.foot{font-size:9px;color:var(--ink-3);text-align:center;padding-top:4px;
+  border-top:1px solid var(--rule-soft);margin-top:auto;font-family:"JetBrains Mono",monospace;letter-spacing:.04em}
+
+/* ── print ────────────────────────────────── */
+@media print{
+  @page{size:A4;margin:8mm}
+  body{background:#fff;padding:0;font-size:8.4pt}
+  .wrap{max-width:none;gap:0}
+  .mast{display:none}
+  .sheet{border:none;padding:0;page-break-after:always;break-after:page;min-height:0}
+  .sheet:last-child{page-break-after:auto}
+  .b{break-inside:avoid}
+  table{font-size:7.4pt} .xs{font-size:7.2pt} .sm{font-size:7.8pt}
+  .tag{font-size:6.8pt} .fx{font-size:7.6pt}
+  .rf{font-size:7.4pt}
+}
+@media (max-width:760px){
+  .g{grid-template-columns:repeat(6,1fr)}
+  .c4,.c5,.c6,.c7,.c8,.c9,.c12{grid-column:span 6}
+  .c3{grid-column:span 3} .rf,.rf.three{column-count:1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<div class="mast">
+  <h1>Unit 1 — Rapid Revision Sheet</h1>
+  <p>Principles of Animal Nutrition &amp; Feed Technology · VCI MSVE 2016 · Theory Paper I. Five A4 sheets built to be read end-to-end in 30 minutes and to carry ~95% of the objective and subjective marks from this unit.</p>
+  <div class="meta">
+    <span class="tag">B.V.Sc &amp; A.H. II Year</span>
+    <span class="tag t">Paper I · 100 Marks</span>
+    <span class="tag a">25 Syllabus Topics</span>
+    <span class="tag p">Print → A4 · 5 pages</span>
+  </div>
+</div>
+
+<!-- ═══════════════ SHEET 1 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">01</span><h2>Foundations · Composition · Nutritional Terms · Proximate &amp; Detergent Analysis</h2><span class="wt">HISTORY → TERMS → ANALYSIS</span></div>
+  <div class="g">
+
+    <div class="b c8">
+      <h3>History — the 9 names examiners ask</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Worker</th><th>Year</th><th>Contribution — the exact phrase to write</th></tr></thead>
+        <tbody>
+          <tr><td>Lavoisier</td><td class="mn">1780</td><td><b>Father of Nutrition Science.</b> Respiration = slow combustion; first animal calorimeter with Laplace</td></tr>
+          <tr><td>Liebig</td><td class="mn">1840s</td><td>Father of Agricultural Chemistry; proposed protein as sole source of muscular energy (<i>later disproved</i>)</td></tr>
+          <tr><td>Boussingault</td><td class="mn">1839</td><td>First <b>N-balance</b> studies in farm animals; field feeding trials</td></tr>
+          <tr><td>Henneberg &amp; Stohmann</td><td class="mn">1860</td><td><b>Weende (Proximate) System</b>, Weende Expt. Station, Germany</td></tr>
+          <tr><td>Atwater &amp; Rosa</td><td class="mn">1897</td><td>First human respiration calorimeter; <b>physiological fuel values</b> 4:9:4</td></tr>
+          <tr><td>Kellner</td><td class="mn">1905</td><td><b>Starch Equivalent</b> system (Germany)</td></tr>
+          <tr><td>Armsby</td><td class="mn">1915</td><td><b>Net Energy / Therm</b> system (USA)</td></tr>
+          <tr><td>Hopkins → Funk</td><td class="mn">1906→12</td><td>"Accessory food factors" → coined <b>"vitamine"</b></td></tr>
+          <tr><td>Van Soest</td><td class="mn">1963</td><td><b>Detergent fibre system</b> (NDF/ADF/ADL) — cell wall vs cell contents</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="b a c4">
+      <h3>Body vs Plant — the contrast Q</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Fraction</th><th>Animal</th><th>Plant</th></tr></thead>
+        <tbody>
+          <tr><td>Water</td><td class="mn">50–60%</td><td class="mn">5–90%</td></tr>
+          <tr><td>Protein</td><td class="mn">15–20%</td><td class="mn">~10%</td></tr>
+          <tr><td>Lipid</td><td class="mn">15–25%</td><td class="mn">2–3%</td></tr>
+          <tr><td>Carbohydrate</td><td class="mn">&lt;1%</td><td class="mn">~75%</td></tr>
+          <tr><td>Ash</td><td class="mn">3–5%</td><td class="mn">5–10%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs" style="margin-top:3px"><b>Write these 4 differences:</b> ① Animal stores energy as <b>fat + glycogen</b>; plant as <b>starch + fructans</b>. ② Plant has a <b>cell wall</b> (cellulose, hemicellulose, lignin); animal has none. ③ Animal sterol = <b>cholesterol</b>; plant = <b>phytosterol</b>. ④ Animal N is almost all <b>true protein</b>; plant carries substantial <b>NPN</b> (nitrate, amides, alkaloids).</p>
+      <p class="xs"><b>Age effect:</b> newborn = water <span class="num-hl">75–80%</span>, fat <span class="num-hl">~2%</span>. As age ↑ → <b>water ↓, fat ↑</b>, protein &amp; ash nearly constant. <em>Fat is the most variable body constituent; water the most abundant.</em></p>
+    </div>
+
+    <div class="b p c5">
+      <h3>Nutritional terms — 2-mark definitions</h3>
+      <p class="xs"><b>Feed/Feedstuff</b> — any edible material furnishing nutrients. <b>Ration</b> — total feed allowed to one animal in <b>24 h</b>. <b>Diet</b> — feed(s) offered, without a time limit. <b>Balanced ration</b> — a ration supplying all nutrients in required <b>proportion &amp; amount</b> for 24 h to maintain the animal in a specified state of production. <b>Maintenance ration</b> — supports life processes with <b>zero gain, zero loss, zero production</b>. <b>Production ration</b> — over and above maintenance.</p>
+      <p class="xs"><b>Nutrient</b> — a chemical substance that supports life. <b>Dry matter (DM)</b> — feed minus moisture (105 °C). <b>Concentrate</b> — <span class="num-hl">CF &lt; 18%</span> DM, high TDN. <b>Roughage</b> — <span class="num-hl">CF &gt; 18%</span> DM. <b>Supplement</b> — corrects a specific nutrient deficit (protein/mineral). <b>Additive</b> — non-nutritive, added to improve efficiency/quality. <b>Palatability</b> — feed characters that attract the animal &amp; determine voluntary intake. <b>Ad libitum</b> — offered free-choice. <b>TMR</b> — roughage + concentrate mixed so animal cannot select. <b>Provender</b> — ground/crushed dry feed mixture.</p>
+    </div>
+
+    <div class="b t c7">
+      <h3>Weende Proximate Analysis — the flow to draw</h3>
+      <div class="flow">
+        <div class="node"><span class="t1">FEED</span><span class="t2">100 g</span></div>
+        <div class="arw"><span>105 °C</span><span>→</span></div>
+        <div class="node"><span class="t1">MOISTURE</span><span class="t2">loss on drying</span></div>
+        <div class="arw"><span>600 °C</span><span>→</span></div>
+        <div class="node"><span class="t1">TOTAL ASH</span><span class="t2">residue</span></div>
+        <div class="arw"><span>→</span></div>
+        <div class="node"><span class="t1">ORGANIC MATTER</span><span class="t2">CP·EE·CF·NFE</span></div>
+      </div>
+      <div class="tw"><table>
+        <thead><tr><th>Fraction</th><th>Method / Reagent</th><th>Key number &amp; trap</th></tr></thead>
+        <tbody>
+          <tr><td><b>Moisture / DM</b></td><td>Hot air oven 100–105 °C, 12–24 h</td><td class="mn">DM = 100 − moisture</td></tr>
+          <tr><td><b>Total Ash</b></td><td>Muffle furnace <b>550–600 °C</b>, 4–6 h</td><td>AIA (boil in 10% HCl) &gt; 3% = <b>sand adulteration</b></td></tr>
+          <tr><td><b>Crude Protein</b></td><td><b>Kjeldahl</b>: digest (H₂SO₄ + K₂SO₄ + CuSO₄) → distil (NaOH) → titrate</td><td class="mn">CP = N × 6.25</td></tr>
+          <tr><td><b>Ether Extract</b></td><td><b>Soxhlet</b>, petroleum/diethyl ether, 16 siphons</td><td>Includes waxes, pigments, sterols → <b>"crude" fat</b></td></tr>
+          <tr><td><b>Crude Fibre</b></td><td>Boil <b>1.25% H₂SO₄</b> then <b>1.25% NaOH</b>, 30 min each</td><td>Loses <b>up to 80% lignin + 50% hemicellulose</b> into NFE</td></tr>
+          <tr><td><b>NFE</b></td><td><b>By difference</b> — never measured</td><td class="mn">NFE = 100 − (M+A+CP+EE+CF)</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>N-factors:</b> general <span class="num-hl">6.25</span> (16% N) · milk <span class="num-hl">6.38</span> · wheat <span class="num-hl">5.83</span> · rice <span class="num-hl">5.95</span> · groundnut <span class="num-hl">5.46</span>.</p>
+      <div class="alert"><b>Chief defect of Weende:</b> the CF/NFE split is <b>artificial</b> — lignin (the truly indigestible part) migrates into NFE, so NFE is often <i>less</i> digestible than CF in roughages. This single line answers "limitations of proximate analysis".</div>
+    </div>
+
+    <div class="b c5">
+      <h3>Van Soest Detergent System — the fix</h3>
+      <div class="flow">
+        <div class="node"><span class="t1">FEED</span><span class="t2"></span></div>
+        <div class="arw"><span>Neutral</span><span>detergent</span></div>
+        <div class="node"><span class="t1">NDS (soluble)</span><span class="t2">sugar, starch, protein, lipid, pectin</span></div>
+      </div>
+      <div class="tw"><table>
+        <thead><tr><th>Fraction</th><th>Reagent</th><th>Contains</th></tr></thead>
+        <tbody>
+          <tr><td><b>NDF</b></td><td>Neutral detergent (Na lauryl sulphate, pH 7)</td><td>Cellulose + Hemicellulose + Lignin + silica <b>= total cell wall</b></td></tr>
+          <tr><td><b>ADF</b></td><td>Acid detergent (CTAB in 1 N H₂SO₄)</td><td>Cellulose + Lignin + silica</td></tr>
+          <tr><td><b>ADL</b></td><td>72% H₂SO₄ or KMnO₄ on ADF</td><td>Lignin + silica</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fx b2">Hemicellulose = NDF − ADF   ·   Cellulose = ADF − ADL</div>
+      <p class="xs"><b>NDF ⇒ predicts <u>intake</u></b> (rumen fill). <b>ADF ⇒ predicts <u>digestibility</u> &amp; energy</b> (lignin). Both ↑ with maturity of the fodder ⇒ both intake and digestibility fall. <b>Cell contents ≈ 98% digestible; cell wall is variably digestible depending on lignification.</b></p>
+      <div class="mnem"><b>NDF = Intake, ADF = Digestibility.</b> "N for Nibble, A for Absorb."</div>
+    </div>
+
+    <div class="b s c12">
+      <h3>Why nutrients matter — production &amp; health (the opening paragraph for any long answer)</h3>
+      <p class="xs"><b>Six nutrient classes:</b> water, carbohydrate, protein, lipid, minerals, vitamins. <b>Functions grouped in 3:</b> ① <b>Energy-yielding</b> (CHO, lipid, protein) ② <b>Body-building / structural</b> (protein, minerals, water, lipid) ③ <b>Regulatory</b> (vitamins, minerals, water, enzymes/hormones). <b>Feed = 60–70% of total cost of livestock production</b> — hence nutrition is the single largest determinant of profitability. Under-nutrition ⇒ delayed puberty, anoestrus, low milk yield, low immunity (T-cell &amp; antibody suppression), high neonatal mortality; over-nutrition ⇒ fatty liver, dystocia, ketosis, acidosis, lameness. <b>Nutrition–immunity–reproduction–production is one continuum</b> — that sentence earns marks in any "importance of nutrients" question.</p>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 1 / 5 · FOUNDATIONS &amp; ANALYSIS · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 2 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">02</span><h2>Carbohydrate · Protein · Lipid · Water — Nutritional Aspects</h2><span class="wt">THE FOUR ORGANIC CHAPTERS</span></div>
+  <div class="g">
+
+    <div class="b c6">
+      <h3>Carbohydrate nutrition</h3>
+      <p class="xs"><b>Classification:</b> <b>Monosaccharides</b> (glucose, fructose, galactose, ribose, xylose, arabinose) → <b>Disaccharides</b> (sucrose = glu+fru; lactose = glu+gal, <i>only animal sugar</i>; maltose = glu+glu; cellobiose) → <b>Oligosaccharides</b> (raffinose, stachyose — flatulence factors of soybean) → <b>Polysaccharides</b>: <b>storage</b> = starch (amylose+amylopectin), glycogen, fructans, inulin; <b>structural</b> = cellulose (β-1,4), hemicellulose, pectin, lignin (<i>not a CHO — a phenolic polymer</i>).</p>
+      <p class="xs"><b>Structural (fibrous) vs Non-structural (NSC):</b> the key nutritional divide. Ruminants extract structural CHO via <b>microbial cellulase</b>; monogastrics cannot (no β-1,4 glycosidase) and depend on hind-gut fermentation only marginally (horse/rabbit are the exceptions — large caecum).</p>
+      <div class="fx t2">Wolin: 57.5 C₆H₁₂O₆ → 65 Acetate + 20 Propionate + 15 Butyrate + 60 CO₂ + 35 CH₄ + 25 H₂O</div>
+      <div class="tw"><table>
+        <thead><tr><th>VFA</th><th>Roughage diet</th><th>Concentrate diet</th><th>Metabolic fate</th></tr></thead>
+        <tbody>
+          <tr><td><b>Acetate</b> C2</td><td class="mn">65–70%</td><td class="mn">↓ 45–55%</td><td><b>Milk fat</b> precursor; body fat; ketogenic</td></tr>
+          <tr><td><b>Propionate</b> C3</td><td class="mn">15–20%</td><td class="mn">↑ 30–40%</td><td><b>Only glucogenic VFA</b> → gluconeogenesis → lactose &amp; blood glucose</td></tr>
+          <tr><td><b>Butyrate</b> C4</td><td class="mn">10–15%</td><td class="mn">~15%</td><td>Rumen epithelium fuel; → β-hydroxybutyrate (ketogenic)</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Normal acetate:propionate ≈ 3:1.</b> Feeding ↑ concentrate narrows it → <b>milk fat depression</b> + ↑ body weight gain. VFAs supply <span class="num-hl">70–80%</span> of the ruminant's energy; methane wastes <span class="num-hl">6–8% of GE</span>.</p>
+      <div class="clin"><b>Field line:</b> ruminants are functionally <b>glucose-poor</b> — almost no dietary glucose is absorbed; blood glucose <span class="num-hl">40–60 mg/dL</span> (vs 80–120 in monogastrics) and is made from propionate + glucogenic AA + glycerol.</div>
+    </div>
+
+    <div class="b p c6">
+      <h3>Protein nutrition</h3>
+      <p class="xs"><b>Essential AA (10) — mnemonic:</b></p>
+      <div class="mnem"><b>P V T   T I M   H A L L</b> — <b>P</b>henylalanine, <b>V</b>aline, <b>T</b>hreonine, <b>T</b>ryptophan, <b>I</b>soleucine, <b>M</b>ethionine, <b>H</b>istidine, <b>A</b>rginine, <b>L</b>eucine, <b>L</b>ysine. Poultry additionally need <b>Glycine/Serine</b>; the <b>cat</b> uniquely requires dietary <b>Taurine</b> and cannot spare Arginine.</div>
+      <p class="xs"><b>Semi-essential:</b> Cysteine spares Methionine; Tyrosine spares Phenylalanine. <b>Limiting AA:</b> <b>Lysine</b> in cereal/maize-based swine diets; <b>Methionine</b> in maize–soya poultry diets; <b>Lysine + Methionine</b> for milk protein in high yielders (hence rumen-protected Met/Lys).</p>
+      <p class="xs"><b>Ruminant protein metabolism — the whole story in one line:</b> dietary CP splits into <b>RDP</b> (degraded to peptides → AA → NH₃) and <b>RUP/bypass</b> (escapes to abomasum). Rumen microbes use NH₃ + carbon skeleton + ATP from fermentable energy to build <b>Microbial Crude Protein (MCP)</b>, which alone can meet <span class="num-hl">50–80%</span> of the animal's protein need and is of high, <b>constant biological value (~66–80)</b>. Excess NH₃ → absorbed → liver <b>urea cycle</b> → urine or <b>recycled via saliva &amp; rumen wall</b> (<i>ruminohepatic N recycling</i> — the ruminant's N-conservation mechanism on low-protein straw diets).</p>
+      <div class="fx b2">Protein equivalent of urea = 45–46.6% N × 6.25 = 281–291% CP</div>
+      <p class="xs"><b>Rumen NH₃-N optimum ≈ 5 mg/100 mL</b> rumen fluid for maximum microbial growth. <b>N : S ratio 10–14 : 1</b> is mandatory when feeding NPN (S needed for Met, Cys, biotin, thiamine).</p>
+      <div class="alert"><b>Protein quality is a monogastric concept.</b> In ruminants, microbial fermentation levels out AA quality, so BV of the diet matters far less than <b>degradability (RDP:RUP)</b> and total N supply. Write this sentence for "measures of protein quality in ruminants vs non-ruminants".</div>
+    </div>
+
+    <div class="b a c6">
+      <h3>Lipid nutrition</h3>
+      <p class="xs"><b>Classification:</b> <b>Simple</b> (fats/oils = triglycerides; waxes) · <b>Compound</b> (phospho-, glyco-, lipoproteins) · <b>Derived</b> (fatty acids, glycerol, sterols, fat-soluble vitamins).</p>
+      <p class="xs"><b>Functions:</b> most concentrated energy source (<span class="num-hl">2.25×</span> CHO), carrier of vitamins A D E K, source of EFA, structural (cell membrane phospholipids), insulation, precursor of eicosanoids &amp; steroid hormones, improves palatability, reduces dust &amp; ration heat increment.</p>
+      <p class="xs"><b>Essential fatty acids:</b> <b>Linoleic (C18:2, ω-6)</b> — truly essential in all species; <b>α-Linolenic (C18:3, ω-3)</b>; <b>Arachidonic (C20:4)</b> — essential only for the <b>cat</b> (no Δ6-desaturase). Deficiency ⇒ scaly dermatitis, poor growth, hair loss, impaired reproduction, ↓ egg size.</p>
+      <p class="xs"><b>Rumen biohydrogenation:</b> dietary unsaturated FA are lipolysed then <b>hydrogenated to stearic acid (C18:0)</b> by rumen bacteria → ruminant depot fat is <b>hard &amp; saturated</b> and dietary PUFA hardly reach tissues. Intermediates include <b>trans-10, cis-12 CLA</b> (the milk-fat-depressing isomer).</p>
+      <div class="clin"><b>Bypass / protected fat:</b> free oil above <span class="num-hl">3–4% of DM</span> coats fibre and poisons cellulolytic bacteria ⇒ fibre digestion crashes. Solution: <b>calcium salts of long-chain fatty acids (Ca-LCFA) / prilled fat</b>, inert at rumen pH 6.5, dissociating in the acidic abomasum. Fed at <b>100–150 g/day</b> to high-yielding crossbred cows &amp; Murrah buffaloes to raise energy density without acidosis.</div>
+      <p class="xs"><b>Ketone bodies:</b> acetoacetate, β-hydroxybutyrate, acetone — formed when acetyl-CoA exceeds oxaloacetate supply (negative energy balance) ⇒ <b>bovine ketosis</b>, <b>ovine pregnancy toxaemia</b>, <b>feline hepatic lipidosis</b>.</p>
+    </div>
+
+    <div class="b t c6">
+      <h3>Water — role, requirement, metabolic water</h3>
+      <p class="xs"><b>Functions (write 8):</b> universal solvent &amp; transport medium; medium for all hydrolytic/metabolic reactions; <b>thermoregulation</b> (high specific heat &amp; latent heat of vaporisation); lubricant (synovial, CSF, serous); shock absorber (amniotic, aqueous humour); maintains cell turgor &amp; shape; excretion of urea &amp; toxins; essential for milk (<b>milk is 87% water</b>) and for ruminal fermentation.</p>
+      <p class="xs"><b>Three sources:</b> ① <b>Drinking water</b> ② <b>Feed (preformed) water</b> — green fodder 70–90%, straw 8–10% ③ <b>Metabolic water</b> — from oxidation of nutrients.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Nutrient oxidised (100 g)</th><th>Metabolic water yielded</th></tr></thead>
+        <tbody>
+          <tr><td><b>Fat</b></td><td class="mn">107 g</td></tr>
+          <tr><td><b>Carbohydrate</b></td><td class="mn">55–60 g</td></tr>
+          <tr><td><b>Protein</b></td><td class="mn">40–42 g</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Fat gives the most metabolic water</b> — the classic MCQ (camel hump, hibernating and desert species; kangaroo rat survives on it entirely).</p>
+      <p class="xs"><b>Requirement (thumb rules):</b> cattle/buffalo <span class="num-hl">3–5 L per kg DM intake</span> (up to 8 in summer); lactating cow adds <span class="num-hl">~3 L per L of milk</span>; sheep/goat <span class="num-hl">2–4 L/kg DM</span>; poultry <span class="num-hl">2 : 1</span> water : feed (doubles above 32 °C); pigs <span class="num-hl">2.5–3 L/kg feed</span>.</p>
+      <p class="xs"><b>Losses:</b> urine, faeces, evaporation (skin + lung), milk, sweat. <b>Water deprivation kills faster than any other nutrient deficit</b> — loss of <span class="num-hl">10%</span> body water = serious illness, <span class="num-hl">20%</span> = death.</p>
+      <div class="alert"><b>Quality limits:</b> TDS &lt; 3000 ppm safe for cattle; nitrate-N &lt; 100 ppm; salinity &gt; 7000 ppm ⇒ refusal, scouring, drop in production.</div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 2 / 5 · ORGANIC NUTRIENTS · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 3 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">03</span><h2>Minerals &amp; Vitamins — The Deficiency Matrix</h2><span class="wt">HIGHEST OBJECTIVE YIELD IN THE UNIT</span></div>
+  <div class="g">
+
+    <div class="b c12">
+      <h3>Macro-minerals — required in g/kg diet (7)</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Mineral</th><th>Core function</th><th>Deficiency — name the disease</th><th>Excess / interaction</th><th>Source &amp; number</th></tr></thead>
+        <tbody>
+          <tr><td><b>Calcium</b></td><td>99% in bone as hydroxyapatite; muscle contraction, clotting (factor IV), nerve, milk</td><td><b>Rickets</b> (young) · <b>Osteomalacia</b> (adult) · <b>Milk fever / parturient paresis</b> · <b>Cage layer fatigue</b>, thin shells</td><td>↑Ca in dry period ⇒ milk fever; Ca ↓ Zn &amp; P absorption</td><td>Limestone (38% Ca), DCP, bone meal; <b>Ca:P = 2:1</b> (1–2:1 ruminant, 1.5:1 poultry)</td></tr>
+          <tr><td><b>Phosphorus</b></td><td>Bone, ATP, DNA/RNA, phospholipid, buffer; <b>rumen microbial growth</b></td><td>Rickets/osteomalacia, <b>Pica / Aphosphorosis</b> (bone chewing) → <b>botulism risk</b>; anoestrus, low yield</td><td>Excess P ⇒ urolithiasis in male sheep/goat (Ca:P &lt;1.5:1)</td><td>Cereals/brans (as <b>phytate P</b> — unavailable to poultry &amp; pigs without <b>phytase</b>)</td></tr>
+          <tr><td><b>Magnesium</b></td><td>Cofactor for &gt;300 enzymes (all kinases/ATPases); bone; neuromuscular</td><td><b>Grass tetany / Hypomagnesaemic tetany</b> in lactating cows on lush young spring pasture; <b>milk tetany</b> in calves</td><td>High K &amp; N in lush grass block Mg absorption</td><td>MgO; blood Mg &lt; 1.7 mg/dL = tetany</td></tr>
+          <tr><td><b>Sodium</b></td><td>Chief <b>extracellular</b> cation; osmotic pressure, acid–base, Na⁺/K⁺-ATPase, saliva buffer</td><td>Pica/salt hunger, ↓ appetite &amp; growth, rough coat, ↓ milk</td><td>Excess ⇒ <b>salt poisoning</b> (pigs/poultry — water deprivation), nervous signs</td><td>Common salt <b>1–2% of concentrate</b>; ruminant saliva Na-bicarbonate is the rumen buffer</td></tr>
+          <tr><td><b>Potassium</b></td><td>Chief <b>intracellular</b> cation; nerve impulse, enzyme activation</td><td>Rare (forages are K-rich); anorexia, muscle weakness</td><td>Excess K antagonises Mg &amp; raises DCAD ⇒ milk fever risk</td><td>Green fodder, molasses</td></tr>
+          <tr><td><b>Chlorine</b></td><td>Anion of ECF; <b>HCl of gastric juice</b>; acid–base</td><td>Alkalosis, ↓ appetite, "chloride-deficiency" egg drop</td><td>—</td><td>Common salt (NaCl = 39% Na, 61% Cl)</td></tr>
+          <tr><td><b>Sulphur</b></td><td>In <b>Met, Cys, biotin, thiamine, CoA, chondroitin, keratin, wool</b></td><td>Poor wool/hair growth, ↓ microbial protein synthesis, ↓ appetite</td><td>Excess ⇒ <b>polioencephalomalacia</b> (H₂S)</td><td>Na₂SO₄, elemental S; <b>N:S = 10–14:1</b> when feeding urea</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="b c c12">
+      <h3>Trace minerals — required in mg/kg (ppm). Pair the mineral with its disease name.</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Element</th><th>Function</th><th>Deficiency — the exam word</th><th>Toxicity / antagonist</th></tr></thead>
+        <tbody>
+          <tr><td><b>Iron</b></td><td>Haemoglobin, myoglobin, cytochromes, catalase</td><td><b>Piglet anaemia</b> (sow milk is Fe-poor, no soil contact) — hypochromic microcytic; <b>white scours</b></td><td>Prevented by <b>iron-dextran 150–200 mg IM on day 3</b></td></tr>
+          <tr><td><b>Copper</b></td><td>Ceruloplasmin (Fe mobilisation), cytochrome oxidase, lysyl oxidase, tyrosinase, keratinisation of wool</td><td><b>Swayback / Enzootic ataxia</b> in lambs · <b>Falling disease</b> in cattle · achromotrichia (loss of coat pigment), <b>steely/stringy wool</b>, anaemia</td><td><b>Sheep are the most Cu-susceptible species</b> → haemolytic crisis, jaundice, "gun-metal" kidney. Antagonists: <b>Mo, S, Fe, Zn</b></td></tr>
+          <tr><td><b>Cobalt</b></td><td>Sole role: rumen microbial synthesis of <b>Vitamin B₁₂</b></td><td><b>Pine / Bush sickness / Coast disease</b> — wasting, anaemia, ↑ liver ketones</td><td>Give as cobalt bullet or 1 ppm in mineral mixture</td></tr>
+          <tr><td><b>Manganese</b></td><td>Bone matrix (mucopolysaccharide), arginase, pyruvate carboxylase, reproduction</td><td><b>Perosis / slipped tendon</b> in chicks · <b>chondrodystrophy</b> · <b>silent heat &amp; low conception</b> in cattle</td><td>Also caused by choline, biotin, folic acid, niacin deficiency (perosis is multifactorial)</td></tr>
+          <tr><td><b>Zinc</b></td><td>&gt;300 metalloenzymes (carbonic anhydrase, alkaline phosphatase); immunity, spermatogenesis, taste</td><td><b>Parakeratosis</b> in swine · <b>thymic atrophy &amp; impaired immunity</b> · shortened long bones, poor feathering in chicks · <b>testicular hypoplasia</b></td><td>Excess dietary <b>Ca precipitates Zn as phytate</b> → parakeratosis on high-Ca pig diets</td></tr>
+          <tr><td><b>Iodine</b></td><td>Thyroxine T₃/T₄ — controls BMR</td><td><b>Goitre</b>; <b>hairless / stillborn weak calves</b> and piglets, <b>foetal resorption</b></td><td><b>Goitrogens</b>: glucosinolates of Brassica/mustard cake, thiocyanates; treat with stabilised iodised salt (KIO₃)</td></tr>
+          <tr><td><b>Selenium</b></td><td><b>Glutathione peroxidase</b> — cytosolic antioxidant (Vit E acts in membrane)</td><td><b>White Muscle Disease / Nutritional Muscular Dystrophy</b> in calves &amp; lambs · <b>retained placenta</b> · <b>exudative diathesis</b> &amp; pancreatic fibrosis in chicks · <b>mulberry heart</b> &amp; hepatosis dietetica in pigs</td><td>Narrow safety margin: <b>Alkali disease</b> (chronic, hoof &amp; hair loss) and <b>Blind staggers</b> (acute) from Se-accumulator plants (<i>Astragalus</i>)</td></tr>
+          <tr><td><b>Molybdenum</b></td><td>Xanthine oxidase, nitrate reductase (microbial)</td><td>Practically never deficient</td><td><b>Teart / Peat scours</b> — Mo-induced secondary <b>Cu deficiency</b> (Cu–Mo–S thiomolybdate complex)</td></tr>
+          <tr><td><b>Chromium</b></td><td><b>Glucose Tolerance Factor</b> — potentiates insulin</td><td>Impaired glucose tolerance; stress in transition cows</td><td>Cr-picolinate/yeast used as an anti-stress additive</td></tr>
+          <tr><td><b>Fluorine</b></td><td>Traces harden enamel</td><td>Dental caries (rare in livestock)</td><td><b>Fluorosis</b> — mottled teeth, exostoses, lameness (rock phosphate, industrial &amp; well water in Rajasthan/Gujarat/AP)</td></tr>
+        </tbody>
+      </table></div>
+      <div class="mnem"><b>One-line disease pairs to over-learn:</b> Se → White muscle · Cu → Swayback · Co → Pine · Mn → Perosis · Zn → Parakeratosis · I → Goitre · Fe → Piglet anaemia · Mo → Teart · Mg → Grass tetany · Ca → Milk fever · P → Pica.</div>
+    </div>
+
+    <div class="b a c6">
+      <h3>Fat-soluble vitamins — A D E K</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Vit</th><th>Active form / role</th><th>Deficiency</th></tr></thead>
+        <tbody>
+          <tr><td><b>A</b><br>Retinol</td><td><b>11-cis-retinal + opsin = rhodopsin</b>; maintains all epithelia; bone remodelling; from <b>β-carotene</b></td><td><b>Nyctalopia (night blindness)</b> — earliest sign; <b>xerophthalmia</b>, keratinisation of epithelia, <b>pityriasis</b>, infertility &amp; retained placenta, <b>ataxia from ↑ CSF pressure</b>, <b>nutritional roup</b> in poultry</td></tr>
+          <tr><td><b>D</b><br>Calciferol</td><td><b>D₃ cholecalciferol</b> (animal, skin 7-dehydrocholesterol + UV) &amp; <b>D₂ ergocalciferol</b> (sun-cured plants). Active = <b>1,25-(OH)₂-D₃ / calcitriol</b> (a hormone) → ↑ Ca &amp; P absorption</td><td><b>Rickets</b> in young, <b>Osteomalacia</b> in adults, thin shells &amp; cage-layer fatigue. <b>Poultry can use only D₃ — D₂ is ~1/10 as potent</b> (classic MCQ)</td></tr>
+          <tr><td><b>E</b><br>Tocopherol</td><td><b>α-tocopherol</b> — membrane-phase chain-breaking antioxidant; spares Se &amp; PUFA</td><td><b>White muscle disease</b> (with Se), <b>Encephalomalacia / crazy chick disease</b>, <b>exudative diathesis</b>, <b>mulberry heart</b> in pigs, testicular degeneration</td></tr>
+          <tr><td><b>K</b><br>Phylloquinone</td><td>γ-carboxylation of <b>prothrombin (II) and factors VII, IX, X</b>. K₁ plant, K₂ microbial, <b>K₃ menadione</b> synthetic</td><td><b>Prolonged clotting time, haemorrhage</b>. <b>Sweet clover poisoning</b> — mouldy <i>Melilotus</i> → <b>dicoumarol</b> antagonist; warfarin/rodenticide toxicity</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Conversion:</b> 1 IU Vit A = <span class="num-hl">0.3 µg</span> retinol; 1 mg β-carotene ≈ <span class="num-hl">400 IU</span> in cattle (poultry convert efficiently; <b>the cat cannot convert carotene at all</b> and needs preformed retinol). <b>Only A, D, E, K are stored</b> (liver) — hence they are the only vitamins that are genuinely <b>toxic in excess (hypervitaminosis A &amp; D)</b>.</p>
+      <div class="clin"><b>Ruminant rule:</b> adult ruminants need <b>no dietary B-complex or Vit C</b> — rumen microbes synthesise B vitamins (given adequate <b>cobalt</b>) and tissues synthesise C. The <b>pre-ruminant calf is functionally a monogastric</b> and must get dietary B vitamins.</div>
+    </div>
+
+    <div class="b p c6">
+      <h3>Water-soluble vitamins — B-complex &amp; C</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Vitamin</th><th>Coenzyme / role</th><th>Deficiency disease</th></tr></thead>
+        <tbody>
+          <tr><td><b>B₁</b> Thiamine</td><td>TPP — oxidative decarboxylation (pyruvate → acetyl-CoA)</td><td><b>Polioencephalomalacia (CCN)</b> in ruminants from <b>thiaminase</b>-producing microbes/bracken fern; <b>Chastek paralysis</b> in fox &amp; mink from raw fish; <b>beriberi</b>, opisthotonus in chicks</td></tr>
+          <tr><td><b>B₂</b> Riboflavin</td><td>FAD, FMN</td><td><b>Curled-toe paralysis</b> in chicks (pathognomonic), poor hatchability, clubbed down</td></tr>
+          <tr><td><b>B₃</b> Niacin</td><td>NAD, NADP; made from <b>tryptophan (60 mg Trp = 1 mg niacin)</b></td><td><b>Pellagra</b> (3 D's) · <b>Black tongue</b> in dogs · perosis. <b>The cat cannot convert Trp → niacin</b></td></tr>
+          <tr><td><b>B₅</b> Pantothenic acid</td><td>Coenzyme A</td><td><b>Goose-stepping</b> gait in pigs (pathognomonic), dermatitis, "spectacle eye" in chicks</td></tr>
+          <tr><td><b>B₆</b> Pyridoxine</td><td>PLP — transamination, decarboxylation</td><td>Convulsions, microcytic anaemia, dermatitis</td></tr>
+          <tr><td><b>B₇</b> Biotin</td><td>CO₂ carrier for carboxylases (pyruvate, acetyl-CoA)</td><td><b>Fatty Liver &amp; Kidney Syndrome (FLKS)</b> in broilers, <b>foot-pad dermatitis</b>, hoof cracks in cattle. <b>Avidin</b> of raw egg white binds it</td></tr>
+          <tr><td><b>B₉</b> Folic acid</td><td>One-carbon transfer, purine synthesis</td><td>Megaloblastic anaemia, poor feathering, perosis, anaemia in pigs</td></tr>
+          <tr><td><b>B₁₂</b> Cyanocobalamin</td><td>Methylmalonyl-CoA mutase — <b>the link that lets propionate enter the TCA cycle</b>; contains <b>cobalt</b></td><td>Anaemia, ↓ growth; in ruminants seen only as <b>cobalt deficiency</b></td></tr>
+          <tr><td><b>Choline</b></td><td>Lipotropic factor; acetylcholine, phosphatidylcholine</td><td><b>Perosis</b> &amp; <b>fatty liver</b> — rumen-protected choline is fed to transition cows</td></tr>
+          <tr><td><b>C</b> Ascorbic acid</td><td>Collagen hydroxylation (proline/lysine), antioxidant, Fe absorption</td><td><b>Scurvy</b>. Dietary requirement <b>only in guinea pig, primates, fish and some bats</b> — all other species synthesise it from glucose</td></tr>
+        </tbody>
+      </table></div>
+      <div class="mnem"><b>Pathognomonic quartet for MCQs:</b> Curled-toe = B₂ · Goose-stepping = B₅ · Crazy chick = Vit E · Perosis = Mn (+choline, biotin, folic, niacin).</div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 3 / 5 · MINERALS &amp; VITAMINS · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 4 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">04</span><h2>Energy Evaluation · Calorimetry · Protein Evaluation — The Formula Engine</h2><span class="wt">EVERY NUMERICAL IN PAPER I COMES FROM HERE</span></div>
+  <div class="g">
+
+    <div class="b a c12">
+      <h3>Partition of food energy — draw this flow in every energy question</h3>
+      <div class="flow">
+        <div class="node"><span class="t1">GROSS ENERGY (GE)</span><span class="t2">bomb calorimeter</span></div>
+        <div class="arw"><span>− faecal E</span><span>25–50% ↓</span></div>
+        <div class="node"><span class="t1">DIGESTIBLE ENERGY (DE)</span><span class="t2">= apparent</span></div>
+        <div class="arw"><span>− urine 4–5%</span><span>− CH₄ 6–8% ↓</span></div>
+        <div class="node"><span class="t1">METABOLISABLE ENERGY (ME)</span><span class="t2">"available energy"</span></div>
+        <div class="arw"><span>− heat increment</span><span>15–30% ↓</span></div>
+        <div class="node"><span class="t1">NET ENERGY (NE)</span><span class="t2">NEm + NEp</span></div>
+      </div>
+      <p class="xs"><b>Definitions to write verbatim:</b> <b>GE</b> = heat of complete combustion of a unit feed in a bomb calorimeter in excess O₂. <b>DE</b> = GE − faecal energy (<i>apparent</i>, because faeces contain metabolic faecal matter). <b>ME</b> = DE − (urinary + gaseous/methane energy). <b>NE</b> = ME − heat increment (HI); NE is split into <b>NE<sub>m</sub></b> (maintenance) and <b>NE<sub>p</sub></b> (production). <b>Heat increment = specific dynamic action</b>: unavoidable heat of digestion, fermentation and nutrient metabolism — <b>a loss in summer but useful for keeping warm in winter</b> (favourite viva twist).</p>
+      <div class="fx">TDN % = %DCP + %DCF + %DNFE + (%DEE × 2.25)</div>
+      <div class="fx">1 kg TDN = 4.409 Mcal DE = 4409 kcal  ·  ME = DE × 0.82 (ruminant)</div>
+      <div class="fx">Digestibility coefficient (%) = [(Nutrient eaten − Nutrient in faeces) ÷ Nutrient eaten] × 100</div>
+      <div class="fx">Nutritive Ratio (NR) = (TDN − DCP) ÷ DCP   →  express as 1 : x</div>
+      <p class="xs"><b>NR interpretation:</b> <b>narrow</b> (1:3 to 1:5) = protein-rich, for young growing/high-yielding animals; <b>wide</b> (1:8 and above) = energy-rich, for maintenance, fattening &amp; draft. <b>Calorie : protein ratio</b> = kcal ME per kg diet ÷ % CP — a poultry concept; broiler starter ≈ <span class="num-hl">135–140</span>, layer ≈ <span class="num-hl">160–175</span>. If it widens, birds eat to satisfy energy and become <b>protein-deficient and fat</b>.</p>
+    </div>
+
+    <div class="b c6">
+      <h3>The energy systems — compare them</h3>
+      <div class="tw"><table>
+        <thead><tr><th>System</th><th>Author / Country</th><th>Basis &amp; the number</th></tr></thead>
+        <tbody>
+          <tr><td><b>TDN</b></td><td>USA (Henry &amp; Morrison)</td><td>Sum of digestible nutrients, fat ×2.25. <b>Simple but overvalues roughage</b> (ignores methane &amp; HI) and is a DE-level measure expressed as weight</td></tr>
+          <tr><td><b>Starch Equivalent (SE)</b></td><td><b>Kellner</b>, Germany</td><td>kg of pure starch producing the same <b>body fat</b> as 100 kg of the feed. <b>1 kg starch = 248 g fat = 2.36 Mcal NE.</b> Uses <b>value factors</b> to correct for crude fibre</td></tr>
+          <tr><td><b>Therm / NE</b></td><td><b>Armsby</b>, USA</td><td>Net energy expressed in therms (1 therm = 1000 kcal = 1 Mcal); measured by respiration calorimeter</td></tr>
+          <tr><td><b>Scandinavian Feed Unit</b></td><td>Denmark/Sweden (Fjord, Hansson)</td><td><b>1 Feed Unit = 1 kg of barley</b></td></tr>
+          <tr><td><b>Physiological Fuel Value</b></td><td><b>Atwater</b></td><td><b>CHO 4 · Protein 4 · Fat 9 kcal/g</b> (human/monogastric). Compare GE: CHO 4.1, protein 5.65, fat 9.4 — protein's ME is lower because urea is excreted still carrying energy</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Kellner's fat-production values (g fat / kg digestible nutrient):</b> starch/CHO <span class="num-hl">248</span> · digestible protein <span class="num-hl">235</span> · fat of cereals <span class="num-hl">474</span> · fat of oilseeds <span class="num-hl">598</span> · fat of roughages <span class="num-hl">474</span>.</p>
+      <div class="alert"><b>Merit/demerit line:</b> TDN is easy and needs only a digestion trial, but it is a <b>digestible-energy-level</b> value expressed in weight units, so it <b>overestimates roughages by 20–30%</b>. SE and NE account for HI and rank roughages correctly, but need a costly respiration calorimeter.</div>
+    </div>
+
+    <div class="b t c6">
+      <h3>Calorimetry &amp; C–N balance</h3>
+      <p class="xs"><b>DIRECT calorimetry</b> — measures <b>heat produced</b> directly. Types: <b>Atwater–Rosa–Benedict</b> adiabatic respiration calorimeter, gradient-layer calorimeter, and the <b>bomb calorimeter</b> (measures GE of the feed itself). Accurate but expensive, cumbersome, and unsuitable for large animals.</p>
+      <p class="xs"><b>INDIRECT calorimetry</b> — computes heat from <b>respiratory gas exchange</b> (O₂ consumed, CO₂ &amp; CH₄ produced) and urinary N.</p>
+      <div class="fx t2">RQ = CO₂ produced ÷ O₂ consumed  →  CHO 1.00 · Protein 0.80 · Fat 0.70</div>
+      <p class="xs"><b>Two circuits:</b> <b>Closed-circuit</b> (Regnault–Reiset) — animal rebreathes; CO₂ absorbed by KOH, O₂ replenished and measured. <b>Open-circuit</b> — outside air drawn through, in-and-out gas concentrations analysed (used for large ruminants; today as head-hoods and SF₆ tracer). <b>Comparative slaughter technique</b> — an indirect method comparing carcass energy of a slaughtered baseline group with the fed group; <b>no calorimeter needed, but destructive</b>.</p>
+      <p class="xs"><b>Carbon–Nitrogen balance</b> — indirect method to know <b>what</b> was retained, not just how much: N retention ⇒ protein gain; the carbon left after accounting for protein ⇒ fat gain.</p>
+      <div class="fx t2">N retained = N intake − (faecal N + urinary N)  ·  Protein gained = N retained × 6.25</div>
+      <div class="fx t2">C in protein = 52%  ·  C in fat = 76.5%  ·  N in protein = 16%</div>
+      <p class="xs"><b>Worked logic:</b> retained C − (protein gained × 0.52) = C stored as fat; ÷ 0.765 = <b>kg fat deposited</b>. <b>Positive N balance</b> = growth, pregnancy, lactation recovery; <b>negative N balance</b> = starvation, fever, protein deficiency, and the early lactation high-yielder.</p>
+    </div>
+
+    <div class="b p c7">
+      <h3>Protein evaluation — every formula, with what each one really measures</h3>
+      <div class="fx">Apparent Digestibility % = [(N intake − Faecal N) ÷ N intake] × 100</div>
+      <div class="fx">True Digestibility (TD) % = {[N intake − (Faecal N − Metabolic Faecal N)] ÷ N intake} × 100</div>
+      <div class="fx">Biological Value (BV) = [N retained ÷ N absorbed] × 100
+   = {I − (F − MFN) − (U − EUN)} ÷ {I − (F − MFN)} × 100</div>
+      <div class="fx">Net Protein Utilisation (NPU) = BV × TD ÷ 100 = N retained ÷ N intake × 100</div>
+      <div class="fx">Protein Efficiency Ratio (PER) = Body weight gain (g) ÷ Protein consumed (g)</div>
+      <div class="fx">Net Protein Ratio (NPR) = (Gain of test group + Loss of protein-free group) ÷ Protein consumed</div>
+      <div class="fx">Chemical Score = (mg limiting AA per g test protein ÷ same in whole egg) × 100</div>
+      <div class="fx">DCP % = CP % × digestibility coefficient of CP ÷ 100</div>
+      <p class="xs"><b>How to distinguish them in one line each:</b> <b>BV</b> = of the protein <i>absorbed</i>, how much is <i>retained</i> — a quality measure that ignores digestibility. <b>NPU</b> = BV corrected for digestibility, so it grades the protein <i>as fed</i>. <b>PER</b> = a growth-based bioassay, cheap but influenced by intake and maintenance. <b>NPR</b> corrects PER's biggest defect by adding back the maintenance loss of a protein-free control. <b>Chemical score</b> = a purely laboratory (in-vitro) index using whole egg (BV 100, the reference protein) as the standard; it ignores digestibility and availability.</p>
+      <p class="xs"><b>Reference values:</b> whole egg <span class="num-hl">100</span> · milk <span class="num-hl">85–90</span> · fish meal <span class="num-hl">75–80</span> · <b>microbial protein 66–80</b> · groundnut cake <span class="num-hl">~55</span> · maize (zein, Lys+Trp deficient) <span class="num-hl">~50</span>.</p>
+    </div>
+
+    <div class="b s c5">
+      <h3>Ruminant vs non-ruminant protein quality</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Point</th><th>Non-ruminant</th><th>Ruminant</th></tr></thead>
+        <tbody>
+          <tr><td>What limits performance</td><td><b>Amino-acid balance</b> of the diet</td><td><b>RDP:RUP balance</b> + fermentable energy</td></tr>
+          <tr><td>Measure used</td><td>BV, NPU, PER, chemical score, <b>available lysine</b></td><td><b>Degradability (in-sacco nylon bag), DCP, MP system</b></td></tr>
+          <tr><td>Can NPN be used?</td><td><b>No</b> (no ureolytic microbes) — urea is toxic</td><td><b>Yes</b>, up to <b>1% of concentrate / 3% of total DM</b>, ≤ 1/3 of total N</td></tr>
+          <tr><td>Effect of heat processing</td><td>Destroys trypsin inhibitor, but <b>Maillard reaction</b> blocks lysine</td><td>Mild heat/formaldehyde is <b>deliberately used to create bypass protein</b></td></tr>
+        </tbody>
+      </table></div>
+      <div class="alert"><b>Urea toxicity:</b> excess NH₃ → rumen pH &gt; 7.5 → free NH₃ absorbed → blood NH₃ &gt; 1 mg/dL → tremors, bloat, tetany, death in 1–4 h. <b>Antidote: 4–5 L of 5% acetic acid (vinegar) + cold water orally.</b> Never feed urea in drinking water, never to non-ruminants, and always adapt over <b>2–3 weeks</b>.</div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 4 / 5 · ENERGY &amp; PROTEIN EVALUATION · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 5 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">05</span><h2>Feeds &amp; Fodders · Feed Technology · Conservation · Toxins · Additives</h2><span class="wt">FEED TECHNOLOGY HALF OF PAPER I</span></div>
+  <div class="g">
+
+    <div class="b t c6">
+      <h3>Classification of feeds — the 8 international classes</h3>
+      <div class="tw"><table>
+        <thead><tr><th>#</th><th>Class</th><th>Indian examples</th></tr></thead>
+        <tbody>
+          <tr><td class="mn">1</td><td><b>Dry forages &amp; roughages</b> (&gt;18% CF, &lt;60% TDN)</td><td>Paddy straw, wheat bhusa, hay, sugarcane bagasse</td></tr>
+          <tr><td class="mn">2</td><td><b>Pasture, range &amp; green forage</b></td><td>Berseem, lucerne, maize, sorghum/chari, hybrid Napier</td></tr>
+          <tr><td class="mn">3</td><td><b>Silages</b></td><td>Maize silage, sorghum silage</td></tr>
+          <tr><td class="mn">4</td><td><b>Energy feeds</b> (&lt;20% CP, &lt;18% CF)</td><td>Maize, barley, broken rice, molasses, rice polish, wheat bran</td></tr>
+          <tr><td class="mn">5</td><td><b>Protein supplements</b> (≥20% CP)</td><td>GNC, mustard cake, cottonseed cake, soybean meal, fish meal</td></tr>
+          <tr><td class="mn">6</td><td><b>Mineral supplements</b></td><td>Limestone, DCP, common salt, mineral mixture</td></tr>
+          <tr><td class="mn">7</td><td><b>Vitamin supplements</b></td><td>Vit AD₃E premix, riboflavin</td></tr>
+          <tr><td class="mn">8</td><td><b>Feed additives</b></td><td>Antibiotics, probiotics, enzymes, antioxidants, coccidiostats</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Also classify by:</b> origin (plant/animal/mineral/synthetic), <b>CF content</b> (concentrate &lt;18% vs roughage &gt;18%), moisture (dry vs succulent), and <b>nutritive value</b>. <b>Legume vs non-legume fodder:</b> legumes (berseem, lucerne, cowpea) carry <b>higher CP (15–20%), Ca and carotene</b>, fix atmospheric N, but cause <b>bloat</b>; non-legumes (maize, oats, Napier) are higher in soluble CHO and safer for silage.</p>
+    </div>
+
+    <div class="b a c6">
+      <h3>Feed processing — concentrates &amp; roughages</h3>
+      <p class="xs"><b>Concentrates — physical:</b> <b>grinding</b> (↑ surface area; too fine causes ulcers in pigs &amp; parakeratosis of rumen), <b>pelleting</b> (↓ wastage &amp; selection, ↑ density &amp; intake, kills <i>Salmonella</i>), <b>crumbling</b>, <b>extrusion &amp; expansion</b> (gelatinises starch — pet foods, aqua feed), <b>steam flaking</b> (↑ starch digestibility in dairy), <b>roasting/popping/micronising</b>, <b>soaking &amp; germination</b>.</p>
+      <p class="xs"><b>Purpose of processing (write 6):</b> ↑ digestibility &amp; palatability · destroy anti-nutritional factors &amp; pathogens · ↓ selective feeding &amp; wastage · ease storage/transport · alter rumen degradability (bypass) · permit inclusion of low-quality ingredients.</p>
+      <p class="xs"><b>Roughage improvement — the 3-way classification:</b></p>
+      <div class="tw"><table>
+        <thead><tr><th>Method</th><th>Technique</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td><b>Physical</b></td><td>Chaffing (2–3 cm), soaking, grinding, pelleting, steam pressure treatment, irradiation</td><td>↑ intake &amp; ↓ wastage; little change in digestibility</td></tr>
+          <tr><td><b>Chemical</b></td><td><b>Alkali — Beckmann method</b> (1.5% NaOH soak 24 h, then wash) &amp; dry NaOH; <b>Ammonia/urea treatment</b>; Ca(OH)₂; acid; oxidative (SO₂, H₂O₂)</td><td>Breaks <b>lignin–hemicellulose ester bonds</b> ⇒ DM digestibility ↑ by <b>8–12 units</b></td></tr>
+          <tr><td><b>Biological</b></td><td><b>White-rot fungi</b> (<i>Pleurotus</i>, <i>Coprinus</i>) — ligninolytic; fibrolytic <b>enzymes</b> (cellulase, xylanase); solid-state fermentation</td><td>Selective lignin removal; slow, but no chemical residue</td></tr>
+        </tbody>
+      </table></div>
+      <div class="clin"><b>Urea ammoniation of straw — memorise the numbers:</b> <span class="num-hl">4 kg urea</span> dissolved in <span class="num-hl">40 L water</span> sprayed over <span class="num-hl">100 kg</span> straw, stacked <b>airtight</b> (polythene/pit) and cured <b>21 days</b>; aerate 24 h before feeding. Result: <b>CP rises from 3–4% to 8–10%</b>, DM digestibility ↑ ~10 units, intake ↑ 25–30%. Cheapest single intervention for the Indian straw-based diet.</div>
+    </div>
+
+    <div class="b s c6">
+      <h3>Conservation — Silage vs Hay</h3>
+      <p class="xs"><b>SILAGE</b> = fodder preserved by <b>controlled anaerobic lactic-acid fermentation</b> at high moisture. <b>Ensiling proceeds in 4 phases:</b> ① <b>Aerobic</b> (plant respiration uses residual O₂, temp ↑ 25–35 °C) ② <b>Fermentation</b> (<i>Lactobacillus, Streptococcus, Pediococcus</i> convert sugars → <b>lactic acid</b>, pH falls) ③ <b>Stable/storage</b> (pH &lt; 4.2, all activity ceases) ④ <b>Feed-out/aerobic spoilage</b> (yeasts &amp; moulds on air exposure).</p>
+      <div class="tw"><table>
+        <thead><tr><th>Quality index</th><th>Good silage</th></tr></thead>
+        <tbody>
+          <tr><td>Crop DM at ensiling</td><td class="mn">30–35%</td></tr>
+          <tr><td>pH</td><td class="mn">3.8–4.2</td></tr>
+          <tr><td>Lactic acid</td><td class="mn">3–13% of DM (dominant)</td></tr>
+          <tr><td>Butyric acid</td><td class="mn">&lt; 0.2%</td></tr>
+          <tr><td>NH₃-N (as % of total N)</td><td class="mn">&lt; 10%</td></tr>
+          <tr><td>Colour / smell</td><td>Greenish-yellow to olive-brown; pleasant acidic-fruity</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Ideal crops:</b> high soluble-CHO, low buffering — <b>maize, sorghum, oats, hybrid Napier, sugarcane tops</b>. Legumes ensile poorly (high protein buffering) — wilt them or add molasses. <b>Additives:</b> molasses <span class="num-hl">1–3%</span>, urea <span class="num-hl">0.5–1%</span>, salt, formic acid, <i>Lactobacillus</i> inoculants, cellulase. <b>Silos:</b> trench, pit, bunker, tower, and <b>baled/wrapped silage</b>. <b>Butyric (clostridial) silage</b> = rancid, pH &gt; 5, NH₃-N high — caused by wet, soil-contaminated, poorly compacted material. <b>Flieg's score</b> grades silage from the relative proportions of lactic : acetic : butyric acid.</p>
+      <p class="xs"><b>HAY</b> = fodder preserved by <b>drying to &lt;15–20% moisture</b> so enzymes and microbes cannot act. <b>Cut at 50% flowering</b> — the compromise point between yield and quality. Methods: field/swath curing, tripod &amp; barn drying, artificial dehydration. <b>Best hay crops:</b> lucerne, cowpea, oats, <i>Cenchrus</i>, <i>Stylosanthes</i>. Losses: shattering of leaves (the leaf holds most protein &amp; carotene), bleaching (<b>carotene destroyed by sunlight</b>), leaching by rain, and <b>spontaneous heating → fire risk</b> if baled too wet.</p>
+      <div class="mnem"><b>One-line comparison:</b> Hay = dry preservation, weather-dependent, carotene lost, cheap storage. Silage = wet preservation, weather-independent, carotene &amp; nutrients retained, needs airtight structure and heavy initial cost.</div>
+    </div>
+
+    <div class="b c c6">
+      <h3>Harmful natural constituents (ANFs) &amp; adulterants</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Toxin</th><th>Source</th><th>Lesion / sign &amp; remedy</th></tr></thead>
+        <tbody>
+          <tr><td><b>HCN (dhurrin)</b></td><td>Young/drought-stressed <b>sorghum &amp; chari &lt; 50 days</b>, Sudan grass, cassava</td><td>Cytochrome oxidase block; <b>bright cherry-red blood</b>, sudden death. <b>Antidote: sodium nitrite + sodium thiosulphate IV</b>. Never graze sorghum below 3 ft / 50 days</td></tr>
+          <tr><td><b>Gossypol</b></td><td>Raw <b>cottonseed cake</b> (free gossypol)</td><td>Cardiac &amp; hepatic damage, ↓ fertility in bulls; monogastrics susceptible. Limit <b>&lt; 0.04% free gossypol</b>; treat with <b>FeSO₄ 1:1 (Fe:gossypol)</b> or heat</td></tr>
+          <tr><td><b>Mimosine / DHP</b></td><td><b>Subabul</b> (<i>Leucaena leucocephala</i>)</td><td>Alopecia, salivation, goitre; limit to <b>&lt; 30% of ration</b>; <i>Synergistes jonesii</i> degrades DHP</td></tr>
+          <tr><td><b>Oxalates</b></td><td>Hybrid Napier, setaria, <i>Amaranthus</i>, sugarbeet tops</td><td>Bind Ca ⇒ hypocalcaemia; <b>"Big head" (osteodystrophia fibrosa) in horses</b>; renal oxalate crystals</td></tr>
+          <tr><td><b>Nitrate → Nitrite</b></td><td>Heavily N-manured lush oats, maize, weeds; polluted water</td><td><b>Methaemoglobinaemia — chocolate-brown blood</b>, dyspnoea. <b>Antidote: 1% methylene blue IV @ 4–15 mg/kg</b></td></tr>
+          <tr><td><b>Glucosinolates / goitrogens</b></td><td>Mustard &amp; rapeseed cake, Brassica</td><td>Goitre, ↓ growth; limit mustard cake to 20–25%; iodine supplementation</td></tr>
+          <tr><td><b>Trypsin inhibitor, haemagglutinin</b></td><td><b>Raw soybean</b></td><td>Pancreatic hypertrophy, poor growth. Destroyed by <b>moist heat 110 °C for 15–20 min</b>; verified by the <b>urease activity test</b></td></tr>
+          <tr><td><b>Thiaminase</b></td><td><b>Bracken fern</b>, raw fish</td><td>Polioencephalomalacia; Chastek paralysis in fur animals</td></tr>
+          <tr><td><b>Aflatoxin B₁</b></td><td><i>Aspergillus flavus</i> on damp <b>groundnut cake &amp; maize</b> (&gt;14% moisture)</td><td>Hepatotoxic, carcinogenic, immunosuppressive; <b>M₁ excreted in milk</b>. Limit <b>20 ppb</b>; use toxin binders (HSCAS, esterified glucomannan)</td></tr>
+          <tr><td><b>BOAA / ODAP</b></td><td><b><i>Lathyrus sativus</i></b> (khesari dal)</td><td><b>Neurolathyrism</b> — spastic paraplegia; steeping &amp; parboiling reduce it</td></tr>
+          <tr><td><b>Tannins, saponins, phytate</b></td><td>Sorghum, tea waste, mahua cake, cereal brans</td><td>Bind protein/minerals; phytate P is unavailable to poultry &amp; pigs ⇒ add <b>phytase</b></td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Common adulterants &amp; their detection:</b> <b>sand/silica</b> in brans (⇒ <b>AIA &gt; 3%</b>) · <b>urea</b> in oil cakes (urease/Nessler's test) · <b>marble/limestone powder</b> in mineral mixture (effervescence with HCl) · <b>argemone seed</b> in mustard cake (nitric acid test) · <b>sawdust &amp; husk</b> in wheat bran (floatation) · <b>mahua &amp; kapok cake</b> in GNC (microscopy) · <b>common salt</b> excess (AgNO₃) · <b>melamine</b> as a false-protein adulterant (Kjeldahl reads N, not true protein — <i>the reason NPN cannot be detected by CP alone</i>).</p>
+    </div>
+
+    <div class="b p c12">
+      <h3>Feed additives &amp; supplements — non-nutritive but marks-heavy</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Class</th><th>Examples</th><th>Mode of action / exam point</th></tr></thead>
+        <tbody>
+          <tr><td><b>Antibiotic growth promoters</b></td><td>Bacitracin, virginiamycin, tylosin</td><td>Suppress subclinical gut infection, thin gut wall ⇒ better absorption. <b>Now restricted/banned in India &amp; EU over AMR &amp; residues</b></td></tr>
+          <tr><td><b>Ionophores</b></td><td><b>Monensin</b>, lasalocid, salinomycin</td><td>Shift rumen VFA toward <b>propionate</b>, ↓ methane, ↓ acidosis &amp; bloat, coccidiostatic. <b>FATAL to horses</b></td></tr>
+          <tr><td><b>Probiotics (DFM)</b></td><td><i>Saccharomyces cerevisiae</i>, <i>Lactobacillus</i>, <i>Bacillus subtilis</i></td><td>Live microbes — competitive exclusion, stabilise rumen pH, ↑ fibre digestion</td></tr>
+          <tr><td><b>Prebiotics</b></td><td>MOS, FOS, inulin</td><td>Non-digestible substrates that selectively feed beneficial flora / bind pathogen fimbriae</td></tr>
+          <tr><td><b>Enzymes</b></td><td><b>Phytase</b>, xylanase, β-glucanase, cellulase</td><td>Phytase releases phytate-P ⇒ less inorganic P needed and <b>less P pollution</b>; NSPase cuts gut viscosity in wheat/barley broiler diets</td></tr>
+          <tr><td><b>Buffers</b></td><td><b>Sodium bicarbonate 0.75–1.5% of DM</b>, magnesium oxide</td><td>Stabilise rumen pH on high-grain diets ⇒ prevent <b>SARA</b> and milk-fat depression</td></tr>
+          <tr><td><b>Antioxidants</b></td><td><b>Ethoxyquin, BHT, BHA</b></td><td>Prevent rancidity of fats and destruction of vitamins A &amp; E in stored feed</td></tr>
+          <tr><td><b>Mould inhibitors / binders</b></td><td>Propionic acid, sodium propionate; HSCAS, bentonite, esterified glucomannan</td><td>Prevent fungal growth; adsorb mycotoxins in the gut</td></tr>
+          <tr><td><b>Hormone-like &amp; misc.</b></td><td>Pellet binders (bentonite), flavours, pigments (xanthophyll), coccidiostats, methane inhibitors</td><td><b>Hormonal growth promoters are banned</b> in food animals in India</td></tr>
+        </tbody>
+      </table></div>
+      <p class="xs"><b>Additive vs Supplement — the definition question:</b> a <b>supplement</b> supplies a <b>nutrient</b> that the basal ration lacks (protein, mineral, vitamin) and is fed in appreciable quantity; an <b>additive</b> is a <b>non-nutritive</b> substance included in very small amounts to improve feed quality, efficiency of utilisation, animal health or product quality.</p>
+    </div>
+
+    <div class="b c12">
+      <h3>Last-10-minutes drill — one-line facts most often asked</h3>
+      <div class="rf three">
+        <div><span class="q">Father of nutrition</span> — <span class="ans">Lavoisier</span></div>
+        <div><span class="q">Proximate analysis year/place</span> — <span class="ans">1860, Weende, Germany</span></div>
+        <div><span class="q">Fraction obtained by difference</span> — <span class="ans">NFE</span></div>
+        <div><span class="q">Ash temperature</span> — <span class="ans">550–600 °C</span></div>
+        <div><span class="q">Sand adulteration indicator</span> — <span class="ans">Acid Insoluble Ash</span></div>
+        <div><span class="q">CP factor</span> — <span class="ans">N × 6.25</span></div>
+        <div><span class="q">Fat energy multiplier in TDN</span> — <span class="ans">2.25</span></div>
+        <div><span class="q">1 kg TDN =</span> — <span class="ans">4.409 Mcal DE</span></div>
+        <div><span class="q">Predicts intake / digestibility</span> — <span class="ans">NDF / ADF</span></div>
+        <div><span class="q">Only glucogenic VFA</span> — <span class="ans">Propionate</span></div>
+        <div><span class="q">Milk-fat precursor VFA</span> — <span class="ans">Acetate</span></div>
+        <div><span class="q">Normal acetate:propionate</span> — <span class="ans">3 : 1</span></div>
+        <div><span class="q">Rumen fuel of epithelium</span> — <span class="ans">Butyrate</span></div>
+        <div><span class="q">Methane loss of GE</span> — <span class="ans">6–8%</span></div>
+        <div><span class="q">Most metabolic water</span> — <span class="ans">Fat (107 g/100 g)</span></div>
+        <div><span class="q">Reference protein (BV 100)</span> — <span class="ans">Whole egg</span></div>
+        <div><span class="q">NPU =</span> — <span class="ans">BV × TD / 100</span></div>
+        <div><span class="q">Protein equivalent of urea</span> — <span class="ans">281–291%</span></div>
+        <div><span class="q">Max urea in concentrate</span> — <span class="ans">1%</span></div>
+        <div><span class="q">Urea toxicity antidote</span> — <span class="ans">5% acetic acid + cold water</span></div>
+        <div><span class="q">N : S ratio for NPN</span> — <span class="ans">10–14 : 1</span></div>
+        <div><span class="q">Starch Equivalent author</span> — <span class="ans">Kellner</span></div>
+        <div><span class="q">Net Energy/Therm author</span> — <span class="ans">Armsby</span></div>
+        <div><span class="q">1 kg starch = NE</span> — <span class="ans">2.36 Mcal (248 g fat)</span></div>
+        <div><span class="q">Scandinavian Feed Unit</span> — <span class="ans">1 kg barley</span></div>
+        <div><span class="q">Atwater values</span> — <span class="ans">CHO 4 · Pro 4 · Fat 9</span></div>
+        <div><span class="q">RQ of fat / CHO</span> — <span class="ans">0.70 / 1.00</span></div>
+        <div><span class="q">Carbon in protein / fat</span> — <span class="ans">52% / 76.5%</span></div>
+        <div><span class="q">Concentrate vs roughage CF</span> — <span class="ans">&lt;18% vs &gt;18%</span></div>
+        <div><span class="q">Ideal Ca:P</span> — <span class="ans">2 : 1</span></div>
+        <div><span class="q">Ideal silage pH</span> — <span class="ans">3.8–4.2</span></div>
+        <div><span class="q">Silage DM at ensiling</span> — <span class="ans">30–35%</span></div>
+        <div><span class="q">Hay moisture</span> — <span class="ans">&lt;15–20%</span></div>
+        <div><span class="q">Hay cutting stage</span> — <span class="ans">50% flowering</span></div>
+        <div><span class="q">Urea-treatment recipe</span> — <span class="ans">4 kg urea + 40 L water / 100 kg straw, 21 d</span></div>
+        <div><span class="q">Beckmann method</span> — <span class="ans">1.5% NaOH, 24 h</span></div>
+        <div><span class="q">Aflatoxin limit / organism</span> — <span class="ans">20 ppb · <i>A. flavus</i></span></div>
+        <div><span class="q">Cherry-red blood</span> — <span class="ans">HCN poisoning</span></div>
+        <div><span class="q">Chocolate-brown blood</span> — <span class="ans">Nitrite (methaemoglobin)</span></div>
+        <div><span class="q">Raw soybean factor</span> — <span class="ans">Trypsin inhibitor</span></div>
+        <div><span class="q">Test for soybean heating</span> — <span class="ans">Urease activity</span></div>
+        <div><span class="q">Ionophore fatal to</span> — <span class="ans">Horses (monensin)</span></div>
+        <div><span class="q">Rumen buffer dose</span> — <span class="ans">NaHCO₃ 0.75–1.5% DM</span></div>
+        <div><span class="q">Enzyme freeing phytate-P</span> — <span class="ans">Phytase</span></div>
+        <div><span class="q">Vitamin poultry cannot use</span> — <span class="ans">D₂ (needs D₃)</span></div>
+        <div><span class="q">Vitamin not needed by adult ruminant</span> — <span class="ans">B-complex &amp; C</span></div>
+        <div><span class="q">Species needing dietary Vit C</span> — <span class="ans">Guinea pig, primates, fish</span></div>
+        <div><span class="q">Cat-only essentials</span> — <span class="ans">Taurine, arachidonic acid, preformed Vit A, niacin</span></div>
+        <div><span class="q">Narrow vs wide NR</span> — <span class="ans">1:4 growth · 1:8+ fattening/draft</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="foot">SHEET 5 / 5 · FEED TECHNOLOGY · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016 · PREPARED FOR B.V.Sc &amp; A.H. II YEAR</div>
+</section>
+
+</div>

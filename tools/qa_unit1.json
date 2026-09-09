@@ -1,0 +1,591 @@
+[
+  {
+    "id": "u1-qa-d01",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Biological Value (BV) of a protein. Give the Thomas-Mitchell formula.",
+    "topicId": "u1-t16",
+    "answer": "<p><b>Biological Value (BV)</b> is defined as the percentage of absorbed nitrogen that is retained in the animal body for maintenance and growth, serving as an index of how well a dietary protein's essential amino acid profile matches the animal's tissue requirements.</p><p><b>Thomas-Mitchell Formula:</b><br><code>BV (%) = [ { N Intake - (Fecal N - MFN) - (Urinary N - EUN) } / { N Intake - (Fecal N - MFN) } ] × 100</code><br><i>Where MFN = Metabolic Fecal Nitrogen, EUN = Endogenous Urinary Nitrogen.</i></p>",
+    "keyPoints": [
+      "Definition: Percentage of absorbed nitrogen retained in the animal body.",
+      "Thomas-Mitchell balance equation correctly defining retained N / absorbed N.",
+      "Accounting for endogenous metabolic losses (MFN and EUN)."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2020"
+    ]
+  },
+  {
+    "id": "u1-qa-d02",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Total Digestible Nutrients (TDN) and state its mathematical expression.",
+    "topicId": "u1-t14",
+    "answer": "<p><b>Total Digestible Nutrients (TDN)</b> is a traditional measure of the total apparent digestible energy content of a feedstuff, expressed as the sum of all digestible organic nutrient fractions, with digestible ether extract multiplied by 2.25 to account for its higher caloric density.</p><p><b>Mathematical Expression:</b><br><code>% TDN = % DCP + % DCF + % DNFE + (% DEE × 2.25)</code><br><i>Where DCP = Digestible Crude Protein, DCF = Digestible Crude Fibre, DNFE = Digestible Nitrogen-Free Extract, DEE = Digestible Ether Extract. (1 kg TDN ≈ 4.4 Mcal of DE or 4400 kcal DE).</i></p>",
+    "keyPoints": [
+      "Definition: Measure of digestible energy based on sum of digestible organic nutrient fractions.",
+      "Formula: % DCP + % DCF + % DNFE + (% DEE × 2.25).",
+      "Factor 2.25 accounts for 2.25 times higher energy density of lipids."
+    ],
+    "table": null,
+    "pyq": [
+      "RAJUVAS 2024",
+      "DUVASU 2021",
+      "WBUAFS 2022"
+    ]
+  },
+  {
+    "id": "u1-qa-d03",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Net Energy (NE) and differentiate between NEm and NEp.",
+    "topicId": "u1-t14",
+    "answer": "<p><b>Net Energy (NE)</b> is the actual portion of metabolizable energy that is completely available to the animal body for maintenance and productive functions, derived after subtracting the Heat Increment (HI) and heat of fermentation from Metabolizable Energy (<code>NE = ME - HI</code>).</p><p><b>NEm (Net Energy for Maintenance):</b> Energy required to maintain zero energy balance (basal metabolism, voluntary activity, and thermal regulation) without net loss or gain of body tissue.</p><p><b>NEp (Net Energy for Production):</b> Portion of net energy utilized above maintenance for productive synthesis (tissue growth, milk, eggs, wool, or draft work).</p>",
+    "keyPoints": [
+      "NE = Metabolizable Energy - Heat Increment (HI).",
+      "NEm: Energy required to sustain life processes in a non-productive state.",
+      "NEp: Net energy converted into animal products (milk, meat, egg, wool)."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "LUVAS 2023",
+      "MAFSU 2021"
+    ]
+  },
+  {
+    "id": "u1-qa-d04",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Nutritive Ratio (NR) and differentiate Narrow NR from Wide NR.",
+    "topicId": "u1-t17",
+    "answer": "<p><b>Nutritive Ratio (NR)</b> is the mathematical ratio between digestible crude protein and digestible non-nitrogenous energy-yielding nutrients in a feed or ration.</p><p><b>Formula:</b> <code>NR = 1 : [ (% TDN - % DCP) / % DCP ]</code> or <code>1 : [ { % DCF + % DNFE + (% DEE × 2.25) } / % DCP ]</code>.</p><ul><li><b>Narrow NR (&lt; 1:5):</b> High protein content relative to energy; suitable for young growing calves, high-yielding dairy cows, and broilers.</li><li><b>Wide NR (&gt; 1:8 to 1:10):</b> Low protein content relative to energy; suitable for adult maintenance, fattening bullocks, and idle work animals.</li></ul>",
+    "keyPoints": [
+      "Ratio of digestible non-nitrogenous nutrients to digestible crude protein.",
+      "Correct formula: 1 : (TDN - DCP) / DCP.",
+      "Narrow NR (< 1:5) for growth/lactation; Wide NR (> 1:8) for maintenance."
+    ],
+    "table": null,
+    "pyq": [
+      "KVAFSU 2022",
+      "GADVASU 2021",
+      "NDVSU 2023"
+    ]
+  },
+  {
+    "id": "u1-qa-d05",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Gross Energy (GE) and Digestible Energy (DE) with their bomb calorimetry principles.",
+    "topicId": "u1-t14",
+    "answer": "<p><b>Gross Energy (GE):</b> The total chemical energy released as heat when a unit mass of organic feed matter is completely oxidized to carbon dioxide and water in an adiabatic oxygen bomb calorimeter under 25–30 atmospheres of O<sub>2</sub>. (Average values: Carbohydrates = 4.15 kcal/g, Proteins = 5.65 kcal/g, Fats = 9.40 kcal/g).</p><p><b>Digestible Energy (DE):</b> The gross energy of the consumed feed minus the gross energy lost in the voided feces (<code>DE = GE of feed - GE of feces</code>). It represents the apparent energy absorbed across the gastrointestinal tract.</p>",
+    "keyPoints": [
+      "GE: Total heat of complete oxidation in bomb calorimeter.",
+      "Average caloric values: Carbohydrates 4.15, Protein 5.65, Fats 9.40 kcal/g.",
+      "DE = Gross Energy of Feed - Gross Energy of Feces."
+    ],
+    "table": null,
+    "pyq": [
+      "TANUVAS 2023",
+      "DUVASU 2022",
+      "IVRI Annual 2021"
+    ]
+  },
+  {
+    "id": "u1-qa-d06",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Starch Equivalent (SE) as formulated by Oskar Kellner.",
+    "topicId": "u1-t14",
+    "answer": "<p><b>Starch Equivalent (SE):</b> The net energy value of a feedstuff expressed as the number of kilograms of pure digestible starch that produces the same net amount of fat deposition in an adult fattening bullock as 100 kg of the feedstuff fed above maintenance.</p><p>Kellner determined that <b>1 kg of pure digestible starch deposits 248 g of body fat</b> (equivalent to 2356 kcal of net energy). Crude feed values are multiplied by a 'Value Number' (<i>Wertfaktor</i>) to deduct for the mechanical work of chewing fibrous roughages.</p>",
+    "keyPoints": [
+      "Formulated by Oskar Kellner using respiration trials on bullocks.",
+      "Kg of digestible starch equivalent to 100 kg feed in fat-depositing power.",
+      "1 kg digestible starch = 248 g fat = 2356 kcal NE."
+    ],
+    "table": null,
+    "pyq": [
+      "RAJUVAS 2021",
+      "WBUAFS 2020",
+      "LUVAS 2022"
+    ]
+  },
+  {
+    "id": "u1-qa-d07",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Protein Efficiency Ratio (PER) and Net Protein Utilization (NPU).",
+    "topicId": "u1-t16",
+    "answer": "<p><b>Protein Efficiency Ratio (PER):</b> A bioassay measuring the live weight gain of growing animals (standardized on weanling rats) per gram of crude protein consumed over a 28-day test period on a 10% CP diet: <code>PER = Body Weight Gain (g) / Protein Consumed (g)</code>.</p><p><b>Net Protein Utilization (NPU):</b> The percentage of dietary protein nitrogen that is retained in the body, which directly reflects the product of Biological Value and True Digestibility: <code>NPU (%) = BV × True Digestibility (%) = (Retained Nitrogen / Nitrogen Intake) × 100</code>.</p>",
+    "keyPoints": [
+      "PER = Grams of body weight gain per gram of protein consumed.",
+      "NPU = Proportion of ingested nitrogen retained = BV × True Digestibility.",
+      "Biological assays standardized on growing laboratory animals."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "GADVASU 2023",
+      "TANUVAS 2021"
+    ]
+  },
+  {
+    "id": "u1-qa-d08",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Rumen Degradable Protein (RDP) and Rumen Undegradable Protein (RUP).",
+    "topicId": "u1-t06",
+    "answer": "<p><b>Rumen Degradable Protein (RDP):</b> The fraction of dietary crude protein that is hydrolyzed and broken down by ruminal microflora into peptides, amino acids, and ammonia (NH<sub>3</sub>), which is utilized by microbes to synthesize microbial crude protein (MCP).</p><p><b>Rumen Undegradable Protein (RUP / Bypass Protein):</b> The fraction of dietary protein that escapes microbial fermentation in the rumen intact, flows to the abomasum and small intestine, and is enzymatically digested by host proteases into absorbable amino acids.</p>",
+    "keyPoints": [
+      "RDP: Broken down by rumen microbes into NH3 for microbial protein synthesis.",
+      "RUP: Escapes rumen fermentation to be enzymatically digested in abomasum/intestine.",
+      "Target in high-yielding dairy cattle is typically 60–65% RDP and 35–40% RUP."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "LUVAS 2021",
+      "MAFSU 2022"
+    ]
+  },
+  {
+    "id": "u1-qa-d09",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Metabolic Water and state its quantitative yield from fat, carbohydrate, and protein.",
+    "topicId": "u1-t08",
+    "answer": "<p><b>Metabolic Water (Water of Oxidation):</b> Water produced intracellularly within animal tissues as an end-product of nutrient catabolism via oxidative phosphorylation and the electron transport chain.</p><p><b>Yield per 100 g of nutrient oxidized:</b></p><ul><li><b>Fat:</b> 107.1 g of water (highest yield due to high hydrogen-to-oxygen ratio).</li><li><b>Carbohydrate (Starch):</b> 55.5 g of water.</li><li><b>Protein:</b> 41.3 g of water (lowest yield due to energy lost in urea/uric acid excretion).</li></ul>",
+    "keyPoints": [
+      "Definition: Water synthesized intracellularly via oxidative catabolism.",
+      "Fat yield: 107.1 g water / 100 g; Carbohydrate: 55.5 g / 100 g; Protein: 41.3 g / 100 g.",
+      "Critical for survival of hibernating, migrating, and desert animals (camel)."
+    ],
+    "table": null,
+    "pyq": [
+      "DUVASU 2023",
+      "KVAFSU 2020",
+      "TANUVAS 2022"
+    ]
+  },
+  {
+    "id": "u1-qa-d10",
+    "type": "define",
+    "marks": 2,
+    "question": "Differentiate between Feed Additives and Feed Supplements with examples.",
+    "topicId": "u1-t25",
+    "answer": "<p><b>Feed Additives:</b> Non-nutritive compounds or micro-ingredients added in minute quantities to feed rations to improve feed quality, feed intake, gut health, nutrient utilization, or animal performance (e.g., probiotics, prebiotics, exogenous enzymes, antioxidants, mold inhibitors, ionophores like monensin).</p><p><b>Feed Supplements:</b> Nutritional ingredients containing high concentrations of one or more essential nutrients added to a basic ration to balance specific nutrient deficits (e.g., mineral mixtures, urea, bone meal, limestone, vitamin premixes, fish meal).</p>",
+    "keyPoints": [
+      "Additives: Non-nutritive substances improving performance, stability, or health.",
+      "Supplements: Nutrient-dense materials correcting dietary deficiencies.",
+      "Concrete examples given for both categories."
+    ],
+    "table": null,
+    "pyq": [
+      "RAJUVAS 2023",
+      "IVRI Annual 2020",
+      "GADVASU 2021"
+    ]
+  },
+  {
+    "id": "u1-qa-d11",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Anti-Nutritional Factors (ANFs) and give two examples each of heat-labile and heat-stable ANFs.",
+    "topicId": "u1-t23",
+    "answer": "<p><b>Anti-Nutritional Factors (ANFs):</b> Naturally occurring non-nutrient chemical compounds synthesized by plants as defensive secondary metabolites that interfere with nutrient ingestion, digestion, absorption, or systemic utilization, causing sub-clinical performance drop or overt toxicity.</p><ul><li><b>Heat-Labile ANFs (inactivated by thermal processing):</b> Trypsin inhibitors (Kunitz and Bowman-Birk inhibitors in raw soybean), Lectins/Haemagglutinins, Goitrogens.</li><li><b>Heat-Stable ANFs (resist conventional heat):</b> Condensed Tannins/Polyphenols, Phytates, Gossypol in cottonseed, Mimosine in <i>Leucaena leucocephala</i>.</li></ul>",
+    "keyPoints": [
+      "Definition: Plant secondary metabolites impairing nutrient bioavailability.",
+      "Heat-labile: Trypsin inhibitors, Lectins.",
+      "Heat-stable: Tannins, Phytates, Gossypol."
+    ],
+    "table": null,
+    "pyq": [
+      "WBUAFS 2022",
+      "LUVAS 2020",
+      "DUVASU 2021"
+    ]
+  },
+  {
+    "id": "u1-qa-d12",
+    "type": "define",
+    "marks": 2,
+    "question": "Define Silage and state the optimum pH and organic acid profile of good-quality silage.",
+    "topicId": "u1-t21",
+    "answer": "<p><b>Silage:</b> The preserved, succulent, fermented feed product resulting from the anaerobic fermentation of high-moisture green forages (60–70% moisture) by epiphytic lactic acid bacteria (LAB) in an airtight storage structure (silo).</p><p><b>Quality Characteristics of Good Silage:</b></p><ul><li><b>Optimum pH:</b> 3.8 to 4.2.</li><li><b>Lactic acid:</b> 60–80% of total organic acids (3–6% of dry matter).</li><li><b>Butyric acid:</b> &lt; 0.1–0.2% (negligible; presence indicates clostridial spoilage).</li><li><b>Ammoniacal Nitrogen:</b> &lt; 8–10% of total nitrogen.</li></ul>",
+    "keyPoints": [
+      "Definition: Succulent feed preserved by anaerobic lactic acid fermentation.",
+      "Optimum pH: 3.8 to 4.2.",
+      "High lactic acid (>60% of total acids) and near-zero butyric acid (<0.2%)."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2022",
+      "NDVSU 2021"
+    ]
+  },
+  {
+    "id": "u1-qa-s01",
+    "type": "diff",
+    "marks": 5,
+    "question": "Differentiate between the Van Soest Detergent System of fibre fractionation and the Weende Crude Fibre method.",
+    "topicId": "u1-t05",
+    "answer": "<p>The traditional <b>Weende Crude Fibre (CF)</b> method (Henneberg &amp; Stohmann, 1860) treats feed sequentially with 1.25% boiling H<sub>2</sub>SO<sub>4</sub> and 1.25% boiling NaOH. This harsh chemical treatment dissolves up to 60–80% of hemicellulose and variable amounts of lignin, incorrectly shifting them into the Nitrogen-Free Extract (NFE). Consequently, CF seriously underestimates the true structural cell wall content of roughages.</p><p>The <b>Van Soest Detergent Method</b> (Peter Van Soest, 1967) partitions forage carbohydrates cleanly based on nutritional solubility into cell contents and cell wall components using neutral and acid detergents:</p>",
+    "keyPoints": [
+      "Weende method dissolves hemicellulose and lignin into NFE, causing analytical inaccuracy.",
+      "Van Soest partitions into neutral detergent solubles and cell wall constituents.",
+      "NDF correlates negatively with voluntary dry matter intake (rumen fill).",
+      "ADF correlates negatively with feed digestibility."
+    ],
+    "table": {
+      "title": "Comparison of Van Soest Detergent System vs Weende System",
+      "headers": [
+        "Analytical Parameter",
+        "Weende Crude Fibre Method",
+        "Van Soest Detergent Method"
+      ],
+      "rows": [
+        [
+          "Reagents Used",
+          "1.25% H2SO4 followed by 1.25% NaOH (boiling)",
+          "Neutral Detergent (NDS) & Acid Detergent (ADS) solutions"
+        ],
+        [
+          "Fractions Isolated",
+          "Single Crude Fibre residue (mostly cellulose)",
+          "NDF (Cell wall), ADF (Lignocellulose), ADL (Lignin)"
+        ],
+        [
+          "Hemicellulose Recovery",
+          "Partially dissolved and misclassified into NFE",
+          "Accurately calculated as: Hemicellulose = NDF - ADF"
+        ],
+        [
+          "Lignin Recovery",
+          "Partially solubilized by alkali into NFE",
+          "Accurately isolated as Acid Detergent Lignin (ADL)"
+        ],
+        [
+          "Nutritional Value",
+          "Crude estimate with poor biological correlation",
+          "NDF predicts Voluntary Intake; ADF predicts Digestibility"
+        ],
+        [
+          "Cell Contents",
+          "Indiscriminately grouped in NFE and EE",
+          "Neutral Detergent Solubles (NDS) are ~98% digestible"
+        ]
+      ]
+    },
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "RAJUVAS 2021",
+      "TANUVAS 2020"
+    ]
+  },
+  {
+    "id": "u1-qa-s02",
+    "type": "short",
+    "marks": 5,
+    "question": "Discuss the biochemical synergy between Vitamin E and Selenium, and explain Nutritional Muscular Dystrophy (White Muscle Disease).",
+    "topicId": "u1-t10",
+    "answer": "<p><b>Biochemical Synergy:</b><br>Vitamin E (d-α-tocopherol) and Selenium (Se) act as complementary, interdependent cellular antioxidant defense systems protecting polyunsaturated fatty acids (PUFA) in biomembranes against peroxidative damage:</p><ul><li><b>Vitamin E:</b> Functions as a fat-soluble, lipid-trapping antioxidant located inside biological lipid membranes (mitochondrial, lysosomal, and plasma membranes). It intercepts peroxy radicals, breaking the chain propagation of lipid peroxidation.</li><li><b>Selenium:</b> Serves as an essential structural cofactor for cytosolic and mitochondrial <b>Glutathione Peroxidase (GSH-Px)</b>. GSH-Px reduces toxic hydrogen peroxide (H<sub>2</sub>O<sub>2</sub>) and lipid hydroperoxides to water and harmless alcohols, destroying free radicals before they can attack membrane phospholipids.</li></ul><p><b>Nutritional Muscular Dystrophy (White Muscle Disease / Stiff Lamb Disease):</b><br>Occurs in young rapidly growing calves and lambs fed diets deficient in Vitamin E and/or Selenium:</p><ul><li><b>Pathogenesis:</b> Free radical accumulation leads to severe peroxidation of sarcoplasmic membranes, loss of cellular Ca<sup>2+</sup> regulation, mitochondrial calcium overload, myofibrillar coagulative necrosis, and calcification.</li><li><b>Lesions &amp; Clinical Signs:</b> Symmetrical bilateral chalky white streaks in skeletal muscles (gluteal, lumbar) and myocardium (particularly right ventricle / Zenker's degeneration). Animals present with stiff gait, recumbency, respiratory distress, and sudden heart failure.</li><li><b>Treatment &amp; Prevention:</b> Combined injection of Sodium Selenite (0.1 mg/kg body wt) and DL-α-tocopheryl acetate (50–100 IU/kg). Supplement maternal ration with 0.1–0.3 ppm Se and 30–50 IU/kg Vitamin E.</li></ul>",
+    "keyPoints": [
+      "Vitamin E protects membrane lipids; Selenium in Glutathione Peroxidase destroys peroxides in cytosol.",
+      "Combined deficiency causes uncontrolled lipid peroxidation and tissue necrosis.",
+      "White Muscle Disease lesions: Zenker's degeneration and calcification of myocardium and skeletal muscle.",
+      "Prevention: Dietary inclusion of 0.1–0.3 ppm Se and adequate Vitamin E."
+    ],
+    "table": null,
+    "pyq": [
+      "TANUVAS 2022",
+      "IVRI Annual 2021",
+      "LUVAS 2023",
+      "DUVASU 2020"
+    ]
+  },
+  {
+    "id": "u1-qa-s03",
+    "type": "short",
+    "marks": 5,
+    "question": "Describe the chemical principles, standard field protocol, and nutritional benefits of Urea Ammoniation of cereal straws.",
+    "topicId": "u1-t20",
+    "answer": "<p><b>Chemical Principle:</b><br>Cereal straws (wheat straw, paddy straw) have poor nutritive value due to extensive lignocellulosic ester bonds and low nitrogen content (CP &lt; 3.5%). In the presence of moisture and urease enzyme present in straw microflora, fertilizer urea is hydrolyzed into ammonia gas and carbon dioxide:<br><code>CO(NH2)2 + H2O --(Urease)--> 2 NH3 + CO2</code>.<br>The released ammonia (NH<sub>3</sub>) solubilizes hemicellulose, cleaves ester linkages between lignin and structural carbohydrates, swells the cellulose microfibrils, and provides nitrogen for rumen microbes.</p><p><b>Standard Field Protocol:</b></p><ol><li><b>Proportion:</b> 4 kg fertilizer-grade urea dissolved in 40 litres of clean water per 100 kg dry chopped straw (maintaining ~40% final moisture).</li><li><b>Application:</b> Spray the urea solution uniformly layer-by-layer onto the straw on a clean platform or pit.</li><li><b>Ensilage / Curing:</b> Compact the treated straw tightly and seal airtight with polythene sheeting or mud plaster.</li><li><b>Incubation Period:</b> Keep sealed for 21 days in tropical summer conditions (or 28–35 days in winter).</li><li><b>Feeding:</b> Aerate for 2–3 hours before feeding to dissipate free pungent ammonia fumes.</li></ol><p><b>Nutritional Improvements:</b></p><ul><li><b>Crude Protein:</b> Boosted from 3.0–3.5% up to <b>7.5–9.0%</b> (more than doubled).</li><li><b>TDN (Energy):</b> Increased by <b>10–12 percentage units</b> (from ~40% to 50–52%).</li><li><b>Voluntary Dry Matter Intake:</b> Enhanced by <b>25–35%</b> due to accelerated rumen cellulolysis and reduced gut retention time.</li></ul>",
+    "keyPoints": [
+      "Formula: 4 kg urea + 40 L water per 100 kg straw (~40% moisture).",
+      "Airtight sealing for 21 days in summer (or 28 days in winter).",
+      "Chemical action: Cleaves lignin-hemicellulose ester bonds and swells cellulose.",
+      "Doubles crude protein (from 3.5% to ~8%) and increases TDN by 10–12%."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "RAJUVAS 2022",
+      "GADVASU 2021",
+      "WBUAFS 2021"
+    ]
+  },
+  {
+    "id": "u1-qa-s04",
+    "type": "short",
+    "marks": 5,
+    "question": "Explain the hormonal regulation of Calcium and Phosphorus homeostasis in dairy cattle.",
+    "topicId": "u1-t09",
+    "answer": "<p>Blood serum calcium (9–11 mg/dL) and inorganic phosphorus (4–7 mg/dL) levels are maintained under tight endocrine control through the coordinated actions of three hormones acting on three primary target organs (bone, kidneys, and gastrointestinal tract):</p><ul><li><b>1. Parathyroid Hormone (PTH):</b><br>Secreted by chief cells of parathyroid glands in response to <b>hypocalcemia</b>.<br>- <i>Bone:</i> Stimulates osteoclasts to increase bone resorption, releasing Ca<sup>2+</sup> and PO<sub>4</sub><sup>3-</sup> into circulation.<br>- <i>Kidney:</i> Enhances tubular reabsorption of Ca<sup>2+</sup>, promotes urinary excretion of phosphorus (phosphaturia), and induces renal 1-α-hydroxylase enzyme to activate Vitamin D.</li><li><b>2. 1,25-Dihydroxycholecalciferol [1,25-(OH)2D3 / Calcitriol]:</b><br>Activated form of Vitamin D synthesized in renal tubules.<br>- <i>Intestine:</i> Induces synthesis of Calbindin-D9k (calcium-binding protein) in enterocytes, greatly stimulating active intestinal absorption of both Calcium and Phosphorus.<br>- <i>Bone:</i> Acts synergistically with PTH to stimulate osteoclastic bone remodeling.</li><li><b>3. Calcitonin:</b><br>Secreted by parafollicular C-cells of the thyroid gland in response to <b>hypercalcemia</b>.<br>- <i>Bone:</i> Inhibits osteoclasts, halting bone resorption.<br>- <i>Kidney:</i> Promotes renal excretion of calcium and phosphate, rapidly returning serum calcium to physiological baseline.</li></ul><p><b>Dietary Ideal:</b> An optimum dietary Ca:P ratio of <b>1.5:1 to 2.0:1</b> is vital. Excessive phosphorus impairs calcium absorption by precipitating insoluble calcium phosphate salts.</p>",
+    "keyPoints": [
+      "Three hormones: PTH (elevates Ca), Calcitriol (enhances intestinal absorption), Calcitonin (lowers Ca).",
+      "Three target organs: Bone (resorption), Kidney (reabsorption/activation), Intestine (absorption).",
+      "Calbindin-D9k synthesis mediated by active Vitamin D.",
+      "Optimum dietary Ca:P ratio is 1.5:1 to 2:1."
+    ],
+    "table": null,
+    "pyq": [
+      "GADVASU 2023",
+      "TANUVAS 2021",
+      "IVRI Annual 2020",
+      "KVAFSU 2022"
+    ]
+  },
+  {
+    "id": "u1-qa-s05",
+    "type": "short",
+    "marks": 5,
+    "question": "Describe the major anti-nutritional factors found in common oilseed cakes and their detoxification.",
+    "topicId": "u1-t23",
+    "answer": "<p>Oilseed cakes are rich protein sources, but their utilization is constrained by specific toxic and anti-nutritional factors:</p><ul><li><b>1. Cottonseed Cake — Gossypol:</b><br>- <i>Toxin:</i> Polyphenolic binaphthyl pigment existing in 'free' (toxic) and 'bound' (non-toxic) forms.<br>- <i>Toxicity:</i> Monogastrics and young ruminants suffer cardiac toxicity, erythrocyte fragility (hemolysis), labored breathing, and impaired male spermatogenesis.<br>- <i>Detoxification:</i> Addition of <b>Ferrous Sulfate (FeSO4)</b> in a 1:1 weight ratio with free gossypol forms an unabsorbable iron-gossypol chelate excreted in feces.</li><li><b>2. Mustard / Rapeseed Cake — Glucosinolates &amp; Erucic Acid:</b><br>- <i>Toxin:</i> Glucosinolates hydrolyzed by endogenous <i>myrosinase</i> enzyme into pungent goitrogenic thiocyanates, isothiocyanates, and nitriles.<br>- <i>Toxicity:</i> Causes thyroid hypertrophy (goitre), depressed iodine uptake, liver damage, and poor palatability.<br>- <i>Detoxification:</i> Water soaking, moisture-heat treatment (deactivates myrosinase), or treatment with 1% copper sulfate.</li><li><b>3. Soybean Meal — Trypsin Inhibitors &amp; Lectins:</b><br>- <i>Toxin:</i> Kunitz and Bowman-Birk protease inhibitors and phytohaemagglutinins.<br>- <i>Toxicity:</i> Irreversibly binds intestinal trypsin and chymotrypsin, leading to poor protein digestibility and compensatory pancreatic hypertrophy.<br>- <i>Detoxification:</i> Readily destroyed by <b>moist heat processing</b> (toasting / autoclaving at 100°C for 20–30 minutes).</li></ul>",
+    "keyPoints": [
+      "Cottonseed: Free gossypol causes cardiotoxicity; detoxified by FeSO4 (1:1 ratio).",
+      "Mustard cake: Glucosinolates cause goitre; detoxified by heat inactivation of myrosinase.",
+      "Soybean: Trypsin inhibitors cause pancreatic hypertrophy; inactivated by moist toasting."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "LUVAS 2021",
+      "RAJUVAS 2023",
+      "DUVASU 2020"
+    ]
+  },
+  {
+    "id": "u1-qa-s06",
+    "type": "short",
+    "marks": 5,
+    "question": "Detail the biochemical phases and microbial fermentation dynamics of Silage Making.",
+    "topicId": "u1-t21",
+    "answer": "<p>Ensilage proceeds through four distinct microbiological and biochemical phases under ideal management:</p><ul><li><b>Phase 1: Aerobic Respiration (Days 0–1):</b><br>Plant enzymes and aerobic epiphytic microbes utilize trapped oxygen to oxidize soluble carbohydrates into CO<sub>2</sub>, water, and heat. Respiration continues until O<sub>2</sub> is exhausted. Rapid filling and tight compaction minimize dry matter loss and overheating.</li><li><b>Phase 2: Anaerobic Acetic Acid Phase (Days 1–3):</b><br>With oxygen depleted, facultative anaerobic enterobacteria ferment water-soluble carbohydrates to acetic acid. The pH declines from 6.0–6.5 to ~5.0. Enterobacteria cease activity as acidity increases.</li><li><b>Phase 3: Lactic Acid Proliferation (Days 3–4):</b><br>Lactic acid bacteria (LAB) such as <i>Streptococcus bovis</i> and <i>Leuconostoc</i> initiate lactic fermentation, followed by acid-tolerant homofermentative lactobacilli (<i>Lactobacillus plantarum</i>).</li><li><b>Phase 4: Stable Lactic Fermentation Phase (Days 4–21):</b><br>Homofermentative LAB vigorously convert hexose sugars exclusively into <b>L-lactic acid</b>. The pH rapidly plunges to <b>3.8–4.2</b>. At this high acidity, all bacterial enzymatic activity (including spoilage clostridia) is arrested. The forage is chemically stabilized and preserves indefinitely if maintained under airtight conditions.</li></ul><p><b>Spoilage Warning:</b> If sealing is defective or initial moisture &gt;75%, <i>Clostridium butyricum</i> proliferates, converting lactic acid into foul-smelling butyric acid and decomposing proteins into toxic amines (cadaverine, putrescine), elevating pH &gt;5.0.</p>",
+    "keyPoints": [
+      "Phase 1: Aerobic respiration exhausting trapped oxygen.",
+      "Phase 2: Acetic acid production by enterobacteria dropping pH to ~5.0.",
+      "Phase 3 & 4: Dominance of homofermentative LAB producing lactic acid.",
+      "Target endpoint: pH 3.8–4.2 arresting all microbial decomposition."
+    ],
+    "table": null,
+    "pyq": [
+      "DUVASU 2022",
+      "IVRI Annual 2021",
+      "TANUVAS 2023",
+      "MAFSU 2020"
+    ]
+  },
+  {
+    "id": "u1-qa-s07",
+    "type": "short",
+    "marks": 5,
+    "question": "Enumerate the modern processing methods of concentrate feeds and their nutritional advantages.",
+    "topicId": "u1-t19",
+    "answer": "<p>Concentrate feed processing alters the physical and chemical state of feedstuffs to enhance voluntary intake, improve nutrient digestibility, and maximize feed conversion efficiency:</p><ul><li><b>1. Pelleting:</b><br>Ground mash is conditioned with steam (80–85°C) and compressed through metal dies. <br><i>Advantages:</i> Prevents selective ingredient sorting by animals, reduces dustiness, increases bulk density, thermally inactivates salmonella and heat-labile ANFs, and enhances intake by 10–15%.</li><li><b>2. Steam Flaking:</b><br>Grains (maize, sorghum) are exposed to low-pressure steam for 20–30 minutes followed by passage between heavy corrugated rollers to create flat flakes.<br><i>Advantages:</i> Completely gelatinizes starch granules (disrupting the protective protein matrix), drastically accelerating ruminal and intestinal enzymatic amylolysis.</li><li><b>3. Extrusion:</b><br>Subjecting feed mixture to high temperature, high pressure, and mechanical shear in an extruder barrel, followed by sudden atmospheric expansion.<br><i>Advantages:</i> 100% starch gelatinization, full destruction of antinutritional trypsin inhibitors in full-fat soya, and ideal for dog/cat pet kibble and floating fish feed.</li><li><b>4. Micronization:</b><br>Exposing grains to infrared radiant heat generated by gas burners followed by rolling.<br><i>Advantages:</i> Rapid intra-molecular heating ruptures starch granules without moisture addition, optimizing energy availability for young calves and pigs.</li></ul>",
+    "keyPoints": [
+      "Pelleting: Steam conditioning and compaction preventing feed selection and reducing wastage.",
+      "Steam flaking: Heat and rolling to gelatinize starch and improve digestibility.",
+      "Extrusion: High-temperature short-time shear producing expanded, pasteurized diets.",
+      "Nutritional benefit: Inactivates ANFs, gelatinizes starch, and improves FCR."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2020",
+      "LUVAS 2022",
+      "KVAFSU 2021"
+    ]
+  },
+  {
+    "id": "u1-qa-s08",
+    "type": "short",
+    "marks": 5,
+    "question": "Describe the clinical signs and pathology of trace mineral deficiencies: Parakeratosis, Swayback, and Perosis.",
+    "topicId": "u1-t10",
+    "answer": "<p>Trace mineral deficiencies produce classic clinicopathological syndromes in specific livestock species:</p><ul><li><b>1. Parakeratosis in Swine (Zinc Deficiency):</b><br>- <i>Etiology:</i> Absolute dietary Zinc deficiency (&lt;50 ppm) or conditioned deficiency caused by excessive dietary Calcium and high phytate levels, which form unabsorbable Ca-Phytate-Zn complexes.<br>- <i>Pathology &amp; Signs:</i> Impaired keratinization of epidermal cells with retention of pyknotic nuclei in the stratum corneum. Manifests as erythematous macules progressing into thick, fissured, crusted, non-pruritic scabs over the snout, ears, hocks, and abdomen, accompanied by growth retardation.</li><li><b>2. Swayback / Enzootic Ataxia in Lambs (Copper Deficiency):</b><br>- <i>Etiology:</i> Congenital or neonatal Copper deficiency, frequently induced by high levels of dietary Molybdenum and Sulfur forming insoluble <i>thiomolybdates</i> in the rumen.<br>- <i>Pathology &amp; Signs:</i> Defective <i>cytochrome oxidase</i> activity leads to failed myelinogenesis and demyelination of the cerebral cortex and spinal cord motor tracts. Lambs show staggering incoordination, muscular weakness in hindquarters, spastic paralysis, and inability to suckle.</li><li><b>3. Perosis / Slipped Tendon in Poultry (Manganese Deficiency):</b><br>- <i>Etiology:</i> Deficiency of Manganese (Mn &lt; 30 ppm), exacerbated by excess dietary Ca/P or secondary deficiency of Choline and Biotin.<br>- <i>Pathology &amp; Signs:</i> Defective glycosaminoglycan synthesis in chondrocytes leads to failure of epiphyseal cartilage maturation. The distal end of the tibiotarsus and proximal tarsometatarsus become enlarged and deformed, causing the <b>gastrocnemius tendon to slip laterally from its condyle</b>. Birds become completely crippled.</li></ul>",
+    "keyPoints": [
+      "Parakeratosis: Zinc deficiency in pigs causing hyperkeratinized fissured crusts.",
+      "Swayback: Copper/Molybdenum imbalance in lambs causing demyelination of spinal tracts.",
+      "Perosis: Manganese deficiency in chicks causing slipped gastrocnemius tendon."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2022",
+      "RAJUVAS 2021",
+      "TANUVAS 2023",
+      "DUVASU 2021"
+    ]
+  },
+  {
+    "id": "u1-qa-l01",
+    "type": "long",
+    "marks": 12,
+    "question": "Give a detailed account of Energy Partitioning in farm animals. Discuss direct vs indirect calorimetry and the Carbon-Nitrogen balance technique.",
+    "topicId": "u1-t14",
+    "answer": "<p>Energy is the quantitative capacity to perform biological work. Unlike individual chemical nutrients, energy is a property of organic matter (carbohydrates, fats, and proteins). Understanding energy partitioning is essential to predict animal performance and formulate balanced rations.</p><h3>1. The Energy Partitioning Flow Scheme</h3><pre>GROSS ENERGY (GE)\n  │\n  ├── Minus: Fecal Energy (FE) [Largest single loss: 20-50%]\n  ▼\nDIGESTIBLE ENERGY (DE)\n  │\n  ├── Minus: Urinary Energy (UE) [2-5% in monogastrics, 4-8% in ruminants]\n  ├── Minus: Gaseous Energy (Combustible Gases: Methane, CH4) [6-10% in ruminants]\n  ▼\nMETABOLIZABLE ENERGY (ME)\n  │\n  ├── Minus: Heat Increment (HI) [Heat of nutrient metabolism + Heat of fermentation]\n  ▼\nNET ENERGY (NE)\n  ├── Net Energy for Maintenance (NEm): Basal metabolism, thermal regulation, activity\n  └── Net Energy for Production (NEp): Milk, meat, wool, egg, draft work</pre><ul><li><b>Fecal Energy:</b> Represents undigested feed residue plus metabolic fecal energy (sloughed intestinal cells, bile pigments, digestive enzymes, bacterial mass).</li><li><b>Urinary Energy:</b> Chemical energy lost in incompletely oxidized nitrogenous end-products (urea in mammals, uric acid in poultry).</li><li><b>Gaseous Energy:</b> Combustible gases produced by enteric microbial fermentation, primarily methane (CH<sub>4</sub> = 13.34 kcal/g) and trace hydrogen.</li><li><b>Heat Increment (HI / Specific Dynamic Action):</b> The heat production of a fed animal above that of a fasting animal under thermo-neutral conditions. It comprises: (a) heat of microbial fermentation, (b) heat of digestive mastication and propulsion, and (c) heat of nutrient assimilation and biochemical synthesis.</li></ul><h3>2. Methods of Measuring Animal Heat Production (Calorimetry)</h3><h4>A. Direct Calorimetry</h4><p>Measures the actual physical heat released by the animal's body directly inside an insulated chamber.</p><ul><li><b>Types:</b> Water flow calorimeter (heat measured by water temperature rise: <code>Heat = Mass of water × Specific Heat × Temp rise</code>), latent heat loss measured via condensation traps, or gradient-layer calorimeters.</li><li><i>Limitations:</i> Mechanically complex, costly, cumbersome, and restrictive of normal animal behavioral movements.</li></ul><h4>B. Indirect Calorimetry</h4><p>Determines heat production indirectly by calculating the respiratory exchange of respiratory gases (Oxygen consumed, Carbon dioxide produced, and Methane exhaled), based on the principle that all metabolic heat results from biological oxidations:</p><ul><li><b>Open-Circuit Respiration Chamber:</b> Animal inhales fresh ambient outdoor air; total volume of expired air is metered and continuously analyzed for O<sub>2</sub>, CO<sub>2</sub>, and CH<sub>4</sub>.</li><li><b>Brouwer's Standard Equation (1965):</b><br><code>Heat Production (kcal) = 3.866 × O2 (L) + 1.200 × CO2 (L) - 0.518 × CH4 (L) - 1.431 × Urinary N (g)</code></li><li><b>Respiratory Quotient (RQ):</b> Ratio of CO<sub>2</sub> produced to O<sub>2</sub> consumed (<code>RQ = CO2 / O2</code>). Carbohydrate oxidation RQ = 1.0; Fat RQ = 0.70; Protein RQ = 0.81.</li></ul><h4>C. Carbon-Nitrogen Balance Technique</h4><p>Measures the exact intake and excretion of Carbon and Nitrogen over a test period in a respiration chamber:</p><ul><li><b>Nitrogen Balance:</b> Determines protein retention: <code>Protein Stored (g) = N Balance (g) × 6.25</code>.</li><li><b>Carbon Balance:</b> Protein contains 52.54% Carbon. The carbon stored as protein is deducted from total carbon balance: <code>Fat Carbon (g) = Total C Balance - (Stored Protein × 0.5254)</code>. Since body fat contains 76.5% Carbon: <code>Fat Stored (g) = Fat Carbon / 0.765</code>.</li><li><b>Total Energy Retained (RE):</b> <code>RE (kcal) = [Stored Protein (g) × 5.65] + [Stored Fat (g) × 9.40]</code>.</li><li><b>Heat Production:</b> Calculated by difference: <code>Heat Production = ME Intake - Retained Energy (RE)</code>.</li></ul>",
+    "keyPoints": [
+      "Complete flow diagram: GE -> DE -> ME -> NE (NEm and NEp).",
+      "Definitions of Fecal, Urinary, Methane, and Heat Increment losses.",
+      "Direct calorimetry measures physical heat directly; indirect measures respiratory gas exchange.",
+      "Brouwer's formula stated correctly.",
+      "Carbon-Nitrogen balance calculation: determines protein and fat retention to deduce heat production."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "GADVASU 2022",
+      "TANUVAS 2021",
+      "RAJUVAS 2020"
+    ]
+  },
+  {
+    "id": "u1-qa-l02",
+    "type": "long",
+    "marks": 12,
+    "question": "Comprehensive evaluation of protein quality in ruminants and monogastrics: Discuss Chemical Score, BV, PER, NPU, and the modern RDP-RUP / Metabolizable Protein (MP) system.",
+    "topicId": "u1-t06",
+    "answer": "<p>Protein quality refers to the ability of a dietary protein to provide the required proportions and quantities of physiologically essential amino acids to animal tissues. Evaluation techniques differ fundamentally between monogastric animals and ruminants due to ruminal microbial protein transformation.</p><h3>1. Classical Evaluation Methods for Monogastrics</h3><ul><li><b>A. Chemical Score (A/E Ratio / Amino Acid Score):</b><br>Compares the content of each essential amino acid in the test protein against that of an ideal reference protein (egg protein or milk protein):<br><code>Chemical Score = [ mg of amino acid per g test protein / mg of same amino acid per g reference protein ] × 100</code>.<br>The amino acid showing the lowest percentage is designated the <b>First Limiting Amino Acid</b>, and its score represents the Chemical Score of the protein.</li><li><b>B. Biological Value (BV):</b><br>Measures the efficiency of absorbed nitrogen retention in the body using the Thomas-Mitchell nitrogen balance technique: <code>BV (%) = [ Retained N / Absorbed N ] × 100</code>. Values range from 90–95% for whole egg to 60–70% for cereal grains.</li><li><b>C. Protein Efficiency Ratio (PER):</b><br>Standardized biological growth assay using young weanling rats: <code>PER = Weight Gain (g) / Protein Consumed (g)</code>. Widely used in industry but assumes all weight gain is protein tissue without accounting for maintenance needs.</li><li><b>D. Net Protein Utilization (NPU):</b><br>Calculated as: <code>NPU (%) = BV × True Digestibility (%) = (Retained N / Ingested N) × 100</code>. Directly evaluates the proportion of consumed dietary nitrogen retained by the body.</li></ul><h3>2. Modern Protein Evaluation in Ruminants (The Metabolizable Protein System)</h3><p>In ruminants, classical measures like Crude Protein (CP = N × 6.25) and Digestible Crude Protein (DCP) are fundamentally flawed because ingested protein is drastically modified by rumen microflora. The modern <b>Metabolizable Protein (MP)</b> system (NRC 2001, ARC, AFRC) partitions dietary protein into two components:</p><ul><li><b>A. Rumen Degradable Protein (RDP):</b><br>Hydrolyzed in the rumen by microbial proteases and deaminases into peptides, free amino acids, and ammonia (NH<sub>3</sub>). Rumen microbes utilize NH<sub>3</sub>, carbon skeletons (from carbohydrate fermentation), and ATP to synthesize <b>Microbial Crude Protein (MCP)</b>.<br>- <i>Efficiency of Synthesis:</i> Under balanced conditions, rumen microbes produce approximately <b>130 g of microbial CP per kg of Total Digestible Nutrients (TDN)</b> or 30 g MCP / kg Fermentable Organic Matter (FOM).<br>- <i>Quality of MCP:</i> Microbial protein has an exceptionally high biological value (BV ≈ 80–85%) with an amino acid profile remarkably similar to animal tissue and milk.</li><li><b>B. Rumen Undegradable Protein (RUP / Bypass Protein):</b><br>The dietary protein fraction that resists ruminal fermentation, passing intact into the abomasum and duodenum where it undergoes host acid-pepsin and pancreatic proteolysis into amino acids.</li><li><b>C. Metabolizable Protein (MP) Concept:</b><br>MP is the total quantity of true, digestible amino acids absorbed by the animal's post-ruminal small intestine. It consists of two components:<br><code>Total MP = (Digestible Microbial True Protein) + (Digestible RUP Amino Acids)</code>.<br>- Microbial crude protein is ~80% true protein and ~20% nucleic acids; true microbial protein is ~80% digestible.<br>- RUP true protein digestibility ranges from 70–90% depending on the feed source.</li></ul><h3>3. Comparative Summary Matrix</h3><p>While monogastrics require specific dietary preformed essential amino acids (Lysine, Methionine, Threonine), ruminants can thrive on inferior non-protein nitrogen (urea) and poor-quality proteins because rumen microbes synthesize a high-quality amino acid mixture. However, in high-yielding dairy cows (&gt;15–20 kg milk/day), microbial synthesis alone cannot meet the massive amino acid demand for milk casein; thus, 35–40% high-quality dietary bypass protein (RUP) is mandatory.</p>",
+    "keyPoints": [
+      "Monogastric systems: Chemical score, First limiting amino acid, BV, PER, and NPU.",
+      "Ruminant paradigm shift: CP and DCP superseded by Metabolizable Protein (MP) system.",
+      "RDP vs RUP mechanisms explained in depth.",
+      "MCP synthesis kinetics: ~130 g MCP per kg TDN; BV of microbial protein 80–85%.",
+      "Equation: Total MP = Digestible Microbial True Protein + Digestible RUP."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2022",
+      "GADVASU 2021",
+      "LUVAS 2020"
+    ]
+  },
+  {
+    "id": "u1-qa-l03",
+    "type": "long",
+    "marks": 12,
+    "question": "Give an exhaustive account of the Fat-Soluble Vitamins (A, D, E, K): Chemical nature, physiological functions, specific deficiency syndromes, and hypervitaminosis in livestock and poultry.",
+    "topicId": "u1-t11",
+    "answer": "<p>Fat-soluble vitamins (A, D, E, and K) are isoprenoid lipid compounds that are digested and absorbed in the intestine in association with dietary fats and bile salts, and are capable of being stored in substantial quantities in animal tissues (predominantly the liver and adipose tissue).</p><h3>1. Vitamin A (Retinol / β-Carotene)</h3><ul><li><b>Chemistry:</b> Provitamin β-carotene (found in green plants) is cleaved in intestinal mucosa by β-carotene-15,15'-dioxygenase into retinaldehyde and reduced to retinol. (Cats lack this enzyme).</li><li><b>Functions:</b> Rhodopsin synthesis in retinal rods for scotopic vision; maintenance of differentiated epithelial architecture (glycoprotein synthesis); osteoblastic/osteoclastic bone remodeling; immune competence.</li><li><b>Deficiency Signs:</b><br>- <i>Vision:</i> Nyctalopia (night blindness), xerophthalmia, corneal ulceration, and constriction of the optic nerve canal causing permanent blindness in growing calves.<br>- <i>Epithelium:</i> Squamous metaplasia of columnar mucous membranes leading to secondary respiratory infections, diarrhea, and urolithiasis.<br>- <i>Reproduction:</i> Infertility, embryonic death, abortion, retained placenta, and birth of blind/weak calves.</li><li><b>Hypervitaminosis A:</b> Skeletal exostoses, bone fragility, congenital cleft palate.</li></ul><h3>2. Vitamin D (Cholecalciferol - D3 / Ergocalciferol - D2)</h3><ul><li><b>Chemistry:</b> 7-dehydrocholesterol in skin is photolyzed by UV light to Cholecalciferol (D<sub>3</sub>), hydroxylated in liver to 25-(OH)D<sub>3</sub>, and finally activated in renal tubules to 1,25-(OH)<sub>2</sub>D<sub>3</sub> (Calcitriol). Poultry cannot utilize D<sub>2</sub> effectively.</li><li><b>Functions:</b> Active intestinal absorption of Calcium and Phosphorus by inducing Calbindin-D synthesis; bone mineralization.</li><li><b>Deficiency Signs:</b><br>- <b>Rickets</b> in young growing animals: Defective endochondral ossification, swollen epiphyseal joints, rosary bead ribs, bow legs, rubbery bones.<br>- <b>Osteomalacia</b> in adult animals: Demineralization of mature cortical bone, bone softening, pelvic fractures.<br>- <i>Poultry:</i> Soft, rubbery beaks and thin-shelled/shell-less eggs.</li><li><b>Hypervitaminosis D:</b> Extensive metastatic calcification of soft tissues (aorta, kidneys, lungs).</li></ul><h3>3. Vitamin E (α-Tocopherol)</h3><ul><li><b>Chemistry:</b> D-α-tocopherol is the most biologically active isomer; functions as a lipid-soluble chain-breaking antioxidant in cell membranes.</li><li><b>Functions:</b> Protects membrane polyunsaturated fatty acids from peroxidative breakdown; maintains capillary integrity; supports fertility.</li><li><b>Deficiency Signs:</b><br>- <i>Ruminants:</i> Nutritional Muscular Dystrophy (White Muscle Disease / Stiff Lamb Disease) showing Zenker's degeneration of myocardium and skeletal muscle.<br>- <i>Poultry:</i> Crazy Chick Disease (Nutritional Encephalomalacia: ataxia, head retraction, cerebellar hemorrhage), Exudative Diathesis (subcutaneous green oedema), and Muscular Dystrophy.<br>- <i>Swine:</i> Mulberry Heart Disease (acute hemorrhagic cardiomyopathy) and Hepatosis Dietetica.</li></ul><h3>4. Vitamin K (Phylloquinone - K1 / Menaquinone - K2 / Menadione - K3)</h3><ul><li><b>Chemistry:</b> K<sub>1</sub> (plants), K<sub>2</sub> (microbial synthesis in gut/rumen), K<sub>3</sub> (synthetic, water-soluble).</li><li><b>Functions:</b> Essential cofactor for microsomal <i>γ-glutamyl carboxylase</i> which converts glutamic acid residues to γ-carboxyglutamic acid (Gla) on blood clotting factors <b>II (Prothrombin), VII, IX, and X</b>, enabling them to bind Ca<sup>2+</sup> and initiate the coagulation cascade.</li><li><b>Deficiency Signs:</b> Prolonged blood clotting time, subcutaneous and internal hemorrhages, hematomas, and fatal exsanguination. Induced by Sweet Clover Poisoning (dicoumarol antagonist) or sulfa drug administration destroying intestinal microflora.</li></ul>",
+    "keyPoints": [
+      "Vitamin A: Retinol vs β-carotene; night blindness, epithelial metaplasia, optic nerve constriction.",
+      "Vitamin D: Activation pathway (Skin -> Liver -> Kidney); Rickets vs Osteomalacia.",
+      "Vitamin E: Antioxidant; White Muscle Disease, Encephalomalacia, Mulberry Heart.",
+      "Vitamin K: γ-carboxylation of clotting factors II, VII, IX, X; Sweet clover dicoumarol toxicity."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "DUVASU 2021",
+      "RAJUVAS 2022",
+      "GADVASU 2020"
+    ]
+  },
+  {
+    "id": "u1-qa-l04",
+    "type": "long",
+    "marks": 12,
+    "question": "Provide a comprehensive comparative treatise on Forage Conservation: Silage Making vs Hay Making. Include suitable crops, biochemical changes, conservation losses, and quality evaluation criteria.",
+    "topicId": "u1-t21",
+    "answer": "<p>Forage conservation is the essential practice of preserving surplus green fodder produced during flush seasons (monsoon/spring) to sustain livestock during severe seasonal fodder deficits (summer and winter). The two primary technologies are <b>Silage Making</b> (succulent anaerobic fermentation) and <b>Hay Making</b> (controlled dehydration).</p><h3>1. Comparative Analysis Matrix</h3>",
+    "keyPoints": [
+      "Suitable crops: Silage requires high soluble sugars (maize/sorghum); Hay requires thin stems and high protein (berseem/lucerne).",
+      "Biochemical mechanisms: Anaerobic lactic acid fermentation vs dehydration below 15% moisture.",
+      "Losses: Fermentation/seepage losses in silage vs shattering/bleaching/leaching losses in hay.",
+      "Quality scoring: Flieg's score for silage; sensory and moisture tests for hay."
+    ],
+    "table": {
+      "title": "Comprehensive Comparison of Silage Making vs Hay Making",
+      "headers": [
+        "Evaluation Criteria",
+        "Silage Making (Ensilage)",
+        "Hay Making"
+      ],
+      "rows": [
+        [
+          "Ideal Crop Types",
+          "Thick-stemmed crops rich in Water Soluble Carbohydrates: Maize, Sorghum, Pearl Millet",
+          "Thin-stemmed, leafy leguminous crops rich in protein: Berseem, Lucerne, Oats"
+        ],
+        [
+          "Harvesting Stage",
+          "Milking to dough stage (optimal sugar and dry matter content)",
+          "Pre-flowering to early bloom stage (highest leaf-to-stem ratio)"
+        ],
+        [
+          "Moisture Dynamics",
+          "Ensiled at 65–70% moisture; requires no weather dependence",
+          "Dehydrated from 80–85% down to safe moisture < 15% (weather-dependent)"
+        ],
+        [
+          "Preservation Principle",
+          "Controlled anaerobic fermentation by lactic acid bacteria (LAB) yielding pH 3.8–4.2",
+          "Rapid desiccation halting cellular respiration and inhibiting bacterial/fungal growth"
+        ],
+        [
+          "Types of Field Losses",
+          "Seepage loss, gaseous fermentation loss, and surface aerobic spoilage",
+          "Shattering of brittle leaves (loss of carotene/CP), bleaching (UV loss), rain leaching"
+        ],
+        [
+          "Carotene Retention",
+          "High retention (up to 80% carotene preserved due to anaerobic state)",
+          "Substantial carotene loss (up to 75–90% destroyed by solar photolysis)"
+        ],
+        [
+          "Storage Requirements",
+          "Airtight silo pit, bunker, or wrapped plastic bale (anaerobiosis crucial)",
+          "Elevated, well-ventilated dry barn or covered stack protected from rain"
+        ],
+        [
+          "Quality Index",
+          "Flieg's Score (based on pH, lactic vs butyric acid ratio)",
+          "Sensory score: green color, sweet aroma, leafy texture, absence of mold"
+        ]
+      ]
+    },
+    "pyq": [
+      "IVRI Annual 2023",
+      "TANUVAS 2022",
+      "GADVASU 2021",
+      "WBUAFS 2020"
+    ]
+  },
+  {
+    "id": "u1-qa-l05",
+    "type": "long",
+    "marks": 12,
+    "question": "Discuss Toxic Principles and Anti-Nutritional Factors (ANFs) in livestock feeds: Classification, mode of toxicity, pathology, and practical detoxification techniques.",
+    "topicId": "u1-t23",
+    "answer": "<p>Anti-nutritional factors (ANFs) are diverse chemical substances synthesized by plants as natural chemical warfare agents to deter herbivorous grazing and insect pests. When ingested by livestock, they depress feed intake, impair digestive enzyme activity, damage mucosal surfaces, or induce lethal toxicity.</p><h3>1. Classification of Major Anti-Nutritional Factors</h3><ul><li><b>A. Protease Inhibitors:</b> Kunitz and Bowman-Birk trypsin/chymotrypsin inhibitors in raw soybean meal.</li><li><b>B. Phytohaemagglutinins (Lectins):</b> Glycoproteins in kidney beans and castor seeds (ricin) that bind mucosal enterocytes.</li><li><b>C. Polyphenolic Compounds:</b> Condensed and hydrolysable tannins in salseed meal, sorghum grains, and tree leaves.</li><li><b>D. Phytates (Inositol Hexaphosphate):</b> Chelating agents in cereal grains and oilseed by-products.</li><li><b>E. Cyanogenic Glycosides:</b> Dhurrin in immature sorghum (jowar), Linamarin in linseed meal, and Amygdalin in cassava.</li><li><b>F. Alkaloids and Specific Toxins:</b> Free Gossypol in cottonseed, Mimosine in <i>Leucaena leucocephala</i>, Oxalates in hybrid napier grass.</li><li><b>G. Mycotoxins:</b> Aflatoxins (<i>Aspergillus flavus</i>), Ochratoxins, T-2 toxin, and Zearalenone.</li></ul><h3>2. Modes of Action and Clinical Pathology</h3><ul><li><b>Cyanogenic Glycosides (HCN / Prussic Acid Toxicity):</b><br>- Immature sorghum stressed by drought contains the glucoside <i>dhurrin</i>, hydrolyzed by plant <i>linamarase</i> upon mastication into lethal free Hydrogen Cyanide (HCN).<br>- <i>Pathology:</i> Cyanide binds ferric (Fe<sup>3+</sup>) iron of mitochondrial <b>Cytochrome Oxidase</b>, halting cellular aerobic respiration. Blood remains fully oxygenated, causing bright cherry-red mucous membranes, severe respiratory asphyxiation, tremors, and rapid death within 15–30 minutes.<br>- <i>Antidote:</i> IV injection of Sodium Nitrite (3 g) followed by Sodium Thiosulfate (15 g in 200 mL water) to form non-toxic sodium thiocyanate.</li><li><b>Tannins:</b><br>- Form stable, indigestible cross-linkages with dietary proteins and digestive proteases; astringent taste reduces feed intake; damages ruminal epithelium.</li><li><b>Mimosine (Subabul):</b><br>- Non-protein amino acid in <i>Leucaena</i> hydrolyzed in the rumen to 3,4-dihydroxypyridine (3,4-DHP), a potent goitrogen causing alopecia, thyroid hyperplasia, and poor growth. Controlled by inoculating ruminants with the rumen bacterium <i>Synergistes jonesii</i>.</li><li><b>Aflatoxins (Aflatoxin B1):</b><br>- Metabolized by liver cytochrome P450 into 8,9-epoxide, binding DNA and inducing hepatic centrilobular necrosis, biliary hyperplasia, coagulopathy, immune suppression, and excretion of carcinogenic Aflatoxin M1 in dairy milk.</li></ul><h3>3. Practical Physicochemical Detoxification Methods</h3><ul><li><b>Thermal Processing:</b> Autoclaving, extrusion, and toasting completely denature heat-labile protease inhibitors and lectins in soybean.</li><li><b>Chemical Ammoniation:</b> Treatment of straw or oilseed cakes with 2–4% aqueous ammonia or urea destroys aflatoxins and detoxifies glucosinolates.</li><li><b>Mineral Supplementation:</b> Inclusion of Ferrous Sulfate (1:1 Fe to free gossypol) detoxifies cottonseed; adding 0.5–1.0% dicalcium phosphate/calcium carbonate neutralizes oxalates.</li><li><b>Mycotoxin Binders:</b> Inclusion of Hydrated Sodium Calcium Aluminosilicate (HSCAS - 0.2%) or yeast cell wall glucomannans (MOS) in feed tightly adsorbs aflatoxins in the intestinal lumen, preventing absorption.</li></ul>",
+    "keyPoints": [
+      "Comprehensive classification covering all 7 major categories.",
+      "Detailed toxicology of Cyanide (HCN): Cytochrome oxidase inhibition, cherry red blood, nitrite-thiosulfate antidote.",
+      "Pathology of Mimosine, Tannins, and Aflatoxins.",
+      "Detoxification methods: Moist toasting, FeSO4 chelation, ammoniation, HSCAS binders."
+    ],
+    "table": null,
+    "pyq": [
+      "IVRI Annual 2023",
+      "DUVASU 2022",
+      "GADVASU 2021",
+      "TANUVAS 2020"
+    ]
+  }
+]
