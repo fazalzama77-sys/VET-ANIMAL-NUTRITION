@@ -3613,6 +3613,65 @@
 }
 .install-close:hover { color: var(--text); background: var(--surface-hover); }
 
+/* Topbar install button */
+.topbar__install {
+  color: var(--accent);
+  background: var(--accent-soft, rgba(21, 101, 192, 0.08));
+  border-radius: var(--r-full);
+  transition: all var(--dur-fast) var(--ease);
+}
+.topbar__install:hover {
+  background: var(--accent);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* PWA App card in Settings / Me */
+.pwa-card {
+  border-left: 4px solid var(--accent);
+}
+.pwa-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: var(--surface-2, rgba(21, 101, 192, 0.04));
+  border: 1px solid var(--border);
+  margin-top: 12px;
+}
+.pwa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  border-radius: var(--r-full);
+  background: rgba(46, 125, 50, 0.12);
+  color: #2e7d32;
+}
+.pwa-badge.pwa-badge--app {
+  background: rgba(21, 101, 192, 0.12);
+  color: var(--accent);
+}
+.pwa-badge::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.pwa-btn-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
 
 
 /* ============================================================

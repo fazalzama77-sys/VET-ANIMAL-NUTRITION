@@ -7,7 +7,22 @@
 <meta name="description" content="A complete study companion for B.V.Sc second-year Animal Nutrition: four theory units, four practical units, question bank, quizzes and progress dashboard. Works offline.">
 <meta name="theme-color" content="#1565c0">
 
+<!-- Progressive Web App (PWA) & Mobile Meta Tags -->
+<meta name="application-name" content="Animal Nutrition">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Animal Nutrition">
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-TileColor" content="#1565c0">
+<meta name="msapplication-TileImage" content="images/icon-192.png">
+
+<!-- Web App Manifest & Device Icons -->
 <link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231565c0'/><text x='16' y='22' font-size='16' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'>AN</text></svg>">
 
 <!-- Theme must be applied before first paint to avoid a white flash -->
@@ -108,6 +123,10 @@
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
         <span>Search topics…</span>
         <kbd>Ctrl K</kbd>
+      </button>
+
+      <button class="iconbtn topbar__install" id="installbtn" aria-label="Install App on Device" title="Install App on Device" style="display:none;" onclick="app.triggerInstall()">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       </button>
 
       <button class="iconbtn" id="themebtn" aria-label="Toggle theme"></button>
@@ -276,10 +295,26 @@
     }, { passive: true });
   })();
 
-  /* ---- Service worker: offline support ---- */
+  /* ---- Service worker: 100% offline PWA support ---- */
   if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
     window.addEventListener("load", function () {
-      navigator.serviceWorker.register("service-worker.js").catch(function () {});
+      navigator.serviceWorker.register("service-worker.js", { scope: "./" })
+        .then(function (reg) {
+          reg.addEventListener("updatefound", function () {
+            var newWorker = reg.installing;
+            if (!newWorker) return;
+            newWorker.addEventListener("statechange", function () {
+              if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+                if (window.app && app.toast) {
+                  app.toast("App updated. All content ready offline!");
+                }
+              }
+            });
+          });
+        })
+        .catch(function (err) {
+          console.warn("[PWA] ServiceWorker registration:", err);
+        });
     });
   }
 </script>

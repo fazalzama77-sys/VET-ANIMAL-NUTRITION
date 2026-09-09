@@ -83,6 +83,9 @@ var app = (function () {
     atom:      '<circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(150 12 12)"/>',
     cycle:     '<path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>',
     flask:     '<path d="M10 2v5.5L4.5 18A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.8-3L14 7.5V2"/><path d="M8.5 2h7M7 14.5h10"/>',
+    phone:     '<rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>',
+    refresh:   '<path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/>',
+    offline:   '<line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.56 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/>',
   };
 
   function icon(name, cls) {
@@ -2077,41 +2080,64 @@ var app = (function () {
   }
 
   /* ============================================================
-     PWA INSTALL BANNER
+     PWA INSTALL & OFFLINE ENGINE
      ============================================================ */
-  var INSTALL_DISMISS_KEY = "vbioc-install-dismissed";
+  var INSTALL_DISMISS_KEY = "vanut-install-dismissed";
   var deferredInstallPrompt = null;
+
+  function isAppInstalled() {
+    return (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) ||
+           (window.navigator && window.navigator.standalone === true);
+  }
 
   function setupInstallPrompt() {
     window.addEventListener("beforeinstallprompt", function (e) {
       e.preventDefault();
       deferredInstallPrompt = e;
-      if (localStorage.getItem(INSTALL_DISMISS_KEY) === "1") return;
-      if (store.getVisits() < 2) return;
-      setTimeout(showInstallBanner, 1500);
+
+      var topbarBtn = el("#installbtn");
+      if (topbarBtn && !isAppInstalled()) {
+        topbarBtn.style.display = "inline-flex";
+      }
+
+      if (localStorage.getItem(INSTALL_DISMISS_KEY) !== "1" && !isAppInstalled()) {
+        setTimeout(showInstallBanner, 1500);
+      }
+
+      if (state.section === "me") renderMe();
     });
 
     window.addEventListener("appinstalled", function () {
       hideInstallBanner();
-      toast("Animal Nutrition Studio installed!");
+      var topbarBtn = el("#installbtn");
+      if (topbarBtn) topbarBtn.style.display = "none";
+      toast("Animal Nutrition Studio installed to home screen!");
+      if (state.section === "me") renderMe();
     });
 
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    var isStandalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || (window.navigator && window.navigator.standalone === true);
-    if (isIOS && !isStandalone && localStorage.getItem(INSTALL_DISMISS_KEY) !== "1" && store.getVisits() >= 2) {
-      setTimeout(showInstallBanner, 2000);
+    if (isIOS && !isAppInstalled()) {
+      var topbarBtn = el("#installbtn");
+      if (topbarBtn) topbarBtn.style.display = "inline-flex";
+      if (localStorage.getItem(INSTALL_DISMISS_KEY) !== "1") {
+        setTimeout(showInstallBanner, 2000);
+      }
     }
   }
 
   function showInstallBanner() {
+    if (isAppInstalled()) return;
     var b = el("#install-banner");
     if (!b) return;
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (isIOS) {
       var msg = b.querySelector(".install-msg");
-      if (msg) msg.innerHTML = "Install Animal Nutrition Studio: tap <b>Share</b>, then <b>Add to Home Screen</b>.";
+      if (msg) msg.innerHTML = "Install <b>Animal Nutrition Studio</b>: tap <b>Share</b>, then <b>Add to Home Screen</b>.";
       var btn = b.querySelector(".install-btn");
-      if (btn) btn.style.display = "none";
+      if (btn) {
+        btn.textContent = "How to Install";
+        btn.onclick = function () { triggerInstall(); };
+      }
     }
     b.style.display = "flex";
     requestAnimationFrame(function () { b.classList.add("install-shown"); });
@@ -2125,25 +2151,81 @@ var app = (function () {
   }
 
   function triggerInstall() {
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      showIosInstallGuide();
+      return;
+    }
     if (!deferredInstallPrompt) {
-      toast("Tap browser menu (\u22EE or share) \u2192 'Install app' or 'Add to Home Screen'");
+      toast("Tap browser menu (\u22EE) \u2192 'Install app' or 'Add to Home screen'");
       return;
     }
     try {
       deferredInstallPrompt.prompt();
       deferredInstallPrompt.userChoice.then(function (choice) {
         if (choice && choice.outcome === "accepted") {
-          toast("Installing app…");
+          toast("Installing Animal Nutrition Studio…");
         }
+        deferredInstallPrompt = null;
       });
-    } catch (e) { console.warn(e); }
-    deferredInstallPrompt = null;
+    } catch (e) {
+      console.warn(e);
+      toast("Tap browser menu (\u22EE) \u2192 'Install app'");
+    }
     hideInstallBanner();
+  }
+
+  function showIosInstallGuide() {
+    var existing = el("#ios-install-guide");
+    if (existing) existing.remove();
+    var modal = document.createElement("div");
+    modal.id = "ios-install-guide";
+    modal.className = "onboard-modal";
+    modal.style.display = "flex";
+    modal.innerHTML =
+      '<div class="onboard-card" style="max-width:440px; text-align:left; border-top:4px solid var(--accent);">' +
+        '<div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">' +
+          '<img src="images/icon-192.png" style="width:48px; height:48px; border-radius:12px; box-shadow:var(--shadow-sm);" alt="App Icon">' +
+          '<div>' +
+            '<h3 style="margin:0; font-size:17px; color:var(--text);">Install on iPhone / iPad</h3>' +
+            '<span class="small faint">100% offline access right from your home screen</span>' +
+          '</div>' +
+        '</div>' +
+        '<ol style="padding-left:20px; line-height:1.75; font-size:14px; margin:0 0 16px 0; color:var(--text);">' +
+          '<li>Open this site in <b>Safari</b>.</li>' +
+          '<li>Tap the <b>Share</b> button <span style="display:inline-block; font-size:16px;">⎋</span> at the bottom of Safari.</li>' +
+          '<li>Scroll down in the share sheet and tap <b>Add to Home Screen</b>.</li>' +
+          '<li>Tap <b>Add</b> at the top right to finish!</li>' +
+        '</ol>' +
+        '<div style="text-align:right;">' +
+          '<button class="btn btn--primary" onclick="document.getElementById(\'ios-install-guide\').remove()">Understood</button>' +
+        '</div>' +
+      '</div>';
+    modal.onclick = function (e) { if (e.target === modal) modal.remove(); };
+    document.body.appendChild(modal);
   }
 
   function dismissInstall() {
     localStorage.setItem(INSTALL_DISMISS_KEY, "1");
     hideInstallBanner();
+  }
+
+  function resetCache() {
+    if ("caches" in window) {
+      caches.keys().then(function (names) {
+        return Promise.all(names.map(function (name) { return caches.delete(name); }));
+      }).then(function () {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            regs.forEach(function (r) { r.update(); });
+          });
+        }
+        toast("Cache refreshed. Reloading...");
+        setTimeout(function () { window.location.reload(); }, 600);
+      });
+    } else {
+      window.location.reload();
+    }
   }
 
   function wireTopicActions(t) {
@@ -3511,6 +3593,22 @@ var app = (function () {
         '</div>' +
       '</div>' +
 
+      '<div class="card pwa-card mb-4">' +
+        '<h3>' + icon("phone") + ' Offline App & Installation</h3>' +
+        '<p class="muted mt-2">Animal Nutrition Studio is an offline-first Progressive Web App (PWA). You can install it directly on your Android phone, iPhone, iPad, or PC to study anytime with zero internet connection.</p>' +
+        '<div class="pwa-status-row">' +
+          '<div>' +
+            '<div style="font-weight:600; font-size:var(--fs-sm);">' + (isAppInstalled() ? "App Status: Installed on Device" : "App Status: 100% Offline Compatible") + '</div>' +
+            '<div class="small faint mt-1">' + (isAppInstalled() ? "Running in standalone mode directly from your home screen." : "Service worker active · All 4 theory units, practicals, Q&A, and quizzes cached.") + '</div>' +
+          '</div>' +
+          '<span class="pwa-badge' + (isAppInstalled() ? " pwa-badge--app" : "") + '">' + (isAppInstalled() ? "Installed App" : "Offline Ready") + '</span>' +
+        '</div>' +
+        '<div class="pwa-btn-group">' +
+          (!isAppInstalled() ? '<button class="btn btn--primary" onclick="app.triggerInstall()">' + icon("download") + ' Install on Phone / PC</button>' : '') +
+          '<button class="btn" onclick="app.resetCache()">' + icon("refresh") + ' Refresh Offline Cache</button>' +
+        '</div>' +
+      '</div>' +
+
       '<div class="card mb-4">' +
         '<h3>' + icon("download") + ' Backup and restore</h3>' +
         '<p class="muted mt-2">Your progress, notes, bookmarks and quiz history are stored in this browser only. ' +
@@ -3955,7 +4053,7 @@ var app = (function () {
     openAbout: openAbout, closeAbout: closeAbout, resetCache: resetCache,
     startOnboarding: startOnboarding, closeOnboarding: closeOnboarding, replayOnboarding: replayOnboarding,
     _onboardNext: _onboardNext, _onboardPrev: _onboardPrev,
-    triggerInstall: triggerInstall, dismissInstall: dismissInstall,
+    triggerInstall: triggerInstall, dismissInstall: dismissInstall, isAppInstalled: isAppInstalled,
     exportHighlights: exportHighlights, exportNotes: exportNotes,
     copyTextToClipboard: copyTextToClipboard,
     teardownHighlightPopup: teardownHighlightPopup,
