@@ -118,16 +118,37 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
 
 /* ── print ────────────────────────────────── */
 @media print{
-  @page{size:A4;margin:8mm}
-  body{background:#fff;padding:0;font-size:8.4pt}
+  @page{size:A4;margin:6mm}
+  html{background:#fff}
+  body{background:#fff;padding:0;font-size:6.3pt;line-height:1.26}
   .wrap{max-width:none;gap:0}
   .mast{display:none}
-  .sheet{border:none;padding:0;page-break-after:always;break-after:page;min-height:0}
-  .sheet:last-child{page-break-after:auto}
-  .b{break-inside:avoid}
-  table{font-size:7.4pt} .xs{font-size:7.2pt} .sm{font-size:7.8pt}
-  .tag{font-size:6.8pt} .fx{font-size:7.6pt}
-  .rf{font-size:7.4pt}
+  .sheet{border:none;padding:0;gap:3px;page-break-after:always;break-after:page;min-height:0}
+  .sheet:last-child{page-break-after:auto;break-after:auto}
+  .shead{padding-bottom:2px;margin-bottom:1px;gap:6px;border-bottom-width:1.5px}
+  .shead .num{font-size:13pt}
+  .shead h2{font-size:9.4pt}
+  .shead .wt{font-size:6pt}
+  .g{gap:3px}
+  .b{break-inside:avoid;padding:3px 4px 4px;border-top-width:2px}
+  .b>h3{font-size:6.6pt;margin-bottom:2px;letter-spacing:.06em}
+  p{margin-bottom:2px} ul{padding-left:9px} li{margin-bottom:1px}
+  table{font-size:5.7pt;line-height:1.16}
+  th{font-size:5.3pt;padding:1.2px 2.5px}
+  td{padding:1.2px 2.5px}
+  .xs{font-size:5.9pt;line-height:1.22}
+  .sm{font-size:6.2pt;line-height:1.22}
+  .tag{font-size:5.2pt;padding:1px 3px}
+  .fx{font-size:6pt;padding:1.5px 4px;margin:2px 0;border-left-width:2px}
+  .rf{font-size:5.8pt;line-height:1.24;column-gap:10px}
+  .rf div{margin-bottom:1px;padding-left:7px;text-indent:-7px}
+  .mnem,.alert,.clin{font-size:5.9pt;padding:2px 4px;margin:2px 0;border-left-width:2px}
+  .flow{font-size:5.6pt;margin:2px 0}
+  .node{padding:2px 3px}
+  .node .t1{font-size:5.9pt}
+  .node .t2{font-size:5.2pt}
+  .arw{font-size:5pt;padding:0 2px}
+  .foot{font-size:5.4pt;padding-top:2px}
 }
 @media (max-width:760px){
   .g{grid-template-columns:repeat(6,1fr)}
@@ -141,12 +162,12 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
 
 <div class="mast">
   <h1>Unit 1 — Rapid Revision Sheet</h1>
-  <p>Principles of Animal Nutrition &amp; Feed Technology · VCI MSVE 2016 · Theory Paper I. Five A4 sheets built to be read end-to-end in 30 minutes and to carry ~95% of the objective and subjective marks from this unit.</p>
+  <p>Principles of Animal Nutrition &amp; Feed Technology · VCI MSVE 2016 · Theory Paper I. Six A4 sheets built to be read end-to-end in 30 minutes and to carry ~95% of the objective and subjective marks from this unit.</p>
   <div class="meta">
     <span class="tag">B.V.Sc &amp; A.H. II Year</span>
     <span class="tag t">Paper I · 100 Marks</span>
     <span class="tag a">25 Syllabus Topics</span>
-    <span class="tag p">Print → A4 · 5 pages</span>
+    <span class="tag p">Print → A4 · 6 pages</span>
   </div>
 </div>
 
@@ -247,7 +268,7 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
     </div>
 
   </div>
-  <div class="foot">SHEET 1 / 5 · FOUNDATIONS &amp; ANALYSIS · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
+  <div class="foot">SHEET 1 / 6 · FOUNDATIONS &amp; ANALYSIS · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
 </section>
 
 <!-- ═══════════════ SHEET 2 ═══════════════ -->
@@ -312,7 +333,7 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
     </div>
 
   </div>
-  <div class="foot">SHEET 2 / 5 · ORGANIC NUTRIENTS · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
+  <div class="foot">SHEET 2 / 6 · ORGANIC NUTRIENTS · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
 </section>
 
 <!-- ═══════════════ SHEET 3 ═══════════════ -->
@@ -392,7 +413,7 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
     </div>
 
   </div>
-  <div class="foot">SHEET 3 / 5 · MINERALS &amp; VITAMINS · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
+  <div class="foot">SHEET 3 / 6 · MINERALS &amp; VITAMINS · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
 </section>
 
 <!-- ═══════════════ SHEET 4 ═══════════════ -->
@@ -477,7 +498,7 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
     </div>
 
   </div>
-  <div class="foot">SHEET 4 / 5 · ENERGY &amp; PROTEIN EVALUATION · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
+  <div class="foot">SHEET 4 / 6 · ENERGY &amp; PROTEIN EVALUATION · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
 </section>
 
 <!-- ═══════════════ SHEET 5 ═══════════════ -->
@@ -519,7 +540,7 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
       <div class="clin"><b>Urea ammoniation of straw — memorise the numbers:</b> <span class="num-hl">4 kg urea</span> dissolved in <span class="num-hl">40 L water</span> sprayed over <span class="num-hl">100 kg</span> straw, stacked <b>airtight</b> (polythene/pit) and cured <b>21 days</b>; aerate 24 h before feeding. Result: <b>CP rises from 3–4% to 8–10%</b>, DM digestibility ↑ ~10 units, intake ↑ 25–30%. Cheapest single intervention for the Indian straw-based diet.</div>
     </div>
 
-    <div class="b s c6">
+    <div class="b s c12">
       <h3>Conservation — Silage vs Hay</h3>
       <p class="xs"><b>SILAGE</b> = fodder preserved by <b>controlled anaerobic lactic-acid fermentation</b> at high moisture. <b>Ensiling proceeds in 4 phases:</b> ① <b>Aerobic</b> (plant respiration uses residual O₂, temp ↑ 25–35 °C) ② <b>Fermentation</b> (<i>Lactobacillus, Streptococcus, Pediococcus</i> convert sugars → <b>lactic acid</b>, pH falls) ③ <b>Stable/storage</b> (pH &lt; 4.2, all activity ceases) ④ <b>Feed-out/aerobic spoilage</b> (yeasts &amp; moulds on air exposure).</p>
       <div class="tw"><table>
@@ -538,7 +559,16 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
       <div class="mnem"><b>One-line comparison:</b> Hay = dry preservation, weather-dependent, carotene lost, cheap storage. Silage = wet preservation, weather-independent, carotene &amp; nutrients retained, needs airtight structure and heavy initial cost.</div>
     </div>
 
-    <div class="b c c6">
+  </div>
+  <div class="foot">SHEET 5 / 6 · FEEDS, PROCESSING &amp; CONSERVATION · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016</div>
+</section>
+
+<!-- ═══════════════ SHEET 6 ═══════════════ -->
+<section class="sheet">
+  <div class="shead"><span class="num">06</span><h2>Anti-Nutritional Factors · Adulterants · Feed Additives</h2><span class="wt">FEED SAFETY &amp; QUALITY</span></div>
+  <div class="g">
+
+    <div class="b c c12">
       <h3>Harmful natural constituents (ANFs) &amp; adulterants</h3>
       <div class="tw"><table>
         <thead><tr><th>Toxin</th><th>Source</th><th>Lesion / sign &amp; remedy</th></tr></thead>
@@ -634,7 +664,7 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
     </div>
 
   </div>
-  <div class="foot">SHEET 5 / 5 · FEED TECHNOLOGY · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016 · PREPARED FOR B.V.Sc &amp; A.H. II YEAR</div>
+  <div class="foot">SHEET 6 / 6 · FEED SAFETY &amp; ADDITIVES · ANIMAL NUTRITION UNIT 1 · VCI MSVE 2016 · PREPARED FOR B.V.Sc &amp; A.H. II YEAR</div>
 </section>
 
 </div>

@@ -217,6 +217,12 @@ var app = (function () {
     stopSpeech();              // never let a lesson keep reading after you leave it
     teardownHighlightPopup();  // remove floating selection toolbar if active
 
+    var oldWhyModal = document.getElementById("whyModalOverlay");
+    if (oldWhyModal && name !== "why") {
+      oldWhyModal.remove();
+      document.body.style.overflow = "";
+    }
+
     var map = {
       home: "home", theory: "theory", practical: "practical",
       unit: "unit", topic: "topic", why: "why", qa: "qa",
@@ -2373,8 +2379,59 @@ var app = (function () {
   }
 
   /* ============================================================
-     WHY
+     WHY (COMPARATIVE PHYSIOLOGY & METABOLIC RATIONALE)
      ============================================================ */
+  var _activeWhyModalItem = null;
+  var _activeWhyFilteredList = [];
+
+  function openWhyModal(item) {
+    if (!item) return;
+    _activeWhyModalItem = item;
+
+    var overlay = el("#whyModalOverlay");
+    if (!overlay) return;
+
+    var unitName = (item.unit || "unit-1").toUpperCase().replace('-', ' ');
+    var idxInFiltered = _activeWhyFilteredList.findIndex(function (x) { return x.id === item.id; });
+    var totalN = _activeWhyFilteredList.length || 40;
+    var counterText = (idxInFiltered !== -1 ? (idxInFiltered + 1) : item.id) + " of " + totalN;
+
+    el("#whyModalUnitPill").textContent = unitName;
+    el("#whyModalIndexBadge").textContent = "Mechanism " + counterText;
+    el("#whyModalTitle").textContent = item.concept || item.title;
+    el("#whyModalCompText").textContent = item.comparison || "Comparative Mechanism";
+    el("#whyModalQuestion").textContent = item.title;
+    el("#whyModalWhy").innerHTML = item.why || "";
+
+    var clinBox = el("#whyModalClinicalSection");
+    if (clinBox) {
+      if (item.clinical) {
+        clinBox.style.display = "block";
+        el("#whyModalClinical").innerHTML = item.clinical;
+      } else {
+        clinBox.style.display = "none";
+      }
+    }
+
+    overlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeWhyModal() {
+    var overlay = el("#whyModalOverlay");
+    if (overlay) overlay.classList.remove("is-open");
+    document.body.style.overflow = "";
+    _activeWhyModalItem = null;
+  }
+
+  function stepWhyModal(delta) {
+    if (!_activeWhyModalItem || !_activeWhyFilteredList.length) return;
+    var idx = _activeWhyFilteredList.findIndex(function (x) { return x.id === _activeWhyModalItem.id; });
+    if (idx === -1) idx = 0;
+    var nextIdx = (idx + delta + _activeWhyFilteredList.length) % _activeWhyFilteredList.length;
+    openWhyModal(_activeWhyFilteredList[nextIdx]);
+  }
+
   function renderWhy() {
     var data = (window.whyData || []).filter(function (w) { return w.title; });
 
@@ -2383,76 +2440,224 @@ var app = (function () {
         '<span class="eyebrow">Mechanism first</span>' +
         '<h1>' + icon("why") + ' WHY</h1>' +
         '<p class="lede">Animal Nutrition is only memorisable once it stops being an arbitrary list. ' +
-        'Each card here explains the comparative digestive physiology, rumen microbial dynamics, bioenergetics, or metabolic mechanism behind clinical and feeding hallmarks.</p>' +
+        'Each card explains the comparative digestive physiology, rumen microbial dynamics, bioenergetics, or metabolic mechanism behind clinical and feeding hallmarks.</p>' +
       '</div>';
 
     if (!data.length) {
       view.innerHTML = head +
         '<div class="empty"><div class="empty__icon">' + icon("why") + '</div>' +
         '<h3>No WHY entries yet</h3>' +
-        '<p>Add them in <b>data/data-why.JS</b>. Copy the template block that is already in the file, ' +
-        'fill in <span class="mono">title</span>, <span class="mono">why</span> and ' +
-        '<span class="mono">clinical</span>, and they will appear here automatically.</p></div>';
+        '<p>Add them in <b>data/data-why.JS</b>.</p></div>';
       return;
     }
 
-    var catIcons = {
-      all: "sparkle",
-      mechanism: "pulse",
-      lesion: "microscope",
-      species: "target",
-      diagnostic: "clipboard",
-      clinical: "shield"
-    };
+    var units = [
+      { id: "all", label: "All Units (" + data.length + ")" },
+      { id: "unit-1", label: "Unit 1 (" + data.filter(function(x){ return x.unit === "unit-1"; }).length + ")" },
+      { id: "unit-2", label: "Unit 2 (" + data.filter(function(x){ return x.unit === "unit-2"; }).length + ")" },
+      { id: "unit-3", label: "Unit 3 (" + data.filter(function(x){ return x.unit === "unit-3"; }).length + ")" },
+      { id: "unit-4", label: "Unit 4 (" + data.filter(function(x){ return x.unit === "unit-4"; }).length + ")" }
+    ];
 
-    var cats = ["all", "mechanism", "lesion", "species", "diagnostic", "clinical"];
-    var chips = cats.map(function (c) {
-      return '<button class="tab' + (c === "all" ? " is-active" : "") + '" data-cat="' + c + '">' +
-        icon(catIcons[c] || "sparkle") + ' ' +
-        (c === "all" ? "All" : c.charAt(0).toUpperCase() + c.slice(1)) + '</button>';
+    var filterPills = units.map(function (u) {
+      return '<button class="why-filter-pill' + (u.id === "all" ? " is-active" : "") + '" data-unit="' + u.id + '">' +
+        esc(u.label) + '</button>';
     }).join("");
 
-    view.innerHTML = head + '<div class="tabs">' + chips + '</div><div id="whygrid" class="grid grid--auto"></div>';
+    var toolbar =
+      '<div class="why-toolbar">' +
+        '<div class="why-toolbar__left">' +
+          '<div class="why-search-wrap">' +
+            '<span class="why-search-icon">🔍</span>' +
+            '<input type="search" id="whySearchInput" class="why-search-input" placeholder="Search 40 mechanisms, species, nutrients..." autocomplete="off">' +
+          '</div>' +
+        '</div>' +
+        '<div class="why-toolbar__filters">' +
+          filterPills +
+        '</div>' +
+        '<div class="why-toolbar__right">' +
+          '<a href="#quiz/theory" class="why-challenge-btn"><span>⚡</span> Quick Challenge</a>' +
+        '</div>' +
+      '</div>';
 
-    function paint(cat) {
-      el("#whygrid").innerHTML = data
-        .filter(function (w) { return cat === "all" || w.category === cat; })
-        .map(function (w) {
-          var catIco = catIcons[w.category] || "pulse";
-          return '<article class="card whycard" id="why-' + w.id + '">' +
-            '<div class="row row--wrap">' +
-              '<span class="chip chip--accent">' + icon(catIco) + ' ' + esc(w.category || "mechanism") + '</span>' +
-              (w.comparison ? '<span class="chip">' + icon("target") + ' ' + esc(w.comparison) + '</span>' : '') +
-              (w.unit ? '<span class="chip chip--muted">' + esc(w.unit.toUpperCase().replace('-', ' ')) + '</span>' : '') +
+    var modalHtml =
+      '<div class="why-modal-overlay" id="whyModalOverlay" role="dialog" aria-modal="true">' +
+        '<div class="why-modal-card">' +
+          '<button class="why-modal-close" id="whyModalCloseBtn" aria-label="Close dialog">&times;</button>' +
+          '<div class="why-modal-header">' +
+            '<div class="why-modal-pills">' +
+              '<span class="whycard__pill" id="whyModalUnitPill">UNIT 1</span>' +
+              '<span class="why-modal-num-badge" id="whyModalIndexBadge">Mechanism 1 of 40</span>' +
             '</div>' +
-            '<h3 class="card__title mt-3">' + esc(w.title) + '</h3>' +
-            '<div class="card__desc">' + (w.why || "") + '</div>' +
-            (w.mechanism && w.mechanism.length
-              ? '<ol class="chain mt-4">' + w.mechanism.map(function (s) { return '<li>' + s + '</li>'; }).join("") + '</ol>'
-              : '') +
-            (w.clinical ? '<div class="callout mt-4"><div class="callout__title">' + icon("shield") + ' At the clinic</div>' + w.clinical + '</div>' : '') +
-          '</article>';
-        }).join("") || '<div class="empty"><p>Nothing in this category yet.</p></div>';
+            '<h2 class="why-modal-title" id="whyModalTitle">Ruminal Biohydrogenation</h2>' +
+            '<div class="whycard__comparison why-modal-comparison">' +
+              '<span class="whycard__scale-icon">⚖️</span>' +
+              '<span class="whycard__comp-text" id="whyModalCompText">Bovine vs Swine</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="why-modal-question-box">' +
+            '<div class="why-modal-q-label"><span>❓</span> CORE PHENOMENON &amp; EXAM QUESTION</div>' +
+            '<p class="why-modal-question-text" id="whyModalQuestion"></p>' +
+          '</div>' +
+          '<div class="why-modal-body">' +
+            '<div class="why-modal-section">' +
+              '<h4 class="why-modal-section-title"><span>🔬</span> THE BIOCHEMICAL &amp; PHYSIOLOGICAL MECHANISM</h4>' +
+              '<div class="why-modal-text" id="whyModalWhy"></div>' +
+            '</div>' +
+            '<div class="why-modal-section" id="whyModalClinicalSection">' +
+              '<div class="why-modal-clinical-box">' +
+                '<div class="why-modal-clinical-head"><span>🛡️</span> AT THE CLINIC &amp; ON THE FARM</div>' +
+                '<div class="why-modal-clinical-text" id="whyModalClinical"></div>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="why-modal-footer">' +
+            '<div class="why-modal-nav">' +
+              '<button class="btn btn--subtle btn--sm" id="whyModalPrevBtn">← Previous</button>' +
+              '<button class="btn btn--subtle btn--sm" id="whyModalNextBtn">Next →</button>' +
+            '</div>' +
+            '<div class="why-modal-hint">' +
+              '<kbd>Esc</kbd> to close · <kbd>←</kbd> <kbd>→</kbd> navigate' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    view.innerHTML = head + toolbar + '<div id="whygrid" class="why-grid"></div>';
+
+    var existingModal = document.getElementById("whyModalOverlay");
+    if (existingModal) existingModal.remove();
+
+    var modalWrapper = document.createElement("div");
+    modalWrapper.innerHTML = modalHtml;
+    document.body.appendChild(modalWrapper.firstElementChild);
+
+    var currentUnit = "all";
+    var currentQuery = "";
+
+    function filterAndPaint() {
+      var q = currentQuery.trim().toLowerCase();
+      var filtered = data.filter(function (w) {
+        var matchesUnit = currentUnit === "all" || w.unit === currentUnit;
+        if (!matchesUnit) return false;
+        if (!q) return true;
+        var inTitle = (w.title || "").toLowerCase().indexOf(q) !== -1;
+        var inConcept = (w.concept || "").toLowerCase().indexOf(q) !== -1;
+        var inComp = (w.comparison || "").toLowerCase().indexOf(q) !== -1;
+        var inWhy = (w.why || "").toLowerCase().indexOf(q) !== -1;
+        var inClin = (w.clinical || "").toLowerCase().indexOf(q) !== -1;
+        return inTitle || inConcept || inComp || inWhy || inClin;
+      });
+
+      _activeWhyFilteredList = filtered;
+
+      if (!filtered.length) {
+        el("#whygrid").innerHTML =
+          '<div class="empty" style="grid-column: 1 / -1;">' +
+            '<div class="empty__icon">🔍</div>' +
+            '<h3>No matching mechanisms</h3>' +
+            '<p>No comparative entries match your search or filter.</p>' +
+          '</div>';
+        return;
+      }
+
+      el("#whygrid").innerHTML = filtered.map(function (w) {
+        var unitLabel = (w.unit || "unit-1").toUpperCase().replace('-', ' ');
+        var preview = (w.why || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+        if (preview.length > 180) preview = preview.slice(0, 180) + "…";
+
+        return '<article class="card whycard-compact" data-why-id="' + w.id + '">' +
+          '<div>' +
+            '<div class="whycard__header">' +
+              '<span class="whycard__pill">' + esc(unitLabel) + '</span>' +
+              '<span class="whycard__arrow">→</span>' +
+            '</div>' +
+            '<h3 class="whycard__title">' + esc(w.concept || w.title) + '</h3>' +
+            '<div class="whycard__comparison">' +
+              '<span class="whycard__scale-icon">⚖️</span>' +
+              '<span class="whycard__comp-text">' + esc(w.comparison || "Comparative Mechanism") + '</span>' +
+            '</div>' +
+            '<p class="whycard__preview">' + esc(preview) + '</p>' +
+          '</div>' +
+          '<div class="whycard__footer">' +
+            '<button class="whycard__analyze-btn" type="button" data-why-id="' + w.id + '">' +
+              'Analyze <span class="whycard__analyze-icon">🔬</span>' +
+            '</button>' +
+          '</div>' +
+        '</article>';
+      }).join("");
+
+      // Wire card click
+      els(".whycard-compact").forEach(function (card) {
+        card.addEventListener("click", function () {
+          var id = parseInt(card.getAttribute("data-why-id"), 10);
+          var item = data.find(function (x) { return x.id === id; });
+          if (item) openWhyModal(item);
+        });
+      });
     }
 
-    paint("all");
-    if (state.params.a) {
-      setTimeout(function () {
-        var targetCard = el("#why-" + state.params.a);
-        if (targetCard) {
-          targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
-          targetCard.style.outline = "2px solid var(--color-accent)";
-          targetCard.style.outlineOffset = "4px";
-        }
-      }, 80);
-    }
-    els("[data-cat]").forEach(function (b) {
-      b.addEventListener("click", function () {
-        els("[data-cat]").forEach(function (x) { x.classList.remove("is-active"); });
-        b.classList.add("is-active");
-        paint(b.getAttribute("data-cat"));
+    filterAndPaint();
+
+    // Wire unit tabs
+    els("[data-unit]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        els("[data-unit]").forEach(function (x) { x.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+        currentUnit = btn.getAttribute("data-unit");
+        filterAndPaint();
       });
     });
+
+    // Wire search input
+    var searchInput = el("#whySearchInput");
+    if (searchInput) {
+      searchInput.addEventListener("input", function (e) {
+        currentQuery = e.target.value;
+        filterAndPaint();
+      });
+    }
+
+    // Wire modal overlay controls
+    var overlay = el("#whyModalOverlay");
+    var closeBtn = el("#whyModalCloseBtn");
+    var prevBtn = el("#whyModalPrevBtn");
+    var nextBtn = el("#whyModalNextBtn");
+
+    if (closeBtn) closeBtn.addEventListener("click", closeWhyModal);
+    if (prevBtn) prevBtn.addEventListener("click", function () { stepWhyModal(-1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { stepWhyModal(1); });
+
+    if (overlay) {
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) closeWhyModal();
+      });
+    }
+
+    // Keyboard navigation
+    var onWhyKeyDown = function (e) {
+      if (!el("#whyModalOverlay") || !el("#whyModalOverlay").classList.contains("is-open")) return;
+      if (e.key === "Escape") {
+        closeWhyModal();
+      } else if (e.key === "ArrowLeft") {
+        stepWhyModal(-1);
+      } else if (e.key === "ArrowRight") {
+        stepWhyModal(1);
+      }
+    };
+    document.removeEventListener("keydown", onWhyKeyDown);
+    document.addEventListener("keydown", onWhyKeyDown);
+
+    // Deep link support (#why/3)
+    if (state.params.a) {
+      var targetId = parseInt(state.params.a, 10);
+      var targetItem = data.find(function (x) { return x.id === targetId; });
+      if (targetItem) {
+        setTimeout(function () {
+          openWhyModal(targetItem);
+        }, 60);
+      }
+    }
   }
 
   /* ============================================================

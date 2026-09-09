@@ -118,16 +118,37 @@ tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--ground) 45%,trans
 
 /* ── print ────────────────────────────────── */
 @media print{
-  @page{size:A4;margin:8mm}
-  body{background:#fff;padding:0;font-size:8.4pt}
+  @page{size:A4;margin:6mm}
+  html{background:#fff}
+  body{background:#fff;padding:0;font-size:6.3pt;line-height:1.26}
   .wrap{max-width:none;gap:0}
   .mast{display:none}
-  .sheet{border:none;padding:0;page-break-after:always;break-after:page;min-height:0}
-  .sheet:last-child{page-break-after:auto}
-  .b{break-inside:avoid}
-  table{font-size:7.4pt} .xs{font-size:7.2pt} .sm{font-size:7.8pt}
-  .tag{font-size:6.8pt} .fx{font-size:7.6pt}
-  .rf{font-size:7.4pt}
+  .sheet{border:none;padding:0;gap:3px;page-break-after:always;break-after:page;min-height:0}
+  .sheet:last-child{page-break-after:auto;break-after:auto}
+  .shead{padding-bottom:2px;margin-bottom:1px;gap:6px;border-bottom-width:1.5px}
+  .shead .num{font-size:13pt}
+  .shead h2{font-size:9.4pt}
+  .shead .wt{font-size:6pt}
+  .g{gap:3px}
+  .b{break-inside:avoid;padding:3px 4px 4px;border-top-width:2px}
+  .b>h3{font-size:6.6pt;margin-bottom:2px;letter-spacing:.06em}
+  p{margin-bottom:2px} ul{padding-left:9px} li{margin-bottom:1px}
+  table{font-size:5.7pt;line-height:1.16}
+  th{font-size:5.3pt;padding:1.2px 2.5px}
+  td{padding:1.2px 2.5px}
+  .xs{font-size:5.9pt;line-height:1.22}
+  .sm{font-size:6.2pt;line-height:1.22}
+  .tag{font-size:5.2pt;padding:1px 3px}
+  .fx{font-size:6pt;padding:1.5px 4px;margin:2px 0;border-left-width:2px}
+  .rf{font-size:5.8pt;line-height:1.24;column-gap:10px}
+  .rf div{margin-bottom:1px;padding-left:7px;text-indent:-7px}
+  .mnem,.alert,.clin{font-size:5.9pt;padding:2px 4px;margin:2px 0;border-left-width:2px}
+  .flow{font-size:5.6pt;margin:2px 0}
+  .node{padding:2px 3px}
+  .node .t1{font-size:5.9pt}
+  .node .t2{font-size:5.2pt}
+  .arw{font-size:5pt;padding:0 2px}
+  .foot{font-size:5.4pt;padding-top:2px}
 }
 @media (max-width:760px){
   .g{grid-template-columns:repeat(6,1fr)}
