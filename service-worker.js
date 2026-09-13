@@ -1,9 +1,9 @@
 /* ============================================================
-   service-worker.js — 100% Offline PWA Engine
+   service-worker.js - 100% Offline PWA Engine
    Animal Nutrition Studio (B.V.Sc & A.H.)
    ============================================================ */
 
-var CACHE_VERSION = "vanut-v3";
+var CACHE_VERSION = "vanut-v5";
 var SHELL_CACHE = CACHE_VERSION + "-shell";
 var IMG_CACHE = CACHE_VERSION + "-img";
 
@@ -156,4 +156,4 @@ self.addEventListener("message", function (e) {
   if (e.data && e.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
-});
+});
