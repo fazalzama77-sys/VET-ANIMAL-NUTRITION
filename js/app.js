@@ -3310,7 +3310,7 @@ var app = (function () {
         '<h1>' + icon("library") + ' Library</h1>' +
       '</div>' +
       '<div class="tabs">' +
-        [['bookmarks', 'Bookmarks', 'star'], ['notes', 'Notes', 'note'], ['highlights', 'Highlights', 'pen'], ['glossary', 'Glossary (270+)', 'book']].map(function (item) {
+        [['bookmarks', 'Bookmarks', 'star'], ['notes', 'Notes', 'note'], ['highlights', 'Highlights', 'pen'], ['glossary', 'Glossary (330+)', 'book']].map(function (item) {
           return '<a class="tab' + (item[0] === tab ? " is-active" : "") + '" href="#/library/' + item[0] + '">' +
             icon(item[2]) + ' ' + item[1] + '</a>';
         }).join("") +
