@@ -747,28 +747,129 @@ const glossary = {
         this._regex = new RegExp(`\\b(${escaped.join('|')})\\b`, 'gi');
     },
 
+    _tooltipEl: null,
+    _activeTermEl: null,
+    _hideTimer: null,
+
+    _ensureTooltipEl() {
+        if (typeof document === 'undefined') return null;
+        if (this._tooltipEl && document.body.contains(this._tooltipEl)) return this._tooltipEl;
+        let el = document.getElementById('glossary-floating-tooltip');
+        if (!el) {
+            el = document.createElement('div');
+            el.id = 'glossary-floating-tooltip';
+            el.className = 'glossary-floating-tooltip';
+            el.setAttribute('role', 'tooltip');
+            el.setAttribute('aria-hidden', 'true');
+            el.innerHTML = `
+                <div class="glossary-floating-tooltip__head">
+                    <span class="glossary-floating-tooltip__term" id="gtt-term-title"></span>
+                </div>
+                <div class="glossary-floating-tooltip__def" id="gtt-term-def"></div>
+            `;
+            el.addEventListener('mouseenter', () => {
+                if (this._hideTimer) {
+                    clearTimeout(this._hideTimer);
+                    this._hideTimer = null;
+                }
+            });
+            el.addEventListener('mouseleave', () => {
+                this.hideTooltip();
+            });
+            document.body.appendChild(el);
+        }
+        this._tooltipEl = el;
+        return el;
+    },
+
+    showTooltip(termSpan) {
+        if (!termSpan || typeof document === 'undefined') return;
+        if (this._hideTimer) {
+            clearTimeout(this._hideTimer);
+            this._hideTimer = null;
+        }
+
+        this._activeTermEl = termSpan;
+        const tip = this._ensureTooltipEl();
+        if (!tip) return;
+
+        const termText = termSpan.textContent || '';
+        const defText = termSpan.dataset.def || this.define(termText) || '';
+
+        const termTitleEl = tip.querySelector('#gtt-term-title');
+        const defEl = tip.querySelector('#gtt-term-def');
+        if (termTitleEl) termTitleEl.textContent = termText;
+        if (defEl) defEl.textContent = defText;
+
+        tip.classList.add('is-visible');
+        tip.setAttribute('aria-hidden', 'false');
+
+        this._positionTooltip(termSpan);
+    },
+
+    hideTooltip(immediate = false) {
+        if (immediate) {
+            if (this._hideTimer) clearTimeout(this._hideTimer);
+            this._hideTimer = null;
+            if (this._tooltipEl) {
+                this._tooltipEl.classList.remove('is-visible');
+                this._tooltipEl.setAttribute('aria-hidden', 'true');
+            }
+            this._activeTermEl = null;
+            return;
+        }
+
+        if (this._hideTimer) clearTimeout(this._hideTimer);
+        this._hideTimer = setTimeout(() => {
+            if (this._tooltipEl) {
+                this._tooltipEl.classList.remove('is-visible');
+                this._tooltipEl.setAttribute('aria-hidden', 'true');
+            }
+            this._activeTermEl = null;
+        }, 120);
+    },
+
     _positionTooltip(termSpan) {
+        const tip = this._tooltipEl;
+        if (!tip || !termSpan || typeof window === 'undefined') return;
+
         const rect = termSpan.getBoundingClientRect();
+        if (rect.width === 0 && rect.height === 0) {
+            this.hideTooltip(true);
+            return;
+        }
+
         const vw = window.innerWidth;
         const vh = window.innerHeight;
         const margin = 12;
 
-        const ttWidth = Math.min(320, vw - margin * 2);
-        let left = rect.left + rect.width / 2 - ttWidth / 2;
-        let top = rect.bottom + 8;
-        const ttEstHeight = 90;
+        const ttWidth = tip.offsetWidth || 300;
+        const ttHeight = tip.offsetHeight || 75;
 
-        if (left + ttWidth > vw - margin) left = vw - ttWidth - margin;
-        if (left < margin) left = margin;
-
-        if (top + ttEstHeight > vh - margin) {
-            const above = rect.top - ttEstHeight - 8;
-            if (above >= margin) top = above;
+        // Align horizontally with the start of the term span
+        let left = rect.left;
+        if (left + ttWidth > vw - margin) {
+            left = vw - ttWidth - margin;
+        }
+        if (left < margin) {
+            left = margin;
         }
 
-        termSpan.style.setProperty('--tt-left', left + 'px');
-        termSpan.style.setProperty('--tt-top', top + 'px');
-        termSpan.style.setProperty('--tt-width', ttWidth + 'px');
+        // Vertical positioning: directly adjacent with a 6px gap
+        // Prefer immediately below the word
+        let top = rect.bottom + 6;
+        if (top + ttHeight > vh - margin) {
+            // If overflowing bottom, place immediately above the word
+            const aboveTop = rect.top - ttHeight - 6;
+            if (aboveTop >= margin) {
+                top = aboveTop;
+            } else {
+                top = Math.max(margin, Math.min(vh - ttHeight - margin, top));
+            }
+        }
+
+        tip.style.left = Math.round(left) + 'px';
+        tip.style.top = Math.round(top) + 'px';
     },
 
     // Safely decorate text nodes without touching interactive or existing nodes
@@ -817,10 +918,11 @@ const glossary = {
                 span.setAttribute('role', 'button');
                 span.setAttribute('aria-label', `Definition of ${m[0]}: ${def}`);
 
-                const onShow = (e) => this._positionTooltip(e.currentTarget);
-                span.addEventListener('mouseenter', onShow);
-                span.addEventListener('focus', onShow);
-                span.addEventListener('touchstart', onShow, { passive: true });
+                span.addEventListener('mouseenter', () => this.showTooltip(span));
+                span.addEventListener('mouseleave', () => this.hideTooltip());
+                span.addEventListener('focus', () => this.showTooltip(span));
+                span.addEventListener('blur', () => this.hideTooltip());
+                span.addEventListener('touchstart', () => this.showTooltip(span), { passive: true });
 
                 // Double-click to pronounce aloud via SpeechSynthesis
                 span.addEventListener('dblclick', (e) => {
@@ -841,14 +943,20 @@ const glossary = {
             textNode.parentNode.replaceChild(frag, textNode);
         });
 
-        if (!this._scrollHooked) {
+        if (!this._scrollHooked && typeof window !== 'undefined' && typeof document !== 'undefined') {
             this._scrollHooked = true;
             const reposition = () => {
-                const active = document.querySelector('.gloss-term:hover, .gloss-term:focus');
-                if (active) this._positionTooltip(active);
+                if (this._activeTermEl && this._tooltipEl && this._tooltipEl.classList.contains('is-visible')) {
+                    this._positionTooltip(this._activeTermEl);
+                }
             };
             window.addEventListener('scroll', reposition, { passive: true, capture: true });
             window.addEventListener('resize', reposition, { passive: true });
+            document.addEventListener('pointerdown', (e) => {
+                if (this._tooltipEl && !this._tooltipEl.contains(e.target) && !e.target.closest('.gloss-term')) {
+                    this.hideTooltip(true);
+                }
+            });
         }
     },
 
