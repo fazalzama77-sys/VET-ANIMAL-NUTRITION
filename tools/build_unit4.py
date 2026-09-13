@@ -1139,6 +1139,22 @@ unit4_data = {
       "<b>UVB Photobiology and Vitamin D3 Synthesis in Captive Reptiles & Birds:</b><br>"
       "Captive reptiles (crocodilians, monitor lizards, chelonians) and birds housed in indoor glass-fronted enclosures develop severe **Metabolic Bone Disease (Nutritional Secondary Hyperparathyroidism)** even when fed calcium. Window glass completely absorbs **Ultraviolet B (UVB, 290–315 nm)** radiation. In the skin, UVB photolysis of *7-dehydrocholesterol* into *previtamin D3* (and subsequently *cholecalciferol*) is blocked. Without active $1,25-(OH)_2 D_3$, intestinal enterocytes cannot synthesize calbindin, completely arresting calcium absorption. Facilities must provide specialized full-spectrum UVB lighting alongside dietary cholecalciferol."
     ),
+    "keyPoints": [
+      "Captive zoo nutrition must simulate natural foraging and prevent nutritional metabolic diseases.",
+      "Adult tigers and lions are fed 8-12 kg dressed buffalo meat daily with a mandatory 1-day weekly fast.",
+      "Feeding pure boneless meat causes severe Calcium deficiency (Ca:P = 1:25 to 1:40).",
+      "Boneless meat induces Nutritional Secondary Hyperparathyroidism ('Rubber Jaw' and bone fractures).",
+      "Zoo carnivores must receive meat with attached bones or 10 g calcium carbonate/DCP per kg meat.",
+      "Asian elephants consume 150-250 kg green roughage daily; excess sweet fruits cause molar caries.",
+      "Non-human primates cannot synthesize Vitamin C; require daily fresh citrus fruits or guavas.",
+      "Frugivorous birds (toucans, hornbills) absorb iron hyper-efficiently; feeds must contain <65 ppm Fe.",
+      "High dietary iron causes toxic Iron Storage Disease (Hemochromatosis) and liver failure in hornbills.",
+      "Indoor captive reptiles require UVB (290-315 nm) lighting for cutaneous Vitamin D3 synthesis."
+    ],
+    "clinical": (
+      "<b>Management of Metabolic Bone Disease in a Rescued Leopard Cub:</b><br>"
+      "A 4-month-old rescued Indian leopard (*Panthera pardus*) cub housed in a transit rescue facility is presented with painful vocalization on handling, reluctant gait, folding fractures of the distal radius, and soft, compressible mandibles ('rubber jaw'). History reveals the attendant fed exclusively boneless chicken and mutton breast meat. Radiographs show paper-thin, osteopenic cortical bone ('ghost bones') and multiple greenstick fractures. Diagnosis: **Nutritional Secondary Hyperparathyroidism**. Treatment: Immediately immobilize the cub in a padded enclosure; dust all meat with 10 g Calcium Carbonate and 5 g Dicalcium Phosphate daily + oral Cholecalciferol (Vitamin D3, 500 IU/day). Cortical bone thickness and skeletal mineral density recover within 6 to 8 weeks."
+    ),
     "tables": [
       {
         "title": "Dietary Schedules and CZA Norms for Premier Indian Captive Zoo Species",

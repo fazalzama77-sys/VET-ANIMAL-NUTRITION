@@ -1,3 +1,9 @@
+/* ============================================================
+   data-practical.JS  —  Practical Curriculum Data
+   Animal Nutrition Studio (B.V.Sc & A.H. — VCI MSVE 2016)
+   All 29 Practicals across Units 1 to 4 Populated
+   ============================================================ */
+
 var practicalData = window.practicalData || {};
 
 practicalData["prac-unit-1"] = {
@@ -1513,148 +1519,1105 @@ practicalData["prac-unit-2"] = {
 
 practicalData["prac-unit-3"] = {
   "p3-t01": {
-    /* Calculation of Nutrient Requirements (DCP, TDN, ME) for Maintenance, Growth and Production */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Master the calculation of nutrient requirements (DCP, TDN, ME) for maintenance, live-weight gain, lactation, pregnancy, and draft work using official ICAR feeding standards.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nScientific feeding requires matching the animal's physiological demands with exact dietary nutrients. Under the Indian Council of Agricultural Research (ICAR 2013) feeding standards, ruminant requirements are partitioned into distinct physiological components:\n$$\\text{Total Daily Requirement} = \\text{Maintenance} + \\text{Growth} + \\text{Milk Production} + \\text{Reproduction} + \\text{Work}$$\nThe primary currencies of evaluation in Indian ruminant nutrition are <b>Dry Matter (DM)</b>, <b>Digestible Crude Protein (DCP)</b>, <b>Total Digestible Nutrients (TDN)</b>, and <b>Metabolizable Energy (ME)</b>.<br><br>\n\n<b>II. SCIENTIFIC BASIS OF NUTRIENT REQUIREMENTS</b><br>\n<ol>\n  <li><b>Maintenance Requirements (Metabolic Body Weight):</b><br>\n  Basal metabolic rate (BMR) does not scale linearly with body weight ($W$ in kg); it scales with surface area or <b>Metabolic Body Size ($W^{0.75}$ kg)</b>:\n  <ul>\n    <li><i>DCP for Maintenance:</i> Approx. <b>2.84 g DCP per kg $W^{0.75}$</b> for indigenous zebu cattle, or approx. <b>0.5 kg DCP per 1000 kg body weight</b> (approx. 250–280 g DCP for a 400 kg cow).</li>\n    <li><i>TDN for Maintenance:</i> Approx. <b>34 to 36 g TDN per kg $W^{0.75}$</b> (approx. 3.0 to 3.4 kg TDN for a 400 kg cow).</li>\n    <li><i>ME for Maintenance:</i> $1\\text{ kg TDN} \\approx 3.62\\text{ Mcal (15.15 MJ) of ME}$. Maintenance ME $\\approx 125\\text{ to } 135\\text{ kcal per kg } W^{0.75}$.</li>\n  </ul>\n  </li>\n  <li><b>Requirements for Milk Production:</b><br>\n  Nutrient needs depend strictly on milk yield and milk fat percentage:\n  <ul>\n    <li><i>For Cow Milk (4.0% Fat):</i> For every 1.0 kg of 4% Fat Corrected Milk (FCM):\n      <ul>\n        <li><b>DCP = 45 to 50 g</b> (0.045–0.050 kg)</li>\n        <li><b>TDN = 315 to 330 g</b> (0.315–0.330 kg)</li>\n      </ul>\n    </li>\n    <li><i>For Buffalo Milk (6.0–7.0% Fat):</i> Buffalo milk is substantially richer in total solids, fat, and protein. For every 1.0 kg buffalo milk (6.5% fat):\n      <ul>\n        <li><b>DCP = 60 to 65 g</b> (0.060–0.065 kg)</li>\n        <li><b>TDN = 400 to 450 g</b> (0.400–0.450 kg)</li>\n      </ul>\n    </li>\n    <li><b>Gaines' Formula for 4% Fat Corrected Milk (FCM):</b>\n    $$\\mathbf{4\\%\\text{ FCM (kg)}} = (0.4 \\times \\text{Milk Yield in kg}) + (15 \\times \\text{Fat Yield in kg})$$</li>\n  </ul>\n  </li>\n  <li><b>Requirements for Pregnancy (Advanced Gestation — Last Trimester):</b><br>\n  During the last 2 to 3 months of pregnancy, 80% of fetal growth occurs. Additional daily allowance above maintenance:\n  <ul>\n    <li><b>DCP:</b> Add <b>150 to 200 g</b> DCP/day</li>\n    <li><b>TDN:</b> Add <b>1.0 to 1.5 kg</b> TDN/day</li>\n  </ul>\n  </li>\n  <li><b>Requirements for Draft / Working Animals (Bullocks):</b><br>\n  Muscular work burns primarily carbohydrate energy with minimal additional protein wear:\n  <ul>\n    <li><i>Normal / Light Work (4 hours/day):</i> Add <b>1.0 kg TDN</b> and <b>100 g DCP</b> above maintenance.</li>\n    <li><i>Heavy Work (8 hours plowing/carting):</i> Add <b>2.0 to 2.5 kg TDN</b> and <b>200 g DCP</b> above maintenance.</li>\n  </ul>\n  </li>\n</ol><br>\n\n<b>III. STEP-BY-STEP WORKED CALCULATION EXAMPLE</b><br>\n<b>Problem:</b> Calculate the daily DCP, TDN, and DM requirements for a crossbred cow weighing <b>400 kg</b>, yielding <b>12.0 kg milk</b> containing <b>4.0% fat</b> daily.<br><br>\n\n<b>Step 1: Compute Maintenance Requirements:</b>\n<ul>\n  <li>Metabolic body weight $W^{0.75} = 400^{0.75} = 89.44$ kg</li>\n  <li>DCP for maintenance = $89.44 \\times 2.84\\text{ g} = 254.0\\text{ g} = \\mathbf{0.254\\text{ kg DCP}}$</li>\n  <li>TDN for maintenance = $89.44 \\times 35.0\\text{ g} = 3130.4\\text{ g} = \\mathbf{3.13\\text{ kg TDN}}$</li>\n</ul><br>\n\n<b>Step 2: Compute Production Requirements (12 kg milk @ 4% fat):</b>\n<ul>\n  <li>DCP for milk = $12.0 \\times 50\\text{ g} = 600\\text{ g} = \\mathbf{0.600\\text{ kg DCP}}$</li>\n  <li>TDN for milk = $12.0 \\times 320\\text{ g} = 3840\\text{ g} = \\mathbf{3.84\\text{ kg TDN}}$</li>\n</ul><br>\n\n<b>Step 3: Compute Total Daily Nutrient Requirements:</b>\n$$\\mathbf{\\text{Total DCP}} = 0.254 + 0.600 = \\mathbf{0.854\\text{ kg DCP (854 g)}}$$\n$$\\mathbf{\\text{Total TDN}} = 3.13 + 3.84 = \\mathbf{6.97\\text{ kg TDN (approx. 7.0 kg)}}$$\n$$\\mathbf{\\text{Total DM Requirement}} = 400\\text{ kg} \\times 2.5\\% = \\mathbf{10.0\\text{ kg Dry Matter}}$$",
+    "eliteDesc": "<b>ENERGETIC PARTITIONING & METABOLIZABLE ENERGY (ME) CONVERSIONS</b><br><br>\n<b>1. Mathematical Relationship between TDN and ME:</b><br>\nAccording to NRC and ICAR bioenergetics:\n$$\\mathbf{1\\text{ kg TDN}} = 4.409\\text{ Mcal of Digestible Energy (DE)}$$\n$$\\text{Metabolizable Energy (ME)} = 0.82 \\times \\text{DE} = 0.82 \\times 4.409 = \\mathbf{3.615\\text{ Mcal ME (approx. 3.62 Mcal)}}$$\nTherefore:\n$$\\mathbf{\\text{ME (Mcal)}} = \\mathbf{\\text{TDN (kg)}} \\times \\mathbf{3.62}$$\nFor the 400 kg crossbred cow requiring 6.97 kg TDN, her daily ME requirement is:\n$$\\text{ME} = 6.97 \\times 3.62 = \\mathbf{25.23\\text{ Mcal (105.5 MJ) of ME / day}}$$\n\n<b>2. Maintenance Requirements: Zebu vs Crossbred vs Buffalo:</b><br>\nBos indicus (indigenous Zebu cattle like Sahiwal, Gir, Tharparkar) have a lower basal metabolic rate and lower maintenance requirements (~2.4 g DCP/kg $W^{0.75}$) than Bos taurus crossbreds (~2.84 g DCP/kg $W^{0.75}$) due to superior heat tolerance, smaller internal organ mass relative to body frame, and higher ruminal efficiency on fibrous roughages. Buffaloes have 10–12% higher maintenance needs than zebu cattle of the same weight, but compensate by digesting high-lignin fiber more completely.",
+    "keyPoints": [
+      "Nutrient requirements are partitioned into Maintenance, Growth, Lactation, Pregnancy, and Work.",
+      "Maintenance requirements scale with Metabolic Body Size (W^0.75 kg), not direct body weight.",
+      "DCP for maintenance is approx. 2.84 g per kg W^0.75 (approx. 250 g for a 400 kg cow).",
+      "TDN for maintenance is approx. 34–36 g per kg W^0.75 (approx. 3.1 kg for a 400 kg cow).",
+      "For 4.0% Fat Cow Milk: 1 kg milk requires 45–50 g DCP and 315–330 g TDN.",
+      "For Buffalo Milk (6.5% Fat): 1 kg milk requires 60–65 g DCP and 400–450 g TDN.",
+      "Gaines' Formula: 4% FCM (kg) = 0.4 × Milk (kg) + 15 × Fat (kg).",
+      "Last trimester of pregnancy requires an extra 150–200 g DCP and 1.2–1.5 kg TDN daily.",
+      "Working bullocks require primarily extra energy (1.0–2.0 kg TDN); muscular work does not consume extra protein.",
+      "1 kg TDN yields approx. 3.62 Mcal (15.15 MJ) of Metabolizable Energy (ME)."
+    ],
+    "clinical": "Field Veterinary Scenario: A dairy farmer complains that his newly purchased crossbred cow yielded 14 kg milk in the first month but dropped to 6 kg by month three, losing 80 kg body weight and failing to show estrus signs. Calculation reveals the farmer fed only 2 kg concentrate (meeting only 6 kg milk requirement). The cow mobilized body fat and skeletal muscle until starvation shut down ovarian follicular activity (nutritional anestrus). Correcting dietary TDN and DCP restores normal ovarian cyclicity within 3–4 weeks.",
+    "tables": [
+      {
+        "title": "ICAR (2013) Daily Nutrient Requirements for Adult Cattle & Buffaloes",
+        "headers": [
+          "Physiological Function",
+          "Body Weight / Production Level",
+          "Dry Matter (kg)",
+          "DCP (g)",
+          "TDN (kg)",
+          "ME (Mcal)"
+        ],
+        "rows": [
+          [
+            "Maintenance (Zebu)",
+            "350 kg Body Weight",
+            "7.0 – 8.0",
+            "220",
+            "2.70",
+            "9.77"
+          ],
+          [
+            "Maintenance (Crossbred)",
+            "400 kg Body Weight",
+            "9.0 – 10.0",
+            "254",
+            "3.13",
+            "11.33"
+          ],
+          [
+            "Maintenance (Buffalo)",
+            "500 kg Body Weight",
+            "12.0 – 14.0",
+            "340",
+            "4.00",
+            "14.48"
+          ],
+          [
+            "Milk Production (Cow)",
+            "Per 1.0 kg Milk (4.0% Fat)",
+            "—",
+            "45 – 50",
+            "0.32",
+            "1.16"
+          ],
+          [
+            "Milk Production (Buffalo)",
+            "Per 1.0 kg Milk (7.0% Fat)",
+            "—",
+            "60 – 65",
+            "0.45",
+            "1.63"
+          ],
+          [
+            "Pregnancy (Late Gestation)",
+            "Last 2 Months of Pregnancy",
+            "—",
+            "+ 180",
+            "+ 1.20",
+            "+ 4.34"
+          ],
+          [
+            "Moderate Draft Work",
+            "4 Hours Plowing (Bullock)",
+            "—",
+            "+ 120",
+            "+ 1.20",
+            "+ 4.34"
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "nutrient requirements",
+      "ICAR standards",
+      "DCP",
+      "TDN",
+      "ME",
+      "metabolic body weight",
+      "FCM",
+      "ration computation"
+    ]
   },
-
   "p3-t02": {
-    /* Formulation of Rations for Dairy Cattle and Buffaloes (Maintenance and Milk Production) */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Formulate balanced daily rations for dairy cattle and buffaloes using Dry Matter partitioning (2/3 roughage + 1/3 concentrate) and nutrient balancing arithmetic.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nRation formulation is the process of combining feed ingredients in the correct proportions to supply all required nutrients (Dry Matter, DCP, TDN, minerals, and vitamins) without exceeding the animal's voluntary stomach capacity or digestive limits.<br>\n<b>The 2/3 : 1/3 Golden Rule of Ruminant Ration Partitioning:</b>\n<ol>\n  <li><b>Dry Matter Intake Capacity (DMI):</b>\n    <ul>\n      <li><i>Indigenous Zebu Cattle:</i> <b>2.0 to 2.5 kg DM per 100 kg Body Weight</b>.</li>\n      <li><i>Crossbred Cattle:</i> <b>2.5 to 3.0 kg DM per 100 kg Body Weight</b>.</li>\n      <li><i>Dairy Buffaloes:</i> <b>2.8 to 3.2 kg DM per 100 kg Body Weight</b> (due to larger rumen volume).</li>\n    </ul>\n  </li>\n  <li><b>Roughage to Concentrate Ratio:</b>\n    <ul>\n      <li><b>Two-Thirds (2/3) of Total DM</b> must be supplied through <b>Roughages</b> (ensures adequate rumination, rumen pH buffer, and milk fat synthesis).\n        <ul>\n          <li>Of this roughage dry matter: ideally <b>1/3 from Green Legume/Succulent</b> and <b>2/3 from Dry Roughage (Straw/Bhusa)</b>.</li>\n        </ul>\n      </li>\n      <li><b>One-Third (1/3) of Total DM</b> is supplied through a balanced <b>Concentrate Mixture</b> (provides concentrated energy and protein).</li>\n    </ul>\n  </li>\n  <li><b>Thumb Rules for Concentrate Feeding in Indian Field Practice:</b>\n    <ul>\n      <li><i>For Maintenance:</i> <b>1.0 to 1.5 kg concentrate mixture</b> per animal daily.</li>\n      <li><i>For Milk Production:</i>\n        <ul>\n          <li>Cattle: <b>1 kg concentrate mixture for every 2.5 to 3.0 kg cow milk</b>.</li>\n          <li>Buffaloes: <b>1 kg concentrate mixture for every 2.0 kg buffalo milk</b>.</li>\n        </ul>\n      </li>\n      <li><i>For Pregnancy:</i> Add <b>1.0 to 1.5 kg extra concentrate</b> during the last 2 months of gestation.</li>\n      <li><i>Mineral Mixture &amp; Salt:</i> Mandatory <b>30 to 50 g mineral mixture</b> and <b>30 g common salt</b> daily.</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>II. STEP-BY-STEP WORKED RATION FORMULATION PROBLEM</b><br>\n<b>Problem:</b> Formulate a balanced daily ration for a crossbred cow weighing <b>400 kg</b>, yielding <b>10 kg milk (4.0% fat)</b> daily. The farm has wheat straw (bhusa), green berseem, and a standard balanced cattle feed concentrate mixture.<br>\n<i>Feed composition (on Dry Matter basis):</i>\n<ul>\n  <li>Wheat Straw (Bhusa): 90% DM, 0.5% DCP, 42.0% TDN</li>\n  <li>Green Berseem: 20% DM, 12.5% DCP, 60.0% TDN</li>\n  <li>Concentrate Mixture: 90% DM, 16.0% DCP, 70.0% TDN</li>\n</ul><br>\n\n<b>Step 1: Calculate Total Daily Requirements:</b>\n<ul>\n  <li>Dry Matter Intake (at 2.5% BW) = $400 \\times 0.025 = \\mathbf{10.0\\text{ kg DM}}$</li>\n  <li>DCP for Maintenance = 250 g; DCP for 10 kg Milk ($10 \\times 48\\text{ g}$) = 480 g $\\rightarrow \\mathbf{\\text{Total DCP = 730 g (0.730 kg)}}$</li>\n  <li>TDN for Maintenance = 3.10 kg; TDN for 10 kg Milk ($10 \\times 0.32\\text{ kg}$) = 3.20 kg $\\rightarrow \\mathbf{\\text{Total TDN = 6.30 kg}}$</li>\n</ul><br>\n\n<b>Step 2: Partition Dry Matter (2/3 Roughage : 1/3 Concentrate):</b>\n<ul>\n  <li>Roughage DM = $10.0 \\times \\frac{2}{3} = \\mathbf{6.67\\text{ kg DM}}$</li>\n  <li>Concentrate DM = $10.0 \\times \\frac{1}{3} = \\mathbf{3.33\\text{ kg DM}}$</li>\n  <li>Roughage DM Split:\n    <ul>\n      <li>Green Berseem DM = $6.67 \\times \\frac{1}{3} = \\mathbf{2.22\\text{ kg DM}} \\rightarrow \\text{Fresh Berseem} = \\frac{2.22}{0.20} = \\mathbf{11.1\\text{ kg (approx. 11 kg fresh)}}$</li>\n      <li>Wheat Straw DM = $6.67 \\times \\frac{2}{3} = \\mathbf{4.45\\text{ kg DM}} \\rightarrow \\text{Fresh Straw} = \\frac{4.45}{0.90} = \\mathbf{4.94\\text{ kg (approx. 5 kg fresh)}}$</li>\n    </ul>\n  </li>\n  <li>Concentrate Fresh Quantity = $\\frac{3.33}{0.90} = \\mathbf{3.70\\text{ kg (approx. 3.7 kg fresh)}}$</li>\n</ul><br>\n\n<b>Step 3: Check Nutrient Supply vs Requirement:</b>\n<ol>\n  <li><b>From 2.22 kg Berseem DM:</b>\n    <ul>\n      <li>$\\text{DCP} = 2.22 \\times 12.5\\% = \\mathbf{0.278\\text{ kg}}$</li>\n      <li>$\\text{TDN} = 2.22 \\times 60.0\\% = \\mathbf{1.332\\text{ kg}}$</li>\n    </ul>\n  </li>\n  <li><b>From 4.45 kg Wheat Straw DM:</b>\n    <ul>\n      <li>$\\text{DCP} = 4.45 \\times 0.5\\% = \\mathbf{0.022\\text{ kg}}$</li>\n      <li>$\\text{TDN} = 4.45 \\times 42.0\\% = \\mathbf{1.869\\text{ kg}}$</li>\n    </ul>\n  </li>\n  <li><b>From 3.33 kg Concentrate DM:</b>\n    <ul>\n      <li>$\\text{DCP} = 3.33 \\times 16.0\\% = \\mathbf{0.533\\text{ kg}}$</li>\n      <li>$\\text{TDN} = 3.33 \\times 70.0\\% = \\mathbf{2.331\\text{ kg}}$</li>\n    </ul>\n  </li>\n  <li><b>Total Nutrient Supply:</b>\n    <ul>\n      <li>$\\text{Total DM Supply} = 2.22 + 4.45 + 3.33 = \\mathbf{10.00\\text{ kg}}$ (Req: 10.00 kg) — <b>Exact Match!</b></li>\n      <li>$\\text{Total DCP Supply} = 0.278 + 0.022 + 0.533 = \\mathbf{0.833\\text{ kg}}$ (Req: 0.730 kg) — <b>Slight positive margin (+103 g)</b></li>\n      <li>$\\text{Total TDN Supply} = 1.332 + 1.869 + 2.331 = \\mathbf{5.532\\text{ kg}}$ (Req: 6.30 kg) — <b>Short by 0.77 kg TDN</b></li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>Step 4: Ration Fine-Tuning:</b><br>\nThe ration is slightly short in energy (TDN) by 0.77 kg. Increase the concentrate mixture by 1.0 kg (supplying 0.70 kg TDN and 0.16 kg DCP), and adjust wheat straw down slightly to maintain dry matter capacity. Add 50 g mineral mixture and 30 g common salt. The ration is now fully balanced!",
+    "eliteDesc": "<b>ALGEBRAIC BALANCING TECHNIQUES: PEARSON'S SQUARE METHOD</b><br><br>\nWhen compounding the farm concentrate mixture to achieve a precise Crude Protein target (e.g. 20% CP) using two ingredients (e.g. Maize grain at 9% CP and Mustard cake at 36% CP):\n$$\\text{Place Target CP in Center (20\\%):}$$\n$$\\begin{matrix}\n\\text{Maize (9\\%)} & & (36 - 20) = \\mathbf{16\\text{ parts Maize}} \\\\\n& \\mathbf{20\\%} & \\\\\n\\text{Mustard Cake (36\\%)} & & (20 - 9) = \\mathbf{11\\text{ parts Mustard Cake}}\n\\end{matrix}$$\n$$\\text{Total Parts} = 16 + 11 = 27\\text{ parts}$$\n$$\\text{Maize Percentage} = \\frac{16}{27} \\times 100 = \\mathbf{59.26\\%}$$\n$$\\text{Mustard Cake Percentage} = \\frac{11}{27} \\times 100 = \\mathbf{40.74\\%}$$\nThis elegant square method allows instantaneous on-farm batch compounding of any concentrate mixture.",
+    "keyPoints": [
+      "Dry Matter Intake capacity: 2.0–2.5% BW for Zebu; 2.5–3.0% for Crossbreds; 3.0% for Buffaloes.",
+      "Ruminant Golden Rule: 2/3 of total Dry Matter must come from roughages; 1/3 from concentrates.",
+      "Of roughage DM: ideally 1/3 from green fodder (berseem/lucerne) and 2/3 from dry roughage (straw).",
+      "Thumb rule: 1.0–1.5 kg concentrate for maintenance + 1 kg concentrate per 2.5–3 kg cow milk.",
+      "For buffalo milk: 1 kg concentrate for every 2.0 kg milk (due to higher fat/protein solids).",
+      "Always supplement with 30–50 g of ISI Type II mineral mixture and 30 g common salt daily.",
+      "Straw-only diets fail because low nitrogen (< 1% N) starves rumen microbes and shuts down cellulolysis.",
+      "Pearson's square method allows rapid calculation of two-ingredient concentrate mixtures to meet target CP.",
+      "Sudden concentrate shifts trigger lactic acidosis; always transition diets over 7–10 days.",
+      "Check that the total dry matter of the calculated ration fits within the animal's physical gut capacity."
+    ],
+    "clinical": "Field Ration Reality: In peri-urban dairy farms across Haryana and Western UP, farmers overfeed mustard cake and wheat bran while feeding zero green fodder. This produces severe mineral imbalances (inverted Ca:P ratio of 1:8 and metabolic acidosis). Adding 20 kg of chopped green berseem or 100 g calcite powder restores the Ca:P ratio to the ideal 2:1, immediately curing pica and preventing postpartum uterine prolapse.",
+    "tables": [
+      {
+        "title": "Final Formulated Daily Ration for 400 kg Crossbred Cow (10 kg Milk)",
+        "headers": [
+          "Feed Ingredient",
+          "As-Fed / Fresh Wt (kg)",
+          "Dry Matter Content (%)",
+          "Dry Matter Supplied (kg)",
+          "DCP Supplied (g)",
+          "TDN Supplied (kg)"
+        ],
+        "rows": [
+          [
+            "Green Berseem (Fresh)",
+            "11.0",
+            "20.0 %",
+            "2.20",
+            "275",
+            "1.32"
+          ],
+          [
+            "Wheat Straw (Bhusa)",
+            "5.0",
+            "90.0 %",
+            "4.50",
+            "23",
+            "1.89"
+          ],
+          [
+            "Compound Concentrate",
+            "4.5",
+            "90.0 %",
+            "4.05",
+            "648",
+            "2.84"
+          ],
+          [
+            "Mineral Mixture (ISI Type II)",
+            "0.05 (50 g)",
+            "100.0 %",
+            "0.05",
+            "0",
+            "0.00"
+          ],
+          [
+            "Common Salt",
+            "0.03 (30 g)",
+            "100.0 %",
+            "0.03",
+            "0",
+            "0.00"
+          ],
+          [
+            "TOTAL RATION SUPPLIED",
+            "20.58 kg",
+            "—",
+            "10.83 kg",
+            "946 g",
+            "6.05 kg"
+          ],
+          [
+            "Total Daily Requirement",
+            "—",
+            "—",
+            "10.00 kg",
+            "730 g",
+            "6.30 kg"
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "ration formulation",
+      "dairy cattle",
+      "buffalo feeding",
+      "pearsons square",
+      "dry matter intake",
+      "thumb rule",
+      "roughage concentrate ratio"
+    ]
   },
-
   "p3-t03": {
-    /* Formulation of Balanced Rations for Sheep and Goats (Growth, Wool and Meat) */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Formulate balanced rations for sheep and goats across growth, flushing, lactation, and wool production stages, accounting for goat selective browsing and sheep copper sensitivity.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nSmall ruminants (sheep and goats) possess distinct anatomical and behavioral digestive specializations that set them apart from large cattle:\n<ul>\n  <li><b>Goats (Capra hircus):</b> Natural browsers and selective feeders. Flexible split upper lips and agile bipedal stance allow them to harvest tree leaves, shrub tips, and thorny browse rich in tannins and protein. Goats have a higher dry matter intake capacity (<b>3.0 to 4.5% of body weight</b>) and faster ruminal passage rate.</li>\n  <li><b>Sheep (Ovis aries):</b> Natural grazers. Feed close to the ground on fine grasses and forages. Highly susceptible to copper toxicity due to limited biliary copper excretion.</li>\n</ul><br>\n\n<b>II. NUTRIENT REQUIREMENTS & KEY FEEDING PHASES</b><br>\n<ol>\n  <li><b>Flushing of Breeding Ewes and Does:</b>\n    <ul>\n      <li><i>Principle:</i> Increasing plane of nutrition <b>2 to 3 weeks prior to breeding and continuing for 2 weeks into mating</b>.</li>\n      <li><i>Action:</i> Supplement grazing with <b>200 to 300 g concentrate mixture</b> (16% CP, 70% TDN) per head daily.</li>\n      <li><i>Outcome:</i> Stimulates follicular development, elevates ovulation rate by 20–30%, enhances twinning percentage, and decreases early embryonic mortality.</li>\n    </ul>\n  </li>\n  <li><b>Creep Feeding of Suckling Lambs &amp; Kids:</b>\n    <ul>\n      <li><i>Principle:</i> Providing an exclusive nutrient-dense concentrate to suckling young behind a barrier (creep gate) that excludes adult ewes.</li>\n      <li><i>Composition:</i> Highly palatable, easily digestible: <b>20–22% Crude Protein and 75% TDN</b> (Maize 50%, Soybean meal 30%, Wheat bran 17%, Mineral mix 2%, Salt 1%).</li>\n      <li>Started at <b>2 weeks of age</b>; achieves weaning weights of 12–15 kg by 90 days.</li>\n    </ul>\n  </li>\n  <li><b>Lactation &amp; Milk Production:</b>\n    <ul>\n      <li>A milking doe producing 2 to 3 liters of milk requires <b>400 g concentrate mixture per liter of milk</b> above maintenance, alongside ad libitum green legumes (berseem/lucerne) or top foliage.</li>\n    </ul>\n  </li>\n  <li><b>Wool Production in Fine-Wool Sheep (Merino / Chokla):</b>\n    <ul>\n      <li>Wool is pure keratin protein containing <b>3 to 4% Sulfur</b>, packed with cystine and methionine. Wool growth requires adequate dietary sulfur (N:S ratio of <b>10 : 1</b>). High-wool sheep require sulfur amino acid supplementation or bypass protein.</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>III. STEP-BY-STEP WORKED RATION PROBLEM</b><br>\n<b>Problem:</b> Formulate a balanced daily ration for an intensive, stall-fed Barbari goat (meat purpose) weighing <b>30 kg</b>, targeted for a growth rate of <b>100 g daily gain</b>.<br>\n<i>Daily Requirements (ICAR Standards):</i>\n<ul>\n  <li>Dry Matter Intake (at 3.5% BW) = $30 \\times 0.035 = \\mathbf{1.05\\text{ kg DM}}$</li>\n  <li>DCP Requirement = $\\mathbf{75\\text{ g DCP (0.075 kg)}}$</li>\n  <li>TDN Requirement = $\\mathbf{600\\text{ g TDN (0.600 kg)}}$</li>\n</ul>\n<i>Feeds available:</i>\n<ul>\n  <li>Green Subabul / Leucaena tree leaves (25% DM, 15% DCP, 62% TDN on DM basis)</li>\n  <li>Dry Gram Straw / Bhusa (90% DM, 2.5% DCP, 45% TDN on DM basis)</li>\n  <li>Goat Grower Concentrate (90% DM, 18% DCP, 72% TDN on DM basis)</li>\n</ul><br>\n\n<b>Step 1: Partition Dry Matter:</b>\n<ul>\n  <li>Tree Foliage (Subabul) DM = 0.40 kg $\\rightarrow \\text{Fresh leaves} = \\frac{0.40}{0.25} = \\mathbf{1.60\\text{ kg fresh}}$</li>\n  <li>Gram Straw DM = 0.35 kg $\\rightarrow \\text{Fresh straw} = \\frac{0.35}{0.90} = \\mathbf{0.39\\text{ kg fresh}}$</li>\n  <li>Grower Concentrate DM = 0.30 kg $\\rightarrow \\text{Fresh concentrate} = \\frac{0.30}{0.90} = \\mathbf{0.33\\text{ kg (330 g fresh)}}$</li>\n</ul><br>\n\n<b>Step 2: Nutrient Balance Check:</b>\n<ul>\n  <li><b>From 0.40 kg Subabul DM:</b> $\\text{DCP} = 0.40 \\times 0.15 = \\mathbf{0.060\\text{ kg}}$; $\\text{TDN} = 0.40 \\times 0.62 = \\mathbf{0.248\\text{ kg}}$</li>\n  <li><b>From 0.35 kg Gram Straw DM:</b> $\\text{DCP} = 0.35 \\times 0.025 = \\mathbf{0.009\\text{ kg}}$; $\\text{TDN} = 0.35 \\times 0.45 = \\mathbf{0.158\\text{ kg}}$</li>\n  <li><b>From 0.30 kg Concentrate DM:</b> $\\text{DCP} = 0.30 \\times 0.18 = \\mathbf{0.054\\text{ kg}}$; $\\text{TDN} = 0.30 \\times 0.72 = \\mathbf{0.216\\text{ kg}}$</li>\n  <li><b>Total Supply:</b>\n    <ul>\n      <li>$\\text{DM} = 0.40 + 0.35 + 0.30 = \\mathbf{1.05\\text{ kg}}$ (Req: 1.05 kg) — <b>Exact</b></li>\n      <li>$\\text{DCP} = 60 + 9 + 54 = \\mathbf{123\\text{ g}}$ (Req: 75 g) — <b>Ample protein for muscle growth</b></li>\n      <li>$\\text{TDN} = 0.248 + 0.158 + 0.216 = \\mathbf{0.622\\text{ kg (622 g)}}$ (Req: 600 g) — <b>Balanced</b></li>\n    </ul>\n  </li>\n</ul>",
+    "eliteDesc": "<b>SPECIES-SPECIFIC NUTRITIONAL TOXICOLOGY & METABOLISM</b><br><br>\n<b>1. Copper Toxicity in Sheep:</b><br>\nSheep are exceptionally sensitive to dietary copper toxicity. While cattle tolerate &gt; 100 ppm copper, sheep accumulate copper in liver lysosomes when dietary copper exceeds <b>15–20 ppm</b> (especially if dietary molybdenum and sulfur are low). Upon sudden stress, massive hepatic necrosis releases copper into systemic blood, precipitating a catastrophic <b>hemolytic crisis (jaundice, hemoglobinuria / black kidneys)</b>. <i>Never feed commercial cattle mineral mixtures to sheep!</i> Always use sheep-specific copper-free or low-copper mineral mixtures.<br><br>\n\n<b>2. Mimosine &amp; DHP Toxicity in Subabul Feeding:</b><br>\n<i>Leucaena leucocephala</i> (Subabul) foliage contains the toxic non-protein amino acid <b>mimosine</b>. Ruminal bacteria convert mimosine into 3,4-dihydroxypyridine (3,4-DHP), a potent goitrogen that suppresses thyroid hormone synthesis, causing alopecia (tail switch shedding), goiter, and growth arrest. Subabul must not exceed <b>25–30% of total dietary dry matter</b> in non-inoculated herds.",
+    "keyPoints": [
+      "Goats have high voluntary intake capacity (3.0–4.5% BW) and are natural selective browsers.",
+      "Sheep are close grazers and are exceptionally sensitive to fatal copper toxicity.",
+      "Flushing (200–300 g concentrate daily 2–3 weeks before mating) increases ovulation and lambing %.",
+      "Creep mixture for young lambs/kids must contain 20–22% Crude Protein and 75% TDN.",
+      "Wool is rich in sulfur (keratin); requires an optimal dietary Nitrogen to Sulfur ratio of 10 : 1.",
+      "Lactating dairy goats require approx. 400 g concentrate per liter of milk produced.",
+      "Never feed cattle mineral mixtures to sheep due to dangerous copper concentrations.",
+      "Subabul (Leucaena) foliage must be limited to < 30% of diet to prevent mimosine/DHP toxicity.",
+      "Stall-fed goat fattening requires high-energy concentrate feeding for rapid 100–150 g daily gain.",
+      "Gram straw (chana bhusa) is a premier palatable dry legume roughage for small ruminants."
+    ],
+    "clinical": "Field Emergency Case: A progressive farmer houses 50 adult Muzaffarnagri ewes in late pregnancy (carrying twins). To economize, he feeds only dry wheat straw and 100 g damaged grain. During the 9th month, 8 ewes show blindness, muscle tremors, star-gazing posture, sweet acetone breath, and recumbency. Diagnosis: Pregnancy Toxaemia (Ovine Ketosis / Twin Lamb Disease). Massive fetoplacental glucose drain causes hypoglycemic encephalopathy and hepatic lipidosis. Emergency Treatment: Drench with 100 mL propylene glycol or glycerol bid, and administer 20% Dextrose IV.",
+    "tables": [
+      {
+        "title": "Daily Rations for Different Physiological Stages of Sheep & Goats",
+        "headers": [
+          "Animal Category & Weight",
+          "Dry Matter Intake (kg)",
+          "Green Fodder / Tree Loppings (kg)",
+          "Dry Straw (kg)",
+          "Concentrate Mixture (g)",
+          "Target Production"
+        ],
+        "rows": [
+          [
+            "Adult Maintenance (30 kg)",
+            "0.90 – 1.05",
+            "1.5 – 2.0 (Leaves)",
+            "0.50 (Gram straw)",
+            "100 – 150 g",
+            "Constant weight"
+          ],
+          [
+            "Breeding Ewe/Doe (Flushing)",
+            "1.10 – 1.25",
+            "2.0 – 2.5 (Berseem)",
+            "0.40 (Bhusa)",
+            "300 g (Flushing feed)",
+            "+ 25% twinning rate"
+          ],
+          [
+            "Advanced Pregnancy (35 kg)",
+            "1.20 – 1.35",
+            "2.5 – 3.0 (Legume)",
+            "0.40 (Straw)",
+            "350 – 400 g",
+            "Prevent ketosis"
+          ],
+          [
+            "Milking Goat (2 kg milk)",
+            "1.50 – 1.70",
+            "3.5 – 4.5 (Berseem)",
+            "0.30 (Straw)",
+            "700 – 800 g",
+            "Sustained milk yield"
+          ],
+          [
+            "Suckling Lamb/Kid (Creep)",
+            "0.20 – 0.40",
+            "Ad libitum tender hay",
+            "—",
+            "150 – 250 g (20% CP)",
+            "Weaning at 90 days"
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "sheep nutrition",
+      "goat feeding",
+      "flushing",
+      "creep feeding",
+      "wool nutrition",
+      "copper toxicity",
+      "pregnancy toxaemia"
+    ]
   },
-
   "p3-t04": {
-    /* Formulation of Livestock Rations during Scarcity, Drought and Flood Periods */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Formulate emergency survival rations during droughts, floods, and famine using urea-ammoniated straw, Urea-Molasses Mineral Blocks (UMMB), tree top loppings, and sugarcane bagasse.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nNatural calamities (severe droughts, recurring monsoon floods, and winter famines) create catastrophic livestock feed deficits across India. When conventional green fodders and cereal grains vanish, the veterinary priority shifts from <i>productive performance</i> to <b>biological survival</b>: maintaining herd core body temperature, preserving ruminal microbial motility, and preventing massive starvation mortality using unconventional fibrous residues and industrial agro-byproducts.<br><br>\n\n<b>II. EMERGENCY FEED TECHNOLOGIES & FORMULATIONS</b><br>\n<ol>\n  <li><b>Urea Ammoniation of Poor Quality Straws (4% Urea Treatment):</b>\n    <ul>\n      <li><i>Principle:</i> Dry cereal straws (wheat straw, paddy straw) have poor nutritive value (3% CP, 40% TDN) due to tight lignocellulose ester bonds. Treating straw with urea releases gaseous ammonia, which dissolves lignin-hemicellulose cross-links, expands cellulose crystalline fibers, and fixes nitrogen.</li>\n      <li><i>Standard Operating Protocol:</i>\n        <ol>\n          <li>Dissolve <b>4 kg fertilizer-grade urea</b> in <b>40 to 50 Liters of clean water</b> per <b>100 kg dry chopped straw</b>.</li>\n          <li>Spread the dry straw on a clean cement floor or plastic sheet. Spray the urea solution uniformly while turning the straw repeatedly with pitchforks.</li>\n          <li>Stack the moist straw in a compact heap against a wall or inside a pit. Cover hermetically with a thick polythene sheet (or mud/dung plaster) to trap ammonia gas.</li>\n          <li><b>Curing Period:</b> Allow anaerobic curing for <b>21 days (3 weeks) in tropical summer</b>, or <b>28 days (4 weeks) in cold winter</b>.</li>\n          <li><b>Feeding Protocol:</b> Uncover the required daily quantity and aerate for 2 to 3 hours before feeding to dissipate free pungent ammonia gas.</li>\n        </ol>\n      </li>\n      <li><i>Nutritional Transformation:</i>\n        <ul>\n          <li>Crude Protein increases from <b>3.5% to 8.0–9.0%</b> (more than doubles!).</li>\n          <li>Digestibility (TDN) increases by <b>10 to 12 percentage units</b> (from 42% to 54%).</li>\n          <li>Voluntary dry matter intake increases by <b>30 to 40%</b>.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li><b>Urea Molasses Mineral Block (UMMB) Licks:</b>\n    <ul>\n      <li><i>Principle:</i> A solidified multinutrient block placed in pastures or straw mangers. The animal licks the block slowly, providing a continuous, gradual drip of nitrogen, fermentable sugars, and minerals into the rumen, preventing urea toxicity.</li>\n      <li><i>Cold Process Formulation (IVRI / NDDB Formula):</i>\n        <ul>\n          <li><b>Cane Molasses (Energy source, palatability): 35 to 40%</b></li>\n          <li><b>Urea (NPN for microbial protein): 8 to 10%</b></li>\n          <li><b>Mineral Mixture (Macro/micro minerals): 6 to 8%</b></li>\n          <li><b>Common Salt: 5%</b></li>\n          <li><b>Calcite Powder / Dicalcium Phosphate: 4%</b></li>\n          <li><b>Wheat Bran / De-oiled Rice Bran (Absorbent matrix): 20 to 25%</b></li>\n          <li><b>Quicklime (CaO) / Magnesium Oxide (Solidifying gelling agent): 6 to 8%</b></li>\n        </ul>\n      </li>\n      <li><i>Intake Rule:</i> Adult cattle lick <b>400 to 500 g daily</b>; sheep/goats lick <b>100 to 150 g daily</b>.</li>\n    </ul>\n  </li>\n  <li><b>Emergency Tree Foliage (Top Feeds / Loppings):</b>\n    <ul>\n      <li>In drought or floods, tree leaves are the only green biomass remaining:\n        <ul>\n          <li><b>Subabul (Leucaena leucocephala):</b> 20–22% CP; limit to 25% of diet.</li>\n          <li><b>Neem Leaves (Azadirachta indica):</b> Bitter triterpenoids; mix with straw and 2% molasses.</li>\n          <li><b>Peepal (Ficus religiosa) &amp; Banyan (Ficus benghalensis):</b> 10–12% CP, highly palatable.</li>\n          <li><b>Babul Pods &amp; Leaves (Acacia nilotica):</b> Rich in protein (12–14% CP) and energy.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li><b>Complete Feed Blocks (CFB):</b>\n    <ul>\n      <li>Densified blocks prepared by hydraulic compression (at 3000–4000 psi) containing <b>60% chopped straw + 40% concentrate mix with 10% molasses</b>. Reduces transport volume by 65%, enabling rapid air-dropping or truck transit into flood-ravaged zones.</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>III. SURVIVAL MAINTENANCE RATION FOR A 350 KG ADULT COW IN DROUGHT</b><br>\n$$\\text{Minimum Maintenance Requirement: } \\mathbf{180\\text{ g DCP}} \\text{ and } \\mathbf{2.50\\text{ kg TDN}}$$\n<i>Emergency Ration Composition:</i>\n<ul>\n  <li>4% Urea-Ammoniated Wheat Straw = <b>5.0 kg</b> (Provides 250 g DCP and 2.70 kg TDN)</li>\n  <li>Common Salt = <b>30 g</b> + Clean drinking water ad libitum.</li>\n</ul>\n<i>Nutritional Outcome:</i> The animal fully satisfies her maintenance energy and protein needs on ammoniated straw alone, without needing a single gram of expensive cereal grain or commercial cake!",
+    "eliteDesc": "<b>RUMINAL BIOCHEMISTRY OF UREA TOXICITY & SAFE FEEDING PROTOCOLS</b><br><br>\n<b>1. Mechanism of Urea Toxicity:</b><br>\nRuminal bacterial urease hydrolyzes urea into ammonia ($NH_3$) at a rate <b>four times faster</b> than cellulolytic bacteria can synthesize microbial amino acids. If free ammonia accumulates:\n$$\\text{Rumen Fluid pH rises } > 7.3 \\rightarrow \\text{Lipophilic non-ionized } \\text{NH}_3 \\text{ diffuses across rumen wall into blood}$$\nWhen blood ammonia exceeds <b>1.0 mg/100 mL</b>, it overwhelms hepatic carbamoyl phosphate synthetase. Severe hyperammonemia inhibits the tricarboxylic acid (TCA) cycle in brain neurons, producing muscle tremors, violent ataxia, bloat, frothing at the mouth, tetanic convulsions, and death within 1 to 2 hours.<br><br>\n\n<b>2. Emergency Field Antidote for Urea Poisoning:</b><br>\nAdminister <b>2 to 4 Liters of 5% Acetic Acid (or household vinegar) diluted in 5 Liters of ice-cold water</b> orally via stomach tube. Acetic acid immediately neutralizes rumen pH below 6.5, converting lipophilic $NH_3$ into non-absorbable ammonium ions ($NH_4^+$); ice-cold water halts urease enzyme activity.",
+    "keyPoints": [
+      "In floods and droughts, the veterinary objective shifts from production to biological herd survival.",
+      "Urea ammoniation uses 4 kg urea + 40 L water per 100 kg dry straw, sealed airtight for 21 days.",
+      "Ammoniation doubles straw Crude Protein (3.5% to 8.5%) and raises TDN by 10–12 percentage units.",
+      "Ammoniated straw must be aerated for 2–3 hours before feeding to dissipate free pungent ammonia.",
+      "Urea Molasses Mineral Block (UMMB) provides a safe, gradual lick supply of NPN, energy, and minerals.",
+      "Quicklime (CaO) at 6–8% acts as the binding solidifying agent in cold-process UMMB manufacture.",
+      "Emergency tree loppings (Peepal, Babul, Subabul, Neem) provide vital green protein during floods.",
+      "Complete Feed Blocks (CFBs) compress roughage and concentrate at 3500 psi to facilitate emergency transit.",
+      "Urea toxicity occurs when ruminal ammonia releases faster than bacterial assimilation (blood NH₃ > 1 mg%).",
+      "Field antidote for urea poisoning: 2–4 Liters of vinegar (acetic acid) + ice-cold water drenched orally."
+    ],
+    "clinical": "Field Disaster Response: Following catastrophic flooding in the Ganga basin, a veterinary relief team finds 500 marooned cattle surviving on damp, moldy paddy straw. Animals show severe weakness, subnormal temperature, and ruminal stasis. The team deploys 10 tonnes of Complete Feed Blocks (CFB) and Urea Molasses Mineral Blocks (UMMB), combined with oral administration of 100 g sodium bicarbonate and vitamin A injections, halting starvation mortality completely within 48 hours.",
+    "tables": [
+      {
+        "title": "Composition & Nutritive Value of Emergency Feeds in India",
+        "headers": [
+          "Emergency Feed Resource",
+          "Processing Method",
+          "Crude Protein (% DM)",
+          "TDN (% DM)",
+          "Safe Inclusion Limit / Daily Dose"
+        ],
+        "rows": [
+          [
+            "Urea-Treated Straw",
+            "4% urea, 21-day anaerobic curing",
+            "8.0 – 9.0 %",
+            "52.0 – 55.0 %",
+            "100% of basal roughage."
+          ],
+          [
+            "UMMB Lick Block",
+            "Cold process with 8% urea + quicklime",
+            "35.0 – 40.0 % (Equiv)",
+            "60.0 – 65.0 %",
+            "400 – 500 g/head/day."
+          ],
+          [
+            "Sugarcane Tops",
+            "Freshly harvested from sugar mills",
+            "5.0 – 6.0 %",
+            "50.0 – 54.0 %",
+            "Up to 15 – 20 kg fresh/day."
+          ],
+          [
+            "Bagasse + Molasses",
+            "Pith bagasse soaked in 20% molasses",
+            "2.0 – 3.0 %",
+            "42.0 – 45.0 %",
+            "50% of roughage portion."
+          ],
+          [
+            "Peepal Tree Leaves",
+            "Fresh branches lopped and wilted",
+            "10.0 – 12.0 %",
+            "50.0 – 52.0 %",
+            "Up to 8 – 10 kg fresh/day."
+          ],
+          [
+            "Complete Feed Block",
+            "Hydraulic densification (60:40)",
+            "11.0 – 12.0 %",
+            "58.0 – 60.0 %",
+            "6.0 – 8.0 kg/head/day."
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "scarcity feeding",
+      "drought rations",
+      "urea treatment",
+      "ammoniated straw",
+      "UMMB",
+      "complete feed blocks",
+      "urea toxicity",
+      "tree leaves"
+    ]
   },
-
   "p3-t05": {
-    /* Study Visit to Livestock Farm and Commercial Feed Processing Mill */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Master the layout, machinery, operational sequence, and quality control checkpoints of a commercial feed processing mill and organized livestock farm.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nA field study visit to an organized livestock farm and commercial feed processing mill bridges classroom nutritional theory with commercial feed manufacturing engineering. The objective is to understand industrial bulk raw material handling, particle size reduction (grinding), precision batching, ribbon mixing homogeneity, steam conditioning, ring-die pellet extrusion, and mill quality control.<br><br>\n\n<b>II. COMMERCIAL FEED MILL ARCHITECTURE & OPERATIONAL FLOW</b><br>\nA modern multi-tier gravity-flow feed compounding mill operates through eight sequential processing stages:\n<ol>\n  <li><b>Raw Material Intake &amp; Storage:</b>\n    <ul>\n      <li>Grains (maize, barley) arrive in bulk trucks; unloaded into intake hoppers with mechanical grates.</li>\n      <li>Cleaned of stones, straw, and metal debris using vibrating screens, pre-cleaners, and high-intensity permanent magnets.</li>\n      <li>Transferred via bucket elevators into large corrugated galvanized steel silos (500–1000 tonne capacity) equipped with aeration fans and thermocouple temperature cables to detect damp hot spots.</li>\n    </ul>\n  </li>\n  <li><b>Particle Size Reduction (Grinding):</b>\n    <ul>\n      <li><b>Hammer Mill:</b> High-speed rotating steel beaters (1800–3000 RPM) shatter grain kernels against a surrounding perforated screen (3–4 mm screen for cattle feed; 2 mm for poultry).</li>\n      <li>Grinding increases surface area for ruminal microbial enzyme attachment and ensures uniform mixing with micro-ingredients.</li>\n    </ul>\n  </li>\n  <li><b>Micro &amp; Macro Ingredient Batching (Proportioning):</b>\n    <ul>\n      <li>Ingredients discharge from batch bins into computerized central scale hoppers via variable-speed screw feeders.</li>\n      <li>Micro-ingredients (vitamins, trace mineral premixes, synthetic amino acids, coccidiostats) are pre-blended in a ribbon pre-mixer with a carrier (wheat bran) before addition to the main batch.</li>\n    </ul>\n  </li>\n  <li><b>Homogeneous Mixing:</b>\n    <ul>\n      <li><b>Horizontal Twin-Shaft Paddle / Ribbon Mixer:</b> The heart of the feed mill. Counter-rotating inner and outer ribbons move feed in opposite axial directions, producing a fluidized bed.</li>\n      <li>Mixing time: <b>3 to 4 minutes per batch</b>.</li>\n      <li><b>Quality Benchmark:</b> Mixing homogeneity is verified by sampling 10 spots and determining the <b>Coefficient of Variation (CV &lt; 8–10%)</b> using salt or trace mineral assays.</li>\n    </ul>\n  </li>\n  <li><b>Liquid Addition (Molasses &amp; Fat Injection):</b>\n    <ul>\n      <li>Warm cane molasses (at 45–50°C, up to 5–8%) and fats/oils (up to 2–3%) are sprayed under pressure through atomizing nozzles directly into the mixer during the second minute of mixing.</li>\n    </ul>\n  </li>\n  <li><b>Conditioning &amp; Steam Pelleting:</b>\n    <ul>\n      <li><b>Conditioner:</b> Meal mash is blended with dry saturated steam (pressure 2–3 bar, temperature <b>80 to 85°C</b> for 30–45 seconds). Heat and moisture gelatinize starch, lubricate the die, and destroy pathogenic bacteria (<i>Salmonella</i>).</li>\n      <li><b>Pellet Mill:</b> Saturated mash is extruded through a rotating circular <b>Ring Die</b> by heavy cylindrical rollers, compressed at high pressure, and cut into cylindrical pellets (6–8 mm diameter for cattle; 2–4 mm crumbles for chicks) by adjustable outer knives.</li>\n    </ul>\n  </li>\n  <li><b>Counter-Flow Pellet Cooling &amp; Crumbling:</b>\n    <ul>\n      <li>Fresh hot pellets (85°C, 16% moisture) enter an upright counter-flow cooler. Ambient air drawn upward cools pellets to within 5°C of room temperature and drops moisture to a safe <b>&lt; 11–12%</b>.</li>\n      <li>Cooled pellets pass through corrugated cracking rollers to produce crumbled feed for young poultry, or pass directly to bagging.</li>\n    </ul>\n  </li>\n  <li><b>Screening, Bagging &amp; Quality Control:</b>\n    <ul>\n      <li>Vibrating screener removes fines and dust (re-routed back to pellet mill).</li>\n      <li>Automatic electronic bagging scale packs finished feed into 50 kg woven polypropylene (BOPP) bags, machine stitches the mouths, and labels with nutritional guarantee tags.</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>III. FEED MILL QUALITY CONTROL CHECKLIST FOR VETERINARIANS</b><br>\nDuring the plant inspection, the veterinary auditor inspects five critical points:\n<ol>\n  <li><b>Pellet Durability Index (PDI):</b> Tested using a tumbling box tester (ASAE standard). High-quality commercial pellets must exhibit a <b>PDI &gt; 90–95%</b> (less than 5% broken fines during transit).</li>\n  <li><b>Mycotoxin Rapid Screening:</b> Long-wave UV inspection (Wood's lamp) and lateral flow strip ELISA testing of every incoming maize truck for Aflatoxin B1 (&lt; 20 ppb).</li>\n  <li><b>Raw Ingredient Moisture:</b> Grain moisture must be strictly &lt; 12% to prevent mold proliferation in silos.</li>\n  <li><b>Cleanliness of Liquid Lines:</b> Inspection of molasses pumps and steam traps to prevent rancid accumulation and caramelization blockages.</li>\n  <li><b>Warehouse Hygiene:</b> Bags stacked on wooden pallets 30 cm away from walls, with bird netting, rat bait stations, and good ventilation.</li>\n</ol>",
+    "eliteDesc": "<b>PHYSICAL DYNAMICS OF PELLETING & MIXING HOMOGENEITY</b><br><br>\n<b>1. Calculating Mixing Homogeneity (Coefficient of Variation - CV):</b><br>\nTo certify mixer performance:\n<ol>\n  <li>Add 0.5% common salt (NaCl) as a micro-tracer to a 1000 kg batch.</li>\n  <li>Take 10 representative grab samples from different locations in the mixer.</li>\n  <li>Determine chloride/salt percentage in each sample ($X_1, X_2, \\dots, X_{10}$).</li>\n  <li>Calculate Mean ($\\bar{X}$) and Standard Deviation ($S$):\n  $$\\mathbf{\\text{CV (\\%)}} = \\frac{S}{\\bar{X}} \\times 100$$</li>\n  <li><i>Standard:</i> $\\text{CV} &lt; 10\\%$ indicates excellent homogeneous mixing; $\\text{CV} &gt; 15\\%$ indicates worn ribbon blades or inadequate mixing time.</li>\n</ol><br>\n\n<b>2. Gelatinization Chemistry in Steam Conditioning:</b><br>\nRaw starch granules are compact, semi-crystalline, and insolubly packed. Steam conditioning at 80–85°C with 15–16% moisture breaks intra-molecular hydrogen bonds. Water penetrates starch amylose and amylopectin chains, causing swelling and <b>starch gelatinization</b>. Gelatinized starch acts as a natural thermosetting adhesive that binds feed particles together into rock-hard pellets, eliminates fines, increases ruminal starch availability, and kills viral and bacterial pathogens.",
+    "keyPoints": [
+      "A modern commercial feed mill utilizes gravity-flow architecture across grinding, mixing, and pelleting.",
+      "Grains are cleaned using mechanical screens, aspirators, and permanent magnets to remove metal tramp.",
+      "Hammer mills reduce grain particle size (3–4 mm screen for cattle; 2 mm for poultry).",
+      "Horizontal ribbon/paddle mixers achieve complete batch homogeneity in 3 to 4 minutes.",
+      "Mixer efficiency is certified when the Coefficient of Variation (CV) of a tracer is < 10%.",
+      "Steam conditioning at 80–85°C gelatinizes starch, binds pellets, and pasteurizes pathogens.",
+      "Pellet mills extrude hot conditioned mash through a hardened steel ring die using compression rollers.",
+      "Counter-flow coolers cool pellets to within 5°C of ambient temperature, reducing moisture < 12%.",
+      "Pellet Durability Index (PDI) measures physical pellet strength and must exceed 90–95%.",
+      "Warehouse storage requires stacking on wooden pallets away from walls to prevent damp moisture absorption."
+    ],
+    "clinical": "Field Case Study: A poultry integrator reports sudden stunting, uneven flock uniformity, and rickets in 20,000 broilers. The feed formulation on paper was nutritionally perfect. Inspection of the feed mill reveals worn ribbon mixer paddles and a mixing time reduced to 60 seconds to speed output. Testing reveals a Coefficient of Variation (CV) of 28%! Half the chicks received excess toxic vitamin D3 while the other half received zero vitamin D3 and calcium, causing severe clinical rickets. Replacing mixer paddles and restoring 3-minute mixing solved the crisis.",
+    "tables": [
+      {
+        "title": "Commercial Feed Processing Equipment & Operational Standards",
+        "headers": [
+          "Processing Machinery",
+          "Mechanical Function",
+          "Operating Parameters",
+          "Quality Control Standard"
+        ],
+        "rows": [
+          [
+            "Magnetic Separators",
+            "Removes tramp iron/nails",
+            "High-intensity rare-earth magnets",
+            "Cleaned every 4 hours."
+          ],
+          [
+            "Hammer Mill",
+            "Grain particle size reduction",
+            "1800 – 3000 RPM; 3 mm screen",
+            "Uniform grist; minimal fine dust."
+          ],
+          [
+            "Ribbon Batch Mixer",
+            "Homogeneous feed blending",
+            "3 – 4 minutes cycle time",
+            "CV < 8 – 10% for salt tracer."
+          ],
+          [
+            "Steam Conditioner",
+            "Starch gelatinization & cooking",
+            "80 – 85°C; 2 – 3 bar steam",
+            "Moisture reaches 15 – 16%."
+          ],
+          [
+            "Ring-Die Pellet Mill",
+            "High-pressure pellet extrusion",
+            "6 – 8 mm die for cattle feed",
+            "Smooth, shiny, firm pellets."
+          ],
+          [
+            "Counter-Flow Cooler",
+            "Removes heat and moisture",
+            "Counter-current ambient air",
+            "Pellet moisture dropped < 12%."
+          ],
+          [
+            "PDI Tumbler Tester",
+            "Measures pellet durability",
+            "500 g pellets tumbled 10 min",
+            "PDI > 90 – 95% intact pellets."
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "feed mill",
+      "feed processing",
+      "hammer mill",
+      "ribbon mixer",
+      "pelleting",
+      "PDI",
+      "conditioning",
+      "quality control"
+    ]
   }
 };
 
 practicalData["prac-unit-4"] = {
   "p4-t01": {
-    /* Calculation of Nutrient Requirements for Growth, Reproduction and Egg/Meat Production */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Calculate nutrient requirements for non-ruminants (poultry, swine, equines) based on Metabolizable Energy (ME), Crude Protein (CP), and critical limiting amino acids.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nUnlike ruminants, non-ruminants (monogastric species: poultry, swine, and equines) lack a foregut fermentation vat. They cannot synthesize essential amino acids or B-complex vitamins from non-protein nitrogen (NPN), nor can they digest fibrous cell walls efficiently.<br>\n<b>Key Evaluation Currencies in Non-Ruminant Nutrition:</b>\n<ol>\n  <li><b>Energy Currency: Metabolizable Energy (ME in kcal/kg feed):</b>\n  $$\\text{ME} = \\text{Gross Energy (GE)} - [\\text{Faecal Energy} + \\text{Urinary Energy} + \\text{Combustible Gaseous Energy}]$$\n  In poultry, because urine and faeces are voided together as mixed excreta through the cloaca, <b>Apparent Metabolizable Energy (AME)</b> is determined directly from total excreta.</li>\n  <li><b>Protein &amp; Amino Acid Quality:</b>\n  Non-ruminants do not have a requirement for crude protein per se; they require specific quantities and balances of <b>Essential Amino Acids (EAAs)</b>. The primary first-limiting amino acids are:\n  <ul>\n    <li><i>Poultry:</i> <b>Methionine</b> (first-limiting in maize-soybean diets; critical for feathering and egg size), followed by <b>Lysine</b> and <b>Threonine</b>.</li>\n    <li><i>Swine:</i> <b>Lysine</b> (first-limiting amino acid for lean muscle synthesis), followed by <b>Methionine + Cystine</b>, <b>Threonine</b>, and <b>Tryptophan</b>.</li>\n  </ul>\n  </li>\n  <li><b>Calorie-to-Protein (C : P) Ratio:</b>\n  $$\\mathbf{\\text{Calorie : Protein Ratio}} = \\frac{\\text{Metabolizable Energy (kcal/kg)}}{\\text{Crude Protein (\\%)}}$$\n  Non-ruminants eat primarily to satisfy their energy needs. If a diet is overly dense in energy, feed intake drops prematurely before the animal consumes sufficient protein, minerals, and vitamins.</li>\n</ol><br>\n\n<b>II. BIS (2007) &amp; ICAR NUTRIENT STANDARDS FOR POULTRY &amp; SWINE</b><br>\n<ol>\n  <li><b>Broiler Chickens (Meat Birds):</b>\n    <ul>\n      <li><i>Pre-Starter (0 to 7 days):</i> ME = <b>3000 kcal/kg</b>, CP = <b>23.0%</b>, Lysine = 1.30%, Methionine = 0.50%</li>\n      <li><i>Starter (8 to 21 days):</i> ME = <b>3100 kcal/kg</b>, CP = <b>22.0%</b>, Lysine = 1.20%, Methionine = 0.48%</li>\n      <li><i>Finisher (22 to 42 days):</i> ME = <b>3200 kcal/kg</b>, CP = <b>20.0%</b>, Lysine = 1.05%, Methionine = 0.45%</li>\n    </ul>\n  </li>\n  <li><b>Egg Layers (White Leghorn / Commercial Strains):</b>\n    <ul>\n      <li><i>Chick Stage (0 to 8 weeks):</i> ME = <b>2800 kcal/kg</b>, CP = <b>20.0%</b>, Calcium = 1.0%, Available P = 0.45%</li>\n      <li><i>Grower Stage (9 to 18 weeks):</i> ME = <b>2500 kcal/kg</b>, CP = <b>16.0%</b>, Calcium = 1.0%, Available P = 0.40%</li>\n      <li><i>Layer Phase I (19 to 45 weeks — Peak Lay):</i> ME = <b>2750 kcal/kg</b>, CP = <b>18.0%</b>, <b>Calcium = 3.50 to 3.80%</b>, Available P = 0.40%</li>\n      <li><i>Layer Phase II (> 45 weeks):</i> ME = <b>2700 kcal/kg</b>, CP = <b>16.0%</b>, <b>Calcium = 4.00 to 4.25%</b>, Available P = 0.35%</li>\n    </ul>\n  </li>\n  <li><b>Growing-Finishing Pigs (Swine):</b>\n    <ul>\n      <li><i>Pig Starter (10 to 20 kg BW):</i> DE = <b>3300 kcal/kg</b>, CP = <b>18–20%</b>, Lysine = 1.15%</li>\n      <li><i>Pig Grower (20 to 50 kg BW):</i> DE = <b>3200 kcal/kg</b>, CP = <b>16.0%</b>, Lysine = 0.85%</li>\n      <li><i>Pig Finisher (50 to 100 kg BW):</i> DE = <b>3100 kcal/kg</b>, CP = <b>14.0%</b>, Lysine = 0.65%</li>\n      <li><i>Lactating Sow:</i> High demand: DE = 3300 kcal/kg, CP = 16.5%, Lysine = 0.90%</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>III. STEP-BY-STEP CALCULATION OF FLOCK DAILY NUTRIENT CONSUMPTION</b><br>\n<b>Problem:</b> A commercial broiler flock of <b>5,000 birds at 4 weeks of age (Finisher Phase)</b> consumes on average <b>130 g feed per bird daily</b>. The finisher feed contains 3150 kcal ME/kg and 20.0% CP. Calculate the daily energy and protein intake of the flock.<br>\n<ul>\n  <li>Daily flock feed consumption = $5000 \\times 0.130\\text{ kg} = \\mathbf{650\\text{ kg feed / day}}$</li>\n  <li>Daily flock ME consumption = $650\\text{ kg} \\times 3150\\text{ kcal/kg} = \\mathbf{2,047,500\\text{ kcal (2047.5 Mcal ME)}}$</li>\n  <li>Daily flock Crude Protein consumption = $650\\text{ kg} \\times 20.0\\% = 650 \\times 0.20 = \\mathbf{130.0\\text{ kg CP}}$</li>\n  <li>Per bird daily ME intake = $0.130 \\times 3150 = \\mathbf{409.5\\text{ kcal ME / bird / day}}$</li>\n  <li>Per bird daily CP intake = $130 \\times 0.20 = \\mathbf{26.0\\text{ g CP / bird / day}}$</li>\n</ul>",
+    "eliteDesc": "<b>IDEAL PROTEIN CONCEPT & ENERGY DENSITY REGULATION</b><br><br>\n<b>1. The Ideal Protein Concept:</b><br>\nIn classical nutrition, feeding excess protein ensures adequate intake of limiting amino acids, but wastes nitrogen and pollutes litter with uric acid. The modern <b>Ideal Protein Concept</b> sets <b>Lysine at 100%</b> as the reference amino acid, and formulates all other essential amino acids as exact biological ratios to lysine:\n<ul>\n  <li><i>Broiler Chickens:</i> Lysine = 100%, Methionine = 42%, Methionine + Cystine = 75%, Threonine = 65%, Tryptophan = 18%, Valine = 77%, Isoleucine = 67%.</li>\n  <li><i>Growing Swine:</i> Lysine = 100%, Threonine = 65%, Methionine + Cystine = 60%, Tryptophan = 18%, Isoleucine = 60%.</li>\n</ul><br>\n\n<b>2. Ambient Temperature vs Feed Intake (Tropical Thermal Stress):</b><br>\nPoultry lack sweat glands. When environmental temperature exceeds <b>32°C (heat stress)</b>, birds pant to dissipate evaporative heat. Feed consumption drops by <b>1.5 to 2.0% for every 1°C rise</b> above 25°C. To maintain absolute nutrient intake during hot Indian summers, feed energy, amino acid, and vitamin concentrations must be fortified by 10–15% while replacing carbohydrate calories with supplemental fats/oils (which have the lowest heat increment of feeding).",
+    "keyPoints": [
+      "Non-ruminants lack foregut fermentation; require preformed essential amino acids and B-vitamins.",
+      "Energy is evaluated as Metabolizable Energy (ME in kcal/kg feed) for poultry and DE/ME for swine.",
+      "In poultry, Apparent Metabolizable Energy (AME) is determined directly from mixed cloacal excreta.",
+      "First-limiting amino acid in maize-soybean poultry diets is Methionine; in swine diets, it is Lysine.",
+      "Calorie : Protein ratio = ME (kcal/kg) / CP (%); controls feed intake and carcass fatness.",
+      "Broiler diets require high protein (23% pre-starter down to 20% finisher) and high energy (3000–3200 kcal).",
+      "Layer phase I hens require 3.5–3.8% dietary calcium for daily eggshell synthesis.",
+      "Young growing pigs require high lysine (1.15%) for rapid lean muscle deposition.",
+      "The Ideal Protein Concept formulates all essential amino acids as an exact percentage of Lysine (100%).",
+      "Tropical heat stress reduces poultry feed intake; requires fortified nutrient density and supplemental fats."
+    ],
+    "clinical": "Field Veterinary Diagnosis: A broiler flock at 32 days shows birds with swollen distended abdomens, gasping for breath, reluctance to move, and sudden death. Post-mortem reveals severe abdominal ascites (straw-colored peritoneal fluid), right ventricular hypertrophy, and congested lungs. Diagnosis: Ascites Syndrome (Pulmonary Hypertension Syndrome). Pathogenesis: Feeding an excessively high-energy pelleted diet (> 3250 kcal/kg) stimulates rapid muscle growth beyond the physiological oxygen-carrying capacity of the immature cardiopulmonary system. Intervention: Switch to mash feed or restrict feed intake by 10–15% for 5 days.",
+    "tables": [
+      {
+        "title": "BIS (2007) Nutrient Standards for Commercial Poultry Feeds",
+        "headers": [
+          "Poultry Class & Age",
+          "Metabolizable Energy (kcal/kg)",
+          "Crude Protein (% min)",
+          "Lysine (% min)",
+          "Methionine (% min)",
+          "Calcium (% min)",
+          "Avail. Phosphorus (% min)"
+        ],
+        "rows": [
+          [
+            "Broiler Pre-Starter (0–7 d)",
+            "3000",
+            "23.0 %",
+            "1.30 %",
+            "0.50 %",
+            "1.00 %",
+            "0.45 %"
+          ],
+          [
+            "Broiler Starter (8–21 d)",
+            "3100",
+            "22.0 %",
+            "1.20 %",
+            "0.48 %",
+            "1.00 %",
+            "0.45 %"
+          ],
+          [
+            "Broiler Finisher (22–42 d)",
+            "3200",
+            "20.0 %",
+            "1.05 %",
+            "0.45 %",
+            "0.90 %",
+            "0.40 %"
+          ],
+          [
+            "Layer Chick (0–8 wks)",
+            "2800",
+            "20.0 %",
+            "1.00 %",
+            "0.40 %",
+            "1.00 %",
+            "0.45 %"
+          ],
+          [
+            "Layer Grower (9–18 wks)",
+            "2500",
+            "16.0 %",
+            "0.75 %",
+            "0.32 %",
+            "1.00 %",
+            "0.40 %"
+          ],
+          [
+            "Layer Phase I (19–45 wks)",
+            "2750",
+            "18.0 %",
+            "0.85 %",
+            "0.38 %",
+            "3.60 %",
+            "0.40 %"
+          ],
+          [
+            "Layer Phase II (> 45 wks)",
+            "2700",
+            "16.0 %",
+            "0.75 %",
+            "0.34 %",
+            "4.00 %",
+            "0.35 %"
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "non-ruminant nutrition",
+      "poultry standards",
+      "swine standards",
+      "metabolizable energy",
+      "lysine",
+      "methionine",
+      "BIS standards",
+      "ideal protein"
+    ]
   },
-
   "p4-t02": {
-    /* Formulation of Broiler and Layer Poultry Diets using Conventional and Alternate Ingredients */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Formulate balanced Broiler and Layer diets using conventional (maize, soybean meal) and alternate ingredients, synthetic amino acids, and shell calcium balancing.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nPoultry diet formulation requires precision compounding to provide balanced energy (ME), amino acids (lysine, methionine), macrominerals (calcium, available phosphorus), trace minerals, and vitamins in a single complete all-mash or crumbled diet.<br>\n<b>Key Principles of Practical Poultry Feed Formulation:</b>\n<ol>\n  <li><b>Basal Energy Source (50 to 65% of Diet):</b> Yellow maize is the premier energy grain (3350 kcal ME/kg, 8.5% CP). In India, when maize prices spike, alternate grains like <b>broken rice (kanki)</b>, <b>pearl millet (bajra)</b>, or <b>sorghum (jowar)</b> are substituted up to 30–50% of the cereal grain portion.</li>\n  <li><b>Protein Concentrate (25 to 35% of Diet):</b> De-hulled soybean meal (44–48% CP, 2250 kcal ME/kg) is the golden standard plant protein. Alternative vegetable proteins include <b>mustard cake</b> (limit to 5–8% due to glucosinolates), <b>sunflower meal</b>, and <b>roasted guar korma</b> (limit to 4–5%).</li>\n  <li><b>Synthetic Amino Acid Supplementation:</b> Cereal-soybean diets are inherently deficient in sulfur amino acids (methionine). Supplementing <b>0.10 to 0.20% synthetic DL-Methionine</b> and <b>0.05 to 0.10% L-Lysine HCl</b> spares 2–3% expensive dietary crude protein while meeting ideal amino acid profiles.</li>\n  <li><b>Eggshell Calcium Dynamics in Layers:</b> A single eggshell contains approx. <b>2.2 g of pure Calcium</b>. Because a layer hen absorbs only 50–60% of dietary calcium, she must consume <b>4.0 to 4.5 g Calcium daily</b>. Layer diets require <b>3.50 to 4.00% Calcium</b>, supplied as a 50:50 blend of fine limestone powder and coarse calcite/oyster shell grit (2–4 mm size, which stays in the gizzard overnight during shell calcification).</li>\n</ol><br>\n\n<b>II. STEP-BY-STEP PEARSON'S SQUARE BROILER STARTER FORMULATION</b><br>\n<b>Problem:</b> Formulate 100 kg of a Broiler Starter Diet containing <b>22.0% Crude Protein</b> using <b>Maize Grain (8.5% CP)</b> and <b>Soybean Meal (46.0% CP)</b>. Fixed ingredients (mineral mixture, dicalcium phosphate, limestone, salt, and premixes) account for <b>5.0%</b> of the diet, contributing 0% protein.<br><br>\n\n<b>Step 1: Calculate Net Protein Required from Grain + Protein Component:</b>\n<ul>\n  <li>Fixed non-protein ingredients = 5.0 kg per 100 kg batch.</li>\n  <li>Remaining space for Maize + Soybean Meal = $100 - 5.0 = \\mathbf{95.0\\text{ kg}}$</li>\n  <li>Target protein to be supplied in this 95 kg = 22.0 kg CP</li>\n  <li>Effective target protein concentration of the Maize-Soy blend:\n  $$\\text{Target CP} = \\frac{22.0}{95.0} \\times 100 = \\mathbf{23.16\\%}$$</li>\n</ul><br>\n\n<b>Step 2: Apply Pearson's Square to the 95 kg Blend:</b>\n$$\\begin{matrix}\n\\text{Maize (8.5\\% CP)} & & (46.0 - 23.16) = \\mathbf{22.84\\text{ parts Maize}} \\\\\n& \\mathbf{23.16\\%} & \\\\\n\\text{Soybean Meal (46.0\\% CP)} & & (23.16 - 8.5) = \\mathbf{14.66\\text{ parts Soybean Meal}}\n\\end{matrix}$$\n$$\\text{Total Parts} = 22.84 + 14.66 = 37.50\\text{ parts}$$\n$$\\text{Maize in blend} = \\frac{22.84}{37.50} \\times 95.0\\text{ kg} = \\mathbf{57.86\\text{ kg}}$$\n$$\\text{Soybean Meal in blend} = \\frac{14.66}{37.50} \\times 95.0\\text{ kg} = \\mathbf{37.14\\text{ kg}}$$\n\n<b>Step 3: Assemble the Final 100 kg Broiler Starter Formula:</b>\n<ul>\n  <li>Yellow Maize Grain = <b>57.86 kg</b> (Supplies $57.86 \\times 0.085 = 4.92$ kg CP; $57.86 \\times 3350 = 1938$ kcal)</li>\n  <li>Soybean Meal (46% CP) = <b>37.14 kg</b> (Supplies $37.14 \\times 0.46 = 17.08$ kg CP; $37.14 \\times 2250 = 836$ kcal)</li>\n  <li>Dicalcium Phosphate (DCP) = <b>1.80 kg</b> (Supplies phosphorus and calcium)</li>\n  <li>Limestone / Calcite Powder = <b>1.20 kg</b> (Supplies calcium)</li>\n  <li>Common Salt = <b>0.35 kg</b> (Supplies sodium and chlorine)</li>\n  <li>DL-Methionine = <b>0.15 kg (150 g)</b> (Corrects first limiting amino acid)</li>\n  <li>Trace Mineral &amp; Vitamin Premix = <b>0.50 kg (500 g)</b></li>\n  <li>Toxin Binder &amp; Coccidiostat = <b>1.00 kg</b></li>\n  <li><b>Total Weight = 100.00 kg</b></li>\n  <li><b>Total CP = $4.92 + 17.08 = \\mathbf{22.00\\%}$</b></li>\n  <li><b>Total ME = $1938 + 836 = 2774\\text{ kcal/kg}$</b> (Add 2% vegetable oil/fat to reach 3000 kcal/kg).</li>\n</ul>",
+    "eliteDesc": "<b>FEED ENZYMES & NON-STARCH POLYSACCHARIDES (NSPs)</b><br><br>\n<b>1. Non-Starch Polysaccharide (NSP) Anti-Nutrients:</b><br>\nWhen alternate cereal grains (wheat, barley, rye, oats, triticale) replace maize, water-soluble <b>Arabinoxylans (pentosans)</b> and <b>$\\beta$-Glucans</b> dissolve in the gut, forming an extremely viscous, sticky gel. This gel:\n<ul>\n  <li>Impairs digestive enzyme diffusion, reducing fat, starch, and protein absorption by 15–20%.</li>\n  <li>Produces wet, sticky, foul-smelling droppings (\"sticky droppings\"), which stain eggshells and cause severe footpad dermatitis (ammonia burns) on poultry foot pads.</li>\n  <li><i>Biotechnological Solution:</i> Mandatory addition of exogenous <b>Xylanase (100 g/tonne)</b> and <b>$\\beta$-Glucanase</b> to cleave internal glycosidic bonds, dropping gut viscosity and improving FCR.</li>\n</ul><br>\n\n<b>2. Microbial Phytase Supplementation:</b><br>\nAdding 500 FTU/kg of microbial phytase releases bound phytate phosphorus, allowing a reduction of inorganic dicalcium phosphate by 1.2 kg per 100 kg feed, saving substantial feed cost while cutting phosphorus excretion into manure by 30–40%.",
+    "keyPoints": [
+      "Poultry feed formulation balances energy (ME), amino acids, calcium, and phosphorus.",
+      "Yellow maize (50–65%) is the principal energy source; Soybean meal (25–35%) is the premier protein meal.",
+      "Synthetic DL-Methionine (0.10–0.20%) must be added to correct the primary limiting amino acid.",
+      "Egg layers require 3.50–4.00% dietary calcium (approx. 4.0–4.5 g/hen/day) for shell calcification.",
+      "Layer calcium must be supplied as 50% fine limestone and 50% coarse calcite/oyster shell grit.",
+      "Alternate grains (pearl millet, broken rice) can replace up to 30–50% maize during grain price spikes.",
+      "Wheat and barley contain soluble NSPs (arabinoxylans) causing high gut viscosity and wet droppings.",
+      "Exogenous xylanase and β-glucanase enzymes hydrolyze NSPs, eliminating wet droppings.",
+      "Microbial phytase enzyme releases bound phytate phosphorus, reducing expensive DCP inclusion.",
+      "Pearson's square method allows rapid precision blending of grain and protein meal to target CP."
+    ],
+    "clinical": "Field Veterinary Scenario: A commercial layer farmer with 10,000 birds at 38 weeks reports a sudden surge in soft-shelled, cracked, and broken eggs (breakage rate rising from 1% to 12%). Feed analysis reveals the farm supervisor mistakenly used broiler starter mineral premix containing only 1.0% calcium instead of the required 3.8% layer calcium. The hens mobilized medullary bone calcium until their ribs showed beading (cage layer fatigue / osteomalacia). Immediate Intervention: Provide free-choice coarse marble/calcite grit in mangers and administer Vitamin D3 in drinking water for 5 days.",
+    "tables": [
+      {
+        "title": "Practical Diet Formulas for Broiler Starter and Layer Phase I (per 100 kg)",
+        "headers": [
+          "Feed Ingredient",
+          "Broiler Starter Mash (kg)",
+          "Layer Phase I Mash (kg)",
+          "Functional Nutritional Role"
+        ],
+        "rows": [
+          [
+            "Yellow Maize Grain",
+            "56.0",
+            "52.0",
+            "High-density energy (3350 kcal ME/kg)."
+          ],
+          [
+            "De-hulled Soybean Meal (46% CP)",
+            "35.0",
+            "24.0",
+            "Primary high-lysine protein source."
+          ],
+          [
+            "De-oiled Rice Bran (DORB)",
+            "—",
+            "8.0",
+            "Filler, fiber, economical energy."
+          ],
+          [
+            "Soybean Oil / Vegetable Fat",
+            "2.0",
+            "0.5",
+            "Concentrated energy, linoleic acid."
+          ],
+          [
+            "Dicalcium Phosphate (DCP)",
+            "1.8",
+            "1.5",
+            "Bioavailable phosphorus and calcium."
+          ],
+          [
+            "Calcite / Limestone Powder (Fine)",
+            "1.2",
+            "4.0",
+            "Immediate soluble calcium source."
+          ],
+          [
+            "Coarse Marble Grit (2–4 mm)",
+            "—",
+            "4.5",
+            "Slow-release nocturnal shell calcium."
+          ],
+          [
+            "Common Salt",
+            "0.35",
+            "0.35",
+            "Sodium and chloride electrolyte balance."
+          ],
+          [
+            "DL-Methionine (Synthetic)",
+            "0.15",
+            "0.12",
+            "Essential first-limiting amino acid."
+          ],
+          [
+            "L-Lysine HCl",
+            "0.05",
+            "—",
+            "Ensures ideal protein balance."
+          ],
+          [
+            "Vitamin & Trace Mineral Premix",
+            "0.50",
+            "0.50",
+            "Micronutrient sufficiency guarantee."
+          ],
+          [
+            "Toxin Binder & Phytase Enzyme",
+            "0.50",
+            "0.50",
+            "Mycotoxin safety + phytate P release."
+          ],
+          [
+            "TOTAL DIET BATCH",
+            "100.0 kg",
+            "100.0 kg",
+            "Calculated CP: Broiler 22%, Layer 17.5%"
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "poultry diet formulation",
+      "broiler mash",
+      "layer diet",
+      "eggshell calcium",
+      "DL-methionine",
+      "pearsons square",
+      "NSP enzymes"
+    ]
   },
-
   "p4-t03": {
-    /* Formulation of Balanced Rations for Different Categories of Swine */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Formulate balanced life-cycle diets for swine (creep, starter, grower, finisher, pregnant sow, lactating sow) based on lysine-to-calorie ratios and fiber restrictions.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nSwine are true monogastric omnivores with a simple stomach and limited hindgut fermentation capacity in the cecum and colon. Swine grow at an extraordinary rate (from 1.4 kg at birth to 100 kg slaughter weight in under 180 days) and have a high feed efficiency (FCR 2.8 to 3.2 : 1).<br>\n<b>Core Principles of Swine Diet Formulation:</b>\n<ol>\n  <li><b>Phase Feeding Across the Life Cycle:</b>\n    <ul>\n      <li><i>Creep Feed (1 to 4 weeks, suckling piglets):</i> Highly palatable, dense in milk byproducts: <b>20–22% CP, 1.35% Lysine, 3400 kcal DE/kg</b>. Stimulates digestive enzyme maturation (transitioning from lactase to amylase/pepsin).</li>\n      <li><i>Weaner / Starter (10 to 20 kg BW):</i> <b>18–20% CP, 1.15% Lysine, 3300 kcal DE/kg</b>. Prevents post-weaning growth check.</li>\n      <li><i>Grower (20 to 50 kg BW):</i> <b>16.0% CP, 0.85% Lysine, 3200 kcal DE/kg</b>. Rapid skeletal and muscular protein synthesis.</li>\n      <li><i>Finisher (50 to 100 kg BW):</i> <b>14.0% CP, 0.65% Lysine, 3100 kcal DE/kg</b>. Moderate energy to prevent excessive subcutaneous backfat deposition.</li>\n      <li><i>Pregnant Sow (Gestation):</i> <b>Restricted feeding (2.0 to 2.5 kg/day)</b> with <b>13–14% CP and high fiber (6–8% CF)</b> using wheat bran. Prevents maternal obesity, which causes dystocia, farrowing difficulty, and small litter size.</li>\n      <li><i>Lactating Sow:</i> <b>Ad libitum high-energy feeding (16–17% CP, 3300 kcal DE/kg)</b> supplying 5 to 7 kg feed daily to sustain milk production for 8–12 suckling piglets.</li>\n    </ul>\n  </li>\n  <li><b>Crude Fibre Thresholds in Swine Feeds:</b>\n    Pigs have low cellulolytic capacity. Dietary Crude Fibre must be kept <b>&lt; 4–5% in growing pigs</b>. Excess fiber accelerates intestinal transit rate, binds minerals, and reduces digestive efficiency. Only adult gestating sows tolerate up to 8% fiber.</li>\n  <li><b>Lysine is King:</b>\n    Lysine is the strictly first-limiting amino acid in cereal-based swine diets. All dietary proteins are formulated based on the <b>Lysine-to-Digestible Energy ratio (g Lysine / Mcal DE)</b>.</li>\n</ol><br>\n\n<b>II. STEP-BY-STEP SWINE GROWER DIET FORMULATION (100 KG BATCH)</b><br>\n<b>Target: Swine Grower (20–50 kg BW): 16.0% CP and 3200 kcal DE/kg.</b><br>\n<i>Ingredients used:</i> Yellow maize (8.5% CP, 3450 kcal DE/kg), Soybean meal (46% CP, 3350 kcal DE/kg), Wheat bran (15% CP, 2400 kcal DE/kg), Calcite, DCP, Salt, Trace mineral/vitamin premix.<br><br>\n\n<b>Ingredient Assembly:</b>\n<ul>\n  <li>Yellow Maize Grain = <b>62.0 kg</b> (Supplies $62.0 \\times 0.085 = 5.27$ kg CP; $62.0 \\times 3450 = 2139$ kcal)</li>\n  <li>Soybean Meal (46% CP) = <b>22.0 kg</b> (Supplies $22.0 \\times 0.46 = 10.12$ kg CP; $22.0 \\times 3350 = 737$ kcal)</li>\n  <li>Wheat Bran (Choker) = <b>12.0 kg</b> (Supplies $12.0 \\times 0.15 = 1.80$ kg CP; $12.0 \\times 2400 = 288$ kcal)</li>\n  <li>Dicalcium Phosphate (DCP) = <b>1.5 kg</b> (Supplies bioavailable phosphorus and calcium)</li>\n  <li>Calcite / Limestone Powder = <b>1.0 kg</b> (Supplies calcium; target Ca:P is 1.2:1)</li>\n  <li>Common Salt = <b>0.5 kg (500 g)</b></li>\n  <li>Synthetic L-Lysine HCl = <b>0.15 kg (150 g)</b> (Ensures total lysine &gt; 0.85%)</li>\n  <li>Mineral &amp; Vitamin Premix = <b>0.85 kg (850 g)</b> (Includes iron, copper, zinc, selenium)</li>\n  <li><b>Total Weight = 100.0 kg</b></li>\n  <li><b>Total CP = $5.27 + 10.12 + 1.80 = \\mathbf{17.19\\%}$</b> (Meets &gt; 16% requirement)</li>\n  <li><b>Total DE = $2139 + 737 + 288 = \\mathbf{3164\\text{ kcal DE/kg}}$</b> (Close to 3200 kcal target)</li>\n</ul>",
+    "eliteDesc": "<b>PARAKERATOSIS, ANEMIA & PELLET FINE VULNERABILITIES IN SWINE</b><br><br>\n<b>1. Zinc Deficiency &amp; Phytic Acid Interaction (Parakeratosis):</b><br>\nIn swine fed high-calcium cereal diets, excess calcium forms an insoluble tertiary complex with phytic acid and zinc in the intestinal lumen, completely blocking zinc absorption. Pigs develop <b>Parakeratosis</b>: severe hyperkeratinization of the epidermis, proliferative crusting fissures, crusty skin lesions on legs and flank, and growth stunting. Swine diets must maintain total dietary calcium below 0.80% and include <b>100 to 120 ppm supplemental Zinc</b>.<br><br>\n\n<b>2. Piglet Nutritional Anemia (\"Thumps\"):</b><br>\nNewborn piglets are born with minimal iron reserves (approx. 50 mg), while sow milk provides only ~1 mg iron daily against a physiological requirement of 7–10 mg/day. By day 7–10, piglets indoors on concrete develop hypochromic microcytic anemia (\"thumps\": labored jerky diaphragmatic breathing, pale skin, diarrhea, fatal heart failure). <i>Mandatory Clinical Standard:</i> Inject <b>200 mg Iron Dextran intramuscularly</b> into the neck muscle at 3 days of age.<br><br>\n\n<b>3. Particle Size &amp; Gastric Ulcers:</b><br>\nGrinding pig feed too finely (&lt; 400 microns) creates a fluid, watery stomach consistency that strips the protective mucus layer from the pars esophagea of the stomach, exposing it to hydrochloric acid and pepsin. This causes severe <b>Esophagogastric Ulcers</b> and fatal internal exsanguination into the gut lumen. Maintain mean particle size at <b>500 to 700 microns</b>.",
+    "keyPoints": [
+      "Swine are true monogastric omnivores; limited hindgut fiber digestion capacity.",
+      "Phase feeding transitions across Creep (22% CP) → Starter (18%) → Grower (16%) → Finisher (14%).",
+      "Dietary Crude Fibre must be kept < 4–5% in growing pigs to maintain digestive efficiency.",
+      "Lysine is the strictly first-limiting amino acid; diets are balanced on Lysine : DE ratios.",
+      "Gestating sows must be restricted-fed (2–2.5 kg/day) with higher fiber (6–8%) to prevent obesity.",
+      "Lactating sows require ad libitum high-energy feeding (5–7 kg/day) to sustain nursing litters.",
+      "Piglets reared on concrete require mandatory 200 mg Iron Dextran injection at 3 days to prevent anemia.",
+      "High dietary calcium binds phytic acid and zinc, triggering severe Parakeratosis (crusty dermatitis).",
+      "Grinding feeds too fine (< 400 microns) causes fatal Esophagogastric Ulcers in growing pigs.",
+      "Ideal grain particle size for swine is 500–700 microns using a hammer mill."
+    ],
+    "clinical": "Field Clinical Scenario: An intensive piggery farm in Punjab reports sudden unthriftiness, crusty bleeding cracks and dry scaly skin on the limbs and ears of 40-day-old Yorkshire weaners. The farmer had added extra limestone powder to the feed 'to build strong bones'. Diagnosis: Dietary Parakeratosis induced by calcium-zinc antagonism. Treatment: Reduce limestone to 1.0% and supplement Zinc Sulfate at 150 mg/kg feed. Skin lesions resolve completely within 10–14 days.",
+    "tables": [
+      {
+        "title": "Nutrient Specifications and Life-Cycle Diets for Swine",
+        "headers": [
+          "Production Stage",
+          "Live Weight (kg)",
+          "Crude Protein (% min)",
+          "Digestible Energy (kcal/kg)",
+          "Lysine (% min)",
+          "Max Crude Fibre (%)",
+          "Calcium : Avail. P Ratio"
+        ],
+        "rows": [
+          [
+            "Piglet Creep Mash",
+            "5 – 10 kg",
+            "20.0 – 22.0",
+            "3400",
+            "1.35 %",
+            "2.5 %",
+            "1.2 : 1"
+          ],
+          [
+            "Weaner / Starter",
+            "10 – 20 kg",
+            "18.0 – 20.0",
+            "3300",
+            "1.15 %",
+            "3.5 %",
+            "1.2 : 1"
+          ],
+          [
+            "Swine Grower",
+            "20 – 50 kg",
+            "16.0 – 17.0",
+            "3200",
+            "0.85 %",
+            "4.5 %",
+            "1.2 : 1"
+          ],
+          [
+            "Swine Finisher",
+            "50 – 100 kg",
+            "13.0 – 14.0",
+            "3100",
+            "0.65 %",
+            "5.5 %",
+            "1.1 : 1"
+          ],
+          [
+            "Gestating Sow",
+            "Dry / Pregnant",
+            "13.0 – 14.0",
+            "2900",
+            "0.55 %",
+            "7.5 %",
+            "1.3 : 1"
+          ],
+          [
+            "Lactating Sow",
+            "Nursing litter",
+            "16.0 – 17.0",
+            "3300",
+            "0.90 %",
+            "5.0 %",
+            "1.2 : 1"
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "swine nutrition",
+      "pig feeding",
+      "creep feed",
+      "lysine",
+      "parakeratosis",
+      "iron dextran",
+      "phase feeding",
+      "gastric ulcers"
+    ]
   },
-
   "p4-t04": {
-    /* Principles and Methods of Compounding, Grinding, Pelleting and Mixing of Feeds */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Master the engineering principles and operating parameters of feed milling: grinding (hammer mills), batch blending (ribbon mixers), and steam conditioning pellet extrusion.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nFeed compounding transforms diverse, bulky, and unpalatable raw commodities into a physically uniform, microbiologically safe, nutritionally complete, and readily digestible finished diet. The three core physical processing operations are <b>Particle Size Reduction (Grinding)</b>, <b>Homogeneous Batch Blending (Mixing)</b>, and <b>Hydrothermal Agglomeration (Pelleting)</b>.<br><br>\n\n<b>II. PRINCIPLES & COMPARISON OF GRINDING EQUIPMENT</b><br>\n<ol>\n  <li><b>Hammer Mill (Impact Grinding):</b>\n    <ul>\n      <li><i>Principle:</i> Grains are fed into a grinding chamber where high-velocity rotating steel hammers (tip speed 50–90 m/s, 1800–3000 RPM) shatter kernels by impact against hardened wear plates and a perforated circular screen.</li>\n      <li><i>Characteristics:</i> Produces spherical particles with a wide range of particle sizes; handles various commodities (cereals, cakes, fibrous hulls); easy screen replacement to change particle size (e.g. 2 mm for poultry, 3–4 mm for cattle).</li>\n    </ul>\n  </li>\n  <li><b>Roller Mill (Shearing and Compressive Grinding):</b>\n    <ul>\n      <li><i>Principle:</i> Grain passes between pairs of counter-rotating cylindrical hardened steel rolls with corrugations running at differential speeds (1:1.5 to 1:2.0 ratio), shearing kernels by compression and friction.</li>\n      <li><i>Characteristics:</i> Produces uniform, cubical particles with minimal fine dust; consumes 20–30% less electrical energy than hammer mills; ideal for livestock feeds where dust must be minimized.</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>III. PRINCIPLES OF MIXING & VERIFICATION OF HOMOGENEITY</b><br>\n<ol>\n  <li><b>Horizontal Twin-Shaft Ribbon Mixer:</b>\n    <ul>\n      <li>The industry gold standard. A U-shaped trough fitted with outer and inner helical ribbons on a central shaft. Outer ribbons push feed in one direction, while inner ribbons push it in the opposite direction.</li>\n      <li>Produces a fluid, convective state where micro-ingredients (0.01% vitamins/drugs) blend uniformly into macro-ingredients (60% maize).</li>\n      <li><b>Cycle Time:</b> <b>3 to 4 minutes</b> per batch. Over-mixing (> 10 minutes) causes un-mixing (de-mixing / segregation) due to particle density and electrostatic differences.</li>\n    </ul>\n  </li>\n  <li><b>Mixer Homogeneity Verification (Coefficient of Variation - CV %):</b>\n    $$\\mathbf{\\text{CV (\\%)}} = \\frac{\\text{Standard Deviation (S)}}{\\text{Mean Concentration (}\\bar{X}\\text{)}} \\times 100$$\n    <ul>\n      <li><b>CV &lt; 10%:</b> Certified excellent mixing.</li>\n      <li><b>CV 10–15%:</b> Acceptable for general cattle feeds.</li>\n      <li><b>CV &gt; 15%:</b> Unacceptable. High risk of drug toxicity (e.g. coccidiostats) or localized nutrient deficiency.</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>IV. HYDROTHERMAL CONDITIONING & PELLETING PROCESS</b><br>\nPelleting involves three distinct physical phases:\n<ol>\n  <li><b>Steam Conditioning:</b> Dry mash is injected with saturated steam (2.0–3.0 bar pressure) in a continuous paddle conditioner. Temperature rises to <b>80–85°C</b> and moisture increases to <b>15–16%</b> for 30–60 seconds.\n    <ul>\n      <li><i>Physical Effect:</i> Gelatinizes surface starches (acting as a natural biological glue).</li>\n      <li><i>Biocidal Effect:</i> Thermal destruction of pathogenic vegetative bacteria (<i>Salmonella typhimurium</i>, <i>Escherichia coli</i>).</li>\n    </ul>\n  </li>\n  <li><b>Die Extrusion:</b> Hot conditioned mash is forced by heavy corrugated rollers through the cylindrical radial holes of a high-speed rotating <b>Ring Die</b> under intense mechanical pressure (400–600 bar). Friction generates additional heat (up to 90°C), compressing mash into dense cylinders cut by external knives.</li>\n  <li><b>Counter-Flow Cooling:</b> Pellets leave the die hot (85°C) and moist (16%). They enter a counter-flow cooler where ambient air drawn by suction fans removes heat and evaporative moisture within 10–15 minutes, lowering pellet temperature to within 5°C of room temperature and moisture to a stable <b>&lt; 11–12%</b>.</li>\n</ol><br>\n\n<b>V. PELLET DURABILITY INDEX (PDI) DETERMINATION</b><br>\nPellet Durability Index measures the mechanical resilience of pellets to withstand crumbling during bulk pneumatic conveying, truck transport, and automated farm augers.<br>\n<b>Standard Holmen / Tumbling Box Test Protocol:</b>\n<ol>\n  <li>Take a <b>500.0 g</b> representative cooled pellet sample. Sieve through a test screen to remove all pre-existing fines and broken dust. Record clean pellet weight as <b>$W_1$ (500.0 g)</b>.</li>\n  <li>Place pellets into a standard Tumbling Box Device (ASAE Standard S269.4). Rotate at <b>50 RPM for 10 minutes (500 revolutions)</b>.</li>\n  <li>Remove pellets and re-sieve through the test screen. Weigh the intact whole pellets remaining on top of the screen (<b>$W_2$ g</b>).</li>\n  <li>Calculate Pellet Durability Index:\n  $$\\mathbf{\\text{PDI (\\%)}} = \\frac{W_2}{W_1} \\times 100$$</li>\n  <li><i>Interpretation:</i>\n    <ul>\n      <li><b>PDI &gt; 95%:</b> Premium quality feed pellet.</li>\n      <li><b>PDI 90–94%:</b> Good commercial grade.</li>\n      <li><b>PDI &lt; 85%:</b> Poor quality; high crumble and dust wastage at the farm.</li>\n    </ul>\n  </li>\n</ol>",
+    "eliteDesc": "<b>PHYSICAL CHEMISTRY OF STARCH GELATINIZATION & DIE COMPRESSION RATIO</b><br><br>\n<b>1. Die Compression Ratio (L/D Ratio):</b><br>\nThe physical durability of pellets depends on the die geometry:\n$$\\text{Compression Ratio} = \\frac{\\text{Effective Hole Length (L)}}{\\text{Hole Diameter (D)}}$$\n<ul>\n  <li>High-starch cattle and broiler feeds (maize-based) require an $L/D$ ratio of <b>8 : 1 to 10 : 1</b> (moderate compression).</li>\n  <li>High-fiber feeds or pig feeds require an $L/D$ ratio of <b>12 : 1 to 14 : 1</b> to force resilient plant fibers to compact together.</li>\n  <li>Feeds with &gt; 3% added vegetable fat require higher $L/D$ ratios because oil lubricates the die holes, reducing compressive friction and resulting in soft, crumbly pellets.</li>\n</ul><br>\n\n<b>2. Advantages of Feeding Pellets vs Mash:</b><br>\n<ul>\n  <li><b>Elimination of Selective Feeding:</b> Birds or pigs cannot sort and pick out favorite ingredients (e.g. grain chips), ensuring 100% balanced nutrient consumption.</li>\n  <li><b>Increased Feed Density:</b> Pelleting increases bulk density by 15–20%, allowing animals to consume more nutrients with less physical eating effort.</li>\n  <li><b>Thermal Decontamination:</b> Pasteurizes <i>Salmonella</i> and destroys heat-labile plant anti-nutrients (trypsin inhibitors in soybean).</li>\n</ul>",
+    "keyPoints": [
+      "Hammer mills grind by high-speed impact against perforated screens; versatile and robust.",
+      "Roller mills grind by compressive shearing; consume 25% less power and produce minimal dust.",
+      "Horizontal ribbon mixers achieve complete batch homogeneity in 3 to 4 minutes.",
+      "Over-mixing (> 10 min) causes de-mixing and segregation due to density differences.",
+      "Mixer efficiency is certified when the Coefficient of Variation (CV) of a tracer is < 10%.",
+      "Steam conditioning at 80–85°C gelatinizes surface starch, binds pellets, and kills Salmonella.",
+      "Ring-die pellet mills compress hot conditioned mash through die orifices under 500 bar pressure.",
+      "Counter-flow coolers cool pellets to within 5°C of ambient temperature and drop moisture < 12%.",
+      "Pellet Durability Index (PDI) = (Weight of intact pellets after tumbling / Initial weight) × 100.",
+      "Commercial livestock pellets must exhibit a PDI > 90–95% to prevent crumble and dust in transit."
+    ],
+    "clinical": "Field Farm Efficiency Case: A 50,000-bird commercial broiler operation switches from coarse mash to high-durability crumbled pellets (PDI 94%). The automated pan feeders show zero feed separation or windblown dust loss. Broiler Feed Conversion Ratio (FCR) improves from 1.72 to 1.58 (a massive 140 g feed saving per kg live body weight), and average market slaughter weight at 35 days increases by 180 g per bird, translating into major financial gains for the farmer.",
+    "tables": [
+      {
+        "title": "Milling Equipment Specifications and Quality Standards",
+        "headers": [
+          "Equipment Unit",
+          "Key Mechanical Principle",
+          "Target Operating Metric",
+          "Failure Mode / Risk"
+        ],
+        "rows": [
+          [
+            "Hammer Mill",
+            "High-speed impact (3000 RPM)",
+            "Mean grist 600 – 800 μm",
+            "Worn hammers; perforated screen tears."
+          ],
+          [
+            "Ribbon Mixer",
+            "Convective counter-current ribbons",
+            "CV < 10% in 3 min",
+            "Over-mixing segregation; micro-tracer uneven."
+          ],
+          [
+            "Steam Conditioner",
+            "Hydrothermal cooking at 85°C",
+            "Moisture reaches 15 – 16%",
+            "Wet steam causes die blockages."
+          ],
+          [
+            "Ring-Die Pellet Mill",
+            "Radial compression extrusion",
+            "L/D ratio 9:1 to 12:1",
+            "Worn die holes yield soft crumbly pellets."
+          ],
+          [
+            "Counter-Flow Cooler",
+            "Upward evaporative cooling",
+            "Moisture dropped < 12%",
+            "Inadequate cooling causes fungal caking in bags."
+          ],
+          [
+            "PDI Tumbling Device",
+            "ASAE standard mechanical tumbling",
+            "PDI > 92 – 95%",
+            "PDI < 85% causes heavy feeder dust rejection."
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "compounding",
+      "grinding",
+      "hammer mill",
+      "pelleting",
+      "PDI",
+      "ribbon mixer",
+      "steam conditioning",
+      "feed manufacturing"
+    ]
   },
-
   "p4-t05": {
-    /* Visit to Commercial Poultry and Piggery Farms */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Conduct an organized field inspection of commercial poultry and piggery farms, auditing biosecurity, automated feeding lines, feeder space, and Feed Conversion Ratio (FCR).",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nA field study visit to intensive commercial poultry and piggery farms enables veterinary undergraduates to evaluate real-world industrial nutritional management, biosecurity barriers, automated feeding mechanics, feeder space allowances, environmental climate control, and feed conversion efficiency in large livestock populations.<br><br>\n\n<b>II. COMMERCIAL POULTRY FARM AUDITING PROTOCOL</b><br>\n<ol>\n  <li><b>Biosecurity &amp; Sanitation Barriers:</b>\n    <ul>\n      <li>Three-zone biosecurity perimeter: Perimeter boundary fencing, vehicle tire disinfection spray dip with 2% glutaraldehyde or Virkon-S, and mandatory visitor foot dip / shower-in facility.</li>\n      <li>\"All-In, All-Out\" management system: Single-age flocks per shed with 14-day vacancy and flame sterilization between batches.</li>\n    </ul>\n  </li>\n  <li><b>Housing &amp; Environmental Control (Environmentally Controlled - EC Sheds):</b>\n    <ul>\n      <li><i>Negative Pressure Ventilation:</i> Large exhaust fans (50-inch cone fans) at one end pull air through corrugated cellulose evaporative cooling pads at the opposite end, maintaining shed temperature at <b>22–26°C</b> even during 45°C Indian summer ambient heat.</li>\n      <li><i>Air Quality Standards:</i> Ammonia ($NH_3$) strictly <b>&lt; 20 ppm</b>; Carbon dioxide ($CO_2$) <b>&lt; 3000 ppm</b>; relative humidity 55–65%.</li>\n    </ul>\n  </li>\n  <li><b>Automated Feeding &amp; Watering Systems:</b>\n    <ul>\n      <li><i>Automated Pan Feeders:</i> Overhead flexible auger conveyer transports crumbles/pellets from external galvanized steel bulk silos (15-tonne capacity) to circular hanging plastic pans. Sensor pans at the end of the line ensure continuous feed availability. Feeder space: <b>50 to 60 broilers per pan</b>.</li>\n      <li><i>Enclosed Nipple Drinkers:</i> 360° multi-directional stainless steel nipple drinkers fitted with drip cups. Prevents water spillage, keeping litter dry and friable. Pressure regulator maintains water flow at <b>60–80 mL/min</b>. Drinker allowance: <b>10 to 12 birds per nipple</b>.</li>\n    </ul>\n  </li>\n  <li><b>Feed Conversion Ratio (FCR) Determination:</b>\n  $$\\mathbf{\\text{Feed Conversion Ratio (FCR)}} = \\frac{\\text{Total Feed Consumed by Flock (kg)}}{\\text{Total Live Weight Gain of Flock (kg)}}$$\n  <ul>\n    <li><i>Commercial Broiler Benchmark (35–40 days):</i> Target FCR = <b>1.50 to 1.65</b> (1.55 kg feed per 1 kg live body weight).</li>\n    <li><i>European Production Efficiency Factor (EPEF / PEF):</i>\n    $$\\mathbf{\\text{EPEF}} = \\frac{\\text{Livability (\\%)} \\times \\text{Average Body Weight (kg)}}{\\text{Age at Slaughter (days)} \\times \\text{FCR}} \\times 100$$\n    Target EPEF &gt; 350 to 400 points indicates world-class commercial management.</li>\n  </ul>\n  </li>\n</ol><br>\n\n<b>III. COMMERCIAL PIGGERY FARM AUDITING PROTOCOL</b><br>\n<ol>\n  <li><b>Functional Farm Layout:</b> Segregated unit blocks:\n    <ul>\n      <li><i>Breeding &amp; Gestation Unit:</i> Individual gestation stalls (0.6 m × 2.1 m) or group pens on slatted concrete floors.</li>\n      <li><i>Farrowing Unit:</i> Guarded farrowing crates fitted with piglet creep boxes warmed by infrared heat lamps (32–34°C for neonates).</li>\n      <li><i>Weaner / Nursery Pens:</i> Elevated plastic slatted floors to keep piglets warm, dry, and free from fecal pathogens.</li>\n      <li><i>Grower-Finisher Pens:</i> Solid concrete feeding floor with slatted dunging area (0.8–1.0 m² floor space per finisher pig).</li>\n    </ul>\n  </li>\n  <li><b>Feeding Hardware:</b> Stainless steel dry/wet self-feeders with internal agitators to prevent bridging. Bite-action stainless steel nipple drinkers supplying 1.5–2.0 Liters/min.</li>\n  <li><b>Swine Growth &amp; FCR Benchmarks:</b>\n    <ul>\n      <li>Target weaning weight: <b>10–12 kg at 28–35 days</b>.</li>\n      <li>Target market weight: <b>90–100 kg at 170–180 days</b>.</li>\n      <li>Lifetime Swine FCR: <b>2.8 to 3.2 : 1</b>.</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>IV. FIELD EXERCISE &amp; AUDIT REPORT</b><br>\nStudents must record litter moisture in the broiler house:\n$$\\text{Litter Moisture (\\%)} = \\frac{\\text{Fresh Litter Wt} - \\text{Dry Litter Wt}}{\\text{Fresh Litter Wt}} \\times 100$$\nOptimal litter moisture is <b>20 to 25%</b> (feels dry and crumbly when squeezed in the hand). If moisture exceeds 35%, wet cake forms, producing high ammonia fumes that blind birds (corneal ulceration) and induce respiratory airsacculitis.",
+    "eliteDesc": "<b>EPIDEMIOLOGY OF FEED-BORNE ENTERIC PATHOGENS & BIOSECURITY</b><br><br>\n<b>1. Feed Sanitation &amp; Salmonella Enteritidis Control:</b><br>\nCommercial poultry feed is a major vector for <i>Salmonella enterica</i> serovars (Enteritidis and Typhimurium). Pellet steam conditioning at 85°C kills vegetative cells, but re-contamination occurs in cooler cyclones or baggers. Modern biosecure feed mills spray a synergistic blend of <b>buffered organic acids (Formic acid + Propionic acid at 3–5 kg/tonne)</b> or chemical formaldehyde-based sanitizers into the mixer. Organic acids penetrate the bacterial cell wall, dissociate in the alkaline cytoplasm, and acidify bacterial internal pH, uncoupling ATP synthesis and achieving complete feed sterility.<br><br>\n\n<b>2. Waste Disposal &amp; Dead Bird Mortality Composting:</b><br>\nDead birds (daily mortality ~0.05–0.1%) must never be dumped outside, which attracts dogs, crows, and flies. Standard disposal uses two-stage aerobic bin composting: alternating layers of straw/sawdust, dead carcasses, and old litter (ratio 1:1:2 by weight). Internal core temperature reaches <b>55–65°C within 72 hours</b>, completely pasteurizing avian influenza, Newcastle disease virus, and coccidial oocysts into sterile organic fertilizer.",
+    "keyPoints": [
+      "Modern commercial poultry uses negative-pressure environmentally controlled (EC) houses.",
+      "Negative pressure ventilation uses exhaust fans and evaporative cooling pads to maintain 22–26°C.",
+      "Shed ammonia concentration must be kept strictly < 20 ppm to prevent corneal and respiratory damage.",
+      "Automated pan feeders provide 50–60 broilers per pan; nipple drinkers supply 10–12 birds per nipple.",
+      "Broiler FCR = Total Feed Consumed (kg) / Total Live Weight Gain (kg); target 1.50–1.65.",
+      "EPEF (European Production Efficiency Factor) integrates weight, livability, age, and FCR (> 350 target).",
+      "Optimal poultry litter moisture is 20–25%; > 35% causes wet caking and ammonia blindness.",
+      "Piggery farrowing crates feature infrared-heated creep boxes (32–34°C) to prevent piglet crushing.",
+      "Swine lifetime FCR target is 2.8 to 3.2 kg feed per 1 kg live body weight gain.",
+      "Feed sanitizers (buffered formic and propionic acid) prevent Salmonella contamination in feed lines."
+    ],
+    "clinical": "Field Veterinary Farm Investigation: A commercial broiler grower with 15,000 birds at 28 days reports heavy feed wastage and poor FCR (1.95 instead of 1.55). Farm inspection reveals feeder pans adjusted too low (at bird knee height instead of mid-breast height). Birds flick crumbles onto the litter with their beaks, wasting over 25 g of feed per bird daily under the bedding. Adjusting the winch cables so pan lip sits level with the birds' backs immediately eliminates feed flicking, restoring flock FCR to 1.58 within 5 days.",
+    "tables": [
+      {
+        "title": "Poultry & Swine Farm Auditing Benchmarks",
+        "headers": [
+          "Management Parameter",
+          "Commercial Broiler Standard",
+          "Commercial Layer Standard",
+          "Commercial Swine Standard"
+        ],
+        "rows": [
+          [
+            "Ambient Temperature",
+            "32°C (chick) to 22°C (finisher)",
+            "21 – 24°C (adult layer)",
+            "32°C (piglet) to 18°C (finisher)"
+          ],
+          [
+            "Target FCR (Feed : Gain)",
+            "1.50 – 1.65 : 1 (at 38 days)",
+            "2.0 – 2.2 kg feed / dozen eggs",
+            "2.8 – 3.2 : 1 (birth to slaughter)"
+          ],
+          [
+            "Feeder Space Allowance",
+            "2.5 – 3.0 cm/bird (55 birds/pan)",
+            "8 – 10 cm/bird in cages",
+            "5 – 6 cm feeder trough space/pig"
+          ],
+          [
+            "Drinker Space Allowance",
+            "10 – 12 birds per nipple",
+            "6 – 8 hens per nipple",
+            "8 – 10 pigs per bite nipple (2 L/min)"
+          ],
+          [
+            "Floor Space Allowance",
+            "0.06 – 0.08 m² (0.75 sq. ft/bird)",
+            "0.045 m² (450 cm² in cage)",
+            "0.8 – 1.0 m² per finisher pig"
+          ],
+          [
+            "Biosecurity Standard",
+            "All-in, All-out; 14 d downtime",
+            "Dedicated age block isolation",
+            "Sow quarantine 30 days before entry"
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "farm visit",
+      "poultry farm",
+      "piggery",
+      "FCR",
+      "EPEF",
+      "biosecurity",
+      "nipple drinker",
+      "pan feeder",
+      "litter moisture"
+    ]
   },
-
   "p4-t06": {
-    /* Formulation of Balanced Diets for Horses, Dogs and Cats */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Formulate balanced, species-specific diets for horses (hindgut fiber fermenters), dogs (adapted omnivores), and cats (strict obligate carnivores with unique metabolic requirements).",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nCompanion animal and equine nutrition represents a diverse spectrum of evolutionary digestive physiology:\n<ul>\n  <li><b>Equines (Horses - Equus caballus):</b> Non-ruminant herbivorous <b>hindgut cecal/colonic fermenters</b>. Adapted to continuous trickle grazing of fibrous forages. High grain and low fiber trigger catastrophic cecal acidosis, endotoxemia, colic, and laminitis.</li>\n  <li><b>Canines (Dogs - Canis lupus familiaris):</b> Adapted omnivorous carnivores. Possess multiple copies of the pancreatic $\\alpha$-amylase gene ($AMY2B$), allowing efficient digestion of cooked starches (up to 50–60% of diet).</li>\n  <li><b>Felines (Cats - Felis catus):</b> <b>Strict Obligate Carnivores</b>. Possess unique biochemical metabolic idiosyncrasies: mandatory dietary requirements for animal tissue nutrients that they cannot synthesize from plant precursors (taurine, preformed vitamin A, arachidonic acid, niacin, high protein requirement).</li>\n</ul><br>\n\n<b>II. EQUINE (HORSE) DIET FORMULATION PRINCIPLES</b><br>\n<ol>\n  <li><b>Forage is Paramount (Fiber Safety Margin):</b>\n    A horse must consume a minimum of <b>1.0 to 1.5% of its Body Weight as forage dry matter daily</b> (approx. 5 to 7.5 kg hay for a 500 kg horse). Forage fiber maintains cecal gut motility and prevents gastric ulcer syndrome.</li>\n  <li><b>Concentrate Feeding Limits:</b>\n    Never feed more than <b>0.5 kg concentrate per 100 kg BW in a single meal</b> (max 2.5 kg per meal for a 500 kg horse). Excessive starch escapes enzymatic breakdown in the small intestine, enters the cecum, ferments into lactic acid, drops cecal pH below 5.5, lyses gram-negative bacteria, and releases lethal endotoxins into systemic circulation (triggering acute founder / laminitis).</li>\n  <li><b>Sample Daily Ration for a 450 kg Riding Horse (Moderate Work):</b>\n    <ul>\n      <li>Good quality Lucerne / Oat Hay = <b>6.0 kg</b> (Provides fiber and quality protein)</li>\n      <li>Clean Oat Grain (crimped/crushed) = <b>2.5 kg</b> (Safe, high-fiber starch grain)</li>\n      <li>Wheat Bran = <b>0.5 kg</b> (Laxative bulk)</li>\n      <li>Vegetable Oil = <b>100 mL</b> (Safe cool energy, reduces colic risk)</li>\n      <li>Equine Mineral-Salt Lick = Free access.</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>III. FELINE (CAT) NUTRITION — THE OBLIGATE CARNIVORE PECULIARITIES</b><br>\nEvery feline diet must respect six immutable evolutionary biochemical rules:\n<ol>\n  <li><b>High Dietary Protein Requirement:</b> Cats have active hepatic transaminases and urea cycle enzymes that cannot be down-regulated. Minimum dietary protein is <b>26–30% for adults</b> and <b>30–34% for growing kittens</b> (twice that of dogs!).</li>\n  <li><b>Mandatory Dietary Taurine:</b> Cats cannot synthesize sufficient taurine from cysteine due to low activity of cysteine sulfinic acid decarboxylase, and they conjugate bile acids <i>exclusively with taurine</i> (never glycine). Minimum dietary taurine: <b>1000 mg/kg in dry extruded kibble</b> and <b>2000 mg/kg in canned wet food</b>. Deficiency causes <b>Dilated Cardiomyopathy (DCM)</b> and <b>Central Retinal Degeneration (Feline Blindness)</b>.</li>\n  <li><b>Preformed Vitamin A (Retinol):</b> Cats lack the intestinal mucosal enzyme $\\beta$-carotene 15,15'-dioxygenase and cannot cleave plant carotenoids into active vitamin A. They must receive <b>preformed retinol from animal liver/tissues</b>.</li>\n  <li><b>Arachidonic Acid (C20:4, n-6):</b> Cats lack $\\Delta$-6 desaturase enzyme and cannot convert plant linoleic acid into arachidonic acid. It must be provided via animal fat or fish oil.</li>\n  <li><b>Preformed Niacin (Nicotinic Acid):</b> Cats cannot convert the amino acid tryptophan into niacin because of ultra-high activity of picolinic acid carboxylase, which shunts tryptophan metabolites into the glutarate pathway.</li>\n  <li><b>Arginine Sensitivity:</b> A single meal devoid of arginine causes severe, fatal hyperammonemia within 2 hours, as the feline urea cycle stalls completely.</li>\n</ol><br>\n\n<b>IV. CANINE (DOG) DIET BALANCING</b><br>\n<ol>\n  <li><b>Nutrient Benchmarks (AAFCO Guidelines on DM basis):</b>\n    <ul>\n      <li><i>Adult Maintenance:</i> Minimum <b>18.0% Crude Protein</b>, <b>5.5% Crude Fat</b>, Calcium 0.5–1.0%, Phosphorus 0.4–0.8% (Ca : P ratio <b>1.2 : 1 to 1.4 : 1</b>).</li>\n      <li><i>Puppy Growth &amp; Lactation:</i> Minimum <b>22.5% Crude Protein</b>, <b>8.5% Crude Fat</b>, Calcium 1.0–1.6%, Phosphorus 0.8–1.2%.</li>\n    </ul>\n  </li>\n  <li><b>Balanced Home-Cooked Diet for a 20 kg Adult Maintenance Dog:</b>\n    <ul>\n      <li>Boiled Skinless Chicken Breast / Minced Lean Meat = <b>250 g</b> (Protein, amino acids)</li>\n      <li>Cooked White Rice / Oatmeal = <b>300 g</b> (Digestible carbohydrates)</li>\n      <li>Steamed Pureed Vegetables (Carrots, Pumpkin) = <b>100 g</b> (Soluble fiber, beta-carotene)</li>\n      <li>Bonemeal Powder / Calcium Carbonate = <b>5.0 g</b> (Crucial! Corrects severe meat Ca:P inversion)</li>\n      <li>Fish Oil (Omega-3 EPA/DHA) = <b>5 mL</b> (Coat health, anti-inflammatory)</li>\n    </ul>\n  </li>\n</ol>",
+    "eliteDesc": "<b>FELINE LOWER URINARY TRACT DISEASE (FLUTD) NUTRITIONAL MANAGEMENT</b><br><br>\n<b>1. Pathophysiology of Feline Urolithiasis:</b><br>\nIndoor domestic cats consume minimal water and produce highly concentrated urine (specific gravity &gt; 1.050). Diet formulation directly controls urinary crystal formation:\n<ul>\n  <li><b>Struvite Uroliths (Magnesium Ammonium Phosphate - $MgNH_4PO_4 \\cdot 6H_2O$):</b> Form in alkaline urine (pH &gt; 7.0) with high dietary magnesium and ash. <i>Nutritional Prevention:</i> Formulate diets with <b>Magnesium &lt; 0.08%</b> and incorporate urinary acidifiers (DL-Methionine, Ammonium chloride) to target a post-prandial urine pH of <b>6.2 to 6.5</b>.</li>\n  <li><b>Calcium Oxalate Uroliths ($CaC_2O_4$):</b> Form when urine is over-acidified (pH &lt; 6.0) or during hypercalciuria. Target urine pH must remain strictly balanced at 6.3–6.6. Feeding wet canned diets containing &gt; 75% moisture increases total urinary output and dilutes lithogenic minerals, preventing urethral blockages in male toms.</li>\n</ul><br>\n\n<b>2. Equine Colic Pathogenesis:</b><br>\nWhen high-grain feeds exceed 0.4% BW in a meal, undigested starch enters the cecum. <i>Streptococcus bovis</i> blooms, fermenting starch into lactic acid. Cecal pH drops, killing cellulolytic bacteria and liberating bacterial lipopolysaccharide (LPS) endotoxins. Endotoxins trigger systemic digital vasoconstriction and ischemia in laminar capillaries of the hooves, causing agonising, debilitating <b>Laminitis (Founder)</b>.",
+    "keyPoints": [
+      "Horses are hindgut cecal fermenters; require a mandatory minimum 1.0–1.5% BW forage dry matter.",
+      "Equine concentrate must never exceed 0.5 kg per 100 kg BW in a single meal to prevent colic/laminitis.",
+      "Undigested starch in the horse cecum causes lactic acidosis, mucosal sloughing, and founder (laminitis).",
+      "Dogs are adapted omnivores capable of digesting up to 50–60% cooked dietary starch.",
+      "Home-cooked canine meat diets must be supplemented with calcium carbonate to prevent secondary hyperparathyroidism.",
+      "Cats are strict obligate carnivores requiring double the protein intake of dogs (26–34%).",
+      "Cats have an absolute dietary requirement for Taurine (deficiency causes blindness and DCM).",
+      "Cats cannot convert plant β-carotene to Vitamin A; require preformed retinol from animal tissues.",
+      "Cats lack Δ-6 desaturase; require preformed dietary Arachidonic acid from animal fat.",
+      "Feline urinary pH must be maintained between 6.2–6.5 with low magnesium to prevent fatal FLUTD struvite stones."
+    ],
+    "clinical": "Clinical Case — Feline Emergency: A client brings a 4-year-old male Persian cat to the clinic straining painfully in the litterbox, vocalizing, and vomiting, with an empty bladder diagnosed as urethral plug obstruction. The owner had fed an ultra-cheap commercial dry food with 12% total ash and high magnesium. Urinalysis reveals high struvite crystalluria and alkaline pH (7.8). Treatment: Emergency catheterization and de-obstruction under sedation; immediate transition to a veterinary prescription therapeutic wet diet formulated with low magnesium (< 0.08%), added DL-methionine, and high moisture (80%) to maintain urine pH at 6.3.",
+    "tables": [
+      {
+        "title": "Comparative Nutritional Peculiarities: Horse vs Dog vs Cat",
+        "headers": [
+          "Nutritional Parameter",
+          "Horse (Equine)",
+          "Dog (Canine)",
+          "Cat (Feline)",
+          "Diagnostic Biological Rationale"
+        ],
+        "rows": [
+          [
+            "Digestive Anatomy",
+            "Hindgut cecal fermenter",
+            "Simple monogastric omnivore",
+            "Strict monogastric carnivore",
+            "Cecum in horse; short colon in cat."
+          ],
+          [
+            "Dietary Fibre Requirement",
+            "Mandatory min 1.0–1.5% BW",
+            "Beneficial (2 – 5% CF)",
+            "Minimal (1 – 3% CF)",
+            "Maintains cecal motility and microbiome."
+          ],
+          [
+            "Minimum Crude Protein",
+            "8 – 12 %",
+            "18 – 22 %",
+            "26 – 34 % (Very high)",
+            "High feline hepatic transamination."
+          ],
+          [
+            "Taurine Requirement",
+            "Synthesized",
+            "Synthesized",
+            "MANDATORY (1000–2000 ppm)",
+            "No cysteine sulfinic decarboxylase."
+          ],
+          [
+            "Vitamin A Source",
+            "Synthesizes from carotene",
+            "Synthesizes from carotene",
+            "PREFORMED RETINOL ONLY",
+            "Lacks β-carotene dioxygenase."
+          ],
+          [
+            "Arachidonic Acid",
+            "Synthesizes from linoleic",
+            "Synthesizes from linoleic",
+            "MANDATORY ANIMAL FAT",
+            "Lacks Δ-6 desaturase enzyme."
+          ],
+          [
+            "Starch Utilization",
+            "Moderate (Small meals)",
+            "High (50 – 60% cooked)",
+            "Low; lack salivary amylase",
+            "Multiple AMY2B gene copies in dogs."
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "horse nutrition",
+      "dog diet",
+      "cat nutrition",
+      "obligate carnivore",
+      "taurine",
+      "laminitis",
+      "colic",
+      "FLUTD",
+      "hindgut fermentation"
+    ]
   },
-
   "p4-t07": {
-    /* Preparation of Feeds and Feeding Schedules for Captive Zoo Animals and Birds (Diet Charts) */
-    summary:   "",
-    desc:      "",
-    eliteDesc: "",
-    keyPoints: [],
-    clinical:  "",
-    tables:    [],
-    img:       "",
-    tags:      []
+    "summary": "Formulate species-specific diets and feeding schedules for captive zoo wildlife (carnivores, herbivores, primates, birds), incorporating behavioral enrichment and metabolic safety.",
+    "desc": "<b>I. OBJECTIVE & PRINCIPLE</b><br>\nFeeding wild animals in zoological parks requires replicating natural wild diets within captive constraints. The zoo veterinarian must balance species-specific evolutionary nutrition, prevent nutrient deficiencies and obesity, avoid toxic foods, and design feeding presentations that stimulate natural foraging and predatory behaviors (<b>Nutritional Behavioral Enrichment</b>).<br><br>\n\n<b>II. CLASSIFICATION & DIET FORMULATION ACROSS ZOO TAXA</b><br>\n<ol>\n  <li><b>Captive Large Felids &amp; Canids (Tigers, Lions, Leopards, Wolves):</b>\n    <ul>\n      <li><i>Nutritional Strategy:</i> <b>Whole Prey / Carcass Feeding</b> with lean buffalo beef, dressed poultry, or goat meat.</li>\n      <li><i>Calcium-to-Phosphorus Correction:</i> Skeletal muscle meat is high in phosphorus (0.2% P) and devoid of calcium (0.01% Ca; Ca:P ratio 1:20!). Feeding pure meat without bones causes catastrophic <b>Nutritional Secondary Hyperparathyroidism (Metabolic Bone Disease / Paper-bone syndrome)</b>.\n        <ul>\n          <li>Always feed fresh meat <b>with large marrow bones</b> (ribs, shanks), or dust boneless meat with <b>10 g Calcium Carbonate (Calcite) per kg meat</b>.</li>\n        </ul>\n      </li>\n      <li><i>Fasting Day:</i> Adult tigers and lions in captivity are fed <b>8 to 12 kg meat daily for 6 days</b>, with <b>one mandatory complete fasting day per week</b>. Fasting mimics natural wild feast-and-famine gorging cycles, clears gastrointestinal debris, and prevents fatty liver and obesity.</li>\n    </ul>\n  </li>\n  <li><b>Mega-Herbivores (Asian Elephant - Elephas maximus, Rhinoceros):</b>\n    <ul>\n      <li><i>Nutritional Strategy:</i> Hindgut fermenters requiring enormous fibrous bulk. An adult 4000 kg Asian elephant consumes <b>150 to 250 kg fresh green forage daily (1.5 to 2.0% BW as dry matter)</b>.</li>\n      <li><i>Daily Zoo Diet Schedule:</i>\n        <ul>\n          <li>Whole Sugarcane Stems &amp; Tops = 50 to 80 kg</li>\n          <li>Green Fodder (Hybrid Napier / Sorghum / Maize) = 80 to 100 kg</li>\n          <li>Tree Branches &amp; Browse (Peepal, Banyan, Bamboo) = 30 to 50 kg (bark chewing aids essential dental molar wear)</li>\n          <li>Boiled Concentrate Mash (\"Roti\" / Cooked grain balls): 10–15 kg cooked mixture of crushed barley, horse gram, wheat bran, 250 g mineral mixture, 100 g iodized salt, and 1 kg cane jaggery (gur).</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li><b>Non-Human Primates (Rhesus Macaques, Langurs, Chimpanzees):</b>\n    <ul>\n      <li><i>Peculiarity:</i> Like humans and guinea pigs, higher primates lack L-gulonolactone oxidase and cannot synthesize <b>Vitamin C (Ascorbic Acid)</b>. Diets must supply fresh citrus fruits (oranges, sweet limes), guavas, leafy greens, or commercial fortified primate chow. Deficiency causes <b>Scurvy</b> (bleeding gums, subperiosteal hemorrhages, skeletal fractures).</li>\n      <li><i>Schedule:</i> 60% vegetables (carrots, cucumber, sweet potatoes, boiled pulses), 25% browse and commercial pellets, and 15% fresh fruits. Avoid excess sweet fruits to prevent dental caries and obesity.</li>\n    </ul>\n  </li>\n  <li><b>Captive Raptors &amp; Birds of Prey (Eagles, Owls, Vultures):</b>\n    <ul>\n      <li>Fed <b>whole dead day-old chicks, mice, or laboratory rats</b> intact with fur, skin, visceral organs, and bones. Fur and bones form an indigestible pellet (cast) in the ventriculus that is regurgitated daily, cleaning the esophagus and preventing crop impaction.</li>\n    </ul>\n  </li>\n</ol><br>\n\n<b>III. NUTRITIONAL BEHAVIORAL ENRICHMENT PROTOCOLS</b><br>\nFeeding in captivity must not be a monotonous bowl presentation. Incorporate species-appropriate foraging challenges:\n<ul>\n  <li><i>Carnivores:</i> Suspend whole meat carcasses from high overhead poles with bungee cables to encourage leaping and muscle toning. Freeze meat in large ice blocks during hot summers.</li>\n  <li><i>Herbivores &amp; Primates:</i> Scatter seeds, nuts, and boiled grains in bamboo puzzle feeders, hollow logs, or under deep leaf litter to stimulate natural manual foraging.</li>\n  <li><i>Bears (Sloth Bears):</i> Smear honey, termite paste, or fruit pulp inside drilled wooden logs.</li>\n</ul><br>\n\n<b>IV. TOXIC COMMODITIES IN ZOO NUTRITION (STRICTLY BANNED)</b><br>\n<ul>\n  <li><b>Avocado (Persin):</b> Fatal myocardial necrosis in captive parrots and birds.</li>\n  <li><b>Onions &amp; Garlic (N-propyl disulfide):</b> Heinz-body hemolytic anemia in wild canids and felids.</li>\n  <li><b>Chocolate / Cocoa (Theobromine):</b> Fatal cardiac arrhythmias and CNS seizures in primates and carnivores.</li>\n  <li><b>Refined White Bread / Biscuits:</b> Given by visitors; causes ruminal acidosis in deer and dental abscesses in primates.</li>\n</ul>",
+    "eliteDesc": "<b>METABOLIC BONE DISEASE (MBD) PATHOGENESIS & VITAMIN D DYNAMICS</b><br><br>\n<b>1. Pathophysiology of Nutritional Secondary Hyperparathyroidism (MBD):</b><br>\nWhen growing tiger cubs, captive raptors, or young primates are fed boneless meat or low-calcium diets:\n$$\\text{Low Dietary Ca} \\rightarrow \\text{Serum Ionized } \\text{Ca}^{2+} \\text{ drops} \\rightarrow \\text{Parathyroid glands secrete massive Parathyroid Hormone (PTH)}$$\nPTH activates osteoclasts, which resorb hydroxyapatite from long bones and replace mineralized bone with unmineralized fibrous connective tissue (<b>Osteodystrophia Fibrosa / Fibrous Osteodystrophy</b>). Bones become paper-thin, soft, and flexible; cubs suffer multiple pathological folding fractures, pelvic collapse, spinal deformities (kyphoscoliosis), and inability to walk.<br><br>\n\n<b>2. Ultraviolet Light (UVB 290–315 nm) Requirements in Captive Reptiles &amp; Primates:</b><br>\nIndoors behind ordinary window glass, ultraviolet B radiation is completely filtered out. 7-dehydrocholesterol in the skin cannot photolyze into cholecalciferol (Vitamin D3). Without active 1,25-(OH)₂-D₃, intestinal calcium-binding protein (calbindin) is not synthesized, completely blocking dietary calcium absorption regardless of dietary calcium levels! Enclosures must provide artificial full-spectrum UVB lights or outdoor sunning runs.",
+    "keyPoints": [
+      "Zoo diets must balance evolutionary physiological nutrition with behavioral foraging stimulation.",
+      "Pure meat diets contain an inverted Ca:P ratio (1:20); leads to fatal Nutritional Secondary Hyperparathyroidism.",
+      "Carnivores must be fed whole carcasses with bones, or meat supplemented with 10 g calcite per kg.",
+      "Large felids (tigers/lions) require one mandatory fasting day per week to mimic wild gorge cycles.",
+      "Asian elephants require 150–250 kg fresh green forage daily; tree browse is essential for dental wear.",
+      "Higher primates and guinea pigs lack L-gulonolactone oxidase; require mandatory daily dietary Vitamin C.",
+      "Raptors require whole prey (mice, chicks) with fur and bone to form clean regurgitated pellets (casts).",
+      "Behavioral enrichment (puzzle feeders, ice blocks, scattered feed) prevents captive stereotypic pacing.",
+      "Avocado (persin) is lethal to captive birds; Onions cause Heinz-body hemolytic anemia in carnivores.",
+      "Full-spectrum UVB radiation is mandatory for indoor captive primates and reptiles to synthesize Vitamin D3."
+    ],
+    "clinical": "Field Zoo Veterinary Investigation: Two 4-month-old hand-reared Bengal tiger cubs at a safari park develop severe lameness, reluctance to walk, bilateral carpal knuckling, and crying when touched. Radiography reveals paper-thin cortices of the femurs and multiple greenstick fractures. Diet history reveals the caretaker fed pure boiled boneless chicken breast without calcium or bone meal. Diagnosis: Nutritional Secondary Hyperparathyroidism (Juvenile Osteodystrophy). Treatment: Cage rest on padded bedding, immediate supplementation of Calcium Carbonate (10 g/kg meat), Vitamin D3 injections, and gradual introduction of soft chicken neck bones. Complete clinical recovery occurs within 6 weeks.",
+    "tables": [
+      {
+        "title": "Master Daily Diet Schedules for Captive Zoo Species",
+        "headers": [
+          "Zoo Animal Species",
+          "Daily Diet Components",
+          "Supplements & Special Additives",
+          "Feeding Protocol & Enrichment"
+        ],
+        "rows": [
+          [
+            "Royal Bengal Tiger (Adult 180 kg)",
+            "8 – 10 kg fresh buffalo beef / dressed chicken with bones",
+            "10 g Calcite/kg (if boneless); Vitamin A/D3",
+            "Fed 6 days/week; 1 mandatory day complete fast."
+          ],
+          [
+            "Asian Elephant (Adult 3500 kg)",
+            "150 – 200 kg green fodder + 30 kg peepal browse + 10 kg boiled mash",
+            "250 g mineral mixture + 100 g salt + 1 kg jaggery",
+            "Forage provided throughout day; browse hung high."
+          ],
+          [
+            "Rhesus Macaque (Adult 8 kg)",
+            "1.5 kg vegetables (carrot, cucumber) + 300 g fruit + 200 g boiled gram",
+            "100 mg Vitamin C daily; boiled eggs weekly",
+            "Scattered twice daily in deep bark litter for foraging."
+          ],
+          [
+            "Indian Peafowl / Pheasant",
+            "150 g mixed grains (maize, bajra, wheat) + 50 g greens + mealworms",
+            "Limestone grit + poultry vitamin premix",
+            "Scattered in grassy aviary runs; clean water."
+          ],
+          [
+            "Sloth Bear (Adult 100 kg)",
+            "4 kg cooked porridge (milk, rice, ragi) + 2 kg fruits + 50 g honey",
+            "Multivitamin syrup + 30 g mineral mix",
+            "Porridge fed morning; honey smeared in logs afternoon."
+          ]
+        ]
+      }
+    ],
+    "img": "",
+    "tags": [
+      "zoo nutrition",
+      "wildlife feeding",
+      "captive animals",
+      "tiger diet",
+      "elephant feeding",
+      "metabolic bone disease",
+      "vitamin C",
+      "behavioral enrichment"
+    ]
   }
 };
