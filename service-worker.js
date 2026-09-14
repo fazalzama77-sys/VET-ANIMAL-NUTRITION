@@ -3,7 +3,7 @@
    Animal Nutrition Studio (B.V.Sc & A.H.)
    ============================================================ */
 
-var CACHE_VERSION = "vanut-v8";
+var CACHE_VERSION = "vanut-v9";
 var SHELL_CACHE = CACHE_VERSION + "-shell";
 var IMG_CACHE = CACHE_VERSION + "-img";
 
@@ -60,7 +60,8 @@ self.addEventListener("install", function (e) {
       .then(function (cache) {
         return Promise.all(
           PRECACHE.map(function (url) {
-            return cache.add(url).catch(function (err) {
+            // cache: "reload" skips the browser HTTP cache so a new version never precaches stale files
+            return cache.add(new Request(url, { cache: "reload" })).catch(function (err) {
               console.warn("[SW] Precache item missed:", url, err);
             });
           })

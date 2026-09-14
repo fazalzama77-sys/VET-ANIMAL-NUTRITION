@@ -297,6 +297,15 @@
 
   /* ---- Service worker: 100% offline PWA support ---- */
   if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
+    // When a new version takes over an already-controlled page, reload once so
+    // the fresh JS/CSS is used immediately instead of the old cached copy.
+    var hadController = !!navigator.serviceWorker.controller;
+    var reloadedForUpdate = false;
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      if (!hadController || reloadedForUpdate) return;
+      reloadedForUpdate = true;
+      window.location.reload();
+    });
     window.addEventListener("load", function () {
       navigator.serviceWorker.register("service-worker.js", { scope: "./" })
         .then(function (reg) {
