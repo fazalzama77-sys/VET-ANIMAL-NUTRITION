@@ -3,7 +3,7 @@
    Animal Nutrition Studio (B.V.Sc & A.H.)
    ============================================================ */
 
-var CACHE_VERSION = "vanut-v9";
+var CACHE_VERSION = "vanut-v10";
 var SHELL_CACHE = CACHE_VERSION + "-shell";
 var IMG_CACHE = CACHE_VERSION + "-img";
 
