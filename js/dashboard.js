@@ -183,6 +183,8 @@ var dashboardApp = (function () {
           renderRecentAttemptsCard(quiz) +
         '</div>' +
 
+        (Object.keys(srs).length ? '<div class="grid grid--2 mt-4">' + renderSrsForecast(srs) + '</div>' : '') +
+
         /* 8. Study Vault & Knowledge Artifacts */
         renderKnowledgeVault(totalHighlights, hlColorCounts, Object.keys(notes).length, bms.length, qaDone.length) +
 
@@ -519,6 +521,52 @@ var dashboardApp = (function () {
     '</section>';
   }
 
+  /* ---------- Spaced repetition forecast ---------- */
+  function renderSrsForecast(srs) {
+    var keys = Object.keys(srs || {});
+    if (!keys.length) return '';
+
+    var now = Date.now();
+    var day = 86400000;
+    var buckets = [0, 0, 0, 0, 0, 0, 0, 0];   // [due now, +1d, +2d ... +6d]
+    var later = 0;
+
+    keys.forEach(function (k) {
+      var due = srs[k].due || 0;
+      if (due <= now) { buckets[0]++; return; }
+      var inDays = Math.ceil((due - now) / day);
+      if (inDays <= 7) buckets[inDays]++;
+      else later++;
+    });
+
+    var max = Math.max.apply(null, buckets.concat([1]));
+    var dayNames = ["Today", "+1d", "+2d", "+3d", "+4d", "+5d", "+6d", "+7d"];
+
+    return '<div class="heatmap-card-elite">' +
+      '<div class="row row--between">' +
+        '<div>' +
+          '<h3>Review Forecast</h3>' +
+          '<p class="muted small mt-1">Questions coming back to you over the next week.</p>' +
+        '</div>' +
+        (buckets[0] ? '<a class="btn btn--primary btn--sm" href="#/quiz/review">Review ' + buckets[0] + '</a>' : '') +
+      '</div>' +
+      '<div class="srs-forecast mt-4">' +
+        buckets.map(function (n, i) {
+          return '<div class="srs-forecast__col">' +
+            '<div class="srs-forecast__bar-wrap">' +
+              '<div class="srs-forecast__bar' + (i === 0 && n ? ' is-due' : '') +
+                '" style="height:' + Math.round(n / max * 100) + '%" title="' + n + ' question' + (n === 1 ? '' : 's') + '"></div>' +
+            '</div>' +
+            '<span class="srs-forecast__n">' + n + '</span>' +
+            '<span class="srs-forecast__d">' + dayNames[i] + '</span>' +
+          '</div>';
+        }).join("") +
+      '</div>' +
+      '<p class="small faint mt-3">' + keys.length + ' questions tracked' +
+        (later ? ' · ' + later + ' resting beyond a week' : '') + '</p>' +
+    '</div>';
+  }
+
   /* ---------- Activity Heatmap Card ---------- */
   function renderHeatmapCard(activity, streak) {
     var cells = [];
@@ -737,6 +785,8 @@ var dashboardApp = (function () {
   /* ---------- Diagnostic Assessment Ledger ---------- */
   function renderRecentAttemptsCard(quiz) {
     var list = (quiz.attempts || []).slice(-10).reverse();
+    var reviewable = {};
+    ((store.getAttemptLog && store.getAttemptLog()) || []).forEach(function (r) { reviewable[r.id] = true; });
 
     if (!list.length) {
       return '<div class="heatmap-card-elite">' +
@@ -765,8 +815,8 @@ var dashboardApp = (function () {
           var dt = new Date(a.at);
           var dateStr = dt.toLocaleDateString(undefined, { month: "short", day: "numeric" });
           var mins = a.seconds ? Math.max(1, Math.round(a.seconds / 60)) : (a.minutes || 0);
-          var reviewable = a.id && store.getAttemptDetail && store.getAttemptDetail(a.id);
-          return '<' + (reviewable ? 'a class="tlist__row" href="#/quiz/result/' + a.id + '"' : 'div class="tlist__row"') + '>' +
+          var hasReview = !!(a.id && reviewable[a.id]);
+          return '<' + (hasReview ? 'a class="tlist__row" href="#/quiz/result/' + a.id + '"' : 'div class="tlist__row"') + '>' +
             '<span class="tlist__body">' +
               '<span class="tlist__title">' + app.esc(a.label || "Animal Nutrition Quiz") + '</span>' +
               '<span class="tlist__sub">' + dateStr +
@@ -779,9 +829,9 @@ var dashboardApp = (function () {
               '<span class="chip ' + (p >= 75 ? 'chip--ok' : p >= 50 ? 'chip--warn' : 'chip--danger') + '">' +
                 a.correct + '/' + a.total + ' (' + p + '%)' +
               '</span>' +
-              (reviewable ? '<span class="small faint ml-1">Review →</span>' : '') +
+              (hasReview ? '<span class="small faint ml-1">Review →</span>' : '') +
             '</span>' +
-          '</' + (reviewable ? 'a' : 'div') + '>';
+          '</' + (hasReview ? 'a' : 'div') + '>';
         }).join("") +
       '</div>' +
     '</div>';

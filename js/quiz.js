@@ -1481,7 +1481,8 @@ var quizApp = (function () {
   var resultState = { record: null, filter: "wrong", fresh: false };
 
   function renderResult(record, fresh) {
-    resultState = { record: record, filter: "wrong", fresh: !!fresh };
+    var missed = (record.questions || []).filter(function (q) { return !q.ok; }).length;
+    resultState = { record: record, filter: missed ? "wrong" : "all", fresh: !!fresh };
     paintResult();
 
     var percent = app.pct(record.correct, record.total);
@@ -1514,9 +1515,7 @@ var quizApp = (function () {
     var flaggedCount = qs.filter(function (q) { return q.flagged; }).length;
 
     var timed = qs.filter(function (q) { return q.seconds > 0; });
-    var avgSecs = timed.length
-      ? Math.round(timed.reduce(function (n, q) { return n + q.seconds; }, 0) / timed.length)
-      : Math.round(record.seconds / Math.max(1, record.total));
+    var avgSecs = Math.max(1, Math.round(record.seconds / Math.max(1, record.total)));
     var slowest = timed.slice().sort(function (a, b) { return b.seconds - a.seconds; })[0];
 
     var unitMap = groupStats(qs, function (q) { return q.unitId; });
@@ -1653,9 +1652,10 @@ var quizApp = (function () {
 
         /* --- actions --- */
         '<div class="row row--wrap mt-10 gap-3" style="justify-content:center">' +
-          (wrongCount + skippedCount > 0 && resultState.fresh
+          (wrongCount + skippedCount > 0
             ? '<button class="btn btn--primary btn--lg" id="retrywrongbtn">🔁 Retry the ' + (wrongCount + skippedCount) + ' I missed</button>'
             : '') +
+          '<button class="btn btn--lg" id="retakebtn">↻ Retake this quiz</button>' +
           '<a class="btn btn--lg" href="#/quiz">Quiz Hub</a>' +
           '<a class="btn btn--lg" href="#/dashboard">My Dashboard</a>' +
           '<a class="btn btn--lg" href="#/quiz/review">Smart SRS Queue</a>' +
@@ -1771,10 +1771,20 @@ var quizApp = (function () {
     var retry = document.getElementById("retrywrongbtn");
     if (retry) retry.addEventListener("click", function () {
       var missed = (resultState.record.questions || []).filter(function (q) { return !q.ok; });
-      if (!missed.length) return;
+      if (!missed.length || !confirmDropOpenRun()) return;
       var pool = rebuildQuestions(missed);
       if (!pool.length) { app.toast("Those questions are no longer in the bank"); return; }
       start(shuffle(pool), "retry", "Retry — missed questions", false, 0, "shuffle", "all", null, false);
+    });
+
+    var retake = document.getElementById("retakebtn");
+    if (retake) retake.addEventListener("click", function () {
+      var rec = resultState.record;
+      if (!confirmDropOpenRun()) return;
+      var pool = rebuildQuestions(rec.questions || []);
+      if (!pool.length) { app.toast("Those questions are no longer in the bank"); return; }
+      start(shuffle(pool), rec.scope, rec.label, rec.exam, Math.max(5, Math.round(rec.seconds / 60) || 10),
+            "shuffle", "all", null, rec.exam);
     });
   }
 
@@ -1788,6 +1798,13 @@ var quizApp = (function () {
     });
   }
 
+  /* Starting something new from a review would replace a quiz that is
+     still open, so ask first. */
+  function confirmDropOpenRun() {
+    if (!run || !run.active) return true;
+    return confirm("You still have a quiz open. Starting this will discard it. Continue?");
+  }
+
   /* Recorded questions are plain data; match them back to the live bank
      so a retry uses the current wording of each question. */
   function rebuildQuestions(recorded) {
@@ -1799,7 +1816,6 @@ var quizApp = (function () {
 
   /* Reopen a saved attempt from the dashboard ledger. */
   function renderSavedResult(id) {
-    resetRun();
     var record = store.getAttemptDetail && store.getAttemptDetail(id);
     if (!record) {
       host.innerHTML =
