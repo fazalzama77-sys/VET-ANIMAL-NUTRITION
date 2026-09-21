@@ -174,13 +174,16 @@ var dashboardApp = (function () {
         /* 5. 5-Box Leitner Memory Pipeline */
         renderLeitnerPipeline(srs, boxCounts, srsKeys.length, dueCards) +
 
-        /* 6. Activity Heatmap & Performance Trends */
+        /* 6. Quiz Performance Analytics */
+        renderQuizAnalytics() +
+
+        /* 7. Activity Heatmap & Performance Trends */
         '<div class="grid grid--2">' +
           renderHeatmapCard(activity, streak) +
           renderRecentAttemptsCard(quiz) +
         '</div>' +
 
-        /* 7. Study Vault & Knowledge Artifacts */
+        /* 8. Study Vault & Knowledge Artifacts */
         renderKnowledgeVault(totalHighlights, hlColorCounts, Object.keys(notes).length, bms.length, qaDone.length) +
 
       '</div>';
@@ -560,9 +563,127 @@ var dashboardApp = (function () {
     '</div>';
   }
 
+  /* ---------- Quiz Performance Analytics ---------- */
+  function barTone(pct) {
+    return pct >= 75 ? "is-ok" : pct >= 50 ? "is-warn" : "is-danger";
+  }
+
+  function accuracyBar(label, correct, total) {
+    var pct = total ? Math.round(correct / total * 100) : 0;
+    return '<div class="qa-bar">' +
+      '<div class="qa-bar__top"><span>' + label + '</span>' +
+        '<span class="muted">' + correct + '/' + total + ' · <b>' + pct + '%</b></span></div>' +
+      '<div class="qa-bar__track"><div class="qa-bar__fill ' + barTone(pct) + '" style="width:' + pct + '%"></div></div>' +
+    '</div>';
+  }
+
+  function renderQuizAnalytics() {
+    var s = (store.getQuizStats && store.getQuizStats()) || null;
+    if (!s || !s.runs) {
+      return '<section>' +
+        '<h2>Quiz Performance Analytics</h2>' +
+        '<p class="muted small mt-1">Every quiz you finish is recorded here — accuracy, speed, formats and weak units.</p>' +
+        '<div class="card p-5 text-center mt-4 text-muted">' +
+          app.icon("target") + '<br>No quiz data yet. Finish one quiz and your analytics appear here.<br>' +
+          '<a class="btn btn--primary btn--sm mt-3" href="#/quiz">Take a quiz</a>' +
+        '</div>' +
+      '</section>';
+    }
+
+    var trend = s.hasTrend ? (s.trend || 0) : null;
+    var trendCls = trend > 0 ? " is-up" : trend < 0 ? " is-down" : "";
+    var trendTxt = trend === null ? "—" : trend > 0 ? "▲ " + trend + "%" : trend < 0 ? "▼ " + Math.abs(trend) + "%" : "level";
+    var trendSub = trend === null ? "after 6 quizzes" : "last 5 vs previous 5";
+
+    var tiles =
+      '<div class="quiz-analytics-grid mt-4">' +
+        '<div class="qa-tile"><div class="qa-tile__label">Questions answered</div>' +
+          '<div class="qa-tile__val">' + s.totalQ + '</div>' +
+          '<div class="qa-tile__sub">' + s.totalCorrect + ' correct</div></div>' +
+        '<div class="qa-tile"><div class="qa-tile__label">Overall accuracy</div>' +
+          '<div class="qa-tile__val">' + s.accuracy + '%</div>' +
+          '<div class="qa-tile__sub">across ' + s.runs + ' quiz' + (s.runs === 1 ? '' : 'zes') + '</div></div>' +
+        '<div class="qa-tile"><div class="qa-tile__label">Recent trend</div>' +
+          '<div class="qa-tile__val' + trendCls + '">' + trendTxt + '</div>' +
+          '<div class="qa-tile__sub">' + trendSub + '</div></div>' +
+        '<div class="qa-tile"><div class="qa-tile__label">Time on quizzes</div>' +
+          '<div class="qa-tile__val">' + (s.minutes >= 60 ? Math.floor(s.minutes / 60) + 'h ' + (s.minutes % 60) + 'm' : s.minutes + 'm') + '</div>' +
+          '<div class="qa-tile__sub">' + s.exams + ' timed exam' + (s.exams === 1 ? '' : 's') + '</div></div>' +
+      '</div>';
+
+    // last 10 scores as a small bar chart
+    var spark = s.recent.length
+      ? '<div class="card mt-4">' +
+          '<div class="row row--between"><b>Recent scores</b>' +
+            '<span class="small muted">newest on the right</span></div>' +
+          '<div class="qa-spark mt-3">' +
+            s.recent.map(function (r) {
+              var h = Math.max(6, r.pct);
+              return '<div class="qa-spark__bar ' + barTone(r.pct) + '" style="height:' + h + '%" title="' +
+                app.esc(r.label || 'Quiz') + ' — ' + r.pct + '%"></div>';
+            }).join("") +
+          '</div>' +
+        '</div>'
+      : '';
+
+    var fmtLabels = { mcq: "🔘 Multiple Choice", tf: "⚖️ True / False", fib: "✍️ Fill in the Blanks" };
+    var fmtBars = Object.keys(fmtLabels).filter(function (f) {
+      return s.formats[f] && s.formats[f].totalQ;
+    }).map(function (f) {
+      return accuracyBar(fmtLabels[f], s.formats[f].totalCorrect, s.formats[f].totalQ);
+    }).join("");
+
+    var unitBars = Object.keys(s.units).filter(function (u) {
+      return s.units[u] && s.units[u].totalQ;
+    }).sort(function (a, b) {
+      var pa = s.units[a].totalCorrect / s.units[a].totalQ, pb = s.units[b].totalCorrect / s.units[b].totalQ;
+      return pa - pb;
+    }).map(function (u) {
+      var name = (syllabus.unitById[u] || {}).short || u;
+      return accuracyBar(app.esc(name), s.units[u].totalCorrect, s.units[u].totalQ);
+    }).join("");
+
+    // weakest sub-sections, only once they have been attempted a few times
+    var subNames = (window.quizApp && quizApp.subSectionTitles) ? quizApp.subSectionTitles() : {};
+    var weak = Object.keys(s.subs).filter(function (k) {
+      return s.subs[k] && s.subs[k].totalQ >= 4;
+    }).sort(function (a, b) {
+      return (s.subs[a].totalCorrect / s.subs[a].totalQ) - (s.subs[b].totalCorrect / s.subs[b].totalQ);
+    }).slice(0, 5);
+
+    var weakHtml = weak.length
+      ? '<div class="card mt-4">' +
+          '<b>Focus next on</b>' +
+          '<p class="small muted mt-1">Your five weakest sub-sections so far.</p>' +
+          '<div class="qa-bars mt-3">' +
+            weak.map(function (k) {
+              return accuracyBar(app.esc(subNames[k] || k), s.subs[k].totalCorrect, s.subs[k].totalQ);
+            }).join("") +
+          '</div>' +
+        '</div>'
+      : '';
+
+    return '<section>' +
+      '<div class="row row--between mb-1">' +
+        '<div>' +
+          '<h2>Quiz Performance Analytics</h2>' +
+          '<p class="muted small mt-1">Every finished quiz is recorded — accuracy, speed, formats and weak areas.</p>' +
+        '</div>' +
+        '<a class="small" href="#/quiz">Take a quiz &rarr;</a>' +
+      '</div>' +
+      tiles +
+      spark +
+      '<div class="grid grid--2 mt-4">' +
+        (fmtBars ? '<div class="card"><b>Accuracy by question type</b><div class="qa-bars mt-3">' + fmtBars + '</div></div>' : '') +
+        (unitBars ? '<div class="card"><b>Accuracy by unit</b><p class="small muted mt-1">Weakest first.</p><div class="qa-bars mt-3">' + unitBars + '</div></div>' : '') +
+      '</div>' +
+      weakHtml +
+    '</section>';
+  }
+
   /* ---------- Diagnostic Assessment Ledger ---------- */
   function renderRecentAttemptsCard(quiz) {
-    var list = (quiz.attempts || []).slice(-6).reverse();
+    var list = (quiz.attempts || []).slice(-10).reverse();
 
     if (!list.length) {
       return '<div class="heatmap-card-elite">' +
@@ -590,10 +711,15 @@ var dashboardApp = (function () {
           var p = app.pct(a.correct, a.total);
           var dt = new Date(a.at);
           var dateStr = dt.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+          var mins = a.seconds ? Math.max(1, Math.round(a.seconds / 60)) : (a.minutes || 0);
           return '<div class="tlist__row">' +
             '<span class="tlist__body">' +
               '<span class="tlist__title">' + app.esc(a.label || "Animal Nutrition Quiz") + '</span>' +
-              '<span class="tlist__sub">' + dateStr + (a.exam ? ' · ⏱️ Timed Exam' : '') + '</span>' +
+              '<span class="tlist__sub">' + dateStr +
+                (a.exam ? ' · ⏱️ Timed Exam' : ' · Practice') +
+                (mins ? ' · ' + mins + ' min' : '') +
+                (a.unanswered ? ' · ' + a.unanswered + ' skipped' : '') +
+              '</span>' +
             '</span>' +
             '<span class="tlist__right">' +
               '<span class="chip ' + (p >= 75 ? 'chip--ok' : p >= 50 ? 'chip--warn' : 'chip--danger') + '">' +

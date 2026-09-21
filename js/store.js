@@ -21,7 +21,8 @@ var store = (function () {
     notes:      PREFIX + "notes",       // { topicId: "note text" }
     highlights: PREFIX + "highlights",  // { topicId: [ {text, color}, ... ] }
     hlColor:    PREFIX + "hl-color",    // "yellow" | "green" | "blue" | "pink" | "orange" | "purple"
-    quiz:       PREFIX + "quiz",        // { attempts: [], byUnit: {} }
+    quiz:       PREFIX + "quiz",        // { attempts: [], byUnit: {}, units: {}, formats: {}, subs: {} }
+    quizRun:    PREFIX + "quiz-run",    // the quiz currently in progress, so a refresh never loses it
     srs:        PREFIX + "srs",         // { questionKey: {box, due, wrong} }
     activity:   PREFIX + "activity",    // { "YYYY-MM-DD": actionCount }
     visits:     PREFIX + "visits",      // number
@@ -153,24 +154,133 @@ var store = (function () {
   }
 
   /* ---------- quiz results ---------- */
-  function getQuiz() { return read(KEYS.quiz, { attempts: [], byUnit: {} }); }
+  function emptyQuiz() {
+    return { attempts: [], byUnit: {}, units: {}, formats: {}, subs: {}, topics: {} };
+  }
+
+  function getQuiz() {
+    var q = read(KEYS.quiz, null) || emptyQuiz();
+    // older saves only had attempts + byUnit
+    if (!q.attempts) q.attempts = [];
+    if (!q.byUnit) q.byUnit = {};
+    if (!q.units) q.units = {};
+    if (!q.formats) q.formats = {};
+    if (!q.subs) q.subs = {};
+    if (!q.topics) q.topics = {};
+    return q;
+  }
+
+  // bucket = { runs, totalQ, totalCorrect, best, last, lastAt }
+  function tallyBucket(map, key, total, correct, at) {
+    if (!key || !total) return;
+    var b = map[key] || { runs: 0, best: 0, totalQ: 0, totalCorrect: 0 };
+    b.runs += 1;
+    b.totalQ += total;
+    b.totalCorrect += correct;
+    var pct = Math.round(correct / total * 100);
+    if (pct > (b.best || 0)) b.best = pct;
+    b.last = pct;
+    b.lastAt = at;
+    map[key] = b;
+  }
+
+  /* An attempt may carry these extras (all optional):
+       units:   { unitId:   { total, correct } }
+       formats: { mcq|tf|fib: { total, correct } }
+       subs:    { subSectionId: { total, correct } }
+       topics:  { topicId: { total, correct } }
+       seconds, mode, wrongKeys                                        */
   function saveAttempt(attempt) {
     var q = getQuiz();
+    attempt.at = attempt.at || Date.now();
     q.attempts.push(attempt);
-    if (q.attempts.length > 200) q.attempts = q.attempts.slice(-200);
+    if (q.attempts.length > 300) q.attempts = q.attempts.slice(-300);
 
-    var u = q.byUnit[attempt.scope] || { runs: 0, best: 0, totalQ: 0, totalCorrect: 0 };
-    u.runs += 1;
-    u.totalQ += attempt.total;
-    u.totalCorrect += attempt.correct;
-    var pct = attempt.total ? Math.round(attempt.correct / attempt.total * 100) : 0;
-    if (pct > u.best) u.best = pct;
-    u.last = pct;
-    u.lastAt = attempt.at;
-    q.byUnit[attempt.scope] = u;
+    tallyBucket(q.byUnit, attempt.scope, attempt.total, attempt.correct, attempt.at);
+
+    ["units", "formats", "subs", "topics"].forEach(function (group) {
+      var src = attempt[group];
+      if (!src) return;
+      for (var key in src) {
+        tallyBucket(q[group], key, src[key].total, src[key].correct, attempt.at);
+      }
+    });
+
+    // a unit quiz should also count towards that unit even when it was a
+    // sub-section run, so the dashboard mastery matrix always sees it
+    if (attempt.units) {
+      for (var uid in attempt.units) {
+        tallyBucket(q.byUnit, "unit:" + uid, attempt.units[uid].total, attempt.units[uid].correct, attempt.at);
+      }
+    }
 
     write(KEYS.quiz, q);
     logActivity();
+  }
+
+  /* Everything the dashboard needs, computed in one place. */
+  function getQuizStats() {
+    var q = getQuiz();
+    var attempts = q.attempts || [];
+    var totalQ = 0, totalCorrect = 0, seconds = 0, exams = 0;
+    attempts.forEach(function (a) {
+      totalQ += a.total || 0;
+      totalCorrect += a.correct || 0;
+      seconds += a.seconds || ((a.minutes || 0) * 60);
+      if (a.exam) exams += 1;
+    });
+
+    var recent = attempts.slice(-10).map(function (a) {
+      return { at: a.at, pct: a.total ? Math.round(a.correct / a.total * 100) : 0, label: a.label, exam: !!a.exam };
+    });
+
+    // average of the last 5 vs the 5 before, so the dashboard can show a trend
+    var last5 = recent.slice(-5), prev5 = attempts.slice(-10, -5).map(function (a) {
+      return a.total ? Math.round(a.correct / a.total * 100) : 0;
+    });
+    function avg(list, pick) {
+      if (!list.length) return 0;
+      var sum = 0;
+      list.forEach(function (x) { sum += pick ? pick(x) : x; });
+      return Math.round(sum / list.length);
+    }
+
+    var byDay = {};
+    attempts.forEach(function (a) {
+      var d = new Date(a.at || Date.now());
+      var key = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+      var rec = byDay[key] || { total: 0, correct: 0, runs: 0 };
+      rec.total += a.total || 0;
+      rec.correct += a.correct || 0;
+      rec.runs += 1;
+      byDay[key] = rec;
+    });
+
+    return {
+      attempts: attempts,
+      runs: attempts.length,
+      exams: exams,
+      totalQ: totalQ,
+      totalCorrect: totalCorrect,
+      accuracy: totalQ ? Math.round(totalCorrect / totalQ * 100) : 0,
+      minutes: Math.round(seconds / 60),
+      recent: recent,
+      // only meaningful once there is something to compare against
+      hasTrend: prev5.length > 0,
+      trend: prev5.length ? avg(last5, function (r) { return r.pct; }) - avg(prev5) : 0,
+      units: q.units || {},
+      formats: q.formats || {},
+      subs: q.subs || {},
+      topics: q.topics || {},
+      byDay: byDay
+    };
+  }
+
+  /* ---------- quiz in progress (survives a refresh or a closed tab) ---------- */
+  function saveRun(runState) { return write(KEYS.quizRun, runState); }
+  function loadRun() { return read(KEYS.quizRun, null); }
+  function clearRun() {
+    try { localStorage.removeItem(KEYS.quizRun); } catch (e) {}
   }
 
   /* ---------- spaced repetition (Leitner boxes 1-5) ---------- */
@@ -355,7 +465,8 @@ var store = (function () {
     getNotes: getNotes, getNote: getNote, setNote: setNote,
     getHighlights: getHighlights, addHighlight: addHighlight, removeHighlight: removeHighlight,
     getHighlightColor: getHighlightColor, setHighlightColor: setHighlightColor, VALID_HL_COLORS: VALID_HL_COLORS,
-    getQuiz: getQuiz, saveAttempt: saveAttempt,
+    getQuiz: getQuiz, saveAttempt: saveAttempt, getQuizStats: getQuizStats,
+    saveRun: saveRun, loadRun: loadRun, clearRun: clearRun,
     getSrs: getSrs, gradeSrs: gradeSrs, dueSrs: dueSrs,
     getActivity: getActivity, logActivity: logActivity, computeStreak: computeStreak,
     bumpVisits: bumpVisits, getVisits: getVisits,
