@@ -23,6 +23,7 @@ var store = (function () {
     hlColor:    PREFIX + "hl-color",    // "yellow" | "green" | "blue" | "pink" | "orange" | "purple"
     quiz:       PREFIX + "quiz",        // { attempts: [], byUnit: {}, units: {}, formats: {}, subs: {} }
     quizRun:    PREFIX + "quiz-run",    // the quiz currently in progress, so a refresh never loses it
+    quizLog:    PREFIX + "quiz-log",    // question-by-question record of recent attempts, for review
     srs:        PREFIX + "srs",         // { questionKey: {box, due, wrong} }
     activity:   PREFIX + "activity",    // { "YYYY-MM-DD": actionCount }
     visits:     PREFIX + "visits",      // number
@@ -155,7 +156,7 @@ var store = (function () {
 
   /* ---------- quiz results ---------- */
   function emptyQuiz() {
-    return { attempts: [], byUnit: {}, units: {}, formats: {}, subs: {}, topics: {} };
+    return { attempts: [], byUnit: {}, units: {}, formats: {}, subs: {}, topics: {}, diffs: {} };
   }
 
   function getQuiz() {
@@ -167,6 +168,7 @@ var store = (function () {
     if (!q.formats) q.formats = {};
     if (!q.subs) q.subs = {};
     if (!q.topics) q.topics = {};
+    if (!q.diffs) q.diffs = {};
     return q;
   }
 
@@ -198,7 +200,7 @@ var store = (function () {
 
     tallyBucket(q.byUnit, attempt.scope, attempt.total, attempt.correct, attempt.at);
 
-    ["units", "formats", "subs", "topics"].forEach(function (group) {
+    ["units", "formats", "subs", "topics", "diffs"].forEach(function (group) {
       var src = attempt[group];
       if (!src) return;
       for (var key in src) {
@@ -264,6 +266,7 @@ var store = (function () {
       totalCorrect: totalCorrect,
       accuracy: totalQ ? Math.round(totalCorrect / totalQ * 100) : 0,
       minutes: Math.round(seconds / 60),
+      seconds: seconds,
       recent: recent,
       // only meaningful once there is something to compare against
       hasTrend: prev5.length > 0,
@@ -272,8 +275,44 @@ var store = (function () {
       formats: q.formats || {},
       subs: q.subs || {},
       topics: q.topics || {},
+      diffs: q.diffs || {},
       byDay: byDay
     };
+  }
+
+  /* ---------- question-by-question record of finished quizzes ----------
+     Keeps the last MAX_LOGGED attempts in full so any of them can be
+     reopened and reviewed later from the dashboard.                      */
+  var MAX_LOGGED = 20;
+
+  function getAttemptLog() {
+    var log = read(KEYS.quizLog, []);
+    return Array.isArray(log) ? log : [];
+  }
+
+  function saveAttemptDetail(record) {
+    var log = getAttemptLog();
+    log.push(record);
+    while (log.length > MAX_LOGGED) log.shift();
+
+    // If storage is tight, drop the oldest entries until it fits.
+    while (log.length && !write(KEYS.quizLog, log)) {
+      log.shift();
+      if (!log.length) return false;
+    }
+    return true;
+  }
+
+  function getAttemptDetail(id) {
+    var log = getAttemptLog();
+    for (var i = log.length - 1; i >= 0; i--) {
+      if (String(log[i].id) === String(id)) return log[i];
+    }
+    return null;
+  }
+
+  function clearAttemptLog() {
+    try { localStorage.removeItem(KEYS.quizLog); } catch (e) {}
   }
 
   /* ---------- quiz in progress (survives a refresh or a closed tab) ---------- */
@@ -467,6 +506,8 @@ var store = (function () {
     getHighlightColor: getHighlightColor, setHighlightColor: setHighlightColor, VALID_HL_COLORS: VALID_HL_COLORS,
     getQuiz: getQuiz, saveAttempt: saveAttempt, getQuizStats: getQuizStats,
     saveRun: saveRun, loadRun: loadRun, clearRun: clearRun,
+    getAttemptLog: getAttemptLog, saveAttemptDetail: saveAttemptDetail,
+    getAttemptDetail: getAttemptDetail, clearAttemptLog: clearAttemptLog,
     getSrs: getSrs, gradeSrs: gradeSrs, dueSrs: dueSrs,
     getActivity: getActivity, logActivity: logActivity, computeStreak: computeStreak,
     bumpVisits: bumpVisits, getVisits: getVisits,

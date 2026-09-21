@@ -3757,7 +3757,7 @@ var app = (function () {
         '<p class="muted mt-2">Light is the standard study theme. Dark is available for night reading.</p>' +
         '<div class="seg mt-4" role="group">' +
           ['light', 'dark'].map(function (t) {
-            return '<button class="seg__btn' + (theme === t ? " is-on" : "") + '" data-theme="' + t + '">' +
+            return '<button class="seg__btn' + (theme === t ? " is-on" : "") + '" data-theme-pick="' + t + '">' +
               icon(t === "light" ? "sun" : "moon") + ' ' +
               t.charAt(0).toUpperCase() + t.slice(1) + '</button>';
           }).join("") +
@@ -3841,9 +3841,9 @@ var app = (function () {
         '</div>' +
       '</div>';
 
-    els("[data-theme]").forEach(function (b) {
+    els("[data-theme-pick]").forEach(function (b) {
       b.addEventListener("click", function () {
-        store.setTheme(b.getAttribute("data-theme"));
+        store.setTheme(b.getAttribute("data-theme-pick"));
         renderMe();
         refreshThemeButton();
       });

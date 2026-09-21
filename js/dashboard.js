@@ -165,7 +165,7 @@ var dashboardApp = (function () {
               '<p class="muted small mt-1">Reading progress, question bank volume, and high score per curriculum unit.</p>' +
             '</div>' +
           '</div>' +
-          renderMatrixFilters() +
+          renderMatrixFilters(allUnits) +
           '<div id="unit-matrix-container">' +
             renderUnitMatrix(activeFilter, allUnits, readMap, quiz) +
           '</div>' +
@@ -233,6 +233,7 @@ var dashboardApp = (function () {
 
     // 2. Next Unread Lesson Mission
     var nextTopic = findNextUnreadTopic(allUnits, readMap);
+    var topicTotal = allUnits.reduce(function (n, u) { return n + ((u.topics || []).length); }, 0);
     var lessonCard = '';
     if (nextTopic) {
       lessonCard =
@@ -249,7 +250,7 @@ var dashboardApp = (function () {
         '<div class="presc-card">' +
           '<div>' +
             '<span class="presc-badge presc-badge--success">' + app.icon("trophy") + ' Full Coverage</span>' +
-            '<h3 class="presc-title mt-2">All 145 Topics Read</h3>' +
+            '<h3 class="presc-title mt-2">All ' + topicTotal + ' Topics Read</h3>' +
             '<p class="presc-desc mt-1">You have explored every theory and practical topic in the syllabus!</p>' +
           '</div>' +
           '<a class="btn btn--outline presc-btn" href="#/theory">' + app.icon("repeat") + ' Review Lessons</a>' +
@@ -361,11 +362,14 @@ var dashboardApp = (function () {
   }
 
   /* ---------- Unit Mastery Matrix Filter Buttons ---------- */
-  function renderMatrixFilters() {
+  function renderMatrixFilters(allUnits) {
+    var units = allUnits || [];
+    var theoryN = units.filter(function (u) { return u.id.indexOf("unit-") === 0; }).length;
+    var pracN = units.length - theoryN;
     var tabs = [
-      { id: "all", label: "All Units (8)" },
-      { id: "theory", label: "Theory (4)" },
-      { id: "practical", label: "Practical (4)" },
+      { id: "all", label: "All Units (" + units.length + ")" },
+      { id: "theory", label: "Theory (" + theoryN + ")" },
+      { id: "practical", label: "Practical (" + pracN + ")" },
       { id: "weak", label: "Needs Practice (<60%)" },
       { id: "mastered", label: "Mastered (≥75%)" }
     ];
@@ -418,6 +422,8 @@ var dashboardApp = (function () {
         var qn = app.questionCount(u.id);
         var rec = quiz.byUnit && quiz.byUnit["unit:" + u.id];
         var bestScore = (rec && typeof rec.best === "number") ? rec.best : null;
+        var uStats = (quiz.units || {})[u.id];
+        var accP = (uStats && uStats.totalQ) ? Math.round(uStats.totalCorrect / uStats.totalQ * 100) : null;
 
         return '<div class="unit-card-elite">' +
           '<div class="unit-card-top">' +
@@ -442,6 +448,18 @@ var dashboardApp = (function () {
                 '<div class="bar__fill" style="width:' + readP + '%;background:var(--ivri-blue)"></div>' +
               '</div>' +
             '</div>' +
+            (accP !== null
+              ? '<div class="unit-bar-item mt-2">' +
+                  '<div class="unit-bar-label">' +
+                    '<span>Quiz Accuracy</span>' +
+                    '<span class="mono">' + uStats.totalCorrect + '/' + uStats.totalQ + ' (' + accP + '%)</span>' +
+                  '</div>' +
+                  '<div class="bar" style="height:6px">' +
+                    '<div class="bar__fill" style="width:' + accP + '%;background:' +
+                      (accP >= 75 ? 'var(--ok)' : accP >= 50 ? 'var(--warn)' : 'var(--danger)') + '"></div>' +
+                  '</div>' +
+                '</div>'
+              : '') +
           '</div>' +
 
           '<div class="unit-card-actions">' +
@@ -577,6 +595,12 @@ var dashboardApp = (function () {
     '</div>';
   }
 
+  function formatStudyTime(s) {
+    if (s.minutes >= 60) return Math.floor(s.minutes / 60) + 'h ' + (s.minutes % 60) + 'm';
+    if (s.minutes >= 1) return s.minutes + 'm';
+    return (s.seconds || 0) + 's';
+  }
+
   function renderQuizAnalytics() {
     var s = (store.getQuizStats && store.getQuizStats()) || null;
     if (!s || !s.runs) {
@@ -607,7 +631,7 @@ var dashboardApp = (function () {
           '<div class="qa-tile__val' + trendCls + '">' + trendTxt + '</div>' +
           '<div class="qa-tile__sub">' + trendSub + '</div></div>' +
         '<div class="qa-tile"><div class="qa-tile__label">Time on quizzes</div>' +
-          '<div class="qa-tile__val">' + (s.minutes >= 60 ? Math.floor(s.minutes / 60) + 'h ' + (s.minutes % 60) + 'm' : s.minutes + 'm') + '</div>' +
+          '<div class="qa-tile__val">' + formatStudyTime(s) + '</div>' +
           '<div class="qa-tile__sub">' + s.exams + ' timed exam' + (s.exams === 1 ? '' : 's') + '</div></div>' +
       '</div>';
 
@@ -651,13 +675,37 @@ var dashboardApp = (function () {
       return (s.subs[a].totalCorrect / s.subs[a].totalQ) - (s.subs[b].totalCorrect / s.subs[b].totalQ);
     }).slice(0, 5);
 
-    var weakHtml = weak.length
+    var diffLabels = { d1: "⭐ Foundational", d2: "⭐⭐ Core UG", d3: "⭐⭐⭐ Rank 1 Classic" };
+    var diffBars = Object.keys(diffLabels).filter(function (d) {
+      return s.diffs && s.diffs[d] && s.diffs[d].totalQ;
+    }).map(function (d) {
+      return accuracyBar(diffLabels[d], s.diffs[d].totalCorrect, s.diffs[d].totalQ);
+    }).join("");
+
+    // topics you keep getting wrong, with a direct link to the lesson
+    var weakTopics = Object.keys(s.topics || {}).filter(function (t) {
+      var rec = s.topics[t];
+      return rec && rec.totalQ >= 2 && syllabus.topicById[t] &&
+        (rec.totalCorrect / rec.totalQ) < 0.75;
+    }).sort(function (a, b) {
+      return (s.topics[a].totalCorrect / s.topics[a].totalQ) - (s.topics[b].totalCorrect / s.topics[b].totalQ);
+    }).slice(0, 6);
+
+    var weakTopicHtml = weakTopics.length
       ? '<div class="card mt-4">' +
-          '<b>Focus next on</b>' +
-          '<p class="small muted mt-1">Your five weakest sub-sections so far.</p>' +
-          '<div class="qa-bars mt-3">' +
-            weak.map(function (k) {
-              return accuracyBar(app.esc(subNames[k] || k), s.subs[k].totalCorrect, s.subs[k].totalQ);
+          '<b>Lessons worth rereading</b>' +
+          '<p class="small muted mt-1">Topics where your quiz answers keep going wrong.</p>' +
+          '<div class="tlist mt-3" style="border:none">' +
+            weakTopics.map(function (t) {
+              var rec = s.topics[t];
+              var pct = Math.round(rec.totalCorrect / rec.totalQ * 100);
+              return '<a class="tlist__row" href="#/topic/' + t + '">' +
+                '<span class="tlist__body"><span class="tlist__title">' +
+                  app.esc(syllabus.topicById[t].title) + '</span>' +
+                  '<span class="tlist__sub">' + rec.totalCorrect + ' of ' + rec.totalQ + ' correct</span></span>' +
+                '<span class="tlist__right"><span class="chip ' +
+                  (pct >= 75 ? 'chip--ok' : pct >= 50 ? 'chip--warn' : 'chip--danger') + '">' + pct + '%</span></span>' +
+              '</a>';
             }).join("") +
           '</div>' +
         '</div>'
@@ -676,8 +724,13 @@ var dashboardApp = (function () {
       '<div class="grid grid--2 mt-4">' +
         (fmtBars ? '<div class="card"><b>Accuracy by question type</b><div class="qa-bars mt-3">' + fmtBars + '</div></div>' : '') +
         (unitBars ? '<div class="card"><b>Accuracy by unit</b><p class="small muted mt-1">Weakest first.</p><div class="qa-bars mt-3">' + unitBars + '</div></div>' : '') +
+        (diffBars ? '<div class="card"><b>Accuracy by difficulty</b><div class="qa-bars mt-3">' + diffBars + '</div></div>' : '') +
+        (weak.length ? '<div class="card"><b>Focus next on</b><p class="small muted mt-1">Your weakest sub-sections so far.</p><div class="qa-bars mt-3">' +
+            weak.map(function (k) {
+              return accuracyBar(app.esc(subNames[k] || k), s.subs[k].totalCorrect, s.subs[k].totalQ);
+            }).join("") + '</div></div>' : '') +
       '</div>' +
-      weakHtml +
+      weakTopicHtml +
     '</section>';
   }
 
@@ -701,7 +754,7 @@ var dashboardApp = (function () {
       '<div class="row row--between">' +
         '<div>' +
           '<h3>Assessment Ledger</h3>' +
-          '<p class="muted small mt-1">Recent quizzes and simulation exams.</p>' +
+          '<p class="muted small mt-1">Recent quizzes — tap any row to reopen its full review.</p>' +
         '</div>' +
         '<a class="small" href="#/quiz">All Quizzes &rarr;</a>' +
       '</div>' +
@@ -712,7 +765,8 @@ var dashboardApp = (function () {
           var dt = new Date(a.at);
           var dateStr = dt.toLocaleDateString(undefined, { month: "short", day: "numeric" });
           var mins = a.seconds ? Math.max(1, Math.round(a.seconds / 60)) : (a.minutes || 0);
-          return '<div class="tlist__row">' +
+          var reviewable = a.id && store.getAttemptDetail && store.getAttemptDetail(a.id);
+          return '<' + (reviewable ? 'a class="tlist__row" href="#/quiz/result/' + a.id + '"' : 'div class="tlist__row"') + '>' +
             '<span class="tlist__body">' +
               '<span class="tlist__title">' + app.esc(a.label || "Animal Nutrition Quiz") + '</span>' +
               '<span class="tlist__sub">' + dateStr +
@@ -725,8 +779,9 @@ var dashboardApp = (function () {
               '<span class="chip ' + (p >= 75 ? 'chip--ok' : p >= 50 ? 'chip--warn' : 'chip--danger') + '">' +
                 a.correct + '/' + a.total + ' (' + p + '%)' +
               '</span>' +
+              (reviewable ? '<span class="small faint ml-1">Review →</span>' : '') +
             '</span>' +
-          '</div>';
+          '</' + (reviewable ? 'a' : 'div') + '>';
         }).join("") +
       '</div>' +
     '</div>';
