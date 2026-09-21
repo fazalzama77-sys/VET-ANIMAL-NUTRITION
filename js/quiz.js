@@ -123,7 +123,15 @@ var quizApp = (function () {
     host = container;
     var kind = params.a;
 
-    if (run && run.active) { paintRun(); return; }
+    if (run && run.active) {
+      // asked for a different quiz while one is still open? let the reader choose
+      var wanted = kind ? kind + (params.b ? ":" + params.b : "") : "";
+      var current = String(run.scope || "");
+      var sameQuiz = !kind || current === wanted || current.indexOf(wanted + ":") === 0;
+      if (sameQuiz || kind === "resume") { paintRun(); return; }
+      renderInProgressChoice(kind, params.b);
+      return;
+    }
 
     if (kind === "resume") { resumeSavedRun(); return; }
     if (!kind) { renderHub(); return; }
@@ -250,6 +258,40 @@ var quizApp = (function () {
       (disabled ? '<p class="small faint mt-2">' +
         (isReview ? 'Nothing due — answer some questions first.' : 'No questions added yet.') + '</p>' : '') +
       '</a>';
+  }
+
+  /* A quiz is open and the reader asked for a different one. */
+  function renderInProgressChoice(kind, id) {
+    var done = answeredCount();
+    var openRun = run;
+    host.innerHTML =
+      '<div class="pagehead"><span class="eyebrow">Quiz in progress</span>' +
+        '<h1>You already have a quiz open</h1>' +
+        '<p class="lede"><b>' + app.esc(openRun.label) + '</b> — ' + done + ' of ' + openRun.qs.length +
+        ' answered' + (openRun.exam ? ', timed' : '') + '.</p></div>' +
+      '<div class="card">' +
+        '<p>Carry on where you left off, or drop it and set up the new quiz. ' +
+        'Dropping it means the answers so far are not scored.</p>' +
+        '<div class="row row--wrap gap-3 mt-5">' +
+          '<button class="btn btn--primary btn--lg" id="keepgoingbtn">Continue this quiz</button>' +
+          '<button class="btn btn--lg" id="startnewbtn">Discard it and start the new one</button>' +
+          '<a class="btn btn--ghost btn--lg" href="#/quiz">Back to Quiz Hub</a>' +
+        '</div>' +
+      '</div>';
+
+    var keep = document.getElementById("keepgoingbtn");
+    if (keep) keep.addEventListener("click", function () { paintRun(); });
+
+    var fresh = document.getElementById("startnewbtn");
+    if (fresh) fresh.addEventListener("click", function () {
+      stopRun();
+      if (store.clearRun) store.clearRun();
+      run = null;
+      if (kind === "unit" || kind === "paper") renderSetup(kind, id);
+      else if (kind === "grand" || kind === "practical") renderSetup(kind, null);
+      else if (kind === "review") renderReview();
+      else renderHub();
+    });
   }
 
   function paperLabel(id) {
