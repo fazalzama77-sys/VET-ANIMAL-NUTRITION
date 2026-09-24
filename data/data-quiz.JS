@@ -2,9 +2,10 @@
    data-quiz.JS  —  Quiz Question Bank
    Animal Nutrition Studio
    ------------------------------------------------------------
-   720 Examination-Grade Questions across Units 1 to 4
-   Strict 2 : 1 : 1 Ratio (90 MCQ : 45 TF : 45 FIB per unit)
-   180 Questions per Unit | 32 Thematic Sub-Sections
+   820 Examination-Grade Questions across Units 1 to 4
+   About 2 : 1 : 1 Ratio (MCQ : TF : FIB) in every unit
+   Units 1 & 4: 230 each (116 : 57 : 57) | Units 2 & 3: 180 each (90 : 45 : 45)
+   13 Thematic Sub-Sections
    ============================================================ */
 
 var quizBank = {
@@ -1269,6 +1270,370 @@ var quizBank = {
         "topicId": "u1-t25",
         "diff": 1,
         "subSection": "u1-s5"
+      },
+      {
+        "q": "The Weende (proximate) system of feed analysis was developed in 1864 at the Weende Experiment Station, Germany, by:",
+        "o": [
+          "Henneberg and Stohmann",
+          "Kellner and Fingerling",
+          "Van Soest and Wine",
+          "Atwater and Rosa"
+        ],
+        "a": 0,
+        "e": "Wilhelm Henneberg and Friedrich Stohmann devised the Weende scheme (dry matter, total ash, crude protein, ether extract, crude fibre and NFE by difference). It remains the basis of routine feed analysis.",
+        "topicId": "u1-t01",
+        "diff": 2,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "The 'isodynamic law' (nutrients can replace one another in proportion to their energy value) and the 'surface law' of heat production were proposed by:",
+        "o": [
+          "Max Rubner",
+          "Max Kleiber",
+          "Justus von Liebig",
+          "Oskar Kellner"
+        ],
+        "a": 0,
+        "e": "Rubner (Germany, late 19th century) showed that fat, carbohydrate and protein are interchangeable as fuels in proportion to their energy, and that heat production relates to body surface area. Kleiber later refined the size relationship to W^0.75.",
+        "topicId": "u1-t01",
+        "diff": 2,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "The detergent system of forage fibre analysis (NDF, ADF and ADL), which overcame the drawbacks of crude fibre, was developed by:",
+        "o": [
+          "Wilhelm Henneberg",
+          "Peter J. Van Soest",
+          "Johan Kjeldahl",
+          "Max Rubner"
+        ],
+        "a": 1,
+        "e": "Van Soest (USDA, 1960s) partitioned forage into neutral detergent fibre (cell wall), acid detergent fibre (cellulose + lignin) and acid detergent lignin. Crude fibre underestimates fibre because part of the lignin and hemicellulose dissolves into NFE.",
+        "topicId": "u1-t01",
+        "diff": 2,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "In livestock production, feed and fodder account for approximately what share of the total cost of production?",
+        "o": [
+          "10–20%",
+          "25–35%",
+          "60–70%",
+          "85–95%"
+        ],
+        "a": 2,
+        "e": "Feed is the single largest input — about 60–70% of the cost of producing milk, meat or eggs. Efficient, balanced feeding therefore decides the profitability of the enterprise.",
+        "topicId": "u1-t02",
+        "diff": 1,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "Which statement correctly contrasts the chemical composition of the animal body with that of plants?",
+        "o": [
+          "Cellulose and lignin are major structural components of the animal body",
+          "Carbohydrate is less than 1% of the animal body, whereas carbohydrates form the bulk of plant dry matter",
+          "Plants store surplus energy mainly as fat, whereas animals store it mainly as starch",
+          "Plant dry matter always contains more protein than the animal body"
+        ],
+        "a": 1,
+        "e": "Animals store energy as fat and only small amounts of glycogen (<1% of the body). In plants, cell-wall carbohydrates (cellulose, hemicellulose) and starch make up most of the dry matter, while the animal body is rich in protein and fat.",
+        "topicId": "u1-t03",
+        "diff": 2,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "In animal nutrition, a 'ration' is defined as:",
+        "o": [
+          "Any feed containing more than 18% crude fibre",
+          "A concentrate mixture fed only to lactating animals",
+          "The quantity of feed allowed to an animal during a 24-hour period",
+          "The amount of feed consumed in a single meal"
+        ],
+        "a": 2,
+        "e": "A ration is the total feed allowed to an animal in 24 hours. A balanced ration is one that supplies all nutrients in the correct amounts and proportions for that animal's requirements over those 24 hours.",
+        "topicId": "u1-t04",
+        "diff": 1,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "A feed contains 20% crude protein on a dry matter basis and has 90% dry matter. Its crude protein content on an as-fed (fresh) basis is:",
+        "o": [
+          "22.2%",
+          "20%",
+          "18%",
+          "11%"
+        ],
+        "a": 2,
+        "e": "As-fed value = DM-basis value × DM% ÷ 100 = 20 × 90 ÷ 100 = 18%. Going the other way, DM-basis = as-fed ÷ DM fraction. Feeding standards and analyses are compared on a dry matter basis.",
+        "topicId": "u1-t04",
+        "diff": 2,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "The iodine value (iodine number) of a fat or oil is a measure of its:",
+        "o": [
+          "Free fatty acid content (rancidity)",
+          "Degree of unsaturation",
+          "Average fatty-acid chain length",
+          "Volatile fatty acid content"
+        ],
+        "a": 1,
+        "e": "Iodine value = grams of iodine absorbed by 100 g of fat; the more double bonds, the higher the value. Saponification value indicates chain length, acid value indicates free fatty acids, and the Reichert–Meissl value indicates volatile fatty acids.",
+        "topicId": "u1-t07",
+        "diff": 2,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "An animal can survive the loss of nearly all its body fat and about half its body protein, but death usually follows the loss of approximately what percentage of its body water?",
+        "o": [
+          "5%",
+          "20%",
+          "50%",
+          "70%"
+        ],
+        "a": 1,
+        "e": "A loss of about 10% of body water causes serious disorders and about 20% causes death. This is why water is regarded as the most critical nutrient.",
+        "topicId": "u1-t08",
+        "diff": 2,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "Pica and osteophagia (bone-chewing) in grazing cattle are classical signs of a deficiency of:",
+        "o": [
+          "Phosphorus",
+          "Magnesium",
+          "Iodine",
+          "Vitamin A"
+        ],
+        "a": 0,
+        "e": "Phosphorus-deficient cattle on P-poor soils and forages develop depraved appetite (pica), chew bones (osteophagia), lose fertility and may develop osteomalacia. Bone chewing also predisposes to botulism.",
+        "topicId": "u1-t09",
+        "diff": 1,
+        "subSection": "u1-s3"
+      },
+      {
+        "q": "The most abundant mineral in the animal body, about 99% of which is present in bones and teeth, is:",
+        "o": [
+          "Phosphorus",
+          "Calcium",
+          "Sodium",
+          "Potassium"
+        ],
+        "a": 1,
+        "e": "Calcium makes up about 1.5–2% of body weight and roughly 99% of it is in the skeleton. About 80% of body phosphorus is also in bones and teeth.",
+        "topicId": "u1-t09",
+        "diff": 1,
+        "subSection": "u1-s3"
+      },
+      {
+        "q": "'Teart' scouring in cattle grazing pastures on soils rich in molybdenum is essentially a condition of:",
+        "o": [
+          "Induced copper deficiency",
+          "Selenium toxicity",
+          "Induced zinc deficiency",
+          "Cobalt toxicity"
+        ],
+        "a": 0,
+        "e": "In the rumen molybdenum combines with sulphur to form thiomolybdates that bind copper and make it unavailable. The result is diarrhoea, loss of hair pigment ('spectacle eye'), poor growth and infertility; copper supplementation corrects it.",
+        "topicId": "u1-t10",
+        "diff": 3,
+        "subSection": "u1-s3"
+      },
+      {
+        "q": "White muscle disease (nutritional muscular dystrophy) in calves and lambs results from a deficiency of:",
+        "o": [
+          "Copper and molybdenum",
+          "Iron and copper",
+          "Iodine and cobalt",
+          "Selenium and/or vitamin E"
+        ],
+        "a": 3,
+        "e": "Selenium (in glutathione peroxidase) and vitamin E protect muscle cell membranes from oxidative damage. Their deficiency causes pale, chalky-white degeneration of skeletal and cardiac muscle, stiffness and sudden death.",
+        "topicId": "u1-t10",
+        "diff": 2,
+        "subSection": "u1-s3"
+      },
+      {
+        "q": "Night blindness (nyctalopia) is the earliest clinical sign of a deficiency of:",
+        "o": [
+          "Vitamin D",
+          "Vitamin K",
+          "Riboflavin",
+          "Vitamin A"
+        ],
+        "a": 3,
+        "e": "Retinal (from vitamin A) is needed to regenerate the visual pigment rhodopsin for vision in dim light. Prolonged deficiency leads to xerophthalmia, keratinisation of epithelia and poor fertility.",
+        "topicId": "u1-t11",
+        "diff": 1,
+        "subSection": "u1-s3"
+      },
+      {
+        "q": "Chastek paralysis in foxes, mink and cats fed large amounts of raw fish is caused by:",
+        "o": [
+          "Biotin deficiency due to avidin in raw fish",
+          "Thiamine deficiency due to the enzyme thiaminase in raw fish",
+          "Vitamin E deficiency due to rancid fish oils",
+          "Mercury poisoning from contaminated fish"
+        ],
+        "a": 1,
+        "e": "Thiaminase in raw fish destroys thiamine, producing anorexia, ataxia, convulsions and paralysis. Cooking the fish inactivates the enzyme. (Avidin, which binds biotin, is found in raw egg white, not fish.)",
+        "topicId": "u1-t12",
+        "diff": 2,
+        "subSection": "u1-s3"
+      },
+      {
+        "q": "Which fodder crop is popularly called the 'Queen of Fodders' because of its high protein, calcium and palatability?",
+        "o": [
+          "Lucerne (Alfalfa)",
+          "Maize",
+          "Hybrid Napier",
+          "Oats"
+        ],
+        "a": 0,
+        "e": "Lucerne (Medicago sativa) is a perennial legume fodder with about 15–20% crude protein (DM basis), rich in calcium, carotene and highly palatable. It is widely fed green or as hay.",
+        "topicId": "u1-t13",
+        "diff": 1,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "According to the classical classification of concentrates, a feedstuff containing less than 20% crude protein is termed:",
+        "o": [
+          "An energy-rich (basal) concentrate",
+          "A protein supplement",
+          "A dry roughage",
+          "A mineral supplement"
+        ],
+        "a": 0,
+        "e": "Concentrates (<18% crude fibre, >60% TDN) are divided into energy concentrates (<20% CP — cereal grains, brans, molasses) and protein supplements (>20% CP — oilseed cakes, animal proteins).",
+        "topicId": "u1-t13",
+        "diff": 1,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "The heat increment (specific dynamic action) of feeding is highest when the absorbed nutrient is:",
+        "o": [
+          "Fat",
+          "Protein",
+          "Carbohydrate",
+          "Water"
+        ],
+        "a": 1,
+        "e": "Protein has the largest heat increment (roughly 30% of its ME) because of deamination and urea synthesis; carbohydrate is intermediate and fat lowest. In ruminants the heat of fermentation adds further to the heat increment.",
+        "topicId": "u1-t14",
+        "diff": 2,
+        "subSection": "u1-s4"
+      },
+      {
+        "q": "Digestible Crude Protein (DCP) of a feed is calculated as:",
+        "o": [
+          "Crude protein (%) − true protein (%)",
+          "Nitrogen (%) × 6.25 × biological value ÷ 100",
+          "Total digestible nutrients × 6.25",
+          "Crude protein (%) × digestibility coefficient of crude protein ÷ 100"
+        ],
+        "a": 3,
+        "e": "Example: a feed with 20% CP and a CP digestibility of 80% has DCP = 20 × 80 ÷ 100 = 16%. DCP is the protein unit used in Indian (ICAR) feeding standards along with TDN.",
+        "topicId": "u1-t16",
+        "diff": 2,
+        "subSection": "u1-s2"
+      },
+      {
+        "q": "The Calorie : Protein (C:P) ratio of a poultry ration is calculated as:",
+        "o": [
+          "Crude protein (%) ÷ ME (Mcal/kg)",
+          "DCP ÷ (TDN − DCP)",
+          "ME (kcal/kg) ÷ crude protein (%)",
+          "Gross energy ÷ digestible energy"
+        ],
+        "a": 2,
+        "e": "Example: a broiler starter with 3000 kcal ME/kg and 22% CP has a C:P ratio of 3000 ÷ 22 ≈ 136. Because birds eat to meet energy needs, protein must rise with energy to keep this ratio constant.",
+        "topicId": "u1-t17",
+        "diff": 2,
+        "subSection": "u1-s4"
+      },
+      {
+        "q": "In a Total Mixed Ration (TMR), roughages, concentrates, minerals and additives are:",
+        "o": [
+          "Fed separately at different times of the day",
+          "Offered free-choice in separate troughs",
+          "Given only as pellets without any roughage",
+          "Chopped and blended together so that every mouthful has the same nutrient composition"
+        ],
+        "a": 3,
+        "e": "TMR prevents selective eating, keeps rumen fermentation stable, allows precise balancing of the ration and suits high-yielding herds. It is prepared in a TMR (feed) mixer wagon.",
+        "topicId": "u1-t18",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "Urea–Molasses Mineral Block (UMMB) licks are fed to animals on straw-based diets mainly to supply:",
+        "o": [
+          "Bypass protein directly to the small intestine",
+          "Protected fat for high milk yield",
+          "Fermentable nitrogen, readily available energy and minerals to rumen microbes",
+          "Extra fibre to prevent ruminal acidosis"
+        ],
+        "a": 2,
+        "e": "Straw is poor in nitrogen, fermentable energy and minerals. Licking a UMMB slowly releases urea-N, molasses sugars and minerals, stimulating microbial growth, fibre digestion and straw intake.",
+        "topicId": "u1-t18",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "Pelleting of compound feeds is advantageous mainly because it:",
+        "o": [
+          "Increases the crude fibre content of the ration",
+          "Destroys all anti-nutritional factors and mycotoxins",
+          "Prevents selective feeding, reduces wastage and dustiness, and improves feed efficiency",
+          "Makes lignin digestible"
+        ],
+        "a": 2,
+        "e": "Pellets are dense, dust-free and uniform, so animals cannot pick out preferred ingredients. Steam conditioning also gelatinises part of the starch. Pelleting does not reliably destroy mycotoxins or make lignin digestible.",
+        "topicId": "u1-t19",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "Steam flaking of maize or sorghum grain improves the digestibility of its starch mainly by:",
+        "o": [
+          "Increasing the lignin content",
+          "Converting starch into cellulose",
+          "Removing the germ and oil",
+          "Gelatinising the starch granules"
+        ],
+        "a": 3,
+        "e": "Moist heat followed by rolling ruptures and gelatinises starch granules, making them far more accessible to microbial and pancreatic amylases. This raises ruminal and total-tract starch digestibility.",
+        "topicId": "u1-t19",
+        "diff": 3,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "The Beckmann process for improving the nutritive value of straw involves soaking the straw in:",
+        "o": [
+          "Dilute (about 1.5%) sodium hydroxide solution",
+          "4% urea solution",
+          "Dilute sulphuric acid",
+          "A molasses–urea solution"
+        ],
+        "a": 0,
+        "e": "Developed by Beckmann in Germany (1921), the process soaks straw in about 1.5% NaOH and then washes it. The alkali breaks lignin–hemicellulose ester bonds and raises digestibility, but soluble nutrients are lost in the wash water and the effluent pollutes.",
+        "topicId": "u1-t20",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "The A.I.V. method of silage making, developed by A.I. Virtanen in Finland, preserves forage by:",
+        "o": [
+          "Inoculating the forage with Clostridium to produce butyric acid",
+          "Wilting the forage to below 30% moisture before sealing",
+          "Adding urea and molasses to raise the pH",
+          "Adding dilute mineral acids (HCl/H₂SO₄) to lower the pH rapidly to about 3.5–4.0"
+        ],
+        "a": 3,
+        "e": "Virtanen (Nobel Prize in Chemistry, 1945) showed that rapid acidification with mineral acids stops plant and microbial proteolysis and preserves the forage. Modern practice uses formic acid instead of corrosive mineral acids.",
+        "topicId": "u1-t21",
+        "diff": 3,
+        "subSection": "u1-s5"
       }
     ],
     "tf": [
@@ -1629,6 +1994,102 @@ var quizBank = {
         "a": true,
         "e": "True. Haylage (medium-moisture silage) relies on anaerobic storage of wilted forage, avoiding field-curing losses while preventing clostridial wet spoilage.",
         "topicId": "u1-t21",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "Water, carbohydrates, proteins, fats, minerals and vitamins are the six major classes of nutrients.",
+        "a": true,
+        "e": "True. These six classes supply energy, body-building material and regulators for all body functions.",
+        "topicId": "u1-t02",
+        "diff": 1,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "Cellulose, hemicellulose and lignin are important structural constituents of the animal body.",
+        "a": false,
+        "e": "False. These are plant cell-wall constituents. The animal body contains less than 1% carbohydrate (mainly glycogen) and no lignin.",
+        "topicId": "u1-t03",
+        "diff": 1,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "A balanced ration supplies all essential nutrients in the correct amounts and proportions to meet an animal's requirements for 24 hours.",
+        "a": true,
+        "e": "True. That is the standard definition of a balanced ration.",
+        "topicId": "u1-t04",
+        "diff": 1,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "Linoleic acid is a dietary essential fatty acid because animals cannot synthesise it.",
+        "a": true,
+        "e": "True. Animals lack the desaturases that insert double bonds beyond carbon 9, so linoleic (and α-linolenic) acid must come from the diet. Deficiency causes scaly dermatitis and poor growth.",
+        "topicId": "u1-t07",
+        "diff": 2,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "Animals deficient in sodium show a craving for salt and lick soil, walls and the sweat of other animals.",
+        "a": true,
+        "e": "True. Salt hunger (a form of pica) is a characteristic sign of sodium deficiency, along with reduced intake and poor growth or milk yield.",
+        "topicId": "u1-t09",
+        "diff": 1,
+        "subSection": "u1-s3"
+      },
+      {
+        "q": "Vitamin D deficiency causes rickets in young animals and osteomalacia in adults.",
+        "a": true,
+        "e": "True. Without vitamin D, calcium and phosphorus absorption and bone mineralisation fail — rickets in growing bones and osteomalacia in mature bones.",
+        "topicId": "u1-t11",
+        "diff": 1,
+        "subSection": "u1-s3"
+      },
+      {
+        "q": "Adult ruminants always need dietary B-complex vitamins because rumen microbes cannot synthesise them.",
+        "a": false,
+        "e": "False. Rumen microbes synthesise B-complex vitamins (and vitamin K) in adequate amounts for adult ruminants. Exceptions include young calves before the rumen develops, cobalt deficiency (vitamin B12) and thiamine destruction (CCN).",
+        "topicId": "u1-t12",
+        "diff": 2,
+        "subSection": "u1-s3"
+      },
+      {
+        "q": "Direct calorimetry estimates an animal's heat production from its oxygen consumption and carbon dioxide output.",
+        "a": false,
+        "e": "False. That is indirect calorimetry. Direct calorimetry measures the heat given off by the animal directly, in an insulated calorimeter chamber.",
+        "topicId": "u1-t15",
+        "diff": 2,
+        "subSection": "u1-s4"
+      },
+      {
+        "q": "Very fine grinding of the feeds given to dairy cows increases the milk fat percentage.",
+        "a": false,
+        "e": "False. Very fine particles reduce rumination and saliva (buffer) flow, lower rumen pH and shift fermentation from acetate to propionate, so milk fat percentage falls.",
+        "topicId": "u1-t19",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "In making legume hay, most nutrients are lost through shattering of the leaves during over-drying and handling.",
+        "a": true,
+        "e": "True. Leaves carry most of the protein, minerals and carotene of legumes, and they become brittle and shatter when over-dried or handled roughly.",
+        "topicId": "u1-t22",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "In nitrate poisoning of cattle, the blood becomes bright cherry-red.",
+        "a": false,
+        "e": "False. Nitrite converts haemoglobin to methaemoglobin, giving chocolate-brown blood. Bright cherry-red blood is characteristic of hydrocyanic acid (HCN) poisoning.",
+        "topicId": "u1-t23",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "Mannan-oligosaccharides (MOS) are probiotics made of live yeast cells.",
+        "a": false,
+        "e": "False. MOS are prebiotics — non-digestible oligosaccharides from yeast cell walls that bind pathogens and favour beneficial gut bacteria. Probiotics are live microbes such as Lactobacillus or Saccharomyces cerevisiae.",
+        "topicId": "u1-t25",
         "diff": 2,
         "subSection": "u1-s5"
       }
@@ -2181,6 +2642,155 @@ var quizBank = {
         "e": "Ionophores alter microbial cell membrane permeability, favoring propionate production and depressing bloat and coccidiosis.",
         "topicId": "u1-t25",
         "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "The 'Law of the Minimum', which states that growth is limited by the nutrient in shortest supply, is associated with the German chemist Justus von ____.",
+        "a": [
+          "liebig",
+          "von liebig"
+        ],
+        "a_display": "Liebig",
+        "e": "Liebig's Law of the Minimum is often pictured as a barrel whose water level is set by its shortest stave — the most deficient nutrient limits production.",
+        "topicId": "u1-t01",
+        "diff": 1,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "Concentrates are feeds containing less than 18% crude fibre and more than ____ percent TDN.",
+        "a": [
+          "60",
+          "sixty"
+        ],
+        "a_display": "60",
+        "e": "Concentrates: <18% CF and >60% TDN. Roughages are the reverse: >18% CF and <60% TDN.",
+        "topicId": "u1-t04",
+        "diff": 1,
+        "subSection": "u1-s1"
+      },
+      {
+        "q": "The protein of whole hen's ____ is used as the reference protein with the highest biological value.",
+        "a": [
+          "egg",
+          "eggs"
+        ],
+        "a_display": "Egg",
+        "e": "Whole-egg protein has a biological value close to 100 and is the reference against which the quality of other proteins is judged.",
+        "topicId": "u1-t16",
+        "diff": 1,
+        "subSection": "u1-s2"
+      },
+      {
+        "q": "The BIS specification for mineral mixture for supplementing cattle feed is IS ____.",
+        "a": [
+          "1664",
+          "is 1664",
+          "is1664"
+        ],
+        "a_display": "1664",
+        "e": "IS 1664 specifies mineral mixture for cattle (with and without salt). IS 2052 covers compounded cattle feed and IS 1374 poultry feeds.",
+        "topicId": "u1-t18",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "The machine used to cut green and dry fodder into small pieces to reduce wastage and selective feeding is the ____ cutter.",
+        "a": [
+          "chaff"
+        ],
+        "a_display": "Chaff",
+        "e": "Chaffing fodder into 2–5 cm pieces reduces wastage, prevents animals leaving the coarse stems, and makes it easy to mix fodder with concentrates.",
+        "topicId": "u1-t19",
+        "diff": 1,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "White-rot fungi such as ____ species (oyster mushroom) are used for the biological treatment of straw because they degrade lignin.",
+        "a": [
+          "pleurotus",
+          "pleurotus sajor-caju",
+          "pleurotus ostreatus"
+        ],
+        "a_display": "Pleurotus",
+        "e": "White-rot fungi selectively break down lignin, increasing the digestibility of the cellulose in straw. Spent mushroom substrate can then be fed to ruminants.",
+        "topicId": "u1-t20",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "____ is added to legume forage at ensiling to supply fermentable sugar for the lactic acid bacteria.",
+        "a": [
+          "molasses",
+          "cane molasses"
+        ],
+        "a_display": "Molasses",
+        "e": "Legumes are low in water-soluble carbohydrate and high in buffering capacity, so they ferment poorly. Adding about 3–5% molasses provides sugar for rapid lactic acid production.",
+        "topicId": "u1-t21",
+        "diff": 1,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "For the best quality, legume hay should be harvested at the early ____ stage.",
+        "a": [
+          "bloom",
+          "flowering",
+          "flower",
+          "early bloom",
+          "early flowering"
+        ],
+        "a_display": "Bloom (early flowering)",
+        "e": "At early bloom, yield and nutrient content are best balanced. Later cutting gives more yield but lower protein and digestibility because stems become lignified.",
+        "topicId": "u1-t22",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "The goitrogenic compounds present in mustard and rapeseed cakes are called ____.",
+        "a": [
+          "glucosinolates",
+          "glucosinolate",
+          "thioglucosides"
+        ],
+        "a_display": "Glucosinolates",
+        "e": "Glucosinolates are hydrolysed to goitrogens (thiocyanates, goitrin) that interfere with thyroid iodine uptake, causing goitre and depressed growth, especially in pigs and poultry.",
+        "topicId": "u1-t23",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "Urea added as an adulterant in feed is detected with p-dimethylaminobenzaldehyde (DMAB), which gives a ____ colour.",
+        "a": [
+          "yellow",
+          "lemon yellow"
+        ],
+        "a_display": "Yellow",
+        "e": "Urea is added to raise the apparent crude protein of cakes. DMAB reacts with urea to give a yellow colour.",
+        "topicId": "u1-t24",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "Sawdust or rice husk mixed into brans is detected by the ____ test, in which lignin stains pink-red.",
+        "a": [
+          "phloroglucinol",
+          "phloroglucinol-hcl",
+          "phloroglucinol hcl"
+        ],
+        "a_display": "Phloroglucinol",
+        "e": "Phloroglucinol in acid reacts with lignin to give a pink-red colour, revealing lignified adulterants such as sawdust and husk in bran and de-oiled rice bran.",
+        "topicId": "u1-t24",
+        "diff": 2,
+        "subSection": "u1-s5"
+      },
+      {
+        "q": "The live yeast most widely used as a probiotic in ruminant rations is Saccharomyces ____.",
+        "a": [
+          "cerevisiae"
+        ],
+        "a_display": "cerevisiae",
+        "e": "Saccharomyces cerevisiae scavenges oxygen in the rumen, stabilises pH and stimulates fibre-digesting and lactate-using bacteria.",
+        "topicId": "u1-t25",
+        "diff": 1,
         "subSection": "u1-s5"
       }
     ]
@@ -7800,6 +8410,370 @@ var quizBank = {
         "topicId": "u4-t15",
         "diff": 2,
         "subSection": "u4-s3"
+      },
+      {
+        "q": "Poultry fed ad libitum regulate their feed intake mainly according to the diet's:",
+        "o": [
+          "Energy concentration",
+          "Crude protein content",
+          "Calcium content",
+          "Crude fibre content"
+        ],
+        "a": 0,
+        "e": "Birds 'eat to meet their energy requirement' — on a high-energy diet they eat less. So when dietary energy rises, protein, amino acids, minerals and vitamins must rise too (constant C:P ratio).",
+        "topicId": "u4-t01",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Energy requirements and feed energy values for poultry are expressed in terms of:",
+        "o": [
+          "Total digestible nutrients",
+          "Net energy for lactation",
+          "Starch equivalent",
+          "Metabolizable energy (nitrogen-corrected, AMEn)"
+        ],
+        "a": 3,
+        "e": "Birds void faeces and urine together through the cloaca, so digestible energy cannot be measured easily. ME, corrected to zero nitrogen balance (AMEn), is therefore the standard.",
+        "topicId": "u4-t01",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "The standard purified diets recommended for laboratory rats and mice by the American Institute of Nutrition are:",
+        "o": [
+          "NRC-94 Starter and Finisher",
+          "IS 1374 Type I and Type II",
+          "AIN-93G for growth and AIN-93M for maintenance",
+          "TMR-1 and TMR-2"
+        ],
+        "a": 2,
+        "e": "AIN-93G supports growth, pregnancy and lactation; AIN-93M is for adult maintenance. They replaced the earlier AIN-76A diet.",
+        "topicId": "u4-t12",
+        "diff": 2,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "In the factorial method of estimating nutrient requirements, the total requirement is obtained by:",
+        "o": [
+          "Adding the separately estimated requirements for maintenance and for each productive function",
+          "Feeding graded levels of the nutrient and finding the level that gives maximum response",
+          "Analysing only the carcasses of animals slaughtered at the start of the trial",
+          "Averaging the figures listed in different feeding standards"
+        ],
+        "a": 0,
+        "e": "Factorial: requirement = maintenance + growth + egg/milk + pregnancy (+ work), each estimated separately from its own measurements. The graded-level approach is the empirical (dose–response) method.",
+        "topicId": "u4-t02",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "Estimating a requirement by feeding graded levels of a nutrient and identifying the level that gives maximum growth or egg output is called the:",
+        "o": [
+          "Empirical (dose–response / feeding trial) method",
+          "Factorial method",
+          "Comparative slaughter technique",
+          "Isotope dilution method"
+        ],
+        "a": 0,
+        "e": "The empirical method finds requirements directly from animal response. It is simple and practical but applies only to the conditions of the trial.",
+        "topicId": "u4-t02",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "In the comparative slaughter technique, the energy and protein retained by growing animals are estimated by:",
+        "o": [
+          "Measuring oxygen consumption in a respiration chamber",
+          "Analysing body composition of a group slaughtered at the start and of the test animals slaughtered at the end",
+          "Subtracting faecal nitrogen from nitrogen intake",
+          "Burning live-weight gain samples in a bomb calorimeter only"
+        ],
+        "a": 1,
+        "e": "The initial slaughter group gives starting body composition. The difference from the final composition of the test animals gives energy and protein retained during the trial.",
+        "topicId": "u4-t02",
+        "diff": 3,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "Fatty liver haemorrhagic syndrome (FLHS) is typically seen in:",
+        "o": [
+          "Broiler chicks in their first week",
+          "Ducklings fed mouldy groundnut cake",
+          "Turkey poults deficient in niacin",
+          "Overweight caged laying hens fed high-energy diets"
+        ],
+        "a": 3,
+        "e": "In FLHS, excessive energy intake with little exercise makes the liver fatty and friable; it may rupture and bleed, causing sudden death and a drop in egg production. Controlling energy and body weight prevents it.",
+        "topicId": "u4-t17",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "The Bureau of Indian Standards (BIS) specification for poultry feeds is:",
+        "o": [
+          "IS 1374",
+          "IS 2052",
+          "IS 1664",
+          "IS 10500"
+        ],
+        "a": 0,
+        "e": "IS 1374 lays down nutrient specifications for broiler and layer feeds (pre-starter, starter, finisher, chick, grower, layer). IS 2052 is for compounded cattle feed and IS 1664 for mineral mixture.",
+        "topicId": "u4-t03",
+        "diff": 1,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "The 11th revised edition of the US National Research Council (NRC) 'Nutrient Requirements of Swine', the standard reference for pig feeding, was published in:",
+        "o": [
+          "1994",
+          "2012",
+          "2007",
+          "2006"
+        ],
+        "a": 1,
+        "e": "Widely used NRC references: Swine 2012 (11th revised), Poultry 1994 (9th revised), Horses 2007 (6th revised), Dogs and Cats 2006.",
+        "topicId": "u4-t03",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "The resting energy requirement (RER) of a dog or cat, in kcal per day, is estimated as:",
+        "o": [
+          "140 × (body weight in kg)^1.0",
+          "70 × (body weight in kg)^0.5",
+          "70 × (body weight in kg)^0.75",
+          "10 × body weight in kg"
+        ],
+        "a": 2,
+        "e": "RER = 70 × BW^0.75. Daily maintenance energy is then RER multiplied by a life-stage factor, e.g. about 1.6 for a neutered adult dog and 2–3 for a growing puppy.",
+        "topicId": "u4-t14",
+        "diff": 2,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "Unlike ruminant feeding standards, which usually state requirements per animal per day, poultry and swine feeding standards mostly express requirements as:",
+        "o": [
+          "kg TDN per 100 kg body weight",
+          "Nutrient concentration per kg of diet (e.g. % CP, kcal ME/kg)",
+          "Starch equivalent per litre of milk",
+          "Grams DCP per kg metabolic body weight"
+        ],
+        "a": 1,
+        "e": "Pigs and poultry are fed a complete diet ad libitum, so nutrients are specified as concentrations (% or per kg of feed). Intake then determines the daily supply.",
+        "topicId": "u4-t03",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "The nutrient profiles used to certify commercial dog and cat foods as 'complete and balanced' are published by:",
+        "o": [
+          "BIS (Bureau of Indian Standards)",
+          "FSSAI",
+          "WOAH (formerly OIE)",
+          "AAFCO (Association of American Feed Control Officials)"
+        ],
+        "a": 3,
+        "e": "AAFCO dog and cat food nutrient profiles (growth/reproduction and adult maintenance) are the reference used on pet food labels worldwide.",
+        "topicId": "u4-t03",
+        "diff": 2,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "Sow milk yield reaches its peak at about which week of lactation, after which creep feed becomes essential for piglets?",
+        "o": [
+          "1st week",
+          "3rd week",
+          "8th week",
+          "12th week"
+        ],
+        "a": 1,
+        "e": "Sow milk production peaks around the 3rd week and then declines, while piglet requirements keep rising. Creep feed, offered from about 1–2 weeks of age, fills this gap.",
+        "topicId": "u4-t04",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "Newborn piglets are particularly prone to hypoglycaemia in the first days of life because they:",
+        "o": [
+          "Are born with very small body fat and glycogen reserves and poor thermoregulation",
+          "Cannot absorb glucose from colostrum",
+          "Receive excess insulin in sow's milk",
+          "Lack the enzyme lactase at birth"
+        ],
+        "a": 0,
+        "e": "Piglets have about 1–2% body fat at birth and little ability to regulate temperature. Without early colostrum and warmth they quickly become hypoglycaemic. Lactase activity is actually high at birth.",
+        "topicId": "u4-t04",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "'Flushing' of gilts and sows before breeding refers to:",
+        "o": [
+          "Increasing energy intake for about 10–14 days before mating to raise the ovulation rate",
+          "Withholding water for 24 hours before mating",
+          "Feeding a laxative diet after farrowing",
+          "Cutting dietary protein to 10% in late gestation"
+        ],
+        "a": 0,
+        "e": "A short period of generous feeding before service increases the number of ova shed and so litter size. Feed is reduced again after mating to protect embryo survival.",
+        "topicId": "u4-t05",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "Wheat bran is commonly included in the ration of sows around farrowing mainly because it:",
+        "o": [
+          "Is the richest source of lysine",
+          "Increases colostrum antibodies",
+          "Supplies vitamin C",
+          "Acts as a mild laxative and prevents constipation"
+        ],
+        "a": 3,
+        "e": "Bulky, laxative feeds such as wheat bran prevent constipation around farrowing, which otherwise predisposes the sow to mastitis–metritis–agalactia (MMA) and farrowing problems.",
+        "topicId": "u4-t05",
+        "diff": 1,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "Many zoos keep one 'fast day' each week for large carnivores such as lions and tigers mainly to:",
+        "o": [
+          "Allow their rumen microbes to recover",
+          "Increase vitamin C synthesis",
+          "Mimic their natural gorge-and-fast feeding pattern and prevent obesity",
+          "Prevent cecotrophy"
+        ],
+        "a": 2,
+        "e": "Wild big cats eat irregularly — a large kill followed by days without food. A weekly fast day imitates this, controls body weight and aids digestive health.",
+        "topicId": "u4-t16",
+        "diff": 1,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "In rabbits, excess dietary calcium is:",
+        "o": [
+          "Excreted mainly in the hard faecal pellets",
+          "Stored entirely in the caecum",
+          "Absorbed efficiently and the surplus excreted in the urine, which can become cloudy and chalky",
+          "Converted into calcium oxalate in the stomach"
+        ],
+        "a": 2,
+        "e": "Rabbits absorb calcium roughly in proportion to intake and excrete the excess through the kidneys. On high-calcium diets (e.g. lucerne only), the urine turns thick and chalky and urolithiasis can develop.",
+        "topicId": "u4-t13",
+        "diff": 3,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "The nutrient requirements of a pregnant mare increase markedly during the last trimester because:",
+        "o": [
+          "The mare starts lactating from the 8th month of pregnancy",
+          "Most of the foetal growth occurs in the last three months of gestation",
+          "Gestation in the mare lasts only about 5 months",
+          "Foetal bones are formed only after birth"
+        ],
+        "a": 1,
+        "e": "About 60–65% of foal birth weight is gained in the last three months of an ~11-month (≈340-day) gestation. Energy, protein, calcium and phosphorus allowances are raised accordingly.",
+        "topicId": "u4-t07",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "To reduce the risk of colic and laminitis, the grain (concentrate) given to a horse at a single meal should generally not exceed about:",
+        "o": [
+          "3% of body weight",
+          "5% of body weight",
+          "10% of body weight",
+          "0.5% of body weight"
+        ],
+        "a": 3,
+        "e": "For a 500 kg horse that is about 2.5 kg per meal. Larger meals overflow undigested starch into the caecum, causing acidosis, colic and laminitis. Feed forage first and split concentrates into several small meals.",
+        "topicId": "u4-t07",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "For broiler chicks in the starter phase, feed is usually supplied in the physical form of:",
+        "o": [
+          "Large 8 mm pellets",
+          "Whole grains",
+          "Crumbles",
+          "Liquid feed"
+        ],
+        "a": 2,
+        "e": "Crumbles (broken pellets) suit the small beak of young chicks, reduce wastage and improve intake. Finisher feed is usually given as pellets.",
+        "topicId": "u4-t08",
+        "diff": 1,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "The labile reserve of calcium that laying hens build in the marrow cavities of their long bones before and during lay is called:",
+        "o": [
+          "Cortical bone",
+          "Cartilage plate",
+          "Medullary bone",
+          "Keel ridge"
+        ],
+        "a": 2,
+        "e": "Under oestrogen, pullets lay down medullary bone about two weeks before the first egg. It is mobilised at night to supply calcium for shell formation when no feed is in the gut.",
+        "topicId": "u4-t09",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "The shell of one hen's egg contains approximately how much calcium?",
+        "o": [
+          "2 g",
+          "0.2 g",
+          "8 g",
+          "20 g"
+        ],
+        "a": 0,
+        "e": "A shell weighs about 5.5–6 g, mostly calcium carbonate, and contains about 2 g of calcium. This is why layers need about 3.5–4% dietary calcium.",
+        "topicId": "u4-t09",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Which cereal is the principal energy source in most Indian poultry rations, usually forming about half or more of the diet?",
+        "o": [
+          "Oats",
+          "Maize",
+          "Barley",
+          "Rye"
+        ],
+        "a": 1,
+        "e": "Maize has high ME (about 3300 kcal/kg), low fibre and yellow xanthophylls, and it is free of the viscous non-starch polysaccharides of wheat and barley.",
+        "topicId": "u4-t10",
+        "diff": 1,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Mahua (Madhuca) seed cake, an unconventional feed, must be detoxified before feeding because it contains the saponin:",
+        "o": [
+          "Karanjin",
+          "Mowrin",
+          "Gossypol",
+          "Ricin"
+        ],
+        "a": 1,
+        "e": "Mowrin is a bitter, haemolytic saponin that depresses intake and growth. It is removed by water or alkali washing or by cooking. Karanjin comes from karanj cake, gossypol from cottonseed and ricin from castor.",
+        "topicId": "u4-t10",
+        "diff": 3,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Ducklings need a higher dietary level of which vitamin than chicks, its deficiency causing leg weakness and bowed legs?",
+        "o": [
+          "Vitamin C",
+          "Vitamin K",
+          "Folic acid",
+          "Niacin"
+        ],
+        "a": 3,
+        "e": "Ducks convert tryptophan to niacin poorly, so their niacin requirement is about 1.5–2 times that of chickens. Deficiency causes leg weakness, bowing and enlarged hocks.",
+        "topicId": "u4-t11",
+        "diff": 2,
+        "subSection": "u4-s1"
       }
     ],
     "tf": [
@@ -8162,6 +9136,102 @@ var quizBank = {
         "topicId": "u4-t15",
         "diff": 1,
         "subSection": "u4-s3"
+      },
+      {
+        "q": "Because birds eat to meet their energy needs, raising the energy density of a poultry diet without raising its protein level can reduce the bird's protein intake.",
+        "a": true,
+        "e": "True. Higher energy lowers feed intake, so a fixed protein percentage delivers less protein per day. Protein must be raised with energy.",
+        "topicId": "u4-t01",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Finishing pigs are often feed-restricted near market weight to reduce backfat and improve carcass leanness.",
+        "a": true,
+        "e": "True. Near slaughter weight, extra energy is deposited mainly as fat; mild restriction limits backfat and improves lean percentage and feed efficiency.",
+        "topicId": "u4-t05",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "Foals are normally weaned at 2–3 weeks of age.",
+        "a": false,
+        "e": "False. Foals are usually weaned at about 4–6 months, after being introduced to creep feed and forage.",
+        "topicId": "u4-t06",
+        "diff": 1,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "The recommended ratio of calcium to available (non-phytate) phosphorus in broiler diets is about 2:1.",
+        "a": true,
+        "e": "True. About 2:1 Ca to available P supports bone development. Wide ratios predispose broilers to leg problems such as rickets and tibial dyschondroplasia.",
+        "topicId": "u4-t08",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Japanese quail begin laying at about 20 weeks of age, like commercial chicken layers.",
+        "a": false,
+        "e": "False. Japanese quail mature very early and begin laying at about 6–7 weeks, so their starter and layer diets are needed much sooner.",
+        "topicId": "u4-t11",
+        "diff": 1,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Autoclaved laboratory animal diets need extra fortification with heat-labile vitamins such as thiamine.",
+        "a": true,
+        "e": "True. Autoclaving destroys a large part of heat-sensitive vitamins (especially thiamine and vitamin A), so autoclavable diets are formulated with higher vitamin levels.",
+        "topicId": "u4-t12",
+        "diff": 2,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "A rabbit doe nurses her kits many times every hour, like a sow.",
+        "a": false,
+        "e": "False. A doe nurses her kits only once (occasionally twice) a day, for a few minutes; her milk is very rich in fat and protein to compensate.",
+        "topicId": "u4-t13",
+        "diff": 2,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "At peak lactation, the energy requirement of a bitch can be 2–4 times her maintenance requirement.",
+        "a": true,
+        "e": "True. Requirement rises with litter size and peaks at about 3–4 weeks after whelping. Feed ad libitum or in several meals a day with an energy-dense diet.",
+        "topicId": "u4-t14",
+        "diff": 2,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "Cats are strongly attracted to sweet-tasting foods because they have highly active sweet taste receptors.",
+        "a": false,
+        "e": "False. Cats lack a functional sweet taste receptor (the Tas1r2 gene is a pseudogene), consistent with their strictly carnivorous diet.",
+        "topicId": "u4-t15",
+        "diff": 1,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "Feeding dog food to cats for long periods is safe because dogs and cats have the same nutrient requirements.",
+        "a": false,
+        "e": "False. Dog food may not meet a cat's higher protein requirement or its needs for taurine, arachidonic acid, preformed vitamin A and niacin.",
+        "topicId": "u4-t15",
+        "diff": 2,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "Captive raptors should not be fed whole prey with fur and feathers because birds of prey cannot regurgitate indigestible material.",
+        "a": false,
+        "e": "False. Raptors are fed whole prey. They regurgitate indigestible fur, feathers and bones as castings (pellets), which is necessary for normal digestive health.",
+        "topicId": "u4-t16",
+        "diff": 2,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "Mulberry heart disease in pigs is associated with a deficiency of vitamin E and/or selenium.",
+        "a": true,
+        "e": "True. Mulberry heart disease causes sudden death in fast-growing pigs, with haemorrhages giving the heart a mulberry-like appearance. Adequate vitamin E and selenium prevent it.",
+        "topicId": "u4-t17",
+        "diff": 2,
+        "subSection": "u4-s2"
       }
     ],
     "fib": [
@@ -8696,6 +9766,161 @@ var quizBank = {
         "topicId": "u4-t15",
         "diff": 1,
         "subSection": "u4-s3"
+      },
+      {
+        "q": "The ratio of ME (kcal/kg) to crude protein (%) in a poultry diet is called the ____ ratio.",
+        "a": [
+          "calorie protein",
+          "calorie-protein",
+          "calorie to protein",
+          "c:p",
+          "cp",
+          "energy protein",
+          "energy-protein",
+          "calorie:protein"
+        ],
+        "a_display": "Calorie : Protein (C:P)",
+        "e": "C:P ratio = ME (kcal/kg) ÷ CP (%). It is kept constant when dietary energy changes because birds eat to meet their energy needs.",
+        "topicId": "u4-t01",
+        "diff": 1,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Nitrogen in faeces that comes from the body itself (enzymes, sloughed cells) rather than from the diet is called ____ faecal nitrogen.",
+        "a": [
+          "metabolic",
+          "endogenous"
+        ],
+        "a_display": "Metabolic (endogenous)",
+        "e": "Metabolic faecal nitrogen plus endogenous urinary nitrogen measure the protein needed for maintenance in the factorial method.",
+        "topicId": "u4-t02",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "In the USA, the nutrient requirements of poultry, swine, horses, dogs and cats are published by the ____ (abbreviation).",
+        "a": [
+          "nrc",
+          "national research council",
+          "n.r.c."
+        ],
+        "a_display": "NRC (National Research Council)",
+        "e": "NRC publications are the most widely used reference feeding standards for non-ruminants, alongside BIS/ICAR specifications in India.",
+        "topicId": "u4-t03",
+        "diff": 1,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Newborn piglets should receive ____ within the first few hours of birth for passive immunity and energy.",
+        "a": [
+          "colostrum"
+        ],
+        "a_display": "Colostrum",
+        "e": "Piglets are born without circulating antibodies, and gut absorption of intact immunoglobulins stops within about 24–36 hours. Early colostrum also supplies energy against hypoglycaemia.",
+        "topicId": "u4-t04",
+        "diff": 1,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "Mastitis–metritis–agalactia (MMA) syndrome in sows is predisposed by ____ around farrowing, which bulky laxative feeds help prevent.",
+        "a": [
+          "constipation"
+        ],
+        "a_display": "Constipation",
+        "e": "Constipation around farrowing favours toxin absorption and MMA. Wheat bran and other fibrous feeds keep the sow's gut moving.",
+        "topicId": "u4-t05",
+        "diff": 2,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "Gestation in the mare lasts about ____ months.",
+        "a": [
+          "11",
+          "eleven",
+          "11 months"
+        ],
+        "a_display": "11 (about 340 days)",
+        "e": "Mare gestation averages about 340 days. Requirements rise sharply in the last three months, when most foetal growth occurs.",
+        "topicId": "u4-t07",
+        "diff": 1,
+        "subSection": "u4-s2"
+      },
+      {
+        "q": "The diet with about 2–2.5% calcium fed to pullets for roughly two weeks before the onset of lay is called the ____ diet.",
+        "a": [
+          "pre-layer",
+          "prelayer",
+          "pre layer",
+          "pre-lay",
+          "prelay"
+        ],
+        "a_display": "Pre-layer",
+        "e": "The pre-layer diet lets pullets build medullary bone without the kidney damage that full layer-level calcium can cause in immature birds.",
+        "topicId": "u4-t09",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "The toxic principle of karanj (Pongamia) cake is ____.",
+        "a": [
+          "karanjin"
+        ],
+        "a_display": "Karanjin",
+        "e": "Karanjin, a furanoflavonoid, makes karanj cake bitter and toxic. It must be detoxified (e.g. by alkali or solvent treatment) and fed at limited levels.",
+        "topicId": "u4-t10",
+        "diff": 2,
+        "subSection": "u4-s1"
+      },
+      {
+        "q": "Laboratory rodents need hard pelleted diets partly because their ____ grow continuously throughout life.",
+        "a": [
+          "incisors",
+          "incisor",
+          "incisor teeth",
+          "teeth"
+        ],
+        "a_display": "Incisors",
+        "e": "Rodent incisors grow throughout life. Gnawing hard pellets keeps them worn down; otherwise malocclusion prevents eating.",
+        "topicId": "u4-t12",
+        "diff": 1,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "Obesity in dogs is assessed practically with a 1–9 point ____ condition score.",
+        "a": [
+          "body",
+          "bcs"
+        ],
+        "a_display": "Body (BCS)",
+        "e": "On the 9-point body condition score, 4–5 is ideal and 8–9 obese. It is judged by feeling the ribs and viewing the waist and abdominal tuck.",
+        "topicId": "u4-t14",
+        "diff": 1,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "Undigested fur, feathers and bones regurgitated by owls and other raptors are called ____.",
+        "a": [
+          "castings",
+          "casting",
+          "pellets",
+          "pellet"
+        ],
+        "a_display": "Castings (pellets)",
+        "e": "Producing castings is normal for raptors, which is why they must be fed whole prey rather than only lean meat.",
+        "topicId": "u4-t16",
+        "diff": 1,
+        "subSection": "u4-s3"
+      },
+      {
+        "q": "Tibial ____ in broilers is a leg disorder in which a plug of unmineralised cartilage persists below the growth plate.",
+        "a": [
+          "dyschondroplasia"
+        ],
+        "a_display": "Dyschondroplasia",
+        "e": "Tibial dyschondroplasia is linked to rapid growth and dietary imbalance, especially excess phosphorus or chloride relative to calcium. Correct Ca:P and adequate vitamin D3 reduce it.",
+        "topicId": "u4-t17",
+        "diff": 2,
+        "subSection": "u4-s1"
       }
     ]
   }

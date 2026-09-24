@@ -2,8 +2,8 @@
    quiz.js  —  The Animal Nutrition Quiz Engine
    ------------------------------------------------------------
    Features:
-     - 720 Curriculum-standard Questions across Units 1 to 4
-     - Strict 2 : 1 : 1 Ratio (90 MCQ : 45 TF : 45 FIB per unit)
+     - 820 Curriculum-standard Questions across Units 1 to 4
+     - About 2 : 1 : 1 Ratio (MCQ : TF : FIB) in every unit
      - 13 Thematic Sub-sections with dedicated module testing
      - Sequence Mode (Curriculum order) vs. Shuffle Mode (Randomized)
      - One tap answers and marks a question; answers are never lost
@@ -184,6 +184,12 @@ var quizApp = (function () {
         '<span class="tlist__right">' + (n ? app.icon("chevron", "faint") : '') + '</span></a>';
     }).join("");
 
+    // counted from the bank so the chips never go stale when questions are added
+    var fmtCounts = { mcq: 0, tf: 0, fib: 0 };
+    bankFor(theoryIds.concat(pracIds), ["mcq", "tf", "fib"]).forEach(function (bq) { fmtCounts[bq.format]++; });
+    var subSectionCount = 0;
+    for (var sk in subSectionsByUnit) subSectionCount += subSectionsByUnit[sk].length;
+
     var pending = savedRun();
     var resumeHtml = "";
     if (pending) {
@@ -210,8 +216,8 @@ var quizApp = (function () {
       '<div class="pagehead quiz-hub-head">' +
         '<div class="row row--wrap items-center gap-2 mb-2">' +
           '<span class="chip chip--accent font-mono">🌟 ' + totalAll + ' Questions Bank</span>' +
-          '<span class="chip chip--ok">Exact 2:1:1 Ratio (90 MCQ • 45 T/F • 45 FIB)</span>' +
-          '<span class="chip">32 Sub-sections</span>' +
+          '<span class="chip chip--ok">' + fmtCounts.mcq + ' MCQ • ' + fmtCounts.tf + ' T/F • ' + fmtCounts.fib + ' FIB</span>' +
+          '<span class="chip">' + subSectionCount + ' Sub-sections</span>' +
         '</div>' +
         '<h1>' + app.icon("quiz") + ' Animal Nutrition Examination Suite</h1>' +
         '<p class="lede">Test individual sub-sections, full units, paper-wise or grand exams. ' +
