@@ -123,32 +123,41 @@ var store = (function () {
     return color;
   }
   function getHighlights() { return read(KEYS.highlights, {}); }
-  function addHighlight(id, text, color) {
+  // occ = which occurrence of the text in the lesson the student selected
+  // (0 = first). Highlights saved before this existed have no occ and mean 0.
+  function sameHl(item, text, occ) {
+    var itemText = typeof item === "string" ? item : (item ? item.text : "");
+    if (itemText !== text) return false;
+    if (occ === undefined || occ === null) return true;
+    var itemOcc = (item && typeof item.occ === "number") ? item.occ : 0;
+    return itemOcc === occ;
+  }
+  function addHighlight(id, text, color, occ) {
     color = (color && VALID_HL_COLORS.indexOf(color) !== -1) ? color : getHighlightColor();
+    occ = (typeof occ === "number" && occ >= 0) ? occ : 0;
     var m = getHighlights();
     if (!m[id]) m[id] = [];
     var found = false;
     for (var i = 0; i < m[id].length; i++) {
       var item = m[id][i];
-      var itemText = typeof item === "string" ? item : (item ? item.text : "");
-      if (itemText === text) {
-        m[id][i] = { text: text, color: color };
+      if (sameHl(item, text, occ)) {
+        m[id][i] = { text: text, color: color, occ: occ };
         found = true;
         break;
       }
     }
     if (!found) {
-      m[id].push({ text: text, color: color });
+      m[id].push({ text: text, color: color, occ: occ });
     }
     write(KEYS.highlights, m);
     logActivity();
   }
-  function removeHighlight(id, text) {
+  // Without occ every highlight of that text goes; with occ only that one.
+  function removeHighlight(id, text, occ) {
     var m = getHighlights();
     if (!m[id]) return;
     m[id] = m[id].filter(function (t) {
-      var itemText = typeof t === "string" ? t : (t ? t.text : "");
-      return itemText !== text;
+      return !sameHl(t, text, occ);
     });
     if (!m[id].length) delete m[id];
     write(KEYS.highlights, m);
