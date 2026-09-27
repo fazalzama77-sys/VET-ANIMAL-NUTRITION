@@ -5010,9 +5010,9 @@ var quizBank = {
         "q": "How does the nutrient requirement per kilogram of milk compare between an indigenous Murrah buffalo (7.0% fat) and a crossbred cow (4.0% fat)?",
         "o": [
           "Buffalo requires ~20-25% more TDN and DCP per kg of milk due to higher solids and fat density",
-          "Buffalo requires less energy per kg milk",
-          "Requirements per kg of milk are identical regardless of fat percentage",
-          "Buffalo requires zero protein for milk synthesis"
+          "Buffalo requires ~20-25% less TDN and DCP per kg of milk because of higher ruminal microbial yield",
+          "Nutrient requirements per kg of milk are identical across all bovines regardless of fat percentage",
+          "Buffalo requires double the digestible crude protein but only half the metabolizable energy density"
         ],
         "a": 0,
         "e": "Buffalo milk contains 7-8% fat and ~4% protein, requiring approximately 0.42-0.45 kg TDN and 60-65 g DCP per kg milk versus 0.32 kg TDN and 45-50 g DCP in cattle.",
@@ -5023,10 +5023,10 @@ var quizBank = {
       {
         "q": "What is the recommended rule of thumb for concentrate feeding in lactating indigenous dairy cattle producing 4.0% fat milk under Indian conditions?",
         "o": [
-          "1 kg concentrate for every 1.0 kg of milk produced",
-          "1 kg concentrate for every 10 kg of milk produced",
+          "1 kg concentrate mixture for every 1.0 to 1.2 kg of milk produced",
+          "1 kg concentrate mixture for every 5.0 to 6.0 kg of milk produced",
           "1 kg concentrate mixture for every 2.5 to 3.0 kg of milk produced",
-          "Concentrates are not fed during lactation"
+          "1 kg concentrate mixture for every 8.0 to 10.0 kg of milk produced"
         ],
         "a": 2,
         "e": "Under Indian feeding standards, cows receive maintenance feed plus 1 kg concentrate for every 2.5 to 3.0 kg milk (cows) or 1 kg per 2.0 to 2.5 kg milk (buffaloes).",
@@ -5037,9 +5037,9 @@ var quizBank = {
       {
         "q": "Within how many hours of birth must a newborn calf receive its first feeding of maternal colostrum to ensure maximal passive immunoglobulin transfer?",
         "o": [
-          "After 24 to 48 hours",
-          "Only on the third day after birth",
-          "After the rumen has developed",
+          "Between 24 and 48 hours after delivery (after first gut closure)",
+          "On the third day postpartum following colostral heat coagulation",
+          "Only after complete establishment of functional ruminal microbes",
           "Within the first 2 hours (and definitely within 6 hours)"
         ],
         "a": 3,
@@ -5051,9 +5051,9 @@ var quizBank = {
       {
         "q": "What is the total quantity of colostrum that should be fed to a newborn dairy calf on its first day of life?",
         "o": [
-          "25% of body weight in a single feeding",
-          "1% of body weight",
-          "A uniform 1 liter regardless of weight",
+          "20 to 25% of body weight (administered in a single large morning feeding)",
+          "1 to 2% of body weight (administered dropwise via an esophageal catheter)",
+          "A fixed volume of 1.0 liter per day irrespective of birth body weight",
           "10% of body weight (split into 2 to 3 feedings)"
         ],
         "a": 3,
@@ -5065,10 +5065,10 @@ var quizBank = {
       {
         "q": "Why does maternal bovine colostrum contain high concentrations of a specific trypsin inhibitor?",
         "o": [
-          "To inhibit microbial curd formation",
+          "To promote rapid curd formation and clot retraction by rennet in the omasal canal",
           "To prevent proteolytic destruction of immunoglobulins by neonatal abomasal and pancreatic proteases",
-          "To cause diarrhea and purge meconium",
-          "To stimulate gastric acid production"
+          "To induce mild osmotic diarrhea and assist physical evacuation of inspissated meconium",
+          "To stimulate mucosal parietal cells to secrete hydrochloric acid into neonatal abomasum"
         ],
         "a": 1,
         "e": "Colostral trypsin inhibitor protects maternal IgG antibodies from enzymatic cleavage, enabling them to be absorbed intact across neonatal enterocytes.",
@@ -5079,10 +5079,10 @@ var quizBank = {
       {
         "q": "The primary chemical stimulus that drives the anatomical and metabolic development of ruminal mucosal papillae in young calves is:",
         "o": [
-          "Lactose absorbed from whole milk",
+          "Lactose and galactose absorbed directly from whole milk across the abomasal wall",
           "Butyrate and propionate from anaerobic fermentation of calf starter grains",
-          "Coarse unground paddy straw fiber",
-          "Water consumed from buckets"
+          "Mechanical friction provided by unground, highly lignified cereal crop residues",
+          "Volatile fatty acid absorption stimulated exclusively by cold free-choice drinking water"
         ],
         "a": 1,
         "e": "Volatile fatty acids, especially butyrate and propionate from fermentable grains in calf starter, provide oxidative fuel and stimulate mitotic mucosal growth.",
@@ -5094,9 +5094,9 @@ var quizBank = {
         "q": "What are the recommended specifications for a high-quality Calf Starter concentrate fed from 2 weeks of age?",
         "o": [
           "20 to 22% Crude Protein and 75 to 80% TDN",
-          "10% Crude Protein and 50% TDN",
-          "35% Crude Protein and 60% TDN",
-          "14% Crude Protein and 90% TDN"
+          "10 to 12% Crude Protein and 55 to 60% TDN",
+          "30 to 32% Crude Protein and 60 to 65% TDN",
+          "14 to 16% Crude Protein and 85 to 90% TDN"
         ],
         "a": 0,
         "e": "Calf starter must be nutrient-dense, highly palatable, and easily digestible, containing 20-22% CP and 75-80% TDN to stimulate early rumen development.",
@@ -5107,9 +5107,9 @@ var quizBank = {
       {
         "q": "Calves can be safely weaned off liquid whole milk or milk replacer when their daily calf starter intake reaches:",
         "o": [
-          "100 g per day",
-          "3.0 kg per day",
-          "Starter intake is irrelevant for weaning",
+          "100 to 150 g per day for two consecutive weeks",
+          "2.5 to 3.0 kg per day for three consecutive days",
+          "Calf starter intake is irrelevant if milk fed",
           "750 g to 1.0 kg per day for three consecutive days"
         ],
         "a": 3,
@@ -5135,9 +5135,9 @@ var quizBank = {
       {
         "q": "What metabolic hazard occurs if growing dairy heifers are overfed high-energy concentrate diets resulting in ADG > 800-900 g/day prior to puberty?",
         "o": [
-          "Rupture of the abomasum",
-          "Permanent cessation of estrous cycles",
-          "Immediate milk fever",
+          "Early rupture of abomasal mucosal walls due to high lactic acid accumulation",
+          "Permanent cessation of pituitary gonadotropin release and persistent follicular cysts",
+          "Acute hypocalcemic paresis due to parathyroid gland exhaustion before puberty",
           "Excessive fat deposition in the mammary secretory parenchyma, permanently reducing lifetime milk yield"
         ],
         "a": 3,
@@ -5164,9 +5164,9 @@ var quizBank = {
         "q": "The 'Transition Period' in dairy cattle nutrition is critically defined as:",
         "o": [
           "3 weeks before calving to 3 weeks after calving",
-          "The day of calving only",
-          "From weaning until 6 months of age",
-          "The dry period of 60 days"
+          "From the day of conception until 60 days of gestation",
+          "From weaning of the calf until 6 months of heifer growth",
+          "Throughout the entire dry period spanning 60 to 90 days"
         ],
         "a": 0,
         "e": "The transition period (21 days pre-calving to 21 days post-calving) is the highest-risk metabolic window characterized by endocrine shifts, immune depression, and NEB.",
@@ -5178,9 +5178,9 @@ var quizBank = {
         "q": "Negative Energy Balance (NEB) in early lactating high-yielding dairy cows occurs primarily because:",
         "o": [
           "Peak milk production is reached at 4 to 6 weeks, while peak dry matter intake lags behind until 8 to 10 weeks postpartum",
-          "The cow refuses to drink water",
-          "Concentrate feeds are toxic to fresh cows",
-          "Ruminal digestion ceases after parturition"
+          "Severe psychological anorexia induced by maternal separation and frequent machine milking",
+          "Toxic accumulation of ketone bodies and free fatty acids destroying ruminal cellulolytic bacteria",
+          "Complete cessation of abomasal peptic secretion and sudden failure of pancreatic enzyme delivery"
         ],
         "a": 0,
         "e": "Milk energy output surges rapidly while physical dry matter intake capacity recovers slowly, forcing massive mobilization of non-esterified fatty acids from adipose tissue.",
@@ -5220,9 +5220,9 @@ var quizBank = {
         "q": "In high-yielding dairy management, 'Challenge Feeding' (Lead Feeding) involves:",
         "o": [
           "Gradually increasing concentrate allowance starting 2 weeks before calving until the cow reaches peak lactation yield",
-          "Feeding cows once every 48 hours to challenge their endurance",
-          "Challenging cows with high concentrations of dietary urea",
-          "Restricting water intake to test renal concentration"
+          "Challenging dairy cows with intermittent 48-hour fasting intervals to stimulate adipose lipid reserve utilization",
+          "Providing high dietary concentrations of non-protein nitrogen to test liver functional reserve capacity for urea",
+          "Severely restricting voluntary drinking water intake during early lactation to challenge renal tubular reabsorption"
         ],
         "a": 0,
         "e": "Starting 2 weeks pre-partum, concentrate is stepped up by 0.5 kg/day to adapt the rumen and challenge the cow to express her full genetic milk production potential.",
@@ -5233,10 +5233,10 @@ var quizBank = {
       {
         "q": "What is a Total Mixed Ration (TMR) in modern dairy cattle feeding?",
         "o": [
-          "Feeding roughage in the morning and concentrate at night",
+          "Feeding roughages ad libitum in open paddocks and concentrate allowances in partitioned milking parlor mangers",
           "A homogeneous blend of all forages, concentrates, minerals, and vitamins thoroughly mixed to prevent selective sorting",
-          "Feeding whole grain kernels directly in the milking parlour",
-          "A liquid slurry of molasses and urea"
+          "Pelleting cereal grains with bypass fats while feeding dry cereal crop residues in outdoor feeding racks at night",
+          "Offering liquid urea-molasses slurry free-choice alongside whole unchopped forage to maximize chewing rumination"
         ],
         "a": 1,
         "e": "TMR ensures that every mouthful contains a balanced proportion of roughage and concentrate, maintaining steady ruminal pH and preventing slug-feeding.",
@@ -5248,9 +5248,9 @@ var quizBank = {
         "q": "What is the recommended inclusion rate of sodium bicarbonate (NaHCO3) buffer in the total dry matter intake of high-yielding dairy cows fed high-concentrate rations?",
         "o": [
           "0.75 to 1.0% of total diet DM",
-          "5.0% of diet DM",
-          "0.01% of diet DM",
-          "10.0% of diet DM"
+          "4.5 to 5.0% of total diet DM",
+          "0.05 to 0.10% of total diet DM",
+          "8.0 to 10.0% of total diet DM"
         ],
         "a": 0,
         "e": "Adding 0.75-1.0% sodium bicarbonate (or 150-250 g/day) buffers ruminal fluid, prevents SARA, and promotes acetate production for milk fat synthesis.",
@@ -5275,10 +5275,10 @@ var quizBank = {
       {
         "q": "The primary source of energy utilized for muscular work in draft bullocks during normal field plowing is:",
         "o": [
-          "Solely blood lactic acid",
-          "Pure dietary protein",
+          "Exclusively glycogen granules mobilized from skeletal muscle myofibrils",
+          "Pure dietary amino acids catabolized via the hepatic gluconeogenic cycle",
           "Volatile fatty acids (acetate) and long-chain fatty acids",
-          "Creatine phosphate only"
+          "High-energy creatine phosphate and circulating blood lactate exclusively"
         ],
         "a": 2,
         "e": "Aerobic muscular contraction in draft bullocks utilizes circulating acetate and mobilized fatty acids as the primary oxidative substrates.",
@@ -5289,10 +5289,10 @@ var quizBank = {
       {
         "q": "How does normal draft work (4 to 6 hours of light to medium plowing) affect the maintenance energy requirement of working bullocks?",
         "o": [
-          "Increases energy requirement by 500%",
-          "Does not change energy requirements",
+          "Increases baseline maintenance energy requirements by 400 to 500%",
+          "Causes no measurable change in daily maintenance energy requirement",
           "Increases energy requirement by 30 to 50% over baseline maintenance",
-          "Halves the energy requirement"
+          "Reduces daily energy demand by 30 to 50% due to training adaptation"
         ],
         "a": 2,
         "e": "Four to six hours of draft work increases energy needs by 30-50% over maintenance, supplied by an extra 1.5 to 2.0 kg of concentrate mixture.",
@@ -5303,9 +5303,9 @@ var quizBank = {
       {
         "q": "Do working draft bullocks require substantial increases in dietary Crude Protein percentage above maintenance during normal work?",
         "o": [
-          "Yes, their diet must contain 40% crude protein",
-          "Yes, protein must replace all roughage",
-          "No, protein intake should be reduced to zero",
+          "Yes, working bullocks require concentrate mixtures formulated to contain at least 35 to 40% crude protein",
+          "Yes, protein must completely replace dietary fiber because muscle contraction consumes cellular peptides",
+          "No, dietary protein should be reduced to zero during hard work to prevent renal overload and uricemia",
           "No, work increases energy (TDN) demand substantially, but protein requirements increase only marginally for minor muscle tissue repair"
         ],
         "a": 3,
@@ -5318,9 +5318,9 @@ var quizBank = {
         "q": "Adult breeding bulls during active semen collection seasons require an extra allowance of concentrate primarily to:",
         "o": [
           "Maintain optimal body condition, libido, and support active spermatogenesis without inducing obesity",
-          "Increase body fat to maximum possible thickness",
-          "Induce ruminal ketosis",
-          "Eliminate sperm motility"
+          "Promote excessive deposition of pelvic and scrotal adipose tissue to maximize structural shock absorption",
+          "Induce continuous mild ketosis and stimulate hepatic gluconeogenesis to maintain constant semen fructose",
+          "Depress thyroid metabolic activity and induce systemic lethargy to facilitate tranquil handling in stalls"
         ],
         "a": 0,
         "e": "Breeding bulls should be fed maintenance plus 1.0 to 1.5 kg concentrate, avoiding obesity which causes lethargy, leg weakness, and declining semen quality.",
@@ -5345,10 +5345,10 @@ var quizBank = {
       {
         "q": "What is the recommended Dry Matter Intake for an adult dairy cow fed according to ICAR feeding standards?",
         "o": [
-          "5.0 kg DM/100 kg BW",
-          "1.0 kg DM/100 kg BW",
+          "4.5 to 5.0 kg DM/100 kg BW for zebu, and 5.5 to 6.0 kg DM/100 kg BW for crossbred cows",
+          "1.0 to 1.2 kg DM/100 kg BW for zebu, and 1.5 to 1.8 kg DM/100 kg BW for crossbred cows",
           "2.0 to 2.5 kg DM/100 kg BW for zebu, and 2.5 to 3.0 kg DM/100 kg BW for crossbred cows",
-          "7.0 kg DM/100 kg BW"
+          "6.0 to 7.0 kg DM/100 kg BW for zebu, and 7.5 to 8.5 kg DM/100 kg BW for crossbred cows"
         ],
         "a": 2,
         "e": "Zebu cows consume 2.0-2.5% BW, while crossbreds consume 2.5-3.0% (and up to 3.5% in high peak lactation).",
@@ -5359,10 +5359,10 @@ var quizBank = {
       {
         "q": "Why is milk fat depression (MFD) in dairy cows frequently accompanied by an increase in body weight gain or fattening?",
         "o": [
-          "The cow stops producing milk lactose",
-          "Excessive fat is lost in feces",
+          "Mammary epithelial cells completely arrest milk lactose synthesis in response to excessive propionate absorption",
+          "Dietary fat undergoes rapid saponification in the small intestine, causing excessive fecal excretion of triglycerides",
           "High propionate stimulates insulin, driving circulating acetate and glucose into adipose tissue rather than the mammary gland",
-          "Blood cortisol levels drop to zero"
+          "Systemic cortisol and glucagon levels drop precipitously, paralyzing hepatic gluconeogenesis and ketone oxidation"
         ],
         "a": 2,
         "e": "Elevated propionate stimulates systemic insulin release, which partitions acetate and fatty acids into subcutaneous adipose storage instead of milk fat.",
@@ -5374,9 +5374,9 @@ var quizBank = {
         "q": "In dairy nutrition, physically effective NDF (peNDF) is measured in the field using which diagnostic tool?",
         "o": [
           "Penn State Particle Size Separator (PSPS)",
-          "Soxhlet ether extraction mantle",
-          "Kjeldahl digestion flask",
-          "Bomb calorimeter"
+          "Automated Soxhlet ether extraction apparatus",
+          "Micro-Kjeldahl ammonia distillation column",
+          "Adiabatic oxygen bomb combustion calorimeter"
         ],
         "a": 0,
         "e": "The Penn State Particle Separator uses 19 mm, 8 mm, and 4 mm sieves and a bottom pan to quantify the proportion of forage particles that stimulate cud chewing.",
@@ -5387,10 +5387,10 @@ var quizBank = {
       {
         "q": "To prevent milk fat depression in cows on high-concentrate rations, what minimum proportion of the diet dry matter should consist of long coarse forage?",
         "o": [
-          "Less than 10%",
-          "95%",
+          "Less than 10 to 15% of diet DM",
+          "Between 85 and 95% of diet DM",
           "At least 40 to 50% of diet DM",
-          "0%"
+          "Zero percent (pure mash diet)"
         ],
         "a": 2,
         "e": "Maintaining at least 40-50% roughage on a dry matter basis ensures a stable ruminal mat and maintains ruminal acetate:propionate ratio above 2.2:1.",
@@ -5401,10 +5401,10 @@ var quizBank = {
       {
         "q": "What is the calcium and phosphorus content of normal cow colostrum compared to mature cow milk?",
         "o": [
-          "Colostrum contains zero Ca and P",
-          "Colostrum contains 10 times less Ca than milk",
+          "Colostrum contains virtually undetectable traces of Ca and P compared to mature milk",
+          "Colostrum contains approximately 5 to 10 times less Ca and P than regular dairy milk",
           "Colostrum contains roughly 2 to 3 times more Ca and P than mature milk",
-          "Colostrum contains pure iron and no calcium"
+          "Colostrum is rich in ionic potassium and magnesium but devoid of calcium and phosphorus"
         ],
         "a": 2,
         "e": "Colostrum contains ~2.6 g Ca and ~2.4 g P per liter compared to ~1.2 g Ca and ~0.9 g P per liter in normal mature milk.",
@@ -5415,10 +5415,10 @@ var quizBank = {
       {
         "q": "When early weaning of calves is practiced at 8 to 12 weeks of age, the feeding program relies primarily on:",
         "o": [
-          "Feeding wheat straw only",
+          "Exclusive feeding of coarsely chopped cereal straw supplemented with liquid urea-molasses slurry",
           "Ad libitum access to high-protein calf starter, clean water, and small quantities of fine leafy legume hay",
-          "Feeding large volumes of skim milk until 6 months",
-          "Feeding urea-molasses blocks"
+          "Providing large daily volumes of reconstituted skim milk replacer until six months of calf age",
+          "Feeding urea-mineral lick blocks ad libitum without access to grains or succulent green forages"
         ],
         "a": 1,
         "e": "Early weaning relies on stimulating rapid ruminal papillae development via ad libitum calf starter grain intake from 2 weeks of age onwards.",
@@ -5443,10 +5443,10 @@ var quizBank = {
       {
         "q": "Which dietary management practice minimizes the severity of negative energy balance in fresh high-producing dairy cows?",
         "o": [
-          "Feeding low-quality paddy straw ad libitum",
+          "Feeding unchopped, mature cereal crop residues ad libitum to maintain physical rumen fill and high saliva flow",
           "Increasing energy density using bypass fat and high-quality digestible forage without overloading with rapidly fermentable starch",
-          "Starving the cow for 3 days postpartum",
-          "Restricting drinking water"
+          "Withholding concentrate and energy feeds for the first 5 to 7 days postpartum to prevent metabolic overload",
+          "Severely restricting voluntary drinking water intake to reduce overall fluid volume and prevent udder edema"
         ],
         "a": 1,
         "e": "Feeding rumen-inert bypass fat (calcium soaps) elevates caloric density without causing rumen acidosis or depressing cellulolytic digestion.",
@@ -5457,10 +5457,10 @@ var quizBank = {
       {
         "q": "What is the nutritional practice of 'Flushing' in breeding ewes and does?",
         "o": [
-          "Flushing the uterus with warm saline",
-          "Washing the digestive tract with mineral oil",
+          "Irrigating the reproductive tract with isotonic warm saline to eliminate subclinical uterine bacterial contamination",
+          "Administering liquid mineral oil per os to purge stagnant digestive residues and accelerate gastrointestinal transit",
           "Increasing energy and protein intake 2 to 3 weeks prior to mating to elevate ovulation rate and twinning frequency",
-          "Restricting feed to induce estrus"
+          "Restricting plane of nutrition to 50% of maintenance to trigger stress-induced release of luteinizing hormone"
         ],
         "a": 2,
         "e": "Feeding an extra 250-400 g of cereal grains 2-3 weeks before breeding improves body condition and increases ovulation rate by 10 to 20%.",
@@ -5472,9 +5472,9 @@ var quizBank = {
         "q": "Why is Pregnancy Toxaemia (Twin Lamb Disease) most prevalent in ewes carrying twin or triplet fetuses during the last 4 weeks of gestation?",
         "o": [
           "Multiple fetuses exert huge glucose demands while their physical volume compresses the rumen, restricting dry matter intake",
-          "Fetal lambs secrete toxic ketones into maternal blood",
-          "Ewes stop drinking water during twins",
-          "Ewes cannot digest dietary proteins"
+          "Fetal lambs synthesize and secrete high concentrations of toxic acetoacetate directly into maternal circulation",
+          "Ewes develop neurogenic adipsia during multi-fetal pregnancies, leading to severe systemic dehydration and azotemia",
+          "Rumen microorganisms lose the biochemical ability to synthesize branched-chain volatile fatty acids and thiamine"
         ],
         "a": 0,
         "e": "Twin fetuses demand up to 40% of maternal glucose; expanding uteruses compress the rumen, leading to severe hypoglycemic ketosis and hepatic lipidosis.",
@@ -5485,10 +5485,10 @@ var quizBank = {
       {
         "q": "What is the voluntary daily Dry Matter Intake capacity of adult domestic goats (Capra hircus) expressed as a percentage of body weight?",
         "o": [
-          "1.0% of body weight",
-          "7.0 to 8.0% of body weight",
+          "1.0 to 1.5% of body weight (identical to large ruminants)",
+          "6.5 to 8.0% of body weight (exceeding all other species)",
           "3.0 to 4.0% of body weight (and up to 5% in high milkers)",
-          "Identical to large cattle at 1.5%"
+          "Uniformly 2.0 kg DM per day irrespective of body weight"
         ],
         "a": 2,
         "e": "Goats have a higher metabolic rate per unit body mass and consume 3 to 4% (up to 5% in lactating Jamunapari/Beetal) of their body weight in dry matter daily.",
@@ -5499,10 +5499,10 @@ var quizBank = {
       {
         "q": "How does the anatomical feeding behavior of goats differ distinctively from that of sheep and cattle?",
         "o": [
-          "Goats graze uniformly close to the ground like sheep",
+          "Goats graze dense grass swards uniformly close to the ground, utilizing incisor dental plates similarly to sheep",
           "Goats are natural browsers with prehensile, mobile lips and bipedal stance, preferentially consuming tree leaves and shrubs",
-          "Goats cannot digest green leaves",
-          "Goats swallow unchewed whole fodder without chewing cud"
+          "Goats lack active fibrolytic ruminal microflora and must rely exclusively on non-fibrous soluble carbohydrates",
+          "Goats swallow large unchewed forage stems whole without exhibiting secondary remastication or cud rumination"
         ],
         "a": 1,
         "e": "Goats exhibit agile bipedal browsing behavior, selecting protein-rich top foliage, twigs, and bark using their flexible, sensitive prehensile upper lip.",
@@ -5514,9 +5514,9 @@ var quizBank = {
         "q": "Why can goats tolerate higher dietary concentrations of plant tannins in browse foliage compared to sheep and cattle?",
         "o": [
           "Caprine saliva contains abundant proline-rich proteins that bind and neutralize tannins",
-          "Goats possess a specialized tannin-destroying gallbladder",
-          "Goat rumen contains zero anaerobic bacteria",
-          "Tannins are digested as pure carbohydrates in goats"
+          "Goats possess an enlarged gall bladder that continuously secretes tannase enzymes directly into the duodenum",
+          "Goats harbor unique ruminal fungi that convert polyphenolic tannins directly into high-energy propionate and ATP",
+          "Caprine enterocytes express mucosal surface transporters that actively excrete absorbed tannins back into digesta"
         ],
         "a": 0,
         "e": "Goat parotid saliva is rich in proline-rich proteins that have an affinity for polyphenols, forming stable complexes that spare dietary protein from binding.",
@@ -5527,9 +5527,9 @@ var quizBank = {
       {
         "q": "What is 'Creep Feeding' in young lambs and kids?",
         "o": [
-          "Feeding animals during the dark hours of the night",
-          "Feeding lambs while they are creeping on the floor",
-          "Force-feeding liquid milk replacer via a stomach tube",
+          "Offering specialized concentrate feeds exclusively during the dark nocturnal hours when ambient temperature drops",
+          "Providing finely ground concentrate feeds spread uniformly on stall floors so lambs feed while lying down recumbent",
+          "Force-feeding high-protein liquid milk replacer directly into the abomasum using an automated peristaltic stomach tube",
           "Providing a palatable, nutrient-dense concentrate in an enclosure accessible only to suckling young and excluding adult dams"
         ],
         "a": 3,
@@ -5583,9 +5583,9 @@ var quizBank = {
       {
         "q": "Why are sheep extraordinarily susceptible to chronic Copper Toxicity compared to cattle?",
         "o": [
-          "Sheep do not have a spleen",
-          "Sheep lack erythrocytes",
-          "Copper binds irreversible to ovine insulin",
+          "Sheep lack functional splenic tissue to filter circulating senescent erythrocytes and store red blood cell pools",
+          "Ovine erythrocytes possess unusually fragile membranes that disintegrate upon encountering normal dietary zinc",
+          "Copper binds irreversibly to ovine insulin receptors, inducing fulminant diabetic ketoacidosis and renal necrosis",
           "Ovine hepatocytes accumulate copper avidly and release it slowly into bile, causing sudden massive hemolytic crisis"
         ],
         "a": 3,
@@ -5598,9 +5598,9 @@ var quizBank = {
         "q": "What is the maximum safe dietary tolerance level of Copper in sheep diets?",
         "o": [
           "10 to 15 ppm (mg/kg DM)",
-          "100 ppm",
-          "250 ppm",
-          "500 ppm"
+          "50 to 75 ppm (mg/kg DM)",
+          "150 to 200 ppm (mg/kg DM)",
+          "400 to 500 ppm (mg/kg DM)"
         ],
         "a": 0,
         "e": "Dietary copper exceeding 15-20 ppm can cause fatal chronic copper poisoning in sheep, especially when molybdenum and sulfur levels are low.",
@@ -5612,9 +5612,9 @@ var quizBank = {
         "q": "Which dietary ratio of Calcium to Phosphorus (Ca:P) must be maintained in feedlot rams and wethers to prevent obstructive urolithiasis (water belly)?",
         "o": [
           "At least 2 : 1 (or 2.5 : 1)",
-          "1 : 2 (High Phosphorus)",
-          "1 : 1",
-          "0.5 : 1"
+          "1 : 2 to 1 : 3 (Inverted Ca:P)",
+          "1 : 1 (Equal parts Ca and P)",
+          "0.5 : 1 (Severely low Calcium)"
         ],
         "a": 0,
         "e": "High-concentrate grain diets contain excess P and low Ca, promoting struvite (magnesium ammonium phosphate) calculus formation; a 2:1 Ca:P ratio prevents calculi.",
@@ -5625,10 +5625,10 @@ var quizBank = {
       {
         "q": "Which chemical urinary acidifier is routinely supplemented at 0.5% in the diet of male sheep and goats to prevent struvite urinary calculi?",
         "o": [
-          "Sodium bicarbonate",
-          "Calcium hydroxide",
+          "Sodium bicarbonate buffer",
+          "Calcium hydroxide powder",
           "Ammonium chloride (NH4Cl)",
-          "Potassium carbonate"
+          "Potassium carbonate base"
         ],
         "a": 2,
         "e": "Ammonium chloride acidifies urine (pH < 6.5), increasing the solubility of magnesium ammonium phosphate crystals and preventing urethral blockage.",
@@ -5639,9 +5639,9 @@ var quizBank = {
       {
         "q": "Enterotoxemia (Pulpy Kidney Disease) in rapidly growing feedlot lambs is provoked by which nutritional circumstance?",
         "o": [
-          "Chronic starvation on dry straw",
-          "Deficiency of dietary cobalt",
-          "Over-consumption of common salt",
+          "Prolonged subsistence on low-protein dry straw leading to severe ruminal impaction and microbial death",
+          "Subclinical dietary deficiency of cobalt preventing hepatic synthesis of methylmalonyl-CoA mutase",
+          "Excessive voluntary consumption of common salt causing hyperosmotic ruminal atony and dehydration",
           "Sudden engorgement with high-starch concentrate feeds causing proliferation of Clostridium perfringens Type D"
         ],
         "a": 3,
@@ -5653,10 +5653,10 @@ var quizBank = {
       {
         "q": "What is the primary roughage feeding strategy for goats in intensive stall-fed (zero-grazing) systems in India?",
         "o": [
-          "Spreading crushed grains flat on the wet ground",
-          "Feeding whole uncut paddy straw exclusively",
+          "Spreading pulverized cereal grains and dry meals flat on damp earthen stall floors to encourage ground foraging",
+          "Offering mature unchopped paddy straw and sugarcane bagasse exclusively in deep ground-level feeding troughs",
           "Providing cut cultivated fodder and tree loppings (Subabul, Neem, Ardu, Mulberry) hanging in racks to satisfy browsing instincts",
-          "Allowing goats to graze in flooded paddy fields"
+          "Allowing goats to graze in flooded marshland pastures to graze submerged aquatic macrophytes and wet grasses"
         ],
         "a": 2,
         "e": "Hanging tree loppings in elevated racks mimics bipedal browsing behavior, reduces feed wastage and fecal contamination, and satisfies caprine feeding instincts.",
@@ -5667,10 +5667,10 @@ var quizBank = {
       {
         "q": "The daily concentrate supplement recommended for an indigenous draft bullock performing 4 hours of normal field work is approximately:",
         "o": [
-          "10 kg concentrate",
+          "8.0 to 10.0 kg concentrate above maintenance",
           "1.5 to 2.0 kg concentrate above maintenance",
-          "0 kg (straw only)",
-          "6.0 kg concentrate"
+          "0.0 kg concentrate (straw and water only)",
+          "4.5 to 5.5 kg concentrate above maintenance"
         ],
         "a": 1,
         "e": "Normal field work requires roughly 1.5-2.0 kg concentrate mixture (containing ~20% CP and 70% TDN) added to the baseline roughage maintenance ration.",
@@ -5681,9 +5681,9 @@ var quizBank = {
       {
         "q": "For draft animals working in hot tropical Indian summers, which dietary supplement is mandatory to compensate for heavy cutaneous sweat losses?",
         "o": [
-          "Urea at 500 g daily",
-          "Sulfur powder at 200 g daily",
-          "Bile salts",
+          "Feed-grade urea at 300 to 400 g daily",
+          "Elemental sulfur powder at 150 g daily",
+          "Purified bile salts at 50 g daily",
           "Common Salt (NaCl) at 50 to 100 g daily"
         ],
         "a": 3,
@@ -5695,10 +5695,10 @@ var quizBank = {
       {
         "q": "In sheep, what is the impact of severe energy undernutrition during the middle third of gestation (days 50 to 100)?",
         "o": [
-          "Instant death of the dam",
+          "Immediate maternal death caused by acute hypocalcemic tetany and uterine inertia",
           "Retarded placental development and restricted secondary wool follicle initiation in the fetus",
-          "Immediate onset of milk fever",
-          "Excessive wool growth in the ewe"
+          "Sudden induction of parturient paresis accompanied by premature uterine delivery",
+          "Compensatory hyper-proliferation of primary wool follicles causing fleece coarsening"
         ],
         "a": 1,
         "e": "Placental growth peaks between days 50-90; undernutrition restricts cotyledonary development and permanently impairs secondary wool follicle formation in the lamb.",
@@ -5723,9 +5723,9 @@ var quizBank = {
       {
         "q": "Goats fed high-fiber diets show superior retention of nitrogen compared to cattle primarily because:",
         "o": [
-          "They possess two extra digestive stomachs",
-          "They excrete zero nitrogen in urine",
-          "Their liver does not synthesize urea",
+          "They possess an elongated large intestine that carries out secondary cellulolytic fermentation and absorption",
+          "They completely eliminate urinary nitrogen losses by converting metabolic purines into insoluble uric acid",
+          "Their liver completely lacks the ornithine cycle and therefore does not convert systemic ammonia into urea",
           "They recycle higher proportions of blood urea into saliva and directly across the rumen wall"
         ],
         "a": 3,
@@ -5751,9 +5751,9 @@ var quizBank = {
       {
         "q": "Why should high-producing dairy goats be fed their concentrate mixture in two divided meals rather than a single large meal?",
         "o": [
-          "Because goats cannot swallow more than 100 g of feed at once",
-          "To induce ruminal bloat",
-          "To ensure milk fat drops to zero",
+          "Because goats have a very small reticulorumen capacity and physically regurgitate large single feed volumes",
+          "To deliberately induce moderate ruminal bloat and stimulate rapid eructation of accumulated metabolic gases",
+          "To suppress de novo milk butterfat synthesis and enhance total fluid milk yield in commercial dairy does",
           "To prevent acute ruminal acidosis and maintain stable cellulolytic fermentation"
         ],
         "a": 3,
@@ -5779,10 +5779,10 @@ var quizBank = {
       {
         "q": "In fattening lambs, what is the primary objective of a 10-day step-up adaptation period when switching from grazing to a feedlot finishing ration?",
         "o": [
-          "To induce rapid diarrhea to eliminate parasites",
+          "To induce transient osmotic diarrhea and completely purge the gastrointestinal tract of resident helminths",
           "Gradual transition from high roughage to high grain to prevent acute lactic acidosis and enterotoxemia",
-          "To allow wool shearing before feeding",
-          "To reduce body weight"
+          "To permit complete surgical shearing and dip treatment of fleeces before offering commercial concentrates",
+          "To depress daily metabolic rate and reduce total voluntary dry matter intake during early feedlot finishing"
         ],
         "a": 1,
         "e": "Step-up feeding allows ruminal lactate-utilizing bacteria (Megasphaera elsdenii) to multiply, preventing toxic lactic acid accumulation.",
@@ -5807,10 +5807,10 @@ var quizBank = {
       {
         "q": "Feeding sweet potato vines or cowpea fodder to lactating goats serves as an excellent source of:",
         "o": [
-          "Pure indigestible silica",
-          "Toxic gossypol",
+          "Indigestible biogenic silica crystals",
+          "Toxic phenolic gossypol compounds",
           "Highly digestible crude protein and carotene (Vitamin A precursor)",
-          "Unsaturated fat exclusively"
+          "High concentrations of bypass fat"
         ],
         "a": 2,
         "e": "Leguminous cowpea and sweet potato forages provide 14-18% CP and high beta-carotene, significantly boosting milk yield in stall-fed goats.",
@@ -5822,9 +5822,9 @@ var quizBank = {
         "q": "What is the maximum recommended dietary inclusion limit for feed-grade urea in adult ruminants?",
         "o": [
           "Not more than 1% of total diet DM (or 3% of concentrate mixture, or 1/3rd of total dietary nitrogen)",
-          "10% of total diet DM",
-          "5% of concentrate mixture",
-          "Urea can replace 100% of diet protein"
+          "Up to 8 to 10% of total diet DM (or 20% of concentrate mixture, or all non-protein dietary nitrogen)",
+          "Exactly 5% of total concentrate mixture regardless of dietary energy levels or roughage proportions",
+          "Urea can safely replace 100% of the true dietary protein without any requirement for soluble carbohydrates"
         ],
         "a": 0,
         "e": "The classic 1-3-1/3rd rule limits urea to 1% of total diet dry matter, 3% of concentrate mixture, or not more than 33% (1/3rd) of total dietary nitrogen.",
@@ -5849,10 +5849,10 @@ var quizBank = {
       {
         "q": "For optimal microbial utilization of non-protein nitrogen (urea) in the rumen, which dietary component is an absolute prerequisite?",
         "o": [
-          "High concentrations of dietary true protein",
+          "Extremely high dietary concentrations of bypass proteins and protected amino acids",
           "Readily available soluble carbohydrates (starch or molasses) to supply simultaneous ATP and carbon skeletons",
-          "Large amounts of indigestible lignin",
-          "Cold drinking water"
+          "High levels of lignified, recalcitrant structural fiber to slow down passage rate",
+          "Ad libitum access to ice-cold drinking water to depress rumen bacterial urease"
         ],
         "a": 1,
         "e": "Rapidly released ruminal ammonia can only be captured into microbial amino acids if alpha-keto acids (from starch/molasses fermentation) and ATP are available simultaneously.",
@@ -5863,10 +5863,10 @@ var quizBank = {
       {
         "q": "Urea toxicity in cattle occurs when ruminal ammonia production exceeds the liver's capacity to convert ammonia into urea via:",
         "o": [
-          "The Citric Acid Cycle",
+          "The Mitochondrial Citric Acid Cycle",
           "The Hepatic Urea (Ornithine) Cycle",
-          "The Cori Cycle",
-          "Beta-oxidation"
+          "The Hepatic-Muscular Cori Cycle",
+          "Fatty Acid Beta-Oxidation Pathway"
         ],
         "a": 1,
         "e": "When rumen ammonia absorption overwhelms liver argininosuccinate synthase and carbamoyl phosphate synthetase-I, free ammonia enters systemic circulation.",
@@ -5892,9 +5892,9 @@ var quizBank = {
         "q": "What is the specific field emergency chemical antidote administered orally for acute urea toxicity in cattle?",
         "o": [
           "2 to 4 liters of 5% Acetic Acid (Vinegar) diluted in 20 to 30 liters of cold water",
-          "100 g Sodium bicarbonate in warm water",
-          "1 liter of liquid paraffin",
-          "500 ml Calcium borogluconate orally"
+          "500 g Sodium bicarbonate dissolved in 10 liters of warm water administered via stomach tube",
+          "2 to 3 liters of liquid medicinal paraffin administered per os to coat the mucosal surface",
+          "1000 ml of 25% Calcium borogluconate solution given orally as a single rapid stomach drench"
         ],
         "a": 0,
         "e": "Acetic acid immediately lowers ruminal pH, converting toxic diffusible NH3 into non-absorbable NH4+ ions; cold water cools the rumen and halts bacterial urease.",
@@ -5905,10 +5905,10 @@ var quizBank = {
       {
         "q": "What is the commercial composition of the standard Urea Molasses Mineral Block (UMMB) licks developed by NDDB/IVRI for Indian livestock?",
         "o": [
-          "100% urea solidified with cement",
+          "100% feed-grade urea compacted into solid briquettes using Portland cement and gypsum as binders",
           "Molasses (~35-40%), Urea (~7-10%), Mineral mixture (~10%), Salt (~5%), Binder (CaO/Bentonite ~10%), and Bran/Meal (~30-35%)",
-          "50% common salt and 50% urea",
-          "Pure sugar candy with copper sulfate"
+          "50% common crystalline salt and 50% crystalline urea compacted under high mechanical hydraulic pressure",
+          "Purified sucrose syrup blended with copper sulfate and dicalcium phosphate without any nitrogen source"
         ],
         "a": 1,
         "e": "UMMB provides slow-release non-protein nitrogen, fermentable sugars (molasses), and trace minerals, safe for licking without risk of biting or toxicity.",
@@ -5919,10 +5919,10 @@ var quizBank = {
       {
         "q": "Why is pure feed-grade urea contraindicated for feeding to calves under 3 months of age?",
         "o": [
-          "Urea destroys esophageal groove tissue",
+          "Urea causes chemical destruction of the delicate reticular groove musculature and induces mucosal ulcers",
           "Young calves lack a functional, inoculated microbial rumen and have negligible urease and bacterial protein synthesis capacity",
-          "Urea curdles abomasal milk immediately",
-          "Calves have no liver"
+          "Urea induces immediate abomasal milk curding, completely blocking the pyloric sphincter and causing atony",
+          "Neonatal calves completely lack functional hepatic tissue and cannot synthesize baseline plasma proteins"
         ],
         "a": 1,
         "e": "Prior to 3-4 months, the calf is functionally a monogastric animal; ingested urea cannot be utilized by microbes and is absorbed as toxic ammonia.",
@@ -5934,9 +5934,9 @@ var quizBank = {
         "q": "Rumen Bypass Protein (RUP) is characterized by which nutritional property?",
         "o": [
           "Resists degradation by ruminal microorganisms but is digested by proteolytic enzymes in the abomasum and small intestine",
-          "Completely indigestible throughout the entire gastrointestinal tract",
-          "Degrades into ammonia within 5 minutes of ingestion",
-          "Passes out 100% intact in feces"
+          "Passes completely intact and unabsorbed throughout the entire length of the tract into fecal voidings",
+          "Undergoes rapid and total hydrolytic deamination to ammonia within five minutes of entering the rumen",
+          "Binds irreversibly to abomasal hydrochloric acid, forming insoluble precipitates that cannot be cleaved"
         ],
         "a": 0,
         "e": "RUP passes through the rumen undegraded to deliver high-quality dietary essential amino acids directly to the duodenum for enzymatic digestion and absorption.",
@@ -5948,9 +5948,9 @@ var quizBank = {
         "q": "The commercial manufacturing of rumen-inert bypass fat in the form of Calcium Soaps involves which chemical reaction?",
         "o": [
           "Saponification of long-chain fatty acids (palm oil fatty acids) with Calcium Hydroxide [Ca(OH)2]",
-          "Hydrogenation of fish oil at 200 atmospheres",
-          "Treatment of tallow with formaldehyde",
-          "Boiling soybean oil with sulfuric acid"
+          "High-pressure hydrogenation of marine fish oil fatty acids at 200 atmospheres in nickel catalyst reactors",
+          "Treating melted bovine tallow with 40% formalin followed by high-temperature vacuum dehydration ovens",
+          "Boiling unrefined soybean oil with concentrated sulfuric acid to sulfonate unsaturated double bonds"
         ],
         "a": 0,
         "e": "Calcium salts of long-chain fatty acids (e.g. Megalac) are insoluble at neutral rumen pH (6.5), preventing microbial toxicity, but dissociate in abomasal acid (pH < 3.0).",
@@ -5961,9 +5961,9 @@ var quizBank = {
       {
         "q": "Why does feeding rumen-inert bypass fat not cause the fiber digestion depression seen when feeding raw vegetable oil?",
         "o": [
-          "Bypass fat contains zero fatty acids",
-          "Bypass fat is converted directly into methane",
-          "Bypass fat is destroyed by saliva",
+          "Bypass fat contains zero long-chain fatty acids and yields only metabolic water upon ruminal fermentation",
+          "Bypass fat is rapidly converted into inert methane gas and carbon dioxide by rumen methanogenic archaea",
+          "Bypass fat is completely emulsified and destroyed by alkaline salivary secretions before reaching rumen",
           "Calcium soaps remain insoluble and inert at ruminal pH 6.2-6.8, so they do not coat fiber particles or inhibit cellulolytic bacteria"
         ],
         "a": 3,
@@ -5975,9 +5975,9 @@ var quizBank = {
       {
         "q": "Prill fat is another commercial form of bypass fat that achieves rumen inertness through:",
         "o": [
-          "Coating with gelatin and sugar",
-          "Binding to bentonite clay",
-          "Emulsification with bile acids",
+          "Micro-encapsulation of unsaturated vegetable oils inside a protective cross-linked gelatin-sugar matrix",
+          "Physical adsorption of free polyunsaturated fatty acids onto the surface of sodium bentonite clay particles",
+          "Chemical emulsification of liquid vegetable oils with conjugated bile salts and synthetic ionic detergents",
           "Fractionated, fully hydrogenated saturated triglycerides (palmitic/stearic acid) with high melting points (> 55°C)"
         ],
         "a": 3,
@@ -5990,9 +5990,9 @@ var quizBank = {
         "q": "Which metabolic disorder in high-yielding dairy cows is characterized by hypoglycemia, hyperketonemia, and sweet, acetone-smelling breath?",
         "o": [
           "Bovine Ketosis (Acetonemia)",
-          "Parturient Paresis",
-          "Grass Tetany",
-          "Rumen Impaction"
+          "Parturient Paresis (Hypocalcemia)",
+          "Hypomagnesemic Tetany (Staggers)",
+          "Acute Ruminal Lactic Acidosis"
         ],
         "a": 0,
         "e": "Ketosis develops during early lactation NEB when oxaloacetate is exhausted, forcing acetyl-CoA into acetoacetate, beta-hydroxybutyrate, and acetone.",
@@ -6003,10 +6003,10 @@ var quizBank = {
       {
         "q": "What is the primary glucogenic oral medication administered to dairy cows for the clinical treatment of bovine ketosis?",
         "o": [
-          "Liquid paraffin",
+          "Liquid medicinal paraffin (500 ml orally twice daily)",
           "Propylene glycol (250 to 500 ml orally twice daily)",
-          "Magnesium sulfate",
-          "Dilute acetic acid"
+          "Magnesium sulfate solution (250 g in 1 liter of water)",
+          "Dilute acetic acid vinegar (1 liter orally once daily)"
         ],
         "a": 1,
         "e": "Propylene glycol is absorbed intact or converted to propionate in the rumen, entering the citric acid cycle to replenish oxaloacetate for gluconeogenesis.",
@@ -6017,10 +6017,10 @@ var quizBank = {
       {
         "q": "What is the hallmark diagnostic biochemical finding in dairy cows suffering from Parturient Paresis (Milk Fever)?",
         "o": [
-          "Severe hyperkalemia (> 15 mg/dL)",
+          "Severe hyperkalemia (serum potassium exceeding 12 to 15 mg/dL accompanied by cardiac arrest)",
           "Severe hypocalcemia (serum total calcium dropping from normal 9-10 mg/dL to < 5 mg/dL)",
-          "Elevated blood urea nitrogen (> 100 mg/dL)",
-          "Elevated serum phosphorus (> 15 mg/dL)"
+          "Marked elevation of blood urea nitrogen (BUN exceeding 90 to 100 mg/dL with metabolic alkalosis)",
+          "Severe hyperphosphatemia (serum inorganic phosphorus rising to 15 to 18 mg/dL with tetanic spasms)"
         ],
         "a": 1,
         "e": "Milk fever is caused by acute failure of calcium homeostasis at calving, with total serum calcium plunging below 5 mg/dL (ionized Ca < 0.5 mM).",
@@ -6031,10 +6031,10 @@ var quizBank = {
       {
         "q": "The classic posture of a dairy cow in Stage 2 of Milk Fever is:",
         "o": [
-          "Hyperactive galloping around the pen",
-          "High head carriage and star-gazing",
+          "Hyperactive frenzied galloping and persistent aimless vocalization across the loose housing stall",
+          "High head carriage with pronounced star-gazing posture, opisthotonos, and severe extensor rigidity",
           "Sternal recumbency with an S-shaped kink in the neck or head turned into the flank",
-          "Standing rigid with erect ears"
+          "Standing motionless with rigid limbs, arched back, and erect alert ears following muscular tremors"
         ],
         "a": 2,
         "e": "Flaccid neuromuscular paralysis in Stage 2 causes sternal recumbency, cold extremities, dilated pupils, and lateral neck curvature resting on the chest.",
@@ -6059,9 +6059,9 @@ var quizBank = {
       {
         "q": "How does feeding a negative DCAD (-50 to -100 mEq/kg DM) diet during the last 3 weeks of the dry period prevent milk fever?",
         "o": [
-          "Alkalinizes the blood to precipitate excess calcium",
-          "Blocks calcium secretion into colostrum",
-          "Paralyzes the parathyroid glands",
+          "Alkalinizes systemic blood pH, causing massive precipitation of circulating ionic calcium into bony matrix",
+          "Directly blocks transcellular calcium transport across mammary secretory enterocytes into colostral fluids",
+          "Selectively paralyzes chief cells of the parathyroid gland, halting parathyroid hormone release completely",
           "Induces mild metabolic acidosis, increasing tissue sensitivity to PTH and stimulating bone calcium resorption and renal calcitriol synthesis"
         ],
         "a": 3,
@@ -6074,9 +6074,9 @@ var quizBank = {
         "q": "Which anionic salts are typically added to pre-partum transition cow diets to achieve a negative DCAD?",
         "o": [
           "Ammonium chloride, Calcium chloride, Magnesium sulfate, Calcium sulfate",
-          "Sodium bicarbonate and Potassium carbonate",
-          "Calcium carbonate and Sodium chloride",
-          "Dicalcium phosphate and Urea"
+          "Sodium bicarbonate, Potassium bicarbonate, Sodium chloride, Potassium carbonate",
+          "Calcium carbonate, Dicalcium phosphate, Sodium chloride, Magnesium oxide powder",
+          "Dicalcium phosphate, Diammonium phosphate, Feed-grade urea, Potassium chloride"
         ],
         "a": 0,
         "e": "Chloride and sulfate salts provide strong anions that shift blood acid-base balance toward mild compensated metabolic acidosis.",
@@ -6087,9 +6087,9 @@ var quizBank = {
       {
         "q": "What is the definitive intravenous treatment for a clinical case of Parturient Paresis (Milk Fever) in cattle?",
         "o": [
-          "Rapid bolus of 50% Dextrose",
-          "IV infusion of Magnesium sulfate alone",
-          "Oral administration of vinegar",
+          "Rapid intravenous bolus injection of 500 ml of 50% hypertonic Dextrose solution",
+          "Intravenous infusion of 200 ml of 10% Magnesium sulfate solution administered alone",
+          "Oral drenching with 2 to 3 liters of 5% dilute acetic acid solution in cold water",
           "Slow IV infusion of 400 to 500 ml of 20 to 25% Calcium Borogluconate solution"
         ],
         "a": 3,
@@ -6102,9 +6102,9 @@ var quizBank = {
         "q": "Subacute Ruminal Acidosis (SARA) in dairy cattle is clinically defined by which ruminal fluid pH threshold?",
         "o": [
           "Rumen pH remaining between 5.2 and 5.6 for more than 3 hours daily",
-          "Rumen pH dropping below 4.0",
-          "Rumen pH remaining constant at 7.0",
-          "Rumen pH rising above 8.0"
+          "Rumen pH dropping precipitously below 4.5 accompanied by profound systemic lactic acidosis",
+          "Rumen pH remaining completely constant at neutral 7.0 throughout the entire 24-hour feeding cycle",
+          "Rumen pH rising above 7.8 due to massive accumulation of free unionized ammonia in the digesta"
         ],
         "a": 0,
         "e": "SARA is defined as repeated episodes of depressed ruminal pH between 5.2 and 5.6, causing epithelial inflammation, reduced intake, and liver abscesses.",
@@ -6115,9 +6115,9 @@ var quizBank = {
       {
         "q": "Which bacterial species proliferates massively during acute ruminal lactic acidosis, driving rumen pH down below 5.0?",
         "o": [
-          "Fibrobacter succinogenes",
-          "Ruminococcus albus",
-          "Butyrivibrio fibrisolvens",
+          "Fibrobacter succinogenes and Ruminococcus albus",
+          "Ruminococcus flavefaciens and Prevotella ruminicola",
+          "Butyrivibrio fibrisolvens and Selenomonas ruminantium",
           "Streptococcus bovis and Lactobacillus species"
         ],
         "a": 3,
@@ -6130,9 +6130,9 @@ var quizBank = {
         "q": "Frothy (legume) bloat in cattle grazing lush lucerne or clover is primarily caused by:",
         "o": [
           "Soluble leaf proteins (Fraction I 18S ribulose-1,5-bisphosphate carboxylase) forming a persistent viscous foam trapping gas bubbles",
-          "Overproduction of dry sawdust in the rumen",
-          "Lack of water intake",
-          "Foreign bodies blocking the cardia"
+          "Excessive accumulation of insoluble dry lignified wood shavings in the dorsal ruminal sac",
+          "Severe chronic dehydration causing complete cessation of salivary secretion and ruminal atony",
+          "Mechanical obstruction of the distal cardiac sphincter by foreign bodies or phytobezoars"
         ],
         "a": 0,
         "e": "Chloroplastic Fraction I proteins and saponins act as foaming agents, creating a stable foam that traps fermentation gases and prevents normal eructation.",
@@ -6144,9 +6144,9 @@ var quizBank = {
         "q": "What is the primary therapeutic action of Poloxalene or vegetable oils (groundnut oil) when administered for frothy bloat?",
         "o": [
           "They act as non-ionic surfactants that reduce surface tension and rupture the gas-trapping foam",
-          "They neutralize ruminal lactic acid",
-          "They paralyze the ruminal wall",
-          "They convert carbon dioxide into solid carbonate"
+          "They neutralize high concentrations of ruminal lactic acid and restore optimal neutral pH",
+          "They selectively paralyze smooth muscle motility of the reticulorumen wall to halt gas churn",
+          "They chemically convert volatile carbon dioxide gas into solid calcium carbonate precipitates"
         ],
         "a": 0,
         "e": "Antifoaming surfactants break the surface tension of the ruminal fluid, releasing coalesced free gas that can be eructated or relieved via stomach tube.",
@@ -6157,9 +6157,9 @@ var quizBank = {
       {
         "q": "Free-gas bloat (secondary tympany) differs from frothy bloat because it is caused by:",
         "o": [
-          "Ingestion of too much legume protein",
-          "Excessive secretion of bile into the rumen",
-          "Low dietary fiber",
+          "Excessive dietary consumption of soluble leguminous leaf proteins and cytoplasmic saponins",
+          "Massive retrograde reflux of hepatic bile acids and pancreatic juice into the reticulorumen",
+          "Feeding finely pelleted cereal concentrates devoid of coarse physically effective fiber",
           "Physical or neurological failure of eructation (e.g. esophageal obstruction, choke, tetanus, or hypocalcemia)"
         ],
         "a": 3,
@@ -6171,9 +6171,9 @@ var quizBank = {
       {
         "q": "Emergency relief of life-threatening severe ruminal bloat with acute respiratory distress is achieved by:",
         "o": [
-          "Performing a tracheotomy",
-          "Administering oral vinegar",
-          "IV infusion of dextrose",
+          "Performing emergency tracheotomy in the mid-cervical region",
+          "Administering large volumes of dilute acetic acid orally",
+          "Rapid intravenous infusion of hypertonic dextrose solution",
           "Trocharization in the center of the left paralumbar fossa using a trocar and cannula"
         ],
         "a": 3,
@@ -6186,9 +6186,9 @@ var quizBank = {
         "q": "Why does systemic absorption of D-lactic acid during acute rumen acidosis produce severe metabolic acidosis in cattle?",
         "o": [
           "Bovine tissues have very low activity of D-lactate dehydrogenase and clear D-lactate extremely slowly from blood",
-          "D-lactate is converted into sulfuric acid",
-          "D-lactate destroys parathyroid hormone",
-          "D-lactate binds calcium irreversibly"
+          "D-lactate is rapidly converted by hepatic enzymes into toxic concentrated sulfuric acid in blood",
+          "D-lactate selectively destroys circulating parathyroid hormone, provoking fatal hypocalcemic shock",
+          "D-lactate binds irreversibly to serum ionic calcium and phosphorus, depleting circulating cations"
         ],
         "a": 0,
         "e": "Mammalian tissues metabolize L-lactate efficiently via L-LDH, but lack sufficient D-LDH, allowing bacterial D-lactate to accumulate and cause severe systemic acidosis.",
@@ -6199,10 +6199,10 @@ var quizBank = {
       {
         "q": "Which urinary parameter can be tested on the farm using diagnostic dipsticks to monitor the effectiveness of pre-calving anionic salt feeding?",
         "o": [
-          "Urine specific gravity",
-          "Urine glucose concentration",
+          "Urine specific gravity measured by clinical refractometer",
+          "Urine glucose concentration assessed with enzymatic test strips",
           "Urine pH (target pH 6.0 to 6.5 in Holsteins, 5.5 to 6.0 in Jerseys)",
-          "Urine bilirubin level"
+          "Urine bilirubin and urobilinogen levels on oxidation sticks"
         ],
         "a": 2,
         "e": "Urine pH directly reflects systemic acidification; achieving a urine pH of 6.0-6.5 confirms successful induction of compensated metabolic acidosis.",
@@ -6213,9 +6213,9 @@ var quizBank = {
       {
         "q": "The rapid conversion of ruminal ammonia into non-toxic glutamine in astrocytes causes cerebral edema in acute urea poisoning because of:",
         "o": [
-          "Destruction of brain blood vessels",
-          "Direct precipitation of ammonium phosphate crystals in neurons",
-          "Complete loss of cerebral glucose",
+          "Mechanical rupture of cerebral capillary endothelial walls caused by acute systemic hypertension",
+          "Direct precipitation of insoluble ammonium phosphate crystals inside the neuronal cytoplasm",
+          "Complete exhaustion of circulating blood glucose stores induced by hyperinsulinemic shock",
           "Intracellular accumulation of glutamine exerting powerful osmotic pressure that draws water into brain astrocytes"
         ],
         "a": 3,
@@ -6227,10 +6227,10 @@ var quizBank = {
       {
         "q": "Which metabolic sequela commonly follows subacute ruminal acidosis due to translocation of Fusobacterium necrophorum across inflamed rumen mucosa?",
         "o": [
-          "Severe acute pancreatitis",
-          "Bovine spongiform encephalopathy",
+          "Severe acute necrotizing pancreatitis and pancreatic atrophy",
+          "Bovine spongiform encephalopathy with progressive astrogliosis",
           "Hepatic abscesses and caudal vena cava thrombosis syndrome",
-          "Chronic renal cortical necrosis"
+          "Bilateral chronic renal cortical necrosis and uremic crisis"
         ],
         "a": 2,
         "e": "Acid ruminal mucosal erosion (ruminitis) permits entry of Fusobacterium necrophorum into portal circulation, colonizing the liver to form multiple abscesses.",
