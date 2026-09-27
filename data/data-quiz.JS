@@ -28,9 +28,9 @@ var quizBank = {
       {
         "q": "Which French agricultural chemist conducted the first scientific balance experiments on dairy cows in 1839?",
         "o": [
-          "Max Rubner",
-          "W.O. Atwater",
-          "Oskar Kellner",
+          "Justus von Liebig",
+          "Albrecht D. Thaer",
+          "Wilhelm Henneberg",
           "J.B. Boussingault"
         ],
         "a": 3,
@@ -56,10 +56,10 @@ var quizBank = {
       {
         "q": "The primary structural carbohydrate present in mature plant cell walls that is completely indigestible by mammalian enzymes is:",
         "o": [
-          "Amylose",
+          "Amylose glucan",
           "Cellulose",
-          "Glycogen",
-          "Inulin"
+          "Hemicellulose",
+          "Lignocellulose"
         ],
         "a": 1,
         "e": "Cellulose consists of beta-1,4-glycosidic linkages which cannot be hydrolyzed by mammalian digestive enzymes, requiring ruminal microbial cellulase.",
@@ -154,10 +154,10 @@ var quizBank = {
       {
         "q": "Which intermediate of ruminal fatty acid biohydrogenation has been definitively identified as the causative agent of diet-induced milk fat depression (MFD)?",
         "o": [
-          "cis-9, trans-11 CLA",
+          "cis-9, trans-11 conjugated linoleic acid (rumenic acid)",
           "trans-10, cis-12 conjugated linoleic acid (CLA)",
-          "trans-11 vaccenic acid",
-          "stearic acid"
+          "trans-11 octadecenoic acid (trans-vaccenic fatty acid)",
+          "cis-9, cis-12 octadecadienoic acid (free linoleic acid)"
         ],
         "a": 1,
         "e": "trans-10, cis-12 CLA potent down-regulates SREBP-1c and lipogenic enzymes (acetyl-CoA carboxylase, fatty acid synthase) in the bovine mammary gland.",
@@ -169,9 +169,9 @@ var quizBank = {
         "q": "The main circulating lipoprotein responsible for transporting endogenous triglycerides from the avian liver to the ovary for yolk synthesis is:",
         "o": [
           "VLDL (Very Low Density Lipoprotein)",
-          "Chylomicrons",
-          "HDL",
-          "Albumin"
+          "Portomicrons (portal mesenteric lipid emulsion)",
+          "HDL (High Density Lipoprotein apolipoproteins)",
+          "LDL (Low Density Lipoprotein ester fractions)"
         ],
         "a": 0,
         "e": "Unlike mammals which absorb fats via mesenteric lymphatics, birds absorb dietary and hepatic lipids directly into portal blood, and liver secretes estrogen-induced VLDLy.",
@@ -210,10 +210,10 @@ var quizBank = {
       {
         "q": "Which enzyme synthesized by the neonatal gastric abomasal mucosa is vital for clotting milk kappa-casein in suckling calves?",
         "o": [
-          "Pepsin A",
-          "Gastric lipase",
+          "Pepsinogen A (Gastricin)",
+          "Enteropeptidase (Kinase)",
           "Chymosin (Rennin)",
-          "Trypsin"
+          "Pregastric Esterase (Lipase)"
         ],
         "a": 2,
         "e": "Chymosin specifically cleaves the Phe105-Met106 peptide bond of kappa-casein, forming an insoluble curd that slows passage and allows thorough enzymatic digestion.",
@@ -238,10 +238,10 @@ var quizBank = {
       {
         "q": "A high-concentrate, starch-rich diet fed to dairy cows leads to which metabolic shift in ruminal fermentation?",
         "o": [
-          "Increased acetate:propionate ratio and increased pH",
+          "Increased acetate:propionate ratio and elevated ruminal pH",
           "Decreased acetate:propionate ratio and decreased rumen pH",
-          "Selective elimination of amylolytic bacteria",
-          "Elevated production of methane"
+          "Selective suppression of amylolytic and lactate producers",
+          "Marked elevation in cellulolytic bacteria and methane gas"
         ],
         "a": 1,
         "e": "Rapidly fermentable starches proliferate Streptococcus bovis, boosting propionate and lactate, which lowers rumen pH below 5.8 and reduces the A:P ratio.",
@@ -252,9 +252,9 @@ var quizBank = {
       {
         "q": "Water intoxication in calves typically occurs as a result of which physiological event?",
         "o": [
-          "Chronic consumption of saline water (>10,000 ppm TDS)",
-          "High dietary intake of succulent berseem clover",
-          "Over-infusion of isotonic 0.9% saline",
+          "Chronic consumption of saline borewell water exceeding 10,000 ppm total salts",
+          "High dietary intake of lush succulent berseem clover containing over 90% water",
+          "Rapid intravenous infusion of excessive volumes of isotonic 0.9% saline buffer",
           "Rapid consumption of large volumes of cold water after prolonged deprivation"
         ],
         "a": 3,
@@ -308,9 +308,9 @@ var quizBank = {
       {
         "q": "Which chemical entity constitutes the true fundamental unit of plant cell walls determined as the residue after neutral detergent extraction?",
         "o": [
-          "Acid Detergent Fibre (ADF)",
-          "Crude Fibre (CF)",
-          "Total Ash",
+          "Acid Detergent Fibre (ADF residue)",
+          "Weende Crude Fibre (CF constituent)",
+          "Acid Detergent Lignin (ADL fraction)",
           "Neutral Detergent Fibre (NDF)"
         ],
         "a": 3,
@@ -392,10 +392,10 @@ var quizBank = {
       {
         "q": "Protein Efficiency Ratio (PER) is determined by measuring:",
         "o": [
-          "Nitrogen balance in adult non-lactating females",
+          "Percentage of absorbed dietary nitrogen retained for animal maintenance",
           "Body weight gain (g) per gram of protein consumed in growing rats",
-          "Serum urea nitrogen concentration post-feeding",
-          "Duodenal amino acid flow per unit intake"
+          "True nitrogen balance measured in adult non-lactating female test animals",
+          "Total duodenal flow of microbial crude protein per unit of dry matter fed"
         ],
         "a": 1,
         "e": "PER is defined as the grams of body weight gained per gram of crude protein consumed under standardized experimental conditions in weanling rats.",
@@ -421,9 +421,9 @@ var quizBank = {
         "q": "In the rumen, true dietary protein that escapes microbial degradation and passes directly to the abomasum is designated as:",
         "o": [
           "Rumen Undegradable Protein (RUP / Bypass Protein)",
-          "Rumen Degradable Protein (RDP)",
-          "Metabolic Fecal Nitrogen (MFN)",
-          "Endogenous Urinary Nitrogen (EUN)"
+          "Rumen Degradable Protein (RDP / Microbial Substrate)",
+          "Metabolic Fecal Nitrogen (MFN / Endogenous Residue)",
+          "Endogenous Urinary Nitrogen (EUN / Catabolic Waste)"
         ],
         "a": 0,
         "e": "RUP (Rumen Undegradable Protein) bypasses ruminal proteolysis intact to be enzymatically hydrolyzed by abomasal and intestinal proteases.",
@@ -434,10 +434,10 @@ var quizBank = {
       {
         "q": "Which chemical agent is approved and widely used in India for the commercial treatment of oilseed cakes to create bypass protein?",
         "o": [
-          "Glutaraldehyde (at 5 g per 100 g CP)",
+          "Glutaraldehyde reagent (at 4.5-5.0 g per 100 g CP)",
           "Formaldehyde (at 1.0-1.2 g per 100 g CP)",
-          "Sodium hydroxide (at 4%)",
-          "Hydrochloric acid (at 2 N)"
+          "Sodium hydroxide solution (at 3.5-4.0% dry matter)",
+          "Concentrated sulfuric acid (at 1.5-2.0 N titration)"
         ],
         "a": 1,
         "e": "Treating groundnut or mustard cake with formalin at 1.0 to 1.2 g formaldehyde per 100 g crude protein creates reversible methylene bridges that protect against rumen breakdown.",
@@ -546,10 +546,10 @@ var quizBank = {
       {
         "q": "In the calculation of Protein Equivalent (PE) according to the British system, PE is defined as:",
         "o": [
-          "DCP x 6.25",
+          "(Digestible CP x Biological Value) / 100",
           "(DCP + True Digestible Protein) / 2",
-          "NPU x Biological Value",
-          "Crude Protein - Total Ash"
+          "(Apparent DCP + Total Crude Protein) / 2",
+          "(True Digestible Protein - MFN loss) x 6.25"
         ],
         "a": 1,
         "e": "Protein Equivalent (PE) = (Digestible Crude Protein + Digestible Pure Protein) / 2; it attributes half the value of true protein to non-protein nitrogen.",
@@ -560,10 +560,10 @@ var quizBank = {
       {
         "q": "Which tissue possesses the highest turnover rate of cellular protein in lactating dairy cows?",
         "o": [
-          "Skeletal muscle",
+          "Skeletal muscle myofibrillar bed",
           "Intestinal mucosal epithelium",
-          "Adipose tissue",
-          "Cartilage"
+          "Mammary secretory alveolar tissue",
+          "Hepatic parenchymal cell mass"
         ],
         "a": 1,
         "e": "Gastrointestinal epithelial cells undergo continuous rapid desquamation and complete renewal every 2-4 days, accounting for high endogenous protein expenditure.",
@@ -588,10 +588,10 @@ var quizBank = {
       {
         "q": "Nutritional secondary hyperparathyroidism in horses, commonly termed 'Big Head' or 'Bran Disease', is caused by:",
         "o": [
-          "Severe vitamin D toxicity",
+          "Excessive dietary calcium with vitamin D toxicity",
           "High dietary phosphorus and low calcium intake",
-          "Zinc deficiency",
-          "Copper toxicity"
+          "Chronic dietary magnesium and potassium deficiency",
+          "High dietary oxalate blocking copper assimilation"
         ],
         "a": 1,
         "e": "Feeding wheat bran (high in phosphorus, low in calcium) stimulates chronic parathyroid hormone secretion, mobilizing bone calcium and replacing facial bones with fibrous tissue.",
@@ -630,10 +630,10 @@ var quizBank = {
       {
         "q": "The classical deficiency sign of Copper in sheep and lambs characterized by demyelination of the spinal cord is known as:",
         "o": [
-          "Grass staggers",
-          "White muscle disease",
+          "White muscle disease (Nutritional Myopathy)",
+          "Grass staggers (Hypomagnesemic Tetany)",
           "Swayback (Enzootic Ataxia)",
-          "Crazy chick disease"
+          "Polioencephalomalacia (Cerebral Necrosis)"
         ],
         "a": 2,
         "e": "Copper is required for cytochrome c oxidase activity during myelination; deficiency causes ataxia, flaccid hindlimb paralysis, and swayback in lambs.",
@@ -644,10 +644,10 @@ var quizBank = {
       {
         "q": "Cobalt deficiency in ruminants manifests identically to which vitamin deficiency because cobalt is an obligate structural component of this vitamin?",
         "o": [
-          "Thiamine (Vitamin B1)",
-          "Biotin (Vitamin B7)",
+          "Thiamine hydrochloride (Vitamin B1)",
+          "Biotin coenzyme (Vitamin B7 / Vit H)",
           "Vitamin B12 (Cyanocobalamin)",
-          "Folic acid (Vitamin B9)"
+          "Folic acid monoglutamate (Vitamin B9)"
         ],
         "a": 2,
         "e": "Ruminal microbes incorporate inorganic dietary cobalt directly into the corrin ring of cobalamin (vitamin B12); cobalt deficiency is essentially vitamin B12 deficiency.",
@@ -672,10 +672,10 @@ var quizBank = {
       {
         "q": "Which mineral deficiency in newborn piglets is universally prevented by intramuscular injection of iron dextran (150-200 mg) at 3 days of age?",
         "o": [
-          "Copper",
-          "Manganese",
+          "Zinc (preventing parakeratosis)",
+          "Copper (preventing swayback)",
           "Iron (preventing 'Piglet Thumps')",
-          "Iodine"
+          "Selenium (preventing hepatosis)"
         ],
         "a": 2,
         "e": "Piglets are born with minimal iron stores (~50 mg) and sow milk is deficient (1 mg/day vs 7 mg requirement); without iron injection, fatal microcytic hypochromic anemia occurs.",
@@ -714,9 +714,9 @@ var quizBank = {
       {
         "q": "Why cannot domestic cats utilize beta-carotene as a dietary source of Vitamin A?",
         "o": [
-          "They lack gastric hydrochloric acid",
-          "They do not absorb dietary micellar lipids",
-          "Carotene is toxic to the feline liver",
+          "They fail to synthesize bile salts required for micellar uptake",
+          "They express high levels of hepatic enzymes that destroy carotene",
+          "Their mucosal enterocytes actively pump carotenoids back to lumen",
           "They lack intestinal beta-carotene-15,15'-dioxygenase activity"
         ],
         "a": 3,
@@ -729,9 +729,9 @@ var quizBank = {
         "q": "The active hormonal form of Vitamin D synthesized in the renal proximal convoluted tubules is:",
         "o": [
           "1,25-dihydroxycholecalciferol [1,25-(OH)2-D3]",
-          "25-hydroxycholecalciferol",
-          "7-dehydrocholesterol",
-          "Ergosterol"
+          "25-hydroxycholecalciferol [calcidiol metabolite]",
+          "24,25-dihydroxycholecalciferol [inactive form]",
+          "7-dehydrocholesterol [cutaneous provitamin base]"
         ],
         "a": 0,
         "e": "Renal 1-alpha-hydroxylase converts 25-OH-D3 to 1,25-(OH)2-D3 (calcitriol), which binds nuclear VDR receptors to stimulate calbindin-mediated calcium absorption.",
@@ -742,10 +742,10 @@ var quizBank = {
       {
         "q": "The biological activity of Vitamin E is most potently exhibited by which chemical isomer?",
         "o": [
-          "beta-tocopherol",
-          "gamma-tocopherol",
+          "d-beta-tocopherol (RRR-beta-tocopherol)",
+          "d-gamma-tocopherol (RRR-gamma-tocopherol)",
           "d-alpha-tocopherol (RRR-alpha-tocopherol)",
-          "delta-tocotrienol"
+          "d-alpha-tocotrienol (unsaturated isomer)"
         ],
         "a": 2,
         "e": "Naturally occurring d-alpha-tocopherol (RRR-alpha-tocopherol) possesses the greatest in vivo biological antioxidant activity.",
@@ -785,9 +785,9 @@ var quizBank = {
         "q": "Curled toe paralysis in young chicks is a pathognomonic diagnostic sign of which vitamin deficiency?",
         "o": [
           "Riboflavin (Vitamin B2)",
-          "Pantothenic acid",
-          "Thiamine",
-          "Choline"
+          "Thiamine (Vitamin B1)",
+          "Pyridoxine (Vitamin B6)",
+          "Cyanocobalamin (Vit B12)"
         ],
         "a": 0,
         "e": "Riboflavin deficiency in chicks causes myelin sheath degeneration in the sciatic nerve trunks, forcing chicks to walk on their hocks with inward curled toes.",
@@ -798,9 +798,9 @@ var quizBank = {
       {
         "q": "Which B-complex vitamin deficiency in pigs causes the characteristic 'goose-stepping' gait due to peripheral sciatic neuropathy?",
         "o": [
-          "Pyridoxine (Vitamin B6)",
-          "Biotin (Vitamin B7)",
-          "Niacin (Vitamin B3)",
+          "Pyridoxine (Vitamin B6 / Pyridoxol)",
+          "Nicotinamide (Vitamin B3 / Niacin)",
+          "Cyanocobalamin (Vitamin B12 factor)",
           "Pantothenic acid (Vitamin B5)"
         ],
         "a": 3,
@@ -826,10 +826,10 @@ var quizBank = {
       {
         "q": "The primary clinical sign of chronic fluorosis in cattle caused by drinking groundwater containing >5-10 ppm Fluorine is:",
         "o": [
-          "Severe night blindness",
-          "Parakeratosis of the snout",
+          "Bilateral symmetric parakeratosis and fissured crusting skin of the snout",
+          "Severe night blindness and keratinization of corneal conjunctival mucosa",
           "Mottling and excessive attrition of incisor teeth and exostoses of bones",
-          "Curled-toe paralysis"
+          "Curled-toe paralysis and demyelination of peripheral sciatic nerve trunks"
         ],
         "a": 2,
         "e": "Fluoride replaces hydroxyl groups forming fluorapatite crystals in developing teeth and bones, leading to chalky mottled enamel, severe pain, and periosteal exostoses.",
@@ -869,9 +869,9 @@ var quizBank = {
         "q": "Why is Digestible Ether Extract (DEE) multiplied by the factor 2.25 in the calculation of TDN?",
         "o": [
           "Fats yield 2.25 times more heat/energy per gram upon combustion than carbohydrates",
-          "Fats have a biological value 2.25 times higher than proteins",
-          "Fats contain 2.25 times more carbon atoms per mole",
-          "Fats are 2.25 times more digestible than starch"
+          "Fats possess a biological value 2.25 times higher than typical forage proteins",
+          "Fats require 2.25 times more oxygen for complete mitochondrial cellular combustion",
+          "Fats exhibit an apparent digestibility coefficient 2.25 times greater than starch"
         ],
         "a": 0,
         "e": "The average gross energy of fat is 9.45 kcal/g, while that of carbohydrates is 4.15 kcal/g. The ratio 9.45 / 4.15 = 2.277, conventionally rounded to 2.25.",
@@ -882,9 +882,9 @@ var quizBank = {
       {
         "q": "Metabolizable Energy (ME) in ruminants is derived from Digestible Energy (DE) by subtracting losses incurred through:",
         "o": [
-          "Heat increment only",
-          "Fecal energy and sweat",
-          "Basal metabolic heat production",
+          "Heat increment of feeding and fermentation heat",
+          "Basal metabolic heat loss and cuticular evaporation",
+          "Fecal energy and metabolic endogenous nitrogen loss",
           "Urine energy and methane (gaseous) energy"
         ],
         "a": 3,
@@ -966,10 +966,10 @@ var quizBank = {
       {
         "q": "In a Carbon-Nitrogen balance experiment, nitrogen balance directly quantifies body protein deposition, while carbon balance minus protein carbon quantifies:",
         "o": [
-          "Glycogen synthesis only",
+          "Hepatic glycogen synthesis",
           "Body fat deposition or loss",
-          "Methane production rate",
-          "Water turnover"
+          "Rumen methane production rate",
+          "Total body water turnover pool"
         ],
         "a": 1,
         "e": "Body protein contains on average 16.0% N and 52.5% C. Subtracting retained protein carbon from total retained carbon yields carbon stored as fat (fat is 76.5% C).",
@@ -1022,10 +1022,10 @@ var quizBank = {
       {
         "q": "Indirect calorimetry measures heat production in animals by determining:",
         "o": [
-          "Direct heat dissipation across a water jacket",
+          "Direct heat radiation and sensible heat dissipation across an ice calorimeter",
           "Respiratory gas exchange (O2 consumption, CO2 and CH4 production) and urinary N",
-          "Rectal temperature changes during exercise",
-          "Fecal dry matter excretion rate"
+          "Total core body temperature fluctuations and skin sensible heat dissipation",
+          "Gross chemical combustion energy of daily feed intake and total fecal output"
         ],
         "a": 1,
         "e": "Indirect calorimetry calculates heat production via Brouwer's equation from oxygen consumption, carbon dioxide production, methane emission, and urinary nitrogen excretion.",
@@ -1037,9 +1037,9 @@ var quizBank = {
         "q": "What conversion factor is conventionally adopted to convert 1 kg of Total Digestible Nutrients (TDN) to Metabolizable Energy (ME) in ruminants?",
         "o": [
           "3.61 Mcal ME (or 15.1 MJ)",
-          "2.00 Mcal ME",
-          "4.40 Mcal ME",
-          "1.80 Mcal ME"
+          "4.40 Mcal DE (or 18.4 MJ)",
+          "2.25 Mcal NE (or 9.41 MJ)",
+          "1.80 Mcal ME (or 7.53 MJ)"
         ],
         "a": 0,
         "e": "1 kg TDN corresponds to approximately 4.4 Mcal of Digestible Energy (DE); applying the 0.82 ME/DE factor gives approximately 3.61 Mcal ME.",
@@ -1078,10 +1078,10 @@ var quizBank = {
       {
         "q": "During the anaerobic curing phase of urea-ammoniated straw, what minimum incubation period is required under tropical Indian conditions?",
         "o": [
-          "2 days",
-          "60 days",
+          "7 days (1 week)",
+          "42 days (6 weeks)",
           "21 days (3 weeks)",
-          "90 days"
+          "60 days (2 months)"
         ],
         "a": 2,
         "e": "A minimum of 21 days is required for urease-mediated hydrolysis of urea to ammonia gas and subsequent breaking of ester linkages between lignin and hemicellulose.",
@@ -1148,9 +1148,9 @@ var quizBank = {
       {
         "q": "The toxic anti-nutritional glucoside present in young, drought-stressed sorghum (Jowar / Chari) plants under 50 days of growth is:",
         "o": [
-          "Mimosine",
-          "Gossypol",
-          "Sinigrin",
+          "Mimosine (yielding 3,4-dihydroxypyridone)",
+          "Gossypol (causing cardiac-hepatic damage)",
+          "Sinigrin (yielding toxic isothiocyanates)",
           "Dhurrin (yielding Hydrocyanic Acid / HCN)"
         ],
         "a": 3,
@@ -1163,9 +1163,9 @@ var quizBank = {
         "q": "What is the critical lethal concentration threshold of Hydrocyanic Acid (HCN) in fresh green fodder on a dry matter basis?",
         "o": [
           "> 200 ppm (mg/kg DM)",
-          "> 20 ppm",
-          "> 1000 ppm",
-          "> 5 ppm"
+          "> 50 ppm (mg/kg DM)",
+          "> 500 ppm (mg/kg DM)",
+          "> 1000 ppm (mg/kg DM)"
         ],
         "a": 0,
         "e": "Forage containing >200 ppm HCN on dry matter basis is hazardous and potentially lethal to livestock through inhibition of cytochrome oxidase.",
@@ -1204,10 +1204,10 @@ var quizBank = {
       {
         "q": "The primary anti-nutritional factor in raw soybeans that inhibits pancreatic enzymes and causes compensatory pancreatic hypertrophy in monogastric animals is:",
         "o": [
-          "Gossypol",
-          "Tannins",
+          "Soybean Agglutinins and Toxic Hemagglutinins",
+          "Condensed Proanthocyanidins and Free Tannins",
           "Kunitz and Bowman-Birk Trypsin Inhibitors",
-          "Oxalates"
+          "Inositol Hexakisphosphate (Phytic Acid Salts)"
         ],
         "a": 2,
         "e": "Trypsin inhibitors in raw soybeans inhibit trypsin and chymotrypsin; they are heat-labile and inactivated by proper toasting, roasting, or extrusion.",
@@ -1219,9 +1219,9 @@ var quizBank = {
         "q": "Aflatoxin B1 is a potent hepatotoxic and carcinogenic mycotoxin produced in improperly stored oilseed cakes and grains by:",
         "o": [
           "Aspergillus flavus and Aspergillus parasiticus",
-          "Fusarium moniliforme",
-          "Penicillium roqueforti",
-          "Claviceps purpurea"
+          "Fusarium verticillioides and Fusarium oxysporum",
+          "Penicillium verrucosum and Penicillium citrinum",
+          "Claviceps purpurea and Claviceps paspali molds"
         ],
         "a": 0,
         "e": "Aspergillus flavus synthesizes aflatoxins (B1, B2, G1, G2) at moisture levels >14% and temperatures >25°C; B1 is metabolized to M1 excreted in milk.",
@@ -1246,9 +1246,9 @@ var quizBank = {
       {
         "q": "Which analytical parameter in the Weende Proximate analysis is used specifically to detect adulteration of mineral mixtures or bran with sand and silica?",
         "o": [
-          "Total Ash",
-          "Crude Fibre",
-          "Ether Extract",
+          "Total Mineral Ash (TMA)",
+          "Neutral Detergent Fibre",
+          "Ether Extract Residue",
           "Acid Insoluble Ash (AIA)"
         ],
         "a": 3,
@@ -1260,10 +1260,10 @@ var quizBank = {
       {
         "q": "The inclusion of exogenous microbial phytase enzyme in monogastric (poultry and swine) diets is primarily intended to:",
         "o": [
-          "Degrade structural cellulose",
-          "Inactivate dietary mycotoxins",
+          "Hydrolyze insoluble beta-glucans and reduce intestinal digesta fluid viscosity",
+          "Inactivate feedborne mycotoxins and prevent enterocyte lipid membrane oxidation",
           "Hydrolyze phytate-bound phosphorus and reduce environmental phosphorus excretion",
-          "Synthesize endogenous methionine"
+          "Synthesize essential sulfur amino acids and spare crystalline dietary methionine"
         ],
         "a": 2,
         "e": "Monogastrics lack endogenous phytase; supplemental phytase hydrolyzes myo-inositol hexakisphosphate (phytate), liberating available phosphorus and reducing fecal excretion.",
@@ -1330,10 +1330,10 @@ var quizBank = {
       {
         "q": "Which statement correctly contrasts the chemical composition of the animal body with that of plants?",
         "o": [
-          "Cellulose and lignin are major structural components of the animal body",
+          "Cellulose and lignin constitute major structural components of both plant and animal body dry matter pools",
           "Carbohydrate is less than 1% of the animal body, whereas carbohydrates form the bulk of plant dry matter",
-          "Plants store surplus energy mainly as fat, whereas animals store it mainly as starch",
-          "Plant dry matter always contains more protein than the animal body"
+          "Plants store surplus chemical energy predominantly as lipids, whereas animals store it entirely as glycogen",
+          "Plant tissues contain significantly higher percentages of protein and mineral ash than mammalian bodies"
         ],
         "a": 1,
         "e": "Animals store energy as fat and only small amounts of glycogen (<1% of the body). In plants, cell-wall carbohydrates (cellulose, hemicellulose) and starch make up most of the dry matter, while the animal body is rich in protein and fat.",
@@ -1344,10 +1344,10 @@ var quizBank = {
       {
         "q": "In animal nutrition, a 'ration' is defined as:",
         "o": [
-          "Any feed containing more than 18% crude fibre",
-          "A concentrate mixture fed only to lactating animals",
+          "A mixture of feeds formulated strictly to meet maintenance nutrient demands",
+          "The total voluntary feed intake consumed by an animal in a single discrete meal",
           "The quantity of feed allowed to an animal during a 24-hour period",
-          "The amount of feed consumed in a single meal"
+          "A concentrated feed formulation containing more than twenty percent crude protein"
         ],
         "a": 2,
         "e": "A ration is the total feed allowed to an animal in 24 hours. A balanced ration is one that supplies all nutrients in the correct amounts and proportions for that animal's requirements over those 24 hours.",
@@ -1470,10 +1470,10 @@ var quizBank = {
       {
         "q": "Chastek paralysis in foxes, mink and cats fed large amounts of raw fish is caused by:",
         "o": [
-          "Biotin deficiency due to avidin in raw fish",
+          "Biotin deficiency caused by the presence of active avidin in raw fish tissues",
           "Thiamine deficiency due to the enzyme thiaminase in raw fish",
-          "Vitamin E deficiency due to rancid fish oils",
-          "Mercury poisoning from contaminated fish"
+          "Vitamin E deficiency induced by secondary oxidation of rancid marine fish oils",
+          "Acute mercury and heavy metal neurotoxicity caused by contaminated fresh fish"
         ],
         "a": 1,
         "e": "Thiaminase in raw fish destroys thiamine, producing anorexia, ataxia, convulsions and paralysis. Cooking the fish inactivates the enzyme. (Avidin, which binds biotin, is found in raw egg white, not fish.)",
@@ -1499,9 +1499,9 @@ var quizBank = {
         "q": "According to the classical classification of concentrates, a feedstuff containing less than 20% crude protein is termed:",
         "o": [
           "An energy-rich (basal) concentrate",
-          "A protein supplement",
-          "A dry roughage",
-          "A mineral supplement"
+          "A protein-rich supplemental feed",
+          "A carbonaceous dry roughage feed",
+          "A non-protein nitrogen supplement"
         ],
         "a": 0,
         "e": "Concentrates (<18% crude fibre, >60% TDN) are divided into energy concentrates (<20% CP — cereal grains, brans, molasses) and protein supplements (>20% CP — oilseed cakes, animal proteins).",
@@ -1526,9 +1526,9 @@ var quizBank = {
       {
         "q": "Digestible Crude Protein (DCP) of a feed is calculated as:",
         "o": [
-          "Crude protein (%) − true protein (%)",
-          "Nitrogen (%) × 6.25 × biological value ÷ 100",
-          "Total digestible nutrients × 6.25",
+          "Crude protein (%) × biological value of true protein fraction ÷ 100",
+          "Total nitrogen (%) × 6.25 × apparent dry matter digestibility ÷ 100",
+          "True protein (%) × net protein utilization coefficient of feed ÷ 100",
           "Crude protein (%) × digestibility coefficient of crude protein ÷ 100"
         ],
         "a": 3,
@@ -1554,9 +1554,9 @@ var quizBank = {
       {
         "q": "In a Total Mixed Ration (TMR), roughages, concentrates, minerals and additives are:",
         "o": [
-          "Fed separately at different times of the day",
-          "Offered free-choice in separate troughs",
-          "Given only as pellets without any roughage",
+          "Fed separately at scheduled intervals to optimize rumen microbial fermentation phases",
+          "Offered free-choice in individual partitioned feed mangers for selective consumption",
+          "Pelleted under high pressure without long roughage fiber to minimize ruminal rumination",
           "Chopped and blended together so that every mouthful has the same nutrient composition"
         ],
         "a": 3,
@@ -1568,10 +1568,10 @@ var quizBank = {
       {
         "q": "Urea–Molasses Mineral Block (UMMB) licks are fed to animals on straw-based diets mainly to supply:",
         "o": [
-          "Bypass protein directly to the small intestine",
-          "Protected fat for high milk yield",
+          "Rumen undegradable protein and bypass amino acids directly to the small intestine",
+          "Inert bypass lipids and long-chain fatty acids to elevate milk butterfat percentage",
           "Fermentable nitrogen, readily available energy and minerals to rumen microbes",
-          "Extra fibre to prevent ruminal acidosis"
+          "Effective physical fiber and buffers to counteract acute lactic ruminal acidosis"
         ],
         "a": 2,
         "e": "Straw is poor in nitrogen, fermentable energy and minerals. Licking a UMMB slowly releases urea-N, molasses sugars and minerals, stimulating microbial growth, fibre digestion and straw intake.",
@@ -1582,10 +1582,10 @@ var quizBank = {
       {
         "q": "Pelleting of compound feeds is advantageous mainly because it:",
         "o": [
-          "Increases the crude fibre content of the ration",
-          "Destroys all anti-nutritional factors and mycotoxins",
+          "Increases the effective crude fiber content and promotes rumination chewing time",
+          "Completely neutralizes all heat-stable mycotoxins and non-protein nitrogen toxins",
           "Prevents selective feeding, reduces wastage and dustiness, and improves feed efficiency",
-          "Makes lignin digestible"
+          "Hydrolyzes recalcitrant covalent lignin bonds and enhances anaerobic cellulolysis"
         ],
         "a": 2,
         "e": "Pellets are dense, dust-free and uniform, so animals cannot pick out preferred ingredients. Steam conditioning also gelatinises part of the starch. Pelleting does not reliably destroy mycotoxins or make lignin digestible.",
@@ -1611,9 +1611,9 @@ var quizBank = {
         "q": "The Beckmann process for improving the nutritive value of straw involves soaking the straw in:",
         "o": [
           "Dilute (about 1.5%) sodium hydroxide solution",
-          "4% urea solution",
-          "Dilute sulphuric acid",
-          "A molasses–urea solution"
+          "Concentrated (about 10%) aqueous ammonia bath",
+          "Acidified (about 2.5%) sulfur dioxide reagent",
+          "Heated (about 4%) liquid urea-molasses slurry"
         ],
         "a": 0,
         "e": "Developed by Beckmann in Germany (1921), the process soaks straw in about 1.5% NaOH and then washes it. The alkali breaks lignin–hemicellulose ester bonds and raises digestibility, but soluble nutrients are lost in the wash water and the effluent pollutes.",
@@ -1624,9 +1624,9 @@ var quizBank = {
       {
         "q": "The A.I.V. method of silage making, developed by A.I. Virtanen in Finland, preserves forage by:",
         "o": [
-          "Inoculating the forage with Clostridium to produce butyric acid",
-          "Wilting the forage to below 30% moisture before sealing",
-          "Adding urea and molasses to raise the pH",
+          "Inoculating the green forage with heterofermentative bacteria to produce acetic acid",
+          "Wilting the chopped forage to below 25% moisture to completely arrest plant enzymes",
+          "Supplementing high levels of urea and limestone to buffer the ensiled forage at neutrality",
           "Adding dilute mineral acids (HCl/H₂SO₄) to lower the pH rapidly to about 3.5–4.0"
         ],
         "a": 3,
@@ -2842,9 +2842,9 @@ var quizBank = {
       {
         "q": "Why is apparent digestibility of crude protein always lower than its true digestibility?",
         "o": [
-          "Protein is volatile and lost as ammonia gas during drying",
-          "Urine contaminates feces in collection crates",
-          "Microbial proteases destroy amino acids",
+          "Dietary protein undergoes extensive volatilization into gaseous ammonia during high-temperature fecal drying",
+          "Rumen microbial peptidases completely catabolize dietary amino acids into inert combustible nitrogen oxides",
+          "Involuntary contamination of collection pans by urinary urea and purine derivatives elevates fecal nitrogen",
           "Feces contain endogenous metabolic fecal nitrogen (MFN) from digestive secretions and sloughed epithelial cells"
         ],
         "a": 3,
@@ -2857,9 +2857,9 @@ var quizBank = {
         "q": "In an indirect (difference) digestion trial to determine the digestibility of a concentrate in cattle, the test concentrate must be fed alongside:",
         "o": [
           "A basal roughage of previously determined known digestibility",
-          "A nitrogen-free synthetic purified diet",
-          "Pure wheat bran ad libitum",
-          "Equal parts of urea and molasses"
+          "A purified synthetic nitrogen-free diet formulated with starch",
+          "An ad libitum mixture of dry wheat straw and liquid urea-molasses",
+          "A high-protein oilseed cake having an identical ruminal degradability"
         ],
         "a": 0,
         "e": "Concentrates cannot be fed alone to ruminants without causing ruminal acidosis; they are fed with a basal roughage whose digestibility was measured in Period 1.",
@@ -2884,10 +2884,10 @@ var quizBank = {
       {
         "q": "Which chemical compound is the most universally utilized external indicator in ruminant digestibility and grazing intake studies?",
         "o": [
-          "Sodium chloride",
-          "Barium sulfate",
+          "Barium sulfate (BaSO4)",
+          "Cobalt-EDTA complex",
           "Chromic oxide (Cr2O3)",
-          "Cobalt-EDTA"
+          "Titanium dioxide (TiO2)"
         ],
         "a": 2,
         "e": "Chromic oxide (green Sesquioxide of Chromium) is completely indigestible, non-toxic, unabsorbed, and quantitatively recovered in feces.",
@@ -2898,10 +2898,10 @@ var quizBank = {
       {
         "q": "What is the formula for calculating nutrient digestibility percentage using an indicator (marker)?",
         "o": [
-          "100 x (% Indicator in feces / % Indicator in feed)",
-          "[% Nutrient in feed / % Nutrient in feces] x 100",
+          "100 - [100 x (% Indicator in feces / % Indicator in feed) x (% Nutrient in feed / % Nutrient in feces)]",
+          "100 x [(% Nutrient in feed x % Indicator in feces) / (% Nutrient in feces x % Indicator in feed)]",
           "100 - [100 x (% Indicator in feed / % Indicator in feces) x (% Nutrient in feces / % Nutrient in feed)]",
-          "100 - [100 x (% Indicator in feces / % Indicator in feed)]"
+          "100 - [100 x (% Nutrient in feces / % Nutrient in feed) x (% Indicator in feces / % Indicator in feed)]"
         ],
         "a": 2,
         "e": "The indicator formula relates the concentration ratio of marker to nutrient between feed and feces, eliminating the need for total fecal collection.",
@@ -2912,9 +2912,9 @@ var quizBank = {
       {
         "q": "What chemical preservative is routinely added to the 24-hour urine collection carboys during a metabolism trial to prevent loss of ammonia nitrogen?",
         "o": [
-          "Formalin (10%)",
-          "Sodium hydroxide (40%)",
-          "Mercuric chloride",
+          "10% Neutral Buffered Formalin",
+          "40% Concentrated Sodium Hydroxide",
+          "5% Mercuric Chloride in Toluene",
           "1:1 Dilute Sulfuric Acid (H2SO4)"
         ],
         "a": 3,
@@ -2926,9 +2926,9 @@ var quizBank = {
       {
         "q": "What aliquot percentage of total daily voided feces is customarily sampled, composited, and preserved during a 7-day digestion trial?",
         "o": [
-          "100% of daily output",
-          "0.1% of daily output",
-          "50% of daily output",
+          "1/2th to 1/4th (25 to 50%) of daily output",
+          "1/50th to 1/100th (1 to 2%) of daily output",
+          "1/1000th (exactly 0.10%) of daily output",
           "1/10th to 1/20th (5 to 10%) of daily output"
         ],
         "a": 3,
@@ -2954,9 +2954,9 @@ var quizBank = {
       {
         "q": "How does an increase in the level of feed intake (plane of nutrition) from 1x maintenance to 3x maintenance affect digestibility in cattle?",
         "o": [
-          "Increases digestibility substantially",
-          "Has no measurable effect on digestibility",
-          "Completely eliminates rumen microbial fermentation",
+          "Increases apparent dry matter digestibility linearly by 3-5 percentage units",
+          "Maintains constant total tract digestibility due to adaptive rumen hypertrophy",
+          "Selectively elevates crude fiber digestibility while depressing ether extract",
           "Decreases digestibility by 1-2 percentage units per multiple of maintenance"
         ],
         "a": 3,
@@ -2982,9 +2982,9 @@ var quizBank = {
       {
         "q": "The negative associative effect observed when excessive cereal grain is added to a roughage diet is primarily due to:",
         "o": [
-          "Direct physical binding of starch granules to cellulose",
-          "Excessive production of acetic acid",
-          "Toxic destruction of rumen protozoa by starch",
+          "Physical coating of cellulose microfibrils by gelatinized insoluble cereal starches",
+          "Competitive inhibition of salivary buffer flow induced by hypertonic rumen digesta",
+          "Massive lysis of ruminal ciliate protozoa releasing toxic intracellular proteases",
           "Rapid starch fermentation lowering rumen pH below 6.0, inhibiting fibrolytic bacteria"
         ],
         "a": 3,
@@ -2996,10 +2996,10 @@ var quizBank = {
       {
         "q": "In a nitrogen metabolism balance trial, an animal is in a positive nitrogen balance when:",
         "o": [
-          "Fecal nitrogen equals urinary nitrogen",
+          "Total fecal nitrogen excretion exactly matches total urinary nitrogen loss",
           "Nitrogen intake exceeds the sum of fecal and urinary nitrogen excretion",
-          "Urinary nitrogen exceeds nitrogen intake",
-          "Nitrogen intake is zero"
+          "Combined fecal and urinary nitrogen losses exceed total dietary intake pool",
+          "Endogenous urinary nitrogen equals total metabolic fecal nitrogen excretion"
         ],
         "a": 1,
         "e": "Positive N balance (Intake > [Feces + Urine]) indicates net protein synthesis and tissue retention, as seen during growth, gestation, or muscle repletion.",
@@ -3010,10 +3010,10 @@ var quizBank = {
       {
         "q": "The comparative slaughter technique developed by Armsby and Moulton is regarded as the gold standard for measuring:",
         "o": [
-          "Apparent dry matter digestibility in vivo",
+          "Apparent dry matter and crude fiber digestibility in vivo",
           "Net energy and body nutrient retention over a feeding period",
-          "Rumen volatile fatty acid production rates",
-          "Endogenous urinary nitrogen loss"
+          "Continuous volatile fatty acid production rates in rumen",
+          "Basal endogenous urinary nitrogen losses under starvation"
         ],
         "a": 1,
         "e": "Slaughtering representative baseline animals at day 0 and final animals at day 90 allows direct chemical determination of energy, protein, and fat retained in the body.",
@@ -3039,9 +3039,9 @@ var quizBank = {
         "q": "Metabolic Fecal Nitrogen (MFN) in ruminants is primarily derived from which source?",
         "o": [
           "Undigested ruminal microbial cell debris and digestive secretions",
-          "True undigested feed dietary protein",
-          "Excess dietary urea converted to ammonia",
-          "Deaminated amino acids from liver metabolism"
+          "True undigested dietary crude protein escaping abomasal peptic lysis",
+          "Excess ruminal ammonia re-excreted across the large intestinal mucosa",
+          "Catabolized systemic urea filtered across the colonic basement membrane"
         ],
         "a": 0,
         "e": "In ruminants, 70-80% of MFN consists of indigestible bacterial and protozoal cell walls, with the remainder from sloughed mucosal cells and enzymes.",
@@ -3066,10 +3066,10 @@ var quizBank = {
       {
         "q": "Endogenous Urinary Nitrogen (EUN) excretion in adult fasting mammals is related directly to which physiological parameter?",
         "o": [
-          "Empty body fat percentage",
+          "Total Empty Body Weight (kg)",
           "Metabolic Body Size (W^0.75)",
-          "Daily dry matter intake",
-          "Total water consumption"
+          "Daily Dry Matter Intake (kg)",
+          "Total Body Water Turnover (L)"
         ],
         "a": 1,
         "e": "EUN reflects baseline cellular protein catabolism and scales directly with metabolic body size: EUN ≈ 140 to 146 mg N per kg W^0.75 per day.",
@@ -3080,9 +3080,9 @@ var quizBank = {
       {
         "q": "What surgical preparation is commonly employed in cattle to collect representative ruminal fluid samples over time without animal distress?",
         "o": [
-          "Esophageal fistulation",
-          "Cecal cannulation",
-          "Abomasal transection",
+          "Esophageal Fistulation Surgery",
+          "Duodenal Re-entrant Cannulation",
+          "Abomasal T-shaped Fistulation",
           "Rumen Cannulation (Fistulation)"
         ],
         "a": 3,
@@ -3094,10 +3094,10 @@ var quizBank = {
       {
         "q": "The in situ (in sacco) nylon bag technique developed by Orskov and McDonald is used to evaluate:",
         "o": [
-          "Total tract apparent digestibility in non-ruminants",
+          "Total tract apparent digestibility of cereal grains in monogastrics",
           "Rate and extent of ruminal degradation of feed dry matter and protein",
-          "Net energy for lactation of green forages",
-          "Fasting heat production in respiration chambers"
+          "Net energy for lactation and maintenance of succulent green forages",
+          "Fasting heat production and sensible heat loss in calorimeters"
         ],
         "a": 1,
         "e": "Incubating feed samples in nylon mesh bags inside the rumen for 0, 2, 4, 8, 16, 24, 48, and 72 hours yields degradation kinetics: p = a + b(1 - e^-ct).",
@@ -3108,10 +3108,10 @@ var quizBank = {
       {
         "q": "The Tilley and Terry two-stage in vitro technique for determining feed digestibility involves:",
         "o": [
-          "24 h amylase digestion followed by 24 h alkali boiling",
-          "72 h fungal cellulase digestion at 50°C",
+          "24 h salivary amylase hydrolysis followed by 24 h alkali boiling bath",
+          "72 h fungal cellulase incubation followed by 24 h neutral detergent wash",
           "48 h ruminal fluid incubation followed by 48 h acid-pepsin digestion",
-          "Direct combustion in an adiabatic oxygen bomb"
+          "48 h anaerobic rumen fluid digestion followed by 48 h trypsin incubation"
         ],
         "a": 2,
         "e": "Stage 1 simulates anaerobic microbial fermentation (48 h with buffered rumen fluid); Stage 2 simulates abomasal digestion (48 h in pepsin-HCl).",
@@ -3122,10 +3122,10 @@ var quizBank = {
       {
         "q": "Which internal indicator is measured as the residue after incinerating a sample and boiling the ash in 3 N hydrochloric acid?",
         "o": [
-          "Lignin",
+          "Acid Detergent Lignin (ADL)",
           "Acid Insoluble Ash (AIA)",
-          "Silica gel",
-          "Chromogen"
+          "Neutral Insoluble Ash (NIA)",
+          "Chromogen Pigment Extract"
         ],
         "a": 1,
         "e": "AIA consists of natural plant biogenic silica and soil minerals insoluble in 3 N HCl, serving as an accurate, inexpensive internal digestion indicator.",
@@ -3136,9 +3136,9 @@ var quizBank = {
       {
         "q": "Why does water buffalo (Bubalus bubalis) generally exhibit higher digestibility of coarse dry roughages compared to Bos indicus or Bos taurus cattle?",
         "o": [
-          "Presence of gastric amylase in the omasum",
-          "Absence of methane emissions in buffaloes",
-          "Secretion of bile into the rumen reticulum",
+          "Secretion of active cellulolytic enzymes directly by specialized esophageal and omasal glands",
+          "Presence of large populations of chitinolytic archaea that completely prevent methane losses",
+          "Hyperactive abomasal lysozyme secretion combined with rapid passage through the small gut",
           "Higher ruminal bacterial population, slower digesta passage rate, and higher cellulolytic activity"
         ],
         "a": 3,
@@ -3150,9 +3150,9 @@ var quizBank = {
       {
         "q": "Which anatomical structure in young milk-fed calves diverts milk past the reticulorumen directly into the abomasum?",
         "o": [
-          "Omasal sulcus",
-          "Pyloric sphincter",
-          "Ileo-cecal valve",
+          "Omasal-Abomasal Sphincter",
+          "Pyloric Muscularis Valve",
+          "Ileocecal Muscular Papilla",
           "Reticular (Esophageal) Groove"
         ],
         "a": 3,
@@ -3165,9 +3165,9 @@ var quizBank = {
         "q": "What happens if a milk-fed calf drinks milk from a wide bucket too rapidly, causing failure of the esophageal groove reflex?",
         "o": [
           "Milk spills into the immature reticulorumen, causing ruminal bloat, lactic acidosis, and scouring ('Ruminal Drinker')",
-          "Instant fatal aspiration pneumonia",
-          "Immediate formation of urinary calculi",
-          "Rupture of the omasum"
+          "Milk passes directly into the duodenal lumen, causing acute hemorrhagic enterotoxemia and rapid hypovolemic shock",
+          "Milk undergoes rapid curding in the omasal laminae, causing mechanical impaction and rupture of visceral tissue",
+          "Milk stimulates hypersecretion of pancreatic lipase, leading to severe steatorrhea and fat-soluble vitamin malabsorption"
         ],
         "a": 0,
         "e": "Milk entering the uninoculated rumen undergoes abnormal bacterial fermentation by coliforms, causing lactic acid buildup, ruminal bloat, systemic acidosis, and gray diarrhea.",
@@ -3220,10 +3220,10 @@ var quizBank = {
       {
         "q": "Which mineral balance trial requires collection of both urine and feces because urinary excretion is the primary route of endogenous elimination?",
         "o": [
-          "Calcium only",
+          "Calcium and Magnesium",
           "Phosphorus and Potassium",
-          "Iron and Copper",
-          "Cobalt"
+          "Iron and Dietary Copper",
+          "Cobalt and Manganese"
         ],
         "a": 1,
         "e": "Potassium, sodium, and excess phosphorus (in non-ruminants) are cleared predominantly through the kidneys into urine, requiring total urine collection.",
@@ -3235,9 +3235,9 @@ var quizBank = {
         "q": "How does feeding an exclusively succulent young legume pasture (e.g. berseem, lucerne) affect ruminal retention time and rate of passage?",
         "o": [
           "Increases rate of passage and decreases ruminal retention time",
-          "Decreases rate of passage and increases retention time",
-          "Halts ruminal motility completely",
-          "Doubles true fiber digestibility"
+          "Decreases rate of passage and increases ruminal retention time",
+          "Arrests ruminal motility and promotes severe abomasal atony",
+          "Increases ruminal retention time without altering passage rate"
         ],
         "a": 0,
         "e": "Succulent, low-fiber young legumes break down rapidly into fine particles, hastening liquid and solid passage and shortening ruminal retention time.",
@@ -3248,10 +3248,10 @@ var quizBank = {
       {
         "q": "Which physiological mechanism explains why severe protein deficiency in a ruminant diet depresses overall dry matter and fiber digestibility?",
         "o": [
-          "Pancreatic trypsin secretion ceases entirely",
+          "Pancreatic proteolytic and amylolytic enzyme secretion in the duodenum is completely arrested",
           "Rumen ammonia levels drop below the threshold (5-8 mg/dL) needed for fibrolytic bacterial growth",
-          "Gastric hydrochloric acid secretion is inhibited",
-          "Salivary secretion stops"
+          "Gastric hydrochloric acid and pepsin secretion in the abomasum is inhibited by systemic urea",
+          "Rumen epithelial papillae atrophy rapidly, preventing absorption of acetate and butyric acid"
         ],
         "a": 1,
         "e": "Cellulolytic bacteria require ruminal NH3-N (>5 mg/dL) as their sole nitrogen source for protein synthesis; protein starvation halts bacterial growth and cellulase output.",
@@ -3262,10 +3262,10 @@ var quizBank = {
       {
         "q": "In cattle, what is the physiological consequence of feeding roughage with a Crude Protein content below the critical threshold of 6 to 7%?",
         "o": [
-          "Intake doubles due to compensatory hunger",
-          "Rumen pH drops below 5.0 causing acidosis",
+          "Dry matter intake doubles immediately due to hyperphagic energy compensation",
+          "Rumen pH drops abruptly below 5.2, inducing severe acute lactic acidosis crisis",
           "Rumen microbial activity drops, and voluntary dry matter intake falls drastically",
-          "Excess ammonia causes acute urea toxicity"
+          "Excess non-protein nitrogen synthesis triggers acute systemic ammonia toxicity"
         ],
         "a": 2,
         "e": "When forage CP falls below 6-7%, ruminal NH3 is insufficient for fiber digestion; slow fiber clearance fills the rumen, severely suppressing voluntary DMI.",
@@ -3277,9 +3277,9 @@ var quizBank = {
         "q": "The Menke and Steingass in vitro gas production method assesses feed nutritive value by measuring:",
         "o": [
           "Volume of gas (CO2 and CH4) generated per unit feed incubated with buffered rumen fluid",
-          "Oxygen consumption in a closed respirometer",
-          "Nitrogen loss via the Kjeldahl distillation trap",
-          "Ammonia absorption in 2% boric acid"
+          "Rate of oxygen consumption during aerobic incubation in closed respiration manometers",
+          "Total ammonia nitrogen trapped in boric acid solution during Kjeldahl steam digestion",
+          "Residual unfermented fiber particles remaining after digestion with fungal cellulases"
         ],
         "a": 0,
         "e": "Fermentation of carbohydrates by rumen microbes in calibrated glass syringes produces CO2 and CH4, directly correlating with ME and organic matter digestibility.",
@@ -3291,9 +3291,9 @@ var quizBank = {
         "q": "The DaisyII incubator system manufactured by ANKOM is an automated laboratory instrument used for:",
         "o": [
           "Simultaneous determination of in vitro dry matter and NDF digestibility in filter bags",
-          "Kjeldahl nitrogen digestion and distillation",
-          "Bomb calorimetry of combustible gases",
-          "Continuous blood sampling in catheterized cattle"
+          "Automated Kjeldahl acid digestion and colorimetric steam distillation of nitrogen",
+          "Adiabatic bomb calorimetric determination of gross combustible heat in feed samples",
+          "Continuous automated collection of physiological rumen fluid via indwelling probes"
         ],
         "a": 0,
         "e": "The DaisyII incubator rotates sealed filter bags containing feed samples in jars of buffered rumen fluid at 39°C, running up to 100 samples simultaneously.",
@@ -3318,9 +3318,9 @@ var quizBank = {
       {
         "q": "Which physical device is attached to male sheep or steers in metabolism cages to ensure complete, contamination-free separation of feces and urine?",
         "o": [
-          "Nylon muzzle strap",
-          "Abomasal cannula plug",
-          "Tracheal cannula valve",
+          "Nylon grazing muzzle harness with automated bite-counting recorder",
+          "Indwelling Foley bladder catheter with continuous gravity drainage",
+          "Abomasal re-entrant cannula with electronic peristaltic pump loop",
           "Leather collection harness with rubber fecal bag and urinal funnel"
         ],
         "a": 3,
@@ -3332,10 +3332,10 @@ var quizBank = {
       {
         "q": "What is the primary physiological limitation of using Cr2O3 (chromic oxide) as an external marker in grazing ruminants?",
         "o": [
-          "Complete chemical destruction by rumen microbes",
-          "Extreme toxicity to intestinal enterocytes",
+          "Rapid enzymatic reduction and extensive absorption across the ruminal epithelial wall",
+          "Severe systemic toxicity to intestinal enterocytes causing acute mucosal denudation",
           "Diurnal variation in excretion rate requiring standardized dosing and grab-sampling times",
-          "Direct conversion into volatile chromic gas"
+          "Microbial conversion of chromic oxide into volatile chromium trioxide vapor in rumen"
         ],
         "a": 2,
         "e": "Chromic oxide does not associate evenly with digesta phases and shows marked diurnal excretion peaks, necessitating dosing twice daily for 5-7 days before sampling.",
@@ -3360,9 +3360,9 @@ var quizBank = {
       {
         "q": "What is the primary factor limiting the maximum inclusion of fat in adult ruminant digestion trials without depressing fiber digestion?",
         "o": [
-          "Inhibition of abomasal pepsin secretion",
-          "Excessive production of ketone bodies in saliva",
-          "Precipitation of bile acids in the rumen",
+          "Competitive inhibition of pancreatic colipase and bile acid synthesis in the liver",
+          "Systemic ketosis triggered by rapid accumulation of acetoacetate in peripheral blood",
+          "Irreversible precipitation of abomasal pepsinogen by circulating chylomicrons in gut",
           "Coating of fiber particles and antimicrobial toxicity of free PUFAs to fibrolytic bacteria"
         ],
         "a": 3,
@@ -3389,9 +3389,9 @@ var quizBank = {
         "q": "What is the effect of frequency of feeding (e.g. feeding 6 times daily versus once daily) on ruminal fermentation patterns in dairy cows?",
         "o": [
           "Stabilizes ruminal pH, reduces diurnal fluctuations in VFA concentrations, and improves fiber digestion",
-          "Causes chronic subacute ruminal acidosis",
-          "Decreases microbial protein synthesis by 50%",
-          "Completely suppresses saliva secretion"
+          "Causes marked swings in ruminal pH, inducing intermittent subacute ruminal acidosis and rumenitis",
+          "Depresses total microbial protein yield by 50% due to uncoupling of fermentation and phosphorylation",
+          "Inhibits salivary secretion completely, reducing ruminal buffering capacity and elevating lactic acid"
         ],
         "a": 0,
         "e": "Frequent small meals distribute fermentable carbohydrate load evenly, preventing severe pH drops below 6.0 and maintaining continuous cellulolytic activity.",
@@ -3403,9 +3403,9 @@ var quizBank = {
         "q": "Which parameter is determined by difference when calculating the proximate composition of a feed sample?",
         "o": [
           "Nitrogen-Free Extract (NFE)",
-          "Crude Protein (CP)",
-          "Crude Fibre (CF)",
-          "Ether Extract (EE)"
+          "Acid Detergent Fibre (ADF)",
+          "Crude Fibre fraction (CF)",
+          "Ether Extract lipids (EE)"
         ],
         "a": 0,
         "e": "NFE is not measured directly; it is calculated: NFE% = 100 - (% Moisture + % CP + % EE + % CF + % Total Ash).",
@@ -3416,9 +3416,9 @@ var quizBank = {
       {
         "q": "What is the primary purpose of conducting a pilot or trial feeding experiment prior to launching a large-scale feeding trial?",
         "o": [
-          "To eliminate the need for chemical analysis of feed",
-          "To vaccinate animals against ruminal bacteria",
-          "To slaughter all test animals for baseline data",
+          "To eliminate the scientific requirement for proximate chemical analysis of test rations",
+          "To induce immunologic resistance in trial animals against uncharacterized rumen pathogens",
+          "To sacrifice trial stock to quantify baseline visceral organ weights and carcass energy",
           "To determine feed palatability, voluntary intake thresholds, and potential toxicity problems"
         ],
         "a": 3,
@@ -3444,10 +3444,10 @@ var quizBank = {
       {
         "q": "Which analytical fraction obtained during the Van Soest detergent analysis is completely dissolved by neutral detergent solution but insoluble in water?",
         "o": [
-          "Hemicellulose",
+          "Hemicellulose (xylans, mannans, galactans)",
           "Neutral Detergent Solubles (NDS, cell contents)",
-          "Lignin",
-          "Silica"
+          "Acid Detergent Lignin (polyphenolic core)",
+          "Insoluble biogenic silica and phytoliths"
         ],
         "a": 1,
         "e": "Neutral Detergent Solubles (NDS = 100 - NDF) contain cell contents (soluble sugars, starch, organic acids, protein, lipids) having a true digestibility near 98%.",
@@ -3486,10 +3486,10 @@ var quizBank = {
       {
         "q": "The Wolff-Lehmann feeding standards (1874/1896) improved upon earlier systems by formulating nutrient requirements on the basis of:",
         "o": [
-          "Gross energy of whole plants",
+          "Gross Combustible Energy and Total Nitrogen Content determined by bomb calorimetry per 1000 kg animal mass",
           "Digestible Crude Protein, Digestible Carbohydrates, and Digestible Ether Extract per 1000 lbs live weight",
-          "Biological value of essential amino acids",
-          "Net energy for lactation only"
+          "Biological Value and Net Protein Utilization of essential amino acids absorbed across the intestinal wall",
+          "Net Energy for Lactation and maintenance calculated from direct respiration calorimeter chamber trials"
         ],
         "a": 1,
         "e": "Emil von Wolff and C. Lehmann expressed nutrient needs as digestible nutrients (DCP, digestible carbs, digestible fat) based on Henneberg's Weende trials.",
@@ -3514,10 +3514,10 @@ var quizBank = {
       {
         "q": "The Morrison feeding standard expresses energy and protein requirements of dairy cattle in terms of:",
         "o": [
-          "Net Energy (NE) and Metabolizable Protein (MP)",
+          "Net Energy for maintenance (NEm) and Metabolizable Protein (MP) pool",
           "Total Digestible Nutrients (TDN) and Digestible Crude Protein (DCP)",
-          "Starch Equivalent (SE) and Protein Equivalent (PE)",
-          "Gross Energy (GE) and True Protein (TP)"
+          "Kellner Starch Equivalent (SE) and digestible Protein Equivalent (PE)",
+          "Gross Caloric Energy (GE) and True Undegradable Dietary Protein (UDP)"
         ],
         "a": 1,
         "e": "Morrison standards utilized Total Digestible Nutrients (TDN) for energy and Digestible Crude Protein (DCP) for protein requirements.",
@@ -3528,10 +3528,10 @@ var quizBank = {
       {
         "q": "What is the primary scientific criticism and demerit of using Total Digestible Nutrients (TDN) as an energy standard for ruminants?",
         "o": [
-          "It is impossible to calculate mathematically",
-          "It does not account for fecal energy losses",
+          "It significantly underestimates the true metabolizable energy value of high-fiber roughages by over-counting combustible gases",
+          "It fails to account for fecal energy losses and erroneously assumes that ether extract lipids possess zero digestible energy",
           "It overvalues low-grade fibrous roughages relative to concentrates because it ignores the high heat increment of fiber fermentation",
-          "It assumes protein contains zero digestible energy"
+          "It incorrectly assumes that ruminal microbial fermentation produces net energy without any loss of combustible methane gas"
         ],
         "a": 2,
         "e": "Fibrous feeds generate large amounts of heat increment during ruminal fermentation; hence, 1 kg TDN from straw supports far less production than 1 kg TDN from maize.",
@@ -3542,10 +3542,10 @@ var quizBank = {
       {
         "q": "The National Research Council (NRC, USA) ruminant feeding standards evolved from TDN to which modern energy system?",
         "o": [
-          "Starch Equivalent system",
+          "Kellner Starch Equivalent system",
           "Net Energy system (NEm, NEg, NEl)",
-          "Food Unit system (FU)",
-          "Gross Caloric Ratio"
+          "Scandinavian Feed Unit (SFU) system",
+          "Gross Physiological Calorie system"
         ],
         "a": 1,
         "e": "Modern NRC systems partition energy requirements into Net Energy for maintenance (NEm), gain (NEg), and lactation (NEl) to eliminate heat increment discrepancies.",
@@ -3570,9 +3570,9 @@ var quizBank = {
       {
         "q": "Which feeding standard was specifically developed by Leonard C. Kearl (1982) at Utah State University for livestock in developing countries?",
         "o": [
-          "Scandinavian Feed Unit Standard",
-          "Kellner Starch Standard",
-          "Armsby Calorimetric Standard",
+          "Scandinavian Feed Unit Standard for Tropical Ruminants (SFU Standard)",
+          "European Association of Animal Production Standard (EAAP Standard)",
+          "Kellner Starch Equivalent Standard for Developing Tropics (KSE Standard)",
           "Nutrient Requirements of Ruminants in Developing Countries (Kearl Standard)"
         ],
         "a": 3,
@@ -3584,9 +3584,9 @@ var quizBank = {
       {
         "q": "In India, the authoritative national livestock feeding standard was developed and revised by which apex agricultural research body?",
         "o": [
-          "VCI (Veterinary Council of India)",
-          "BIS (Bureau of Indian Standards)",
-          "NDDB (National Dairy Development Board)",
+          "VCI (Veterinary Council of India, New Delhi)",
+          "BIS (Bureau of Indian Standards Committee)",
+          "NDDB (National Dairy Development Board, Anand)",
           "ICAR (Indian Council of Agricultural Research)"
         ],
         "a": 3,
@@ -3598,10 +3598,10 @@ var quizBank = {
       {
         "q": "Why do indigenous zebu cattle (Bos indicus) generally have a 10 to 15% lower fasting maintenance energy requirement than exotic taurine cattle (Bos taurus)?",
         "o": [
-          "Inability to digest green fodder",
-          "Absence of active ruminal microbes",
+          "Complete absence of active cellulolytic bacterial fermentation and lower rumen temperature in tropical heat",
+          "Significantly lower body core temperature maintained at 35°C together with reduced thyroid secretion rate",
           "Lower basal metabolic rate, smaller visceral organ mass relative to body size, and tropical heat adaptation",
-          "Lower body temperature of 35°C"
+          "Inability of zebu enterocytes to absorb long-chain volatile fatty acids across the rumen and intestinal wall"
         ],
         "a": 2,
         "e": "Bos indicus breeds possess lower visceral metabolic activity, smaller liver mass, and lower basal heat production, enabling survival on sparse tropical vegetation.",
@@ -3613,9 +3613,9 @@ var quizBank = {
         "q": "A 'Balanced Ration' for livestock is scientifically defined as:",
         "o": [
           "The total feed supplied in 24 hours containing all essential nutrients in proper amounts and proportions for maintenance and production",
-          "A diet composed exclusively of green leguminous pastures",
-          "Any mixture containing exactly 50% roughage and 50% concentrate",
-          "A feed containing 100% true protein and zero crude fiber"
+          "An ad libitum mixture of lush leguminous pasture and green cereal forages containing over eighty percent digestible moisture",
+          "Any feed formulation composed of exactly fifty percent roughage fiber and fifty percent concentrates fed in equal intervals",
+          "A specialized concentrate mash containing one hundred percent true protein and zero crude fiber designed for rapid fattening"
         ],
         "a": 0,
         "e": "A balanced ration furnishes all required nutrients (energy, protein, minerals, vitamins, water) in proper physiological proportions over a 24-hour feeding period.",
@@ -3640,9 +3640,9 @@ var quizBank = {
       {
         "q": "What is the expected daily Dry Matter Intake (DMI) for adult crossbred dairy cows (Bos taurus x Bos indicus) and high-yielding buffaloes?",
         "o": [
-          "1.5 kg DM per 100 kg body weight",
-          "5.0 to 6.0 kg DM per 100 kg body weight",
-          "0.5 kg DM per 100 kg body weight",
+          "1.0 to 1.5 kg DM per 100 kg body weight (up to 1.8% in high yielders)",
+          "4.5 to 5.5 kg DM per 100 kg body weight (up to 6.0% in high yielders)",
+          "0.5 to 0.8 kg DM per 100 kg body weight (up to 1.0% in high yielders)",
           "2.5 to 3.0 kg DM per 100 kg body weight (up to 3.5% in high yielders)"
         ],
         "a": 3,
@@ -3668,10 +3668,10 @@ var quizBank = {
       {
         "q": "In practical Indian ration balancing, what proportion of total daily dry matter intake is traditionally supplied through roughages for maintenance?",
         "o": [
-          "100% from concentrates",
-          "90% from concentrates and 10% from roughages",
+          "One-quarter (25.0%) from roughages and three-quarters (75.0%) from concentrates",
+          "Nine-tenths (90.0%) from roughages and one-tenth (10.0%) from concentrates",
           "Two-thirds (66.7%) from roughages and one-third (33.3%) from concentrates",
-          "5% from roughages and 95% from concentrates"
+          "One-half (50.0%) from roughages and one-half (50.0%) from concentrates"
         ],
         "a": 2,
         "e": "The classic thumb rule allocates 2/3rd of total dry matter from roughages (split between green and dry) and 1/3rd from concentrate mixture.",
@@ -3682,9 +3682,9 @@ var quizBank = {
       {
         "q": "Of the two-thirds roughage dry matter in a dairy ration, what is the ideal recommended partition between leguminous green fodder and dry roughage (straw)?",
         "o": [
-          "100% dry straw and 0% green",
-          "100% green and 0% dry straw",
-          "All dry roughage treated with acid",
+          "Two-thirds of total roughage DM from green legumes and one-third from dry straw",
+          "Equal parts (50% each) from green succulent legumes and cereal crop residues",
+          "Three-quarters from dry untreated straw and one-quarter from silage forage",
           "One-third of total roughage DM from green legumes and two-thirds from dry straw"
         ],
         "a": 3,
@@ -3696,10 +3696,10 @@ var quizBank = {
       {
         "q": "Which characteristic is essential in a properly computed balanced ration to ensure normal rumination, saliva secretion, and prevention of displaced abomasum?",
         "o": [
-          "Zero crude fiber content",
-          "Complete liquefaction of all dietary components",
+          "Minimal particle size achieved by fine hammermill grinding",
+          "High concentration of rapidly fermentable non-fiber starches",
           "Adequate physical fibrous bulk (effective fiber / peNDF)",
-          "Exclusive inclusion of high-moisture brewery grains"
+          "Complete substitution of forage with pelleted agro-byproducts"
         ],
         "a": 2,
         "e": "Physically effective fiber (peNDF) stimulates cud-chewing (rumination) and copious secretion of buffering saliva, stabilizing the ruminal mat and preventing abomasal displacement.",
@@ -3710,9 +3710,9 @@ var quizBank = {
       {
         "q": "Why must a balanced ration possess mild laxative properties in dairy cattle?",
         "o": [
-          "To induce diarrhea and flush out all bacteria",
-          "To prevent absorption of dietary minerals",
-          "To minimize ruminal water absorption",
+          "To accelerate intestinal transit time and completely purge all resident microflora",
+          "To stimulate mucosal secretion of excess fluid and prevent absorption of minerals",
+          "To inhibit ruminal papillae development and reduce excessive fermentation heat",
           "To prevent constipation and ensure smooth, regular passage of digestive residue"
         ],
         "a": 3,
@@ -3766,10 +3766,10 @@ var quizBank = {
       {
         "q": "Using Pearson's Square to formulate a 16% CP concentrate mixture using Maize grain (9% CP) and Groundnut Cake (40% CP), what is the required proportion of Maize to Groundnut Cake?",
         "o": [
-          "10 parts Maize : 10 parts GNC",
+          "16 parts Maize : 9 parts GNC (64.0% Maize and 36.0% GNC)",
           "24 parts Maize : 7 parts GNC (77.4% Maize and 22.6% GNC)",
-          "7 parts Maize : 24 parts GNC",
-          "16 parts Maize : 9 parts GNC"
+          "7 parts Maize : 24 parts GNC (22.6% Maize and 77.4% GNC)",
+          "20 parts Maize : 11 parts GNC (64.5% Maize and 35.5% GNC)"
         ],
         "a": 1,
         "e": "Maize (9) vs 16 -> |9 - 16| = 7 parts GNC. GNC (40) vs 16 -> |40 - 16| = 24 parts Maize. Total parts = 31. % Maize = (24/31) x 100 = 77.42%; % GNC = (7/31) x 100 = 22.58%.",
@@ -3780,10 +3780,10 @@ var quizBank = {
       {
         "q": "What is the primary operational advantage of modern computer-based Linear Programming (LP) over hand-calculation in feed formulation?",
         "o": [
-          "Guaranteeing that feed ingredients contain zero crude fiber",
+          "Automatic biological elimination of anti-nutritional factors and chemical pesticide residues from raw feeds",
           "Least-Cost Ration Formulation simultaneously satisfying dozens of nutrient constraints and ingredient boundaries",
-          "Eliminating the need to purchase minerals",
-          "Converting non-protein nitrogen into true fat"
+          "Complete elimination of the physical requirement for dietary macro-minerals and trace element premixes",
+          "Chemical conversion of non-protein nitrogen compounds directly into high-biological-value animal protein"
         ],
         "a": 1,
         "e": "Linear programming formulates a ration meeting all minimum and maximum nutrient specifications at the absolute lowest financial cost per ton.",
@@ -3808,9 +3808,9 @@ var quizBank = {
       {
         "q": "Why is it important to ensure variety of ingredients in a commercial ruminant concentrate mixture?",
         "o": [
-          "Guarantees that fiber is eliminated",
-          "Prevents saliva production",
-          "Eliminates all rumen gas production",
+          "Guarantees complete elimination of fiber fractions and suppresses undesirable ruminal volatile fatty acid output",
+          "Eliminates salivary buffer secretion and reduces the requirement for physical chewing during cud rumination",
+          "Prevents the formation of ruminal methane gas by completely arresting methanogenic archaeal coenzyme activity",
           "Improves amino acid balance, ensures palatability, and mitigates single-ingredient toxicities or supply fluctuations"
         ],
         "a": 3,
@@ -3822,10 +3822,10 @@ var quizBank = {
       {
         "q": "Feeding standards serve primarily as:",
         "o": [
-          "Legal documents forbidding the sale of wheat straw",
+          "Statutory veterinary regulations mandating the chemical composition of registered commercial livestock feedstuffs",
           "Scientific quantitative tables detailing daily nutrient requirements for specific body weights and production levels",
-          "Schedules for dairy cow milking machines",
-          "Veterinary surgical protocols"
+          "Manufacturer schedules outlining maintenance protocols and daily operating speeds for automated milking units",
+          "Diagnostic medical manuals detailing surgical intervention protocols for severe digestive and metabolic orders"
         ],
         "a": 1,
         "e": "Feeding standards provide scientifically verified reference tables specifying required daily intakes of dry matter, energy, protein, minerals, and vitamins.",
@@ -3836,10 +3836,10 @@ var quizBank = {
       {
         "q": "The maintenance energy requirement of an animal in all modern feeding standards is rooted in the concept of:",
         "o": [
-          "Total Heat Increment during exercise",
-          "Combustible energy of feces",
+          "Total Heat Increment of Digestible Nutrients",
+          "Gross Combustible Heat of Daily Fecal Voiding",
           "Fasting Heat Production (Basal Metabolism)",
-          "Dietary thermogenesis of urea"
+          "Dietary Thermogenesis of Hydrolyzed Proteins"
         ],
         "a": 2,
         "e": "Basal metabolic rate / fasting heat production represents the irreducible energy expenditure required to sustain life in an idle, non-productive state.",
@@ -3851,9 +3851,9 @@ var quizBank = {
         "q": "Which classic equation relates Basal Metabolic Rate (BMR in kcal/day) to Body Weight (W in kg) across adult homeothermic mammalian species?",
         "o": [
           "BMR = 70 x W^0.75 (Kleiber's Law)",
-          "BMR = 100 x W^1.0",
-          "BMR = 50 x W^0.50",
-          "BMR = 25 x W^2.0"
+          "BMR = 100 x W^1.00 (Brody's Linear Rule)",
+          "BMR = 50 x W^0.50 (Rubner Surface Rule)",
+          "BMR = 35 x W^0.67 (Meeh Surface Formula)"
         ],
         "a": 0,
         "e": "Max Kleiber (1932) established that basal metabolic heat production scales with metabolic body size (W^0.75): BMR = 70 x W^0.75 kcal/day (or 293 kJ/day).",
@@ -3878,10 +3878,10 @@ var quizBank = {
       {
         "q": "In the Kellner Starch Equivalent feeding system, what 'Value Number' (Wertigkeit) is assigned to pure linseed cake relative to pure digestible starch?",
         "o": [
-          "50",
-          "20",
+          "50 to 55",
+          "70 to 75",
           "97 to 100",
-          "150"
+          "80 to 85"
         ],
         "a": 2,
         "e": "High-quality concentrates like linseed cake have a Wertigkeit near 97-100%, indicating that their digestible nutrients produce ~100% of their calculated fat value.",
@@ -3893,9 +3893,9 @@ var quizBank = {
         "q": "Why did Kellner apply a crude fiber deduction factor of 0.29 to 0.58 kg starch equivalent per kg of crude fiber in coarse roughages like straw?",
         "o": [
           "To correct for the heavy mechanical work of mastication and the high heat increment of ruminal fiber fermentation",
-          "Because fiber contains toxic alkaloids",
-          "Because fiber destroys fat in the rumen",
-          "To account for urinary protein excretion"
+          "To account for the high concentration of toxic secondary phenolic alkaloids present in mature lignified straw",
+          "Because crude fiber destroys dietary lipids in the rumen and prevents intestinal absorption of essential fats",
+          "To compensate for excessive renal nitrogen losses caused by deamination of structural cell-wall glycoproteins"
         ],
         "a": 0,
         "e": "Coarse fibrous roughages expend substantial energy during chewing and fermentation; Kellner deduced 0.58 SE units for every kg of crude fiber in straws.",
@@ -3906,10 +3906,10 @@ var quizBank = {
       {
         "q": "In the Scandinavian Feed Unit system, one Feed Unit (FU) is defined as the nutritive value equivalent of:",
         "o": [
-          "1.0 kg of meadow hay",
-          "1.0 kg of wheat bran",
+          "1.0 kg of good meadow grass hay",
+          "1.0 kg of milled wheat bran feed",
           "1.0 kg of standard barley grain",
-          "1.0 kg of soyabean meal"
+          "1.0 kg of solvent soybean meal"
         ],
         "a": 2,
         "e": "The Scandinavian Feed Unit (Foderenhed) sets 1 kg of standard barley grain (providing ~1650 kcal NE) as 1.0 Feed Unit.",
@@ -3920,9 +3920,9 @@ var quizBank = {
       {
         "q": "Which feeding standard first incorporated the distinction between Rumen Degradable Protein (RDP) and Rumen Undegradable Protein (RUP)?",
         "o": [
-          "Wolff-Lehmann (1874)",
-          "Morrison (1915)",
-          "Thaer (1809)",
+          "Wolff-Lehmann Standard (1874)",
+          "Morrison Standard (1915/1936)",
+          "Albrecht Thaer Standard (1809)",
           "ARC (1980) and NRC (1985/1989)"
         ],
         "a": 3,
@@ -3948,10 +3948,10 @@ var quizBank = {
       {
         "q": "When formulating a complete ration for high-yielding dairy cows, what is the minimum recommended percentage of Neutral Detergent Fibre (NDF) from forage?",
         "o": [
-          "5% of diet DM",
+          "5 to 8% of total diet DM",
           "19 to 21% of total diet DM",
-          "45% of diet DM",
-          "0% (concentrates only)"
+          "35 to 40% of total diet DM",
+          "10 to 12% of total diet DM"
         ],
         "a": 1,
         "e": "A minimum of 19-21% forage NDF (and 28-30% total NDF) is mandatory to sustain normal chewing time, milk fat percentage, and ruminal health.",
@@ -3976,10 +3976,10 @@ var quizBank = {
       {
         "q": "What is the daily maintenance DCP requirement for an adult 400 kg zebu bullock according to Sen and Ray ICAR standards?",
         "o": [
-          "1000 g DCP",
+          "Approximately 500 to 550 g DCP",
           "Approximately 280 to 300 g DCP",
-          "50 g DCP",
-          "1500 g DCP"
+          "Approximately 120 to 150 g DCP",
+          "Approximately 700 to 750 g DCP"
         ],
         "a": 1,
         "e": "Sen & Ray / ICAR standards prescribe approximately 0.70 to 0.75 g DCP per kg metabolic body size (or ~280-300 g DCP for a 400 kg animal).",
@@ -3990,9 +3990,9 @@ var quizBank = {
       {
         "q": "What is the daily maintenance TDN requirement for a 400 kg adult zebu cow according to ICAR feeding standards?",
         "o": [
-          "6.5 kg TDN",
-          "1.0 kg TDN",
-          "8.0 kg TDN",
+          "Approximately 5.5 to 6.0 kg TDN",
+          "Approximately 1.2 to 1.5 kg TDN",
+          "Approximately 4.2 to 4.5 kg TDN",
           "Approximately 2.8 to 3.0 kg TDN"
         ],
         "a": 3,
@@ -4004,9 +4004,9 @@ var quizBank = {
       {
         "q": "If a lactating crossbred cow produces 10 kg of milk with 4.0% fat, what extra TDN allowance above maintenance is required per kg milk according to ICAR standards?",
         "o": [
-          "1.00 kg TDN per kg milk",
-          "0.10 kg TDN per kg milk",
-          "0.75 kg TDN per kg milk",
+          "0.75 to 0.80 kg TDN per kg milk",
+          "0.15 to 0.18 kg TDN per kg milk",
+          "0.55 to 0.60 kg TDN per kg milk",
           "0.32 to 0.35 kg TDN per kg milk"
         ],
         "a": 3,
@@ -4032,9 +4032,9 @@ var quizBank = {
       {
         "q": "What is the consequence of feeding a ration with excessive moisture (>80%) and low dry matter density to high-producing dairy cows?",
         "o": [
-          "Excessive water intoxication",
-          "Severe ruminal impaction",
-          "Extreme obesity",
+          "Systemic water toxicity develops rapidly, causing cerebral edema and irreversible neural damage",
+          "Severe abomasal impaction occurs due to failure of excessive dietary water to clear the omasum",
+          "Rapid lipid mobilization occurs leading to profound obesity and high subcutaneous fat deposition",
           "Physical gut fill limits dry matter intake before nutrient requirements are met ('Bulk Limitation')"
         ],
         "a": 3,
@@ -4047,9 +4047,9 @@ var quizBank = {
         "q": "In dairy ration balancing, the term 'Steaming Up' refers to:",
         "o": [
           "Gradually increasing concentrate feeding 2 to 3 weeks prior to calving to prepare the rumen and support late fetal growth",
-          "Pelleting feeds with high-pressure saturated steam",
-          "Cooking feed grains in boiling water",
-          "Treating straws with pressurized steam in an autoclave"
+          "Pelleting dairy concentrate mixtures under high-pressure saturated steam to gelatinize starch and destroy pathogens",
+          "Soaking whole cereal grains and legume straws in boiling hot water prior to morning feeding to improve palatability",
+          "Treating crop residues with pressurized steam in an autoclave to hydrolyze recalcitrant ester lignin bonds"
         ],
         "a": 0,
         "e": "'Steaming up' builds body reserves, adapts rumen papillae to higher concentrate diets, and prevents post-calving ketosis in high-yielding dairy cows.",
