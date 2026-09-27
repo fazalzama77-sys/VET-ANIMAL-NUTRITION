@@ -7169,9 +7169,9 @@ var quizBank = {
         "q": "What is the recommended Crude Protein and Metabolizable Energy specification for Broiler Starter diet (8 to 21 days)?",
         "o": [
           "21.5 to 22.0% CP and 3050 to 3100 kcal ME/kg",
-          "16.0% CP and 2700 kcal ME/kg",
-          "25.0% CP and 3300 kcal ME/kg",
-          "19.0% CP and 2900 kcal ME/kg"
+          "16.0 to 16.5% CP and 2650 to 2700 kcal ME/kg",
+          "24.5 to 25.0% CP and 3250 to 3300 kcal ME/kg",
+          "18.5 to 19.0% CP and 2850 to 2900 kcal ME/kg"
         ],
         "a": 0,
         "e": "Broiler starter feed contains 21.5-22% CP and ~3100 kcal ME/kg to sustain rapid muscle protein deposition.",
@@ -7182,10 +7182,10 @@ var quizBank = {
       {
         "q": "What is the recommended Crude Protein and Metabolizable Energy level for Broiler Finisher diet (22 to 42 days)?",
         "o": [
-          "24.0% CP and 2800 kcal ME/kg",
+          "23.5 to 24.0% CP and 2800 to 2850 kcal ME/kg",
           "19.5 to 20.0% CP and 3150 to 3200 kcal ME/kg",
-          "14.0% CP and 2600 kcal ME/kg",
-          "22.0% CP and 3000 kcal ME/kg"
+          "14.5 to 15.0% CP and 2550 to 2600 kcal ME/kg",
+          "21.5 to 22.0% CP and 2950 to 3000 kcal ME/kg"
         ],
         "a": 1,
         "e": "Broiler finisher feeds reduce CP to 19.5-20.0% while boosting ME to 3150-3200 kcal/kg to support final weight gain and fat finish.",
@@ -7210,10 +7210,10 @@ var quizBank = {
       {
         "q": "What proportion of the dietary calcium for laying hens should be provided as coarse particles (2 to 4 mm limestone or oyster shell) fed in the late afternoon?",
         "o": [
-          "0% (all fine powder)",
+          "0% (calcium must be 100% fine precipitated chalk)",
           "50 to 70% of total dietary calcium",
-          "100% fine powder",
-          "5% only"
+          "100% coarse grit without any fine limestone base",
+          "5 to 10% coarse grit with remaining as dicalcium P"
         ],
         "a": 1,
         "e": "Coarse calcium particles dissolve slowly in the gizzard overnight, providing continuous calcium flow during nighttime eggshell calcification.",
@@ -7225,9 +7225,9 @@ var quizBank = {
         "q": "What is the recommended dietary Crude Protein level for Layer Chick (0 to 8 weeks) and Layer Grower (9 to 18 weeks) phases?",
         "o": [
           "20% CP for chick, and 15 to 16% CP for grower",
-          "24% CP for chick, and 22% CP for grower",
-          "16% CP for chick, and 20% CP for grower",
-          "14% CP for chick, and 12% CP for grower"
+          "24% CP for chick, and 21 to 22% CP for grower",
+          "16% CP for chick, and 19 to 20% CP for grower",
+          "14% CP for chick, and 11 to 12% CP for grower"
         ],
         "a": 0,
         "e": "Layer pullets receive 20% CP in chick stage and 15-16% CP in grower stage, avoiding excessive weight gain that causes premature sexual maturity.",
@@ -7238,9 +7238,9 @@ var quizBank = {
       {
         "q": "Why is qualitative or quantitative feed restriction practiced during the grower phase (9 to 18 weeks) of egg-type pullets?",
         "o": [
-          "To starve the birds to save feed cost",
-          "To prevent feather growth",
-          "To induce molting in pullets",
+          "To induce severe physiological starvation and suppress ovarian follicle development until light stimulation at 22 weeks",
+          "To synchronize primary wing feather molt and accelerate the deposition of subcutaneous fat reserves for early winter lay",
+          "To completely arrest skeletal ossification and promote the early accumulation of medullary bone calcium reserves in pullets",
           "To prevent obesity, ensure uniform target body weight, and delay premature onset of lay to avoid small egg size and prolapse"
         ],
         "a": 3,
@@ -7266,10 +7266,10 @@ var quizBank = {
       {
         "q": "What is the secretory function of the avian proventriculus?",
         "o": [
-          "Mechanical mastication",
+          "Mechanical churning and trituration of ingested coarse cereal grains",
           "Secretion of gastric juice containing Hydrochloric Acid (HCl) and Pepsinogen",
-          "Absorption of volatile fatty acids",
-          "Storage and moistening of feed exclusively"
+          "Absorption of volatile fatty acids across specialized mucosal folds",
+          "Temporary storage and enzymatic pre-digestion by salivary amylase"
         ],
         "a": 1,
         "e": "The proventriculus is the glandular stomach of birds, secreting HCl and pepsinogen before feed passes into the muscular ventriculus.",
@@ -7280,10 +7280,10 @@ var quizBank = {
       {
         "q": "Why is dietary nitrogen in avian species excreted as Uric Acid rather than urea?",
         "o": [
-          "Birds lack a liver",
-          "Uric acid is converted into egg white",
+          "Avian hepatocytes completely lack mitochondrial carbamoyl phosphate synthetase I and ornithine transcarbamylase for urea synthesis",
+          "Dietary urea is rapidly volatilized into gaseous ammonia within the renal tubules, producing severe chemical necrosis of ureters",
           "Uric acid is nearly insoluble in water, allowing nitrogen excretion with minimal water loss (adaptation to flight and cleidoic eggs)",
-          "Urea is explosive in feathers"
+          "Uric acid functions as an essential biochemical surfactant required for the physical emulsification of fats in the cloacal chamber"
         ],
         "a": 2,
         "e": "Uric acid contains 4 nitrogens per mole and precipitates out as a semi-solid paste, conserving water and allowing embryo development inside non-cleidoic eggs.",
@@ -7308,9 +7308,9 @@ var quizBank = {
       {
         "q": "Which essential amino acid is second-limiting in typical broiler diets based on maize and soybean meal?",
         "o": [
-          "Valine",
-          "Histidine",
-          "Arginine",
+          "Valine or Isoleucine",
+          "Histidine or Leucine",
+          "Arginine or Tryptophan",
           "Lysine or Threonine"
         ],
         "a": 3,
@@ -7322,10 +7322,10 @@ var quizBank = {
       {
         "q": "Why do chickens have an exceptionally high dietary requirement for the basic amino acid Arginine?",
         "o": [
-          "Chickens convert arginine into feathers",
+          "Chickens deposit vast quantities of arginine directly into keratinized plumage barbs",
           "Chickens completely lack the urea cycle and cannot synthesize ornithine or citrulline de novo",
-          "Arginine is required to synthesize uric acid",
-          "Chickens store arginine in the crop"
+          "Arginine serves as the sole carbon and nitrogen donor for hepatic uric acid synthesis",
+          "Chickens store free arginine pools in specialized diverticula along the crop wall"
         ],
         "a": 1,
         "e": "Because birds excrete uric acid instead of urea, they lack functional carbamoyl phosphate synthetase-I and ornithine transcarbamylase, making arginine an absolute essential.",
@@ -7350,10 +7350,10 @@ var quizBank = {
       {
         "q": "What is 'Cage Layer Fatigue' in high-producing commercial laying hens?",
         "o": [
-          "Muscular fatigue from flapping wings in cages",
+          "Generalized muscular exhaustion caused by persistent physical wing flapping inside battery enclosures",
           "Acute osteoporosis and flaccid paralysis caused by excessive skeletal calcium depletion to maintain eggshell calcification",
-          "Vitamin C deficiency",
-          "Sleep deprivation in battery cages"
+          "Acute systemic ascorbic acid deficiency resulting from failure of endogenous renal synthesis in hens",
+          "Chronic neurogenic exhaustion induced by unremitting artificial photoperiod stimulation in lay cages"
         ],
         "a": 1,
         "e": "Intense egg production drains medullary and cortical bone calcium; severe hypocalcemia and osteoporosis cause sternal recumbency and bone fractures.",
@@ -7364,10 +7364,10 @@ var quizBank = {
       {
         "q": "Which synthetic pigment is routinely supplemented in commercial layer feeds to impart the desirable golden-yellow color to egg yolks?",
         "o": [
-          "Riboflavin powder",
-          "Curcumin",
+          "Crystalline riboflavin (Vitamin B2) premix",
+          "Turmeric root curcuminoids and bisdemethoxycurcumin",
           "Carotenoids (Xanthophylls like lutein, zeaxanthin, and canthaxanthin)",
-          "Hematoxylin"
+          "Synthetic hematoxylin lake and erythrosine dye salts"
         ],
         "a": 2,
         "e": "Yellow and red oxy-carotenoids (xanthophylls) are absorbed and deposited directly into the ovarian follicle lipid droplet to color egg yolks.",
@@ -7378,10 +7378,10 @@ var quizBank = {
       {
         "q": "Which species of domestic poultry is notoriously the most sensitive to Aflatoxin B1 toxicity, with dietary levels as low as 15 to 20 ppb causing fatal hepatic necrosis?",
         "o": [
-          "Chickens",
-          "Japanese Quails",
+          "Broiler Chickens (Gallus domesticus)",
+          "Japanese Quails (Coturnix japonica)",
           "Ducklings (Anas platyrhynchos)",
-          "Pigeons"
+          "Carrier Pigeons (Columba livia)"
         ],
         "a": 2,
         "e": "Ducklings possess rapid hepatic bioactivation of aflatoxin B1 into toxic 8,9-epoxide with low glutathione S-transferase conjugation, making them hypersensitive.",
@@ -7407,9 +7407,9 @@ var quizBank = {
         "q": "Japanese Quail (Coturnix coturnix japonica) starter diets require what level of Crude Protein?",
         "o": [
           "24 to 26% Crude Protein",
-          "16% Crude Protein",
-          "12% Crude Protein",
-          "35% Crude Protein"
+          "16 to 18% Crude Protein",
+          "12 to 14% Crude Protein",
+          "34 to 36% Crude Protein"
         ],
         "a": 0,
         "e": "Quail chicks grow rapidly and reach sexual maturity at 6 weeks, requiring 24-26% CP in starter and 20-22% CP in layer diets.",
@@ -7420,10 +7420,10 @@ var quizBank = {
       {
         "q": "Which metabolic disease in broiler chickens is caused by rapid growth rate, high metabolic rate, and hypoxia, leading to right ventricular dilation and fluid accumulation in the coelomic cavity?",
         "o": [
-          "Crazy Chick Disease",
-          "Curled Toe Paralysis",
+          "Nutritional Encephalomalacia (Crazy Chick Disease)",
+          "Curled Toe Paralysis (Riboflavin Deficiency)",
           "Ascites Syndrome (Pulmonary Hypertension Syndrome)",
-          "Slipped Tendon"
+          "Perosis or Slipped Tendon (Chondrodystrophy)"
         ],
         "a": 2,
         "e": "Rapid muscle mass development demands high oxygen; inability of the cardiopulmonary system to oxygenate tissues causes pulmonary arterial hypertension, right ventricular failure, and ascites.",
@@ -7434,10 +7434,10 @@ var quizBank = {
       {
         "q": "Sudden Death Syndrome (Flip-Over Disease) in fast-growing male broilers is primarily a nutritional-metabolic disorder associated with:",
         "o": [
-          "Severe intestinal coccidiosis",
+          "Severe acute hemorrhagic typhlitis triggered by clinical Eimeria tenella coccidial oocysts",
           "Acute fatal cardiac ventricular fibrillation triggered by high energy intake and rapid growth",
-          "Esophageal impaction with whole corn",
-          "Vitamin A deficiency"
+          "Mechanical impaction of the crop and proventriculus caused by unground fibrous corn kernels",
+          "Hypovitaminosis A resulting in squamous metaplasia of esophageal and pharyngeal mucous glands"
         ],
         "a": 1,
         "e": "Flip-over disease occurs in healthy, rapidly growing broilers that suddenly flap wings, lose balance, flip on their backs, and die of cardiac ventricular fibrillation.",
@@ -7449,9 +7449,9 @@ var quizBank = {
         "q": "What is the non-phytate (available) phosphorus requirement of broiler chickens?",
         "o": [
           "0.45% in starter and 0.40% in finisher diets",
-          "1.5% throughout",
-          "0.05% throughout",
-          "2.0% throughout"
+          "1.20% in starter and 1.10% in finisher diets",
+          "0.10% in starter and 0.08% in finisher diets",
+          "1.80% in starter and 1.60% in finisher diets"
         ],
         "a": 0,
         "e": "Broilers require approximately 0.45% available phosphorus in starter and 0.40% in finisher diets to ensure normal skeletal ossification.",
@@ -7463,9 +7463,9 @@ var quizBank = {
         "q": "Why is supplemental microbial phytase enzyme commonly added to commercial poultry rations containing maize and soybean meal?",
         "o": [
           "To release phosphorus bound in myo-inositol hexakisphosphate (phytate), reducing mineral dicalcium phosphate addition and environmental pollution",
-          "To digest feather keratin",
-          "To synthesize vitamin D3",
-          "To convert uric acid into glucose"
+          "To digest recalcitrant disulfide cross-linked bonds in dietary feather meal keratins and elevate metabolizable cystine",
+          "To stimulate endogenous cutaneous synthesis of cholecalciferol (vitamin D3) and bypass renal 1-alpha-hydroxylase limits",
+          "To convert surplus metabolic uric acid into digestible glucose and prevent deposition of monosodium urate crystals in joints"
         ],
         "a": 0,
         "e": "About 60-70% of plant phosphorus is locked in phytate; microbial phytase hydrolyzes phosphate groups, boosting phosphorus bioavailability by 20-30%.",
@@ -7476,10 +7476,10 @@ var quizBank = {
       {
         "q": "Which anti-nutritional soluble non-starch polysaccharide (NSP) in wheat and barley increases digesta viscosity, causing sticky wet droppings in broilers?",
         "o": [
-          "Cellulose",
+          "Insoluble crystalline cellulose fibrils",
           "Arabinoxylans and beta-glucans",
-          "Starch",
-          "Pectin"
+          "Unbranched alpha-amylose polysaccharides",
+          "Highly branched amylopectin polymers"
         ],
         "a": 1,
         "e": "Soluble arabinoxylans (in wheat) and beta-glucans (in barley) form viscous gels in the avian gut, slowing nutrient diffusion and creating sticky wet droppings.",
@@ -7491,9 +7491,9 @@ var quizBank = {
         "q": "Which exogenous enzyme supplement is added to barley-based poultry diets to hydrolyze viscous non-starch polysaccharides?",
         "o": [
           "Beta-glucanase and Xylanase",
-          "Pepsin",
-          "Lipase",
-          "Urease"
+          "Gastric Pepsin and Trypsin",
+          "Pancreatic Colipase Enzyme",
+          "Bacterial Urease Additive"
         ],
         "a": 0,
         "e": "Endo-beta-glucanase and xylanase cleave the backbone of soluble NSPs, reducing intestinal viscosity, improving FCR, and resolving wet litter.",
@@ -7518,10 +7518,10 @@ var quizBank = {
       {
         "q": "Which vitamin deficiency causes Crazy Chick Disease (Encephalomalacia), characterized by ataxia, head retraction, and cerebellar hemorrhage?",
         "o": [
-          "Vitamin A",
-          "Vitamin C",
+          "Retinol (active Vitamin A)",
+          "Ascorbic acid (Vitamin C)",
           "Vitamin E (alpha-tocopherol)",
-          "Vitamin D3"
+          "Cholecalciferol (Vit D3)"
         ],
         "a": 2,
         "e": "Vitamin E deficiency in the presence of oxidized dietary polyunsaturated fatty acids causes free radical peroxidation of cerebellar cell membranes.",
@@ -7547,9 +7547,9 @@ var quizBank = {
         "q": "Perosis (slipped tendon) in poultry is caused by a dietary deficiency of which trace mineral and water-soluble vitamin?",
         "o": [
           "Manganese and Choline (or Biotin/Folic acid)",
-          "Iron and Vitamin C",
-          "Copper and Riboflavin",
-          "Zinc and Vitamin B12"
+          "Ferrous Iron and Ascorbic Acid (Vitamin C)",
+          "Cupric Copper and Riboflavin (Vitamin B2)",
+          "Ionic Zinc and Cyanocobalamin (Vitamin B12)"
         ],
         "a": 0,
         "e": "Manganese and choline are essential for proteoglycan synthesis and epiphyseal chondrogenesis; deficiency causes flattening of the hock and tendon displacement.",
@@ -7560,10 +7560,10 @@ var quizBank = {
       {
         "q": "What is the primary sign of Riboflavin (Vitamin B2) deficiency in young chicks?",
         "o": [
-          "Goose stepping",
-          "Big head",
+          "Goose-stepping gait (Pantothenate deficiency)",
+          "Nutritional encephalomalacia (Crazy chick)",
           "Curled Toe Paralysis",
-          "Rickets"
+          "Rachitic rosary and osteomalacic beaks"
         ],
         "a": 2,
         "e": "Myelin sheath degeneration in the sciatic nerve causes chicks to walk on their hocks with their toes curled inward.",
@@ -7575,9 +7575,9 @@ var quizBank = {
         "q": "Biotin deficiency in chicks produces which pathognomonic diagnostic lesion?",
         "o": [
           "Severe dermatitis on the bottoms of the feet and corners of the beak, and Fatty Liver and Kidney Syndrome (FLKS)",
-          "Enlarged liver with cirrhosis",
-          "Blindness",
-          "Loss of plumage color"
+          "Severe hepatic cirrhosis and extensive portal fibrosis accompanied by ascites and icterus",
+          "Bilateral corneal ulceration, xerophthalmia, and complete keratinization of visual mucosa",
+          "Complete bilateral loss of melanin pigmentation across juvenile wing and tail plumages"
         ],
         "a": 0,
         "e": "Biotin deficiency causes crusty plantar pododermatitis, perioral crusts, and FLKS due to failure of pyruvate carboxylase and gluconeogenesis.",
@@ -7602,10 +7602,10 @@ var quizBank = {
       {
         "q": "What is the maximum safe inclusion level of raw Rice Polish in commercial broiler diets in India without fat rancidity or antinutritional depression?",
         "o": [
-          "50%",
+          "45 to 50% (unprocessed raw meal)",
           "10 to 15% (stabilized or de-oiled)",
-          "80%",
-          "0% (strictly forbidden)"
+          "75 to 80% (high solvent extract)",
+          "Zero percent (strictly excluded)"
         ],
         "a": 1,
         "e": "Raw rice polish contains high oil susceptible to hydrolytic lipase rancidity; inclusion is restricted to 10-15%, whereas de-oiled rice bran (DORB) can be higher.",
@@ -7617,9 +7617,9 @@ var quizBank = {
         "q": "Why does inclusion of excessive Fish Meal (>8-10%) in poultry diets cause a fishy taint in eggs and broiler meat?",
         "o": [
           "High concentrations of trimethylamine (TMA) and polyunsaturated fatty acids accumulate in meat lipids and egg yolk",
-          "Fish meal contains urea",
-          "Fish meal is indigestible",
-          "Fish meal destroys liver glycogen"
+          "Fish meal contains high non-protein nitrogen that hydrolyzes into volatile urea and ammonium salts in eggs",
+          "Fish meal proteins are resistant to pepsin digestion and undergo putrefactive colonic fermentation by flora",
+          "Fish meal lipids deplete hepatic glycogen stores and disrupt intermediate carbohydrate metabolism pathways"
         ],
         "a": 0,
         "e": "High levels of trimethylamine and fish oil PUFAs deposit in the yolk and adipose tissue, producing objectionable fishy odors and flavors.",
@@ -7630,9 +7630,9 @@ var quizBank = {
       {
         "q": "The inclusion of dried Azolla pinnata (an aquatic fern) in backyard poultry rations serves as an economical source of:",
         "o": [
-          "Pure starch",
-          "Indigestible silica only",
-          "Saturated fat",
+          "Pure soluble alpha-glucan starches and dextrins",
+          "Indigestible biogenic silica and structural cutin",
+          "Long-chain saturated triacylglycerol fatty acids",
           "Crude Protein (20-25% CP) and Carotenoid pigments"
         ],
         "a": 3,
@@ -7644,9 +7644,9 @@ var quizBank = {
       {
         "q": "In commercial layer management, 'Induced Molting' is a nutritional technique used to:",
         "o": [
-          "Fatten the birds for broiler meat",
-          "Eliminate Salmonella infections",
-          "Prevent feather loss",
+          "Fatten spent commercial hens rapidly to maximize eviscerated carcass dressing yield for fresh poultry meat markets",
+          "Completely eliminate subclinical carrier states of Salmonella enteritidis and avian pathogenic Escherichia coli from gut",
+          "Arrest natural senescent feather shedding and induce immediate structural hypertrophy of pectoral flight musculature",
           "Rejuvenate the hen's reproductive tract and restore high egg production and shell quality for a second laying cycle"
         ],
         "a": 3,
@@ -7658,10 +7658,10 @@ var quizBank = {
       {
         "q": "What is the recommended Crude Protein and Lysine requirement for young nursing Piglets (Creep feed, 5 to 10 kg body weight)?",
         "o": [
-          "14% Crude Protein and 0.6% Lysine",
+          "13 to 14% Crude Protein and 0.5 to 0.6% Lysine",
           "20 to 22% Crude Protein and 1.3 to 1.4% Lysine",
-          "30% Crude Protein and 2.5% Lysine",
-          "10% Crude Protein and 0.2% Lysine"
+          "28 to 30% Crude Protein and 2.2 to 2.4% Lysine",
+          "10 to 11% Crude Protein and 0.2 to 0.3% Lysine"
         ],
         "a": 1,
         "e": "Creep diets for nursing piglets must be highly concentrated in protein (20-22% CP) with a minimum of 1.3-1.4% digestible lysine to support rapid muscle growth.",
@@ -7672,9 +7672,9 @@ var quizBank = {
       {
         "q": "Why must all newborn piglets housed on concrete floors receive an intramuscular injection of 150 to 200 mg Iron Dextran within 3 days of birth?",
         "o": [
-          "Iron stimulates early tooth growth",
-          "Iron prevents diarrhea caused by E. coli",
-          "Iron is required for tail docked healing",
+          "Iron stimulates the rapid mineralization and eruption of needle teeth to facilitate suckling efficiency and prevent teat necrosis in the sow",
+          "Iron provides passive mucosal barrier protection that completely neutralizes heat-labile enterotoxins of enterotoxigenic Escherichia coli",
+          "Iron stimulates hepatic bile acid conjugation and accelerates the absorption of fat-soluble vitamins across neonatal porcine enterocytes",
           "Piglets are born with minimal iron stores (~50 mg) and sow milk provides only ~1 mg/day against a requirement of 7 mg/day ('Piglet Anemia / Thumps')"
         ],
         "a": 3,
@@ -7714,9 +7714,9 @@ var quizBank = {
       {
         "q": "What is the Crude Protein requirement for growing pigs (20 to 50 kg) and finishing pigs (50 to 90 kg)?",
         "o": [
-          "24% CP for growers, and 20% CP for finishers",
-          "12% CP for growers, and 10% CP for finishers",
-          "20% CP for growers, and 22% CP for finishers",
+          "22 to 24% CP for growers, and 19 to 20% CP for finishers",
+          "11 to 12% CP for growers, and 9 to 10% CP for finishers",
+          "18 to 20% CP for growers, and 21 to 22% CP for finishers",
           "16 to 18% CP for growers, and 14 to 15% CP for finishers"
         ],
         "a": 3,
@@ -7728,9 +7728,9 @@ var quizBank = {
       {
         "q": "Why is feed intake strictly restricted (1.8 to 2.2 kg/day of a balanced diet) in pregnant gestating sows?",
         "o": [
-          "Because sows cannot swallow large meals",
-          "To prevent abortions from stomach rupture",
-          "To keep sow body weight below 50 kg",
+          "Because gestating sows possess a very small non-glandular stomach that undergoes severe mechanical rupture under normal bulk intake",
+          "To prevent spontaneous mechanical uterine torsion and fetal asphyxia caused by excessive intra-abdominal digestive organ volume",
+          "To maintain adult sow live weight strictly below 80 kg to prevent structural breakdown of limb joints and claw lameness in crates",
           "To prevent excessive maternal fatness, which causes embryonic mortality, farrowing difficulties (dystocia), and low lactation feed intake"
         ],
         "a": 3,
@@ -7742,10 +7742,10 @@ var quizBank = {
       {
         "q": "How should a lactating sow nursing 10 to 12 vigorous piglets be fed?",
         "o": [
-          "Restricted to 2 kg per day",
+          "Restricted to 2.0 to 2.5 kg per day of low-energy cereal straw mash",
           "Ad libitum (full feeding) with a high-energy, high-protein diet (16-18% CP, >1.0% lysine)",
-          "Fed wheat straw and water only",
-          "Fed raw whole cottonseed"
+          "Offered untreated cereal crop residues and water without concentrates",
+          "Supplied whole unground cottonseed containing high levels of gossypol"
         ],
         "a": 1,
         "e": "A heavy lactating sow produces 8-12 kg milk daily and requires ad libitum feed (approx. 2 kg base + 0.5 kg per nursing piglet = 6-8 kg/day) to prevent severe weight loss.",
@@ -7756,10 +7756,10 @@ var quizBank = {
       {
         "q": "In horses, what anatomical compartment serves as the primary site of microbial fermentation of structural fibrous carbohydrates?",
         "o": [
-          "Reticulorumen",
-          "Stomach",
+          "Compartmentalized Reticulorumen",
+          "Glandular Stomach and Proventriculus",
           "Cecum and Large Colon (Hindgut)",
-          "Small Intestine"
+          "Duodenal Loop and Proximal Jejunum"
         ],
         "a": 2,
         "e": "The horse is a monogastric hindgut herbivore; microbial fermentation of fiber into volatile fatty acids occurs in the massive cecum (30 L) and large colon (80 L).",
@@ -7770,10 +7770,10 @@ var quizBank = {
       {
         "q": "Can the horse efficiently absorb and utilize microbial protein synthesized in its cecum and large colon?",
         "o": [
-          "Yes, hindgut microbial protein is absorbed across the rectum",
-          "Yes, horses perform continuous cecotrophy like rabbits",
+          "Yes, hindgut microbial amino acids are absorbed directly across the mucosal lining of the descending colon and rectum",
+          "Yes, horses engage in obligatory nocturnal cecotrophy analogous to lagomorphs, re-ingesting soft fermentative pellets",
           "No, because microbial protein is synthesized distal to the stomach and small intestine and is excreted unabsorbed in feces",
-          "Yes, microbial amino acids are absorbed directly into the bile duct"
+          "Yes, microbial peptides are transported retrograde across the ileocecal valve into the ileum for active absorption"
         ],
         "a": 2,
         "e": "Unlike ruminants whose microbes are digested in the abomasum, horses excrete hindgut microbial protein in feces; dietary essential amino acids must be supplied pre-cecally.",
@@ -7784,9 +7784,9 @@ var quizBank = {
       {
         "q": "What is the capacity of the adult horse's stomach relative to its total digestive tract volume?",
         "o": [
-          "Massive, holding 150 liters like the cow's rumen",
-          "50% of total volume",
-          "Zero (horses have no stomach)",
+          "Enormous, holding 120 to 150 liters analogous to the ruminant reticulorumen chamber",
+          "Comprises 45 to 50% of the total tract volume to store fibrous roughages for days",
+          "Anatomically absent (horses possess a continuous esophago-duodenal conduit system)",
           "Very small, representing only 8 to 10% of total tract volume (9 to 15 liters)"
         ],
         "a": 3,
@@ -7799,9 +7799,9 @@ var quizBank = {
         "q": "Why is an adult horse completely unable to vomit or regurgitate stomach contents during acute gastric distension?",
         "o": [
           "Extremely tight cardiac sphincter with strong oblique muscular fibers and acute angle of esophageal entry",
-          "Absence of a diaphragm",
-          "Lack of vomiting centers in the equine brain",
-          "Liquid stomach contents solidify instantly"
+          "Complete congenital absence of a muscular diaphragm separating the thorax and abdomen",
+          "Congenital absence of the emetic chemoreceptor trigger zone and motor centers in brain",
+          "Gastric contents undergo instantaneous chemical gelatinization upon contact with acid"
         ],
         "a": 0,
         "e": "The equine cardiac sphincter acts as a one-way valve; severe gastric distension from grain engorgement causes fatal gastric rupture rather than vomiting.",
@@ -7812,10 +7812,10 @@ var quizBank = {
       {
         "q": "What nutritional crisis occurs in horses when a large meal of starch-rich grain engorges the small intestine and spills into the cecum?",
         "o": [
-          "Immediate severe hypocalcemia",
+          "Severe acute hypocalcemic tetany caused by sudden exhaustion of the parathyroid glands following rapid calcium precipitation by undigested grain phytates in the upper duodenum",
           "Rapid microbial fermentation of starch in the cecum produces lactic acid, dropping cecal pH, killing Gram-negative bacteria, releasing endotoxins, and causing Colic and Founder (Laminitis)",
-          "Rupture of the spleen",
-          "Complete calcification of the liver"
+          "Acute mechanical rupture of the splenic capsule and severe internal hemorrhage triggered by rapid gaseous distension and anatomical rotation of the adjacent glandular stomach compartment",
+          "Extensive dystrophic calcification of the liver and kidneys caused by massive bone resorption triggered by acute dietary phosphorus overload and hyperparathyroidism in working horses"
         ],
         "a": 1,
         "e": "Starch spillover triggers cecal lactic acidosis; mucosal damage allows absorption of bacterial endotoxins, causing intense abdominal pain (colic) and digital laminitis (founder).",
@@ -7826,9 +7826,9 @@ var quizBank = {
       {
         "q": "To prevent equine colic and maintain normal hindgut motility, what is the absolute minimum forage (hay/pasture) requirement for a horse?",
         "o": [
-          "0.1% of body weight",
-          "Zero forage (100% pelleted grain)",
-          "5% of body weight",
+          "0.1 to 0.2% of body weight (concentrates provide all necessary bulk)",
+          "Zero percent forage (horses thrive best on 100% fine pelleted grain)",
+          "At least 4.5 to 5.0% of body weight (exclusively succulent pastures)",
           "At least 1.0 to 1.5% of body weight in dry matter (or >50% of total diet DM)"
         ],
         "a": 3,
@@ -7840,9 +7840,9 @@ var quizBank = {
       {
         "q": "Which feed grain is considered the safest and most traditional concentrate for horses due to its high fiber hull (10-12% CF) which prevents rapid grain engorgement?",
         "o": [
-          "Wheat",
-          "Rye",
-          "Maize",
+          "Milled Wheat Grain (Triticum aestivum)",
+          "Unprocessed Rye (Secale cereale)",
+          "Dent Corn Maize (Zea mays)",
           "Oats (Avena sativa)"
         ],
         "a": 3,
@@ -7854,10 +7854,10 @@ var quizBank = {
       {
         "q": "What is the primary energy substrate utilized by horses performing slow, prolonged, aerobic endurance exercise (e.g. trail riding)?",
         "o": [
-          "Muscle glycogen via anaerobic glycolysis exclusively",
-          "Pure blood urea",
+          "Skeletal muscle glycogen catabolized via anaerobic lactic glycolysis",
+          "Endogenous circulating urea catabolized by systemic urease enzymes",
           "Free fatty acids (aerobic beta-oxidation) and cecal volatile fatty acids",
-          "Dietary amino acids exclusively"
+          "Pure dietary branched-chain amino acids oxidized in the liver bed"
         ],
         "a": 2,
         "e": "Low-to-moderate intensity sustained exercise relies on oxidative phosphorylation of mobilized fatty acids and cecally absorbed acetate, sparing muscle glycogen.",
@@ -7868,9 +7868,9 @@ var quizBank = {
       {
         "q": "In high-performance racehorses, vegetable oil is commonly supplemented up to 8 to 10% of the concentrate ration to:",
         "o": [
-          "Prevent hair growth",
-          "Induce diarrhea before races",
-          "Replace all forage fiber",
+          "Prevent excessive follicular keratinization and accelerate complete shedding of the winter hair coat",
+          "Induce transient osmotic laxation to evacuate cecal digesta and reduce deadweight prior to racing",
+          "Completely eliminate the equine dietary requirement for coarse long forage fiber and pasture grazing",
           "Increase caloric density without overloading the gut with starch, and spare muscle glycogen reserves"
         ],
         "a": 3,
@@ -7882,9 +7882,9 @@ var quizBank = {
       {
         "q": "What metabolic disorder in horses, colloquially termed 'Monday Morning Disease' or 'Tying-Up' (Exertional Rhabdomyolysis), is triggered by feeding full grain rations during weekend rest days followed by sudden heavy exercise?",
         "o": [
-          "Milk fever",
-          "Ketosis",
-          "Grass tetany",
+          "Parturient Paresis (Hypocalcemia / Equine Eclampsia)",
+          "Bovine Acetonemia (Spontaneous Hypoglycemic Ketosis)",
+          "Hypomagnesemic Grass Tetany (Lactation Tetany Syndrome)",
           "Azoturia (Exertional Rhabdomyolysis / Polysaccharide Storage Myopathy)"
         ],
         "a": 3,
@@ -7896,10 +7896,10 @@ var quizBank = {
       {
         "q": "Why is sudden abrupt change of feed dangerous in horses?",
         "o": [
-          "It causes horses to develop horns",
-          "The horse immediately sheds its hooves",
+          "Abrupt dietary shifts cause immediate hyperkeratotic ulceration of the equine esophageal mucosa and sudden spontaneous loosening of permanent molar teeth",
+          "Sudden feeding transitions induce acute ischemic necrosis of the coronary band corium, causing instantaneous detachment of the equine hoof capsule",
           "Hindgut microbial populations require 7 to 10 days to adapt; sudden feed shifts cause dysbiosis, gas accumulation, and fatal spasmodic or impaction colic",
-          "It causes instantaneous blindness"
+          "Rapid changes in concentrate grain feeding cause complete irreversible bilateral atrophy of the equine optic nerve tracts and permanent central blindness"
         ],
         "a": 2,
         "e": "Equine cecal microbes are adapted to specific substrate profiles; any dietary changes should be phased in gradually over 7-10 days to prevent dysbiosis and colic.",
@@ -7911,9 +7911,9 @@ var quizBank = {
         "q": "What is the recommended ratio of Calcium to Phosphorus in equine diets across all life stages?",
         "o": [
           "1.2 : 1 to 2.0 : 1 (and never less than 1 : 1)",
-          "0.5 : 1 (High Phosphorus)",
-          "10 : 1",
-          "Zero Calcium"
+          "0.3 : 1 to 0.5 : 1 (High Phosphorus / Low Calcium)",
+          "8.0 : 1 to 10.0 : 1 (Severely High Dietary Calcium)",
+          "Zero Calcium (all requirements met through roughage)"
         ],
         "a": 0,
         "e": "Horses are extremely sensitive to phosphorus excess; phosphorus must never exceed calcium (Ca:P should be 1.2:1 to 2:1) to prevent osteodystrophia fibrosa (big head).",
@@ -7924,9 +7924,9 @@ var quizBank = {
       {
         "q": "In pig rations, which trace mineral is routinely supplemented at pharmacological growth-promoting levels (150 to 250 ppm) in starter diets?",
         "o": [
-          "Lead",
-          "Mercury",
-          "Cadmium",
+          "Inorganic Lead Acetate",
+          "Elemental Mercury Salts",
+          "Cadmium Chloride Premix",
           "Copper (as Copper Sulfate)"
         ],
         "a": 3,
@@ -7938,9 +7938,9 @@ var quizBank = {
       {
         "q": "Which mineral is supplemented in piglet diets at 2000 to 3000 ppm for the first 2 weeks post-weaning to control post-weaning diarrhea (scours)?",
         "o": [
-          "Iron",
-          "Magnesium",
-          "Potassium",
+          "Ferrous Sulfate heptahydrate",
+          "Magnesium Oxide calcined salt",
+          "Potassium Chloride fertilizer",
           "Zinc (as Zinc Oxide)"
         ],
         "a": 3,
@@ -7952,10 +7952,10 @@ var quizBank = {
       {
         "q": "What is the consequence of feeding raw, unprocessed soybeans to growing pigs?",
         "o": [
-          "Immediate death from cyanide",
+          "Immediate acute cyanide poisoning caused by hydrolytic release of prussic acid in the gastric juice",
           "Active Kunitz trypsin inhibitors inhibit protein digestion and cause pancreatic hypertrophy, severely depressing growth",
-          "Causes acute rickets",
-          "Pigs fatten at double the normal rate"
+          "Acute nutritional rickets and osteomalacia caused by irreversible precipitation of dietary calcium",
+          "Rapidly accelerated live weight gain and super-normal carcass fattening with zero adverse effects"
         ],
         "a": 1,
         "e": "Soybean trypsin inhibitors block digestive proteases; heat processing (extrusion or roasting) is mandatory to denature trypsin inhibitors for swine.",
@@ -7966,10 +7966,10 @@ var quizBank = {
       {
         "q": "What is 'Soft Pork' in swine production, and how is it caused nutritionally?",
         "o": [
-          "Pork contaminated with water",
+          "Bacterial liquefaction of muscle proteins caused by post-mortem contamination of processing water",
           "Oily, soft carcass fat caused by feeding diets high in unsaturated fatty acids (e.g. full-fat maize, rice bran, or vegetable oils)",
-          "Pork derived from very young piglets",
-          "Carcass devoid of skeletal bone"
+          "Pale, soft, and exudative (PSE) pork meat resulting exclusively from acute pre-slaughter transport stress",
+          "Carcass tissue devoid of mineralized bone matrix caused by severe nutritional secondary hyperparathyroidism"
         ],
         "a": 1,
         "e": "Non-ruminants absorb unsaturated dietary fatty acids directly and deposit them intact into adipose tissue, resulting in soft, oily, unmarketable fat that goes rancid quickly.",
@@ -7980,9 +7980,9 @@ var quizBank = {
       {
         "q": "Why is the use of non-protein nitrogen (urea) ineffective and dangerous in swine feeding?",
         "o": [
-          "Urea causes pig bristles to fall off",
-          "Urea destroys dietary starch",
-          "Pigs refuse to eat white powders",
+          "Feed-grade urea interferes with sulfur amino acid metabolism, causing immediate follicular dystrophy and permanent shedding of dermal swine bristles across the back",
+          "Urea forms insoluble covalent complexes with cereal starches, completely preventing pancreatic alpha-amylase and brush-border maltase hydrolysis in the duodenum",
+          "Swine possess an absolute congenital sensory aversion to white crystalline chemical nitrogen supplements, refusing all feed containing even trace amounts of urea",
           "Swine have an enzymatic, non-fermentative stomach and small intestine prior to the cecum, so urea is rapidly absorbed as toxic ammonia without being converted to protein"
         ],
         "a": 3,
@@ -8008,10 +8008,10 @@ var quizBank = {
       {
         "q": "Foals born to mares grazing endophyte-infected tall fescue (*Neotyphodium coenophialum*) grass during late gestation suffer from:",
         "o": [
-          "Instant twin births",
-          "Excessive milk production",
+          "Spontaneous twin conceptions and early bilateral embryonic resorptions",
+          "Excessive galactorrhea, milk dripping, and premature udder enlargement",
           "Prolonged gestation, agalactia (no milk), thickened placenta, and high foal mortality",
-          "Immediate shedding of teeth"
+          "Severe dental fluorosis, enamel hypoplasia, and shedding of incisors"
         ],
         "a": 2,
         "e": "Fescue ergot alkaloids act as dopamine agonists, suppressing maternal prolactin secretion, leading to severe agalactia, placental thickening, and foal death.",
@@ -8023,9 +8023,9 @@ var quizBank = {
         "q": "What is 'Creep Feeding' in foals, and when should it be introduced?",
         "o": [
           "Providing a balanced, high-protein concentrate in a restricted feeder accessible only to foals, introduced at 2 to 3 weeks of age",
-          "Feeding foals on the floor",
-          "Providing creep feed after 1 year",
-          "Feeding mares liquid milk replacer"
+          "Feeding unchopped long hay on stall floors to stimulate natural grazing and ground foraging behaviors in foals",
+          "Introducing high-energy grain mixtures only after complete weaning at twelve months of age has taken place",
+          "Supplying nursing mares with large volumes of reconstituted skim milk replacer to stimulate maternal lactation"
         ],
         "a": 0,
         "e": "Mare milk yield declines after peak lactation at 4-6 weeks; creep feeding from 2-3 weeks ensures smooth growth and reduces weaning shock.",
@@ -8064,10 +8064,10 @@ var quizBank = {
       {
         "q": "Feeding spoiled, moldy corn containing the mycotoxin Fumonisin B1 (produced by *Fusarium verticillioides*) to horses causes which fatal neurotoxic disease?",
         "o": [
-          "Grass tetany",
-          "Rickets",
+          "Hypomagnesemic Tetany (Equine Grass Staggers Syndrome)",
+          "Parturient Hypocalcemia (Equine Lactation Tetany Crisis)",
           "Equine Leukoencephalomalacia (ELEM / Moldy Corn Poisoning)",
-          "Night blindness"
+          "Polioencephalomalacia (Equine Thiamine Deficiency Necrosis)"
         ],
         "a": 2,
         "e": "Fumonisin B1 disrupts sphingolipid biosynthesis, producing liquefactive necrosis of the cerebral white matter (leukoencephalomalacia) and acute liver necrosis.",
@@ -8078,9 +8078,9 @@ var quizBank = {
       {
         "q": "Why is the domestic cat (Felis catus) classified as an 'Obligate Carnivore' from a nutritional and metabolic perspective?",
         "o": [
-          "Cats cannot swallow plant material",
-          "Cats lack teeth to chew grass",
-          "Cats do not have a stomach",
+          "Feline gastrointestinal anatomy possesses a completely non-glandular fore-stomach that undergoes acute necrotic ulceration upon physical contact with soluble cereal starches",
+          "Domestic cats possess an absolute anatomical inability to swallow plant material due to specialized retroflexed filiform papillae covering the entire dorsal tongue surface",
+          "Feline enterocytes completely lack brush-border peptide and amino acid transporters and must absorb intact animal proteins directly via massive enterocytic endocytosis",
           "Cats have unique metabolic evolutionary constraints requiring nutrients found exclusively in animal tissues (taurine, arachidonic acid, preformed vitamin A, high protein)"
         ],
         "a": 3,
@@ -8092,9 +8092,9 @@ var quizBank = {
       {
         "q": "Why is the minimum dietary protein requirement of cats roughly two to three times higher than that of adult dogs?",
         "o": [
-          "Cats cannot digest carbohydrates",
-          "Cats excrete whole protein in urine",
-          "Cats lack digestive proteases",
+          "Cats lack intestinal carbohydrases and must convert all dietary amino acids into glucose for cellular energy",
+          "Feline kidneys filter whole circulating serum proteins directly into urine without tubular reabsorption",
+          "Cats completely lack pancreatic endopeptidases and must consume excessive dietary protein to absorb peptides",
           "Cats cannot down-regulate hepatic transaminases and urea cycle enzymes, resulting in continuous, irreversible amino acid catabolism"
         ],
         "a": 3,
@@ -8106,10 +8106,10 @@ var quizBank = {
       {
         "q": "What clinical syndrome develops in cats fed a taurine-deficient diet for several months?",
         "o": [
-          "Acute rickets and big head",
-          "Immediate bilateral cataract",
+          "Nutritional Rickets and Osteomalacia (Severe Rubber Jaw Syndrome)",
+          "Bilateral Nuclear Cataracts and Lenticular Sclerosis of the Eyes",
           "Dilated Cardiomyopathy (DCM) and Feline Central Retinal Degeneration (FCRD)",
-          "Severe hair growth over the cornea"
+          "Excessive Cutaneous Hyperkeratosis and Corneal Follicular Growth"
         ],
         "a": 2,
         "e": "Taurine is essential for myocardial contractility and photoreceptor structure in the area centralis of the retina; deficiency leads to DCM and irreversible blindness.",
@@ -8120,9 +8120,9 @@ var quizBank = {
       {
         "q": "Why is a single meal lacking the amino acid Arginine potentially fatal within hours in a domestic cat?",
         "o": [
-          "Cats immediately develop hypoglycemia",
-          "The stomach ruptures",
-          "Body temperature plunges to zero",
+          "Arginine deficiency triggers an instantaneous catastrophic plunge in blood glucose, provoking fatal irreversible hypoglycemic coma within hours",
+          "The feline gastric mucosa undergoes acute focal ulceration and complete transmural perforation within two to three hours of consuming the meal",
+          "Basal systemic metabolic rate drops abruptly to zero as thyroid hormone synthesis and mitochondrial oxidative phosphorylation halt completely",
           "Cats cannot synthesize ornithine; without arginine, the urea cycle halts immediately, causing acute toxic hyperammonemic encephalopathy"
         ],
         "a": 3,
@@ -8134,9 +8134,9 @@ var quizBank = {
       {
         "q": "Why cannot domestic cats convert the amino acid Tryptophan to Niacin (Vitamin B3)?",
         "o": [
-          "Cats do not absorb tryptophan",
-          "Cats lack kidneys",
-          "Tryptophan is toxic to the cat liver",
+          "Feline enterocytes completely lack functional sodium-dependent neutral amino acid transporters for absorbing dietary tryptophan from digesta",
+          "Feline renal tubular epithelium excretes 100% of filtered tryptophan directly into urine before it can enter hepatic portal circulation",
+          "Tryptophan exerts direct cytotoxic effects on feline hepatocytes, selectively suppressing the transcription of kynurenine pathway enzymes",
           "Extremely high hepatic activity of picolinic acid carboxylase rapidly diverts intermediates toward the acetyl-CoA pathway instead of quinolinic acid"
         ],
         "a": 3,
@@ -8148,10 +8148,10 @@ var quizBank = {
       {
         "q": "Feline Lower Urinary Tract Disease (FLUTD) characterized by sterile Struvite uroliths is exacerbated by which dietary factor?",
         "o": [
-          "Excess dietary vitamin C",
+          "Excessive supplementation of ascorbic acid (Vitamin C) inducing systemic metabolic acidosis",
           "High dietary magnesium and ash in diets that produce an alkaline urinary pH (> 6.8)",
-          "Feeding pure fat",
-          "Low dietary protein"
+          "Diets formulated with high levels of unsaturated vegetable oils and zero dietary carbohydrates",
+          "Severe dietary restriction of crude protein leading to reduced urinary ammonium concentration"
         ],
         "a": 1,
         "e": "Struvite (magnesium ammonium phosphate hexahydrate) crystallizes readily in alkaline urine (pH > 6.8) containing elevated magnesium; acidifying diets (pH 6.2-6.5) dissolve struvite.",
@@ -8162,10 +8162,10 @@ var quizBank = {
       {
         "q": "Why are Chocolate and cocoa products highly toxic to domestic dogs?",
         "o": [
-          "Chocolate contains high starch that causes rumen acidosis",
-          "Cocoa binds dog hemoglobin",
+          "Chocolate contains concentrated levels of soluble non-starch polysaccharides that ferment explosively, inducing acute gastric dilatation and volvulus",
+          "Cocoa flavonoids bind irreversibly to canine hemoglobin and myoglobin, completely arresting oxygen delivery and cellular respiration in vital organs",
           "They contain Theobromine and Caffeine (methylxanthines), which dogs metabolize extremely slowly, causing cardiac arrhythmias, seizures, and death",
-          "Chocolate destroys canine teeth instantly"
+          "Theobromine stimulates opportunistic bacterial proteases in the canine oral cavity that rapidly dissolve dental enamel and erode gingival tissue"
         ],
         "a": 2,
         "e": "Dogs have a long elimination half-life for theobromine (~17.5 hours); toxic doses (100-200 mg/kg) cause adenosine receptor antagonism, tachycardia, and fatal seizures.",
@@ -8176,10 +8176,10 @@ var quizBank = {
       {
         "q": "Ingestion of Onions, Garlic, and Chives (*Allium* species) causes which toxic hematological disorder in dogs and cats?",
         "o": [
-          "Acute bone marrow aplasia",
-          "Severe leukemia",
+          "Aplastic pancytopenia and complete fatty replacement of hematopoietic bone marrow",
+          "Acute myelogenous leukemia and malignant proliferation of circulating leukocytes",
           "Hemolytic anemia characterized by Heinz body formation and eccentrocytes",
-          "Polycythemia vera"
+          "Absolute polycythemia vera accompanied by profound systemic vascular thrombosis"
         ],
         "a": 2,
         "e": "Organic sulfur compounds (n-propyl disulfide, thiosulfates) oxidize red blood cell hemoglobin, precipitating Heinz bodies and causing intravascular and extravascular hemolysis.",
@@ -8191,9 +8191,9 @@ var quizBank = {
         "q": "The artificial sweetener Xylitol causes which life-threatening acute toxic reaction when ingested by dogs?",
         "o": [
           "Massive insulin surge causing profound hypoglycemia followed by acute hepatic necrosis",
-          "Sudden cardiac arrest",
-          "Severe diabetes mellitus",
-          "Loss of coat color"
+          "Instantaneous cardiac ventricular fibrillation without any metabolic or biochemical changes",
+          "Severe insulin-dependent diabetes mellitus caused by autoimmune destruction of beta islet cells",
+          "Progressive loss of epidermal melanin pigmentation producing generalized cutaneous vitiligo"
         ],
         "a": 0,
         "e": "Xylitol stimulates a potent, dose-dependent release of insulin from the canine pancreas, dropping blood glucose to lethal levels within 30-60 minutes, followed by acute liver failure.",
@@ -8204,10 +8204,10 @@ var quizBank = {
       {
         "q": "Ingestion of Grapes and Raisins by domestic dogs is clinically associated with the unpredictable onset of:",
         "o": [
-          "Acute blindness",
-          "Pancreatic hypertrophy",
+          "Acute bilateral optic neuropathy",
+          "Exocrine pancreatic hypertrophy",
           "Acute oliguric or anuric renal failure",
-          "Immediate loss of hearing"
+          "Cochlear sensory neuro-deafness"
         ],
         "a": 2,
         "e": "Tartaric acid present in grapes causes acute proximal tubular necrosis and acute renal failure in sensitive canines.",
@@ -8219,9 +8219,9 @@ var quizBank = {
         "q": "What is the recommended dietary Crude Protein requirement for growing Puppies compared to Adult Dogs at maintenance?",
         "o": [
           "26 to 28% CP for puppies, and 18 to 22% CP for adult maintenance",
-          "10% CP for puppies, and 30% CP for adults",
-          "40% CP for puppies, and 10% CP for adults",
-          "Protein requirements are identical across all life stages"
+          "12 to 14% CP for puppies, and 30 to 32% CP for adult maintenance",
+          "38 to 42% CP for puppies, and 10 to 12% CP for adult maintenance",
+          "Uniformly 20% Crude Protein across all life stages and lifestyles"
         ],
         "a": 0,
         "e": "AAFCO and NRC guidelines recommend 26-28% CP and 8% fat for growing puppies, compared to 18-22% CP for adult canine maintenance.",
@@ -8232,9 +8232,9 @@ var quizBank = {
       {
         "q": "Why must domestic Rabbits (Oryctolagus cuniculus) consume high-fiber diets containing at least 14 to 16% Crude Fiber (or >30% NDF)?",
         "o": [
-          "Rabbits cannot digest any nutrients other than fiber",
-          "Fiber is required to synthesize vitamin C",
-          "Fiber stops rabbit teeth from falling out",
+          "Rabbits lack all digestive proteases and lipases, and obtain 100% of their metabolic calories from cellulose",
+          "Dietary fiber is the sole substrate utilized by intestinal enterocytes to synthesize endogenous L-ascorbic acid",
+          "Mechanical abrasiveness of crude fiber is required to prevent continuous spontaneous shedding of rabbit teeth",
           "Indigestible long fiber stimulates cecocolonic motility, prevents trichobezoars (hairballs), and prevents fatal enterotoxemia"
         ],
         "a": 3,
@@ -8246,9 +8246,9 @@ var quizBank = {
       {
         "q": "What is 'Cecotrophy' (Pseudorumination) in rabbits?",
         "o": [
-          "Regurgitation of stomach contents to chew cud",
-          "Eating soil to absorb minerals",
-          "Feeding exclusively on cereal grains",
+          "The continuous voluntary regurgitation of fibrous cecal contents into the mouth to chew the cud during quiet daytime resting periods",
+          "The behavioral consumption of mineral-rich subsoil and montmorillonite clay to bind and neutralize secondary dietary plant toxins",
+          "The exclusive selective ingestion of high-starch cereal concentrates to maximize propionate production in the non-fermentative stomach",
           "The ingestion of nutrient-rich soft nighttime fecal pellets directly from the anus to recover microbial protein, B vitamins, and minerals"
         ],
         "a": 3,
@@ -8261,9 +8261,9 @@ var quizBank = {
         "q": "What fatal clinical condition occurs in rabbits fed excessive high-starch concentrate pellets and inadequate hay?",
         "o": [
           "Mucoid Enteritis / Enterotoxemia caused by cecal starch overload proliferating Clostridium spiroforme",
-          "Acute rickets",
-          "Sudden gastric rupture",
-          "Blind staggers"
+          "Nutritional Secondary Hyperparathyroidism (Metabolic Bone Disease / Rubber Jaw)",
+          "Spontaneous gastric dilation and catastrophic diaphragmatic rupture in young kits",
+          "Blind Staggers (Polioencephalomalacia caused by microbial thiaminase destruction)"
         ],
         "a": 0,
         "e": "Excess starch spills into the cecum, disrupting the normal symbiotic flora and allowing toxigenic Clostridium spiroforme to produce lethal iota-like toxin.",
@@ -8275,9 +8275,9 @@ var quizBank = {
         "q": "Why do Guinea Pigs (*Cavia porcellus*) have an absolute obligate dietary requirement for Vitamin C (L-Ascorbic Acid)?",
         "o": [
           "They lack the functional liver enzyme L-gulonolactone oxidase required to synthesize ascorbic acid from glucose",
-          "They destroy vitamin C in their kidneys",
-          "They excrete vitamin C as sweat",
-          "Vitamin C is toxic to their stomach"
+          "They express hyperactive renal tubular oxidases that destroy filtered ascorbic acid within minutes",
+          "They excrete all absorbed vitamin C across specialized apocrine sweat glands along their footpads",
+          "Ascorbic acid exerts powerful ulcerogenic actions on their gastric and cecal mucosal epithelial layers"
         ],
         "a": 0,
         "e": "Like humans and primates, guinea pigs have a loss-of-function mutation in the GULO gene and develop fatal scurvy (hemorrhages, swollen joints) without dietary Vitamin C.",
@@ -8288,10 +8288,10 @@ var quizBank = {
       {
         "q": "What is the daily Vitamin C requirement for a healthy adult non-pregnant guinea pig?",
         "o": [
-          "1000 mg per day",
+          "500 to 1000 mg per day (to prevent systemic scurvy)",
           "10 to 20 mg per day (increasing to 30 mg during pregnancy)",
-          "0.01 mg per day",
-          "Zero (guinea pigs don't need vitamin C)"
+          "0.01 to 0.05 mg per day (minute catalytic trace)",
+          "Zero mg per day (guinea pigs synthesize vitamin C)"
         ],
         "a": 1,
         "e": "Adult guinea pigs require 10-20 mg ascorbic acid daily in drinking water or fresh greens (cabbage, capsicum) to prevent collagen synthesis failure.",
@@ -8303,9 +8303,9 @@ var quizBank = {
         "q": "Laboratory Rats (*Rattus norvegicus*) and Mice (*Mus musculus*) are routinely fed standardized pelleted diets primarily to:",
         "o": [
           "Prevent selective sorting of favorite ingredients and provide complete, uniform nutrition with constant tooth-wearing hardness",
-          "Make the animals grow fat quickly",
-          "Induce diabetes for research",
-          "Eliminate all gut bacteria"
+          "Accelerate rapid visceral adipose accumulation to induce severe obesity and metabolic syndrome for cardiovascular research models",
+          "Induce spontaneous type 2 diabetes mellitus and chronic hypertension through continuous exposure to high dietary glycemic loads",
+          "Completely eliminate normal resident cecocolonic microflora and maintain a germ-free gnotobiotic gastrointestinal environment"
         ],
         "a": 0,
         "e": "Homogeneous autoclavable pellets ensure consistent nutrient intake, prevent selective eating, and provide necessary mechanical resistance to wear down open-rooted incisors.",
@@ -8316,10 +8316,10 @@ var quizBank = {
       {
         "q": "Why must captive wild felids (lions, tigers, leopards) in zoological parks be fed whole animal carcasses with bones rather than boneless muscle meat?",
         "o": [
-          "Big cats refuse to eat soft meat",
+          "Captive large felids exhibit an innate psychological refusal to consume soft boneless meat, leading to severe self-induced anorexia and starvation",
           "Boneless meat is severely deficient in Calcium (Ca:P ratio 1:20), causing fatal Nutritional Secondary Hyperparathyroidism (Metabolic Bone Disease)",
-          "Bone marrow contains toxic enzymes",
-          "Bones prevent intestinal motility"
+          "Fresh bone marrow contains high concentrations of neuro-inhibitory enzymes that suppress stereotypic pacing and aggressive zoo cage behaviors",
+          "Dense mineralized bone fragments are strictly required to mechanically scrape the gastrointestinal mucosa and prevent fatal impaction of the colon"
         ],
         "a": 1,
         "e": "Pure lean skeletal muscle contains ~0.01% Ca and ~0.2% P (Ca:P 1:20); without bones or calcium carbonate supplements, captive carnivores suffer catastrophic osteomalacia and fractures.",
@@ -8331,9 +8331,9 @@ var quizBank = {
         "q": "In captive frugivorous and folivorous primates (e.g. chimpanzees, macaques), which vitamin must always be supplemented in the diet?",
         "o": [
           "Vitamin C (Ascorbic Acid)",
-          "Vitamin K3 only",
-          "Vitamin B12 only",
-          "Biotin only"
+          "Synthetic Menadione (Vitamin K3)",
+          "Cyanocobalamin (Vitamin B12 pool)",
+          "Biotin coenzyme (Vitamin B7/H)"
         ],
         "a": 0,
         "e": "All anthropoid primates lack L-gulonolactone oxidase and cannot synthesize Vitamin C, requiring daily fresh fruits, vegetables, or fortified commercial monkey chow.",
@@ -8344,10 +8344,10 @@ var quizBank = {
       {
         "q": "What is the primary nutritional hazard of feeding domestic cattle concentrate pellets to captive wild browsing ruminants (e.g. Blackbuck, Chital, Giraffes) in zoos?",
         "o": [
-          "Immediate bone calcification",
-          "Extreme vitamin D toxicity",
+          "Severe hypervitaminosis D resulting in widespread arterial calcification, metastatic nephrocalcinosis, and sudden cardiac syncope",
+          "Generalized skeletal hyperostosis and progressive ankylosing spondylosis of cervical and thoracic vertebrae with limb paralysis",
           "Acute and subacute ruminal acidosis, ruminitis, and abomasal ulceration due to low physically effective fiber and excess starch",
-          "Rapid tooth decay"
+          "Rapid bacterial dissolution of incisor dental enamel leading to severe alveolar osteonecrosis and permanent inability to prehend forage"
         ],
         "a": 2,
         "e": "Wild browsers have small rumens, thin ruminal mats, and rapid fermentation kinetics; starchy cattle concentrates cause acute ruminal acidosis and fatal ruminitis.",
@@ -8359,9 +8359,9 @@ var quizBank = {
         "q": "Captive zoo flamingoes require dietary supplementation of Canthaxanthin or Beta-carotene primarily to:",
         "o": [
           "Maintain their characteristic brilliant pink-red plumage pigmentation",
-          "Prevent blindness",
-          "Stimulate flight muscle hypertrophy",
-          "Increase egg size"
+          "Prevent irreversible bilateral cataract formation and retinal detachment",
+          "Stimulate profound hypertrophy of pectoral flight muscles in zoo aviaries",
+          "Increase clutch size and double eggshell calcium carbonate thickness"
         ],
         "a": 0,
         "e": "In the wild, flamingoes ingest aquatic carotenoid-rich crustaceans and algae; in captivity, synthetic canthaxanthin is added to the diet to prevent faded white plumage.",
@@ -8372,10 +8372,10 @@ var quizBank = {
       {
         "q": "What dietary management is essential when hand-rearing orphan wild mammalian neonates in captive wildlife centers?",
         "o": [
-          "Feeding undiluted commercial cow milk to all species",
+          "Feeding undiluted commercial bovine whole milk to all orphaned wildlife neonates irrespective of natural taxonomic adaptations or maternal milk profiles",
           "Formulating species-specific milk replacers matching maternal milk fat, protein, and solids (e.g. high fat/protein for carnivores, low fat for macropods)",
-          "Feeding dry adult pellets immediately",
-          "Providing sugar water only"
+          "Introducing coarsely chopped high-fiber adult ruminant forage and grain pellets immediately upon admission to captive neonatal rescue enclosures",
+          "Providing pure glucose-electrolyte solutions ad libitum until neonatal digestive tracts spontaneously develop adult physiological enzyme profiles"
         ],
         "a": 1,
         "e": "Maternal milk composition varies drastically across species (e.g. wild felid milk contains >8% protein and 7% fat); cow milk has excess lactose and causes fatal osmotic diarrhea.",
@@ -8386,10 +8386,10 @@ var quizBank = {
       {
         "q": "Which metabolic disease in captive reptiles (green iguanas, tortoises) is caused by feeding lettuce diets deficient in Calcium and lacking UV-B light?",
         "o": [
-          "Scurvy",
-          "Grass tetany",
+          "Nutritional Scurvy (Ascorbic Acid Exhaustion)",
+          "Hypomagnesemic Tetany (Grass Staggers Syndrome)",
           "Metabolic Bone Disease (Nutritional Secondary Hyperparathyroidism)",
-          "Polioencephalomalacia"
+          "Polioencephalomalacia (Cerebrocortical Necrosis)"
         ],
         "a": 2,
         "e": "Lack of UV-B prevents synthesis of cholecalciferol (D3), while low calcium diets stimulate parathyroid hormone, resulting in soft rubbery jaws and deformed carapaces.",
@@ -8401,9 +8401,9 @@ var quizBank = {
         "q": "Which nutritional strategy helps prevent feline idiopathic hepatic lipidosis (Fatty Liver Disease) in obese cats?",
         "o": [
           "Avoiding sudden complete anorexia or rapid starvation by ensuring steady voluntary intake of high-protein diets",
-          "Feeding only raw fish oil",
-          "Restricting water intake",
-          "Inducing rapid weight loss of 50% in one week"
+          "Supplying diets formulated exclusively with unrefined fish oil to maximize polyunsaturated fatty acid uptake",
+          "Restricting voluntary drinking water intake to reduce overall circulatory volume and decrease portal perfusion",
+          "Inducing sudden rapid weight reduction of fifty percent of total body weight within seven days of admission"
         ],
         "a": 0,
         "e": "Prolonged fasting in obese cats mobilizes massive peripheral fatty acids into hepatocytes exceeding VLDL export capacity, causing fatal hepatic lipidosis.",
@@ -8428,9 +8428,9 @@ var quizBank = {
       {
         "q": "Energy requirements and feed energy values for poultry are expressed in terms of:",
         "o": [
-          "Total digestible nutrients",
-          "Net energy for lactation",
-          "Starch equivalent",
+          "Total digestible nutrients (TDN, in percent)",
+          "Net energy for lactation (NEl, in Mcal/kg)",
+          "Kellner starch equivalent (SE, in kilograms)",
           "Metabolizable energy (nitrogen-corrected, AMEn)"
         ],
         "a": 3,
@@ -8442,10 +8442,10 @@ var quizBank = {
       {
         "q": "The standard purified diets recommended for laboratory rats and mice by the American Institute of Nutrition are:",
         "o": [
-          "NRC-94 Starter and Finisher",
-          "IS 1374 Type I and Type II",
+          "NRC-94 Broiler Starter and Finisher formulas",
+          "BIS IS 1374 Type I and Type II poultry feeds",
           "AIN-93G for growth and AIN-93M for maintenance",
-          "TMR-1 and TMR-2"
+          "TMR-1 Lactation and TMR-2 Dry Cow rations"
         ],
         "a": 2,
         "e": "AIN-93G supports growth, pregnancy and lactation; AIN-93M is for adult maintenance. They replaced the earlier AIN-76A diet.",
@@ -8457,9 +8457,9 @@ var quizBank = {
         "q": "In the factorial method of estimating nutrient requirements, the total requirement is obtained by:",
         "o": [
           "Adding the separately estimated requirements for maintenance and for each productive function",
-          "Feeding graded levels of the nutrient and finding the level that gives maximum response",
-          "Analysing only the carcasses of animals slaughtered at the start of the trial",
-          "Averaging the figures listed in different feeding standards"
+          "Feeding graded levels of the test nutrient and identifying the intake level maximizing performance",
+          "Analyzing body composition of representative animals slaughtered at the beginning of the experiment",
+          "Calculating mathematical averages of historical figures published across different feeding systems"
         ],
         "a": 0,
         "e": "Factorial: requirement = maintenance + growth + egg/milk + pregnancy (+ work), each estimated separately from its own measurements. The graded-level approach is the empirical (dose–response) method.",
@@ -8471,9 +8471,9 @@ var quizBank = {
         "q": "Estimating a requirement by feeding graded levels of a nutrient and identifying the level that gives maximum growth or egg output is called the:",
         "o": [
           "Empirical (dose–response / feeding trial) method",
-          "Factorial method",
-          "Comparative slaughter technique",
-          "Isotope dilution method"
+          "Factorial computation model",
+          "Comparative slaughter balance method",
+          "Isotope dilution turnover technique"
         ],
         "a": 0,
         "e": "The empirical method finds requirements directly from animal response. It is simple and practical but applies only to the conditions of the trial.",
@@ -8484,10 +8484,10 @@ var quizBank = {
       {
         "q": "In the comparative slaughter technique, the energy and protein retained by growing animals are estimated by:",
         "o": [
-          "Measuring oxygen consumption in a respiration chamber",
+          "Measuring indirect respiratory gas exchange and sensible heat dissipation in respiration chambers",
           "Analysing body composition of a group slaughtered at the start and of the test animals slaughtered at the end",
-          "Subtracting faecal nitrogen from nitrogen intake",
-          "Burning live-weight gain samples in a bomb calorimeter only"
+          "Subtracting total fecal and urinary nitrogen excretion from gross dietary nitrogen intake pools",
+          "Determining combustible gross heat of daily live weight gain in adiabatic oxygen bomb calorimeters"
         ],
         "a": 1,
         "e": "The initial slaughter group gives starting body composition. The difference from the final composition of the test animals gives energy and protein retained during the trial.",
@@ -8498,9 +8498,9 @@ var quizBank = {
       {
         "q": "Fatty liver haemorrhagic syndrome (FLHS) is typically seen in:",
         "o": [
-          "Broiler chicks in their first week",
-          "Ducklings fed mouldy groundnut cake",
-          "Turkey poults deficient in niacin",
+          "Fast-growing male broiler chicks during their first week of life",
+          "Growing ducklings receiving mouldy groundnut cake with aflatoxins",
+          "Young turkey poults suffering from acute dietary niacin deficiency",
           "Overweight caged laying hens fed high-energy diets"
         ],
         "a": 3,
@@ -8554,10 +8554,10 @@ var quizBank = {
       {
         "q": "Unlike ruminant feeding standards, which usually state requirements per animal per day, poultry and swine feeding standards mostly express requirements as:",
         "o": [
-          "kg TDN per 100 kg body weight",
+          "kg TDN per 100 kg body weight (TDN % of live mass)",
           "Nutrient concentration per kg of diet (e.g. % CP, kcal ME/kg)",
-          "Starch equivalent per litre of milk",
-          "Grams DCP per kg metabolic body weight"
+          "Kellner Starch Equivalent per litre of fluid milk",
+          "Grams digestible crude protein per kg metabolic size"
         ],
         "a": 1,
         "e": "Pigs and poultry are fed a complete diet ad libitum, so nutrients are specified as concentrations (% or per kg of feed). Intake then determines the daily supply.",
@@ -8568,9 +8568,9 @@ var quizBank = {
       {
         "q": "The nutrient profiles used to certify commercial dog and cat foods as 'complete and balanced' are published by:",
         "o": [
-          "BIS (Bureau of Indian Standards)",
-          "FSSAI",
-          "WOAH (formerly OIE)",
+          "Bureau of Indian Standards (BIS, New Delhi)",
+          "Food Safety and Standards Authority (FSSAI)",
+          "World Organisation for Animal Health (WOAH)",
           "AAFCO (Association of American Feed Control Officials)"
         ],
         "a": 3,
@@ -8597,9 +8597,9 @@ var quizBank = {
         "q": "Newborn piglets are particularly prone to hypoglycaemia in the first days of life because they:",
         "o": [
           "Are born with very small body fat and glycogen reserves and poor thermoregulation",
-          "Cannot absorb glucose from colostrum",
-          "Receive excess insulin in sow's milk",
-          "Lack the enzyme lactase at birth"
+          "Cannot absorb monomeric glucose or galactose across their neonatal enterocyte brush border",
+          "Receive abnormally high concentrations of maternal insulin transferred via sow colostrum",
+          "Completely lack the brush-border disaccharidase enzyme lactase during the first week of life"
         ],
         "a": 0,
         "e": "Piglets have about 1–2% body fat at birth and little ability to regulate temperature. Without early colostrum and warmth they quickly become hypoglycaemic. Lactase activity is actually high at birth.",
@@ -8611,9 +8611,9 @@ var quizBank = {
         "q": "'Flushing' of gilts and sows before breeding refers to:",
         "o": [
           "Increasing energy intake for about 10–14 days before mating to raise the ovulation rate",
-          "Withholding water for 24 hours before mating",
-          "Feeding a laxative diet after farrowing",
-          "Cutting dietary protein to 10% in late gestation"
+          "Withholding drinking water for 24 to 36 hours before scheduled natural mating",
+          "Offering specialized high-moisture laxative diets immediately after farrowing",
+          "Depressing dietary crude protein to 10% during late gestation to reduce fetal size"
         ],
         "a": 0,
         "e": "A short period of generous feeding before service increases the number of ova shed and so litter size. Feed is reduced again after mating to protect embryo survival.",
@@ -8624,9 +8624,9 @@ var quizBank = {
       {
         "q": "Wheat bran is commonly included in the ration of sows around farrowing mainly because it:",
         "o": [
-          "Is the richest source of lysine",
-          "Increases colostrum antibodies",
-          "Supplies vitamin C",
+          "Supplies the highest concentration of digestible lysine among cereals",
+          "Elevates maternal colostral immunoglobulin G titers prior to birth",
+          "Serves as the primary dietary source of ascorbic acid in swine feed",
           "Acts as a mild laxative and prevents constipation"
         ],
         "a": 3,
@@ -8638,10 +8638,10 @@ var quizBank = {
       {
         "q": "Many zoos keep one 'fast day' each week for large carnivores such as lions and tigers mainly to:",
         "o": [
-          "Allow their rumen microbes to recover",
-          "Increase vitamin C synthesis",
+          "Allow resident ruminal microflora to recover baseline fermentative activity",
+          "Stimulate endogenous hepatic synthesis of water-soluble L-ascorbic acid",
           "Mimic their natural gorge-and-fast feeding pattern and prevent obesity",
-          "Prevent cecotrophy"
+          "Prevent the behavioral re-ingestion of soft fermentative cecal pellets"
         ],
         "a": 2,
         "e": "Wild big cats eat irregularly — a large kill followed by days without food. A weekly fast day imitates this, controls body weight and aids digestive health.",
@@ -8652,10 +8652,10 @@ var quizBank = {
       {
         "q": "In rabbits, excess dietary calcium is:",
         "o": [
-          "Excreted mainly in the hard faecal pellets",
-          "Stored entirely in the caecum",
+          "Excreted predominantly in hard daytime fecal pellets via colonic secretion",
+          "Stored quantitatively within the cecal lumen without entering circulation",
           "Absorbed efficiently and the surplus excreted in the urine, which can become cloudy and chalky",
-          "Converted into calcium oxalate in the stomach"
+          "Precipitated as insoluble calcium oxalate crystals in the stomach lumen"
         ],
         "a": 2,
         "e": "Rabbits absorb calcium roughly in proportion to intake and excrete the excess through the kidneys. On high-calcium diets (e.g. lucerne only), the urine turns thick and chalky and urolithiasis can develop.",
@@ -8666,10 +8666,10 @@ var quizBank = {
       {
         "q": "The nutrient requirements of a pregnant mare increase markedly during the last trimester because:",
         "o": [
-          "The mare starts lactating from the 8th month of pregnancy",
+          "The pregnant mare initiates active lactation from the eighth month of pregnancy",
           "Most of the foetal growth occurs in the last three months of gestation",
-          "Gestation in the mare lasts only about 5 months",
-          "Foetal bones are formed only after birth"
+          "Gestation in equine species lasts for a total duration of only five to six months",
+          "Skeletal ossification and mineralization in the equine fetus occur only post-natally"
         ],
         "a": 1,
         "e": "About 60–65% of foal birth weight is gained in the last three months of an ~11-month (≈340-day) gestation. Energy, protein, calcium and phosphorus allowances are raised accordingly.",
