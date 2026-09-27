@@ -5303,9 +5303,9 @@ var quizBank = {
       {
         "q": "Do working draft bullocks require substantial increases in dietary Crude Protein percentage above maintenance during normal work?",
         "o": [
-          "Yes, working bullocks require concentrate mixtures formulated to contain at least 35 to 40% crude protein",
-          "Yes, protein must completely replace dietary fiber because muscle contraction consumes cellular peptides",
-          "No, dietary protein should be reduced to zero during hard work to prevent renal overload and uricemia",
+          "Yes, working draft bullocks require concentrate mixtures formulated to contain at least 35 to 40% crude protein to repair active muscle",
+          "Yes, dietary crude protein must completely replace dietary fiber because intense muscle contraction oxidizes structural amino acids",
+          "No, dietary crude protein should be reduced to near zero during hard work to prevent excessive renal metabolic overload and azotemia",
           "No, work increases energy (TDN) demand substantially, but protein requirements increase only marginally for minor muscle tissue repair"
         ],
         "a": 3,
@@ -5807,10 +5807,10 @@ var quizBank = {
       {
         "q": "Feeding sweet potato vines or cowpea fodder to lactating goats serves as an excellent source of:",
         "o": [
-          "Indigestible biogenic silica crystals",
-          "Toxic phenolic gossypol compounds",
+          "Insoluble biogenic silica and indigestible polycondensed lignin fractions",
+          "Concentrated phenolic gossypol pigments and cyanogenic glycoside toxins",
           "Highly digestible crude protein and carotene (Vitamin A precursor)",
-          "High concentrations of bypass fat"
+          "Rumen-protected bypass fats and long-chain unsaturated triacylglycerols"
         ],
         "a": 2,
         "e": "Leguminous cowpea and sweet potato forages provide 14-18% CP and high beta-carotene, significantly boosting milk yield in stall-fed goats.",
@@ -5849,10 +5849,10 @@ var quizBank = {
       {
         "q": "For optimal microbial utilization of non-protein nitrogen (urea) in the rumen, which dietary component is an absolute prerequisite?",
         "o": [
-          "Extremely high dietary concentrations of bypass proteins and protected amino acids",
+          "Extremely high dietary concentrations of bypass proteins and rumen-protected crystalline amino acids",
           "Readily available soluble carbohydrates (starch or molasses) to supply simultaneous ATP and carbon skeletons",
-          "High levels of lignified, recalcitrant structural fiber to slow down passage rate",
-          "Ad libitum access to ice-cold drinking water to depress rumen bacterial urease"
+          "High concentrations of lignified, recalcitrant structural fiber to maximize salivary bicarbonate flow",
+          "Ad libitum access to ice-cold drinking water to depress the catalytic velocity of bacterial ureases"
         ],
         "a": 1,
         "e": "Rapidly released ruminal ammonia can only be captured into microbial amino acids if alpha-keto acids (from starch/molasses fermentation) and ATP are available simultaneously.",
@@ -5961,9 +5961,9 @@ var quizBank = {
       {
         "q": "Why does feeding rumen-inert bypass fat not cause the fiber digestion depression seen when feeding raw vegetable oil?",
         "o": [
-          "Bypass fat contains zero long-chain fatty acids and yields only metabolic water upon ruminal fermentation",
-          "Bypass fat is rapidly converted into inert methane gas and carbon dioxide by rumen methanogenic archaea",
-          "Bypass fat is completely emulsified and destroyed by alkaline salivary secretions before reaching rumen",
+          "Bypass fat contains zero long-chain fatty acids and is metabolized strictly into carbon dioxide and water by rumen microflora",
+          "Bypass fat is converted directly into volatile propionic and butyric acids without interacting with the microbial surface coat",
+          "Calcium soaps undergo instantaneous alkaline dissolution in saliva, neutralizing ruminal acids before reaching the omasum",
           "Calcium soaps remain insoluble and inert at ruminal pH 6.2-6.8, so they do not coat fiber particles or inhibit cellulolytic bacteria"
         ],
         "a": 3,
@@ -6059,9 +6059,9 @@ var quizBank = {
       {
         "q": "How does feeding a negative DCAD (-50 to -100 mEq/kg DM) diet during the last 3 weeks of the dry period prevent milk fever?",
         "o": [
-          "Alkalinizes systemic blood pH, causing massive precipitation of circulating ionic calcium into bony matrix",
-          "Directly blocks transcellular calcium transport across mammary secretory enterocytes into colostral fluids",
-          "Selectively paralyzes chief cells of the parathyroid gland, halting parathyroid hormone release completely",
+          "Alkalinizes systemic blood pH, inducing acute precipitation of circulating ionic calcium into osteoid matrix and soft tissues",
+          "Directly blocks transcellular calcium transport across mammary secretory enterocytes into colostral fluids during late gestation",
+          "Selectively suppresses the transcription of parathyroid hormone mRNA in parathyroid chief cells, sparing bone calcium stores",
           "Induces mild metabolic acidosis, increasing tissue sensitivity to PTH and stimulating bone calcium resorption and renal calcitriol synthesis"
         ],
         "a": 3,
@@ -6130,9 +6130,9 @@ var quizBank = {
         "q": "Frothy (legume) bloat in cattle grazing lush lucerne or clover is primarily caused by:",
         "o": [
           "Soluble leaf proteins (Fraction I 18S ribulose-1,5-bisphosphate carboxylase) forming a persistent viscous foam trapping gas bubbles",
-          "Excessive accumulation of insoluble dry lignified wood shavings in the dorsal ruminal sac",
-          "Severe chronic dehydration causing complete cessation of salivary secretion and ruminal atony",
-          "Mechanical obstruction of the distal cardiac sphincter by foreign bodies or phytobezoars"
+          "Excessive accumulation of coarse lignified wood shavings and straw particles forming an impenetrable physical mat across the cardia",
+          "Severe chronic dehydration arresting the secretion of salivary mucins and bicarbonate buffers, leading to complete ruminal atony",
+          "Complete mechanical occlusion of the distal esophageal cardiac orifice by ingested phytobezoars, foreign bodies, or root vegetables"
         ],
         "a": 0,
         "e": "Chloroplastic Fraction I proteins and saponins act as foaming agents, creating a stable foam that traps fermentation gases and prevents normal eructation.",
