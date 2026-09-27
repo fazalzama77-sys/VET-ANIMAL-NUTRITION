@@ -5178,7 +5178,7 @@ var quizBank = {
         "q": "Negative Energy Balance (NEB) in early lactating high-yielding dairy cows occurs primarily because:",
         "o": [
           "Peak milk production is reached at 4 to 6 weeks, while peak dry matter intake lags behind until 8 to 10 weeks postpartum",
-          "Severe psychological anorexia induced by maternal separation, novel stanchion housing, and frequent machine milking",
+          "Severe physiological neuro-endocrine anorexia induced by abrupt maternal separation, novel stanchion housing, and frequent machine milking",
           "Toxic systemic accumulation of ketone bodies and non-esterified fatty acids completely destroying cellulolytic bacteria",
           "Complete cessation of abomasal peptic secretion and sudden failure of pancreatic enzyme delivery to the duodenum"
         ],
@@ -5681,7 +5681,7 @@ var quizBank = {
       {
         "q": "For draft animals working in hot tropical Indian summers, which dietary supplement is mandatory to compensate for heavy cutaneous sweat losses?",
         "o": [
-          "Feed-grade urea at 300 to 400 g daily",
+          "Supplemental Feed-grade urea at 300 to 400 g daily",
           "Elemental sulfur powder at 150 g daily",
           "Purified bile salts at 50 g daily",
           "Common Salt (NaCl) at 50 to 100 g daily"
@@ -5737,7 +5737,7 @@ var quizBank = {
       {
         "q": "What is the average milk fat percentage in Jamunapari and Beetal dairy goat milk under good nutritional management?",
         "o": [
-          "10.0%",
+          "9.5 to 10.5%",
           "1.5%",
           "4.0 to 4.5%",
           "8.0%"
@@ -5880,7 +5880,7 @@ var quizBank = {
           "< 5.0",
           "< 6.0",
           "> 7.0 to 7.3",
-          "Neutral 6.5"
+          "Neutral 6.5 to 6.8"
         ],
         "a": 2,
         "e": "At pH > 7.3, the ammonium ion (NH4+) loses its charge and converts to unionized lipophilic free ammonia (NH3), which diffuses across the rumen wall at high rates.",
@@ -5905,7 +5905,7 @@ var quizBank = {
       {
         "q": "What is the commercial composition of the standard Urea Molasses Mineral Block (UMMB) licks developed by NDDB/IVRI for Indian livestock?",
         "o": [
-          "100% feed-grade urea compacted into solid briquettes using Portland cement and gypsum as binders",
+          "100% feed-grade crystalline urea compacted into ultra-dense solid briquettes using Portland cement and calcined gypsum as binders",
           "Molasses (~35-40%), Urea (~7-10%), Mineral mixture (~10%), Salt (~5%), Binder (CaO/Bentonite ~10%), and Bran/Meal (~30-35%)",
           "50% common crystalline salt and 50% crystalline urea compacted under high mechanical hydraulic pressure",
           "Purified sucrose syrup blended with copper sulfate and dicalcium phosphate without any nitrogen source"
@@ -5919,7 +5919,7 @@ var quizBank = {
       {
         "q": "Why is pure feed-grade urea contraindicated for feeding to calves under 3 months of age?",
         "o": [
-          "Urea causes chemical destruction of the delicate reticular groove musculature and induces mucosal ulcers",
+          "Urea causes extensive caustic chemical destruction of the delicate reticular groove musculature and induces deep abomasal mucosal ulcers",
           "Young calves lack a functional, inoculated microbial rumen and have negligible urease and bacterial protein synthesis capacity",
           "Urea induces immediate abomasal milk curding, completely blocking the pyloric sphincter and causing atony",
           "Neonatal calves completely lack functional hepatic tissue and cannot synthesize baseline plasma proteins"
@@ -5934,7 +5934,7 @@ var quizBank = {
         "q": "Rumen Bypass Protein (RUP) is characterized by which nutritional property?",
         "o": [
           "Resists degradation by ruminal microorganisms but is digested by proteolytic enzymes in the abomasum and small intestine",
-          "Passes completely intact and unabsorbed throughout the entire length of the tract into fecal voidings",
+          "Passes completely intact, refractory, and unabsorbed throughout the entire length of the alimentary tract into voided fecal wastes",
           "Undergoes rapid and total hydrolytic deamination to ammonia within five minutes of entering the rumen",
           "Binds irreversibly to abomasal hydrochloric acid, forming insoluble precipitates that cannot be cleaved"
         ],
@@ -5961,7 +5961,7 @@ var quizBank = {
       {
         "q": "Why does feeding rumen-inert bypass fat not cause the fiber digestion depression seen when feeding raw vegetable oil?",
         "o": [
-          "Bypass fat contains zero long-chain fatty acids and is metabolized strictly into carbon dioxide and water by rumen microflora",
+          "Bypass fat contains zero long-chain unsaturated fatty acids and is metabolized strictly into gaseous carbon dioxide and water by rumen microflora",
           "Bypass fat is converted directly into volatile propionic and butyric acids without interacting with the microbial surface coat",
           "Calcium soaps undergo instantaneous alkaline dissolution in saliva, neutralizing ruminal acids before reaching the omasum",
           "Calcium soaps remain insoluble and inert at ruminal pH 6.2-6.8, so they do not coat fiber particles or inhibit cellulolytic bacteria"
@@ -5975,7 +5975,7 @@ var quizBank = {
       {
         "q": "Prill fat is another commercial form of bypass fat that achieves rumen inertness through:",
         "o": [
-          "Micro-encapsulation of unsaturated vegetable oils inside a protective cross-linked gelatin-sugar matrix",
+          "Micro-encapsulation of polyunsaturated liquid vegetable oils inside an impervious, protective cross-linked formaldehyde gelatin-sugar matrix",
           "Physical adsorption of free polyunsaturated fatty acids onto the surface of sodium bentonite clay particles",
           "Chemical emulsification of liquid vegetable oils with conjugated bile salts and synthetic ionic detergents",
           "Fractionated, fully hydrogenated saturated triglycerides (palmitic/stearic acid) with high melting points (> 55°C)"
@@ -6059,7 +6059,7 @@ var quizBank = {
       {
         "q": "How does feeding a negative DCAD (-50 to -100 mEq/kg DM) diet during the last 3 weeks of the dry period prevent milk fever?",
         "o": [
-          "Alkalinizes systemic blood pH, inducing acute precipitation of circulating ionic calcium into osteoid matrix and soft tissues",
+          "Severely alkalinizes systemic blood pH, inducing acute irreversible precipitation of circulating ionic calcium into osteoid matrix and visceral tissues",
           "Directly blocks transcellular calcium transport across mammary secretory enterocytes into colostral fluids during late gestation",
           "Selectively suppresses the transcription of parathyroid hormone mRNA in parathyroid chief cells, sparing bone calcium stores",
           "Induces mild metabolic acidosis, increasing tissue sensitivity to PTH and stimulating bone calcium resorption and renal calcitriol synthesis"
@@ -6144,7 +6144,7 @@ var quizBank = {
         "q": "What is the primary therapeutic action of Poloxalene or vegetable oils (groundnut oil) when administered for frothy bloat?",
         "o": [
           "They act as non-ionic surfactants that reduce surface tension and rupture the gas-trapping foam",
-          "They neutralize high concentrations of ruminal lactic acid and restore optimal neutral pH",
+          "They chemically neutralize high concentrations of ruminal lactic acid and promptly restore optimal neutral pH",
           "They selectively paralyze smooth muscle motility of the reticulorumen wall to halt gas churn",
           "They chemically convert volatile carbon dioxide gas into solid calcium carbonate precipitates"
         ],
@@ -6157,7 +6157,7 @@ var quizBank = {
       {
         "q": "Free-gas bloat (secondary tympany) differs from frothy bloat because it is caused by:",
         "o": [
-          "Excessive dietary consumption of soluble leguminous leaf proteins and cytoplasmic saponins",
+          "Massive, uncalibrated dietary consumption of soluble leguminous 18S leaf cytoplasmic proteins and active plant saponins",
           "Massive retrograde reflux of hepatic bile acids and pancreatic juice into the reticulorumen",
           "Feeding finely pelleted cereal concentrates devoid of coarse physically effective fiber",
           "Physical or neurological failure of eructation (e.g. esophageal obstruction, choke, tetanus, or hypocalcemia)"
@@ -6171,7 +6171,7 @@ var quizBank = {
       {
         "q": "Emergency relief of life-threatening severe ruminal bloat with acute respiratory distress is achieved by:",
         "o": [
-          "Performing emergency tracheotomy in the mid-cervical region",
+          "Performing rapid emergency surgical tracheostomy in the mid-cervical ventral trachea region",
           "Administering large volumes of dilute acetic acid orally",
           "Rapid intravenous infusion of hypertonic dextrose solution",
           "Trocharization in the center of the left paralumbar fossa using a trocar and cannula"
@@ -6186,7 +6186,7 @@ var quizBank = {
         "q": "Why does systemic absorption of D-lactic acid during acute rumen acidosis produce severe metabolic acidosis in cattle?",
         "o": [
           "Bovine tissues have very low activity of D-lactate dehydrogenase and clear D-lactate extremely slowly from blood",
-          "D-lactate is rapidly converted by hepatic enzymes into toxic concentrated sulfuric acid in blood",
+          "D-lactate is rapidly converted by hepatic enzymes into toxic concentrated sulfuric acid and reactive nitrogen in blood",
           "D-lactate selectively destroys circulating parathyroid hormone, provoking fatal hypocalcemic shock",
           "D-lactate binds irreversibly to serum ionic calcium and phosphorus, depleting circulating cations"
         ],
@@ -6199,7 +6199,7 @@ var quizBank = {
       {
         "q": "Which urinary parameter can be tested on the farm using diagnostic dipsticks to monitor the effectiveness of pre-calving anionic salt feeding?",
         "o": [
-          "Urine specific gravity measured by clinical refractometer",
+          "Urine specific gravity measured on-farm by handheld clinical optical refractometer",
           "Urine glucose concentration assessed with enzymatic test strips",
           "Urine pH (target pH 6.0 to 6.5 in Holsteins, 5.5 to 6.0 in Jerseys)",
           "Urine bilirubin and urobilinogen levels on oxidation sticks"
@@ -6213,7 +6213,7 @@ var quizBank = {
       {
         "q": "The rapid conversion of ruminal ammonia into non-toxic glutamine in astrocytes causes cerebral edema in acute urea poisoning because of:",
         "o": [
-          "Mechanical rupture of cerebral capillary endothelial walls caused by acute systemic hypertension",
+          "Severe mechanical rupture of delicate cerebral capillary endothelial walls caused by acute, fulminant systemic arterial hypertension",
           "Direct precipitation of insoluble ammonium phosphate crystals inside the neuronal cytoplasm",
           "Complete exhaustion of circulating blood glucose stores induced by hyperinsulinemic shock",
           "Intracellular accumulation of glutamine exerting powerful osmotic pressure that draws water into brain astrocytes"
@@ -7280,7 +7280,7 @@ var quizBank = {
       {
         "q": "Why is dietary nitrogen in avian species excreted as Uric Acid rather than urea?",
         "o": [
-          "Avian hepatocytes completely lack mitochondrial carbamoyl phosphate synthetase I and ornithine transcarbamylase for urea synthesis",
+          "Avian hepatocytes completely lack mitochondrial carbamoyl phosphate synthetase I and functional ornithine transcarbamylase for urea synthesis",
           "Dietary urea is rapidly volatilized into gaseous ammonia within the renal tubules, producing severe chemical necrosis of ureters",
           "Uric acid is nearly insoluble in water, allowing nitrogen excretion with minimal water loss (adaptation to flight and cleidoic eggs)",
           "Uric acid functions as an essential biochemical surfactant required for the physical emulsification of fats in the cloacal chamber"
@@ -7350,7 +7350,7 @@ var quizBank = {
       {
         "q": "What is 'Cage Layer Fatigue' in high-producing commercial laying hens?",
         "o": [
-          "Generalized muscular exhaustion caused by persistent physical wing flapping inside high-density battery cage enclosures",
+          "Generalized acute muscular exhaustion caused by persistent involuntary physical wing flapping inside high-density battery cage enclosures",
           "Acute osteoporosis and flaccid paralysis caused by excessive skeletal calcium depletion to maintain eggshell calcification",
           "Acute systemic ascorbic acid deficiency resulting from failure of endogenous renal synthesis in high-producing hens",
           "Chronic neurogenic exhaustion induced by unremitting artificial photoperiod stimulation and sleep deprivation in cages"
@@ -7365,7 +7365,7 @@ var quizBank = {
         "q": "Which synthetic pigment is routinely supplemented in commercial layer feeds to impart the desirable golden-yellow color to egg yolks?",
         "o": [
           "Crystalline riboflavin (Vitamin B2) premix in high potency",
-          "Turmeric root curcuminoids and bisdemethoxycurcumin concentrates",
+          "Purified turmeric root curcuminoids and bisdemethoxycurcumin concentrates",
           "Carotenoids (Xanthophylls like lutein, zeaxanthin, and canthaxanthin)",
           "Synthetic hematoxylin lake, erythrosine dye, and carmine salts"
         ],
@@ -7463,7 +7463,7 @@ var quizBank = {
         "q": "Why is supplemental microbial phytase enzyme commonly added to commercial poultry rations containing maize and soybean meal?",
         "o": [
           "To release phosphorus bound in myo-inositol hexakisphosphate (phytate), reducing mineral dicalcium phosphate addition and environmental pollution",
-          "To digest recalcitrant disulfide cross-linked bonds in dietary feather meal keratins and elevate metabolizable cystine availability",
+          "To digest highly recalcitrant disulfide cross-linked covalent bonds in dietary feather meal keratins and elevate metabolizable cystine availability",
           "To stimulate endogenous cutaneous synthesis of cholecalciferol (vitamin D3) and bypass renal 1-alpha-hydroxylase metabolic limitations",
           "To convert surplus metabolic uric acid into digestible glucose and prevent deposition of insoluble monosodium urate crystals in joints"
         ],
@@ -7672,7 +7672,7 @@ var quizBank = {
       {
         "q": "Why must all newborn piglets housed on concrete floors receive an intramuscular injection of 150 to 200 mg Iron Dextran within 3 days of birth?",
         "o": [
-          "Iron stimulates the rapid mineralization and eruption of needle teeth to facilitate suckling efficiency and prevent teat necrosis in the sow",
+          "Iron selectively stimulates the rapid mineralization and premature eruption of needle teeth to facilitate suckling efficiency and prevent teat necrosis in sows",
           "Iron provides passive mucosal barrier protection that completely neutralizes heat-labile enterotoxins of enterotoxigenic Escherichia coli",
           "Iron stimulates hepatic bile acid conjugation and accelerates the absorption of fat-soluble vitamins across neonatal porcine enterocytes",
           "Piglets are born with minimal iron stores (~50 mg) and sow milk provides only ~1 mg/day against a requirement of 7 mg/day ('Piglet Anemia / Thumps')"
@@ -7728,7 +7728,7 @@ var quizBank = {
       {
         "q": "Why is feed intake strictly restricted (1.8 to 2.2 kg/day of a balanced diet) in pregnant gestating sows?",
         "o": [
-          "Because gestating sows possess a very small non-glandular stomach that undergoes severe mechanical rupture under normal bulk intake",
+          "Because gestating sows possess an anatomically fragile non-glandular stomach that undergoes severe mechanical rupture under normal ad libitum bulk intake",
           "To prevent spontaneous mechanical uterine torsion and fetal asphyxia caused by excessive intra-abdominal digestive organ volume",
           "To maintain adult sow live weight strictly below 80 kg to prevent structural breakdown of limb joints and claw lameness in crates",
           "To prevent excessive maternal fatness, which causes embryonic mortality, farrowing difficulties (dystocia), and low lactation feed intake"
@@ -7742,7 +7742,7 @@ var quizBank = {
       {
         "q": "How should a lactating sow nursing 10 to 12 vigorous piglets be fed?",
         "o": [
-          "Restricted to 2.0 to 2.5 kg per day of low-energy cereal straw mash and bran",
+          "Severely restricted to 2.0 to 2.5 kg per day of low-energy fibrous cereal straw mash and coarse wheat bran",
           "Ad libitum (full feeding) with a high-energy, high-protein diet (16-18% CP, >1.0% lysine)",
           "Offered untreated cereal crop residues and drinking water without concentrates",
           "Supplied whole unground cottonseed containing high concentrations of gossypol"
@@ -7812,7 +7812,7 @@ var quizBank = {
       {
         "q": "What nutritional crisis occurs in horses when a large meal of starch-rich grain engorges the small intestine and spills into the cecum?",
         "o": [
-          "Severe acute hypocalcemic tetany caused by sudden exhaustion of the parathyroid glands following rapid calcium precipitation by undigested grain phytates in the upper duodenum",
+          "Severe acute hypocalcemic tetany caused by sudden complete exhaustion of the functional parathyroid glands following rapid calcium precipitation by undigested grain phytates in the upper duodenum",
           "Rapid microbial fermentation of starch in the cecum produces lactic acid, dropping cecal pH, killing Gram-negative bacteria, releasing endotoxins, and causing Colic and Founder (Laminitis)",
           "Acute mechanical rupture of the splenic capsule and severe internal hemorrhage triggered by rapid gaseous distension and anatomical rotation of the adjacent glandular stomach compartment",
           "Extensive dystrophic calcification of the liver and kidneys caused by massive bone resorption triggered by acute dietary phosphorus overload and hyperparathyroidism in working horses"
@@ -7882,7 +7882,7 @@ var quizBank = {
       {
         "q": "What metabolic disorder in horses, colloquially termed 'Monday Morning Disease' or 'Tying-Up' (Exertional Rhabdomyolysis), is triggered by feeding full grain rations during weekend rest days followed by sudden heavy exercise?",
         "o": [
-          "Parturient Paresis (Acute Hypocalcemia / Equine Eclampsia)",
+          "Parturient Paresis (Acute Severe Hypocalcemia / Equine Lactational Eclampsia)",
           "Bovine Acetonemia (Spontaneous Hypoglycemic Ketosis State)",
           "Hypomagnesemic Grass Tetany (Lactation Tetany Syndrome)",
           "Azoturia (Exertional Rhabdomyolysis / Polysaccharide Storage Myopathy)"
@@ -7952,7 +7952,7 @@ var quizBank = {
       {
         "q": "What is the consequence of feeding raw, unprocessed soybeans to growing pigs?",
         "o": [
-          "Immediate acute cyanide poisoning caused by hydrolytic release of free prussic acid in the gastric juice",
+          "Immediate, catastrophic acute cyanide poisoning caused by rapid hydrolytic release of free prussic acid in the gastric juice",
           "Active Kunitz trypsin inhibitors inhibit protein digestion and cause pancreatic hypertrophy, severely depressing growth",
           "Acute nutritional rickets and osteomalacia caused by irreversible chemical precipitation of dietary calcium",
           "Rapidly accelerated live weight gain and super-normal carcass fattening with zero adverse physiological effects"
@@ -7968,7 +7968,7 @@ var quizBank = {
         "o": [
           "Bacterial liquefaction of skeletal muscle proteins caused by post-mortem microbial contamination of processing water",
           "Oily, soft carcass fat caused by feeding diets high in unsaturated fatty acids (e.g. full-fat maize, rice bran, or vegetable oils)",
-          "Pale, soft, and exudative (PSE) pork meat resulting exclusively from acute pre-slaughter transport stress and hyperthermia",
+          "Pale, soft, and exudative (PSE) porcine carcass meat resulting exclusively from acute pre-slaughter transport stress and hyperthermia",
           "Carcass tissue completely devoid of mineralized bone matrix caused by severe nutritional secondary hyperparathyroidism"
         ],
         "a": 1,
@@ -7980,7 +7980,7 @@ var quizBank = {
       {
         "q": "Why is the use of non-protein nitrogen (urea) ineffective and dangerous in swine feeding?",
         "o": [
-          "Feed-grade urea interferes with sulfur amino acid metabolism, causing immediate follicular dystrophy and permanent shedding of dermal swine bristles across the back",
+          "Feed-grade urea directly interferes with sulfur amino acid metabolism, causing immediate follicular dystrophy and permanent extensive shedding of dermal swine bristles across the back",
           "Urea forms insoluble covalent complexes with cereal starches, completely preventing pancreatic alpha-amylase and brush-border maltase hydrolysis in the duodenum",
           "Swine possess an absolute congenital sensory aversion to white crystalline chemical nitrogen supplements, refusing all feed containing even trace amounts of urea",
           "Swine have an enzymatic, non-fermentative stomach and small intestine prior to the cecum, so urea is rapidly absorbed as toxic ammonia without being converted to protein"
@@ -7994,7 +7994,7 @@ var quizBank = {
       {
         "q": "What is the recommended inclusion level of De-oiled Rice Bran (DORB) in grower-finisher pig rations in India?",
         "o": [
-          "Up to 90%",
+          "Up to 75 to 85% total",
           "Strictly 0%",
           "0.5% only",
           "Up to 20 to 30%"
@@ -8008,7 +8008,7 @@ var quizBank = {
       {
         "q": "Foals born to mares grazing endophyte-infected tall fescue (*Neotyphodium coenophialum*) grass during late gestation suffer from:",
         "o": [
-          "Spontaneous twin conceptions and early bilateral embryonic resorptions in the mare",
+          "Spontaneous abnormal twin conceptions and early bilateral embryonic resorptions in the mare",
           "Excessive galactorrhea, continuous milk dripping, and premature udder enlargement",
           "Prolonged gestation, agalactia (no milk), thickened placenta, and high foal mortality",
           "Severe dental fluorosis, enamel hypoplasia, and spontaneous shedding of incisors"
@@ -8023,7 +8023,7 @@ var quizBank = {
         "q": "What is 'Creep Feeding' in foals, and when should it be introduced?",
         "o": [
           "Providing a balanced, high-protein concentrate in a restricted feeder accessible only to foals, introduced at 2 to 3 weeks of age",
-          "Feeding unchopped long hay on stall floors to stimulate natural grazing and ground foraging behaviors in nursing foals",
+          "Regularly feeding unchopped long mature grass hay on stall floors to stimulate natural grazing and ground foraging behaviors in nursing foals",
           "Introducing high-energy grain mixtures only after complete weaning at twelve months of age has successfully taken place",
           "Supplying nursing mares with large daily volumes of reconstituted skim milk replacer to stimulate maternal milk lactation"
         ],
@@ -8050,7 +8050,7 @@ var quizBank = {
       {
         "q": "Adult working horses performing heavy draft or competition work sweat profusely, losing large quantities of which electrolytes?",
         "o": [
-          "Calcium and Phosphorus only",
+          "Inorganic Calcium and Phosphorus only",
           "Copper and Iron",
           "Iodine and Fluorine",
           "Sodium, Potassium, and Chloride"
@@ -8092,7 +8092,7 @@ var quizBank = {
       {
         "q": "Why is the minimum dietary protein requirement of cats roughly two to three times higher than that of adult dogs?",
         "o": [
-          "Cats lack intestinal carbohydrases and must convert all dietary amino acids into glucose for basic cellular energy",
+          "Feline enterocytes completely lack intestinal carbohydrases and must convert all dietary amino acids into glucose for basic cellular energy",
           "Feline kidneys filter whole circulating serum proteins directly into the urine without tubular reabsorption mechanisms",
           "Cats completely lack pancreatic endopeptidases and must consume excessive dietary protein to absorb intact peptides",
           "Cats cannot down-regulate hepatic transaminases and urea cycle enzymes, resulting in continuous, irreversible amino acid catabolism"
@@ -8106,7 +8106,7 @@ var quizBank = {
       {
         "q": "What clinical syndrome develops in cats fed a taurine-deficient diet for several months?",
         "o": [
-          "Nutritional Rickets and Osteomalacia (Severe Rubber Jaw Syndrome in cats)",
+          "Nutritional Rickets and Advanced Osteomalacia (Severe Rubber Jaw Syndrome in cats)",
           "Bilateral Nuclear Cataracts and Lenticular Sclerosis of the Visual Lens",
           "Dilated Cardiomyopathy (DCM) and Feline Central Retinal Degeneration (FCRD)",
           "Excessive Cutaneous Hyperkeratosis and Corneal Follicular Keratin Growth"
@@ -8134,7 +8134,7 @@ var quizBank = {
       {
         "q": "Why cannot domestic cats convert the amino acid Tryptophan to Niacin (Vitamin B3)?",
         "o": [
-          "Feline enterocytes completely lack functional sodium-dependent neutral amino acid transporters for absorbing dietary tryptophan from digesta",
+          "Feline enterocytes completely lack functional brush-border sodium-dependent neutral amino acid transporters for absorbing dietary tryptophan from luminal digesta",
           "Feline renal tubular epithelium excretes 100% of filtered tryptophan directly into urine before it can enter hepatic portal circulation",
           "Tryptophan exerts direct cytotoxic effects on feline hepatocytes, selectively suppressing the transcription of kynurenine pathway enzymes",
           "Extremely high hepatic activity of picolinic acid carboxylase rapidly diverts intermediates toward the acetyl-CoA pathway instead of quinolinic acid"
@@ -8204,7 +8204,7 @@ var quizBank = {
       {
         "q": "Ingestion of Grapes and Raisins by domestic dogs is clinically associated with the unpredictable onset of:",
         "o": [
-          "Acute bilateral optic neuropathy",
+          "Acute progressive bilateral optic neuropathy",
           "Exocrine pancreatic hypertrophy",
           "Acute oliguric or anuric renal failure",
           "Cochlear sensory neuro-deafness"
@@ -8246,7 +8246,7 @@ var quizBank = {
       {
         "q": "What is 'Cecotrophy' (Pseudorumination) in rabbits?",
         "o": [
-          "The continuous voluntary regurgitation of fibrous cecal contents into the mouth to chew the cud during quiet daytime resting periods",
+          "The continuous voluntary physiological regurgitation of fibrous cecal contents into the mouth to chew the cud during quiet daytime resting periods",
           "The behavioral consumption of mineral-rich subsoil and montmorillonite clay to bind and neutralize secondary dietary plant toxins",
           "The exclusive selective ingestion of high-starch cereal concentrates to maximize propionate production in the non-fermentative stomach",
           "The ingestion of nutrient-rich soft nighttime fecal pellets directly from the anus to recover microbial protein, B vitamins, and minerals"
@@ -8261,7 +8261,7 @@ var quizBank = {
         "q": "What fatal clinical condition occurs in rabbits fed excessive high-starch concentrate pellets and inadequate hay?",
         "o": [
           "Mucoid Enteritis / Enterotoxemia caused by cecal starch overload proliferating Clostridium spiroforme",
-          "Nutritional Secondary Hyperparathyroidism (Metabolic Bone Disease / Rubber Jaw syndrome)",
+          "Severe Nutritional Secondary Hyperparathyroidism (Metabolic Bone Disease / Rubber Jaw syndrome in kits)",
           "Spontaneous acute gastric dilation and catastrophic diaphragmatic rupture in young kits",
           "Blind Staggers (Polioencephalomalacia caused by microbial thiaminase enzyme destruction)"
         ],
@@ -8372,7 +8372,7 @@ var quizBank = {
       {
         "q": "What dietary management is essential when hand-rearing orphan wild mammalian neonates in captive wildlife centers?",
         "o": [
-          "Feeding undiluted commercial bovine whole milk to all orphaned wildlife neonates irrespective of natural taxonomic adaptations or maternal milk profiles",
+          "Routinely feeding undiluted commercial bovine whole milk to all orphaned wildlife neonates irrespective of natural taxonomic adaptations or maternal milk profiles",
           "Formulating species-specific milk replacers matching maternal milk fat, protein, and solids (e.g. high fat/protein for carnivores, low fat for macropods)",
           "Introducing coarsely chopped high-fiber adult ruminant forage and grain pellets immediately upon admission to captive neonatal rescue enclosures",
           "Providing pure glucose-electrolyte solutions ad libitum until neonatal digestive tracts spontaneously develop adult physiological enzyme profiles"
@@ -8386,7 +8386,7 @@ var quizBank = {
       {
         "q": "Which metabolic disease in captive reptiles (green iguanas, tortoises) is caused by feeding lettuce diets deficient in Calcium and lacking UV-B light?",
         "o": [
-          "Nutritional Scurvy (Ascorbic Acid Exhaustion syndrome)",
+          "Nutritional Scurvy (Acute Ascorbic Acid Exhaustion syndrome in reptiles)",
           "Hypomagnesemic Tetany (Reptilian Staggers Syndrome)",
           "Metabolic Bone Disease (Nutritional Secondary Hyperparathyroidism)",
           "Polioencephalomalacia (Cerebrocortical Necrosis state)"
@@ -8401,7 +8401,7 @@ var quizBank = {
         "q": "Which nutritional strategy helps prevent feline idiopathic hepatic lipidosis (Fatty Liver Disease) in obese cats?",
         "o": [
           "Avoiding sudden complete anorexia or rapid starvation by ensuring steady voluntary intake of high-protein diets",
-          "Supplying diets formulated exclusively with unrefined fish oil to maximize polyunsaturated fatty acid uptake",
+          "Routinely supplying diets formulated exclusively with unrefined marine fish oil to maximize polyunsaturated fatty acid uptake",
           "Restricting voluntary drinking water intake to reduce overall circulatory volume and decrease portal perfusion",
           "Inducing sudden rapid weight reduction of fifty percent of total body weight within seven days of admission"
         ],
@@ -8471,7 +8471,7 @@ var quizBank = {
         "q": "Estimating a requirement by feeding graded levels of a nutrient and identifying the level that gives maximum growth or egg output is called the:",
         "o": [
           "Empirical (dose–response / feeding trial) method",
-          "Factorial computation model",
+          "Factorial computation model estimating maintenance and production needs",
           "Comparative slaughter balance method",
           "Isotope dilution turnover technique"
         ],
@@ -8484,7 +8484,7 @@ var quizBank = {
       {
         "q": "In the comparative slaughter technique, the energy and protein retained by growing animals are estimated by:",
         "o": [
-          "Measuring indirect respiratory gas exchange and sensible heat dissipation in large respiration chambers",
+          "Continuously measuring indirect respiratory gas exchange and sensible heat dissipation in large open-circuit respiration chambers",
           "Analysing body composition of a group slaughtered at the start and of the test animals slaughtered at the end",
           "Subtracting total fecal and urinary nitrogen excretion from gross dietary nitrogen intake pools in stalls",
           "Determining combustible gross heat of daily live weight gain in adiabatic oxygen bomb calorimeters directly"
@@ -8652,7 +8652,7 @@ var quizBank = {
       {
         "q": "In rabbits, excess dietary calcium is:",
         "o": [
-          "Excreted predominantly in hard daytime fecal pellets via colonic mucosal secretion",
+          "Excreted predominantly and exclusively in hard daytime fecal pellets via specialized colonic mucosal active transport",
           "Stored quantitatively within the cecal lumen without entering systemic circulation",
           "Absorbed efficiently and the surplus excreted in the urine, which can become cloudy and chalky",
           "Precipitated as insoluble calcium oxalate crystals in the acidic stomach lumen"
