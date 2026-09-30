@@ -4726,3 +4726,37 @@
 .srs-forecast__bar.is-due { background: var(--warn, #f59e0b); opacity: 1; }
 .srs-forecast__n { font-size: 12px; font-weight: 700; }
 .srs-forecast__d { font-size: 10.5px; color: var(--text-faint, var(--muted)); }
+
+/* ---------- Equations (converted from LaTeX by tools/fix_latex.py) ---------- */
+.eq { white-space: normal; }
+.eq-block {
+  display: block;
+  margin: 8px 0;
+  padding: 8px 12px;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  overflow-x: auto;
+  line-height: 1.9;
+}
+.frac {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 3px;
+  line-height: 1.3;
+}
+.frac > span:first-child { border-bottom: 1px solid currentColor; padding: 0 3px; }
+.frac > span:last-child { padding: 0 3px; }
+.xarrow {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1.1;
+  margin: 0 4px;
+}
+.xarrow small { font-size: .75em; }
+.eq-matrix { border-collapse: collapse; margin: 4px auto; }
+.eq-matrix td { padding: 4px 12px; text-align: center; }

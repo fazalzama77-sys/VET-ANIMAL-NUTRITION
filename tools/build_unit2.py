@@ -18,7 +18,7 @@ unit2_data = {
       "<li><b>1. Assessment of Physiological Requirements:</b> Feed allowance must be calculated separately for <i>maintenance</i> (basal tissue turnover, respiration, temperature regulation) and <i>production</i> (growth, lactation, pregnancy, work).</li>"
       "<li><b>2. Assessment of Feed Value:</b> Daily rations must be balanced using verified compositional values for Dry Matter (DM), Digestible Crude Protein (DCP), and Total Digestible Nutrients (TDN) or Metabolizable Energy (ME).</li>"
       "<li><b>3. Dry Matter Capacity and Satiety:</b> An animal cannot consume unlimited feed. The total volume must fit within the animal's voluntary Dry Matter Intake (DMI) capacity: 2.0–2.5 kg DM per 100 kg body weight (BW) in indigenous zebu cattle (<i>Bos indicus</i>), 2.5–3.0 kg/100 kg BW in crossbred cattle, and 3.0–3.2 kg/100 kg BW in lactating water buffaloes (<i>Bubalus bubalis</i>).</li>"
-      "<li><b>4. Maintaining an Optimal Roughage-to-Concentrate (R:C) Ratio:</b> Ruminants are anatomically and microbiologically adapted for forage digestion. The R:C ratio on a DM basis must ideally be maintained between 60:40 and 70:30, and should never fall below 40:60. Adequate coarse fiber (minimum 19-21% acid detergent fiber, ADF) stimulates rumination, cud-chewing, and copious alkaline saliva flow containing sodium bicarbonate ($NaHCO_3$) and disodium phosphate ($Na_2HPO_4$), buffering the rumen at pH 6.2–6.8.</li>"
+      "<li><b>4. Maintaining an Optimal Roughage-to-Concentrate (R:C) Ratio:</b> Ruminants are anatomically and microbiologically adapted for forage digestion. The R:C ratio on a DM basis must ideally be maintained between 60:40 and 70:30, and should never fall below 40:60. Adequate coarse fiber (minimum 19-21% acid detergent fiber, ADF) stimulates rumination, cud-chewing, and copious alkaline saliva flow containing sodium bicarbonate (<span class=\"eq\">NaHCO<sub>3</sub></span>) and disodium phosphate (<span class=\"eq\">Na<sub>2</sub>HPO<sub>4</sub></span>), buffering the rumen at pH 6.2–6.8.</li>"
       "<li><b>5. Palatability, Freshness, and Wholesomeness:</b> Feeds must be clean, free from moulds (e.g. <i>Aspergillus flavus</i> aflatoxins), dust, dung contamination, and sharp foreign bodies.</li>"
       "<li><b>6. Regularity and Feeding Management:</b> Abrupt dietary changes destroy the ruminal microbial ecosystem. Dietary shifts must be introduced gradually over 10–14 days to allow ruminal bacteria and protozoa to adapt.</li>"
       "<li><b>7. Least-Cost Formulation:</b> The ration must utilize locally available agro-industrial by-products (e.g. rice bran, mustard cake, pulse chuni) to minimize feeding costs, which constitute 65–75% of the total recurring cost of dairy farming.</li>"
@@ -28,7 +28,7 @@ unit2_data = {
       "<b>Biochemical and Ruminal Stoichiometry of Scientific Feeding:</b><br>"
       "Scientific feeding in ruminants focuses primarily on nourishing the ruminal microflora rather than the host animal directly. Ruminal microbes ferment dietary carbohydrates into Volatile Fatty Acids (VFAs: acetate, propionate, butyrate) and synthesize high-quality Microbial Crude Protein (MCP) from non-protein nitrogen (NPN) and rumen degradable protein (RDP).<br><br>"
       "<b>Energetics of Nutrient Synchronization:</b><br>"
-      "Microbial protein synthesis requires the simultaneous ruminal availability of fermentable metabolizable energy (FME, mainly readily fermentable carbohydrates like starches and pectins) and rumen degradable nitrogen ($NH_3$-N). The ideal ratio is approximately 25 to 30 grams of nitrogen per kilogram of fermentable organic matter (FOM) digested in the rumen. When rapid nitrogen release (e.g. from urea or soluble grass proteins) uncouples from energy fermentation, excess ammonia enters portal circulation and must be converted to urea in the liver, consuming 7.3 kcal of metabolizable energy per gram of nitrogen excreted, thereby reducing net milk or tissue synthesis efficiency."
+      "Microbial protein synthesis requires the simultaneous ruminal availability of fermentable metabolizable energy (FME, mainly readily fermentable carbohydrates like starches and pectins) and rumen degradable nitrogen (<span class=\"eq\">NH<sub>3</sub></span>-N). The ideal ratio is approximately 25 to 30 grams of nitrogen per kilogram of fermentable organic matter (FOM) digested in the rumen. When rapid nitrogen release (e.g. from urea or soluble grass proteins) uncouples from energy fermentation, excess ammonia enters portal circulation and must be converted to urea in the liver, consuming 7.3 kcal of metabolizable energy per gram of nitrogen excreted, thereby reducing net milk or tissue synthesis efficiency."
     ),
     "keyPoints": [
       "Scientific feeding matches exact daily nutrient intake to physiological demands for maintenance and production.",
@@ -92,24 +92,24 @@ unit2_data = {
       "<ul>"
       "<li><b>1. Continuous / Parallel Feeding Trials:</b> Two or more matched groups (control vs. test diets) receive their respective diets continuously over an extended duration (minimum 60–90 days for growing heifers, full lactation for dairy cows). Straightforward, but requires large animal numbers to balance genetic variation.</li>"
       "<li><b>2. Reversal / Switch-back / Change-over Trials:</b> Animals receive Diet A in Period 1, are switched to Diet B in Period 2, and returned to Diet A in Period 3. Removes individual animal variation, as each animal acts as its own control. Requires an intermediate washout/adaptation period (10–14 days) to prevent carry-over effects.</li>"
-      "<li><b>3. Latin Square Design:</b> A balanced crossover design where treatments are rotated across animals and periods in a square matrix (e.g. $4 \\times 4$ Latin Square for 4 diets, 4 animals, and 4 periods). Highly efficient for short-term rumen metabolism and milk response studies with limited animals.</li>"
+      "<li><b>3. Latin Square Design:</b> A balanced crossover design where treatments are rotated across animals and periods in a square matrix (e.g. <span class=\"eq\">4 × 4</span> Latin Square for 4 diets, 4 animals, and 4 periods). Highly efficient for short-term rumen metabolism and milk response studies with limited animals.</li>"
       "<li><b>4. Paired Feeding Technique:</b> Used to differentiate whether a growth difference is caused by true nutritional efficiency or simply unequal voluntary feed intake. The feed intake of the control animal is restricted daily to match the voluntary intake of its paired test animal.</li>"
       "</ul>"
       "<b>III. COMPARATIVE SLAUGHTER TECHNIQUE (CST)</b><br>"
-      "The comparative slaughter technique is the reference gold standard for measuring exact net energy ($NE$) and net protein storage in animal tissues without respiratory calorimetry.<br><br>"
+      "The comparative slaughter technique is the reference gold standard for measuring exact net energy (<span class=\"eq\">NE</span>) and net protein storage in animal tissues without respiratory calorimetry.<br><br>"
       "<b>Methodology:</b><br>"
       "1. A uniform group of animals (e.g. 24 matched weaned lambs or kids) is selected.<br>"
       "2. At Day 0, a representative baseline sub-group (e.g. 6 animals, the 'initial slaughter group') is sacrificed and their entire bodies (carcass, blood, viscera, skin, head, hooves) are weighed, frozen, homogenized, and analyzed for dry matter, crude protein, ether extract, and gross energy.<br>"
       "3. The remaining animals are fed the experimental diets for the experimental feeding period (e.g. 90–120 days).<br>"
       "4. At the end of the trial, all remaining animals are slaughtered and analyzed using identical methods.<br>"
       "5. <b>Calculation of Net Nutrient Retention:</b><br>"
-      "$$\\text{Nutrient Retained} = (\\text{Final Body Weight} \\times \\text{Final Nutrient \\%}) - (\\text{Initial Body Weight} \\times \\text{Initial Baseline Nutrient \\%})$$<br>"
-      "Dividing the retained energy by total feed consumed gives the net energy value of the feed for growth ($NE_g$)."
+      "<span class=\"eq-block\">Nutrient Retained = (Final Body Weight × Final Nutrient %) - (Initial Body Weight × Initial Baseline Nutrient %)</span><br>"
+      "Dividing the retained energy by total feed consumed gives the net energy value of the feed for growth (<span class=\"eq\">NE<sub>g</sub></span>)."
     ),
     "eliteDesc": (
       "<b>Mathematical Rigor and Empty Body Weight (EBW) Correction:</b><br>"
       "In ruminants, live body weight is heavily confounded by gut fill (the mass of digesta in the reticulo-rumen, omasum, abomasum, and intestines), which accounts for 10% to 25% of live weight depending on roughage level. Comparative slaughter experiments must express body composition on an <b>Empty Body Weight (EBW)</b> basis:<br>"
-      "$$\\text{EBW} = \\text{Live Weight at Slaughter} - \\text{Weight of Gastrointestinal Contents}$$<br>"
+      "<span class=\"eq-block\">EBW = Live Weight at Slaughter - Weight of Gastrointestinal Contents</span><br>"
       "Failure to adjust for EBW introduces systematic error: animals on fibrous straw-based diets carry substantially heavier gut fill than animals on concentrate diets, falsely inflating apparent body weight gains while true tissue protein and fat deposition are markedly lower."
     ),
     "keyPoints": [
@@ -117,7 +117,7 @@ unit2_data = {
       "Parallel trials test diets continuously across matched groups; require large cohorts to overcome genetic variability.",
       "Reversal/switch-back trials rotate diets across periods so that each animal serves as its own control.",
       "Washout/adaptation periods of 10-14 days between experimental periods are mandatory to prevent carry-over effects.",
-      "Latin Square designs ($3\\times 3$ or $4\\times 4$) maximize statistical power with small animal numbers.",
+      "Latin Square designs (<span class=\"eq\">3× 3</span> or <span class=\"eq\">4× 4</span>) maximize statistical power with small animal numbers.",
       "Paired feeding isolates feed efficiency from intake differences by equalizing dry matter intake between pairs.",
       "Comparative Slaughter Technique (CST) directly measures body protein, fat, and energy accretion over time.",
       "CST requires an initial slaughter group at Day 0 and final slaughter groups at trial termination.",
@@ -159,18 +159,18 @@ unit2_data = {
     "summary": "Digestion trials measure the apparent disappearance of feed nutrients in the gut, whereas metabolism trials quantify intake, faecal, and urinary losses to establish complete nitrogen, carbon, and mineral balances.",
     "desc": (
       "<b>I. DIGESTION TRIALS: DEFINITION AND OBJECTIVE</b><br>"
-      "A digestion trial is an $in\\ vivo$ biological assay designed to measure the proportion of feed nutrients that disappear during passage through the gastrointestinal tract. Because undigested residues are voided in faeces, apparent digestibility is calculated by subtracting faecal nutrient excretion from total nutrient intake.<br><br>"
+      "A digestion trial is an <span class=\"eq\">in vivo</span> biological assay designed to measure the proportion of feed nutrients that disappear during passage through the gastrointestinal tract. Because undigested residues are voided in faeces, apparent digestibility is calculated by subtracting faecal nutrient excretion from total nutrient intake.<br><br>"
       "<b>Apparent Digestibility Formula:</b><br>"
-      "$$\\text{Apparent Digestibility (\\%)} = \\frac{\\text{Nutrient Consumed (g)} - \\text{Nutrient in Faeces (g)}}{\\text{Nutrient Consumed (g)}} \\times 100$$<br>"
+      "<span class=\"eq-block\">Apparent Digestibility (%) = <span class=\"frac\"><span>Nutrient Consumed (g) - Nutrient in Faeces (g)</span><span>Nutrient Consumed (g)</span></span> × 100</span><br>"
       "It is termed <i>apparent</i> rather than <i>true</i> because faeces contains not only undigested feed residues, but also <b>Metabolic Faecal Nitrogen (MFN)</b> consisting of sloughed mucosal epithelial cells, unabsorbed digestive enzymes, bile secretions, and bacterial biomass.<br><br>"
       "<b>II. METABOLISM TRIALS: DEFINITION AND PRINCIPLES</b><br>"
       "A metabolism trial extends a digestion trial by collecting and analyzing both <b>faeces and urine</b> (and in comprehensive energetic trials, gaseous emissions and cutaneous losses). Its purpose is to determine whether an animal is in a state of positive balance, equilibrium, or negative balance for a specific element (Nitrogen, Calcium, Phosphorus).<br><br>"
       "<b>Nitrogen Balance Equation:</b><br>"
-      "$$\\text{Nitrogen Balance (g/day)} = N_{\\text{Intake}} - (N_{\\text{Faeces}} + N_{\\text{Urine}} + N_{\\text{Milk/Wool}})$$<br>"
+      "<span class=\"eq-block\">Nitrogen Balance (g/day) = N<sub>Intake</sub> - (N<sub>Faeces</sub> + N<sub>Urine</sub> + N<sub>Milk/Wool</sub>)</span><br>"
       "<ul>"
-      "<li><b>Positive Nitrogen Balance ($N_{\\text{Balance}} > 0$):</b> Daily intake exceeds total excretion. Indicates active tissue protein accretion (growth in young animals, fetal development in pregnancy, maternal recovery in dry cows, or muscle hypertrophy).</li>"
-      "<li><b>Nitrogen Equilibrium ($N_{\\text{Balance}} = 0$):</b> Intake equals excretion. Typical of healthy, non-producing adult animals on maintenance rations.</li>"
-      "<li><b>Negative Nitrogen Balance ($N_{\\text{Balance}} < 0$):</b> Total excretion exceeds intake. Indicates net breakdown of body skeletal muscle and structural tissues (starvation, severe protein deficiency, early lactation negative energy balance, febrile infectious disease, or trauma).</li>"
+      "<li><b>Positive Nitrogen Balance (<span class=\"eq\">N<sub>Balance</sub> > 0</span>):</b> Daily intake exceeds total excretion. Indicates active tissue protein accretion (growth in young animals, fetal development in pregnancy, maternal recovery in dry cows, or muscle hypertrophy).</li>"
+      "<li><b>Nitrogen Equilibrium (<span class=\"eq\">N<sub>Balance</sub> = 0</span>):</b> Intake equals excretion. Typical of healthy, non-producing adult animals on maintenance rations.</li>"
+      "<li><b>Negative Nitrogen Balance (<span class=\"eq\">N<sub>Balance</sub> < 0</span>):</b> Total excretion exceeds intake. Indicates net breakdown of body skeletal muscle and structural tissues (starvation, severe protein deficiency, early lactation negative energy balance, febrile infectious disease, or trauma).</li>"
       "</ul>"
       "<b>III. ESSENTIAL REQUIREMENTS FOR METABOLISM HOUSING</b><br>"
       "Metabolism trials require specialized <b>metabolism stalls / crates</b> tailored to the sex and anatomy of the animal:<br>"
@@ -184,8 +184,8 @@ unit2_data = {
       "<b>Partitioning of Endogenous Losses: MFN vs. EUN:</b><br>"
       "In classical nutrition, calculating the <b>Biological Value (BV)</b> and <b>True Digestibility (TD)</b> of protein requires quantifying two endogenous corrections:<br>"
       "1. <b>Metabolic Faecal Nitrogen (MFN):</b> Non-dietary nitrogen voided in faeces, typically 0.40 to 0.55 g N per 100 g Dry Matter intake in ruminants. Ruminants have substantially higher MFN than monogastrics because rumen microbial cell walls pass into the lower tract and partially resist enzymatic degradation.<br>"
-      "2. <b>Endogenous Urinary Nitrogen (EUN):</b> Nitrogen excreted in urine derived from inevitable basal tissue catabolism (creatinine, purine derivatives, hippuric acid, and basal urea turnover) when the animal is fed a nitrogen-free diet. In ruminants, EUN is scaled to metabolic body weight: approximately 0.09 to 0.14 g N per kg $W^{0.75}$ per day.<br>"
-      "$$\\text{True Protein Digestibility (\\%)} = \\frac{N_{\\text{Intake}} - (N_{\\text{Faecal}} - \\text{MFN})}{N_{\\text{Intake}}} \\times 100$$"
+      "2. <b>Endogenous Urinary Nitrogen (EUN):</b> Nitrogen excreted in urine derived from inevitable basal tissue catabolism (creatinine, purine derivatives, hippuric acid, and basal urea turnover) when the animal is fed a nitrogen-free diet. In ruminants, EUN is scaled to metabolic body weight: approximately 0.09 to 0.14 g N per kg <span class=\"eq\">W<sup>0.75</sup></span> per day.<br>"
+      "<span class=\"eq-block\">True Protein Digestibility (%) = <span class=\"frac\"><span>N<sub>Intake</sub> - (N<sub>Faecal</sub> - MFN)</span><span>N<sub>Intake</sub></span></span> × 100</span>"
     ),
     "keyPoints": [
       "Digestion trials measure nutrient disappearance: intake minus faecal excretion.",
@@ -194,10 +194,10 @@ unit2_data = {
       "MFN consists of sloughed gut enterocytes, digestive enzymes, bile secretions, and microbial biomass.",
       "Positive nitrogen balance indicates protein accretion (growth, gestation, recovery).",
       "Negative nitrogen balance indicates tissue catabolism (starvation, early lactation, disease).",
-      "Adult non-producing animals on maintenance rations exist at nitrogen equilibrium ($N_{\\text{Balance}} = 0$).",
+      "Adult non-producing animals on maintenance rations exist at nitrogen equilibrium (<span class=\"eq\">N<sub>Balance</sub> = 0</span>).",
       "Metabolism crates for ruminants require male animals to ensure clean anatomical separation of urine and faeces.",
-      "Urine collection vessels require acid preservatives ($H_2SO_4$ or HCl) to prevent loss of volatile $NH_3$.",
-      "Endogenous Urinary Nitrogen (EUN) reflects basal cellular turnover and scales to metabolic body size (0.09-0.14 g N/$W^{0.75}$)."
+      "Urine collection vessels require acid preservatives (<span class=\"eq\">H<sub>2</sub>SO<sub>4</sub></span> or HCl) to prevent loss of volatile <span class=\"eq\">NH<sub>3</sub></span>.",
+      "Endogenous Urinary Nitrogen (EUN) reflects basal cellular turnover and scales to metabolic body size (0.09-0.14 g N/<span class=\"eq\">W<sup>0.75</sup></span>)."
     ],
     "clinical": (
       "<b>Field Pathophysiology & Transition Cow Balances:</b><br>"
@@ -237,7 +237,7 @@ unit2_data = {
       "Reliable digestion and metabolism data require strict standardization before experimental measurements begin:<br>"
       "<ul>"
       "<li><b>Species and Breed:</b> Healthy, dewormed, castrated male ruminants (bullocks, wethers, or bucks) of uniform age and body weight. Castrated males are docile and prevent copulation behaviors.</li>"
-      "<li><b>Group Size:</b> A minimum of 4 to 6 animals per dietary treatment to allow statistical analysis ($n \\ge 4$).</li>"
+      "<li><b>Group Size:</b> A minimum of 4 to 6 animals per dietary treatment to allow statistical analysis (<span class=\"eq\">n ≥ 4</span>).</li>"
       "<li><b>Animal Acclimatization:</b> Animals must be housed in metabolism crates for 3–5 days prior to the preliminary period to adapt to physical confinement and harness gear without psychological stress.</li>"
       "</ul>"
       "<b>II. THE TWO PHASES OF A DIGESTION TRIAL</b><br>"
@@ -255,11 +255,11 @@ unit2_data = {
       "Total 24-hour faeces is transferred into a clean galvanized tub, weighed to the nearest gram, and thoroughly mixed using rubber gloves. Three representative aliquots are immediately drawn:<br>"
       "<ul>"
       "<li><i>Dry Matter Sample:</i> Exactly 1/100th to 1/50th of total faeces is placed in a tarred moisture dish and dried in a hot-air oven at 100°C for 24 hours to determine daily faecal dry matter output.</li>"
-      "<li><i>Nitrogen Sample:</i> Exactly 1/500th or 1/1000th of fresh faeces is transferred into a wide-mouth glass-stoppered bottle containing 10–15 mL of 1:4 dilute sulfuric acid ($H_2SO_4$) to trap nitrogen as non-volatile ammonium sulfate $(NH_4)_2SO_4$.</li>"
+      "<li><i>Nitrogen Sample:</i> Exactly 1/500th or 1/1000th of fresh faeces is transferred into a wide-mouth glass-stoppered bottle containing 10–15 mL of 1:4 dilute sulfuric acid (<span class=\"eq\">H<sub>2</sub>SO<sub>4</sub></span>) to trap nitrogen as non-volatile ammonium sulfate <span class=\"eq\">(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></span>.</li>"
       "<li><i>Mineral / Proximate Composite Sample:</i> Another 1/100th aliquot is dried at 65°C, pooled across the 7 days for each animal, ground through a 1 mm Wiley mill screen, and stored in airtight plastic bottles.</li>"
       "</ul>"
       "3. <b>Urine Collection and Preservation:</b><br>"
-      "Urine draining through the funnel into the carboy must be preserved daily by adding 20–30 mL of 1:1 commercial hydrochloric acid (HCl) or 20% $H_2SO_4$ to keep the urine pH strictly below 3.0, stopping bacterial urea hydrolysis. Thymol crystals or toluene are added to inhibit surface fungal and bacterial proliferation."
+      "Urine draining through the funnel into the carboy must be preserved daily by adding 20–30 mL of 1:1 commercial hydrochloric acid (HCl) or 20% <span class=\"eq\">H<sub>2</sub>SO<sub>4</sub></span> to keep the urine pH strictly below 3.0, stopping bacterial urea hydrolysis. Thymol crystals or toluene are added to inhibit surface fungal and bacterial proliferation."
     ),
     "eliteDesc": (
       "<b>Minimizing Experimental Errors in Digestion Trials:</b><br>"
@@ -273,8 +273,8 @@ unit2_data = {
       "Daily measurements are taken over exact 24-hour cycles, typically at 08:00 AM.",
       "Feed refusals (orts) must be quantitatively weighed, sampled, and analyzed nutrient-by-nutrient.",
       "Faecal DM is determined by drying aliquots (1/50th) at 100°C for 24 hours.",
-      "Faecal Nitrogen aliquots must be preserved immediately in dilute $H_2SO_4$ to prevent ammonia loss.",
-      "Urine must be acidified below pH 3.0 using HCl or $H_2SO_4$ to prevent bacterial urease activity.",
+      "Faecal Nitrogen aliquots must be preserved immediately in dilute <span class=\"eq\">H<sub>2</sub>SO<sub>4</sub></span> to prevent ammonia loss.",
+      "Urine must be acidified below pH 3.0 using HCl or <span class=\"eq\">H<sub>2</sub>SO<sub>4</sub></span> to prevent bacterial urease activity.",
       "Chaffing roughage to 2.5-3.0 cm eliminates selective sorting and prevents systematic calculation errors."
     ],
     "clinical": (
@@ -296,9 +296,9 @@ unit2_data = {
         "title": "Preservatives Used in Metabolism Trial Sampling",
         "headers": ["Sample Material", "Preservative Agent", "Volume / Rate", "Mechanism of Action"],
         "rows": [
-          ["Urine (for Nitrogen)", "1:1 Hydrochloric acid (HCl) or 20% $H_2SO_4$", "20 – 30 mL per carboy (pH < 3.0)", "Inactivates microbial urease; converts free volatile $NH_3$ to non-volatile $NH_4Cl$"],
+          ["Urine (for Nitrogen)", "1:1 Hydrochloric acid (HCl) or 20% <span class=\"eq\">H<sub>2</sub>SO<sub>4</sub></span>", "20 – 30 mL per carboy (pH < 3.0)", "Inactivates microbial urease; converts free volatile <span class=\"eq\">NH<sub>3</sub></span> to non-volatile <span class=\"eq\">NH<sub>4</sub>Cl</span>"],
           ["Urine (General Preservation)", "Toluene or Thymol crystals", "5 – 10 mL layer on urine surface", "Forms an anaerobic surface barrier; inhibits bacterial and fungal proliferation"],
-          ["Fresh Faeces (for Nitrogen)", "1:4 Dilute Sulfuric acid ($H_2SO_4$)", "10 – 15 mL per aliquot jar", "Fixes metabolic and microbial ammonia as stable ammonium sulfate $(NH_4)_2SO_4$"],
+          ["Fresh Faeces (for Nitrogen)", "1:4 Dilute Sulfuric acid (<span class=\"eq\">H<sub>2</sub>SO<sub>4</sub></span>)", "10 – 15 mL per aliquot jar", "Fixes metabolic and microbial ammonia as stable ammonium sulfate <span class=\"eq\">(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></span>"],
           ["Fresh Faeces (for Minerals)", "Low-temperature oven drying (65°C)", "Dried to constant weight", "Removes moisture without causing mineral volatilization or organic charring"]
         ]
       }
@@ -312,7 +312,7 @@ unit2_data = {
     "desc": (
       "<b>I. APPARENT DIGESTIBILITY COEFFICIENTS (ADC)</b><br>"
       "Digestibility coefficients express the percentage of an ingested nutrient that is absorbed by the gastrointestinal tract and does not appear in the faeces:<br>"
-      "$$\\text{ADC of Nutrient (\\%)} = \\frac{\\text{Nutrient Consumed (g)} - \\text{Nutrient Voided in Faeces (g)}}{\\text{Nutrient Consumed (g)}} \\times 100$$<br>"
+      "<span class=\"eq-block\">ADC of Nutrient (%) = <span class=\"frac\"><span>Nutrient Consumed (g) - Nutrient Voided in Faeces (g)</span><span>Nutrient Consumed (g)</span></span> × 100</span><br>"
       "This calculation is performed individually for every proximate principle: Dry Matter (DM), Crude Protein (CP), Ether Extract (EE), Crude Fibre (CF), and Nitrogen-Free Extract (NFE).<br><br>"
       "<b>II. DIRECT METHOD</b><br>"
       "<ul>"
@@ -324,27 +324,27 @@ unit2_data = {
       "<ul>"
       "<li><b>Applicability:</b> Concentrates (such as grains, mustard cake, cotton seed cake, soybean meal, wheat bran) cannot be fed alone to ruminants. Feeding concentrates alone induces acute ruminal acidosis, rumenitis, bloat, and death. Their digestibility must therefore be determined by difference using a basal roughage.</li>"
       "<li><b>Experimental Procedure (Two-Period Trial):</b><br>"
-      "1. <i>Period 1 (Basal Period):</i> Animals are fed a basal roughage alone (e.g. oat hay) $\\rightarrow$ determine the digestibility coefficients of nutrients in the basal roughage.<br>"
-      "2. <i>Period 2 (Combined Period):</i> Animals are fed a mixture of the basal roughage + the test concentrate (e.g. oat hay + mustard cake) $\\rightarrow$ determine total nutrient intake and total faecal output.<br>"
+      "1. <i>Period 1 (Basal Period):</i> Animals are fed a basal roughage alone (e.g. oat hay) <span class=\"eq\">→</span> determine the digestibility coefficients of nutrients in the basal roughage.<br>"
+      "2. <i>Period 2 (Combined Period):</i> Animals are fed a mixture of the basal roughage + the test concentrate (e.g. oat hay + mustard cake) <span class=\"eq\">→</span> determine total nutrient intake and total faecal output.<br>"
       "3. <i>Calculation by Difference:</i><br>"
-      "$$\\text{Nutrient in Faeces from Roughage} = \\text{Roughage Nutrient Intake in Period 2} \\times (1 - \\text{Roughage ADC from Period 1})$$<br>"
-      "$$\\text{Nutrient in Faeces from Concentrate} = \\text{Total Faecal Nutrient} - \\text{Calculated Roughage Faecal Nutrient}$$<br>"
-      "$$\\text{Concentrate ADC (\\%)} = \\frac{\\text{Concentrate Nutrient Intake} - \\text{Concentrate Faecal Nutrient}}{\\text{Concentrate Nutrient Intake}} \\times 100$$</li>"
+      "<span class=\"eq-block\">Nutrient in Faeces from Roughage = Roughage Nutrient Intake in Period 2 × (1 - Roughage ADC from Period 1)</span><br>"
+      "<span class=\"eq-block\">Nutrient in Faeces from Concentrate = Total Faecal Nutrient - Calculated Roughage Faecal Nutrient</span><br>"
+      "<span class=\"eq-block\">Concentrate ADC (%) = <span class=\"frac\"><span>Concentrate Nutrient Intake - Concentrate Faecal Nutrient</span><span>Concentrate Nutrient Intake</span></span> × 100</span></li>"
       "<li><b>Key Limitation:</b> Assumes no <i>associative effects</i> between the roughage and concentrate, an assumption that is not always biologically valid.</li>"
       "</ul>"
       "<b>IV. INDICATOR (MARKER) METHOD</b><br>"
       "The marker technique enables digestibility measurement without quantitative recording of total daily feed intake or total 24-hour faecal collection, making it indispensable for grazing animals on open pastures.<br><br>"
       "<b>Digestibility Equation Using Markers:</b><br>"
-      "$$\\text{Apparent Digestibility (\\%)} = 100 - \\left[ 100 \\times \\frac{\\%\\text{ Marker in Feed}}{\\%\\text{ Marker in Faeces}} \\times \\frac{\\%\\text{ Nutrient in Faeces}}{\\%\\text{ Nutrient in Feed}} \\right]$$<br>"
+      "<span class=\"eq-block\">Apparent Digestibility (%) = 100 - [ 100 × <span class=\"frac\"><span>% Marker in Feed</span><span>% Marker in Faeces</span></span> × <span class=\"frac\"><span>% Nutrient in Faeces</span><span>% Nutrient in Feed</span></span> ]</span><br>"
       "<b>Classification of Nutritional Markers:</b><br>"
       "<ul>"
       "<li><b>1. Internal (Natural) Markers:</b> Substances naturally present in the feed that completely resist digestion: Lignin, <b>Acid Insoluble Ash (AIA / Silica)</b>, Indigestible ADF (iADF), and Plant Waxes (n-alkanes).</li>"
-      "<li><b>2. External (Added) Markers:</b> Inert, non-toxic substances mixed uniformly into the feed: <b>Chromic Oxide ($Cr_2O_3$)</b>, Titanium Dioxide ($TiO_2$), Polyethylene Glycol (PEG), and rare earth elements (Ytterbium, Cerium).</li>"
+      "<li><b>2. External (Added) Markers:</b> Inert, non-toxic substances mixed uniformly into the feed: <b>Chromic Oxide (<span class=\"eq\">Cr<sub>2</sub>O<sub>3</sub></span>)</b>, Titanium Dioxide (<span class=\"eq\">TiO<sub>2</sub></span>), Polyethylene Glycol (PEG), and rare earth elements (Ytterbium, Cerium).</li>"
       "</ul>"
     ),
     "eliteDesc": (
       "<b>Criteria of an Ideal Nutritional Marker:</b><br>"
-      "An ideal indicator must fulfill seven rigorous physiological criteria: (1) completely indigestible and unabsorbable; (2) totally inert and non-toxic to ruminal microflora and host tissues; (3) possesses no pharmacological or motility-modifying actions on the gut; (4) associates intimately with the digesta fraction it is intended to track; (5) moves at an identical passage rate ($k_p$) to the digesta; (6) exhibits uniform, steady diurnal excretion without pulsing; and (7) can be quantified chemically or spectrophotometrically with high sensitivity. Chromic oxide ($Cr_2O_3$) has a specific gravity higher than feed particles, causing it to settle in the ventral rumen and undergo diurnal excretion peaks, necessitating dosed administration twice daily for at least 7 days prior to faecal grab sampling."
+      "An ideal indicator must fulfill seven rigorous physiological criteria: (1) completely indigestible and unabsorbable; (2) totally inert and non-toxic to ruminal microflora and host tissues; (3) possesses no pharmacological or motility-modifying actions on the gut; (4) associates intimately with the digesta fraction it is intended to track; (5) moves at an identical passage rate (<span class=\"eq\">k<sub>p</sub></span>) to the digesta; (6) exhibits uniform, steady diurnal excretion without pulsing; and (7) can be quantified chemically or spectrophotometrically with high sensitivity. Chromic oxide (<span class=\"eq\">Cr<sub>2</sub>O<sub>3</sub></span>) has a specific gravity higher than feed particles, causing it to settle in the ventral rumen and undergo diurnal excretion peaks, necessitating dosed administration twice daily for at least 7 days prior to faecal grab sampling."
     ),
     "keyPoints": [
       "Apparent Digestibility Coefficient (ADC) measures percentage of nutrient ingested that does not appear in faeces.",
@@ -355,7 +355,7 @@ unit2_data = {
       "Marker / Indicator method eliminates the need for total faecal collection or exact intake recording.",
       "Indispensable for evaluating pasture and rangeland intake in grazing ruminants.",
       "Internal markers are natural feed components: Lignin, Acid Insoluble Ash (AIA), indigestible ADF.",
-      "External markers are inert chemicals added to feed: Chromic oxide ($Cr_2O_3$), Titanium dioxide ($TiO_2$).",
+      "External markers are inert chemicals added to feed: Chromic oxide (<span class=\"eq\">Cr<sub>2</sub>O<sub>3</sub></span>), Titanium dioxide (<span class=\"eq\">TiO<sub>2</sub></span>).",
       "Digestibility formula with markers relies on the ratio of marker concentration in feed versus faeces."
     ],
     "clinical": (
@@ -370,7 +370,7 @@ unit2_data = {
           ["Direct Method", "Single test feed fed as sole ration", "Yes (100% collection)", "Forages, green fodders, hays, and complete diets"],
           ["Indirect Method (By Difference)", "Basal roughage period followed by basal + test feed", "Yes (100% collection)", "Individual concentrate feeds, oilcakes, grains, and brans"],
           ["Internal Marker Method", "Natural feed containing AIA, lignin, or plant alkanes", "No (Rectal grab sampling)", "Pasture grazing livestock, rangelands, and wild herbivores"],
-          ["External Marker Method", "Feed dosed with $Cr_2O_3$ or $TiO_2$ twice daily", "No (Spot faecal sampling)", "Intensive pen trials where total faecal collection is impractical"]
+          ["External Marker Method", "Feed dosed with <span class=\"eq\">Cr<sub>2</sub>O<sub>3</sub></span> or <span class=\"eq\">TiO<sub>2</sub></span> twice daily", "No (Spot faecal sampling)", "Intensive pen trials where total faecal collection is impractical"]
         ]
       },
       {
@@ -379,8 +379,8 @@ unit2_data = {
         "rows": [
           ["Acid Insoluble Ash (AIA)", "Internal", "98 – 102 %", "Extremely cheap, non-toxic; requires high-temperature acid ashing"],
           ["Lignin", "Internal", "85 – 105 %", "Natural constituent; variable recovery due to slight alkaline degradation in rumen"],
-          ["Chromic Oxide ($Cr_2O_3$)", "External", "95 – 102 %", "Reference standard; heavy density causes diurnal excretion cycles in faeces"],
-          ["Titanium Dioxide ($TiO_2$)", "External", "96 – 101 %", "Safer alternative to chromium; requires ICP or spectrophotometric detection"],
+          ["Chromic Oxide (<span class=\"eq\">Cr<sub>2</sub>O<sub>3</sub></span>)", "External", "95 – 102 %", "Reference standard; heavy density causes diurnal excretion cycles in faeces"],
+          ["Titanium Dioxide (<span class=\"eq\">TiO<sub>2</sub></span>)", "External", "96 – 101 %", "Safer alternative to chromium; requires ICP or spectrophotometric detection"],
           ["Polyethylene Glycol (PEG)", "External", "95 – 100 %", "Water-soluble; ideal for liquid phase digesta kinetics and tannin binding"]
         ]
       }
@@ -396,14 +396,14 @@ unit2_data = {
       "Chemical and anatomical characteristics of the plant material are the foremost determinants of digestibility:<br>"
       "<ul>"
       "<li><b>Lignification:</b> Lignin is a complex, amorphous polyphenolic polymer completely indigestible by mammalian and microbial anaerobic enzymes. It forms steric covalent cross-linkages (ester and ether bonds) with hemicellulose and cellulose in the secondary plant cell wall. This encrusting matrix physically blocks microbial cellulolytic enzymes (*cellulases* and *hemicellulases*) from accessing digestible structural carbohydrates. Every 1% increase in plant lignin reduces dry matter digestibility by 3 to 4%.</li>"
-      "<li><b>Plant Maturity:</b> As forages advance from pre-flowering vegetative stages to maturity and seed set, cell wall content (NDF, ADF, and lignin) rises dramatically, while cell contents (soluble proteins, sugars) decline. Young berseem or oats have digestibility $>70\\%$, whereas mature post-harvest straw drops below $40-45\\%$.</li>"
+      "<li><b>Plant Maturity:</b> As forages advance from pre-flowering vegetative stages to maturity and seed set, cell wall content (NDF, ADF, and lignin) rises dramatically, while cell contents (soluble proteins, sugars) decline. Young berseem or oats have digestibility <span class=\"eq\">>70%</span>, whereas mature post-harvest straw drops below <span class=\"eq\">40-45%</span>.</li>"
       "<li><b>Silica Content:</b> Common in paddy straw and certain wetland grasses. Silica impregnates plant cell walls, acting additively with lignin to depress organic matter digestibility by approximately 3% per 1% silica.</li>"
       "</ul>"
       "<b>II. LEVEL OF FEED INTAKE AND DIGESTA PASSAGE RATE</b><br>"
-      "As an animal consumes more feed (e.g. high-producing dairy cows consuming 3 to 4 times their maintenance requirement), the rate of passage of digesta through the reticulo-rumen ($K_p$) increases significantly.<br>"
+      "As an animal consumes more feed (e.g. high-producing dairy cows consuming 3 to 4 times their maintenance requirement), the rate of passage of digesta through the reticulo-rumen (<span class=\"eq\">K<sub>p</sub></span>) increases significantly.<br>"
       "<ul>"
       "<li>Because feed particles spend less residence time in the rumen, microbial enzymes have less time to hydrolyze fibrous plant cell walls.</li>"
-      "<li>Digestibility of dry matter undergoes a classic <b>depreciation factor</b>, declining by 1 to 2 percentage units for each multiple of maintenance ($1\\times M$) intake.</li>"
+      "<li>Digestibility of dry matter undergoes a classic <b>depreciation factor</b>, declining by 1 to 2 percentage units for each multiple of maintenance (<span class=\"eq\">1× M</span>) intake.</li>"
       "</ul>"
       "<b>III. ASSOCIATIVE EFFECTS OF FEEDS (THE STARCH-FIBER ANTAGONISM)</b><br>"
       "When individual feeds are combined in a mixed ration, their overall digestibility may differ from the arithmetic sum of their individual digestibilities. This is termed an <b>associative effect</b>:<br>"
@@ -419,16 +419,16 @@ unit2_data = {
     ),
     "eliteDesc": (
       "<b>Dynamic Kinetic Model of Fiber Digestion:</b><br>"
-      "Modern ruminant nutrition models (CNCPS, NRC) describe ruminal fiber digestion as a competition between the rate of digestion ($k_d$, %/hour) and the rate of passage to the lower tract ($k_p$, %/hour):<br>"
-      "$$\\text{Effective Ruminal Degradability (ED)} = A + \\frac{B \\times k_d}{k_d + k_p}$$<br>"
-      "Where $A$ is the rapidly soluble fraction, $B$ is the potentially degradable insoluble fraction, and $k_p$ is passage rate. When intake increases, $k_p$ rises, decreasing ruminal digestion. However, in ruminants, this is partially offset by compensatory hindgut fermentation in the caecum and colon, which accounts for 8% to 15% of total tract cellulose and hemicellulose digestion."
+      "Modern ruminant nutrition models (CNCPS, NRC) describe ruminal fiber digestion as a competition between the rate of digestion (<span class=\"eq\">k<sub>d</sub></span>, %/hour) and the rate of passage to the lower tract (<span class=\"eq\">k<sub>p</sub></span>, %/hour):<br>"
+      "<span class=\"eq-block\">Effective Ruminal Degradability (ED) = A + <span class=\"frac\"><span>B × k<sub>d</sub></span><span>k<sub>d</sub> + k<sub>p</sub></span></span></span><br>"
+      "Where <span class=\"eq\">A</span> is the rapidly soluble fraction, <span class=\"eq\">B</span> is the potentially degradable insoluble fraction, and <span class=\"eq\">k<sub>p</sub></span> is passage rate. When intake increases, <span class=\"eq\">k<sub>p</sub></span> rises, decreasing ruminal digestion. However, in ruminants, this is partially offset by compensatory hindgut fermentation in the caecum and colon, which accounts for 8% to 15% of total tract cellulose and hemicellulose digestion."
     ),
     "keyPoints": [
       "Lignin encrusts cellulose and hemicellulose, directly blocking microbial cellulases.",
       "Every 1% increase in plant lignin reduces dry matter digestibility by 3 to 4 percentage units.",
       "Advancing forage maturity increases cell wall lignification and severely depresses digestibility.",
       "Plant silica in rice straw acts synergistically with lignin to depress organic matter digestibility.",
-      "Higher feed intake increases ruminal passage rate ($k_p$), lowering residence time and fiber digestibility.",
+      "Higher feed intake increases ruminal passage rate (<span class=\"eq\">k<sub>p</sub></span>), lowering residence time and fiber digestibility.",
       "Negative associative effects occur when starch fermentation drops rumen pH below 6.0, inhibiting cellulolytic microbes.",
       "Positive associative effects occur when small amounts of NPN or green legume fodder stimulate cellulolysis.",
       "Chaffing roughage prevents selective sorting and maintains steady ruminal fermentation.",
@@ -446,7 +446,7 @@ unit2_data = {
         "rows": [
           ["Feed Composition", "Lignin and Silica Concentration", "Physically shields structural carbohydrates; resists anaerobic enzymatic cleavage"],
           ["Feed Maturity", "Advanced vegetative to seed stage", "Decreases soluble cell contents; increases thick, lignified secondary cell walls"],
-          ["Feeding Level", "Multiple of Maintenance ($2\\times$ or $3\\times M$)", "Accelerates passage rate ($K_p$); shortens ruminal microbial fermentation time"],
+          ["Feeding Level", "Multiple of Maintenance (<span class=\"eq\">2×</span> or <span class=\"eq\">3× M</span>)", "Accelerates passage rate (<span class=\"eq\">K<sub>p</sub></span>); shortens ruminal microbial fermentation time"],
           ["Associative Effects", "High starch inclusion (>30% grain)", "Drives rumen pH <6.0; acid-induced lysis of cellulolytic bacterial species"],
           ["Physical Form", "Fine grinding of roughages", "Reduces particle size and passage time, decreasing ruminal fiber digestion"],
           ["Animal Species", "Water Buffalo vs. Zebu Cattle", "Buffalo maintains higher cellulolytic counts and longer ruminal digesta retention"]
@@ -457,9 +457,9 @@ unit2_data = {
         "headers": ["Physiological Feature", "Water Buffalo (*Bubalus bubalis*)", "Zebu Cattle (*Bos indicus*)", "Impact on Straw Utilization"],
         "rows": [
           ["Rumen Volume & Capacity", "Larger relative to body weight", "Moderate relative to body weight", "Higher capacity for bulky, low-density roughages"],
-          ["Digesta Retention Time", "Longer ruminal retention (slower $k_p$)", "Shorter ruminal retention", "More time for slow-acting cellulases to digest fiber"],
+          ["Digesta Retention Time", "Longer ruminal retention (slower <span class=\"eq\">k<sub>p</sub></span>)", "Shorter ruminal retention", "More time for slow-acting cellulases to digest fiber"],
           ["Cellulolytic Bacterial Population", "Significantly higher counts/mL fluid", "Moderate counts/mL fluid", "Faster rate of breakdown of structural carbohydrates"],
-          ["Ruminal Ammonia Recycling", "High salivary urea recycling", "Moderate salivary urea recycling", "Maintains minimum ruminal $NH_3$-N even on low-protein straw"],
+          ["Ruminal Ammonia Recycling", "High salivary urea recycling", "Moderate salivary urea recycling", "Maintains minimum ruminal <span class=\"eq\">NH<sub>3</sub></span>-N even on low-protein straw"],
           ["Crude Fibre Digestibility", "2 to 5 % higher on poor straw", "Baseline reference", "Superior survival and milk production on crop residues"]
         ]
       }
@@ -496,8 +496,8 @@ unit2_data = {
     "eliteDesc": (
       "<b>Thermodynamic Progression of Energy Units in Feeding Standards:</b><br>"
       "The evolution of feeding standards mirrors the progressive thermodynamic partitioning of food energy:<br>"
-      "$$\\text{Gross Energy (GE)} \\xrightarrow{-\\text{Faecal Loss}} \\text{Digestible Energy (DE / TDN)} \\xrightarrow{-\\text{Urinary \\& Gaseous Losses}} \\text{Metabolizable Energy (ME)} \\xrightarrow{-\\text{Heat Increment (HI)}} \\text{Net Energy (NE)}$$<br>"
-      "Early systems (Wolff, Morrison) stopped at the DE/TDN level. The fundamental thermodynamic error of TDN is that it treats 1 kg of TDN from straw identically to 1 kg of TDN from maize grain. However, fermenting straw generates a vast **Heat Increment (HI)** of fermentation and digestion (wasted as heat), yielding far less Net Energy for production than maize. Modern standards (NRC, ARC) isolate $NE_m$, $NE_g$, and $NE_l$ to overcome this thermodynamic flaw."
+      "<span class=\"eq-block\">Gross Energy (GE) <span class=\"xarrow\"><small>-Faecal Loss</small>⟶</span> Digestible Energy (DE / TDN) <span class=\"xarrow\"><small>-Urinary & Gaseous Losses</small>⟶</span> Metabolizable Energy (ME) <span class=\"xarrow\"><small>-Heat Increment (HI)</small>⟶</span> Net Energy (NE)</span><br>"
+      "Early systems (Wolff, Morrison) stopped at the DE/TDN level. The fundamental thermodynamic error of TDN is that it treats 1 kg of TDN from straw identically to 1 kg of TDN from maize grain. However, fermenting straw generates a vast <b>Heat Increment (HI)</b> of fermentation and digestion (wasted as heat), yielding far less Net Energy for production than maize. Modern standards (NRC, ARC) isolate <span class=\"eq\">NE<sub>m</sub></span>, <span class=\"eq\">NE<sub>g</sub></span>, and <span class=\"eq\">NE<sub>l</sub></span> to overcome this thermodynamic flaw."
     ),
     "keyPoints": [
       "Feeding standards specify daily nutrient allowances for maintenance and defined production targets.",
@@ -513,7 +513,7 @@ unit2_data = {
     ],
     "clinical": (
       "<b>Tropical Adaptation & The ICAR Mandate:</b><br>"
-      "A classical error in Indian field veterinary practice is calculating rations for indigenous cattle (e.g. Sahiwal, Gir) using temperate American NRC tables. Bos indicus cattle have 5% to 10% lower basal metabolic fasting heat production per unit metabolic body weight ($W^{0.75}$) than Bos taurus cattle, and under hot humid tropical conditions, excess protein feeding generates metabolic heat stress. Indian field veterinarians must strictly utilize the <b>ICAR (2013) Nutrient Requirements of Cattle and Buffaloes</b>, which is calibrated specifically to tropical indigenous genotypes, buffalo metabolic rates, and crop-residue diets."
+      "A classical error in Indian field veterinary practice is calculating rations for indigenous cattle (e.g. Sahiwal, Gir) using temperate American NRC tables. Bos indicus cattle have 5% to 10% lower basal metabolic fasting heat production per unit metabolic body weight (<span class=\"eq\">W<sup>0.75</sup></span>) than Bos taurus cattle, and under hot humid tropical conditions, excess protein feeding generates metabolic heat stress. Indian field veterinarians must strictly utilize the <b>ICAR (2013) Nutrient Requirements of Cattle and Buffaloes</b>, which is calibrated specifically to tropical indigenous genotypes, buffalo metabolic rates, and crop-residue diets."
     ),
     "tables": [
       {
@@ -535,7 +535,7 @@ unit2_data = {
         "headers": ["Feeding Standard", "Energy Expression Unit", "Protein Expression Unit", "Primary Geographic Use"],
         "rows": [
           ["Morrison System", "Total Digestible Nutrients (TDN)", "Digestible Crude Protein (DCP)", "Historical USA and global practical farming"],
-          ["NRC (Dairy / Beef)", "Net Energy ($NE_m, NE_g, NE_l$ in Mcal)", "Metabolizable Protein (MP, RDP / RUP)", "United States, Canada, and global commercial dairies"],
+          ["NRC (Dairy / Beef)", "Net Energy (<span class=\"eq\">NE<sub>m</sub>, NE<sub>g</sub>, NE<sub>l</sub></span> in Mcal)", "Metabolizable Protein (MP, RDP / RUP)", "United States, Canada, and global commercial dairies"],
           ["ARC / AFRC", "Metabolizable Energy (ME, in MJ)", "Digestible Undegradable Protein (DUP / ERDP)", "United Kingdom and European Union"],
           ["Scandinavian System", "Feed Units (Barley equivalents)", "Digestible True Protein", "Northern Europe and Scandinavia"],
           ["ICAR (2013)", "TDN (kg) and ME (Mcal / MJ)", "DCP (g) and Crude Protein (CP)", "India and South Asian livestock systems"]
@@ -557,15 +557,15 @@ unit2_data = {
       "</ul>"
       "<b>II. NATIONAL RESEARCH COUNCIL (NRC, USA)</b><br>"
       "<ul>"
-      "<li><b>Energy & Protein Units:</b> Energy partitioned into three distinct Net Energy values: $NE_m$ (Maintenance), $NE_g$ (Gain), and $NE_l$ (Lactation), expressed in Mcal/kg DM. Protein expressed as <b>Metabolizable Protein (MP)</b>, partitioned into Rumen Degradable Protein (RDP) and Rumen Undegradable Protein (RUP).</li>"
+      "<li><b>Energy & Protein Units:</b> Energy partitioned into three distinct Net Energy values: <span class=\"eq\">NE<sub>m</sub></span> (Maintenance), <span class=\"eq\">NE<sub>g</sub></span> (Gain), and <span class=\"eq\">NE<sub>l</sub></span> (Lactation), expressed in Mcal/kg DM. Protein expressed as <b>Metabolizable Protein (MP)</b>, partitioned into Rumen Degradable Protein (RDP) and Rumen Undegradable Protein (RUP).</li>"
       "<li><b>Merits:</b> The most scientifically rigorous and biologically accurate system for high-yielding dairy herds. Prevents excessive energy/protein feeding and accounts for differences in heat increment.</li>"
       "<li><b>Demerits:</b> Highly complex mathematical algorithms requiring computer software; feed library is based primarily on temperate crops (corn grain, soybean meal, alfalfa) and poorly reflects tropical crop-residue diets.</li>"
       "</ul>"
       "<b>III. AGRICULTURAL RESEARCH COUNCIL (ARC / AFRC, UK)</b><br>"
       "<ul>"
-      "<li><b>Energy & Protein Units:</b> Energy as Metabolizable Energy (ME, in MJ/kg DM) adjusted by efficiency factors ($k_m, k_l, k_f$). Protein as Effective Rumen Degradable Protein (ERDP) and Digestible Undegradable Protein (DUP).</li>"
+      "<li><b>Energy & Protein Units:</b> Energy as Metabolizable Energy (ME, in MJ/kg DM) adjusted by efficiency factors (<span class=\"eq\">k<sub>m</sub>, k<sub>l</sub>, k<sub>f</sub></span>). Protein as Effective Rumen Degradable Protein (ERDP) and Digestible Undegradable Protein (DUP).</li>"
       "<li><b>Merits:</b> Highly dynamic mechanistic model separating ruminal microbial requirements from host tissue demands.</li>"
-      "<li><b>Demerits:</b> Highly theoretical; requires extensive $in\\ situ$ nylon bag rumen degradation rates ($a, b, c$) that are unavailable for most developing-world feeds.</li>"
+      "<li><b>Demerits:</b> Highly theoretical; requires extensive <span class=\"eq\">in situ</span> nylon bag rumen degradation rates (<span class=\"eq\">a, b, c</span>) that are unavailable for most developing-world feeds.</li>"
       "</ul>"
       "<b>IV. KEARL'S FEEDING STANDARD (1982)</b><br>"
       "<ul>"
@@ -581,18 +581,18 @@ unit2_data = {
     ),
     "eliteDesc": (
       "<b>Thermodynamic Efficiencies in the ARC Metabolizable Energy System:</b><br>"
-      "The ARC system expresses the efficiency of converting Metabolizable Energy (ME) to Net Energy ($k$) as a linear function of diet metabolizability ($q = ME / GE$):<br>"
-      "$$\\text{Efficiency for Maintenance } (k_m) = 0.35 q + 0.503$$<br>"
-      "$$\\text{Efficiency for Lactation } (k_l) = 0.35 q + 0.420$$<br>"
-      "$$\\text{Efficiency for Growth/Gain } (k_f) = 0.78 q + 0.006$$<br>"
-      "Because poor-quality crop residues have low metabolizability ($q \\approx 0.35 - 0.40$), their efficiency of conversion to fat gain ($k_f$) is dismal ($<25\\%$), whereas high-concentrate diets ($q \\approx 0.70$) have an efficiency of over $55\\%$. This mathematically exposes why fattening cattle on straw alone is a biological impossibility."
+      "The ARC system expresses the efficiency of converting Metabolizable Energy (ME) to Net Energy (<span class=\"eq\">k</span>) as a linear function of diet metabolizability (<span class=\"eq\">q = ME / GE</span>):<br>"
+      "<span class=\"eq-block\">Efficiency for Maintenance  (k<sub>m</sub>) = 0.35 q + 0.503</span><br>"
+      "<span class=\"eq-block\">Efficiency for Lactation  (k<sub>l</sub>) = 0.35 q + 0.420</span><br>"
+      "<span class=\"eq-block\">Efficiency for Growth/Gain  (k<sub>f</sub>) = 0.78 q + 0.006</span><br>"
+      "Because poor-quality crop residues have low metabolizability (<span class=\"eq\">q ≈ 0.35 - 0.40</span>), their efficiency of conversion to fat gain (<span class=\"eq\">k<sub>f</sub></span>) is dismal (<span class=\"eq\"><25%</span>), whereas high-concentrate diets (<span class=\"eq\">q ≈ 0.70</span>) have an efficiency of over <span class=\"eq\">55%</span>. This mathematically exposes why fattening cattle on straw alone is a biological impossibility."
     ),
     "keyPoints": [
       "Morrison's standard uses TDN and DCP; simple for farm calculations but overvalues fibrous roughages.",
-      "NRC system uses Net Energy ($NE_m, NE_g, NE_l$) and Metabolizable Protein (MP: RDP and RUP).",
+      "NRC system uses Net Energy (<span class=\"eq\">NE<sub>m</sub>, NE<sub>g</sub>, NE<sub>l</sub></span>) and Metabolizable Protein (MP: RDP and RUP).",
       "NRC is the most biologically precise system for high-yielding herds, but requires computer formulation.",
       "ARC system uses Metabolizable Energy (ME in MJ) and partitioned protein (ERDP and DUP).",
-      "ARC efficiency factors ($k_m, k_l, k_f$) mathematically link diet metabolizability ($q$) to net retention.",
+      "ARC efficiency factors (<span class=\"eq\">k<sub>m</sub>, k<sub>l</sub>, k<sub>f</sub></span>) mathematically link diet metabolizability (<span class=\"eq\">q</span>) to net retention.",
       "Kearl (1982) standard was specifically formulated for ruminants in developing tropical countries.",
       "ICAR standards (1964, 1980, 1998, 2013) are calibrated to Indian zebu cattle, buffaloes, and local sheep/goats.",
       "ICAR expresses requirements in TDN/ME and DCP/CP, grounded in tropical crop-residue metabolism trials.",
@@ -608,16 +608,16 @@ unit2_data = {
         "title": "Comprehensive Comparison of Major Global Ruminant Feeding Standards",
         "headers": ["Feature / Standard", "Morrison (USA)", "NRC (USA, 2001/2021)", "ARC / AFRC (UK)", "ICAR (India, 2013)"],
         "rows": [
-          ["Energy Expression", "TDN (lb or kg)", "$NE_m, NE_g, NE_l$ (Mcal/kg DM)", "ME (MJ/kg DM) with $k_m, k_l, k_f$", "TDN (kg) and ME (Mcal or MJ)"],
+          ["Energy Expression", "TDN (lb or kg)", "<span class=\"eq\">NE<sub>m</sub>, NE<sub>g</sub>, NE<sub>l</sub></span> (Mcal/kg DM)", "ME (MJ/kg DM) with <span class=\"eq\">k<sub>m</sub>, k<sub>l</sub>, k<sub>f</sub></span>", "TDN (kg) and ME (Mcal or MJ)"],
           ["Protein Expression", "DCP (lb or kg)", "Metabolizable Protein (RDP/RUP)", "ERDP and DUP (g/kg DM)", "DCP (g) and Crude Protein (CP)"],
-          ["Roughage Assessment", "Overvalues straw (ignores HI)", "Precise (accounts for HI)", "Precise (links $q$ to efficiency)", "Calibrated to tropical crop residues"],
+          ["Roughage Assessment", "Overvalues straw (ignores HI)", "Precise (accounts for HI)", "Precise (links <span class=\"eq\">q</span> to efficiency)", "Calibrated to tropical crop residues"],
           ["Target Genotypes", "Temperate cattle", "Exotic high-yield Holstein/Jersey", "European dairy and beef breeds", "Indigenous Zebu cattle and Water Buffaloes"],
-          ["Field Feasibility", "Very simple; hand calculations", "Complex; requires computer software", "Theoretical; requires lab $in\\ situ$ data", "Ideal for Indian veterinary field practice"]
+          ["Field Feasibility", "Very simple; hand calculations", "Complex; requires computer software", "Theoretical; requires lab <span class=\"eq\">in situ</span> data", "Ideal for Indian veterinary field practice"]
         ]
       },
       {
         "title": "Merits and Demerits: TDN System vs Net Energy (NE) System",
-        "headers": ["Evaluation Criterion", "Total Digestible Nutrients (TDN) System", "Net Energy (NE) System ($NE_m, NE_g, NE_l$)"],
+        "headers": ["Evaluation Criterion", "Total Digestible Nutrients (TDN) System", "Net Energy (NE) System (<span class=\"eq\">NE<sub>m</sub>, NE<sub>g</sub>, NE<sub>l</sub></span>)"],
         "rows": [
           ["Biological Accuracy", "Moderate; ignores heat increment of fermentation and work", "Highest; reflects actual energy deposited or retained in product"],
           ["Roughage vs Concentrate", "Falsely equates 1 kg TDN of straw to 1 kg TDN of corn", "Correctly discounts straw for its huge Heat Increment (HI)"],
@@ -653,15 +653,15 @@ unit2_data = {
       "</ul>"
       "<b>III. SYSTEMATIC STEPS IN RATION COMPUTATION</b><br>"
       "1. <b>Determine Animal Parameters:</b> Species, body weight (BW), physiological status (dry, pregnant, lactating), milk yield, and milk fat percentage.<br>"
-      "2. <b>Calculate Daily Dry Matter Requirement (DMI):</b> Based on % body weight (e.g. 400 kg crossbred cow $\\times 2.5\\% = 10.0$ kg DMI).<br>"
+      "2. <b>Calculate Daily Dry Matter Requirement (DMI):</b> Based on % body weight (e.g. 400 kg crossbred cow <span class=\"eq\">× 2.5% = 10.0</span> kg DMI).<br>"
       "3. <b>Partition DMI into Roughage and Concentrate:</b> Allocate 60–70% of DMI to roughages (6.0–7.0 kg) and 30–40% to concentrates (3.0–4.0 kg).<br>"
       "4. <b>Allocate Green Fodder:</b> Provide minimum 10–15 kg fresh green fodder (providing ~2–3 kg DM) to meet carotene/vitamin A needs.<br>"
       "5. <b>Allocate Basal Dry Roughage:</b> Provide chaffed dry straw/stover to meet the remaining roughage DM quota.<br>"
       "6. <b>Balance Deficits via Concentrate Mixture:</b> Calculate total DCP and TDN provided by the roughages; supply the remaining deficit using a balanced concentrate mixture."
     ),
     "eliteDesc": (
-      "<b>Physical Effective Neutral Detergent Fiber ($peNDF$) Thresholds:</b><br>"
-      "In modern dairy ration balancing, chemical fiber percentage alone is inadequate. The ration must supply **Physically Effective Fiber ($peNDF$)**, defined as the fraction of NDF that stimulates rumination, cud-chewing, and the formation of a buoyant ruminal fiber mat. Measured via the Penn State Particle Separator (PSPS), rations must contain a minimum of **21% to 22% $peNDF$** on a DM basis. If coarse fiber is ground too finely, $peNDF$ collapses below 18%, rumination time plummets, salivary bicarbonate secretion drops by 40%, and rumen pH crashes below 5.8, precipitating clinical acidosis and milk fat depression."
+      "<b>Physical Effective Neutral Detergent Fiber (<span class=\"eq\">peNDF</span>) Thresholds:</b><br>"
+      "In modern dairy ration balancing, chemical fiber percentage alone is inadequate. The ration must supply <b>Physically Effective Fiber (<span class=\"eq\">peNDF</span>)</b>, defined as the fraction of NDF that stimulates rumination, cud-chewing, and the formation of a buoyant ruminal fiber mat. Measured via the Penn State Particle Separator (PSPS), rations must contain a minimum of <b>21% to 22% <span class=\"eq\">peNDF</span></b> on a DM basis. If coarse fiber is ground too finely, <span class=\"eq\">peNDF</span> collapses below 18%, rumination time plummets, salivary bicarbonate secretion drops by 40%, and rumen pH crashes below 5.8, precipitating clinical acidosis and milk fat depression."
     ),
     "keyPoints": [
       "A ration is the 24-hour feed allowance; a balanced ration fulfills all physiological requirements without excess or deficit.",
@@ -672,15 +672,15 @@ unit2_data = {
       "Cattle require 30-40 minutes of rumination per kg of coarse dry matter ingested.",
       "Incorporate 3 to 4 distinct ingredient classes to ensure palatability and amino acid complementarity.",
       "Rations must maintain a Calcium to Phosphorus ratio between 1.5:1 and 2:1.",
-      "Physically Effective NDF ($peNDF$) must exceed 21-22% of DM to prevent ruminal acidosis.",
+      "Physically Effective NDF (<span class=\"eq\">peNDF</span>) must exceed 21-22% of DM to prevent ruminal acidosis.",
       "Thumb rule for Indian dairy cows: 1 kg concentrate for every 2.5 kg crossbred milk (or 2.0 kg buffalo milk)."
     ],
     "clinical": (
       "<b>Field Thumb Rules for Indian Smallholder Dairy Systems:</b><br>"
       "For a 400 kg crossbred dairy cow yielding 10 liters of milk (4.0% fat):<br>"
       "1. <b>Maintenance Requirement:</b> 1.5 kg balanced concentrate mixture + 4–5 kg dry wheat/paddy straw + 15 kg seasonal green fodder (berseem/maize).<br>"
-      "2. <b>Milk Production Allowance:</b> Add 1 kg of balanced concentrate mixture for every 2.5 kg of milk produced (i.e. $10 / 2.5 = 4.0$ kg concentrate for milk). Total concentrate allowance = $1.5 + 4.0 = 5.5$ kg/day.<br>"
-      "3. <b>Buffalo Adjustment:</b> For dairy buffaloes (Murrah) yielding 10 liters of milk at 7.0% fat, feed 1 kg concentrate for every 2.0 kg of milk ($10 / 2.0 = 5.0$ kg) + 2.0 kg maintenance = 7.0 kg concentrate daily. Always add 1 kg extra concentrate during the last 60 days of pregnancy."
+      "2. <b>Milk Production Allowance:</b> Add 1 kg of balanced concentrate mixture for every 2.5 kg of milk produced (i.e. <span class=\"eq\">10 / 2.5 = 4.0</span> kg concentrate for milk). Total concentrate allowance = <span class=\"eq\">1.5 + 4.0 = 5.5</span> kg/day.<br>"
+      "3. <b>Buffalo Adjustment:</b> For dairy buffaloes (Murrah) yielding 10 liters of milk at 7.0% fat, feed 1 kg concentrate for every 2.0 kg of milk (<span class=\"eq\">10 / 2.0 = 5.0</span> kg) + 2.0 kg maintenance = 7.0 kg concentrate daily. Always add 1 kg extra concentrate during the last 60 days of pregnancy."
     ),
     "tables": [
       {
@@ -689,10 +689,10 @@ unit2_data = {
         "rows": [
           ["Total Dry Matter (DMI)", "2.0 – 3.2 kg per 100 kg Body Weight", "Prevents gut over-distension while guaranteeing adequate nutrient intake"],
           ["Roughage:Concentrate Ratio", "60:40 to 50:50 (Never drop roughage <40%)", "Maintains rumen pH between 6.2 and 6.8; prevents SARA"],
-          ["Green Fodder Inclusion", "Minimum 10 – 15 kg fresh weight daily", "Supplies natural $\\beta$-carotene (Vitamin A precursor) and un-lignified fiber"],
+          ["Green Fodder Inclusion", "Minimum 10 – 15 kg fresh weight daily", "Supplies natural <span class=\"eq\">β</span>-carotene (Vitamin A precursor) and un-lignified fiber"],
           ["Crude Protein in Concentrate", "20 – 22 % CP for high yielders; 18% for medium", "Meets microbial and host amino acid requirements"],
           ["Mineral Mixture & Salt", "2% Mineral Mixture + 1% Common Salt", "Guarantees trace elements (Zn, Cu, Co, I, Mn, Se) and osmotic balance"],
-          ["Physically Effective Fiber ($peNDF$)", "$\\ge 21\\%$ on total diet Dry Matter basis", "Ensures adequate cud-chewing (30–40 min/kg DM) and salivary buffering"]
+          ["Physically Effective Fiber (<span class=\"eq\">peNDF</span>)", "<span class=\"eq\">≥ 21%</span> on total diet Dry Matter basis", "Ensures adequate cud-chewing (30–40 min/kg DM) and salivary buffering"]
         ]
       },
       {
