@@ -12,7 +12,7 @@ if "%ROOT:~-1%"=="\" set "ROOT=%ROOT:~0,-1%"
 set "SRC=%ROOT%"
 set "DEST=%ROOT%\repo"
 
-echo [1/4] Synchronizing 'repo' mirror folder...
+echo [1/3] Synchronizing 'repo' mirror folder...
 robocopy "%SRC%" "%DEST%" /MIR /XD .git .claude repo tmp /XF SYNC-TO-REPO.bat 1-CLICK-PUSH-TO-GITHUB.bat *.tmp *.bak *.log >nul
 
 if not exist "%ROOT%\.git" (
@@ -25,22 +25,20 @@ if not exist "%ROOT%\.git" (
     exit /b 0
 )
 
-echo [2/4] Pulling latest changes from GitHub...
+echo [2/3] Staging and committing changes...
 cd /d "%ROOT%"
-git pull --rebase origin main
-
-echo [3/4] Staging and committing modified files...
 git add -A
 
 git diff-index --quiet HEAD --
 if %ERRORLEVEL% EQU 0 (
-    echo No local changes to commit. Local branch is up to date.
+    echo No local changes to commit.
 ) else (
     echo Saving updates to local Git...
-    git commit -m "Update Animal Nutrition Studio content (%date% %time%)"
+    git commit -m "Update Animal Nutrition Studio content"
 )
 
-echo [4/4] Uploading to GitHub...
+echo [3/3] Syncing and uploading to GitHub...
+git pull --rebase origin main
 git push origin main
 
 if %ERRORLEVEL% EQU 0 (
@@ -49,7 +47,7 @@ if %ERRORLEVEL% EQU 0 (
     echo ============================================================
     echo   [SUCCESS] ALL CHANGES UPLOADED TO GITHUB!
     echo   Your website will update automatically in 1-2 minutes.
-    echo   TIP: Hard refresh (Ctrl+Shift+R or Ctrl+F5) to clear PWA cache.
+    echo   TIP: Hard refresh using Ctrl+Shift+R or Ctrl+F5 to clear cache.
     echo ============================================================
 ) else (
     color 0C
