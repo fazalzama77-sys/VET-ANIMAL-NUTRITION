@@ -12,7 +12,7 @@ if "%ROOT:~-1%"=="\" set "ROOT=%ROOT:~0,-1%"
 set "SRC=%ROOT%"
 set "DEST=%ROOT%\repo"
 
-echo [1/3] Synchronizing 'repo' folder...
+echo [1/4] Synchronizing 'repo' mirror folder...
 robocopy "%SRC%" "%DEST%" /MIR /XD .git .claude repo tmp /XF SYNC-TO-REPO.bat 1-CLICK-PUSH-TO-GITHUB.bat *.tmp *.bak *.log >nul
 
 if not exist "%ROOT%\.git" (
@@ -20,26 +20,27 @@ if not exist "%ROOT%\.git" (
     echo.
     echo [INFO] Git repository is not initialized here yet.
     echo The pristine upload mirror has been prepared in the 'repo\' folder.
-    echo When you add this folder to GitHub Desktop or run 'git init', this script will auto-push.
-    echo.
     echo Location: %DEST%
     pause
     exit /b 0
 )
 
-echo [2/3] Checking for modified files...
+echo [2/4] Pulling latest changes from GitHub...
 cd /d "%ROOT%"
+git pull --rebase origin main
+
+echo [3/4] Staging and committing modified files...
 git add -A
 
 git diff-index --quiet HEAD --
 if %ERRORLEVEL% EQU 0 (
-    echo No local changes to commit. Proceeding to sync with remote...
+    echo No local changes to commit. Local branch is up to date.
 ) else (
     echo Saving updates to local Git...
     git commit -m "Update Animal Nutrition Studio content (%date% %time%)"
 )
 
-echo [3/3] Uploading to GitHub...
+echo [4/4] Uploading to GitHub...
 git push origin main
 
 if %ERRORLEVEL% EQU 0 (
@@ -48,6 +49,7 @@ if %ERRORLEVEL% EQU 0 (
     echo ============================================================
     echo   [SUCCESS] ALL CHANGES UPLOADED TO GITHUB!
     echo   Your website will update automatically in 1-2 minutes.
+    echo   TIP: Hard refresh (Ctrl+Shift+R or Ctrl+F5) to clear PWA cache.
     echo ============================================================
 ) else (
     color 0C
