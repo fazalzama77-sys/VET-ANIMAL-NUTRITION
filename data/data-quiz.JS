@@ -3982,7 +3982,7 @@ var quizBank = {
           "Approximately 700 to 750 g DCP"
         ],
         "a": 1,
-        "e": "Sen & Ray / ICAR standards prescribe approximately 0.70 to 0.75 g DCP per kg metabolic body size (or ~280-300 g DCP for a 400 kg animal).",
+        "e": "Sen and Ray (ICAR) standards prescribe approximately 0.70 to 0.75 g DCP per kg live body weight (i.e., ~280-300 g DCP for a 400 kg animal). Under updated ICAR (2013) standards, maintenance requirement is 2.84 g DCP per kg metabolic body size (W^0.75), yielding ~254 g DCP.",
         "topicId": "u2-t08",
         "diff": 2,
         "subSection": "u2-s2"
@@ -4046,13 +4046,13 @@ var quizBank = {
       {
         "q": "In dairy ration balancing, the term 'Steaming Up' refers to:",
         "o": [
-          "Gradually increasing concentrate feeding 2 to 3 weeks prior to calving to prepare the rumen and support late fetal growth",
+          "Gradually increasing concentrate feeding during the last 6 to 8 weeks of gestation (dry period) to build body reserves and support rapid fetal growth",
           "Pelleting dairy concentrate mixtures under high-pressure saturated steam to gelatinize starch and destroy bacterial pathogens",
           "Soaking whole cereal grains and legume straws in boiling hot water prior to morning feeding to maximize daily palatability",
           "Treating coarse crop residues with pressurized steam in an autoclave to hydrolyze recalcitrant ester lignin carbohydrate bonds"
         ],
         "a": 0,
-        "e": "'Steaming up' builds body reserves, adapts rumen papillae to higher concentrate diets, and prevents post-calving ketosis in high-yielding dairy cows.",
+        "e": "'Steaming up' (conducted during the last 6-8 weeks of pregnancy / dry period) builds maternal body reserves (BCS ~3.5) and supports late fetal growth. Increasing concentrate in the final 2-3 weeks close to calving is specifically termed Challenge or Lead feeding.",
         "topicId": "u2-t09",
         "diff": 2,
         "subSection": "u2-s2"
@@ -4358,7 +4358,7 @@ var quizBank = {
       {
         "q": "BIS Type II compounded cattle feed requires a minimum of 20% Crude Protein.",
         "a": true,
-        "e": "True. BIS IS:2052 mandates minimum 20% crude protein and minimum 70% TDN for Type II cattle feed.",
+        "e": "True. BIS IS:2052 mandates minimum 20% crude protein and minimum 65% TDN for Type II cattle feed (Type I requires min 22% CP and 70% TDN).",
         "topicId": "u2-t09",
         "diff": 2,
         "subSection": "u2-s2"
@@ -4406,7 +4406,7 @@ var quizBank = {
       {
         "q": "Steaming up involves feeding high levels of straw and restricting concentrate during the last 3 weeks of pregnancy.",
         "a": false,
-        "e": "False. Steaming up increases concentrate feeding before calving to prepare the cow for lactation and build reserves.",
+        "e": "False. Steaming up increases concentrate feeding during late gestation (last 6-8 weeks of pregnancy) to prepare the cow for lactation and build reserves.",
         "topicId": "u2-t09",
         "diff": 2,
         "subSection": "u2-s2"
@@ -4866,7 +4866,7 @@ var quizBank = {
           "20%"
         ],
         "a_display": "20%",
-        "e": "BIS IS:2052 specifies minimum 20% CP and 70% TDN for Type II cattle feed.",
+        "e": "BIS IS:2052 specifies minimum 20% CP and 65% TDN for Type II cattle feed.",
         "topicId": "u2-t09",
         "diff": 2,
         "subSection": "u2-s2"
@@ -4928,12 +4928,12 @@ var quizBank = {
         "subSection": "u2-s2"
       },
       {
-        "q": "Gradually increasing concentrate feeding 2 to 3 weeks prior to calving is known as ____ up.",
+        "q": "Gradually increasing concentrate feeding during late gestation (dry period) to build body reserves prior to calving is known as ____ up.",
         "a": [
           "steaming"
         ],
         "a_display": "Steaming",
-        "e": "Steaming up prepares rumen papillae and builds energy reserves before calving.",
+        "e": "Steaming up during the last 6 to 8 weeks of gestation builds maternal reserves and prepares the dairy cow for peak lactation.",
         "topicId": "u2-t09",
         "diff": 1,
         "subSection": "u2-s2"
@@ -5009,13 +5009,13 @@ var quizBank = {
       {
         "q": "How does the nutrient requirement per kilogram of milk compare between an indigenous Murrah buffalo (7.0% fat) and a crossbred cow (4.0% fat)?",
         "o": [
-          "Buffalo requires ~20-25% more TDN and DCP per kg of milk due to higher solids and fat density",
-          "Buffalo requires ~20-25% less TDN and DCP per kg of milk because of higher ruminal microbial yield",
+          "Buffalo requires ~30-40% more TDN and DCP per kg of milk due to higher solids and fat density",
+          "Buffalo requires ~30-40% less TDN and DCP per kg of milk because of higher ruminal microbial yield",
           "Nutrient requirements per kg of milk are identical across all bovines regardless of fat percentage",
           "Buffalo requires double the digestible crude protein but only half the metabolizable energy density"
         ],
         "a": 0,
-        "e": "Buffalo milk contains 7-8% fat and ~4% protein, requiring approximately 0.42-0.45 kg TDN and 60-65 g DCP per kg milk versus 0.32 kg TDN and 45-50 g DCP in cattle.",
+        "e": "Buffalo milk contains 7-8% fat and higher SNF, requiring approximately 0.42-0.45 kg TDN and 60-65 g DCP per kg milk versus 0.32 kg TDN and 45 g DCP in cattle (representing ~30-40% higher energy and protein).",
         "topicId": "u3-t04",
         "diff": 2,
         "subSection": "u3-s1"
@@ -6251,7 +6251,7 @@ var quizBank = {
       {
         "q": "Buffalo milk requires less energy and protein per kilogram than cow milk because buffaloes are more efficient converters of roughage.",
         "a": false,
-        "e": "False. Buffalo milk contains 7-8% fat and higher protein, requiring roughly 20-25% more TDN and DCP per kg than cow milk.",
+        "e": "False. Buffalo milk contains 7-8% fat and higher protein, requiring roughly 30-40% more TDN and DCP per kg than cow milk.",
         "topicId": "u3-t04",
         "diff": 1,
         "subSection": "u3-s1"
@@ -7286,7 +7286,7 @@ var quizBank = {
           "Uric acid functions as an essential biochemical surfactant required for the physical emulsification of fats in the cloacal chamber"
         ],
         "a": 2,
-        "e": "Uric acid contains 4 nitrogens per mole and precipitates out as a semi-solid paste, conserving water and allowing embryo development inside non-cleidoic eggs.",
+        "e": "Uric acid contains 4 nitrogens per mole and precipitates out as a semi-solid paste, conserving water and allowing embryo development inside cleidoic (shelled) eggs.",
         "topicId": "u4-t01",
         "diff": 1,
         "subSection": "u4-s1"
@@ -7885,10 +7885,10 @@ var quizBank = {
           "Parturient Paresis (Acute Severe Hypocalcemia / Equine Lactational Eclampsia)",
           "Bovine Acetonemia (Spontaneous Hypoglycemic Ketosis State)",
           "Hypomagnesemic Grass Tetany (Lactation Tetany Syndrome)",
-          "Azoturia (Exertional Rhabdomyolysis / Polysaccharide Storage Myopathy)"
+          "Azoturia (Exertional Rhabdomyolysis / Tying-Up Syndrome)"
         ],
         "a": 3,
-        "e": "Excessive glycogen accumulation in muscle during rest followed by exercise leads to lactic acid buildup, muscle fiber necrosis, myoglobinuria ('coffee-colored' urine), and stiff hindquarters.",
+        "e": "Excessive glycogen accumulation in resting muscle followed by sudden exercise causes severe lactic acidosis, muscle fiber lysis (rhabdomyolysis), myoglobinuria, and stiffness (Monday Morning Disease / Azoturia).",
         "topicId": "u4-t07",
         "diff": 2,
         "subSection": "u4-s2"
@@ -8042,7 +8042,7 @@ var quizBank = {
           "Copper and Zinc"
         ],
         "a": 3,
-        "e": "Copper is required for lysyl oxidase cross-linking of cartilage collagen; low copper intake during rapid growth causes cartilage maturation failure and OCD.",
+        "e": "Copper is an essential cofactor for lysyl oxidase, which cross-links collagen and elastin in cartilage; dietary copper deficiency (or excess zinc acting as an antagonist via metallothionein induction) causes cartilage maturation failure, DOD, and OCD in growing foals.",
         "topicId": "u4-t06",
         "diff": 2,
         "subSection": "u4-s2"
@@ -8260,13 +8260,13 @@ var quizBank = {
       {
         "q": "What fatal clinical condition occurs in rabbits fed excessive high-starch concentrate pellets and inadequate hay?",
         "o": [
-          "Mucoid Enteritis / Enterotoxemia caused by cecal starch overload proliferating Clostridium spiroforme",
+          "Enterotoxaemia / Cecal Dysbiosis caused by cecal starch overload proliferating Clostridium spiroforme",
           "Severe Nutritional Secondary Hyperparathyroidism (Metabolic Bone Disease / Rubber Jaw syndrome in kits)",
           "Spontaneous acute gastric dilation and catastrophic diaphragmatic rupture in young kits",
           "Blind Staggers (Polioencephalomalacia caused by microbial thiaminase enzyme destruction)"
         ],
         "a": 0,
-        "e": "Excess starch spills into the cecum, disrupting the normal symbiotic flora and allowing toxigenic Clostridium spiroforme to produce lethal iota-like toxin.",
+        "e": "Excess starch spills into the cecum, causing dysbiosis and proliferation of toxigenic Clostridium spiroforme, which produces lethal iota-like enterotoxin causing fatal enterotoxaemia.",
         "topicId": "u4-t13",
         "diff": 2,
         "subSection": "u4-s3"
