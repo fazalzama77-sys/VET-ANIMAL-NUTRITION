@@ -230,7 +230,7 @@ var quizBank = {
           "Valerate"
         ],
         "a": 2,
-        "e": "Over 80-90% of ruminally absorbed butyric acid is converted directly to beta-hydroxybutyrate and acetoacetate within ruminal epithelial colonocytes.",
+        "e": "Over 80-90% of ruminally absorbed butyric acid is converted directly to beta-hydroxybutyrate and acetoacetate within ruminal epithelial cells.",
         "topicId": "u1-t05",
         "diff": 2,
         "subSection": "u1-s1"
@@ -3008,7 +3008,7 @@ var quizBank = {
         "subSection": "u2-s1"
       },
       {
-        "q": "The comparative slaughter technique developed by Armsby and Moulton is regarded as the gold standard for measuring:",
+        "q": "The comparative slaughter technique (pioneered by Moulton and refined by Lofgreen and Garrett) is regarded as the gold standard for measuring:",
         "o": [
           "Apparent dry matter, crude fiber, and gross energy digestibility in vivo",
           "Net energy and body nutrient retention over a feeding period",
@@ -3501,12 +3501,12 @@ var quizBank = {
         "q": "The famous American feeding standard published in 'Feeds and Feeding' which served as the global practical guideline for decades was authored by:",
         "o": [
           "H.P. Armsby",
-          "W.A. Henry and F.B. Morrison",
+          "Emil von Wolff and C. Lehmann",
           "F.B. Morrison",
           "L.A. Maynard"
         ],
         "a": 2,
-        "e": "W.A. Henry (1898) and Frank B. Morrison (from 1915 onward) compiled the seminal 'Morrison Feeding Standards' based on TDN and DCP.",
+        "e": "Frank B. Morrison compiled and popularized the seminal 'Morrison Feeding Standards' in 'Feeds and Feeding' (originally originated by W.A. Henry in 1898) based on TDN and DCP.",
         "topicId": "u2-t07",
         "diff": 1,
         "subSection": "u2-s2"
@@ -3794,13 +3794,13 @@ var quizBank = {
       {
         "q": "According to Bureau of Indian Standards (BIS: IS 2052) specifications, Type II commercial cattle feed must contain minimum Crude Protein and TDN of:",
         "o": [
-          "20% CP and 70% TDN",
+          "20% CP and 65% TDN",
           "10% CP and 50% TDN",
           "30% CP and 85% TDN",
           "14% CP and 60% TDN"
         ],
         "a": 0,
-        "e": "BIS Type II compounding standards specify minimum 20% crude protein, minimum 2.5% ether extract, maximum 12% crude fiber, and minimum 70% TDN.",
+        "e": "BIS Type II compounding standards specify minimum 20% crude protein, minimum 2.5% ether extract, maximum 12% crude fiber, and minimum 65% TDN (Type I requires min 22% CP and 70% TDN).",
         "topicId": "u2-t09",
         "diff": 2,
         "subSection": "u2-s2"
