@@ -42,7 +42,7 @@ http.createServer(function (req, res) {
     var ext = path.extname(file);
     res.writeHead(200, {
       "Content-Type": types[ext] || "application/octet-stream",
-      "Cache-Control": "no-cache"
+      "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"
     });
     res.end(data);
   });
