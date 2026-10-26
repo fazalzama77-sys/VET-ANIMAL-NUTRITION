@@ -3,7 +3,7 @@
    Animal Nutrition Studio (B.V.Sc & A.H.)
    ============================================================ */
 
-var CACHE_VERSION = "vanut-v18";
+var CACHE_VERSION = "vanut-v19";
 var SHELL_CACHE = CACHE_VERSION + "-shell";
 var IMG_CACHE = CACHE_VERSION + "-img";
 
@@ -25,6 +25,7 @@ var PRECACHE = [
   "data/data-theory-unit3.JS",
   "data/data-theory-unit4.JS",
   "data/data-practical.JS",
+  "data/data-images.js",
   "data/data-why.JS",
   "data/data-qa.JS",
   "data/data-quiz.JS",

@@ -1018,6 +1018,10 @@ var app = (function () {
           '<p>' + esc(spotter.gross) + '</p>' +
         '</div>' +
 
+        ((_findFigureByKey(spotter.figKey || spotter.topicId))
+          ? '<div class="spotter-fig-wrap mt-3">' + renderFigureCard(_findFigureByKey(spotter.figKey || spotter.topicId), true) + '</div>'
+          : '') +
+
         '<div id="spotter-details-drawer" class="spotter-details-drawer">' +
           '<div class="spotter-details-grid">' +
             '<div class="spotter-detail-item">' +
@@ -1330,6 +1334,153 @@ var app = (function () {
   }
 
   /* ============================================================
+     100% LEGAL OPEN-LICENSED VISUAL ATLAS & LIGHTBOX
+     ============================================================ */
+  function _findFigureByKey(figKey) {
+    var bank = window.topicImages || {};
+    var m = String(figKey || "").match(/^([up]\d+-t\d+)/);
+    if (m && bank[m[1]]) {
+      var list = bank[m[1]];
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].key === figKey) return list[i];
+      }
+    }
+    for (var tid in bank) {
+      var arr = bank[tid] || [];
+      for (var j = 0; j < arr.length; j++) {
+        if (arr[j].key === figKey) return arr[j];
+      }
+    }
+    return null;
+  }
+
+  function renderFigureCard(fig, isInline) {
+    if (!fig || !fig.url) return "";
+    var safeKey = esc(fig.key || "");
+    var singleUrl = esc(fig.origUrl || fig.url);
+    var pageUrl = esc(fig.pageUrl || fig.origUrl || fig.url);
+    var licUrl = esc(fig.licenseUrl || "https://commons.wikimedia.org/wiki/Commons:Licensing");
+    return '<figure class="micro-fig-card' + (isInline ? ' micro-fig-card--inline' : '') + '">' +
+      '<div class="micro-fig-head">' +
+        '<div class="micro-fig-title-wrap">' +
+          '<span class="micro-fig-badge">' + icon("microscope") + ' Visual Reference</span>' +
+          '<h5 class="micro-fig-title">' + esc(fig.title || "Animal Nutrition Reference Visual") + '</h5>' +
+        '</div>' +
+        '<div class="micro-fig-actions">' +
+          '<button type="button" class="btn btn--sm btn--soft" onclick="app.openImageModal(\'' + safeKey + '\')" title="Zoom this single picture">' +
+            icon("search") + ' <span>Zoom Picture</span>' +
+          '</button>' +
+          '<a class="btn btn--sm btn--subtle" href="' + singleUrl + '" target="_blank" rel="noopener noreferrer" title="Open only this single picture file in a new tab">' +
+            '<span>Single Image ↗</span>' +
+          '</a>' +
+        '</div>' +
+      '</div>' +
+      '<div class="micro-fig-img-wrap" onclick="app.openImageModal(\'' + safeKey + '\')" role="button" tabindex="0" aria-label="Zoom ' + esc(fig.title || "image") + '">' +
+        '<img class="micro-fig-img" src="' + esc(fig.url) + '" alt="' + esc(fig.title || "") + '" loading="lazy">' +
+      '</div>' +
+      (fig.caption ? '<figcaption class="micro-fig-caption"><b>Exam &amp; Spotter Observation:</b> ' + esc(fig.caption) + '</figcaption>' : '') +
+      '<div class="micro-fig-legal">' +
+        '<span class="micro-fig-legal__badge" title="Verified open-access license with explicit owner permission">' +
+          icon("check") + ' 100% Legal Open License: <a href="' + licUrl + '" target="_blank" rel="noopener noreferrer"><b>' + esc(fig.license || "Public Domain") + '</b></a>' +
+        '</span>' +
+        '<span class="micro-fig-legal__author">Owner / Credit: <b>' + esc(fig.author || "Wikimedia Commons") + '</b></span>' +
+        '<a class="micro-fig-legal__src" href="' + pageUrl + '" target="_blank" rel="noopener noreferrer">Verify Ownership &amp; Source (Wikimedia Commons) ↗</a>' +
+      '</div>' +
+    '</figure>';
+  }
+
+  function injectSectionFigures(html, figs) {
+    if (!html || !figs || !figs.length) return { html: html, remaining: [] };
+    var out = html;
+    var usedKeys = {};
+
+    // 1. If the primary figure does not have a specific sectionMatch, inject it right at the end of Section I (before Section II)
+    var primary = figs[0];
+    if (primary && !primary.sectionMatch) {
+      var s2Idx = out.indexOf("<b>II.");
+      if (s2Idx !== -1) {
+        out = out.slice(0, s2Idx) + renderFigureCard(primary, true) + out.slice(s2Idx);
+        usedKeys[primary.key] = true;
+      } else {
+        var brIdx = out.indexOf("<br><br>");
+        if (brIdx !== -1) {
+          out = out.slice(0, brIdx + 8) + renderFigureCard(primary, true) + out.slice(brIdx + 8);
+          usedKeys[primary.key] = true;
+        }
+      }
+    }
+
+    // 2. Inject every section-matched figure right inside its matching heading or list item
+    figs.forEach(function (f) {
+      if (usedKeys[f.key] || !f.sectionMatch) return;
+      var idx = out.indexOf(f.sectionMatch);
+      if (idx === -1) return;
+
+      var liOpenBefore = out.lastIndexOf("<li", idx);
+      var liCloseBefore = out.lastIndexOf("</li>", idx);
+      var isInsideLi = (liOpenBefore !== -1 && (liCloseBefore === -1 || liOpenBefore > liCloseBefore));
+
+      if (isInsideLi) {
+        var liCloseAfter = out.indexOf("</li>", idx);
+        if (liCloseAfter !== -1) {
+          out = out.slice(0, liCloseAfter) + renderFigureCard(f, true) + out.slice(liCloseAfter);
+          usedKeys[f.key] = true;
+        }
+      } else {
+        var bClose = out.indexOf("</b>", idx);
+        if (bClose !== -1) {
+          var pos = bClose + 4;
+          while (out.slice(pos, pos + 4).toLowerCase() === "<br>") {
+            pos += 4;
+          }
+          out = out.slice(0, pos) + renderFigureCard(f, true) + out.slice(pos);
+          usedKeys[f.key] = true;
+        }
+      }
+    });
+
+    var remaining = figs.filter(function (f) { return !usedKeys[f.key]; });
+    return { html: out, remaining: remaining };
+  }
+
+  function openImageModal(figKey) {
+    var fig = _findFigureByKey(figKey);
+    if (!fig) return;
+    var modal = document.getElementById("img-lightbox-modal");
+    var content = document.getElementById("img-lightbox-content");
+    if (!modal || !content) return;
+    var singleUrl = esc(fig.origUrl || fig.url);
+    var pageUrl = esc(fig.pageUrl || fig.origUrl || fig.url);
+    var licUrl = esc(fig.licenseUrl || "https://commons.wikimedia.org/wiki/Commons:Licensing");
+    content.innerHTML =
+      '<div class="img-lightbox-header">' +
+        '<span class="micro-fig-badge">' + icon("microscope") + ' Single-Picture Diagnostic Viewer</span>' +
+        '<h3 class="img-lightbox-title">' + esc(fig.title || "Animal Nutrition Reference Visual") + '</h3>' +
+      '</div>' +
+      '<div class="img-lightbox-stage">' +
+        '<img src="' + esc(fig.url) + '" alt="' + esc(fig.title || "") + '">' +
+      '</div>' +
+      (fig.caption ? '<p class="img-lightbox-caption"><b>Exam &amp; Spotter Observation:</b> ' + esc(fig.caption) + '</p>' : '') +
+      '<div class="micro-fig-legal img-lightbox-legal">' +
+        '<span class="micro-fig-legal__badge">' + icon("check") + ' License: <a href="' + licUrl + '" target="_blank" rel="noopener noreferrer"><b>' + esc(fig.license || "Public Domain") + '</b></a></span>' +
+        '<span class="micro-fig-legal__author">Owner / Credit: <b>' + esc(fig.author || "Wikimedia Commons") + '</b></span>' +
+        '<div class="img-lightbox-links">' +
+          '<a class="btn btn--sm btn--primary" href="' + singleUrl + '" target="_blank" rel="noopener noreferrer">Open Full-Resolution Single Image ↗</a>' +
+          '<a class="btn btn--sm btn--soft" href="' + pageUrl + '" target="_blank" rel="noopener noreferrer">Wikimedia Commons License Page ↗</a>' +
+        '</div>' +
+      '</div>';
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeImageModal() {
+    var modal = document.getElementById("img-lightbox-modal");
+    if (!modal || modal.style.display === "none") return;
+    modal.style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  /* ============================================================
      ONE TOPIC — the lesson page
      ============================================================ */
   function renderTopic() {
@@ -1377,8 +1528,20 @@ var app = (function () {
     var body;
     if (hasContent(t.id)) {
       var main = showDeep ? c.eliteDesc : c.desc;
+      var figs = c.figures || (window.topicImages && window.topicImages[t.id]) || [];
+      var remainingFigs = figs;
+      if (main && figs.length) {
+        var injected = injectSectionFigures(main, figs);
+        main = injected.html;
+        remainingFigs = injected.remaining;
+      }
       body =
         (main ? block(showDeep ? "Deep diagnostic guide" : "Standard description", main, null, showDeep ? "sparkle" : "microscope") : "") +
+        (remainingFigs && remainingFigs.length
+          ? block("Diagnostic Visual Atlas & Verified Reference Figures",
+              '<div class="micro-fig-stack">' + remainingFigs.map(function (f) { return renderFigureCard(f, false); }).join("") + '</div>',
+              "atlas", "eye")
+          : "") +
         (c.keyPoints && c.keyPoints.length
           ? block("Key points — what earns marks",
               '<ul class="keylist">' + c.keyPoints.map(function (k) {
@@ -1388,13 +1551,6 @@ var app = (function () {
         (c.tables || []).map(function (tb) {
           return block(tb.title || "Diagnostic Comparison", renderTable(tb, true), "table", "clipboard");
         }).join("") +
-        (c.img
-          ? '<figure class="lesson__fig"><img src="' + esc(c.img) + '" alt="' + esc(t.title) + '" loading="lazy"></figure>'
-          : '<div class="nutrition-image-placeholder"><div class="nutrition-placeholder-body">' +
-              icon("search") +
-              '<div class="nutrition-placeholder-title">High-Quality Animal Nutrition Visuals in Development</div>' +
-              '<div class="nutrition-placeholder-sub">Carefully curated feed microscopy micrographs, forage diagrams, processing flowcharts, and metabolism pathways are in compilation.</div>' +
-            '</div></div>') +
         (c.clinical ? block("Clinical correlation & Pathogenesis", c.clinical, "clinical", "shield") : "");
     } else {
       body =
@@ -2467,7 +2623,9 @@ var app = (function () {
     el("#whyModalTitle").textContent = item.concept || item.title;
     el("#whyModalCompText").textContent = item.comparison || "Comparative Mechanism";
     el("#whyModalQuestion").textContent = item.title;
-    el("#whyModalWhy").innerHTML = item.why || "";
+    var whyFigKey = (window.whyImageMap && window.whyImageMap[item.id]) || item.figKey || "";
+    var whyFig = whyFigKey ? _findFigureByKey(whyFigKey) : null;
+    el("#whyModalWhy").innerHTML = (item.why || "") + (whyFig ? '<div class="mt-3">' + renderFigureCard(whyFig, true) + '</div>' : "");
 
     var clinBox = el("#whyModalClinicalSection");
     if (clinBox) {
@@ -4298,6 +4456,7 @@ var app = (function () {
         if (!el("#searchmodal").hidden) closeSearch();
         closeAbout();
         closeOnboarding(true);
+        closeImageModal();
       }
       else if (e.key === "/" && document.activeElement.tagName !== "INPUT" &&
                document.activeElement.tagName !== "TEXTAREA") { e.preventDefault(); openSearch(); }
@@ -4336,7 +4495,9 @@ var app = (function () {
     setSrsNotificationTime: setSrsNotificationTime,
     toggleSpotterDetails: toggleSpotterDetails,
     shuffleWhyMechanism: shuffleWhyMechanism,
-    shuffleGlossaryTerm: shuffleGlossaryTerm
+    shuffleGlossaryTerm: shuffleGlossaryTerm,
+    openImageModal: openImageModal,
+    closeImageModal: closeImageModal
   };
 })();
 

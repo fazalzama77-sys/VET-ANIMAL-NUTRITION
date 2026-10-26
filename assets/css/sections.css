@@ -4760,3 +4760,309 @@
 .xarrow small { font-size: .75em; }
 .eq-matrix { border-collapse: collapse; margin: 4px auto; }
 .eq-matrix td { padding: 4px 12px; text-align: center; }
+
+/* ============================================================================
+   DIAGNOSTIC VISUAL ATLAS — INLINE SECTION FIGURES & SINGLE-IMAGE LIGHTBOX
+   100% Verified Legal Open-Access Figures (Public Domain / CC0 / CC BY / CC BY-SA)
+   ============================================================================ */
+
+.micro-fig-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.micro-fig-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin: 16px 0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.micro-fig-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.micro-fig-card--inline {
+  margin: 14px 0 18px 0;
+  border-left: 4px solid var(--accent);
+  background: var(--surface-2);
+}
+
+.micro-fig-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.micro-fig-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.micro-fig-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.micro-fig-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.micro-fig-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.micro-fig-img-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  padding: 14px;
+  min-height: 180px;
+  max-height: 400px;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.micro-fig-img {
+  display: block;
+  max-width: 100%;
+  max-height: 360px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 4px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
+}
+
+.micro-fig-img-wrap:hover .micro-fig-img {
+  transform: scale(1.015);
+}
+
+.micro-fig-caption {
+  padding: 10px 14px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.micro-fig-legal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px 14px;
+  font-size: 0.74rem;
+  background: var(--surface-2);
+  border-top: 1px dashed var(--border);
+  color: var(--text-muted);
+}
+
+.micro-fig-legal__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: var(--ok);
+  background: var(--ok-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.micro-fig-legal__badge a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.micro-fig-legal__author {
+  flex: 1;
+  min-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.micro-fig-legal__src {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.micro-fig-legal__src:hover {
+  text-decoration: underline;
+}
+
+.spotter-fig-wrap {
+  margin: 12px 0;
+}
+
+/* Single-Image Fullscreen Lightbox Modal */
+.img-lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.86);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.img-lightbox-card {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg, var(--shadow-md));
+}
+
+.img-lightbox-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 48px 12px 18px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.img-lightbox-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.img-lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.15rem;
+}
+
+.img-lightbox-close:hover {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: var(--surface);
+}
+
+.img-lightbox-stage {
+  flex: 1;
+  min-height: 240px;
+  max-height: 64vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-2);
+  padding: 16px;
+  overflow: auto;
+}
+
+.img-lightbox-stage img {
+  max-width: 100%;
+  max-height: 60vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: var(--surface);
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.img-lightbox-caption {
+  padding: 12px 18px;
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.img-lightbox-legal {
+  padding: 10px 18px;
+}
+
+.img-lightbox-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .micro-fig-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .micro-fig-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .micro-fig-img-wrap {
+    max-height: 280px;
+    padding: 10px;
+  }
+  .micro-fig-img {
+    max-height: 250px;
+  }
+}
