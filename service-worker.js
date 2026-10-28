@@ -3,7 +3,7 @@
    Animal Nutrition Studio (B.V.Sc & A.H.)
    ============================================================ */
 
-var CACHE_VERSION = "vanut-v20";
+var CACHE_VERSION = "vanut-v21";
 var IMG_LIMIT = 220;
 var SHELL_CACHE = CACHE_VERSION + "-shell";
 var IMG_CACHE = CACHE_VERSION + "-img";
@@ -55,14 +55,14 @@ var PRECACHE = [
   "revision/unit-4-rapid-revision.html"
 ];
 
-/* ---- Installation: Cache core app shell ---- */
+/* ---- Installation: Cache core app shell & skip waiting immediately ---- */
 self.addEventListener("install", function (e) {
+  self.skipWaiting();
   e.waitUntil(
     caches.open(SHELL_CACHE)
       .then(function (cache) {
         return Promise.all(
           PRECACHE.map(function (url) {
-            // cache: "reload" skips the browser HTTP cache so a new version never precaches stale files
             return cache.add(new Request(url, { cache: "reload" })).catch(function (err) {
               console.warn("[SW] Precache item missed:", url, err);
             });
@@ -75,24 +75,31 @@ self.addEventListener("install", function (e) {
   );
 });
 
-/* ---- Activation: Clean old caches & claim clients ---- */
+/* ---- Activation: Clean old caches & claim clients immediately ---- */
 self.addEventListener("activate", function (e) {
   e.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(
         keys.map(function (k) {
           if (k.indexOf(CACHE_VERSION) !== 0) {
+            console.log("[SW] Deleting old cache:", k);
             return caches.delete(k);
           }
         })
       );
     }).then(function () {
       return self.clients.claim();
+    }).then(function () {
+      return self.clients.matchAll({ type: "window" }).then(function (clients) {
+        clients.forEach(function (client) {
+          client.postMessage({ type: "SW_ACTIVATED", version: CACHE_VERSION });
+        });
+      });
     })
   );
 });
 
-/* ---- Fetch Handler: Offline-first with background updates ---- */
+/* ---- Fetch Handler: Offline-first with network-first for documents ---- */
 self.addEventListener("fetch", function (e) {
   var req = e.request;
   if (req.method !== "GET") return;
@@ -100,10 +107,16 @@ self.addEventListener("fetch", function (e) {
   var url = new URL(req.url);
   if (url.origin !== location.origin) return;
 
-  // 1. Navigation requests: Network-first, fallback to cached index.html
-  if (req.mode === "navigate" || req.destination === "document") {
+  // 1. Navigation & HTML Document requests: Network-first, fallback to cached index.html
+  var isDoc = req.mode === "navigate" ||
+              req.destination === "document" ||
+              url.pathname === location.pathname ||
+              url.pathname.endsWith(".html") ||
+              url.pathname.endsWith("/");
+
+  if (isDoc) {
     e.respondWith(
-      fetch(req).then(function (res) {
+      fetch(req, { cache: "no-cache" }).then(function (res) {
         if (res && res.status === 200) {
           var copy = res.clone();
           caches.open(SHELL_CACHE).then(function (c) { c.put(req, copy); });
@@ -156,7 +169,17 @@ self.addEventListener("fetch", function (e) {
 
 /* ---- Client Communication ---- */
 self.addEventListener("message", function (e) {
-  if (e.data && e.data.type === "SKIP_WAITING") {
+  if (!e.data) return;
+  if (e.data.type === "SKIP_WAITING") {
     self.skipWaiting();
+  } else if (e.data.type === "PURGE_AND_RELOAD") {
+    caches.keys().then(function (names) {
+      return Promise.all(names.map(function (n) { return caches.delete(n); }));
+    }).then(function () {
+      self.skipWaiting();
+      if (e.source) {
+        e.source.postMessage({ type: "PURGE_COMPLETE" });
+      }
+    });
   }
-});
+});

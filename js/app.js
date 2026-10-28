@@ -2437,22 +2437,42 @@ var app = (function () {
     hideInstallBanner();
   }
 
-  function resetCache() {
-    if ("caches" in window) {
-      caches.keys().then(function (names) {
-        return Promise.all(names.map(function (name) { return caches.delete(name); }));
-      }).then(function () {
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.getRegistrations().then(function (regs) {
-            regs.forEach(function (r) { r.update(); });
-          });
-        }
-        toast("Cache refreshed. Reloading...");
-        setTimeout(function () { window.location.reload(); }, 600);
-      });
-    } else {
-      window.location.reload();
+  function resetCache(interactive) {
+    if (typeof toast === "function") {
+      toast("Purging offline cache and updating app...");
     }
+
+    // 1. Tell active SW to purge
+    if ("serviceWorker" in navigator && navigator.serviceWorker.controller) {
+      try {
+        navigator.serviceWorker.controller.postMessage({ type: "PURGE_AND_RELOAD" });
+      } catch (e) {}
+    }
+
+    // 2. Clear all CacheStorage
+    var clearCaches = ("caches" in window)
+      ? caches.keys().then(function (names) {
+          return Promise.all(names.map(function (name) { return caches.delete(name); }));
+        })
+      : Promise.resolve();
+
+    // 3. Unregister existing SW registrations so fresh one installs
+    var clearSW = ("serviceWorker" in navigator)
+      ? navigator.serviceWorker.getRegistrations().then(function (regs) {
+          return Promise.all(regs.map(function (r) { return r.unregister(); }));
+        })
+      : Promise.resolve();
+
+    Promise.all([clearCaches, clearSW]).then(function () {
+      setTimeout(function () {
+        var origin = window.location.origin;
+        var path = window.location.pathname;
+        var hash = window.location.hash || "#/";
+        window.location.replace(origin + path + "?refresh=" + Date.now() + hash);
+      }, 500);
+    }).catch(function () {
+      window.location.reload();
+    });
   }
 
   function wireTopicActions(t) {
@@ -4035,7 +4055,7 @@ var app = (function () {
         '</div>' +
         '<div class="pwa-btn-group">' +
           (!isAppInstalled() ? '<button class="btn btn--primary" onclick="app.triggerInstall()">' + icon("download") + ' Install on Phone / PC</button>' : '') +
-          '<button class="btn" onclick="app.resetCache()">' + icon("refresh") + ' Refresh Offline Cache</button>' +
+          '<button class="btn btn--primary" onclick="app.resetCache(true)">' + icon("refresh") + ' Refresh Offline Cache</button>' +
         '</div>' +
       '</div>' +
 
@@ -4390,6 +4410,22 @@ var app = (function () {
      ============================================================ */
   function init() {
     view = el("#view");
+    var CURRENT_BUILD = "vanut-v21";
+    try {
+      var prevBuild = localStorage.getItem("vanut-build-version");
+      if (prevBuild && prevBuild !== CURRENT_BUILD) {
+        localStorage.setItem("vanut-build-version", CURRENT_BUILD);
+        if ("caches" in window) {
+          caches.keys().then(function (names) {
+            names.forEach(function (n) {
+              if (n.indexOf(CURRENT_BUILD) !== 0) caches.delete(n);
+            });
+          });
+        }
+      } else {
+        localStorage.setItem("vanut-build-version", CURRENT_BUILD);
+      }
+    } catch (e) {}
     store.bumpVisits();
     store.applyTheme();
     if (store.applySidebarState) store.applySidebarState();
