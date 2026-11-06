@@ -253,6 +253,27 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<!-- ==================== CLOUD SYNC & QR PAIRING MODAL ==================== -->
+<div class="sync-modal-overlay" id="sync-qr-modal" style="display:none;" onclick="if(event.target===this) app.closeSyncModal()">
+  <div class="sync-modal-card" role="dialog" aria-modal="true" aria-label="Device Pairing QR Code">
+    <button class="sync-modal-close" onclick="app.closeSyncModal()" aria-label="Close">&times;</button>
+    <div style="font-size:2.2rem; margin-bottom:6px;">☁️</div>
+    <h3 style="margin:0; font-size:var(--fs-lg, 1.25rem);">Scan with Your Mobile Phone</h3>
+    <p class="muted small mt-1">Open your phone's camera and point it at this QR code to link your phone and tablet instantly with zero typing.</p>
+    <div class="mt-3">
+      <img id="sync-qr-image" class="sync-qr-img" alt="Device Pairing QR Code" src="">
+    </div>
+    <div class="sync-pin-display mt-3">
+      <span class="small muted">Or enter this 6-Digit PIN on your phone (tap to copy):</span>
+      <div class="sync-pin-big" id="sync-qr-pin" style="cursor:pointer;" title="Tap to copy PIN" onclick="app.copySyncPin()">---</div>
+    </div>
+    <div class="mt-4 row" style="justify-content:center; gap:10px;">
+      <button class="btn btn--sm btn--soft" type="button" onclick="app.copySyncLink()">📋 Copy Link</button>
+      <button class="btn btn--sm btn--primary" type="button" onclick="app.closeSyncModal()">Done</button>
+    </div>
+  </div>
+</div>
+
 <!-- ==================== SCRIPTS ====================
      ORDER MATTERS.
      1. Data files first — they only declare variables.
@@ -280,6 +301,7 @@
 <script src="js/search.js"></script>
 <script src="js/deep-guide.js"></script>
 <script src="js/events.js"></script>
+<script src="js/sync.js"></script>
 <script src="js/app.js"></script>
 
 <script>

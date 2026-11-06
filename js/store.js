@@ -37,7 +37,8 @@ var store = (function () {
     topicGuideSeen: PREFIX + "topic-guide-seen",
     eventSeen:  PREFIX + "event-announcements-seen",
     installDismissed: PREFIX + "install-dismissed",
-    sidebarCollapsed: PREFIX + "sidebar-collapsed"
+    sidebarCollapsed: PREFIX + "sidebar-collapsed",
+    syncConfig: PREFIX + "sync-config"
   };
 
   /* ---------- low level ---------- */
@@ -54,6 +55,9 @@ var store = (function () {
   function write(key, value) {
     try {
       localStorage.setItem(key, JSON.stringify(value));
+      if (store && typeof store._onChange === "function") {
+        try { store._onChange(key, value); } catch (err) {}
+      }
       return true;
     } catch (e) {
       // Quota exceeded or private mode — fail quietly, never break the page.
@@ -459,6 +463,277 @@ var store = (function () {
   function getSrsNotifyTime() { return read(KEYS.notifyTime, "19:00"); }
   function setSrsNotifyTime(t) { write(KEYS.notifyTime, t || "19:00"); }
 
+  /* ---------- cross-device cloud sync ---------- */
+  function getSyncConfig() {
+    return read(KEYS.syncConfig, {
+      enabled: false,
+      dbUrl: "",
+      pin: "",
+      deviceName: (/Mobi|Android|iPhone/i.test(navigator.userAgent) ? "Mobile Phone 📱" : "Tablet / PC 📟"),
+      lastSyncedAt: 0,
+      autoSync: true
+    });
+  }
+
+  function setSyncConfig(cfg) {
+    write(KEYS.syncConfig, cfg);
+  }
+
+  function getAllData() {
+    return {
+      version: 1,
+      timestamp: Date.now(),
+      read: getRead(),
+      bookmarks: getBookmarks(),
+      notes: getNotes(),
+      highlights: getHighlights(),
+      hlColor: getHighlightColor(),
+      quiz: getQuiz(),
+      quizLog: getAttemptLog ? getAttemptLog() : [],
+      srs: getSrs(),
+      activity: getActivity(),
+      qaDone: getQaDone(),
+      lastTopic: getLastTopic()
+    };
+  }
+
+  function mergeRemoteData(remote) {
+    if (!remote || typeof remote !== "object") return false;
+    var changed = false;
+
+    // 1. Read status (union of read topics)
+    if (remote.read && typeof remote.read === "object") {
+      var localRead = getRead();
+      var mergedRead = Object.assign({}, localRead);
+      var readDirty = false;
+      Object.keys(remote.read).forEach(function (tid) {
+        var rVal = remote.read[tid];
+        if (!mergedRead[tid] || (typeof rVal === "number" && rVal > (mergedRead[tid] || 0))) {
+          mergedRead[tid] = rVal;
+          readDirty = true;
+        }
+      });
+      if (readDirty) {
+        write(KEYS.read, mergedRead);
+        changed = true;
+      }
+    }
+
+    // 2. Bookmarks (union of array)
+    if (Array.isArray(remote.bookmarks)) {
+      var localBm = getBookmarks();
+      var bmSet = {};
+      localBm.forEach(function (id) { bmSet[id] = true; });
+      var bmDirty = false;
+      remote.bookmarks.forEach(function (id) {
+        if (!bmSet[id]) {
+          bmSet[id] = true;
+          bmDirty = true;
+        }
+      });
+      if (bmDirty) {
+        write(KEYS.bookmarks, Object.keys(bmSet));
+        changed = true;
+      }
+    }
+
+    // 3. Notes (merge by topicId, keep longer/richer note)
+    if (remote.notes && typeof remote.notes === "object") {
+      var localNotes = getNotes();
+      var mergedNotes = Object.assign({}, localNotes);
+      var notesDirty = false;
+      Object.keys(remote.notes).forEach(function (tid) {
+        var rText = remote.notes[tid];
+        if (rText && typeof rText === "string" && rText.trim()) {
+          var lText = mergedNotes[tid] || "";
+          if (!lText || (rText !== lText && rText.length > lText.length)) {
+            mergedNotes[tid] = rText;
+            notesDirty = true;
+          }
+        }
+      });
+      if (notesDirty) {
+        write(KEYS.notes, mergedNotes);
+        changed = true;
+      }
+    }
+
+    // 4. Highlights (union by topicId, deduplicating text)
+    if (remote.highlights && typeof remote.highlights === "object") {
+      var localHl = getHighlights();
+      var mergedHl = Object.assign({}, localHl);
+      var hlDirty = false;
+      Object.keys(remote.highlights).forEach(function (tid) {
+        var listLocal = mergedHl[tid] || [];
+        var listRemote = remote.highlights[tid] || [];
+        var seen = {};
+        var combined = [];
+        listLocal.forEach(function (item) {
+          var t = typeof item === "string" ? item : (item ? item.text : "");
+          var c = typeof item === "object" && item ? item.color : "yellow";
+          if (t && !seen[t]) {
+            seen[t] = true;
+            combined.push({ text: t, color: c });
+          }
+        });
+        listRemote.forEach(function (item) {
+          var t = typeof item === "string" ? item : (item ? item.text : "");
+          var c = typeof item === "object" && item ? item.color : "yellow";
+          if (t && !seen[t]) {
+            seen[t] = true;
+            combined.push({ text: t, color: c });
+            hlDirty = true;
+          }
+        });
+        mergedHl[tid] = combined;
+      });
+      if (hlDirty) {
+        write(KEYS.highlights, mergedHl);
+        changed = true;
+      }
+    }
+
+    // 5. Quiz attempts & history
+    if (remote.quiz && Array.isArray(remote.quiz.attempts)) {
+      var currentQuiz = getQuiz();
+      var localAttempts = currentQuiz.attempts || [];
+      var seenAttempts = {};
+      localAttempts.forEach(function (att) {
+        var key = att.id || (att.scope + "_" + att.at);
+        seenAttempts[key] = true;
+      });
+
+      var newAttempts = [];
+      remote.quiz.attempts.forEach(function (att) {
+        var key = att.id || (att.scope + "_" + att.at);
+        if (!seenAttempts[key]) {
+          seenAttempts[key] = true;
+          newAttempts.push(att);
+        }
+      });
+
+      if (newAttempts.length > 0) {
+        var allAttempts = localAttempts.concat(newAttempts);
+        allAttempts.sort(function (a, b) { return (a.at || 0) - (b.at || 0); });
+        if (allAttempts.length > 300) allAttempts = allAttempts.slice(-300);
+
+        var recomputedQuiz = {
+          attempts: allAttempts,
+          byUnit: {},
+          units: {},
+          formats: {},
+          subs: {},
+          topics: {},
+          diffs: {}
+        };
+        allAttempts.forEach(function (att) {
+          tallyBucket(recomputedQuiz.byUnit, att.scope, att.total, att.correct, att.at);
+          ["units", "formats", "subs", "topics", "diffs"].forEach(function (group) {
+            var src = att[group];
+            if (!src) return;
+            for (var key in src) {
+              tallyBucket(recomputedQuiz[group], key, src[key].total, src[key].correct, att.at);
+            }
+          });
+          if (att.units) {
+            for (var uid in att.units) {
+              tallyBucket(recomputedQuiz.byUnit, "unit:" + uid, att.units[uid].total, att.units[uid].correct, att.at);
+            }
+          }
+        });
+        write(KEYS.quiz, recomputedQuiz);
+        changed = true;
+      }
+    }
+
+    if (Array.isArray(remote.quizLog)) {
+      var localLog = getAttemptLog();
+      var logSeen = {};
+      localLog.forEach(function (r) { logSeen[r.id] = true; });
+      var logDirty = false;
+      remote.quizLog.forEach(function (r) {
+        if (r && r.id && !logSeen[r.id]) {
+          localLog.push(r);
+          logSeen[r.id] = true;
+          logDirty = true;
+        }
+      });
+      if (logDirty) {
+        localLog.sort(function (a, b) { return (b.at || 0) - (a.at || 0); });
+        write(KEYS.quizLog, localLog.slice(0, MAX_LOGGED));
+        changed = true;
+      }
+    }
+
+    // 6. Spaced Repetition SRS Cards
+    if (remote.srs && typeof remote.srs === "object") {
+      var localSrs = getSrs();
+      var mergedSrs = Object.assign({}, localSrs);
+      var srsDirty = false;
+      Object.keys(remote.srs).forEach(function (qk) {
+        var rItem = remote.srs[qk];
+        var lItem = mergedSrs[qk];
+        if (!lItem || (rItem && rItem.box > lItem.box)) {
+          mergedSrs[qk] = rItem;
+          srsDirty = true;
+        }
+      });
+      if (srsDirty) {
+        write(KEYS.srs, mergedSrs);
+        changed = true;
+      }
+    }
+
+    // 7. Activity & streaks
+    if (remote.activity && typeof remote.activity === "object") {
+      var localAct = getActivity();
+      var mergedAct = Object.assign({}, localAct);
+      var actDirty = false;
+      Object.keys(remote.activity).forEach(function (dt) {
+        var rCnt = remote.activity[dt] || 0;
+        var lCnt = mergedAct[dt] || 0;
+        if (rCnt > lCnt) {
+          mergedAct[dt] = rCnt;
+          actDirty = true;
+        }
+      });
+      if (actDirty) {
+        write(KEYS.activity, mergedAct);
+        changed = true;
+      }
+    }
+
+    // 8. Q&A Completed
+    if (Array.isArray(remote.qaDone)) {
+      var localQa = getQaDone();
+      var qaSet = {};
+      localQa.forEach(function (id) { qaSet[id] = true; });
+      var qaDirty = false;
+      remote.qaDone.forEach(function (id) {
+        if (!qaSet[id]) {
+          qaSet[id] = true;
+          qaDirty = true;
+        }
+      });
+      if (qaDirty) {
+        write(KEYS.qaDone, Object.keys(qaSet));
+        changed = true;
+      }
+    }
+
+    if (remote.lastTopic && !getLastTopic()) {
+      write(KEYS.lastTopic, remote.lastTopic);
+    }
+
+    if (changed) {
+      try {
+        window.dispatchEvent(new CustomEvent("vanut-store-updated", { detail: { remote: true } }));
+      } catch (e) {}
+    }
+
+    return changed;
+  }
+
   /* ---------- backup / restore ---------- */
   function backupKeys() {
     var out = [];
@@ -528,6 +803,8 @@ var store = (function () {
     toggleSidebarCollapsed: toggleSidebarCollapsed, applySidebarState: applySidebarState,
     getSrsNotify: getSrsNotify, setSrsNotify: setSrsNotify,
     getSrsNotifyTime: getSrsNotifyTime, setSrsNotifyTime: setSrsNotifyTime,
+    getSyncConfig: getSyncConfig, setSyncConfig: setSyncConfig,
+    getAllData: getAllData, mergeRemoteData: mergeRemoteData,
     backupKeys: backupKeys, exportBackup: exportBackup, importBackup: importBackup,
     resetAll: resetAll,
     today: today
