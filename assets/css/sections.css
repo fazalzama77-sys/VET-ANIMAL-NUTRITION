@@ -7018,6 +7018,10 @@
   color: var(--ivri-blue, #1565c0) !important;
 }
 
+.sync-pin-group, .sync-db-input-group { align-items: center; flex-wrap: wrap; }
+.sync-pin-group .sync-input, .sync-db-input-group .sync-input { flex: 1 1 180px; min-width: 150px; }
+.sync-keypad-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.sync-kp-btn { height: 40px !important; font-size: 1.05rem !important; font-weight: 800 !important; font-family: var(--font-mono, monospace) !important; border: 1px solid rgba(37, 99, 235, 0.25) !important; }
 .sync-pin-group, .sync-db-input-group {
   display: flex;
   gap: 8px;

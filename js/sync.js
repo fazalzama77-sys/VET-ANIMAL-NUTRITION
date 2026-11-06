@@ -96,7 +96,7 @@ var syncApp = (function () {
       return res.json();
     })
     .then(function () {
-      cfg.lastSyncedAt = Date.now();
+      var freshCfg = store.getSyncConfig(); freshCfg.lastSyncedAt = Date.now(); cfg = freshCfg;
       store.setSyncConfig(cfg);
       setSyncState("idle");
       updateSyncStatusUi();
@@ -133,7 +133,7 @@ var syncApp = (function () {
       setSyncState("idle");
       if (data && data.state) {
         var changed = store.mergeRemoteData(data.state);
-        cfg.lastSyncedAt = Date.now();
+        var freshCfg = store.getSyncConfig(); freshCfg.lastSyncedAt = Date.now(); cfg = freshCfg;
         store.setSyncConfig(cfg);
         updateSyncStatusUi();
         if (changed && window.app && app.toast) {
@@ -171,7 +171,7 @@ var syncApp = (function () {
           if (packet && packet.data && packet.data.state) {
             if (packet.data.deviceId !== cfg.deviceId) {
               var changed = store.mergeRemoteData(packet.data.state);
-              cfg.lastSyncedAt = Date.now();
+              var freshCfg = store.getSyncConfig(); freshCfg.lastSyncedAt = Date.now(); cfg = freshCfg;
               store.setSyncConfig(cfg);
               updateSyncStatusUi();
               if (changed && window.app && app.toast) {
