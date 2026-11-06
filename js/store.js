@@ -465,15 +465,19 @@ var store = (function () {
 
   /* ---------- cross-device cloud sync ---------- */
   var DEFAULT_SYNC_URL = "https://vet-pathology-default-rtdb.firebaseio.com";
-  var DEFAULT_SYNC_PIN = "772026";
+  function generateRandomPin() {
+    var a = Math.floor(100 + Math.random() * 900);
+    var b = Math.floor(100 + Math.random() * 900);
+    return a + "-" + b;
+  }
 
   function getSyncConfig() {
     var stored = read(KEYS.syncConfig, null);
     if (!stored) {
       stored = {
-        enabled: true,
+        enabled: false,
         dbUrl: DEFAULT_SYNC_URL,
-        pin: DEFAULT_SYNC_PIN,
+        pin: generateRandomPin(),
         deviceName: (/Mobi|Android|iPhone/i.test(navigator.userAgent) ? "Mobile Phone 📱" : "Tablet / PC 📟"),
         lastSyncedAt: 0,
         autoSync: true
@@ -486,12 +490,9 @@ var store = (function () {
       stored.dbUrl = DEFAULT_SYNC_URL;
       changed = true;
     }
-    if (!stored.pin || stored.pin.trim() === "") {
-      stored.pin = DEFAULT_SYNC_PIN;
-      changed = true;
-    }
-    if (!stored.enabled) {
-      stored.enabled = true;
+    if (!stored.pin || stored.pin.trim() === "" || stored.pin === "772026" || stored.pin === "749-218" || stored.pin === "350-202") {
+      stored.pin = generateRandomPin();
+      stored.enabled = false;
       changed = true;
     }
     if (changed) {
