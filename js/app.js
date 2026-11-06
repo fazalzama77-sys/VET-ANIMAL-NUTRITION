@@ -4137,7 +4137,7 @@ var app = (function () {
               '<div class="sync-input-col">' +
                 '<label class="sync-label" for="sync-pin-input">🔑 6-Digit Sync PIN / Secret Key:</label>' +
                 '<div class="sync-pin-group">' +
-                  '<input type="text" id="sync-pin-input" class="sync-input sync-input--pin" placeholder="Enter 6-digit PIN" value="' + esc(cfg.pin || "") + '" autocomplete="off" spellcheck="false">' +
+                  '<input type="text" id="sync-pin-input" class="sync-input sync-input--pin" placeholder="Enter 6-digit PIN" value="' + esc(cfg.pin || "772026") + '" autocomplete="off" spellcheck="false">' +
                   '<button type="button" class="btn btn--sm btn--soft" id="sync-gen-pin-btn" title="Generate random 6-digit PIN">🎲 New PIN</button>' +
                 '</div>' +
                 '<span class="small faint">Your unique pairing key (already created for you above!).</span>' +
@@ -4153,10 +4153,11 @@ var app = (function () {
             '<div class="sync-db-row mt-3">' +
               '<label class="sync-label" for="sync-db-url">🌐 Firebase Realtime Database URL:</label>' +
               '<div class="sync-db-input-group">' +
-                '<input type="url" id="sync-db-url" class="sync-input" placeholder="Paste your Firebase URL here..." value="' + esc(cfg.dbUrl || "") + '" autocomplete="off" spellcheck="false">' +
+                '<input type="text" id="sync-db-url" class="sync-input" placeholder="Paste your Firebase URL here..." value="' + esc(cfg.dbUrl || "https://vet-pathology-default-rtdb.firebaseio.com") + '" autocomplete="off" spellcheck="false">' +
                 '<button type="button" class="btn btn--sm btn--soft" id="sync-paste-btn" title="Paste URL from clipboard">📋 Paste URL</button>' +
                 '<button type="button" class="btn btn--sm btn--soft" id="sync-test-btn">⚡ Test Link</button>' +
               '</div>' +
+              '<div class="small mt-1" style="color: #10b981; font-weight: 600;">✨ Cloud Sync Embedded: Connected to <code>https://vet-pathology-default-rtdb.firebaseio.com</code></div>' + +
               '<div class="sync-guide-toggle-row mt-1">' +
                 '<a href="javascript:void(0)" class="small sync-guide-toggle" id="sync-guide-toggle">📖 Don\'t have a Firebase Database URL? 60-Second Setup Guide ▾</a>' +
               '</div>' +

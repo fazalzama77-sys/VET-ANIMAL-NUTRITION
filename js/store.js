@@ -464,15 +464,40 @@ var store = (function () {
   function setSrsNotifyTime(t) { write(KEYS.notifyTime, t || "19:00"); }
 
   /* ---------- cross-device cloud sync ---------- */
+  var DEFAULT_SYNC_URL = "https://vet-pathology-default-rtdb.firebaseio.com";
+  var DEFAULT_SYNC_PIN = "772026";
+
   function getSyncConfig() {
-    return read(KEYS.syncConfig, {
-      enabled: false,
-      dbUrl: "",
-      pin: "",
-      deviceName: (/Mobi|Android|iPhone/i.test(navigator.userAgent) ? "Mobile Phone 📱" : "Tablet / PC 📟"),
-      lastSyncedAt: 0,
-      autoSync: true
-    });
+    var stored = read(KEYS.syncConfig, null);
+    if (!stored) {
+      stored = {
+        enabled: true,
+        dbUrl: DEFAULT_SYNC_URL,
+        pin: DEFAULT_SYNC_PIN,
+        deviceName: (/Mobi|Android|iPhone/i.test(navigator.userAgent) ? "Mobile Phone 📱" : "Tablet / PC 📟"),
+        lastSyncedAt: 0,
+        autoSync: true
+      };
+      write(KEYS.syncConfig, stored);
+      return stored;
+    }
+    var changed = false;
+    if (!stored.dbUrl || stored.dbUrl.indexOf("your-project-default-rtdb") !== -1 || stored.dbUrl.trim() === "") {
+      stored.dbUrl = DEFAULT_SYNC_URL;
+      changed = true;
+    }
+    if (!stored.pin || stored.pin.trim() === "") {
+      stored.pin = DEFAULT_SYNC_PIN;
+      changed = true;
+    }
+    if (!stored.enabled) {
+      stored.enabled = true;
+      changed = true;
+    }
+    if (changed) {
+      write(KEYS.syncConfig, stored);
+    }
+    return stored;
   }
 
   function setSyncConfig(cfg) {
