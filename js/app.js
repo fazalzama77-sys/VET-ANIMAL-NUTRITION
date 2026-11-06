@@ -4410,7 +4410,7 @@ var app = (function () {
      ============================================================ */
   function init() {
     view = el("#view");
-    var CURRENT_BUILD = "vanut-v22";
+    var CURRENT_BUILD = "vanut-v23";
     try {
       var prevBuild = localStorage.getItem("vanut-build-version");
       if (prevBuild && prevBuild !== CURRENT_BUILD) {

@@ -1286,6 +1286,9 @@ var quizApp = (function () {
             (run.exam
               ? '<span class="qz-hud-chip qz-hud-chip--timer" id="qtimer">⏱️ ' + fmtTime(run.endsAt - Date.now()) + '</span>'
               : '') +
+            '<button class="btn btn--sm qz-hud-submit-btn" id="hudsubmitbtn" title="Submit test and view your results">' +
+              '📝 Submit' +
+            '</button>' +
             '<button class="qz-sound-toggle-btn" id="soundtogglebtn" title="Toggle Sound">' +
               (isSoundEnabled() ? '🔊' : '🔇') +
             '</button>' +
@@ -1350,8 +1353,8 @@ var quizApp = (function () {
           '</div>' +
 
           '<div class="qz-nav-actions">' +
-            (run.exam && !isLast
-              ? '<button class="btn btn--outline btn--lg mr-2" id="examfinishbtn">Submit Early</button>'
+            (!isLast || (!run.exam && !run.checked[run.i])
+              ? '<button type="button" class="btn btn--lg qz-nav-submit-btn mr-2" id="submittestbtn" title="Submit test and calculate your final score">📝 Submit Test</button>'
               : '') +
             primaryActionBtn +
           '</div>' +
@@ -1370,9 +1373,10 @@ var quizApp = (function () {
   }
 
   function renderPalette() {
+    var answered = answeredCount();
     return '<div class="qz-palette-drawer animate-scale-up">' +
       '<div class="qz-palette-head">' +
-        '<b>Jump to Question</b>' +
+        '<b>Question Map (' + answered + ' of ' + run.qs.length + ' Answered)</b>' +
         '<div class="qz-palette-legend">' +
           '<span class="qz-legend-item"><i class="qz-dot is-correct"></i> Correct</span>' +
           '<span class="qz-legend-item"><i class="qz-dot is-wrong"></i> Wrong</span>' +
@@ -1392,6 +1396,10 @@ var quizApp = (function () {
           if (i === run.i) cls += " is-current";
           return '<button type="button" class="' + cls + '" data-jump="' + i + '">' + (i + 1) + '</button>';
         }).join("") +
+      '</div>' +
+      '<div class="qz-palette-foot mt-4 pt-3 border-t border-border flex items-center justify-between">' +
+        '<span class="small text-muted font-mono">' + answered + ' of ' + run.qs.length + ' answered</span>' +
+        '<button type="button" class="btn btn--sm btn--primary" id="palettesubmitbtn">📝 Submit Test Now</button>' +
       '</div>' +
     '</div>';
   }
@@ -1495,14 +1503,16 @@ var quizApp = (function () {
     var prev = document.getElementById("prevbtn");
     if (prev) prev.addEventListener("click", function () { goTo(run.i - 1); });
 
-    var fin = document.getElementById("finishbtn");
-    if (fin) fin.addEventListener("click", function () { finishWithGuard(); });
-
-    var examFin = document.getElementById("submitpaperbtn");
-    if (examFin) examFin.addEventListener("click", function () { finishWithGuard(); });
-
-    var examEarly = document.getElementById("examfinishbtn");
-    if (examEarly) examEarly.addEventListener("click", function () { finishWithGuard(); });
+    // Submit / Finish buttons across HUD, Palette, and Navigation Bar
+    ["submittestbtn", "hudsubmitbtn", "palettesubmitbtn", "finishbtn", "submitpaperbtn", "examfinishbtn"].forEach(function (id) {
+      var b = document.getElementById(id);
+      if (b) {
+        b.addEventListener("click", function () {
+          playSound("click");
+          finishWithGuard();
+        });
+      }
+    });
 
     var quit = document.getElementById("quitbtn");
     if (quit) quit.addEventListener("click", function () {
@@ -1548,7 +1558,7 @@ var quizApp = (function () {
       }
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        var btn = document.getElementById("checkbtn") || document.getElementById("nextbtn") || document.getElementById("finishbtn");
+        var btn = document.getElementById("checkbtn") || document.getElementById("nextbtn") || document.getElementById("finishbtn") || document.getElementById("submittestbtn");
         if (btn) btn.click();
       }
     };
@@ -1556,10 +1566,13 @@ var quizApp = (function () {
   }
 
   function finishWithGuard() {
-    var missing = run.qs.length - answeredCount();
+    var answered = answeredCount();
+    var missing = run.qs.length - answered;
     if (missing > 0) {
       var word = missing === 1 ? "question is" : "questions are";
-      if (!confirm(missing + " " + word + " still unanswered. Would you like to finish and see your final score anyway?")) return;
+      if (!confirm("You have answered " + answered + " of " + run.qs.length + " questions.\n\n" + missing + " " + word + " still unanswered.\n\nAre you sure you want to submit your test now?")) return;
+    } else {
+      if (!confirm("All " + run.qs.length + " questions answered!\n\nSubmit your test and calculate your final score?")) return;
     }
     finish(false);
   }
