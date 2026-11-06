@@ -49,7 +49,7 @@ var syncApp = (function () {
   function getEndpoint(dbUrl, pin) {
     var cleanUrl = sanitizeDbUrl(dbUrl);
     var room = hashPin(pin);
-    return cleanUrl + "/sync/" + room + ".json";
+    return cleanUrl + "/nutrition/" + room + ".json";
   }
 
   function generatePin() {
