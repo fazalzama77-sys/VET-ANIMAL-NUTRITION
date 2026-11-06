@@ -490,7 +490,7 @@ var store = (function () {
       stored.dbUrl = DEFAULT_SYNC_URL;
       changed = true;
     }
-    if (!stored.pin || stored.pin.trim() === "" || stored.pin === "772026" || stored.pin === "749-218" || stored.pin === "350-202") {
+    if (!stored.pin || stored.pin.trim() === "" || false) {
       stored.pin = generateRandomPin();
       stored.enabled = false;
       changed = true;
