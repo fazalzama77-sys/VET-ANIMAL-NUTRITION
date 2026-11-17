@@ -49,7 +49,13 @@ const glossary = {
             "physically effective ndf",
             "carbon tetrachloride test",
             "urease activity test",
-            "pepsin digestibility test"
+            "pepsin digestibility test",
+            "chromogen method",
+            "chromic oxide indicator",
+            "lignin ratio technique",
+            "soxhlet apparatus",
+            "muffle furnace",
+            "in vitro gas production test"
         ],
         "Energy Evaluation & Bioenergetics": [
             "gross energy",
@@ -87,7 +93,12 @@ const glossary = {
             "net energy for lactation",
             "net energy for gain",
             "calorific value",
-            "blaxter's feeding system"
+            "blaxter's feeding system",
+            "heat of combustion",
+            "metabolizability",
+            "resting metabolic rate",
+            "thermic effect of food",
+            "metabolic water"
         ],
         "Protein & Nitrogen Metabolism": [
             "digestible crude protein",
@@ -126,7 +137,12 @@ const glossary = {
             "purine derivatives excretion",
             "synthetic amino acids",
             "methionine hydroxy analogue",
-            "rumen-protected amino acids"
+            "rumen-protected amino acids",
+            "protein solubility",
+            "nitrogen balance",
+            "urea space",
+            "maillard reaction",
+            "crystalline amino acids"
         ],
         "Carbohydrate & Lipid Nutrition": [
             "volatile fatty acids",
@@ -171,7 +187,12 @@ const glossary = {
             "peroxide value",
             "free fatty acids",
             "thiobarbituric acid value",
-            "omega-6 to omega-3 ratio"
+            "omega-6 to omega-3 ratio",
+            "water-soluble carbohydrates",
+            "structural carbohydrates",
+            "glycerol",
+            "ketone bodies",
+            "conjugated bile salts"
         ],
         "Rumen Microbiology & Physiology": [
             "rumen mat",
@@ -202,7 +223,13 @@ const glossary = {
             "primary rumen contractions",
             "secondary rumen contractions",
             "vagal indigestion",
-            "omasal transport"
+            "omasal transport",
+            "ruminal buffering",
+            "methanogenesis",
+            "eructation",
+            "rumen turnover rate",
+            "deamination",
+            "probiotics"
         ],
         "Minerals & Trace Elements": [
             "calcium",
@@ -262,7 +289,13 @@ const glossary = {
             "allotriophagy",
             "copper toxicity in sheep",
             "osteosclerosis",
-            "hypokalemic muscular weakness"
+            "hypokalemic muscular weakness",
+            "chelated minerals",
+            "electrolytes",
+            "dietary electrolyte balance",
+            "nutritional secondary hyperparathyroidism",
+            "enzootic marasmus",
+            "copper-molybdenum-sulfur interaction"
         ],
         "Vitamins in Animal Nutrition": [
             "vitamin a",
@@ -310,7 +343,12 @@ const glossary = {
             "black tongue disease",
             "choline",
             "hypovitaminosis a metaplasia",
-            "nutritional encephalomalacia"
+            "nutritional encephalomalacia",
+            "vitamers",
+            "antivitamins",
+            "clubbed down syndrome",
+            "vitamin b12",
+            "stomatitis"
         ],
         "Applied Ruminant Feeding": [
             "balanced ration",
@@ -343,7 +381,13 @@ const glossary = {
             "stocking rate",
             "peak milk lag",
             "close-up dry cow",
-            "far-off dry cow"
+            "far-off dry cow",
+            "pearson square method",
+            "thumb rule for cattle feeding",
+            "scarcity feeding",
+            "milk replacer",
+            "calf starter",
+            "partitioning of nutrients"
         ],
         "Feed Technology & Conservation": [
             "roughage",
@@ -376,7 +420,13 @@ const glossary = {
             "de-oiled rice bran",
             "decortication",
             "pellet crumble",
-            "angle of repose"
+            "angle of repose",
+            "wilting",
+            "chaffing",
+            "haylage",
+            "urea-molasses treatment",
+            "prebiotics",
+            "ionophores"
         ],
         "Anti-nutritional Factors & Toxins": [
             "anti-nutritional factor",
@@ -422,7 +472,12 @@ const glossary = {
             "ochratoxin a",
             "fumonisin b1",
             "solanine",
-            "calcium oxalate lithiasis"
+            "calcium oxalate lithiasis",
+            "gossypol toxicity",
+            "brassica anemia",
+            "nitrate-nitrite poisoning",
+            "mycotoxin binders",
+            "urease enzyme"
         ],
         "Non-Ruminant & Companion Nutrition": [
             "piglet nutrition",
@@ -460,7 +515,12 @@ const glossary = {
             "canine pancreatitis",
             "heinz body anemia",
             "xylitol toxicity",
-            "theobromine toxicity"
+            "theobromine toxicity",
+            "feed conversion ratio",
+            "split-sex feeding",
+            "restricted feeding",
+            "coprophagy",
+            "all-in all-out feeding"
         ]
     },
 
@@ -894,7 +954,67 @@ const glossary = {
         "canine pancreatitis": "Acute or chronic enzymatic inflammation of the canine pancreas, frequently triggered by feeding table scraps or high-fat meals, causing severe abdominal pain, vomiting, and dehydration.",
         "heinz body anemia": "Hemolytic anemia in dogs and cats caused by ingesting onions or garlic (Allium species); toxic organic sulfur compounds (N-propyl disulfide) oxidize hemoglobin into precipitated Heinz bodies.",
         "xylitol toxicity": "Rapid, life-threatening crisis in dogs caused by ingesting the artificial sweetener xylitol, which stimulates massive pancreatic insulin release, severe hypoglycemia, and hepatic necrosis.",
-        "theobromine toxicity": "Poisoning in dogs resulting from the ingestion of chocolate; the canine liver slowly metabolizes the methylxanthine alkaloid theobromine, inducing tachycardia, hyperthermia, tremors, and seizures."
+        "theobromine toxicity": "Poisoning in dogs resulting from the ingestion of chocolate; the canine liver slowly metabolizes the methylxanthine alkaloid theobromine, inducing tachycardia, hyperthermia, tremors, and seizures.",
+        "chromogen method": "Indicator technique using natural plant chloroplast pigments (chromogen) extracted in 85% acetone to estimate forage digestibility in grazing ruminants without total fecal collection.",
+        "chromic oxide indicator": "Inert external marker (Cr2O3) mixed uniformly into ration (~0.2–0.5%) to estimate fecal output and nutrient digestibility coefficients from grab samples.",
+        "lignin ratio technique": "Internal indicator method utilizing naturally occurring indigestible lignin in feed and feces to calculate dry matter and nutrient digestibility without total fecal collection.",
+        "soxhlet apparatus": "Continuous glass reflux extractor employing volatile petroleum ether or diethyl ether to isolate and quantify the crude fat (ether extract) fraction in proximate analysis.",
+        "muffle furnace": "High-temperature insulated electrical furnace operated at 550–600°C to completely incinerate organic matter for determining Total Ash content.",
+        "in vitro gas production test": "Hohenheim gas test incubating ground feed samples with buffered rumen liquor in calibrated glass syringes to estimate fermentability, SCFA yield, and metabolizable energy.",
+        "heat of combustion": "Total thermal energy released when 1 gram of feedstuff or pure nutrient undergoes complete oxidation in an oxygen bomb calorimeter; equivalent to Gross Energy.",
+        "metabolizability": "Dimensionless ratio (q = ME / GE) representing the proportion of dietary gross energy converted into metabolizable energy, used in Blaxter/ARC feeding standards.",
+        "resting metabolic rate": "Energy expenditure of a non-fasted, resting animal at thermoneutrality, typically 10–20% higher than basal metabolic rate due to ongoing digestion and posture.",
+        "thermic effect of food": "Postprandial rise in heat production above basal metabolism due to ingestion, digestion, nutrient absorption, and intermediary synthesis; synonymous with Heat Increment.",
+        "metabolic water": "Endogenous intracellular water produced during nutrient oxidation: ~107 g per 100 g fat, ~60 g per 100 g carbohydrate, and ~41 g per 100 g protein.",
+        "protein solubility": "Fraction of dietary crude protein rapidly dissolving in mineral buffer or rumen fluid, correlating closely with rapid ruminal ammonia release.",
+        "nitrogen balance": "Quantitative difference between total dietary nitrogen intake and combined fecal, urinary, and product (milk, wool, egg) nitrogen losses; positive during growth and pregnancy.",
+        "urea space": "Physiological dilution technique estimating empty body water and lean body mass in live ruminants by measuring plasma urea concentration post-intravenous urea infusion.",
+        "maillard reaction": "Non-enzymatic heat-induced browning between reducing sugars and free amino groups (especially lysine), creating indigestible complexes quantified as ADIN in overheated feeds.",
+        "crystalline amino acids": "Purified fermentation-derived individual amino acids (L-lysine HCl, DL-methionine, L-threonine, L-tryptophan) supplemented in monogastric feeds to balance amino acid profiles while reducing total CP.",
+        "water-soluble carbohydrates": "Readily fermentable simple sugars and fructans (WSC) in fresh forage crops essential for rapid lactic acid production during ensiling.",
+        "structural carbohydrates": "Fibrous plant cell wall polysaccharides (cellulose and hemicellulose) digested primarily by microbial beta-glycosidases in the rumen or hindgut.",
+        "glycerol": "Three-carbon sugar alcohol backbone of triglycerides; fermented in the rumen to propionate and converted in liver to glucose as an oral glucogenic therapy for ketosis.",
+        "ketone bodies": "Water-soluble four-carbon metabolites (beta-hydroxybutyrate, acetoacetate, and acetone) produced during hepatic ketogenesis in negative energy balance or from ruminal butyrate oxidation.",
+        "conjugated bile salts": "Amphipathic steroid surfactants synthesized in hepatocytes from cholesterol conjugated with taurine or glycine to emulsify dietary lipids into mixed micelles for pancreatic lipase.",
+        "ruminal buffering": "Stabilization of rumen pH (6.2–6.8) via salivary bicarbonate and phosphate buffers plus rapid absorption of volatile fatty acids across the ruminal wall.",
+        "methanogenesis": "Anaerobic archaeal reduction of ruminal carbon dioxide with metabolic hydrogen (4H2 + CO2 → CH4 + 2H2O), accounting for a 6–10% dietary gross energy loss.",
+        "eructation": "Coordinated reflex expulsion of accumulated ruminal fermentation gases (CO2 and methane) via secondary dorsal sac contractions and esophageal antiperistalsis.",
+        "rumen turnover rate": "Fractional rate at which liquid and particulate digesta exit the reticulo-rumen, directly governing microbial growth efficiency and bypass nutrient flow.",
+        "deamination": "Microbial removal of the alpha-amino group from amino acids in the rumen, liberating free ammonia (NH3) and volatile fatty acid carbon skeletons.",
+        "probiotics": "Live, viable beneficial microorganisms (such as Saccharomyces cerevisiae yeast, Lactobacillus, and Enterococcus) fed to stabilize gut or rumen microflora and improve fiber digestion.",
+        "chelated minerals": "Organic trace minerals (copper, zinc, manganese) complexed with amino acids, peptides, or polysaccharides to minimize ruminal antagonisms and improve intestinal absorption.",
+        "electrolytes": "Essential dissolved mineral ions (Na+, K+, Cl-) maintaining cellular osmotic pressure, acid-base balance, neuromuscular excitability, and body fluid homeostasis.",
+        "dietary electrolyte balance": "Monovalent cation-anion balance (dEB = Na+ + K+ - Cl-, in mEq/kg DM) typically maintained at 200–250 mEq/kg in poultry and swine feeds for optimal growth and eggshell quality.",
+        "nutritional secondary hyperparathyroidism": "Chronic excess parathyroid hormone secretion causing osteoclastic bone demineralization due to low dietary calcium or high phosphorus intake (e.g., equine bran disease).",
+        "enzootic marasmus": "Progressive wasting and anemia in grazing ruminants caused by soil cobalt deficiency, impairing ruminal Vitamin B12 synthesis and propionate utilization.",
+        "copper-molybdenum-sulfur interaction": "Three-way ruminal mineral antagonism where sulfur and molybdenum react to form thiomolybdates, irreversibly binding dietary copper and inducing secondary copper deficiency.",
+        "vitamers": "Chemically distinct molecular forms of the same vitamin exhibiting qualitatively similar biological activity (e.g., retinol/retinal/retinoic acid or ergocalciferol D2/cholecalciferol D3).",
+        "antivitamins": "Natural or synthetic compounds that competitively antagonize, cleave, or destroy specific vitamins (e.g., dicoumarol vs Vitamin K, avidin vs biotin, thiaminase vs thiamine).",
+        "clubbed down syndrome": "Feather abnormality in newly hatched chicks from riboflavin (Vitamin B2)-deficient breeder hens, where down feathers remain coiled inside unbroken keratin sheaths.",
+        "vitamin b12": "Cobalt-containing corrinoid vitamin (cyanocobalamin) synthesized exclusively by microbes; required for methylmalonyl-CoA mutase to convert propionate into succinyl-CoA.",
+        "stomatitis": "Inflammation and ulceration of the oral mucosa and tongue seen clinically in canine niacin deficiency (black tongue) as well as riboflavin or pantothenic acid deficits.",
+        "pearson square method": "Simple graphical two-ingredient ration balancing technique calculating exact proportions of a basal grain and a protein supplement to achieve a desired nutrient concentration.",
+        "thumb rule for cattle feeding": "Practical Indian ration guideline providing 1.5–2.0 kg concentrate for maintenance (cattle/buffalo) plus 1 kg concentrate per 2.5 kg cow milk or 2.0 kg buffalo milk above roughage.",
+        "scarcity feeding": "Emergency feeding practices during drought or flood combining urea-treated cereal straws, UMMB licks, sugarcane tops, and unconventional by-products to sustain livestock.",
+        "milk replacer": "Reconstituted liquid diet formulated from skim milk powder, whey, stabilized fats, vitamins, and minerals fed to pre-ruminant calves to spare marketable whole milk.",
+        "calf starter": "Palatable, nutrient-dense dry concentrate mixture (~20–22% CP, <7% CF) offered to calves from 2 weeks of age to stimulate rumen papillae growth and enable early weaning.",
+        "partitioning of nutrients": "Homeorhetic physiological prioritization directing absorbed glucose, amino acids, and lipids toward fetal growth and early lactation ahead of maternal tissue storage.",
+        "wilting": "Field drying of freshly harvested high-moisture green forage (such as berseem or lucerne) to 30–35% dry matter prior to ensiling to curb clostridial butyric fermentation and seepage.",
+        "chaffing": "Mechanical chopping of green fodder or dry straws into 2–3 cm lengths to increase silo packing density, reduce selective feeding waste, and improve intake.",
+        "haylage": "Low-moisture fermented forage (45–55% dry matter) prepared by wilting cut grass or legume crops before sealing in an airtight silo, bridging hay and silage.",
+        "urea-molasses treatment": "Enriching low-quality cereal straws with 4% urea and 10% molasses (at ~40–50% moisture) to supply fermentable nitrogen, soluble energy, and ammonia-mediated delignification.",
+        "prebiotics": "Non-digestible dietary oligosaccharides (such as mannan-oligosaccharides and fructo-oligosaccharides) selectively fermented by beneficial gut microbes while blocking pathogen attachment.",
+        "ionophores": "Polyether antibiotic feed additives (e.g., monensin, lasalocid) altering Gram-positive bacterial ion gradients to increase ruminal propionate, curb methane, and control avian coccidiosis.",
+        "gossypol toxicity": "Cumulative poisoning in monogastrics and young calves fed untreated cottonseed meal, causing respiratory distress, pulmonary edema, cardiomyopathy, and male infertility.",
+        "brassica anemia": "Acute hemolytic anemia ('kale anemia') in cattle consuming large amounts of Brassica crops containing S-methylcysteine sulfoxide (SMCO), converted in the rumen to dimethyl disulfide.",
+        "nitrate-nitrite poisoning": "Acute methemoglobinemia ('chocolate-brown blood') in ruminants consuming nitrate-rich immature forages, where ruminal reduction of nitrate to toxic nitrite outpaces ammonia conversion.",
+        "mycotoxin binders": "Inert adsorbent agents (HSCAS, bentonite clays, and yeast cell-wall glucomannans) mixed into feeds to bind polar mycotoxins and prevent intestinal absorption.",
+        "urease enzyme": "Endogenous plant enzyme in raw soybeans and jack beans that hydrolyzes dietary urea into toxic free ammonia; must be heat-inactivated before mixing urea in rations.",
+        "feed conversion ratio": "Standard economic productivity index (FCR = Feed Consumed / Weight Gain or Egg Mass) measuring feed efficiency in meat and egg-producing animals.",
+        "split-sex feeding": "Commercial broiler practice housing and feeding male and female birds separately to match differing growth trajectories and optimize amino acid utilization.",
+        "restricted feeding": "Quantitative or skip-a-day limitation of daily feed allowance in broiler breeders and replacement pullets to prevent obesity, fatty liver, and declining fertility.",
+        "coprophagy": "Behavioral ingestion of feces; physiological cecotrophy in rabbits for B-vitamins and microbial protein, versus abnormal fecal eating in dogs or foals linked to nutritional deficits.",
+        "all-in all-out feeding": "Poultry and swine management system housing uniform single-age groups together from entry to market, enabling precise phase feeding and thorough biosecurity cleaning."
     },
 
     // Return all terms as an array of objects: { term, def, category }
