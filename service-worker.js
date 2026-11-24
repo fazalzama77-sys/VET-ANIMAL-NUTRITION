@@ -3,7 +3,7 @@
    Animal Nutrition Studio (B.V.Sc & A.H.)
    ============================================================ */
 
-var CACHE_VERSION = "vanut-v29";
+var CACHE_VERSION = "vanut-v31";
 var IMG_LIMIT = 220;
 var SHELL_CACHE = CACHE_VERSION + "-shell";
 var IMG_CACHE = CACHE_VERSION + "-img";
@@ -19,12 +19,14 @@ var PRECACHE = [
   "assets/css/deep-guide.css",
   "assets/css/events.css",
   "assets/css/animations.css",
+  "assets/css/study-visuals.css",
 
   "data/data-syllabus.JS",
   "data/data-theory-unit1.JS",
   "data/data-theory-unit2.JS",
   "data/data-theory-unit3.JS",
   "data/data-theory-unit4.JS",
+  "data/data-study-visuals.js",
   "data/data-practical.JS",
   "data/data-images.js",
   "data/data-why.JS",
@@ -32,15 +34,17 @@ var PRECACHE = [
   "data/data-quiz.JS",
   "data/events-data.js",
 
-  "js/store.js",
+  "js/store.js?v=25",
   "js/quiz.js",
   "js/dashboard.js",
   "js/glossary.js",
   "js/search.js",
   "js/deep-guide.js",
   "js/events.js",
-  "js/sync.js",
-  "js/app.js",
+  "js/sync.js?v=25",
+  "js/study-scenes.js",
+  "js/study-visuals.js",
+  "js/app.js?v=31",
 
   "images/icon-192.png",
   "images/icon-512.png",

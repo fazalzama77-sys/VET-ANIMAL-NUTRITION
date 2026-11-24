@@ -1358,7 +1358,10 @@ var app = (function () {
           '<span class="chip">' + icon("check") + ' ' + pr.done + ' of ' + pr.total + ' read</span>' +
         '</div>' +
       '</div>' +
+      (u.stream === "theory" ? '<div id="unit-study-visual"></div>' : '') +
       '<div class="tlist">' + rows + '</div>';
+
+    if (window.mountStudyVisual) window.mountStudyVisual(el("#unit-study-visual"), u.id);
   }
 
   function missing(what) {
@@ -1522,6 +1525,9 @@ var app = (function () {
     var t = syllabus.topicById[state.params.a];
     if (!t) { view.innerHTML = missing("topic"); return; }
 
+    var previousVisual = el(".lesson-study-visual");
+    var retainedVisual = previousVisual && previousVisual.dataset.topic === t.id ? previousVisual.firstElementChild : null;
+
     store.setLastTopic(t.id);
     var u = syllabus.unitById[t.unitId];
     var c = topicContent(t.id) || {};
@@ -1673,6 +1679,8 @@ var app = (function () {
 
             '<div id="topic-highlights-container">' + renderHighlights(t.id) + '</div>' +
 
+            (t.stream === "theory" ? '<div class="lesson-study-visual" data-topic="' + esc(t.id) + '"></div>' : '') +
+
             body +
 
             '<nav class="pager">' +
@@ -1687,6 +1695,9 @@ var app = (function () {
       '</div>';
 
     wireTopicActions(t);
+    var visualSlot = el(".lesson-study-visual");
+    if (visualSlot && retainedVisual) visualSlot.appendChild(retainedVisual);
+    else if (window.mountStudyVisual) window.mountStudyVisual(visualSlot, t.id);
     var cur = el(".rail__item.is-current");
     if (cur && cur.scrollIntoView) cur.scrollIntoView({ block: "nearest" });
   }
@@ -1758,7 +1769,7 @@ var app = (function () {
      marked. Text already inside a highlight IS included, so the flattened
      string is the same before and after marking and occurrence numbers stay
      stable (a highlight inside a highlight simply nests). */
-  var HL_SKIP = ".block--hl, .toolbar, .notebox, .pager, .hl-popup, button, textarea, input, select, script, style";
+  var HL_SKIP = ".block--hl, .toolbar, .notebox, .pager, .hl-popup, .lesson-study-visual, button, textarea, input, select, script, style";
   function collectTextNodes(root) {
     var out = [];
     var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
@@ -2082,6 +2093,8 @@ var app = (function () {
       try {
         var range = sel.getRangeAt(0);
         if (!panel.contains(range.commonAncestorContainer)) { hide(); return; }
+        var visual = panel.querySelector(".lesson-study-visual");
+        if (visual && range.intersectsNode(visual)) { hide(); return; }
         popup.style.display = "flex";
         popup.dataset.text = text;
         popup._range = range.cloneRange();
@@ -2536,12 +2549,21 @@ var app = (function () {
       var ws = window.getSelection();
       var s = (ws || "").toString().trim();
       if (s && s.length <= 400) {
+        var visual = lessonMain.querySelector(".lesson-study-visual");
+        if (visual && ws.rangeCount && ws.getRangeAt(0).intersectsNode(visual)) {
+          savedSelection = "";
+          savedRange = null;
+          return;
+        }
         savedSelection = s;
         try { savedRange = ws.getRangeAt(0).cloneRange(); } catch (e) { savedRange = null; }
       }
     }
     function getLessonSel() {
-      var s = (window.getSelection() || "").toString().trim();
+      var selection = window.getSelection();
+      var visual = lessonMain.querySelector(".lesson-study-visual");
+      if (visual && selection && !selection.isCollapsed && selection.getRangeAt(0).intersectsNode(visual)) return "";
+      var s = (selection || "").toString().trim();
       return s || savedSelection;
     }
 

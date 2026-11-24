@@ -1,10 +1,9 @@
 # CONTEXT — Animal Nutrition Studio
 
-Read this whole file before doing anything else. It tells you who I am, what we are
-building, the codebase layout, my conventions, and how I prefer to work. After reading,
-say "Got it — what do you want to work on?" and wait for my actual task.
+Read this file before working on the project. It records the current release, the
+codebase layout, the content rules and the website and Android workflows.
 
-**Last updated:** 2026-09-09 (Full VCI MSVE 2016 97-topic skeleton, dual paper readiness, 147-term glossary, offline PWA)
+**Last updated:** 2026-11-24 (interactive theory study aids, website cache v31, Android 2.5)
 
 ---
 
@@ -29,7 +28,7 @@ in the Gazette of India.
 
 - **Authoritative syllabus source:** `Animal Nutrition outline.pdf` (in project root)
 - **Architecture blueprint:** `NEW-SUBJECT-BLUEPRINT.md`
-- **Working folder:** `D:/ANIMAL NUTRITION APPLICATION/`
+- **Website checkout:** `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/`
 - **Sister projects:**
   - `D:/PATHOLOGY APPLICATION/` (Veterinary Pathology Studio — reference only, **DO NOT EDIT**)
   - `D:/VET BIOCHEMISTRY/` (Veterinary Biochemistry Studio)
@@ -46,7 +45,7 @@ This project follows the exact proven architecture, three-layer navigation model
 4. **Question & Answer** — Written-exam practice: short notes, long answers, differentiate-between tables, definitions, and ration balancing exercises.
 5. **Quiz** — MCQ / True-False / Fill-blank, with unit-wise, paper-wise, grand mock test, practical, Exam Mode (timed) and Smart Review (spaced repetition).
 6. **Dashboard** — Dual VCI Board Exam readiness gauges (Paper I vs Paper II), 8-Unit Mastery Matrix, streak tracker, 84-day heatmap, and 5-box Leitner memory pipeline (0–1000 XP Nutrition Mastery Index).
-7. **Library** — Bookmarks · Personal Notes · Multi-colour Highlights · 147-Term UG Animal Nutrition Glossary with SpeechSynthesis audio pronunciation.
+7. **Library** — Bookmarks · Personal Notes · Multi-colour Highlights · 490-Term UG Animal Nutrition Glossary with SpeechSynthesis audio pronunciation.
 8. **Settings** — Theme selection (Light canonical default, optional Dark), data backup/restore (JSON), and about modal.
 
 ### Exam Structure (VCI Annual Board Examination)
@@ -111,24 +110,24 @@ medical blue on a soft blue-grey ground, typography in Inter + JetBrains Mono).
 ### Content Status
 | Unit Code | Stream & Unit Name | Topics | Status | Structure |
 |---|---|---|---|---|
-| `unit-1` | Theory Unit 1: Principles of Animal Nutrition & Feed Tech | 25 | ⏳ **EMPTY SKELETON** | Scaffolding complete (`desc: ""`) |
-| `unit-2` | Theory Unit 2: Applied Ruminant Nutrition-I | 9 | ⏳ **EMPTY SKELETON** | Scaffolding complete (`desc: ""`) |
-| `unit-3` | Theory Unit 3: Applied Ruminant Nutrition-II | 17 | ⏳ **EMPTY SKELETON** | Scaffolding complete (`desc: ""`) |
-| `unit-4` | Theory Unit 4: Applied Non-Ruminant Nutrition | 17 | ⏳ **EMPTY SKELETON** | Scaffolding complete (`desc: ""`) |
-| `prac-unit-1` | Practical Unit 1: Feed Microscopy & Proximate Analysis | 14 | ⏳ **EMPTY SKELETON** | Scaffolding complete (`desc: ""`) |
-| `prac-unit-2` | Practical Unit 2: Nutritive Values & Balance Trials | 3 | ⏳ **EMPTY SKELETON** | Scaffolding complete (`desc: ""`) |
-| `prac-unit-3` | Practical Unit 3: Ruminant Ration Formulation & Mills | 5 | ⏳ **EMPTY SKELETON** | Scaffolding complete (`desc: ""`) |
-| `prac-unit-4` | Practical Unit 4: Non-Ruminant, Poultry & Zoo Diets | 7 | ⏳ **EMPTY SKELETON** | Scaffolding complete (`desc: ""`) |
-| `why` | Comparative Nutritional WHY Mechanisms | 1 | ⏳ **EMPTY SKELETON** | Template only (`title: ""`) |
-| `qa` | Written Exam Q&A Bank (Units 1–4) | 1 | ⏳ **EMPTY SKELETON** | Template only (`question: ""`) |
-| `quiz` | MCQ / True-False / Fill-blank Bank | 4 | ⏳ **EMPTY SKELETON** | Template only (`q: ""`) |
+| `unit-1` | Theory Unit 1: Principles of Animal Nutrition & Feed Tech | 25 | Written | Standard and Deep study content |
+| `unit-2` | Theory Unit 2: Applied Ruminant Nutrition-I | 9 | Written | Standard and Deep study content |
+| `unit-3` | Theory Unit 3: Applied Ruminant Nutrition-II | 17 | Written | Standard and Deep study content |
+| `unit-4` | Theory Unit 4: Applied Non-Ruminant Nutrition | 17 | Written | Standard and Deep study content |
+| `prac-unit-1` | Practical Unit 1: Feed Microscopy & Proximate Analysis | 14 | Written | Standard and Deep study content |
+| `prac-unit-2` | Practical Unit 2: Nutritive Values & Balance Trials | 3 | Written | Standard and Deep study content |
+| `prac-unit-3` | Practical Unit 3: Ruminant Ration Formulation & Mills | 5 | Written | Standard and Deep study content |
+| `prac-unit-4` | Practical Unit 4: Non-Ruminant, Poultry & Zoo Diets | 7 | Written | Standard and Deep study content |
+| `why` | Comparative Nutritional WHY Mechanisms | 40 | Written | Comparative mechanisms |
+| `qa` | Written Exam Q&A Bank (Units 1–4) | 100 | Written | Model questions and answers |
+| `quiz` | MCQ / True-False / Fill-blank Bank | 820 | Written | MCQ, true/false and fill-in-the-blank |
 
-**Total Topics Scaffolding: 97 Topics (68 Theory + 29 Practical).**
+**97 written lessons (68 theory and 29 practical).**
 
 ### 🛡️ The Zero-Content Filter Rule (CRITICAL)
-- Zero lesson content has been written yet. **Never fill lessons with generic placeholder text or fake AI summaries.**
+- Preserve the original lesson text when adding study aids. Future blank templates must be filtered until they have real content.
 - Empty template rows are systematically filtered out across all application engines:
-  - **Diagnostic Quiz Studio (`#/quiz`):** Correctly reports `0 questions ready` and renders clean empty states instead of blank broken quiz cards.
+  - **Diagnostic Quiz Studio (`#/quiz`):** Counts real questions and shows an empty state for banks without questions.
   - **Analytics Dashboard (`#/dashboard`):** Accurately begins at `0% syllabus read` and `0 Mastery XP`.
   - **Mastery Ranking:** Initializes cleanly to `Nutrition Apprentice` (Phase 1 · Foundations).
   - **Global Search (`Ctrl+K`):** Excludes empty topics and questions from search results.
@@ -141,23 +140,38 @@ medical blue on a soft blue-grey ground, typography in Inter + JetBrains Mono).
 - ✅ Dual VCI Board Exam Readiness Gauges: Paper I (51 topics) vs Paper II (46 topics).
 - ✅ 8-Unit Mastery Matrix with real-time filter tabs (All, Theory, Practical, Needs Practice, Mastered).
 - ✅ 5-Box Leitner Spaced Repetition (SRS) memory pipeline with Ebbinghaus forgetting curve intervals.
-- ✅ 147-Term UG Animal Nutrition Glossary with category filtering and Web Speech API audio pronunciation.
+- ✅ 490-Term UG Animal Nutrition Glossary with category filtering and Web Speech API audio pronunciation.
 - ✅ Nutrition Spotter of the Day with diagnostic hallmarks, metabolic pathogenesis, and viva clues.
 - ✅ Global Ctrl+K search indexing theory, practical, WHY mechanisms, Q&A banks, and glossary terms.
 - ✅ Hideable Desktop Sidebar (`< Hide Sidebar` button, `#menubtn` hamburger, and <kbd>Ctrl</kbd> + <kbd>B</kbd> keyboard shortcut).
 - ✅ Mobile 5-slot bottom bar with central Quiz FAB.
-- ✅ Offline PWA service worker with precaching and cache-first strategy (`vanut-v1`).
+- ✅ Offline PWA service worker with precaching and cache-first strategy (`vanut-v31`).
+
+### Interactive Theory Study Aids
+
+- One activity per theory topic and one per theory unit overview, for 72 activities. Activities open from their cards and support keyboard and touch input.
+- Lesson data stays in the theory files. `data/data-study-visuals.js` stores activities by topic or unit ID. `js/study-visuals.js` renders the controls and readouts. `assets/css/study-visuals.css` styles them with the shared theme tokens.
+- `js/study-scenes.js` draws five richer models. `u1-t14` has an energy waterfall, `u1-t21` a rotatable 3D silage bunker, `u2-t03` a nitrogen flow diagram, `u3-t08` an animated calf digestion route and `u4-t06` an animated equine digestion route.
+- The activity assets are precached by `vanut-v31` and included in the Android offline bundle. Browser checks covered all 72 activities, desktop and phone-sized layouts, reduced motion, offline reload, and lesson tools including notes, bookmarks and highlights.
+
+### Website and Android Release
+
+- Website source is the `VET-ANIMAL-NUTRITION` checkout, with its own Git repository. Its live site uses GitHub Pages at [Animal Nutrition Studio](https://fazalzama77-sys.github.io/VET-ANIMAL-NUTRITION/).
+- The Android project lives separately in `D:/ANIMAL NUTRITION APK/`. Android release 2.5 uses version code 8 and package `com.fazalzama.animalnutrition`. The versioned release artifact is `D:/ANIMAL NUTRITION APK/Animal-Nutrition-v2.5.apk`.
+- `gradle.properties` points the Android build at the website checkout. `bundleWebsite` stages the website into `assets/www` for offline use. The existing WebView serves it under the site's original URL to keep the same storage origin. Rebuild the APK whenever shipped website content changes.
+- Build from the Android project with `BUILD-APK.bat` or `gradlew.bat :app:assembleRelease`. Keep the release signing material private. Verify the APK signature, package, version and bundled assets before delivery. Phone testing requires a connected device.
 
 ---
 
 ## 🗂️ FILE STRUCTURE
 
 ```
-D:\ANIMAL NUTRITION APPLICATION├── 1-CLICK-PUSH-TO-GITHUB.bat   🌟 Double-click → auto-syncs repo, commits & pushes to GitHub
+D:\ANIMAL NUTRITION APPLICATION\VET-ANIMAL-NUTRITION
+├── 1-CLICK-PUSH-TO-GITHUB.bat   🌟 Double-click → auto-syncs repo, commits & pushes to GitHub
 ├── SYNC-TO-REPO.bat             Double-click → offline robocopy mirror into repo/
 ├── index.html                   Single-page app shell. All sections render here.
 ├── manifest.json                PWA manifest (theme_color: #1565c0, name: Animal Nutrition Studio)
-├── service-worker.js            Offline cache controller (CACHE_VERSION = "vanut-v1")
+├── service-worker.js            Offline cache controller (CACHE_VERSION = "vanut-v31")
 ├── README.md                    Content writing & curriculum guide
 ├── REPO.md                      Repository & GitHub publishing guide
 ├── CONTEXT.md                   THIS MASTER CONTEXT FILE
@@ -170,14 +184,15 @@ D:\ANIMAL NUTRITION APPLICATION├── 1-CLICK-PUSH-TO-GITHUB.bat   🌟 Doubl
 │
 ├── data/                        ← ALL CURRICULUM DATA LIVES HERE
 │   ├── data-syllabus.JS         Master index: 4 theory units (68 topics) + 4 practical units (29 topics)
-│   ├── data-theory-unit1.JS     Unit 1: Principles & Feed Tech (25 topics scaffolding)
-│   ├── data-theory-unit2.JS     Unit 2: Applied Ruminant Nutrition-I (9 topics scaffolding)
-│   ├── data-theory-unit3.JS     Unit 3: Applied Ruminant Nutrition-II (17 topics scaffolding)
-│   ├── data-theory-unit4.JS     Unit 4: Applied Non-Ruminant Nutrition (17 topics scaffolding)
-│   ├── data-practical.JS        All 4 practical units (29 topics scaffolding)
-│   ├── data-why.JS              Comparative nutrition WHY mechanisms (clean template)
-│   ├── data-qa.JS               Written-exam model Q&A bank (clean template)
-│   ├── data-quiz.JS             MCQ / True-False / Fill-blank question bank (clean template)
+│   ├── data-theory-unit1.JS     Unit 1: Principles & Feed Tech (25 written lessons)
+│   ├── data-theory-unit2.JS     Unit 2: Applied Ruminant Nutrition-I (9 written lessons)
+│   ├── data-theory-unit3.JS     Unit 3: Applied Ruminant Nutrition-II (17 written lessons)
+│   ├── data-theory-unit4.JS     Unit 4: Applied Non-Ruminant Nutrition (17 written lessons)
+│   ├── data-practical.JS        All 4 practical units (29 written lessons)
+│   ├── data-why.JS              Comparative nutrition WHY mechanisms (populated bank)
+│   ├── data-qa.JS               Written-exam model Q&A bank (populated bank)
+│   ├── data-quiz.JS             MCQ / True-False / Fill-blank question bank (populated bank)
+│   ├── data-study-visuals.js   Study activities keyed by unit and topic ID
 │   └── events-data.js           Department announcements & academic seminar configuration
 │
 ├── js/                          ← JAVASCRIPT ENGINES
@@ -185,9 +200,11 @@ D:\ANIMAL NUTRITION APPLICATION├── 1-CLICK-PUSH-TO-GITHUB.bat   🌟 Doubl
 │   ├── app.js                   Router + shell + section renderers + highlighter + audio
 │   ├── quiz.js                  Quiz engine (window.quizApp) with Paper I, Paper II & Grand modes
 │   ├── dashboard.js             Clinical learning analytics (window.dashboardApp)
-│   ├── glossary.js              147-term UG animal nutrition glossary + hover tooltips + speech
+│   ├── glossary.js              490-term UG animal nutrition glossary + hover tooltips + speech
 │   ├── search.js                Global site-wide search engine (Ctrl+K)
 │   ├── deep-guide.js            Contextual Deep Nutritional View overlay controller
+│   ├── study-visuals.js        Study activity controls and readouts
+│   ├── study-scenes.js         3D bunker, animated cutaways and live charts
 │   └── events.js                Academic seminar announcements renderer
 │
 ├── assets/css/                  ← STYLESHEETS
@@ -196,6 +213,7 @@ D:\ANIMAL NUTRITION APPLICATION├── 1-CLICK-PUSH-TO-GITHUB.bat   🌟 Doubl
 │   ├── sections.css             Per-screen styles (lesson card, quiz, dashboard, matrix, tables)
 │   ├── animations.css           GPU-accelerated micro-interactions (transform/opacity only)
 │   ├── deep-guide.css           Deep guide presentation styling
+│   ├── study-visuals.css        Study activity and scene styles
 │   └── events.css               Department announcement card styles
 │
 ├── images/                      Visual assets directory
@@ -371,20 +389,20 @@ feeding situations:
 
 Fazal is a veterinary student and **does not use command-line Git or terminal DevOps**.
 To keep publishing dead-simple and foolproof, two 1-click automation batch files and a clean
-mirror folder are maintained in `D:/ANIMAL NUTRITION APPLICATION/`:
+mirror folder are maintained in `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/`:
 
 ### 🌟 Script 1: `1-CLICK-PUSH-TO-GITHUB.bat` (Recommended Daily Workflow)
 Whenever any AI assistant (Claude, Antigravity, ChatGPT) or Fazal finishes adding content or modifying code:
-1. Double-click `1-CLICK-PUSH-TO-GITHUB.bat` in `D:/ANIMAL NUTRITION APPLICATION/` (or its desktop shortcut).
-2. It executes 3 sequential steps automatically in under 5 seconds:
+1. Double-click `1-CLICK-PUSH-TO-GITHUB.bat` in `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/` (or its desktop shortcut).
+2. It runs three steps:
    - **Step 1/3 (Auto-Sync):** Runs robocopy to ensure the `repo/` mirror folder has all latest files organized in their clean subdirectories (`assets/`, `data/`, `images/`, `js/`, `tools/`).
    - **Step 2/3 (Package & Commit):** Detects modified files and records an automatic timestamped commit (e.g. `Update Animal Nutrition Studio content (09-09-2026 12:00)`).
    - **Step 3/3 (Push to GitHub):** Securely pushes all changes directly to remote `origin main`.
 3. Displays a green `[SUCCESS] ALL CHANGES UPLOADED TO GITHUB!` banner.
-4. Cloudflare / GitHub Pages automatically rebuilds and deploys the live site within 1–2 minutes.
+4. GitHub Pages deploys the root of the main branch. Confirm the Pages deployment for the pushed commit before announcing the release.
 
 ### 📁 Script 2: `SYNC-TO-REPO.bat` (Local Clean Mirror Tool)
-- **What it does:** Mirrors all application files from `D:/ANIMAL NUTRITION APPLICATION/` into `D:/ANIMAL NUTRITION APPLICATION/repo/`, maintaining strict directory nesting (`assets/css/`, `data/`, `images/`, `js/`, `tools/`) and cleaning out stale/orphan files.
+- **What it does:** Mirrors all application files from `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/` into `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/repo/`, maintaining strict directory nesting (`assets/css/`, `data/`, `images/`, `js/`, `tools/`) and cleaning out stale/orphan files.
 - **Offline only:** Does NOT connect to the internet or push to GitHub.
 - **Do you need to run it if you use `1-CLICK-PUSH-TO-GITHUB.bat`?** **NO.** `1-CLICK-PUSH-TO-GITHUB.bat` already runs this sync as Step 1 automatically!
 - **When to use `SYNC-TO-REPO.bat`:**
@@ -393,10 +411,10 @@ Whenever any AI assistant (Claude, Antigravity, ChatGPT) or Fazal finishes addin
   3. *Offline Work:* When updating local files without an active internet connection.
 
 ### 📦 Strict Rules for AI Assistants
-1. **Always edit in `D:/ANIMAL NUTRITION APPLICATION/`** (e.g. `data/data-theory-unit1.JS`, `js/app.js`).
+1. **Always edit in `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/`** (e.g. `data/data-theory-unit1.JS`, `js/app.js`).
 2. **Never drop flat, unorganized files into `repo/`**. The `repo/` folder must remain an exact mirror of the root structure.
 3. After completing any major content or feature update, run `SYNC-TO-REPO.bat` (or robocopy) to update `repo/`.
-4. **Before every release:** bump `CACHE_VERSION` in `service-worker.js` (currently **`vanut-v1`** → next release `vanut-v2`). Otherwise returning students keep the cached old version.
+4. **Before every release:** bump `CACHE_VERSION` in `service-worker.js` (currently **`vanut-v31`** → next release `vanut-v32`). Otherwise returning students keep the cached old version.
 
 ---
 
