@@ -30,10 +30,8 @@ Use `repo/` when:
 
 ---
 
-## 🔄 Service Worker Cache Bumping
+## 🔄 Automatic Updates (No Cache Bumping Needed)
 
-Before announcing a major release or new unit:
-1. Open `service-worker.js`.
-2. Bump `CACHE_VERSION` (e.g., from `"vanut-v1"` to `"vanut-v2"`).
-3. Run `1-CLICK-PUSH-TO-GITHUB.bat`.
-This ensures visiting students immediately receive the updated files rather than older cached versions.
+`1-CLICK-PUSH-TO-GITHUB.bat` runs `tools/build_version.py` first. It writes `version.json`, which is a SHA-256 of all site files, and stamps `?v=<hash>` into `index.html` and `service-worker.js`.
+Open copies of the site check `version.json` every 2 minutes and on focus or reconnect. On a new release they reload once and keep all saved progress.
+Do **not** edit `CACHE_VERSION` by hand.

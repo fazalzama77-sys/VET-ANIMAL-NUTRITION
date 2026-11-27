@@ -145,14 +145,14 @@ medical blue on a soft blue-grey ground, typography in Inter + JetBrains Mono).
 - ✅ Global Ctrl+K search indexing theory, practical, WHY mechanisms, Q&A banks, and glossary terms.
 - ✅ Hideable Desktop Sidebar (`< Hide Sidebar` button, `#menubtn` hamburger, and <kbd>Ctrl</kbd> + <kbd>B</kbd> keyboard shortcut).
 - ✅ Mobile 5-slot bottom bar with central Quiz FAB.
-- ✅ Offline PWA service worker with precaching and cache-first strategy (`vanut-v31`).
+- ✅ Offline PWA service worker: network-first (`no-store`) with precached offline fallback, plus automatic `version.json` update detection (see Auto-Update Pipeline).
 
 ### Interactive Theory Study Aids
 
 - One activity per theory topic and one per theory unit overview, for 72 activities. Activities open from their cards and support keyboard and touch input.
 - Lesson data stays in the theory files. `data/data-study-visuals.js` stores activities by topic or unit ID. `js/study-visuals.js` renders the controls and readouts. `assets/css/study-visuals.css` styles them with the shared theme tokens.
 - `js/study-scenes.js` draws five richer models. `u1-t14` has an energy waterfall, `u1-t21` a rotatable 3D silage bunker, `u2-t03` a nitrogen flow diagram, `u3-t08` an animated calf digestion route and `u4-t06` an animated equine digestion route.
-- The activity assets are precached by `vanut-v31` and included in the Android offline bundle. Browser checks covered all 72 activities, desktop and phone-sized layouts, reduced motion, offline reload, and lesson tools including notes, bookmarks and highlights.
+- The activity assets are precached by the service worker and included in the Android offline bundle. Browser checks covered all 72 activities, desktop and phone-sized layouts, reduced motion, offline reload, and lesson tools including notes, bookmarks and highlights.
 
 ### Website and Android Release
 
@@ -171,7 +171,8 @@ D:\ANIMAL NUTRITION APPLICATION\VET-ANIMAL-NUTRITION
 ├── SYNC-TO-REPO.bat             Double-click → offline robocopy mirror into repo/
 ├── index.html                   Single-page app shell. All sections render here.
 ├── manifest.json                PWA manifest (theme_color: #1565c0, name: Animal Nutrition Studio)
-├── service-worker.js            Offline cache controller (CACHE_VERSION = "vanut-v31")
+├── service-worker.js            Network-first offline controller (CACHE_VERSION auto-stamped "vanut-<hash>")
+├── version.json                 Release fingerprint (SHA-256 of all HTML/CSS/JS/data), written by tools/build_version.py
 ├── README.md                    Content writing & curriculum guide
 ├── REPO.md                      Repository & GitHub publishing guide
 ├── CONTEXT.md                   THIS MASTER CONTEXT FILE
@@ -197,7 +198,7 @@ D:\ANIMAL NUTRITION APPLICATION\VET-ANIMAL-NUTRITION
 │
 ├── js/                          ← JAVASCRIPT ENGINES
 │   ├── store.js                 localStorage layer. ALL keys prefixed "vanut-" (20+ keys)
-│   ├── app.js                   Router + shell + section renderers + highlighter + audio
+│   ├── app.js                   Router + shell + section renderers + highlighter + audio + AUTO-UPDATE ENGINE (SW registration, version.json polling)
 │   ├── quiz.js                  Quiz engine (window.quizApp) with Paper I, Paper II & Grand modes
 │   ├── dashboard.js             Clinical learning analytics (window.dashboardApp)
 │   ├── glossary.js              490-term UG animal nutrition glossary + hover tooltips + speech
@@ -223,6 +224,7 @@ D:\ANIMAL NUTRITION APPLICATION\VET-ANIMAL-NUTRITION
 │   └── qa/                      Written exam diagrams and calculation sketches
 │
 └── tools/                       ← LOCAL TOOLS & AUTOMATION
+    ├── build_version.py         Run on every build → version.json + ?v=<hash> stamps + SW CACHE_VERSION
     ├── start-server.bat         Double-click → launches local dev server at http://localhost:5178
     ├── local-server.js          Zero-dependency Node.js HTTP server (handles .JS, .css, .html)
     ├── make-data-files.bat      Double-click → executes python scaffolding script
@@ -383,6 +385,28 @@ feeding situations:
   - Paper II = Units 3 & 4 (`unit-3`, `unit-4`, `prac-unit-3`, `prac-unit-4`) → 46 topics.
   - Total = 97 topics.
 
+### 🔄 Auto-Update Pipeline (version.json + Network-First SW)
+
+Students get new releases on their own, without hard refresh or cache bumping.
+
+- **`tools/build_version.py`** (run on every build/update; both `.bat` scripts call it first):
+  - SHA-256 hashes every served HTML/CSS/JS/JSON file: root files plus `assets/`, `data/`, `js/` and `revision/`. It skips `version.json`, `tools/` and `repo/`.
+  - Writes **`version.json`** (`hash`, `short`, `files`, `builtAt`) in the repo root.
+  - Stamps `index.html`: `?v=<short-hash>` on every local `<script src>` / `<link rel="stylesheet">`, plus `<meta name="app-version" content="<full-hash>">`.
+  - Stamps `CACHE_VERSION = "vanut-<short-hash>"` in `service-worker.js`.
+  - Version stamps are removed before hashing, so re-running without content changes is a no-op.
+- **`service-worker.js`** (registered from `js/app.js` as `./service-worker.js?v=<short>` with `{ scope: "./", updateViaCache: "none" }`):
+  - All same-origin GETs use the **network first** via `fetch(req, { cache: "no-store" })`. This skips GitHub Pages' `max-age=600` HTTP cache. Cache Storage is only the offline fallback. Cache keys drop the query string, so `?v=` URLs share an entry.
+  - **`version.json` and any `?update_check=` request skip Cache Storage completely.**
+  - `skipWaiting()` on install and `clients.claim()` on activate. Old `vanut-*` caches are deleted on activate.
+- **AUTO-UPDATE ENGINE** (self-contained IIFE at the end of `js/app.js`):
+  - Polls `./version.json?t=${Date.now()}` with `cache: "no-store"` on load, window focus, `online`, tab-visible and every 2 minutes. It **never calls `api.github.com`**, which avoids the 60/hour shared-IP limit, and works on subpaths.
+  - Compares the result with the page's `<meta name="app-version">`. On a new hash it shows the non-intrusive `.update-notice` pill, clears Cache Storage, calls `registration.update()`, warm-fetches `location.href` with `no-store` and reloads **once** to `?update_check=<short>#<route>`. The param is removed with `history.replaceState` after load.
+  - Reloads once on `controllerchange`. It skips this on the first install, and when the new worker's `?v=` already matches the page build.
+  - Loop guard: `sessionStorage["vanut-update-reload"]` = `{h, t}`. It allows at most one reload per new hash per 10 minutes, the CDN propagation window.
+  - **User `localStorage` (`vanut-*`) is never touched.** Only Cache Storage is cleared.
+  - It does nothing on `file://`.
+
 ---
 
 ## 🛠️ DEPLOYMENT & GITHUB WORKFLOW (FOR FAZAL & AI ASSISTANTS)
@@ -394,7 +418,8 @@ mirror folder are maintained in `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTR
 ### 🌟 Script 1: `1-CLICK-PUSH-TO-GITHUB.bat` (Recommended Daily Workflow)
 Whenever any AI assistant (Claude, Antigravity, ChatGPT) or Fazal finishes adding content or modifying code:
 1. Double-click `1-CLICK-PUSH-TO-GITHUB.bat` in `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/` (or its desktop shortcut).
-2. It runs three steps:
+2. It runs these steps:
+   - **Step 0/3 (Stamp Release):** Runs `python tools/build_version.py` to refresh `version.json`, the `?v=<hash>` query strings in `index.html` and the service worker `CACHE_VERSION`.
    - **Step 1/3 (Auto-Sync):** Runs robocopy to ensure the `repo/` mirror folder has all latest files organized in their clean subdirectories (`assets/`, `data/`, `images/`, `js/`, `tools/`).
    - **Step 2/3 (Package & Commit):** Detects modified files and records an automatic timestamped commit (e.g. `Update Animal Nutrition Studio content (09-09-2026 12:00)`).
    - **Step 3/3 (Push to GitHub):** Securely pushes all changes directly to remote `origin main`.
@@ -402,7 +427,7 @@ Whenever any AI assistant (Claude, Antigravity, ChatGPT) or Fazal finishes addin
 4. GitHub Pages deploys the root of the main branch. Confirm the Pages deployment for the pushed commit before announcing the release.
 
 ### 📁 Script 2: `SYNC-TO-REPO.bat` (Local Clean Mirror Tool)
-- **What it does:** Mirrors all application files from `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/` into `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/repo/`, maintaining strict directory nesting (`assets/css/`, `data/`, `images/`, `js/`, `tools/`) and cleaning out stale/orphan files.
+- **What it does:** Runs `tools/build_version.py` first, then mirrors all application files from `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/` into `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/repo/`, maintaining strict directory nesting (`assets/css/`, `data/`, `images/`, `js/`, `tools/`) and cleaning out stale/orphan files.
 - **Offline only:** Does NOT connect to the internet or push to GitHub.
 - **Do you need to run it if you use `1-CLICK-PUSH-TO-GITHUB.bat`?** **NO.** `1-CLICK-PUSH-TO-GITHUB.bat` already runs this sync as Step 1 automatically!
 - **When to use `SYNC-TO-REPO.bat`:**
@@ -414,7 +439,7 @@ Whenever any AI assistant (Claude, Antigravity, ChatGPT) or Fazal finishes addin
 1. **Always edit in `D:/ANIMAL NUTRITION APPLICATION/VET-ANIMAL-NUTRITION/`** (e.g. `data/data-theory-unit1.JS`, `js/app.js`).
 2. **Never drop flat, unorganized files into `repo/`**. The `repo/` folder must remain an exact mirror of the root structure.
 3. After completing any major content or feature update, run `SYNC-TO-REPO.bat` (or robocopy) to update `repo/`.
-4. **Before every release:** bump `CACHE_VERSION` in `service-worker.js` (currently **`vanut-v31`** → next release `vanut-v32`). Otherwise returning students keep the cached old version.
+4. **Before every release:** run `python tools/build_version.py`. The `.bat` scripts do this automatically. **Never hand-edit `CACHE_VERSION`, `?v=` values, `<meta name="app-version">` or `version.json`.** Commit `version.json` with the content change so live clients detect the update.
 
 ---
 
@@ -424,7 +449,8 @@ Whenever any AI assistant (Claude, Antigravity, ChatGPT) or Fazal finishes addin
 - **Counting Empty Template Rows:** Always filter `q.q`, `q.question`, `w.title` for non-empty text. Never count empty scaffold objects.
 - **`syllabus.allUnits` Dependency:** Engines in `app.js` and `dashboard.js` rely on `syllabus.allUnits = syllabus.theory.concat(syllabus.practical)` initialized in `data/data-syllabus.JS`.
 - **Quiz Timer Interval Leaks:** Always clear active countdown intervals before dropping a quiz run or navigating away.
-- **Service Worker Stale Cache:** In development, unregister service worker or bump `CACHE_VERSION` when precached files change.
+- **Service Worker Stale Cache:** Fixed by the auto-update pipeline: network-first SW plus `version.json` polling. If a release does not reach students, check that `tools/build_version.py` ran and `version.json` was committed. Do not reintroduce cache-first/stale-while-revalidate for app files, `api.github.com` update checks, or an inline SW registration in `index.html`.
+- **Update Reload Loops:** Never reload on `controllerchange` without the `reloading` guard, and never remove the `sessionStorage` reload mark. GitHub Pages' CDN can serve the old `index.html` for up to 10 minutes after a push.
 
 ---
 

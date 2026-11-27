@@ -1,13 +1,21 @@
 /* ============================================================
-   service-worker.js - 100% Offline PWA Engine
+   service-worker.js - Network-First Offline PWA Engine
    Animal Nutrition Studio (B.V.Sc & A.H.)
+
+   - CACHE_VERSION is stamped by tools/build_version.py on every
+     build. Do not edit it by hand.
+   - Same-origin GETs use the network first with
+     fetch(req, { cache: "no-store" }). This skips GitHub Pages'
+     max-age HTTP cache. Cache Storage is only an offline fallback.
+   - version.json and ?update_check= requests never touch
+     Cache Storage, so update probes always reach the network.
+   - The worker activates at once with skipWaiting() and clients.claim().
    ============================================================ */
 
-var CACHE_VERSION = "vanut-v31";
-var IMG_LIMIT = 220;
+var CACHE_VERSION = "vanut-3f449406ab68";
 var SHELL_CACHE = CACHE_VERSION + "-shell";
-var IMG_CACHE = CACHE_VERSION + "-img";
 
+/* Cache keys carry no query string, so ?v=<hash> versions share one entry. */
 var PRECACHE = [
   "./",
   "index.html",
@@ -34,17 +42,17 @@ var PRECACHE = [
   "data/data-quiz.JS",
   "data/events-data.js",
 
-  "js/store.js?v=25",
+  "js/store.js",
   "js/quiz.js",
   "js/dashboard.js",
   "js/glossary.js",
   "js/search.js",
   "js/deep-guide.js",
   "js/events.js",
-  "js/sync.js?v=25",
+  "js/sync.js",
   "js/study-scenes.js",
   "js/study-visuals.js",
-  "js/app.js?v=31",
+  "js/app.js",
 
   "images/icon-192.png",
   "images/icon-512.png",
@@ -60,114 +68,105 @@ var PRECACHE = [
   "revision/unit-4-rapid-revision.html"
 ];
 
-/* ---- Installation: Cache core app shell & skip waiting immediately ---- */
+/* ---- Helpers ---- */
+function cacheKey(req) {
+  var u = new URL(req.url);
+  u.search = "";
+  u.hash = "";
+  return u.href;
+}
+
+function isUpdateProbe(url) {
+  return /\/version\.json$/i.test(url.pathname) || url.searchParams.has("update_check");
+}
+
+/* Fresh network fetch that skips the HTTP cache. Some older engines reject
+   a RequestInit on navigation requests, so they retry with a plain fetch. */
+function fetchFresh(req) {
+  return fetch(req, { cache: "no-store" }).catch(function () {
+    return fetch(req);
+  });
+}
+
+function fromCache(req) {
+  return caches.match(cacheKey(req), { ignoreSearch: true }).then(function (hit) {
+    if (hit) return hit;
+    if (req.mode === "navigate" || req.destination === "document") {
+      return caches.match("index.html", { ignoreSearch: true }).then(function (doc) {
+        return doc || caches.match("./", { ignoreSearch: true });
+      });
+    }
+    return undefined;
+  }).then(function (res) {
+    return res || new Response("Offline", { status: 503, statusText: "Offline" });
+  });
+}
+
+/* ---- Install: precache the app shell and activate at once ---- */
 self.addEventListener("install", function (e) {
   self.skipWaiting();
   e.waitUntil(
-    caches.open(SHELL_CACHE)
-      .then(function (cache) {
-        return Promise.all(
-          PRECACHE.map(function (url) {
-            return cache.add(new Request(url, { cache: "reload" })).catch(function (err) {
-              console.warn("[SW] Precache item missed:", url, err);
-            });
-          })
-        );
-      })
-      .then(function () {
-        return self.skipWaiting();
-      })
+    caches.open(SHELL_CACHE).then(function (cache) {
+      return Promise.all(
+        PRECACHE.map(function (url) {
+          return fetch(new Request(url, { cache: "no-store" })).then(function (res) {
+            if (res && res.ok) return cache.put(cacheKey(new Request(url)), res);
+          }).catch(function (err) {
+            console.warn("[SW] Precache item missed:", url, err);
+          });
+        })
+      );
+    }).then(function () {
+      return self.skipWaiting();
+    })
   );
 });
 
-/* ---- Activation: Clean old caches & claim clients immediately ---- */
+/* ---- Activate: delete old caches and claim open pages ---- */
 self.addEventListener("activate", function (e) {
   e.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(
         keys.map(function (k) {
-          if (k.indexOf(CACHE_VERSION) !== 0) {
-            console.log("[SW] Deleting old cache:", k);
-            return caches.delete(k);
-          }
+          if (k.indexOf(CACHE_VERSION) !== 0) return caches.delete(k);
         })
       );
     }).then(function () {
       return self.clients.claim();
-    }).then(function () {
-      return self.clients.matchAll({ type: "window" }).then(function (clients) {
-        clients.forEach(function (client) {
-          client.postMessage({ type: "SW_ACTIVATED", version: CACHE_VERSION });
-        });
-      });
     })
   );
 });
 
-/* ---- Fetch Handler: Offline-first with network-first for documents ---- */
+/* ---- Fetch ---- */
 self.addEventListener("fetch", function (e) {
   var req = e.request;
   if (req.method !== "GET") return;
 
   var url = new URL(req.url);
-  if (url.origin !== location.origin) return;
+  if (url.origin !== self.location.origin) return;
 
-  // 1. Navigation & HTML Document requests: Network-first, fallback to cached index.html
-  var isDoc = req.mode === "navigate" ||
-              req.destination === "document" ||
-              url.pathname === location.pathname ||
-              url.pathname.endsWith(".html") ||
-              url.pathname.endsWith("/");
-
-  if (isDoc) {
+  // 1. Update probes skip Cache Storage completely.
+  if (isUpdateProbe(url)) {
     e.respondWith(
-      fetch(req, { cache: "no-cache" }).then(function (res) {
-        if (res && res.status === 200) {
-          var copy = res.clone();
-          caches.open(SHELL_CACHE).then(function (c) { c.put(req, copy); });
-        }
-        return res;
-      }).catch(function () {
-        return caches.match(req).then(function (hit) {
-          return hit || caches.match("index.html") || caches.match("./");
-        });
+      fetchFresh(req).catch(function () {
+        return new Response("", { status: 503, statusText: "Offline" });
       })
     );
     return;
   }
 
-  // 2. Images & Icons: Cache-first
-  if (/\.(png|jpg|jpeg|webp|gif|svg|ico)$/i.test(url.pathname)) {
-    e.respondWith(
-      caches.match(req).then(function (hit) {
-        if (hit) return hit;
-        return fetch(req).then(function (res) {
-          if (res && res.status === 200) {
-            var copy = res.clone();
-            caches.open(IMG_CACHE).then(function (c) { c.put(req, copy); });
-          }
-          return res;
-        }).catch(function () {
-          return hit;
-        });
-      })
-    );
-    return;
-  }
-
-  // 3. App Shell & Data: Stale-While-Revalidate
+  // 2. Every other same-origin asset uses the network first, with the cache as fallback.
   e.respondWith(
-    caches.match(req).then(function (hit) {
-      var networkFetch = fetch(req).then(function (res) {
-        if (res && res.status === 200) {
-          var copy = res.clone();
-          caches.open(SHELL_CACHE).then(function (c) { c.put(req, copy); });
-        }
-        return res;
-      }).catch(function () {
-        return hit;
-      });
-      return hit || networkFetch;
+    fetchFresh(req).then(function (res) {
+      if (res && res.ok && res.type === "basic") {
+        var copy = res.clone();
+        caches.open(SHELL_CACHE).then(function (c) {
+          return c.put(cacheKey(req), copy);
+        }).catch(function () {});
+      }
+      return res;
+    }).catch(function () {
+      return fromCache(req);
     })
   );
 });
@@ -182,9 +181,7 @@ self.addEventListener("message", function (e) {
       return Promise.all(names.map(function (n) { return caches.delete(n); }));
     }).then(function () {
       self.skipWaiting();
-      if (e.source) {
-        e.source.postMessage({ type: "PURGE_COMPLETE" });
-      }
+      if (e.source) e.source.postMessage({ type: "PURGE_COMPLETE" });
     });
   }
 });

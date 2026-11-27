@@ -7186,3 +7186,15 @@
 [data-theme="dark"] .card--sync {
   background: linear-gradient(180deg, var(--surface) 0%, rgba(21, 101, 192, 0.08) 100%) !important;
 }
+
+
+/* ---------- UPDATE NOTICE (auto-update engine in app.js) ---------- */
+.update-notice {
+  position: fixed; left: 50%; top: 12px; transform: translateX(-50%);
+  z-index: 96;
+  background: var(--accent, #1565c0); color: #fff;
+  padding: 6px var(--s4); border-radius: var(--r-full);
+  font-size: var(--fs-xs); font-weight: 620;
+  box-shadow: var(--shadow-md);
+  pointer-events: none;
+}

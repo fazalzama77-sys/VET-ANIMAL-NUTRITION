@@ -5066,3 +5066,156 @@ if (document.readyState === "loading") {
 } else {
   app.init();
 }
+
+
+/* ============================================================
+   AUTO-UPDATE ENGINE
+   - The page's own build hash comes from <meta name="app-version">,
+     which tools/build_version.py stamps.
+   - The engine polls ./version.json?t=<now> with cache: "no-store" on
+     load, focus, reconnect, tab return and every 2 minutes. The URL is
+     relative, so it works on GitHub Pages subpaths and has no
+     api.github.com rate limit.
+   - On a new hash it shows a small notice, clears Cache Storage, calls
+     registration.update(), warm-fetches the page with no-store and
+     reloads once. User localStorage is never touched.
+   - It registers ./service-worker.js?v=<hash> with updateViaCache: "none".
+     When a newer worker takes control it reloads once.
+   ============================================================ */
+(function () {
+  "use strict";
+  if (!/^https?:$/.test(location.protocol)) return; // file:// has no update channel
+
+  var POLL_MS = 120000;
+  var RETRY_MS = 600000;                 // GitHub Pages CDN max-age; avoids reload loops
+  var RELOAD_KEY = "vanut-update-reload"; // sessionStorage only, never localStorage
+
+  var meta = document.querySelector('meta[name="app-version"]');
+  var currentHash = meta && /^[0-9a-f]{16,}$/i.test(meta.content) ? meta.content : null;
+  var currentShort = currentHash ? currentHash.slice(0, 12) : "dev";
+
+  var swReg = null;
+  var checking = false, applying = false, reloading = false;
+  var pendingHash = null;
+
+  /* Remove one-shot cache-busting params from the address bar. Sync params such as db and pin stay. */
+  (function cleanUrl() {
+    if (!location.search || !window.history || !history.replaceState) return;
+    var params = new URLSearchParams(location.search);
+    var dirty = false;
+    ["update_check", "v", "refresh"].forEach(function (k) {
+      if (params.has(k)) { params.delete(k); dirty = true; }
+    });
+    if (!dirty) return;
+    var qs = params.toString();
+    history.replaceState(history.state, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
+  })();
+
+  function readReloadMark() {
+    try { return JSON.parse(sessionStorage.getItem(RELOAD_KEY) || "null"); } catch (e) { return null; }
+  }
+
+  function reloadOnce(targetHash) {
+    if (reloading) return;
+    reloading = true;
+    try {
+      if (targetHash) sessionStorage.setItem(RELOAD_KEY, JSON.stringify({ h: targetHash, t: Date.now() }));
+    } catch (e) {}
+    var params = new URLSearchParams(location.search);
+    params.set("update_check", (targetHash || String(Date.now())).slice(0, 12));
+    location.replace(location.pathname + "?" + params.toString() + location.hash);
+  }
+
+  function showNotice() {
+    if (document.getElementById("update-notice")) return;
+    var n = document.createElement("div");
+    n.id = "update-notice";
+    n.className = "update-notice";
+    n.setAttribute("role", "status");
+    n.setAttribute("aria-live", "polite");
+    n.textContent = "Updating to the latest version…";
+    (document.body || document.documentElement).appendChild(n);
+  }
+
+  function clearCacheStorage() {
+    if (!("caches" in window)) return Promise.resolve();
+    return caches.keys().then(function (keys) {
+      return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+    }).catch(function () {});
+  }
+
+  function applyUpdate(remoteHash) {
+    if (applying) return;
+    applying = true;
+    pendingHash = remoteHash;
+    showNotice();
+    setTimeout(function () { reloadOnce(remoteHash); }, 10000); // safety net
+
+    clearCacheStorage()
+      .then(function () { return swReg ? swReg.update().catch(function () {}) : null; })
+      .then(function () {
+        return fetch(window.location.href, { cache: "no-store", credentials: "same-origin" })
+          .catch(function () {});
+      })
+      .then(function () { setTimeout(function () { reloadOnce(remoteHash); }, 300); });
+  }
+
+  function checkForUpdate() {
+    if (checking || applying || reloading) return;
+    if (navigator.onLine === false) return;
+    checking = true;
+    fetch("./version.json?t=" + Date.now(), { cache: "no-store", credentials: "same-origin" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (info) {
+        var remote = info && info.hash;
+        if (!remote) return;
+        if (!currentHash) { currentHash = remote; return; } // unstamped page: adopt baseline
+        if (remote === currentHash) {
+          try { sessionStorage.removeItem(RELOAD_KEY); } catch (e) {}
+          return;
+        }
+        var mark = readReloadMark();
+        if (mark && mark.h === remote && Date.now() - mark.t < RETRY_MS) return; // already reloaded once
+        applyUpdate(remote);
+      })
+      .catch(function () {})
+      .then(function () { checking = false; });
+  }
+
+  /* ---- Service worker ---- */
+  if ("serviceWorker" in navigator) {
+    var hadController = !!navigator.serviceWorker.controller;
+
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      if (!hadController) { hadController = true; return; } // first install: page is already fresh
+      var ctl = navigator.serviceWorker.controller;
+      var sameBuild = ctl && ctl.scriptURL.indexOf("v=" + currentShort) !== -1;
+      if (applying || !sameBuild) reloadOnce(pendingHash);
+    });
+
+    var register = function () {
+      navigator.serviceWorker
+        .register("./service-worker.js?v=" + encodeURIComponent(currentShort), { scope: "./", updateViaCache: "none" })
+        .then(function (reg) {
+          swReg = reg;
+          if (reg.waiting) reg.waiting.postMessage({ type: "SKIP_WAITING" });
+        })
+        .catch(function (err) { console.warn("[PWA] ServiceWorker registration:", err); });
+    };
+    if (document.readyState === "complete") register();
+    else window.addEventListener("load", register);
+  }
+
+  /* ---- Poll triggers ---- */
+  if (document.readyState === "complete") checkForUpdate();
+  else window.addEventListener("load", checkForUpdate);
+  window.addEventListener("focus", checkForUpdate);
+  window.addEventListener("online", checkForUpdate);
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible") checkForUpdate();
+  });
+  setInterval(checkForUpdate, POLL_MS);
+})();

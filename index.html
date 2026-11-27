@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="app-version" content="3f449406ab68b7c4e7d7f715c6015614b82d3bc2241bc7631bb355af948c88f8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Animal Nutrition Studio — Notes, Q&amp;A and Quizzes</title>
 <meta name="description" content="A complete study companion for B.V.Sc second-year Animal Nutrition: four theory units, four practical units, question bank, quizzes and progress dashboard. Works offline.">
@@ -40,13 +41,13 @@
   })();
 </script>
 
-<link rel="stylesheet" href="assets/css/tokens.css">
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/sections.css">
-<link rel="stylesheet" href="assets/css/deep-guide.css">
-<link rel="stylesheet" href="assets/css/events.css">
-<link rel="stylesheet" href="assets/css/animations.css">
-<link rel="stylesheet" href="assets/css/study-visuals.css">
+<link rel="stylesheet" href="assets/css/tokens.css?v=3f449406ab68">
+<link rel="stylesheet" href="assets/css/main.css?v=3f449406ab68">
+<link rel="stylesheet" href="assets/css/sections.css?v=3f449406ab68">
+<link rel="stylesheet" href="assets/css/deep-guide.css?v=3f449406ab68">
+<link rel="stylesheet" href="assets/css/events.css?v=3f449406ab68">
+<link rel="stylesheet" href="assets/css/animations.css?v=3f449406ab68">
+<link rel="stylesheet" href="assets/css/study-visuals.css?v=3f449406ab68">
 </head>
 
 <body>
@@ -327,30 +328,30 @@
      4. glossary.js, search.js, deep-guide.js, events.js.
      5. app.js LAST — it boots the whole site.
 ================================================== -->
-<script src="data/data-syllabus.JS"></script>
-<script src="data/data-theory-unit1.JS"></script>
-<script src="data/data-theory-unit2.JS"></script>
-<script src="data/data-theory-unit3.JS"></script>
-<script src="data/data-theory-unit4.JS"></script>
-<script src="data/data-study-visuals.js"></script>
-<script src="data/data-practical.JS"></script>
-<script src="data/data-images.js"></script>
-<script src="data/data-why.JS"></script>
-<script src="data/data-qa.JS"></script>
-<script src="data/data-quiz.JS"></script>
-<script src="data/events-data.js"></script>
+<script src="data/data-syllabus.JS?v=3f449406ab68"></script>
+<script src="data/data-theory-unit1.JS?v=3f449406ab68"></script>
+<script src="data/data-theory-unit2.JS?v=3f449406ab68"></script>
+<script src="data/data-theory-unit3.JS?v=3f449406ab68"></script>
+<script src="data/data-theory-unit4.JS?v=3f449406ab68"></script>
+<script src="data/data-study-visuals.js?v=3f449406ab68"></script>
+<script src="data/data-practical.JS?v=3f449406ab68"></script>
+<script src="data/data-images.js?v=3f449406ab68"></script>
+<script src="data/data-why.JS?v=3f449406ab68"></script>
+<script src="data/data-qa.JS?v=3f449406ab68"></script>
+<script src="data/data-quiz.JS?v=3f449406ab68"></script>
+<script src="data/events-data.js?v=3f449406ab68"></script>
 
-<script src="js/store.js?v=25"></script>
-<script src="js/quiz.js"></script>
-<script src="js/dashboard.js"></script>
-<script src="js/glossary.js"></script>
-<script src="js/search.js"></script>
-<script src="js/deep-guide.js"></script>
-<script src="js/events.js"></script>
-<script src="js/sync.js?v=25"></script>
-<script src="js/study-scenes.js"></script>
-<script src="js/study-visuals.js"></script>
-<script src="js/app.js?v=31"></script>
+<script src="js/store.js?v=3f449406ab68"></script>
+<script src="js/quiz.js?v=3f449406ab68"></script>
+<script src="js/dashboard.js?v=3f449406ab68"></script>
+<script src="js/glossary.js?v=3f449406ab68"></script>
+<script src="js/search.js?v=3f449406ab68"></script>
+<script src="js/deep-guide.js?v=3f449406ab68"></script>
+<script src="js/events.js?v=3f449406ab68"></script>
+<script src="js/sync.js?v=3f449406ab68"></script>
+<script src="js/study-scenes.js?v=3f449406ab68"></script>
+<script src="js/study-visuals.js?v=3f449406ab68"></script>
+<script src="js/app.js?v=3f449406ab68"></script>
 
 <script>
   /* ---- Offline indicator ---- */
@@ -383,73 +384,7 @@
     }, { passive: true });
   })();
 
-  /* ---- Service worker: 100% offline PWA support with instant APK/WebView update ---- */
-  if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
-    var isReloading = false;
-    function triggerAppReload() {
-      if (isReloading) return;
-      isReloading = true;
-      var origin = window.location.origin;
-      var path = window.location.pathname;
-      var hash = window.location.hash || "#/";
-      window.location.replace(origin + path + "?v=" + Date.now() + hash);
-    }
-
-    navigator.serviceWorker.addEventListener("controllerchange", function () {
-      triggerAppReload();
-    });
-
-    navigator.serviceWorker.addEventListener("message", function (event) {
-      if (event.data && (event.data.type === "SW_ACTIVATED" || event.data.type === "PURGE_COMPLETE")) {
-        triggerAppReload();
-      }
-    });
-
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("service-worker.js", { scope: "./", updateViaCache: "none" })
-        .then(function (reg) {
-          if (navigator.onLine) {
-            reg.update().catch(function () {});
-          }
-
-          if (reg.waiting) {
-            reg.waiting.postMessage({ type: "SKIP_WAITING" });
-          }
-
-          window.addEventListener("focus", function () {
-            if (navigator.onLine) reg.update().catch(function () {});
-          });
-          document.addEventListener("visibilitychange", function () {
-            if (document.visibilityState === "visible" && navigator.onLine) {
-              reg.update().catch(function () {});
-            }
-          });
-
-          setInterval(function () {
-            if (navigator.onLine) reg.update().catch(function () {});
-          }, 120000);
-
-          reg.addEventListener("updatefound", function () {
-            var newWorker = reg.installing;
-            if (!newWorker) return;
-            newWorker.addEventListener("statechange", function () {
-              if (newWorker.state === "installed") {
-                if (navigator.serviceWorker.controller) {
-                  newWorker.postMessage({ type: "SKIP_WAITING" });
-                  if (window.app && typeof app.toast === "function") {
-                    app.toast("✨ Updating to latest version...");
-                  }
-                  setTimeout(triggerAppReload, 600);
-                }
-              }
-            });
-          });
-        })
-        .catch(function (err) {
-          console.warn("[PWA] ServiceWorker registration:", err);
-        });
-    });
-  }
+  /* Service worker registration and auto-update live in js/app.js (AUTO-UPDATE ENGINE). */
 </script>
 
 </body>

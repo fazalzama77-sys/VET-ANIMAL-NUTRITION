@@ -12,6 +12,9 @@ if "%ROOT:~-1%"=="\" set "ROOT=%ROOT:~0,-1%"
 set "SRC=%ROOT%"
 set "DEST=%ROOT%\repo"
 
+echo [0/3] Stamping release hash (version.json)...
+python "%ROOT%\tools\build_version.py" || py -3 "%ROOT%\tools\build_version.py"
+
 echo [1/3] Synchronizing 'repo' mirror folder...
 robocopy "%SRC%" "%DEST%" /MIR /XD .git .claude repo tmp /XF SYNC-TO-REPO.bat 1-CLICK-PUSH-TO-GITHUB.bat *.tmp *.bak *.log >nul
 
